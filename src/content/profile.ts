@@ -15,11 +15,10 @@ export const profile = {
   summary:
     "Trabajo entre el terreno, la cámara y la estrategia de contenidos: reportajes, entrevistas, fotografía y comunicación audiovisual.",
   aboutPreview:
-    "Sofía Chernikova es periodista y comunicadora audiovisual con experiencia en televisión, fotografía, producción de contenido y comunicación digital.",
+    "Periodista y comunicadora audiovisual con experiencia en televisión, fotografía y comunicación digital.",
   aboutContinuation:
-    "Su trabajo combina reporterismo, creación visual y estrategia de contenidos. Actualmente desarrolla su trayectoria profesional desde Madrid.",
-  bio:
-    "Comunicadora especializada en producción audiovisual y gestión de contenidos digitales, con experiencia en cobertura de eventos, reporterismo, entrevistas, producción audiovisual, fotografía, comunicación corporativa, estrategia de contenidos, social media y coordinación de equipos.",
+    "Combina reporterismo, creación visual y estrategia de contenidos desde Madrid.",
+  bio: "Periodista y comunicadora audiovisual formada en la Universidad Rey Juan Carlos. Trabaja como reportera de televisión en Grupo Cadena Media y ha desarrollado proyectos de comunicación digital, contenido corporativo y fotografía en entornos profesionales.",
   interests:
     "Interés profesional en medios, producción audiovisual, comunicación y proyectos culturales.",
 };
@@ -28,23 +27,23 @@ export const practices = [
   {
     number: "01",
     code: "REPORTING",
-    title: "Television & Reporting",
+    title: "Televisión y reportaje",
     items: ["Cobertura", "Entrevistas", "Piezas informativas"],
-    metadata: "REPORTING · INTERVIEW · VIDEO",
+    metadata: "REPORTING · ENTREVISTA · VÍDEO",
   },
   {
     number: "02",
     code: "VISUAL",
-    title: "Photography & Visual Storytelling",
-    items: ["Retrato", "Eventos", "Reportage"],
-    metadata: "PHOTO · EVENT · EDITING",
+    title: "Fotografía y narrativa visual",
+    items: ["Retrato", "Eventos", "Reportaje"],
+    metadata: "FOTO · EVENTO · EDICIÓN",
   },
   {
     number: "03",
     code: "COMMUNICATION",
-    title: "Content & Communication",
-    items: ["Social Media", "Producción audiovisual", "Contenido digital"],
-    metadata: "SOCIAL · CONTENT · STRATEGY",
+    title: "Contenido y comunicación",
+    items: ["Social media", "Producción audiovisual", "Contenido digital"],
+    metadata: "SOCIAL · CONTENIDO · ESTRATEGIA",
   },
 ];
 

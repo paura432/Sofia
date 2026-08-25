@@ -1,3 +1,7 @@
+/* ==========================================================================
+   tokens
+   ========================================================================== */
+
 :root {
   color-scheme: light;
   --background: #f6f1e8;
@@ -16,9 +20,13 @@
   --space-sm: clamp(14px, 1.6vw, 20px);
   --space-md: clamp(22px, 2.6vw, 36px);
   --space-lg: clamp(36px, 5vw, 72px);
-  --space-xl: clamp(64px, 8vw, 120px);
-  --space-section: clamp(72px, 11vw, 156px);
+  --space-xl: clamp(48px, 6vw, 88px);
+  --space-section: clamp(56px, 8vw, 112px);
 }
+
+/* ==========================================================================
+   reset
+   ========================================================================== */
 
 * {
   box-sizing: border-box;
@@ -32,10 +40,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  background:
-    linear-gradient(90deg, rgba(17, 17, 15, 0.035) 1px, transparent 1px) 0 0 /
-      minmax(96px, 12vw) 100%,
-    var(--background);
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -55,6 +60,7 @@ a {
 }
 
 a:focus-visible,
+button:focus-visible,
 summary:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
@@ -67,6 +73,15 @@ p {
   margin: 0;
 }
 
+ul,
+ol {
+  margin-block: 0;
+}
+
+/* ==========================================================================
+   base / typography
+   ========================================================================== */
+
 h1,
 h2 {
   font-family: var(--font-serif), Georgia, serif;
@@ -76,13 +91,13 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(3.2rem, 11vw, 9rem);
-  line-height: 0.9;
+  font-size: 1.5rem;
+  line-height: 1.15;
 }
 
 h2 {
-  font-size: clamp(2.15rem, 5.6vw, 5.4rem);
-  line-height: 0.98;
+  font-size: 1.35rem;
+  line-height: 1.15;
 }
 
 h3 {
@@ -97,10 +112,79 @@ p {
   text-wrap: pretty;
 }
 
-ul,
-ol {
-  margin-block: 0;
+.display-hero {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(3rem, 14.4vw, 9rem);
+  line-height: 0.92;
+  text-wrap: balance;
+  text-transform: uppercase;
 }
+
+.display-page {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.display-section {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(1.75rem, 3vw, 2.8rem);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.heading {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  font-weight: 720;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.body-lg {
+  max-width: 65ch;
+  color: var(--foreground-soft);
+  font-size: clamp(1.05rem, 1.55vw, 1.32rem);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.body {
+  max-width: 65ch;
+  color: var(--foreground-soft);
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.eyebrow,
+.dateline,
+.metadata,
+.case-discipline,
+.practice-code,
+.practice-meta,
+.experience-period,
+.experience-role,
+.experience-discipline {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 780;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.experience-discipline,
+.practice-meta {
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   layout
+   ========================================================================== */
 
 #main {
   min-height: 70vh;
@@ -126,6 +210,62 @@ ol {
   padding-block: var(--space-xl);
 }
 
+.editorial-grid,
+.about-columns,
+.contact-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.editorial-grid > *,
+.about-columns > *,
+.contact-grid > *,
+.hero-grid > *,
+.practice-item > *,
+.experience-row > *,
+.case-row > *,
+.trajectory-row > * {
+  min-width: 0;
+}
+
+.section-heading {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: var(--space-sm);
+}
+
+.section-heading-spaced {
+  margin-bottom: var(--space-lg);
+}
+
+.section-heading .display-section {
+  max-width: 18ch;
+}
+
+.section-heading p:not(.eyebrow) {
+  max-width: 42ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.split-heading {
+  display: grid;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.split-heading-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  align-items: center;
+}
+
+/* ==========================================================================
+   header
+   ========================================================================== */
+
 .skip-link {
   position: fixed;
   top: 12px;
@@ -147,11 +287,12 @@ ol {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid rgba(17, 17, 15, 0.12);
-  background: rgba(246, 241, 232, 0.94);
-  backdrop-filter: blur(16px);
+  background: rgba(246, 241, 232, 0.96);
+  backdrop-filter: blur(10px);
 }
 
 .nav-shell {
+  position: relative;
   min-height: var(--header-height);
   display: flex;
   align-items: center;
@@ -162,7 +303,7 @@ ol {
 .brand,
 .desktop-nav a,
 .mobile-nav summary,
-.mobile-nav a {
+.mobile-nav-panel a {
   font-size: 0.76rem;
   font-weight: 760;
   letter-spacing: 0;
@@ -202,12 +343,17 @@ ol {
 }
 
 .desktop-nav a:hover::after,
+.desktop-nav a[aria-current="page"]::after,
 .text-link:hover::after {
   transform: scaleX(1);
 }
 
+.desktop-nav a[aria-current="page"] {
+  color: var(--accent);
+}
+
 .mobile-nav {
-  position: relative;
+  position: static;
 }
 
 .mobile-nav summary {
@@ -223,32 +369,80 @@ ol {
 }
 
 .mobile-nav-panel {
-  position: absolute;
-  top: calc(100% + 12px);
+  position: fixed;
+  top: var(--header-height);
   right: 0;
+  left: 0;
+  z-index: 30;
   display: grid;
-  min-width: min(78vw, 280px);
-  border: 1px solid var(--foreground);
+  gap: 0;
+  border-bottom: 1px solid var(--foreground);
   background: var(--background);
+  padding: var(--space-md) var(--page-gutter) var(--space-lg);
+  max-height: calc(100svh - var(--header-height));
+  overflow-y: auto;
+}
+
+.mobile-nav-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+.mobile-nav-panel nav,
+.mobile-nav-links {
+  display: grid;
+  margin-top: var(--space-sm);
 }
 
 .mobile-nav-panel a {
-  min-height: 50px;
-  display: flex;
+  min-height: 52px;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
   align-items: center;
+  gap: 12px;
   border-bottom: 1px solid var(--line);
-  padding: 0 18px;
+  padding-block: 4px;
 }
 
-.mobile-nav-panel a:last-child {
+.mobile-nav-panel a:last-of-type {
   border-bottom: 0;
 }
+
+.mobile-nav-panel a span {
+  color: var(--accent);
+}
+
+.mobile-nav-panel a[aria-current="page"] {
+  color: var(--accent);
+}
+
+.mobile-nav-footer {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   hero
+   ========================================================================== */
 
 .hero {
   min-height: calc(100svh - var(--header-height));
   display: grid;
   align-items: center;
-  padding-block: clamp(40px, 7vw, 96px);
+  padding-block: clamp(40px, 7vw, 88px);
 }
 
 .hero-grid {
@@ -271,54 +465,35 @@ ol {
   gap: var(--space-sm);
 }
 
-.hero h1 {
+.hero .display-hero {
   display: grid;
   max-width: 11ch;
-  font-size: clamp(3.05rem, 14.4vw, 9rem);
-  text-transform: uppercase;
-}
-
-.dateline,
-.eyebrow,
-.case-discipline,
-.evidence-discipline,
-.practice-code,
-.practice-meta,
-.experience-period,
-.experience-role,
-.experience-discipline {
-  color: var(--accent);
-  font-size: 0.76rem;
-  font-weight: 780;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.experience-discipline,
-.practice-meta {
-  color: var(--muted);
 }
 
 .hero-headline {
-  max-width: 760px;
+  max-width: 22ch;
   font-family: var(--font-serif), Georgia, serif;
-  font-size: clamp(2.05rem, 6.7vw, 5.2rem);
-  line-height: 0.98;
+  font-size: clamp(1.85rem, 4.2vw, 3.4rem);
+  line-height: 1.08;
   text-wrap: balance;
 }
 
 .hero-summary {
-  max-width: 700px;
+  max-width: 62ch;
   color: var(--foreground-soft);
-  font-size: clamp(1.05rem, 1.55vw, 1.42rem);
+  font-size: clamp(1.02rem, 1.4vw, 1.28rem);
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 18px 28px;
   padding-top: var(--space-xs);
 }
+
+/* ==========================================================================
+   links / microinteractions
+   ========================================================================== */
 
 .button-link {
   min-height: 46px;
@@ -336,6 +511,11 @@ ol {
     background 180ms ease,
     color 180ms ease,
     border-color 180ms ease;
+}
+
+.button-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .button-link span,
@@ -375,29 +555,12 @@ ol {
   text-decoration: none;
 }
 
-.editorial-grid,
-.selected-work-grid,
-.about-columns,
-.contact-grid {
-  display: grid;
-  gap: var(--space-lg);
-}
-
-.section-heading {
-  min-width: 0;
-  display: grid;
-  align-content: start;
-  gap: var(--space-sm);
-}
-
-.section-heading p:not(.eyebrow) {
-  max-width: 460px;
-  color: var(--muted);
-}
+/* ==========================================================================
+   sections / practice / work / experience
+   ========================================================================== */
 
 .practice-index,
 .experience-list,
-.work-evidence,
 .case-list {
   display: grid;
   border-top: 1px solid var(--foreground);
@@ -405,7 +568,6 @@ ol {
 
 .practice-item,
 .experience-row,
-.evidence-item,
 .case-row,
 .trajectory-row {
   display: grid;
@@ -415,18 +577,16 @@ ol {
 }
 
 .practice-number,
-.evidence-number,
 .case-number,
 .trajectory-year {
   color: var(--accent);
   font-family: var(--font-serif), Georgia, serif;
-  font-size: clamp(2.2rem, 4.5vw, 4.6rem);
-  line-height: 0.9;
+  font-size: clamp(1.8rem, 3.2vw, 3.2rem);
+  line-height: 0.95;
 }
 
 .practice-item h3,
 .experience-row h3,
-.evidence-item h3,
 .case-row h3 {
   margin-top: 8px;
 }
@@ -465,35 +625,13 @@ ol {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition:
-    color 180ms ease,
-    transform 180ms ease;
 }
 
-.practice-meta span {
-  transition: transform 180ms ease;
-}
-
-.practice-item:hover .practice-meta {
-  color: var(--foreground);
-  transform: translateX(3px);
-}
-
-.practice-item:hover .practice-meta span {
-  transform: translateX(4px);
-}
-
-.work-evidence {
-  gap: 0;
-}
-
-.evidence-item.featured,
 .experience-row.featured,
 .trajectory-row.featured {
   border-top: 2px solid var(--foreground);
 }
 
-.evidence-role,
 .case-role {
   margin-block: 6px 14px;
   color: var(--muted);
@@ -502,73 +640,77 @@ ol {
   text-transform: uppercase;
 }
 
-.split-heading {
-  display: grid;
-  gap: var(--space-md);
-  margin-bottom: var(--space-lg);
-}
-
 .experience-row p:last-child,
-.evidence-item p:last-child,
 .case-row p,
 .trajectory-row li {
   color: var(--foreground-soft);
 }
 
 .about-preview {
-  max-width: 1020px;
+  max-width: 920px;
   display: grid;
   gap: var(--space-sm);
 }
 
-.about-preview h2 {
-  font-size: clamp(2.15rem, 5.2vw, 4.8rem);
+.about-preview .display-section {
+  max-width: 28ch;
 }
 
 .about-preview > p:not(.eyebrow) {
-  max-width: 700px;
+  max-width: 62ch;
   color: var(--foreground-soft);
-  font-size: clamp(1.02rem, 1.35vw, 1.24rem);
+  font-size: clamp(1.02rem, 1.3vw, 1.2rem);
 }
+
+/* ==========================================================================
+   languages
+   ========================================================================== */
 
 .languages-strip {
   display: grid;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
 
-.language-grid {
-  display: grid;
-  gap: 0;
+.language-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
   border-top: 1px solid var(--foreground);
-}
-
-.language-grid article {
-  min-height: 88px;
-  display: grid;
-  align-content: center;
-  gap: 4px;
   border-bottom: 1px solid var(--line);
-  padding-block: 14px;
+  padding-block: 16px;
+  color: var(--foreground-soft);
+  font-size: clamp(0.82rem, 1.1vw, 0.95rem);
+  font-weight: 620;
+  text-transform: uppercase;
 }
 
-.language-grid p {
+.language-inline span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.language-inline span:not(:last-child)::after {
+  margin-inline: 12px;
+  color: var(--line);
+  content: "·";
+}
+
+.language-inline strong {
   color: var(--accent);
-  font-size: 0.78rem;
   font-weight: 780;
 }
 
-.language-grid h3 {
-  font-size: 1rem;
-}
-
-.language-grid span {
-  color: var(--muted);
-  font-size: 0.86rem;
-}
+/* ==========================================================================
+   contact
+   ========================================================================== */
 
 .contact-block {
   border-top: 1px solid var(--foreground);
   padding-block: var(--space-section);
+}
+
+.contact-block.compact {
+  padding-block: var(--space-xl);
 }
 
 .contact-page-block {
@@ -577,9 +719,9 @@ ol {
   align-items: center;
 }
 
-.contact-block h1,
-.contact-block h2 {
-  margin-top: 10px;
+.contact-block .display-page,
+.contact-block .display-section {
+  margin-top: 8px;
 }
 
 .contact-copy {
@@ -588,9 +730,9 @@ ol {
 }
 
 .contact-copy > p {
-  max-width: 690px;
+  max-width: 52ch;
   color: var(--foreground-soft);
-  font-size: clamp(1.08rem, 1.8vw, 1.45rem);
+  font-size: clamp(1.05rem, 1.5vw, 1.28rem);
 }
 
 .contact-list {
@@ -623,10 +765,23 @@ ol {
   align-items: center;
   gap: 8px;
   font-weight: 640;
+  text-decoration: none;
 }
 
+.contact-list a:hover span {
+  transform: translateX(4px);
+}
+
+.contact-list a span {
+  transition: transform 180ms ease;
+}
+
+/* ==========================================================================
+   page heroes / about / detail
+   ========================================================================== */
+
 .page-hero {
-  padding-block: clamp(60px, 10vw, 138px);
+  padding-block: clamp(48px, 7vw, 96px);
 }
 
 .page-hero-inner {
@@ -635,36 +790,18 @@ ol {
   gap: var(--space-sm);
 }
 
-.page-hero h1 {
-  font-size: clamp(3rem, 8.8vw, 8.4rem);
-}
-
 .page-hero p:not(.eyebrow) {
-  max-width: 760px;
+  max-width: 58ch;
   color: var(--foreground-soft);
-  font-size: clamp(1.08rem, 1.8vw, 1.45rem);
-}
-
-.field-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px clamp(20px, 4vw, 44px);
-  border-top: 1px solid var(--foreground);
-  border-bottom: 1px solid var(--line);
-  padding-block: 18px;
-}
-
-.field-row span {
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 780;
+  font-size: clamp(1.05rem, 1.5vw, 1.28rem);
 }
 
 .body-copy {
   display: grid;
   gap: var(--space-sm);
+  max-width: 62ch;
   color: var(--foreground-soft);
-  font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+  font-size: clamp(1.02rem, 1.3vw, 1.18rem);
 }
 
 .detail-grid-inner {
@@ -683,8 +820,8 @@ ol {
   padding: var(--space-md);
 }
 
-.detail-grid-inner h2 {
-  font-size: clamp(1.8rem, 3.2vw, 3.4rem);
+.detail-grid-inner .display-section {
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
 }
 
 .compact-list {
@@ -709,6 +846,31 @@ ol {
   color: var(--foreground-soft);
 }
 
+.about-summary {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--foreground);
+}
+
+.about-summary-item {
+  display: grid;
+  gap: 6px;
+  border-bottom: 1px solid var(--line);
+  padding-block: var(--space-md);
+}
+
+.about-summary-item h3 {
+  margin-top: 4px;
+}
+
+.about-summary-item p:last-child {
+  color: var(--foreground-soft);
+}
+
+.about-summary-footer {
+  padding-top: var(--space-md);
+}
+
 .trajectory {
   padding-top: 0;
 }
@@ -719,9 +881,9 @@ ol {
 
 .trajectory-row h2 {
   font-family: var(--font-sans), Arial, sans-serif;
-  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-size: clamp(1.15rem, 1.8vw, 1.55rem);
   font-weight: 720;
-  line-height: 1.1;
+  line-height: 1.15;
   text-transform: uppercase;
 }
 
@@ -733,6 +895,10 @@ ol {
   text-transform: uppercase;
 }
 
+/* ==========================================================================
+   footer
+   ========================================================================== */
+
 .site-footer {
   border-top: 1px solid var(--foreground);
   color: var(--muted);
@@ -742,7 +908,7 @@ ol {
 .site-footer-inner {
   display: grid;
   gap: var(--space-sm);
-  padding-block: 30px 42px;
+  padding-block: 28px 36px;
 }
 
 .footer-name {
@@ -751,26 +917,32 @@ ol {
   text-transform: uppercase;
 }
 
-.footer-links {
-  display: flex;
-  gap: 18px;
+.footer-tagline {
+  margin-top: 4px;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 22px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-weight: 720;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+/* ==========================================================================
+   responsive — tablet
+   ========================================================================== */
+
 @media (min-width: 700px) {
-  .language-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .language-grid article {
-    border-right: 1px solid var(--line);
-    border-bottom: 0;
-    padding-right: 18px;
-  }
-
-  .language-grid article:last-child {
-    border-right: 0;
-  }
-
   .contact-list div {
     grid-template-columns: minmax(110px, 0.24fr) 1fr;
     gap: var(--space-sm);
@@ -785,14 +957,20 @@ ol {
   }
 
   .site-footer-inner {
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1fr auto;
     align-items: start;
+    gap: var(--space-md);
   }
 
-  .site-footer-inner > p:last-child {
+  .footer-meta {
     text-align: right;
+    justify-self: end;
   }
 }
+
+/* ==========================================================================
+   responsive — laptop / desktop
+   ========================================================================== */
 
 @media (min-width: 900px) {
   :root {
@@ -812,13 +990,11 @@ ol {
     align-items: center;
   }
 
-  .hero h1 {
-    font-size: clamp(5.6rem, 9vw, 9rem);
+  .display-hero {
+    font-size: clamp(5.4rem, 8.5vw, 8.8rem);
   }
 
   .editorial-grid,
-  .selected-work-grid,
-  .about-columns,
   .contact-grid {
     grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr);
   }
@@ -828,12 +1004,17 @@ ol {
     gap: var(--space-lg);
   }
 
-  .evidence-item,
   .experience-row,
   .case-row,
   .trajectory-row {
     grid-template-columns: minmax(120px, 0.18fr) minmax(220px, 0.28fr) minmax(0, 1fr);
     gap: var(--space-lg);
+  }
+
+  .about-summary-item {
+    grid-template-columns: minmax(100px, 0.16fr) minmax(200px, 0.3fr) minmax(0, 1fr);
+    gap: var(--space-lg);
+    align-items: start;
   }
 
   .split-heading {
@@ -842,34 +1023,51 @@ ol {
   }
 }
 
-@media (min-width: 1280px) {
-  .hero h1 {
-    font-size: clamp(7.5rem, 8.2vw, 9.4rem);
+@media (min-width: 1100px) {
+  .about-columns {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(40px, 5vw, 80px);
+    align-items: start;
+  }
+
+  .about-columns .display-section {
+    max-width: none;
   }
 }
 
-@media (max-width: 560px) {
-  body {
-    background: var(--background);
+@media (min-width: 1280px) {
+  .display-hero {
+    font-size: clamp(7rem, 7.8vw, 9rem);
   }
+}
 
+/* ==========================================================================
+   responsive — small mobile
+   ========================================================================== */
+
+@media (max-width: 560px) {
   .brand {
     max-width: 190px;
   }
 
-  .button-link {
-    width: 100%;
-  }
-
   .hero-actions {
-    align-items: stretch;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
   }
 
-  .hero h1 {
-    font-size: clamp(3rem, 14.6vw, 4.1rem);
+  .display-hero {
+    font-size: clamp(2.85rem, 13.5vw, 3.9rem);
+  }
+
+  .language-inline span:not(:last-child)::after {
+    margin-inline: 8px;
   }
 }
+
+/* ==========================================================================
+   motion
+   ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -15,9 +15,7 @@ export function PracticeIndex() {
               ))}
             </ul>
           </div>
-          <p className="practice-meta">
-            {practice.metadata} <span aria-hidden="true">→</span>
-          </p>
+          <p className="practice-meta">{practice.metadata}</p>
         </article>
       ))}
     </div>

@@ -16,10 +16,10 @@ export default function ExperiencePage() {
       <section className="page-hero section section-first">
         <div className="container page-hero-inner">
           <p className="eyebrow">EXPERIENCE</p>
-          <h1>Trayectoria editorial y audiovisual.</h1>
+          <h1 className="display-page">Televisión, comunicación digital y fotografía.</h1>
           <p>
-            Experiencia en reporterismo televisivo, contenido digital,
-            comunicación corporativa y fotografía.
+            Experiencia en reporterismo televisivo, contenido digital, comunicación
+            corporativa y fotografía.
           </p>
         </div>
       </section>

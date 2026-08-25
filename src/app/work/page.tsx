@@ -16,50 +16,44 @@ export default function WorkPage() {
       <section className="page-hero section section-first">
         <div className="container page-hero-inner">
           <p className="eyebrow">WORK</p>
-          <h1>Reportaje, contenido visual y comunicación.</h1>
+          <h1 className="display-page">Trabajo entre televisión, imagen y comunicación.</h1>
           <p>
-            Trabajo desarrollado entre televisión, eventos, fotografía y
-            plataformas digitales.
+            Experiencia profesional en reporterismo televisivo, contenido visual,
+            comunicación digital y fotografía.
           </p>
         </div>
       </section>
 
-      <section className="section" aria-labelledby="work-categories">
+      <section className="section" aria-labelledby="professional-work">
         <div className="container">
-          <div className="field-row" id="work-categories" aria-label="Campos de trabajo">
-            <span>REPORTING</span>
-            <span>VISUAL</span>
-            <span>COMMUNICATION</span>
+          <div className="section-heading section-heading-spaced">
+            <p className="eyebrow">PROFESSIONAL WORK</p>
+            <h2 className="display-section" id="professional-work">
+              Casos de trabajo.
+            </h2>
           </div>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="professional-cases">
-        <div className="container case-list">
-          <div className="section-heading">
-            <p className="eyebrow">PROFESSIONAL CASES</p>
-            <h2 id="professional-cases">Experiencia aplicable a piezas futuras.</h2>
+          <div className="case-list">
+            {featuredWork.map((item) => (
+              <article className="case-row" key={item.company}>
+                <p className="case-number">{item.number}</p>
+                <div>
+                  <p className="case-discipline">{item.discipline}</p>
+                  <h3>{item.company}</h3>
+                  <p className="case-role">
+                    {item.role} · {item.period}
+                  </p>
+                </div>
+                <div>
+                  <p>{item.summary}</p>
+                  <ul>
+                    {item.responsibilities.map((responsibility) => (
+                      <li key={responsibility}>{responsibility}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
           </div>
-          {featuredWork.map((item) => (
-            <article className="case-row" key={item.company}>
-              <p className="case-number">{item.number}</p>
-              <div>
-                <p className="case-discipline">{item.discipline}</p>
-                <h3>{item.company}</h3>
-                <p className="case-role">
-                  {item.role} · {item.period}
-                </p>
-              </div>
-              <div>
-                <p>{item.summary}</p>
-                <ul>
-                  {item.responsibilities.map((responsibility) => (
-                    <li key={responsibility}>{responsibility}</li>
-                  ))}
-                </ul>
-              </div>
-            </article>
-          ))}
         </div>
       </section>
     </main>

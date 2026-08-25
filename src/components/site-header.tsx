@@ -1,12 +1,13 @@
 import Link from "next/link";
 
+import { NavLink } from "@/components/nav-link";
 import { siteConfig } from "@/content/profile";
 
 const navItems = [
-  { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/experience", label: "Experience" },
-  { href: "/contact", label: "Contact" },
+  { href: "/work", label: "Work", index: "01" },
+  { href: "/about", label: "About", index: "02" },
+  { href: "/experience", label: "Experience", index: "03" },
+  { href: "/contact", label: "Contact", index: "04" },
 ];
 
 export function SiteHeader() {
@@ -22,20 +23,28 @@ export function SiteHeader() {
 
         <div className="desktop-nav" aria-label="Secciones">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
+            <NavLink key={item.href} href={item.href} label={item.label} />
           ))}
         </div>
 
         <details className="mobile-nav">
           <summary>Menú</summary>
           <div className="mobile-nav-panel">
-            {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                {item.label}
-              </Link>
-            ))}
+            <div className="mobile-nav-panel-header">
+              <span>{siteConfig.name}</span>
+              <span>Menú</span>
+            </div>
+            <div className="mobile-nav-links">
+              {navItems.map((item) => (
+                <NavLink
+                  key={item.href}
+                  href={item.href}
+                  label={item.label}
+                  index={item.index}
+                />
+              ))}
+            </div>
+            <p className="mobile-nav-footer">Madrid</p>
           </div>
         </details>
       </nav>

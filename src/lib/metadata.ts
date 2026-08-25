@@ -4,7 +4,7 @@ import { siteConfig, structuredRole } from "@/content/profile";
 
 const title = "Sofía Chernikova — Periodista y Comunicadora Audiovisual";
 const description =
-  "Portfolio editorial de Sofía Chernikova, periodista y comunicadora audiovisual en Madrid.";
+  "Sofía Chernikova, periodista y comunicadora audiovisual en Madrid. Televisión, imagen y comunicación.";
 
 export const SITE_URL = "https://sofiachernikova.vercel.app";
 export const IS_PUBLIC = false;
