@@ -1,12 +1,24 @@
 import type { MetadataRoute } from "next";
 
-import { SITE_URL } from "@/lib/metadata";
+import type { AppPathname, Locale } from "@/i18n/routing";
+import { localizedUrl } from "@/lib/metadata";
+
+const routes: AppPathname[] = ["/", "/work", "/about", "/experience", "/contact"];
+const locales: Locale[] = ["es", "en"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return ["", "/work", "/about", "/experience", "/contact"].map((path) => ({
-    url: `${SITE_URL}${path}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: path === "" ? 1 : 0.7,
-  }));
+  return routes.flatMap((route) =>
+    locales.map((locale) => ({
+      url: localizedUrl(route, locale),
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: route === "/" ? 1 : 0.7,
+      alternates: {
+        languages: {
+          es: localizedUrl(route, "es"),
+          en: localizedUrl(route, "en"),
+        },
+      },
+    })),
+  );
 }

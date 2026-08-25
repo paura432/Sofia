@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
+import type { AppPathname } from "@/i18n/routing";
 
 type NavLinkProps = {
-  href: string;
+  href: AppPathname;
   label: string;
   index?: string;
 };

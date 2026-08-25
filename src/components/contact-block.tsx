@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server";
+
 import { siteConfig } from "@/content/profile";
 
 type ContactBlockProps = {
@@ -5,7 +7,12 @@ type ContactBlockProps = {
   page?: boolean;
 };
 
-export function ContactBlock({ compact = false, page = false }: ContactBlockProps) {
+export async function ContactBlock({
+  compact = false,
+  page = false,
+}: ContactBlockProps) {
+  const t = await getTranslations("Contact");
+  const hero = await getTranslations("Hero");
   const Heading = page ? "h1" : "h2";
   const headingClass = page ? "display-page" : "display-section";
 
@@ -22,19 +29,21 @@ export function ContactBlock({ compact = false, page = false }: ContactBlockProp
     >
       <div className="container contact-grid">
         <div>
-          <p className="eyebrow">CONTACTO</p>
-          <Heading className={headingClass} id={page ? "contact-title" : "contact-heading"}>
-            Hablemos.
+          <p className="eyebrow">
+            {page ? t("contactPageEyebrow") : t("eyebrow")}
+          </p>
+          <Heading
+            className={headingClass}
+            id={page ? "contact-title" : "contact-heading"}
+          >
+            {page ? t("contactPageTitle") : t("title")}
           </Heading>
         </div>
         <div className="contact-copy">
-          <p>
-            Disponible para oportunidades en periodismo, audiovisual, fotografía y
-            comunicación.
-          </p>
+          <p>{page ? t("contactPageText") : t("body")}</p>
           <dl className="contact-list">
             <div>
-              <dt>Email</dt>
+              <dt>{t("email")}</dt>
               <dd>
                 <a href={`mailto:${siteConfig.email}`}>
                   {siteConfig.email} <span aria-hidden="true">↗</span>
@@ -42,7 +51,7 @@ export function ContactBlock({ compact = false, page = false }: ContactBlockProp
               </dd>
             </div>
             <div>
-              <dt>LinkedIn</dt>
+              <dt>{t("linkedin")}</dt>
               <dd>
                 <a href={siteConfig.linkedin} rel="noreferrer" target="_blank">
                   LinkedIn <span aria-hidden="true">↗</span>
@@ -50,8 +59,8 @@ export function ContactBlock({ compact = false, page = false }: ContactBlockProp
               </dd>
             </div>
             <div>
-              <dt>Base</dt>
-              <dd>{siteConfig.location}</dd>
+              <dt>{t("base")}</dt>
+              <dd>{hero("location")}</dd>
             </div>
           </dl>
         </div>

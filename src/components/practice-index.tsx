@@ -1,6 +1,17 @@
-import { practices } from "@/content/profile";
+import { getTranslations } from "next-intl/server";
 
-export function PracticeIndex() {
+type Practice = {
+  number: string;
+  code: string;
+  title: string;
+  items: string[];
+  metadata: string;
+};
+
+export async function PracticeIndex() {
+  const t = await getTranslations("Practices");
+  const practices = t.raw("items") as Practice[];
+
   return (
     <div className="practice-index">
       {practices.map((practice) => (

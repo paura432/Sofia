@@ -290,6 +290,52 @@ p {
   gap: clamp(18px, 2.4vw, 36px);
 }
 
+.desktop-nav-links,
+.locale-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.desktop-nav-links {
+  gap: clamp(16px, 2vw, 30px);
+}
+
+.locale-switcher {
+  gap: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+
+.locale-switcher a {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.locale-switcher a[aria-current="true"] {
+  color: var(--accent);
+}
+
+.locale-switcher a:not(:last-child)::after {
+  position: static;
+  width: auto;
+  height: auto;
+  margin-inline: 7px;
+  transform: none;
+  background: transparent;
+  color: var(--line);
+  content: "/";
+}
+
+.locale-switcher a:hover::after {
+  transform: none;
+  background: transparent;
+}
+
 .desktop-nav a,
 .text-link {
   position: relative;
@@ -381,6 +427,20 @@ p {
 
 .mobile-nav-panel a:last-of-type {
   border-bottom: 0;
+}
+
+.mobile-nav-panel .locale-switcher {
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--line);
+}
+
+.mobile-nav-panel .locale-switcher a {
+  min-height: 36px;
+  display: inline-flex;
+  grid-template-columns: none;
+  border-bottom: 0;
+  padding-block: 0;
 }
 
 .mobile-nav-panel a span {
@@ -550,13 +610,40 @@ p {
   padding-block: var(--space-md);
 }
 
+.case-row,
+.trajectory-row {
+  container-type: inline-size;
+}
+
 .practice-number,
-.case-number,
-.trajectory-year {
+.case-number {
   color: var(--accent);
   font-family: var(--font-serif), Georgia, serif;
   font-size: clamp(1.8rem, 3.2vw, 3.2rem);
   line-height: 0.95;
+}
+
+.period-display {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  max-width: 100%;
+}
+
+.period-display-primary {
+  color: var(--accent);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(1.5rem, 2.4vw, 2.4rem);
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+.period-display-secondary {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 780;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .practice-item h3,
@@ -1003,11 +1090,11 @@ p {
 
 /* Etapa intermedia: periodo a la izquierda, el resto apilado en una sola
    columna ancha. Tres columnas solo cuando hay espacio real (900px). */
-@media (min-width: 700px) and (max-width: 899.98px) {
+@media (min-width: 700px) and (max-width: 979.98px) {
   .case-row,
   .trajectory-row,
   .about-summary-item {
-    grid-template-columns: minmax(90px, 0.2fr) minmax(0, 1fr);
+    grid-template-columns: minmax(5.5rem, 7rem) minmax(0, 1fr);
     column-gap: var(--space-md);
     align-items: start;
   }
@@ -1023,7 +1110,7 @@ p {
    responsive — laptop / desktop
    ========================================================================== */
 
-@media (min-width: 900px) {
+@media (min-width: 980px) {
   :root {
     --header-height: 72px;
   }
@@ -1056,14 +1143,21 @@ p {
     gap: var(--space-lg);
   }
 
+  /* Tablet landscape: periodo fijo + contenido apilado en una columna ancha. */
   .case-row,
   .trajectory-row {
-    grid-template-columns: minmax(120px, 0.18fr) minmax(220px, 0.28fr) minmax(0, 1fr);
-    gap: var(--space-lg);
+    grid-template-columns: minmax(5.5rem, 7rem) minmax(0, 1fr);
+    gap: var(--space-md);
+    align-items: start;
+  }
+
+  .case-row > :not(:first-child),
+  .trajectory-row > :not(:first-child) {
+    grid-column: 2;
   }
 
   .about-summary-item {
-    grid-template-columns: minmax(100px, 0.16fr) minmax(200px, 0.3fr) minmax(0, 1fr);
+    grid-template-columns: minmax(5.5rem, 7rem) minmax(200px, 0.3fr) minmax(0, 1fr);
     gap: var(--space-lg);
     align-items: start;
   }
@@ -1078,6 +1172,19 @@ p {
     order: 2;
   }
 
+}
+
+@media (min-width: 1024px) {
+  .case-row,
+  .trajectory-row {
+    grid-template-columns: minmax(5.5rem, 7.5rem) minmax(200px, 0.3fr) minmax(0, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .case-row > :not(:first-child),
+  .trajectory-row > :not(:first-child) {
+    grid-column: auto;
+  }
 }
 
 @media (min-width: 1100px) {

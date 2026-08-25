@@ -1,0 +1,250 @@
+{
+  "Metadata": {
+    "siteTitle": "Sofía Chernikova — Journalist and audiovisual communicator",
+    "siteDescription": "Professional portfolio of Sofía Chernikova: television, reporting, photography, digital communications and audiovisual production from Madrid.",
+    "ogAlt": "Professional portfolio of Sofía Chernikova",
+    "personRole": "Journalist and audiovisual communicator",
+    "pages": {
+      "home": {
+        "title": "Sofía Chernikova — Journalist and audiovisual communicator",
+        "description": "Journalist and audiovisual communicator in Madrid. Television, image, reporting and digital communications."
+      },
+      "work": {
+        "title": "Work",
+        "description": "Sofía Chernikova's work areas: television, photography, visual storytelling and digital communications."
+      },
+      "about": {
+        "title": "About",
+        "description": "Professional profile of Sofía Chernikova, a journalist and audiovisual communicator educated at Universidad Rey Juan Carlos."
+      },
+      "experience": {
+        "title": "Experience",
+        "description": "Sofía Chernikova's professional experience in television, digital communications, corporate communications and photography."
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "Professional contact for Sofía Chernikova, for media, audiovisual production and communications projects."
+      },
+      "notFound": {
+        "title": "Page not found",
+        "description": "The requested page does not exist or has moved."
+      }
+    }
+  },
+  "Navigation": {
+    "skip": "Skip to content",
+    "homeAria": "Go to home",
+    "sectionsAria": "Primary navigation",
+    "menu": "Menu",
+    "mobileSummary": "Menu",
+    "mobileAria": "Mobile navigation",
+    "localeAria": "Change language",
+    "localeNames": {
+      "es": "Español",
+      "en": "English"
+    },
+    "items": {
+      "work": "Work",
+      "about": "About",
+      "experience": "Experience",
+      "contact": "Contact"
+    }
+  },
+  "Hero": {
+    "dateline": "MADRID — 2026",
+    "role": "Journalist · Audiovisual communicator",
+    "availability": "Available for new opportunities",
+    "location": "Madrid, Spain",
+    "headline": "Journalism, image and digital storytelling.",
+    "summary": "I work across the field, the camera and content strategy: reports, interviews, photography and audiovisual communications.",
+    "actionsAria": "Primary actions",
+    "viewWork": "View work",
+    "contact": "Contact"
+  },
+  "Home": {
+    "currentEyebrow": "Now",
+    "currentTitle": "Current positions",
+    "practiceEyebrow": "Practice",
+    "practiceTitle": "Three connected areas",
+    "practiceText": "A professional practice shaped by reporting, image-making and strategic communications.",
+    "aboutEyebrow": "Profile",
+    "viewExperience": "View experience",
+    "moreAbout": "Read more"
+  },
+  "Work": {
+    "pageEyebrow": "Work",
+    "pageTitle": "Selected work",
+    "pageText": "Four professional contexts that have shaped the profile: television, digital communications, corporate content and photography.",
+    "aria": "Selected work"
+  },
+  "Profile": {
+    "aboutPreview": "Journalist and audiovisual communicator with experience in television, photography and digital communications.",
+    "aboutContinuation": "She combines reporting, visual creation and content strategy from Madrid.",
+    "bio": "Journalist and audiovisual communicator educated at Universidad Rey Juan Carlos. She works as a television reporter at Grupo Cadena Media, covering live events and interviews and writing the pieces that go on air.",
+    "aboutTrajectory": "In parallel, she has developed a path in digital communications: the URJCmun communications team between 2022 and 2026, corporate communications and audiovisual production at Annie Bonnie, and portrait photography in tourism settings with Isocero.",
+    "interests": "Professional interest in media, audiovisual production, communications and cultural projects.",
+    "aboutPageEyebrow": "About",
+    "aboutPageTitle": "Professional profile",
+    "aboutHeroTitle": "Across television, photography and digital communications.",
+    "bioEyebrow": "Bio",
+    "bioTitle": "Journalism and audiovisual communications from Madrid.",
+    "trajectoryEyebrow": "Path",
+    "trajectoryTitle": "Communications, television and image",
+    "educationEyebrow": "Education",
+    "educationTitle": "Education",
+    "languagesEyebrow": "Languages",
+    "languagesTitle": "Languages",
+    "toolsEyebrow": "Tools",
+    "toolsTitle": "Tools and workflow",
+    "experienceEyebrow": "Progression",
+    "experienceTitle": "How the profile has been built.",
+    "viewFullExperience": "View full experience"
+  },
+  "CurrentPositions": {
+    "items": {
+      "grupo-cadena-media": {
+        "role": "TV reporter",
+        "period": "2024 — Present"
+      },
+      "urjcmun": {
+        "role": "Deputy Director for Social Media",
+        "period": "2026"
+      }
+    }
+  },
+  "Practices": {
+    "items": [
+      {
+        "number": "01",
+        "code": "REPORTING",
+        "title": "Television and reporting",
+        "items": ["Coverage", "Interviews", "News pieces"],
+        "metadata": "REPORTING · INTERVIEWS · VIDEO"
+      },
+      {
+        "number": "02",
+        "code": "VISUAL",
+        "title": "Photography and visual storytelling",
+        "items": ["Portraits", "Events", "Reportage"],
+        "metadata": "PHOTO · EVENTS · EDITING"
+      },
+      {
+        "number": "03",
+        "code": "COMMUNICATION",
+        "title": "Content and communications",
+        "items": ["Social media", "Audiovisual production", "Digital content"],
+        "metadata": "SOCIAL · CONTENT · STRATEGY"
+      }
+    ]
+  },
+  "Experience": {
+    "pageEyebrow": "Experience",
+    "pageTitle": "Professional path",
+    "pageText": "Experience in television, digital communications, corporate communications and photography, with a focus on content production and audiovisual storytelling.",
+    "featuredEyebrow": "Work",
+    "featuredTitle": "Selected experience",
+    "responsibilitiesLabel": "Responsibilities",
+    "progressionLabel": "Internal progression",
+    "items": {
+      "grupo-cadena-media": {
+        "role": "TV reporter",
+        "discipline": "Reporting / Television",
+        "period": "2024 — Present",
+        "summary": "Television reporting: live coverage, interviews with artists and public figures, and writing the news pieces that go on air.",
+        "context": "Local television and news content.",
+        "responsibilities": {
+          "liveCoverage": "Live coverage of events and press conferences.",
+          "interviews": "Interviews with artists, actors and public figures.",
+          "scripts": "Writing scripts and news pieces."
+        }
+      },
+      "urjcmun": {
+        "role": "Deputy Director for Social Media",
+        "discipline": "Digital communications",
+        "period": "2022 — 2026",
+        "summary": "A path within the communications team since 2022, with several roles before taking on the deputy direction of Social Media in 2026.",
+        "context": "Model United Nations at Universidad Rey Juan Carlos.",
+        "progression": {
+          "communicationTeam": "Communication Team",
+          "cameraOperator": "Camera Operator",
+          "delegate": "Delegate",
+          "deputyDirector": "Deputy Director for Social Media"
+        },
+        "responsibilities": {
+          "socialStrategy": "Leading the social strategy and editorial calendar.",
+          "copyMetrics": "Copy, metrics and positioning for the digital identity.",
+          "graphicDesign": "Designing graphic and audiovisual content.",
+          "teamCoordination": "Coordinating reporters and content creators.",
+          "liveContent": "Event coverage and real-time content production."
+        }
+      },
+      "annie-bonnie": {
+        "role": "Corporate communications",
+        "discipline": "Corporate communications",
+        "period": "2025 — 2026",
+        "summary": "End-to-end corporate communications: audiovisual production, web and social content, and event coverage within a shared editorial calendar.",
+        "context": "Communications, strategy, content marketing and public relations consultancy.",
+        "responsibilities": {
+          "videoProduction": "Recording and editing audiovisual pieces for social media and internal communications.",
+          "writing": "Writing corporate blog articles and web content.",
+          "events": "Organising and covering corporate events.",
+          "calendar": "Managing the editorial calendar and supporting content strategy.",
+          "stakeholders": "Communications with audiences and collaborators."
+        }
+      },
+      "isocero": {
+        "role": "Photographer",
+        "discipline": "Photography",
+        "period": "2023",
+        "summary": "Portrait photography in tourism settings: session direction, professional editing and direct commercial relationship with the client.",
+        "context": "Studio specialising in portrait photography in hotel and tourism settings.",
+        "responsibilities": {
+          "sessionDirection": "Directing people during the session: families and children's portraits.",
+          "locationLight": "Finding locations and light within the hotel setting.",
+          "editing": "Professional image editing.",
+          "sales": "Presenting the work, advising the client and handling sales."
+        }
+      }
+    }
+  },
+  "Education": {
+    "items": [
+      {
+        "institution": "Universidad Rey Juan Carlos",
+        "program": "Journalism and Audiovisual Communication",
+        "period": "2021 — 2026"
+      }
+    ]
+  },
+  "Languages": {
+    "eyebrow": "Languages",
+    "items": [
+      { "code": "ES", "name": "Spanish", "level": "Native" },
+      { "code": "RU", "name": "Russian", "level": "Native" },
+      { "code": "EN", "name": "English", "level": "Advanced" },
+      { "code": "VAL", "name": "Valencian", "level": "Advanced" },
+      { "code": "IT", "name": "Italian", "level": "Intermediate" }
+    ]
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "For media, projects and collaborations.",
+    "body": "Available for professional opportunities related to television, audiovisual production, digital content, photography and communications.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "base": "Base",
+    "contactPageEyebrow": "Contact",
+    "contactPageTitle": "Let's talk",
+    "contactPageText": "For professional enquiries, media, audiovisual projects or digital communications, you can get in touch by email or LinkedIn."
+  },
+  "Footer": {
+    "line": "Journalism, image and audiovisual communications.",
+    "location": "Madrid, Spain"
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "Page not found",
+    "body": "The page you are looking for does not exist or has moved.",
+    "home": "Back home"
+  }
+}

@@ -1,6 +1,9 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Sofía Chernikova — Periodista · Comunicadora Audiovisual";
+import type { Locale } from "@/i18n/routing";
+import enMessages from "../../../messages/en.json";
+import esMessages from "../../../messages/es.json";
+
 export const size = {
   width: 1200,
   height: 630,
@@ -8,7 +11,15 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default function Image() {
+type ImageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Image({ params }: ImageProps) {
+  const { locale } = await params;
+  const messages = locale === "en" ? enMessages : esMessages;
+  const hero = messages.Hero;
+
   return new ImageResponse(
     (
       <div
@@ -29,12 +40,13 @@ export default function Image() {
           style={{
             display: "flex",
             justifyContent: "space-between",
+            gap: 32,
             fontSize: 28,
             letterSpacing: 0,
             fontFamily: "Arial, sans-serif",
           }}
         >
-          <span>MADRID — 2026</span>
+          <span>{hero.dateline}</span>
           <span>REPORTING / VISUAL / COMMUNICATION</span>
         </div>
         <div
@@ -61,7 +73,7 @@ export default function Image() {
               fontFamily: "Arial, sans-serif",
             }}
           >
-            Periodista · Comunicadora Audiovisual · Madrid
+            {hero.role} · {hero.location}
           </div>
         </div>
       </div>
