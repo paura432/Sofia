@@ -5,7 +5,7 @@ import { Geist, Newsreader } from "next/font/google";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { baseMetadata } from "@/lib/metadata";
+import { baseMetadata, personJsonLd } from "@/lib/metadata";
 
 import "./globals.css";
 
@@ -35,11 +35,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${sans.variable} ${serif.variable}`}>
+    <html
+      lang="es"
+      className={`${sans.variable} ${serif.variable}`}
+      data-scroll-behavior="smooth"
+    >
       <body>
         <SiteHeader />
         {children}
         <SiteFooter />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <Analytics />
         <SpeedInsights />
       </body>

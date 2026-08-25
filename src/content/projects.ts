@@ -13,11 +13,3 @@ export type Project = {
 };
 
 export const projects: Project[] = [];
-
-export const projectFilters = [
-  "ALL",
-  "REPORTING",
-  "PHOTO",
-  "VIDEO",
-  "COMMUNICATION",
-] as const;

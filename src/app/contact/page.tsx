@@ -1,30 +1,19 @@
 import type { Metadata } from "next";
 
 import { ContactBlock } from "@/components/contact-block";
-import { siteConfig } from "@/content/profile";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  alternates: {
-    canonical: "/contact",
-  },
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Contacto",
+  description:
+    "Contacto profesional de Sofía Chernikova para oportunidades en periodismo, audiovisual, fotografía y comunicación.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
-    <main id="main" className="page-shell contact-page">
-      <section className="page-hero">
-        <p className="eyebrow">CONTACT</p>
-        <h1>Hablemos.</h1>
-        <p>
-          Disponible para oportunidades profesionales y proyectos relacionados
-          con periodismo, producción audiovisual, fotografía y comunicación.
-        </p>
-        <a className="button-link primary" href={`mailto:${siteConfig.email}`}>
-          Enviar email
-        </a>
-      </section>
-      <ContactBlock compact />
+    <main id="main" className="contact-page">
+      <ContactBlock page />
     </main>
   );
 }

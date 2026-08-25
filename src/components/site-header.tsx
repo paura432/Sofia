@@ -15,7 +15,7 @@ export function SiteHeader() {
       <a className="skip-link" href="#main">
         Saltar al contenido
       </a>
-      <nav className="nav-shell" aria-label="Navegación principal">
+      <nav className="container nav-shell" aria-label="Navegación principal">
         <Link className="brand" href="/" aria-label="Inicio">
           {siteConfig.name}
         </Link>
@@ -26,9 +26,6 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <span className="language-switch" aria-label="Idioma">
-            ES / EN
-          </span>
         </div>
 
         <details className="mobile-nav">
@@ -39,7 +36,6 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <span>ES / EN</span>
           </div>
         </details>
       </nav>

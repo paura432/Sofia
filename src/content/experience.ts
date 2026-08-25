@@ -1,6 +1,7 @@
 export type ExperienceItem = {
   company: string;
   role: string;
+  discipline: string;
   area?: string;
   period: string;
   year?: string;
@@ -13,6 +14,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "Grupo Cadena Media",
     role: "Reportera TV",
+    discipline: "Reporting / Television",
     period: "2024 — Actualidad",
     summary:
       "Cobertura de eventos, entrevistas y redacción de guiones para piezas informativas.",
@@ -26,6 +28,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "URJCmun",
     role: "Social Media / Deputy Director for Social Media",
+    discipline: "Digital Communication",
     period: "2025 — 2026",
     summary:
       "Estrategia, calendario, contenido social y coordinación de equipo en eventos.",
@@ -41,6 +44,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "Annie Bonnie",
     role: "Comunicación Corporativa",
+    discipline: "Corporate Communication",
     period: "2025 — 2026",
     summary:
       "Contenidos web, piezas audiovisuales, eventos corporativos y calendario editorial.",
@@ -56,6 +60,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "Isocero",
     role: "Fotógrafa en Hoteles",
+    discipline: "Photography",
     period: "2023",
     summary:
       "Sesiones fotográficas, edición profesional y trato directo con clientes.",
@@ -70,3 +75,14 @@ export const experience: ExperienceItem[] = [
     ],
   },
 ];
+
+export const featuredWork = experience.map((item, index) => ({
+  number: String(index + 1).padStart(2, "0"),
+  company: item.company,
+  role: item.role,
+  discipline: item.discipline,
+  period: item.period,
+  summary: item.summary,
+  responsibilities: item.responsibilities.slice(0, 3),
+  featured: item.featured,
+}));

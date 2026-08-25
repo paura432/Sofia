@@ -3,6 +3,7 @@ export const siteConfig = {
   role: "Periodista · Comunicadora audiovisual",
   location: "Madrid, España",
   dateline: "MADRID — 2026",
+  availability: "Disponible para nuevas oportunidades",
   email: "chernisv@gmail.com",
   linkedin: "https://www.linkedin.com/in/sofia-chernikova",
   hasCv: false,
@@ -75,3 +76,5 @@ export const tools = [
   "Jira",
   "SEO",
 ];
+
+export const structuredRole = "Periodista y Comunicadora Audiovisual";
