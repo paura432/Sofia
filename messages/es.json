@@ -85,15 +85,19 @@
     "viewProject": "Ver proyecto",
     "viewRelatedWork": "Ver {count, plural, one {# proyecto} other {# proyectos}}",
     "viewOriginal": "Ver original",
-    "nextProject": "Siguiente proyecto",
+    "nextProject": "Siguiente historia",
     "context": "Contexto",
     "role": "Rol",
     "credits": "Créditos",
     "publication": "Resultado / publicación",
     "organisation": "Organización",
     "year": "Año",
+    "format": "Formato",
+    "location": "Localización",
     "play": "Reproducir",
-    "locationMadrid": "Madrid",
+    "locations": {
+      "madrid": "Madrid"
+    },
     "disciplines": {
       "reporting": "REPORTING",
       "interview": "ENTREVISTA",

@@ -85,15 +85,19 @@
     "viewProject": "View project",
     "viewRelatedWork": "View {count, plural, one {# project} other {# projects}}",
     "viewOriginal": "View original",
-    "nextProject": "Next project",
+    "nextProject": "Next story",
     "context": "Context",
     "role": "Role",
     "credits": "Credits",
     "publication": "Result / publication",
     "organisation": "Organisation",
     "year": "Year",
+    "format": "Format",
+    "location": "Location",
     "play": "Play",
-    "locationMadrid": "Madrid",
+    "locations": {
+      "madrid": "Madrid"
+    },
     "disciplines": {
       "reporting": "REPORTING",
       "interview": "INTERVIEW",

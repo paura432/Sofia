@@ -16,6 +16,8 @@ type FeaturedProjectProps = {
     params: { slug: string };
   };
   playLabel: string;
+  /** Copy traducida de la pieza; el título solo actúa de reserva. */
+  mediaCopy?: Record<string, { alt?: string; title?: string }>;
 };
 
 export function FeaturedProject({
@@ -28,6 +30,7 @@ export function FeaturedProject({
   video,
   href,
   playLabel,
+  mediaCopy,
 }: FeaturedProjectProps) {
   const featuredMedia = video ?? cover;
 
@@ -41,10 +44,16 @@ export function FeaturedProject({
         <p className="eyebrow">{eyebrow}</p>
         <Link className="featured-project-link" href={href}>
           <ProjectMediaLayout
-            copy={{ [featuredMedia.id]: { alt: title, title } }}
+            copy={{
+              [featuredMedia.id]: {
+                alt: title,
+                title,
+                ...mediaCopy?.[featuredMedia.id],
+              },
+            }}
             media={[featuredMedia]}
             playLabel={playLabel}
-            priorityFirst
+            preloadFirst
           />
           <span className="featured-project-meta">
             <span>

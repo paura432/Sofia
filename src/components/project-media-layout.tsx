@@ -7,13 +7,18 @@ type MediaCopy = {
   alt?: string;
   caption?: string;
   title?: string;
+  location?: string;
+  date?: string;
+  credit?: string;
 };
 
 type ProjectMediaLayoutProps = {
   media?: ProjectMedia[];
   copy?: Record<string, MediaCopy>;
   playLabel: string;
-  priorityFirst?: boolean;
+  /** Marca la primera pieza como LCP. Solo en heros above the fold. */
+  preloadFirst?: boolean;
+  trackLabels?: Record<string, string>;
 };
 
 function sortMedia(media: ProjectMedia[]) {
@@ -26,7 +31,8 @@ export function ProjectMediaLayout({
   media,
   copy = {},
   playLabel,
-  priorityFirst = false,
+  preloadFirst = false,
+  trackLabels,
 }: ProjectMediaLayoutProps) {
   const usableMedia = sortMedia(media ?? []);
 
@@ -39,6 +45,7 @@ export function ProjectMediaLayout({
       {usableMedia.map((item, index) => {
         const itemCopy = copy[item.id] ?? {};
         const className = `project-media-item ${item.layout ?? "wide"}`;
+        const captionIndex = String(index + 1).padStart(2, "0");
 
         if (item.type === "video") {
           return (
@@ -47,10 +54,14 @@ export function ProjectMediaLayout({
                 media={item}
                 playLabel={playLabel}
                 title={itemCopy.title ?? ""}
+                trackLabels={trackLabels}
               />
               <MediaCaption
                 caption={itemCopy.caption}
-                index={String(index + 1).padStart(2, "0")}
+                credit={itemCopy.credit}
+                date={itemCopy.date}
+                index={captionIndex}
+                location={itemCopy.location}
               />
             </figure>
           );
@@ -62,10 +73,14 @@ export function ProjectMediaLayout({
               alt={itemCopy.alt ?? ""}
               caption={itemCopy.caption}
               className={className}
+              credit={itemCopy.credit}
+              date={itemCopy.date}
               fill
+              index={captionIndex}
               key={item.id}
+              location={itemCopy.location}
               media={item}
-              priority={priorityFirst && index === 0}
+              preload={preloadFirst && index === 0}
             />
           );
         }
@@ -86,7 +101,10 @@ export function ProjectMediaLayout({
             </a>
             <MediaCaption
               caption={itemCopy.caption}
-              index={String(index + 1).padStart(2, "0")}
+              credit={itemCopy.credit}
+              date={itemCopy.date}
+              index={captionIndex}
+              location={itemCopy.location}
             />
           </figure>
         );

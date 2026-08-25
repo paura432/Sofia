@@ -27,6 +27,7 @@ type PageProps = {
 
 type ProjectCopy = {
   title: string;
+  media?: Record<string, { alt?: string; title?: string }>;
 };
 
 export async function generateMetadata({
@@ -58,6 +59,8 @@ export default async function Home() {
     project.discipline
       .map((discipline) => projectsText(`disciplines.${discipline}`))
       .join(" · ");
+  const projectCopy = (project: PortfolioProject) =>
+    projectsText.raw(`items.${project.translationKey}`) as ProjectCopy;
 
   return (
     <main id="main">
@@ -72,13 +75,10 @@ export default async function Home() {
             pathname: "/work/[slug]",
             params: { slug: featuredProject.slug },
           }}
+          mediaCopy={projectCopy(featuredProject).media}
           organisation={featuredProject.organisation}
           playLabel={projectsText("play")}
-          title={
-            (projectsText.raw(
-              `items.${featuredProject.translationKey}`,
-            ) as ProjectCopy).title
-          }
+          title={projectCopy(featuredProject).title}
           video={featuredProject.media?.find((media) => media.type === "video")}
           year={featuredProject.year}
         />
@@ -132,12 +132,11 @@ export default async function Home() {
         projects={selectedProjects.map((project, index) => ({
           discipline: disciplineLabel(project),
           media: project.cover ?? project.media?.[0],
+          mediaCopy: projectCopy(project).media,
           number: String(index + 1).padStart(2, "0"),
           organisation: project.organisation,
           slug: project.slug,
-          title: (projectsText.raw(
-            `items.${project.translationKey}`,
-          ) as ProjectCopy).title,
+          title: projectCopy(project).title,
         }))}
         viewLabel={projectsText("viewProject")}
       />

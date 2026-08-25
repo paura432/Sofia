@@ -12,6 +12,7 @@ import {
   getPublishedProjects,
   type PortfolioProject,
 } from "@/content/projects";
+import { Link } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
 import {
   pageMetadata,
@@ -27,6 +28,7 @@ type ProjectCopy = {
   title: string;
   description: string;
   dek?: string;
+  format?: string;
   context?: string;
   result?: string;
   roles?: string[];
@@ -111,14 +113,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <dd>{project.organisation}</dd>
               </div>
             ) : null}
-            <div>
-              <dt>{t("locationMadrid")}</dt>
-              <dd>{t("locationMadrid")}</dd>
-            </div>
+            {project.locationKey ? (
+              <div>
+                <dt>{t("location")}</dt>
+                <dd>{t(`locations.${project.locationKey}`)}</dd>
+              </div>
+            ) : null}
             <div>
               <dt>{t("year")}</dt>
               <dd>{project.year}</dd>
             </div>
+            {copy.format ? (
+              <div>
+                <dt>{t("format")}</dt>
+                <dd>{copy.format}</dd>
+              </div>
+            ) : null}
           </dl>
         </Reveal>
       </section>
@@ -130,7 +140,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               copy={copy.media}
               media={[heroMedia]}
               playLabel={t("play")}
-              priorityFirst
+              preloadFirst
             />
           </div>
         </section>
@@ -204,16 +214,34 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       ) : null}
 
       {nextProject ? (
-        <section className="section next-project">
+        <section className="section next-project" aria-labelledby="next-project">
           <div className="container">
-            <MotionLink
+            <p className="eyebrow" id="next-project">
+              {t("nextProject")}
+            </p>
+            <Link
+              className="next-project-link"
               href={{
                 pathname: "/work/[slug]",
                 params: { slug: nextProject.slug },
               }}
             >
-              {t("nextProject")}
-            </MotionLink>
+              <span className="next-project-discipline">
+                {disciplineLabel(nextProject, t)}
+              </span>
+              <span className="display-section">
+                {
+                  (
+                    t.raw(
+                      `items.${nextProject.translationKey}`,
+                    ) as ProjectCopy
+                  ).title
+                }
+              </span>
+              <span className="next-project-year">
+                {nextProject.year} <span aria-hidden="true">→</span>
+              </span>
+            </Link>
           </div>
         </section>
       ) : null}

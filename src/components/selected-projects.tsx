@@ -10,6 +10,7 @@ type SelectedProjectItem = {
   organisation?: string;
   discipline: string;
   media?: ProjectMedia;
+  mediaCopy?: Record<string, { alt?: string; title?: string }>;
 };
 
 type SelectedProjectsProps = {
@@ -52,6 +53,7 @@ export function SelectedProjects({
                     [project.media.id]: {
                       alt: project.title,
                       title: project.title,
+                      ...project.mediaCopy?.[project.media.id],
                     },
                   }}
                   media={[project.media]}

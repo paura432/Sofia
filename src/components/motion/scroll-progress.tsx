@@ -4,7 +4,6 @@ import { m, useReducedMotion, useScroll, useSpring } from "motion/react";
 
 /**
  * Barra de progreso de lectura para piezas largas (`/work/[slug]`).
- * Todavía no se monta en ninguna ruta: no hay reportajes publicados.
  * Requiere MotionProvider como ancestro.
  */
 export function ScrollProgress() {

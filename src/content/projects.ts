@@ -21,6 +21,20 @@ export type MediaLayout =
 
 export type AspectRatio = "3:2" | "4:3" | "16:9" | "4:5" | "2:3" | "1:1";
 
+/** Porcentajes 0-100 que se traducen a `object-position: x% y%`. */
+export type MediaFocalPoint = {
+  x: number;
+  y: number;
+};
+
+export type VideoTrack = {
+  src: string;
+  srcLang: "es" | "en";
+  labelKey: string;
+  kind: "captions" | "subtitles";
+  default?: boolean;
+};
+
 export type ProjectMedia = {
   id: string;
   type: MediaType;
@@ -40,6 +54,16 @@ export type ProjectMedia = {
   position?: number;
   duration?: string;
   decorative?: boolean;
+  /** Base64 diminuto para `placeholder="blur"`. Sin él se usa `empty`. */
+  blurDataURL?: string;
+  /** Evita recortar caras cuando el encuadre no está centrado. */
+  focalPoint?: MediaFocalPoint;
+  /** Solo cuando el recorte móvil exige un asset distinto, no por defecto. */
+  mobileSrc?: string;
+  mobilePoster?: string;
+  creditKey?: string;
+  tracks?: VideoTrack[];
+  transcriptKey?: string;
 };
 
 export type ProjectCredit = {
@@ -113,6 +137,34 @@ export const projects: PortfolioProject[] = [
   },
 ];
 
+/**
+ * `sizes` por layout. Los cortes siguen el grid editorial: una columna en
+ * móvil, media columna en tablet y la fracción real del container en desktop
+ * (`--container-max: 1440px` menos `--page-gutter`).
+ */
+const mediaSizes: Record<MediaLayout, string> = {
+  full: "(max-width: 699px) 100vw, (max-width: 1600px) 92vw, 1440px",
+  wide: "(max-width: 699px) 100vw, (max-width: 1300px) 92vw, 1180px",
+  half: "(max-width: 699px) 100vw, (max-width: 1600px) 46vw, 710px",
+  portrait:
+    "(max-width: 699px) 100vw, (max-width: 1023px) 46vw, (max-width: 1600px) 31vw, 470px",
+  pair: "(max-width: 699px) 100vw, (max-width: 1600px) 46vw, 710px",
+  triptych:
+    "(max-width: 699px) 100vw, (max-width: 1023px) 46vw, (max-width: 1600px) 31vw, 470px",
+};
+
+export function getMediaSizes(layout: MediaLayout = "wide") {
+  return mediaSizes[layout];
+}
+
+export function focalPointStyle(media: ProjectMedia) {
+  if (!media.focalPoint) {
+    return undefined;
+  }
+
+  return `${media.focalPoint.x}% ${media.focalPoint.y}%`;
+}
+
 export function hasMediaAsset(media: ProjectMedia) {
   if (media.type === "image") {
     return Boolean(media.src && (media.decorative || media.altKey));
@@ -180,4 +232,63 @@ export function getNextProject(currentSlug: string) {
   }
 
   return publishedProjects[(currentIndex + 1) % publishedProjects.length];
+}
+
+/**
+ * Avisos de ingesta: solo en desarrollo, para detectar metadatos incompletos
+ * antes de publicar. En producción no se ejecuta ni una línea.
+ */
+function warnIncompleteMedia() {
+  const warn = (message: string) => console.warn(`[projects] ${message}`);
+
+  for (const project of projects) {
+    const allMedia = [project.cover, ...(project.media ?? [])].filter(
+      Boolean,
+    ) as ProjectMedia[];
+
+    if (project.published && !project.cover) {
+      warn(`${project.slug}: published sin cover`);
+    }
+
+    const seenIds = new Set<string>();
+    const seenPositions = new Set<number>();
+
+    for (const media of allMedia) {
+      const label = `${project.slug}/${media.id}`;
+
+      if (seenIds.has(media.id)) {
+        warn(`${label}: id duplicado`);
+      }
+      seenIds.add(media.id);
+
+      if (media.position !== undefined) {
+        if (seenPositions.has(media.position)) {
+          warn(`${label}: position ${media.position} duplicada`);
+        }
+        seenPositions.add(media.position);
+      }
+
+      if (media.type === "image") {
+        if (!media.decorative && !media.altKey) {
+          warn(`${label}: imagen sin altKey y sin decorative`);
+        }
+        if (!media.aspectRatio && !(media.width && media.height)) {
+          warn(`${label}: imagen sin aspectRatio ni width/height (riesgo CLS)`);
+        }
+      }
+
+      if (media.type === "video") {
+        if (!media.poster) {
+          warn(`${label}: vídeo sin poster`);
+        }
+        if (!media.titleKey) {
+          warn(`${label}: vídeo sin titleKey`);
+        }
+      }
+    }
+  }
+}
+
+if (process.env.NODE_ENV === "development") {
+  warnIncompleteMedia();
 }
