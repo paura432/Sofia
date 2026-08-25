@@ -6,9 +6,11 @@ import { Geist, Newsreader } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 
+import { MotionProvider } from "@/components/motion/motion-provider";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { isLocale, locales, type Locale } from "@/i18n/routing";
+import { serializeJsonLd } from "@/lib/json-ld";
 import { pageMetadata, personJsonLd } from "@/lib/metadata";
 
 import "../globals.css";
@@ -67,8 +69,10 @@ export default async function LocaleLayout({
   }
 
   const locale: Locale = rawLocale;
-  const messages = await getMessages();
-  const metadata = await getTranslations({ locale, namespace: "Metadata" });
+  const [messages, metadata] = await Promise.all([
+    getMessages(),
+    getTranslations({ locale, namespace: "Metadata" }),
+  ]);
 
   return (
     <html
@@ -78,14 +82,16 @@ export default async function LocaleLayout({
     >
       <body>
         <NextIntlClientProvider messages={messages}>
-          <SiteHeader />
-          {children}
-          <SiteFooter />
+          <MotionProvider>
+            <SiteHeader />
+            {children}
+            <SiteFooter />
+          </MotionProvider>
         </NextIntlClientProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
+            __html: serializeJsonLd(
               personJsonLd({
                 locale,
                 jobTitle: metadata("personRole"),

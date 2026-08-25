@@ -75,7 +75,33 @@
     "pageEyebrow": "Work",
     "pageTitle": "Selected work",
     "pageText": "Four professional contexts that have shaped the profile: television, digital communications, corporate content and photography.",
-    "aria": "Selected work"
+    "aria": "Selected work",
+    "fallbackAria": "Selected professional experience"
+  },
+  "Projects": {
+    "featuredEyebrow": "Featured",
+    "selectedEyebrow": "Selected work",
+    "allEyebrow": "Portfolio",
+    "viewProject": "View project",
+    "viewRelatedWork": "View {count, plural, one {# project} other {# projects}}",
+    "viewOriginal": "View original",
+    "nextProject": "Next project",
+    "context": "Context",
+    "role": "Role",
+    "credits": "Credits",
+    "publication": "Result / publication",
+    "organisation": "Organisation",
+    "year": "Year",
+    "play": "Play",
+    "locationMadrid": "Madrid",
+    "disciplines": {
+      "reporting": "REPORTING",
+      "interview": "INTERVIEW",
+      "video": "VIDEO",
+      "photography": "PHOTOGRAPHY",
+      "communication": "COMMUNICATIONS"
+    },
+    "items": {}
   },
   "Profile": {
     "aboutPreview": "Journalist and audiovisual communicator with experience in television, photography and digital communications.",

@@ -1,5 +1,8 @@
 import { getTranslations } from "next-intl/server";
 
+import { AnimatedLine } from "@/components/motion/animated-line";
+import { Reveal } from "@/components/motion/reveal";
+
 type Practice = {
   number: string;
   code: string;
@@ -14,8 +17,14 @@ export async function PracticeIndex() {
 
   return (
     <div className="practice-index">
-      {practices.map((practice) => (
-        <article className="practice-item" key={practice.number}>
+      <AnimatedLine tone="strong" />
+      {practices.map((practice, index) => (
+        <Reveal
+          as="article"
+          className="practice-item"
+          delay={index * 60}
+          key={practice.number}
+        >
           <div className="practice-number">{practice.number}</div>
           <div>
             <p className="practice-code">{practice.code}</p>
@@ -27,7 +36,7 @@ export async function PracticeIndex() {
             </ul>
           </div>
           <p className="practice-meta">{practice.metadata}</p>
-        </article>
+        </Reveal>
       ))}
     </div>
   );

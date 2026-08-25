@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
+import { AnimatedLine } from "@/components/motion/animated-line";
+import { MotionLink } from "@/components/motion/motion-link";
+import { Reveal } from "@/components/motion/reveal";
+import { StaggerGroup } from "@/components/motion/stagger";
 import { PeriodDisplay } from "@/components/period-display";
 import { experience } from "@/content/experience";
+import { getRelatedProjects } from "@/content/projects";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -37,27 +42,36 @@ export async function generateMetadata({
 }
 
 export default async function ExperiencePage() {
-  const t = await getTranslations("Experience");
+  const [t, projectsText] = await Promise.all([
+    getTranslations("Experience"),
+    getTranslations("Projects"),
+  ]);
 
   return (
     <main id="main">
       <section className="page-hero section section-first">
-        <div className="container page-hero-inner">
+        <Reveal className="container page-hero-inner">
           <p className="eyebrow">{t("pageEyebrow")}</p>
           <h1 className="display-page">{t("pageTitle")}</h1>
           <p>{t("pageText")}</p>
-        </div>
+        </Reveal>
       </section>
 
       <section className="section trajectory" aria-label={t("pageTitle")}>
         <div className="container">
+          <AnimatedLine tone="strong" />
           {experience.map((item) => {
             const copy = t.raw(`items.${item.id}`) as ExperienceCopy;
+            const relatedProjects = getRelatedProjects(item.id);
 
             return (
-              <article
-                className={item.featured ? "trajectory-row featured" : "trajectory-row"}
+              <StaggerGroup
+                as="article"
+                className={
+                  item.featured ? "trajectory-row featured" : "trajectory-row"
+                }
                 key={item.id}
+                step={30}
               >
                 <PeriodDisplay period={copy.period} />
                 <div>
@@ -101,8 +115,15 @@ export default async function ExperiencePage() {
                       </li>
                     ))}
                   </ul>
+                  {relatedProjects.length > 0 ? (
+                    <MotionLink href="/work">
+                      {projectsText("viewRelatedWork", {
+                        count: relatedProjects.length,
+                      })}
+                    </MotionLink>
+                  ) : null}
                 </div>
-              </article>
+              </StaggerGroup>
             );
           })}
         </div>

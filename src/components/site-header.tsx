@@ -1,12 +1,13 @@
 import { getTranslations } from "next-intl/server";
 
 import { LocaleSwitcher } from "@/components/locale-switcher";
+import { MobileNav } from "@/components/mobile-nav";
 import { NavLink } from "@/components/nav-link";
 import { siteConfig } from "@/content/profile";
 import { Link } from "@/i18n/navigation";
-import type { AppPathname, Locale } from "@/i18n/routing";
+import type { Locale, StaticAppPathname } from "@/i18n/routing";
 
-const navItems: Array<{ href: AppPathname; key: string; index: string }> = [
+const navItems: Array<{ href: StaticAppPathname; key: string; index: string }> = [
   { href: "/work", key: "work", index: "01" },
   { href: "/about", key: "about", index: "02" },
   { href: "/experience", key: "experience", index: "03" },
@@ -46,29 +47,23 @@ export async function SiteHeader() {
           />
         </div>
 
-        <details className="mobile-nav">
-          <summary>{t("mobileSummary")}</summary>
-          <div className="mobile-nav-panel">
-            <div className="mobile-nav-panel-header">
-              <span>{siteConfig.name}</span>
-              <span>{t("menu")}</span>
-            </div>
-            <div className="mobile-nav-links" aria-label={t("mobileAria")}>
-              {navItems.map((item) => (
-                <NavLink
-                  href={item.href}
-                  index={item.index}
-                  key={item.href}
-                  label={t(`items.${item.key}`)}
-                />
-              ))}
-            </div>
-            <LocaleSwitcher
-              ariaLabel={t("localeAria")}
-              labels={localeLabels}
+        <MobileNav
+          brand={siteConfig.name}
+          linksAriaLabel={t("mobileAria")}
+          links={navItems.map((item) => (
+            <NavLink
+              href={item.href}
+              index={item.index}
+              key={item.href}
+              label={t(`items.${item.key}`)}
             />
-          </div>
-        </details>
+          ))}
+          localeSwitcher={
+            <LocaleSwitcher ariaLabel={t("localeAria")} labels={localeLabels} />
+          }
+          menuLabel={t("menu")}
+          summaryLabel={t("mobileSummary")}
+        />
       </nav>
     </header>
   );

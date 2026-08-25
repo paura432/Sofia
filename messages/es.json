@@ -75,7 +75,33 @@
     "pageEyebrow": "Trabajo",
     "pageTitle": "Trabajo seleccionado",
     "pageText": "Cuatro contextos profesionales donde se ha construido el perfil: televisión, comunicación digital, contenido corporativo y fotografía.",
-    "aria": "Trabajo seleccionado"
+    "aria": "Trabajo seleccionado",
+    "fallbackAria": "Experiencia profesional seleccionada"
+  },
+  "Projects": {
+    "featuredEyebrow": "Destacado",
+    "selectedEyebrow": "Trabajo seleccionado",
+    "allEyebrow": "Portfolio",
+    "viewProject": "Ver proyecto",
+    "viewRelatedWork": "Ver {count, plural, one {# proyecto} other {# proyectos}}",
+    "viewOriginal": "Ver original",
+    "nextProject": "Siguiente proyecto",
+    "context": "Contexto",
+    "role": "Rol",
+    "credits": "Créditos",
+    "publication": "Resultado / publicación",
+    "organisation": "Organización",
+    "year": "Año",
+    "play": "Reproducir",
+    "locationMadrid": "Madrid",
+    "disciplines": {
+      "reporting": "REPORTING",
+      "interview": "ENTREVISTA",
+      "video": "VÍDEO",
+      "photography": "FOTOGRAFÍA",
+      "communication": "COMUNICACIÓN"
+    },
+    "items": {}
   },
   "Profile": {
     "aboutPreview": "Periodista y comunicadora audiovisual con experiencia en televisión, fotografía y comunicación digital.",

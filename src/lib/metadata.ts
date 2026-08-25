@@ -15,6 +15,10 @@ export const localizedPathnames: Record<AppPathname, Record<Locale, string>> = {
     es: "/trabajo",
     en: "/en/work",
   },
+  "/work/[slug]": {
+    es: "/trabajo/[slug]",
+    en: "/en/work/[slug]",
+  },
   "/about": {
     es: "/sobre-mi",
     en: "/en/about",
@@ -46,6 +50,25 @@ export function localizedUrl(pathname: AppPathname, locale: Locale) {
   return absoluteUrl(localizedPath(pathname, locale));
 }
 
+export function projectPath(slug: string, locale: Locale) {
+  return locale === "es" ? `/trabajo/${slug}` : `/en/work/${slug}`;
+}
+
+export function projectUrl(slug: string, locale: Locale) {
+  return absoluteUrl(projectPath(slug, locale));
+}
+
+export function projectAlternates(slug: string) {
+  return {
+    canonical: projectPath(slug, "es"),
+    languages: {
+      es: projectUrl(slug, "es"),
+      en: projectUrl(slug, "en"),
+      "x-default": projectUrl(slug, "es"),
+    },
+  };
+}
+
 export function alternatesFor(pathname: AppPathname) {
   return {
     canonical: localizedPath(pathname, "es"),
@@ -60,17 +83,21 @@ export function alternatesFor(pathname: AppPathname) {
 export function pageMetadata({
   locale,
   pathname,
+  canonicalPath,
+  alternateLanguages,
   title,
   description,
   ogAlt,
 }: {
   locale: Locale;
   pathname: AppPathname;
+  canonicalPath?: string;
+  alternateLanguages?: Record<string, string>;
   title: string;
   description: string;
   ogAlt: string;
 }): Metadata {
-  const pageUrl = localizedPath(pathname, locale);
+  const pageUrl = canonicalPath ?? localizedPath(pathname, locale);
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -85,7 +112,7 @@ export function pageMetadata({
     publisher: siteConfig.name,
     alternates: {
       canonical: pageUrl,
-      languages: alternatesFor(pathname).languages,
+      languages: alternateLanguages ?? alternatesFor(pathname).languages,
     },
     robots: {
       index: IS_PUBLIC,

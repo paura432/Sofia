@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
+import { Reveal } from "@/components/motion/reveal";
 import { siteConfig } from "@/content/profile";
 
 type ContactBlockProps = {
@@ -27,7 +28,7 @@ export async function ContactBlock({
         .join(" ")}
       aria-labelledby={page ? "contact-title" : "contact-heading"}
     >
-      <div className="container contact-grid">
+      <Reveal className="container contact-grid">
         <div>
           <p className="eyebrow">
             {page ? t("contactPageEyebrow") : t("eyebrow")}
@@ -64,7 +65,7 @@ export async function ContactBlock({
             </div>
           </dl>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

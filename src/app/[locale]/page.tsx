@@ -2,17 +2,31 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import { ContactBlock } from "@/components/contact-block";
+import { FeaturedProject } from "@/components/featured-project";
 import { Hero } from "@/components/hero";
 import { LanguagesStrip } from "@/components/languages-strip";
+import { AnimatedLine } from "@/components/motion/animated-line";
+import { MotionLink } from "@/components/motion/motion-link";
+import { Reveal } from "@/components/motion/reveal";
+import { StaggerGroup } from "@/components/motion/stagger";
 import { PracticeIndex } from "@/components/practice-index";
 import { SectionHeading } from "@/components/section-heading";
+import { SelectedProjects } from "@/components/selected-projects";
+import {
+  getFeaturedProject,
+  getSelectedProjects,
+  type PortfolioProject,
+} from "@/content/projects";
 import { currentPositionIds } from "@/content/profile";
-import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
+};
+
+type ProjectCopy = {
+  title: string;
 };
 
 export async function generateMetadata({
@@ -32,13 +46,43 @@ export async function generateMetadata({
 }
 
 export default async function Home() {
-  const home = await getTranslations("Home");
-  const profile = await getTranslations("Profile");
-  const positions = await getTranslations("CurrentPositions");
+  const [home, profile, positions, projectsText] = await Promise.all([
+    getTranslations("Home"),
+    getTranslations("Profile"),
+    getTranslations("CurrentPositions"),
+    getTranslations("Projects"),
+  ]);
+  const featuredProject = getFeaturedProject();
+  const selectedProjects = getSelectedProjects(3);
+  const disciplineLabel = (project: PortfolioProject) =>
+    project.discipline
+      .map((discipline) => projectsText(`disciplines.${discipline}`))
+      .join(" · ");
 
   return (
     <main id="main">
       <Hero />
+
+      {featuredProject ? (
+        <FeaturedProject
+          cover={featuredProject.cover}
+          discipline={disciplineLabel(featuredProject)}
+          eyebrow={projectsText("featuredEyebrow")}
+          href={{
+            pathname: "/work/[slug]",
+            params: { slug: featuredProject.slug },
+          }}
+          organisation={featuredProject.organisation}
+          playLabel={projectsText("play")}
+          title={
+            (projectsText.raw(
+              `items.${featuredProject.translationKey}`,
+            ) as ProjectCopy).title
+          }
+          video={featuredProject.media?.find((media) => media.type === "video")}
+          year={featuredProject.year}
+        />
+      ) : null}
 
       <section className="section" aria-labelledby="current">
         <div className="container editorial-grid">
@@ -48,17 +92,24 @@ export default async function Home() {
             title={home("currentTitle")}
           />
           <div className="current-list">
-            {currentPositionIds.map((id) => (
-              <div className="current-item" key={id}>
-                <p className="experience-period">
-                  {positions(`items.${id}.period`)}
-                </p>
-                <div>
-                  <h3>{id === "grupo-cadena-media" ? "Grupo Cadena Media" : "URJCmun"}</h3>
-                  <p>{positions(`items.${id}.role`)}</p>
+            <AnimatedLine tone="strong" />
+            <StaggerGroup className="current-entries">
+              {currentPositionIds.map((id) => (
+                <div className="current-item" key={id}>
+                  <p className="experience-period">
+                    {positions(`items.${id}.period`)}
+                  </p>
+                  <div>
+                    <h3>
+                      {id === "grupo-cadena-media"
+                        ? "Grupo Cadena Media"
+                        : "URJCmun"}
+                    </h3>
+                    <p>{positions(`items.${id}.role`)}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </StaggerGroup>
           </div>
         </div>
       </section>
@@ -75,28 +126,40 @@ export default async function Home() {
         </div>
       </section>
 
+      <SelectedProjects
+        eyebrow={projectsText("selectedEyebrow")}
+        playLabel={projectsText("play")}
+        projects={selectedProjects.map((project, index) => ({
+          discipline: disciplineLabel(project),
+          media: project.cover ?? project.media?.[0],
+          number: String(index + 1).padStart(2, "0"),
+          organisation: project.organisation,
+          slug: project.slug,
+          title: (projectsText.raw(
+            `items.${project.translationKey}`,
+          ) as ProjectCopy).title,
+        }))}
+        viewLabel={projectsText("viewProject")}
+      />
+
       <section className="section" aria-labelledby="about-preview">
-        <div className="container about-preview">
+        <Reveal className="container about-preview">
           <p className="eyebrow">{home("aboutEyebrow")}</p>
           <h2 className="display-section" id="about-preview">
             {profile("aboutPreview")}
           </h2>
           <p>{profile("aboutContinuation")}</p>
           <div className="split-heading-links">
-            <Link className="text-link arrow-link" href="/experience">
-              {home("viewExperience")} <span aria-hidden="true">↗</span>
-            </Link>
-            <Link className="text-link arrow-link" href="/about">
-              {home("moreAbout")} <span aria-hidden="true">↗</span>
-            </Link>
+            <MotionLink href="/experience">{home("viewExperience")}</MotionLink>
+            <MotionLink href="/about">{home("moreAbout")}</MotionLink>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="section compact-section" aria-labelledby="languages">
-        <div className="container">
+        <Reveal className="container">
           <LanguagesStrip />
-        </div>
+        </Reveal>
       </section>
 
       <ContactBlock />

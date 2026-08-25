@@ -3,10 +3,13 @@ import { Fragment } from "react";
 import { getTranslations } from "next-intl/server";
 
 import { ContactBlock } from "@/components/contact-block";
+import { AnimatedLine } from "@/components/motion/animated-line";
+import { MotionLink } from "@/components/motion/motion-link";
+import { Reveal } from "@/components/motion/reveal";
+import { StaggerGroup } from "@/components/motion/stagger";
 import { PeriodDisplay } from "@/components/period-display";
 import { experience } from "@/content/experience";
 import { siteConfig, tools } from "@/content/profile";
-import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -50,10 +53,12 @@ export async function generateMetadata({
 }
 
 export default async function AboutPage() {
-  const profile = await getTranslations("Profile");
-  const education = await getTranslations("Education");
-  const languages = await getTranslations("Languages");
-  const experienceText = await getTranslations("Experience");
+  const [profile, education, languages, experienceText] = await Promise.all([
+    getTranslations("Profile"),
+    getTranslations("Education"),
+    getTranslations("Languages"),
+    getTranslations("Experience"),
+  ]);
 
   const educationItems = education.raw("items") as Education[];
   const languageItems = languages.raw("items") as Language[];
@@ -61,15 +66,15 @@ export default async function AboutPage() {
   return (
     <main id="main">
       <section className="page-hero section section-first">
-        <div className="container page-hero-inner">
+        <Reveal className="container page-hero-inner">
           <p className="eyebrow">{profile("aboutPageEyebrow")}</p>
           <h1 className="display-page">{profile("aboutHeroTitle")}</h1>
           <p>{profile("aboutPreview")}</p>
-        </div>
+        </Reveal>
       </section>
 
       <section className="section" aria-labelledby="brief-bio">
-        <div className="container about-columns">
+        <Reveal className="container about-columns">
           <div>
             <p className="eyebrow">{profile("bioEyebrow")}</p>
             <h2 className="display-section" id="brief-bio">
@@ -81,11 +86,11 @@ export default async function AboutPage() {
             <p>{profile("aboutTrajectory")}</p>
             <p>{profile("interests")}</p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="section detail-grid" aria-labelledby="education">
-        <div className="container detail-grid-inner">
+        <StaggerGroup className="container detail-grid-inner">
           <article>
             <p className="eyebrow">{profile("educationEyebrow")}</p>
             {educationItems.map((item) => (
@@ -119,17 +124,18 @@ export default async function AboutPage() {
               ))}
             </div>
           </article>
-        </div>
+        </StaggerGroup>
       </section>
 
       <section className="section" aria-labelledby="about-experience">
         <div className="container">
-          <div className="section-heading section-heading-spaced">
+          <Reveal className="section-heading section-heading-spaced">
             <p className="eyebrow">{profile("experienceEyebrow")}</p>
             <h2 className="display-section" id="about-experience">
               {profile("experienceTitle")}
             </h2>
-          </div>
+          </Reveal>
+          <AnimatedLine tone="strong" />
           <div className="about-summary">
             {experience.map((item) => {
               const copy = experienceText.raw(
@@ -137,7 +143,12 @@ export default async function AboutPage() {
               ) as ExperienceCopy;
 
               return (
-                <article className="about-summary-item" key={item.id}>
+                <StaggerGroup
+                  as="article"
+                  className="about-summary-item"
+                  key={item.id}
+                  step={30}
+                >
                   <PeriodDisplay period={copy.period} />
                   <div>
                     <p className="case-discipline">{copy.discipline}</p>
@@ -145,14 +156,14 @@ export default async function AboutPage() {
                     <p className="case-role">{copy.role}</p>
                   </div>
                   <p>{copy.summary}</p>
-                </article>
+                </StaggerGroup>
               );
             })}
           </div>
           <div className="about-summary-footer">
-            <Link className="text-link arrow-link" href="/experience">
-              {profile("viewFullExperience")} <span aria-hidden="true">↗</span>
-            </Link>
+            <MotionLink href="/experience">
+              {profile("viewFullExperience")}
+            </MotionLink>
           </div>
         </div>
       </section>

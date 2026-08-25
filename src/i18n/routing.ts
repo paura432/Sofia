@@ -11,6 +11,10 @@ export const routing = defineRouting({
       es: "/trabajo",
       en: "/work",
     },
+    "/work/[slug]": {
+      es: "/trabajo/[slug]",
+      en: "/work/[slug]",
+    },
     "/about": {
       es: "/sobre-mi",
       en: "/about",
@@ -28,6 +32,7 @@ export const routing = defineRouting({
 
 export type Locale = (typeof routing.locales)[number];
 export type AppPathname = keyof typeof routing.pathnames;
+export type StaticAppPathname = Exclude<AppPathname, "/work/[slug]">;
 
 export const locales = routing.locales;
 export const defaultLocale = routing.defaultLocale;
