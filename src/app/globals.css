@@ -115,7 +115,8 @@ p {
 .display-hero {
   font-family: var(--font-serif), Georgia, serif;
   font-weight: 500;
-  font-size: clamp(3rem, 14.4vw, 9rem);
+  /* Escala continua 320px→899px: 2.6rem → 6.5rem. Empalma con el override de 900px. */
+  font-size: clamp(2.6rem, calc(10.78vw + 7px), 6.5rem);
   line-height: 0.92;
   text-wrap: balance;
   text-transform: uppercase;
@@ -137,39 +138,12 @@ p {
   text-wrap: balance;
 }
 
-.heading {
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
-  font-weight: 720;
-  line-height: 1.15;
-  text-transform: uppercase;
-}
-
-.body-lg {
-  max-width: 65ch;
-  color: var(--foreground-soft);
-  font-size: clamp(1.05rem, 1.55vw, 1.32rem);
-  line-height: 1.55;
-  text-wrap: pretty;
-}
-
-.body {
-  max-width: 65ch;
-  color: var(--foreground-soft);
-  font-size: clamp(1rem, 1.25vw, 1.15rem);
-  line-height: 1.6;
-  text-wrap: pretty;
-}
-
 .eyebrow,
 .dateline,
-.metadata,
 .case-discipline,
 .practice-code,
 .practice-meta,
-.experience-period,
-.experience-role,
-.experience-discipline {
+.experience-period {
   color: var(--accent);
   font-size: 0.76rem;
   font-weight: 780;
@@ -177,7 +151,6 @@ p {
   text-transform: uppercase;
 }
 
-.experience-discipline,
 .practice-meta {
   color: var(--muted);
 }
@@ -222,7 +195,7 @@ p {
 .contact-grid > *,
 .hero-grid > *,
 .practice-item > *,
-.experience-row > *,
+.current-item > *,
 .case-row > *,
 .trajectory-row > * {
   min-width: 0;
@@ -247,12 +220,6 @@ p {
   max-width: 42ch;
   color: var(--muted);
   font-size: 0.95rem;
-}
-
-.split-heading {
-  display: grid;
-  gap: var(--space-md);
-  margin-bottom: var(--space-lg);
 }
 
 .split-heading-links {
@@ -445,6 +412,15 @@ p {
   padding-block: clamp(40px, 7vw, 88px);
 }
 
+/* Pantallas bajas (móvil apaisado, portátiles cortos, navegador con barras
+   grandes): el viewport completo solo genera aire y scroll extra. */
+@media (max-height: 640px) {
+  .hero,
+  .contact-page-block {
+    min-height: 0;
+  }
+}
+
 .hero-grid {
   display: grid;
   gap: var(--space-lg);
@@ -560,14 +536,12 @@ p {
    ========================================================================== */
 
 .practice-index,
-.experience-list,
 .case-list {
   display: grid;
   border-top: 1px solid var(--foreground);
 }
 
 .practice-item,
-.experience-row,
 .case-row,
 .trajectory-row {
   display: grid;
@@ -586,14 +560,12 @@ p {
 }
 
 .practice-item h3,
-.experience-row h3,
 .case-row h3 {
   margin-top: 8px;
 }
 
 .practice-item ul,
 .case-row ul,
-.experience-row ul,
 .trajectory-row ul {
   display: grid;
   gap: 8px;
@@ -603,7 +575,6 @@ p {
 
 .practice-item li,
 .case-row li,
-.experience-row li,
 .trajectory-row li {
   position: relative;
   list-style: none;
@@ -613,7 +584,6 @@ p {
 
 .practice-item li::before,
 .case-row li::before,
-.experience-row li::before,
 .trajectory-row li::before {
   position: absolute;
   left: 0;
@@ -627,7 +597,6 @@ p {
   gap: 8px;
 }
 
-.experience-row.featured,
 .trajectory-row.featured {
   border-top: 2px solid var(--foreground);
 }
@@ -640,10 +609,74 @@ p {
   text-transform: uppercase;
 }
 
-.experience-row p:last-child,
 .case-row p,
 .trajectory-row li {
   color: var(--foreground-soft);
+}
+
+.current-list {
+  display: grid;
+  border-top: 1px solid var(--foreground);
+}
+
+.current-item {
+  display: grid;
+  gap: 4px;
+  border-bottom: 1px solid var(--line);
+  padding-block: var(--space-sm);
+}
+
+.current-item h3 {
+  font-size: clamp(1.05rem, 1.6vw, 1.4rem);
+}
+
+.current-item p:not(.experience-period) {
+  color: var(--foreground-soft);
+  font-size: 0.9rem;
+  font-weight: 620;
+}
+
+.case-row .company-context,
+.trajectory-row .company-context,
+.about-summary-item .company-context {
+  margin-top: 12px;
+  max-width: 48ch;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.progression-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 0;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+
+.progression-strip span:not(:last-child)::after {
+  margin-inline: 10px;
+  color: var(--accent);
+  content: "→";
+}
+
+.company-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 780;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.company-link:hover {
+  color: var(--accent);
 }
 
 .about-preview {
@@ -887,7 +920,7 @@ p {
   text-transform: uppercase;
 }
 
-.trajectory-row div p:last-child {
+.trajectory-role {
   margin-top: 10px;
   color: var(--muted);
   font-size: 0.86rem;
@@ -968,6 +1001,24 @@ p {
   }
 }
 
+/* Etapa intermedia: periodo a la izquierda, el resto apilado en una sola
+   columna ancha. Tres columnas solo cuando hay espacio real (900px). */
+@media (min-width: 700px) and (max-width: 899.98px) {
+  .case-row,
+  .trajectory-row,
+  .about-summary-item {
+    grid-template-columns: minmax(90px, 0.2fr) minmax(0, 1fr);
+    column-gap: var(--space-md);
+    align-items: start;
+  }
+
+  .case-row > :not(:first-child),
+  .trajectory-row > :not(:first-child),
+  .about-summary-item > :not(:first-child) {
+    grid-column: 2;
+  }
+}
+
 /* ==========================================================================
    responsive — laptop / desktop
    ========================================================================== */
@@ -991,7 +1042,8 @@ p {
   }
 
   .display-hero {
-    font-size: clamp(5.4rem, 8.5vw, 8.8rem);
+    /* Arranca en 6.5rem, el mismo valor que la escala base alcanza a 899px. */
+    font-size: clamp(6.5rem, calc(4.63vw + 62px), 9rem);
   }
 
   .editorial-grid,
@@ -1004,7 +1056,6 @@ p {
     gap: var(--space-lg);
   }
 
-  .experience-row,
   .case-row,
   .trajectory-row {
     grid-template-columns: minmax(120px, 0.18fr) minmax(220px, 0.28fr) minmax(0, 1fr);
@@ -1017,10 +1068,16 @@ p {
     align-items: start;
   }
 
-  .split-heading {
+  .current-item {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: end;
+    align-items: baseline;
+    gap: var(--space-md);
   }
+
+  .current-item .experience-period {
+    order: 2;
+  }
+
 }
 
 @media (min-width: 1100px) {
@@ -1032,12 +1089,6 @@ p {
 
   .about-columns .display-section {
     max-width: none;
-  }
-}
-
-@media (min-width: 1280px) {
-  .display-hero {
-    font-size: clamp(7rem, 7.8vw, 9rem);
   }
 }
 
@@ -1054,10 +1105,6 @@ p {
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
-  }
-
-  .display-hero {
-    font-size: clamp(2.85rem, 13.5vw, 3.9rem);
   }
 
   .language-inline span:not(:last-child)::after {

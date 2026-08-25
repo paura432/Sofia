@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "Trabajo",
   description:
-    "Trabajo profesional de Sofía Chernikova entre televisión, fotografía, eventos y comunicación digital.",
+    "Trabajo seleccionado de Sofía Chernikova: reporterismo de televisión, comunicación digital, contenido corporativo y fotografía.",
   path: "/work",
 });
 
@@ -15,23 +15,17 @@ export default function WorkPage() {
     <main id="main">
       <section className="page-hero section section-first">
         <div className="container page-hero-inner">
-          <p className="eyebrow">WORK</p>
-          <h1 className="display-page">Trabajo entre televisión, imagen y comunicación.</h1>
+          <p className="eyebrow">TRABAJO</p>
+          <h1 className="display-page">Trabajo seleccionado.</h1>
           <p>
-            Experiencia profesional en reporterismo televisivo, contenido visual,
-            comunicación digital y fotografía.
+            Cuatro contextos profesionales donde se ha construido el perfil:
+            televisión, comunicación digital, contenido corporativo y fotografía.
           </p>
         </div>
       </section>
 
-      <section className="section" aria-labelledby="professional-work">
+      <section className="section" aria-label="Trabajo seleccionado">
         <div className="container">
-          <div className="section-heading section-heading-spaced">
-            <p className="eyebrow">PROFESSIONAL WORK</p>
-            <h2 className="display-section" id="professional-work">
-              Casos de trabajo.
-            </h2>
-          </div>
           <div className="case-list">
             {featuredWork.map((item) => (
               <article className="case-row" key={item.company}>
@@ -42,6 +36,9 @@ export default function WorkPage() {
                   <p className="case-role">
                     {item.role} · {item.period}
                   </p>
+                  {item.context ? (
+                    <p className="company-context">{item.context}</p>
+                  ) : null}
                 </div>
                 <div>
                   <p>{item.summary}</p>

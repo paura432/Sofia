@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Fragment } from "react";
 
 import { ContactBlock } from "@/components/contact-block";
 import { education, languages, profile, siteConfig, tools } from "@/content/profile";
-import { featuredWork } from "@/content/experience";
+import { experience } from "@/content/experience";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
@@ -18,7 +19,7 @@ export default function AboutPage() {
     <main id="main">
       <section className="page-hero section section-first">
         <div className="container page-hero-inner">
-          <p className="eyebrow">ABOUT</p>
+          <p className="eyebrow">SOBRE SOFÍA</p>
           <h1 className="display-page">Entre televisión, fotografía y comunicación digital.</h1>
           <p>{profile.aboutPreview}</p>
         </div>
@@ -27,14 +28,14 @@ export default function AboutPage() {
       <section className="section" aria-labelledby="brief-bio">
         <div className="container about-columns">
           <div>
-            <p className="eyebrow">BREVE BIO</p>
+            <p className="eyebrow">BIO</p>
             <h2 className="display-section" id="brief-bio">
               Periodismo y comunicación audiovisual desde Madrid.
             </h2>
           </div>
           <div className="body-copy">
             <p>{profile.bio}</p>
-            <p>{profile.aboutContinuation}</p>
+            <p>{profile.aboutTrajectory}</p>
             <p>{profile.interests}</p>
           </div>
         </div>
@@ -44,21 +45,21 @@ export default function AboutPage() {
         <div className="container detail-grid-inner">
           <article>
             <p className="eyebrow">FORMACIÓN</p>
-            <h2 className="display-section" id="education">
-              Universidad Rey Juan Carlos
-            </h2>
             {education.map((item) => (
-              <p key={item.institution}>
-                {item.program}
-                <br />
-                {item.period}
-              </p>
+              <Fragment key={item.institution}>
+                <h2 className="display-section" id="education">
+                  {item.institution}
+                </h2>
+                <p>
+                  {item.program}
+                  <br />
+                  {item.period}
+                </p>
+              </Fragment>
             ))}
           </article>
           <article>
-            <p className="eyebrow" id="about-languages">
-              IDIOMAS
-            </p>
+            <p className="eyebrow">IDIOMAS</p>
             <div className="compact-list">
               {languages.map((language) => (
                 <p key={language.code}>
@@ -81,13 +82,13 @@ export default function AboutPage() {
       <section className="section" aria-labelledby="about-experience">
         <div className="container">
           <div className="section-heading section-heading-spaced">
-            <p className="eyebrow">EXPERIENCIA</p>
+            <p className="eyebrow">PROGRESIÓN</p>
             <h2 className="display-section" id="about-experience">
-              Televisión, contenido y comunicación.
+              Cómo se ha construido el perfil.
             </h2>
           </div>
           <div className="about-summary">
-            {featuredWork.slice(0, 3).map((item) => (
+            {experience.map((item) => (
               <article className="about-summary-item" key={item.company}>
                 <p className="eyebrow">{item.period}</p>
                 <div>

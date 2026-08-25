@@ -22,7 +22,7 @@ export function ContactBlock({ compact = false, page = false }: ContactBlockProp
     >
       <div className="container contact-grid">
         <div>
-          <p className="eyebrow">CONTACT</p>
+          <p className="eyebrow">CONTACTO</p>
           <Heading className={headingClass} id={page ? "contact-title" : "contact-heading"}>
             Hablemos.
           </Heading>

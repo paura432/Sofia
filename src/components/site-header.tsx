@@ -4,10 +4,10 @@ import { NavLink } from "@/components/nav-link";
 import { siteConfig } from "@/content/profile";
 
 const navItems = [
-  { href: "/work", label: "Work", index: "01" },
-  { href: "/about", label: "About", index: "02" },
-  { href: "/experience", label: "Experience", index: "03" },
-  { href: "/contact", label: "Contact", index: "04" },
+  { href: "/work", label: "Trabajo", index: "01" },
+  { href: "/about", label: "Sobre mí", index: "02" },
+  { href: "/experience", label: "Experiencia", index: "03" },
+  { href: "/contact", label: "Contacto", index: "04" },
 ];
 
 export function SiteHeader() {
