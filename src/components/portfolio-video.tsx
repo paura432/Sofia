@@ -41,6 +41,7 @@ export function PortfolioVideo({
   const ratio = media.aspectRatio?.replace(":", " / ") ?? "16 / 9";
   const frameClassName = ["portfolio-video", className].filter(Boolean).join(" ");
   const objectPosition = focalPointStyle(media);
+  const mobilePoster = media.mobilePoster;
 
   useEffect(() => {
     if (isPlaying && media.provider === "native") {
@@ -102,13 +103,26 @@ export function PortfolioVideo({
           }}
           type="button"
         >
-          <Image
-            alt=""
-            fill
-            sizes={sizes ?? getMediaSizes(media.layout)}
-            src={media.poster}
-            style={objectPosition ? { objectPosition } : undefined}
-          />
+          {mobilePoster ? (
+            <picture>
+              <source media="(max-width: 699px)" srcSet={mobilePoster} />
+              <Image
+                alt=""
+                fill
+                sizes={sizes ?? getMediaSizes(media.layout)}
+                src={media.poster}
+                style={{ objectPosition }}
+              />
+            </picture>
+          ) : (
+            <Image
+              alt=""
+              fill
+              sizes={sizes ?? getMediaSizes(media.layout)}
+              src={media.poster}
+              style={{ objectPosition }}
+            />
+          )}
           <span className="portfolio-video-play" aria-hidden="true">
             ▶
           </span>

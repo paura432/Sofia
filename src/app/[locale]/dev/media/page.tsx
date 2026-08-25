@@ -27,22 +27,32 @@ const layouts: MediaLayout[] = [
   "triptych",
 ];
 
-const longTitle =
-  "Cobertura del pleno extraordinario sobre la financiación autonómica y sus consecuencias para los ayuntamientos del sur de Madrid";
+const longTitle = {
+  es: "Cobertura del pleno extraordinario sobre la financiación autonómica y sus consecuencias para los ayuntamientos del sur de Madrid",
+  en: "Coverage of the extraordinary plenary on regional funding and its consequences for municipalities in southern Madrid",
+} as const;
 
-/** Bloque neutro: valida la geometría del sistema sin usar ningún asset. */
+type PageProps = {
+  params: Promise<{ locale: string }>;
+};
+
 function Block({
   ratio,
   label,
+  focal,
 }: {
   ratio: AspectRatio;
   label: string;
+  focal?: string;
 }) {
   return (
     <div className="portfolio-image-frame">
       <div
         className="dev-media-block portfolio-image-inner"
-        style={{ aspectRatio: ratio.replace(":", " / ") }}
+        style={{
+          aspectRatio: ratio.replace(":", " / "),
+          backgroundPosition: focal,
+        }}
       >
         <span>{label}</span>
       </div>
@@ -50,10 +60,13 @@ function Block({
   );
 }
 
-export default function DevMediaLab() {
+export default async function DevMediaLab({ params }: PageProps) {
   if (process.env.NODE_ENV !== "development") {
     notFound();
   }
+
+  const { locale } = await params;
+  const title = locale === "en" ? longTitle.en : longTitle.es;
 
   return (
     <main className="dev-media" id="main">
@@ -63,8 +76,8 @@ export default function DevMediaLab() {
           <h1 className="display-page">Sistema multimedia sin assets</h1>
           <p>
             Solo disponible en <code>next dev</code>. Valida proporciones,
-            layouts, pies de foto y ritmo editorial antes de recibir
-            fotografías o vídeos reales.
+            layouts, pies de foto, focal points y ritmo editorial. Reduced
+            motion: el contenido permanece visible.
           </p>
         </div>
       </section>
@@ -131,6 +144,22 @@ export default function DevMediaLab() {
 
       <section className="section">
         <div className="container">
+          <p className="eyebrow">Focal point</p>
+          <div className="project-media-layout">
+            <figure className="project-media-item half">
+              <Block focal="20% 40%" label="20 40" ratio="3:2" />
+              <MediaCaption caption="object-position: 20% 40%" />
+            </figure>
+            <figure className="project-media-item half">
+              <Block focal="80% 30%" label="80 30" ratio="3:2" />
+              <MediaCaption caption="object-position: 80% 30%" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
           <p className="eyebrow">Vídeo — poster y play target</p>
           <div className="project-media-layout">
             <figure className="project-media-item wide">
@@ -173,7 +202,7 @@ export default function DevMediaLab() {
       <section className="section">
         <div className="container">
           <p className="eyebrow">Títulos largos</p>
-          <h2 className="display-section">{longTitle}</h2>
+          <h2 className="display-section">{title}</h2>
         </div>
       </section>
     </main>

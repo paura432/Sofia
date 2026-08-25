@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Fragment } from "react";
 import { getTranslations } from "next-intl/server";
 
@@ -9,7 +10,8 @@ import { Reveal } from "@/components/motion/reveal";
 import { StaggerGroup } from "@/components/motion/stagger";
 import { PeriodDisplay } from "@/components/period-display";
 import { experience } from "@/content/experience";
-import { siteConfig, tools } from "@/content/profile";
+import { portrait, siteConfig, tools } from "@/content/profile";
+import { focalPointStyle } from "@/content/projects";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -82,6 +84,20 @@ export default async function AboutPage() {
             </h2>
           </div>
           <div className="body-copy">
+            {portrait ? (
+              <figure className="about-portrait">
+                <Image
+                  alt={profile(portrait.altKey)}
+                  height={portrait.height}
+                  sizes="(max-width: 699px) 100vw, 420px"
+                  src={portrait.src}
+                  style={{
+                    objectPosition: focalPointStyle(portrait),
+                  }}
+                  width={portrait.width}
+                />
+              </figure>
+            ) : null}
             <p>{profile("bio")}</p>
             <p>{profile("aboutTrajectory")}</p>
             <p>{profile("interests")}</p>

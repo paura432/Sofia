@@ -1,0 +1,474 @@
+/* ==========================================================================
+   portfolio media
+   ========================================================================== */
+
+.featured-project-link,
+.selected-project a,
+.project-row a {
+  text-decoration: none;
+}
+
+.featured-project .container,
+.reporter-reel .container {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.featured-project-link {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.featured-project-meta {
+  display: grid;
+  gap: var(--space-sm);
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 720;
+  text-transform: uppercase;
+}
+
+.featured-project-meta > span:first-child {
+  display: grid;
+  gap: 6px;
+}
+
+.featured-project-meta .display-section {
+  color: var(--foreground);
+  text-transform: none;
+}
+
+.selected-projects-grid,
+.project-list {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.selected-project,
+.project-row {
+  display: grid;
+  gap: var(--space-sm);
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-md);
+}
+
+.project-row {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: var(--space-md);
+}
+
+/* Motor editorial: una columna en móvil, seis columnas a partir de tablet.
+   Cada layout reclama su fracción; no hay page builder ni celdas vacías. */
+.project-media-layout {
+  display: grid;
+  gap: var(--space-md) var(--space-sm);
+}
+
+.project-media-item,
+.portfolio-image {
+  min-width: 0;
+}
+
+.portfolio-image {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.portfolio-image-frame,
+.portfolio-video {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.portfolio-image-inner {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+/* Un vertical a ancho completo en móvil puede pasar de una pantalla entera.
+   Se acota la altura y el recorte lo decide `focalPoint`, no el azar. */
+@media (max-width: 699px) {
+  .project-media-item.portrait .portfolio-image-inner {
+    max-height: 78vh;
+  }
+}
+
+.portfolio-image img,
+.portfolio-image-frame img,
+.portfolio-video img,
+.portfolio-video-player {
+  object-fit: cover;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Sin min-height: el `aspect-ratio` reserva el espacio exacto y evitamos que
+   un 16:9 se estire en pantallas de 320px. */
+.portfolio-video {
+  width: 100%;
+}
+
+.portfolio-video-poster {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--accent-foreground);
+  cursor: pointer;
+  transition: opacity var(--motion-interface) var(--ease-out-editorial);
+}
+
+/* El player ocupa exactamente el mismo frame: el poster solo se desvanece,
+   nada se mueve ni se remonta debajo. */
+.portfolio-video-poster[data-state="exiting"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.portfolio-video-player {
+  animation: portfolio-video-enter var(--motion-interface)
+    var(--ease-out-editorial) both;
+}
+
+@keyframes portfolio-video-enter {
+  from {
+    opacity: 0;
+  }
+}
+
+.portfolio-video-poster img {
+  transition: transform var(--motion-media) var(--ease-out-editorial);
+}
+
+.portfolio-video-play {
+  transition: transform var(--motion-interface) var(--ease-out-editorial);
+}
+
+@media (hover: hover) {
+  .portfolio-video-poster:hover img,
+  .portfolio-video-poster:focus-visible img {
+    transform: scale(1.02);
+  }
+
+  .portfolio-video-poster:hover .portfolio-video-play,
+  .portfolio-video-poster:focus-visible .portfolio-video-play {
+    transform: scale(1.04);
+  }
+}
+
+.portfolio-video-play {
+  z-index: 1;
+  display: inline-grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: rgba(17, 17, 15, 0.42);
+  font-size: 1rem;
+}
+
+.portfolio-video-duration {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  z-index: 1;
+  font-size: 0.76rem;
+  font-weight: 780;
+}
+
+.portfolio-video-player {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Pie editorial: nunca compite con la fotografía, pero se mantiene legible
+   en móvil (0.8rem es el suelo, no metadata microscópica). */
+.media-caption {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 4px 10px;
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.media-caption-index {
+  grid-row: 1 / -1;
+  color: var(--accent);
+  font-weight: 780;
+  font-variant-numeric: tabular-nums;
+}
+
+.media-caption-meta {
+  color: var(--foreground-soft);
+  font-weight: 780;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.media-caption-text {
+  color: var(--muted);
+}
+
+.media-caption-credit {
+  color: var(--muted);
+  font-size: 0.72rem;
+  opacity: 0.8;
+}
+
+.media-caption > :not(.media-caption-index) {
+  grid-column: 2;
+}
+
+/* Bloques neutros del media lab (`/dev/media`). No se sirven en producción:
+   la ruta devuelve 404 fuera de `next dev`. */
+.dev-media-block {
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dev-media .media-caption {
+  margin-top: 10px;
+}
+
+.reporter-reel-meta {
+  margin-top: var(--space-sm);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.media-transcript {
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.media-transcript summary {
+  cursor: pointer;
+  font-weight: 780;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.media-transcript p {
+  margin-top: 8px;
+}
+
+.about-portrait {
+  margin: 0 0 var(--space-sm);
+  max-width: 420px;
+}
+
+.about-portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Siguiente historia: disciplina, título y año. Un solo gesto de hover
+   (la línea y la flecha), nada de transición de página. */
+.next-project-link {
+  display: grid;
+  gap: 6px;
+  margin-top: var(--space-sm);
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-sm);
+  text-decoration: none;
+}
+
+.next-project-discipline {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+}
+
+.next-project-year {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.next-project-year span {
+  display: inline-block;
+  transition: transform var(--motion-interface) var(--ease-out-editorial);
+}
+
+@media (hover: hover) {
+  .next-project-link:hover .next-project-year span,
+  .next-project-link:focus-visible .next-project-year span {
+    transform: translateX(6px);
+  }
+}
+
+.project-detail-hero .project-facts {
+  display: grid;
+  gap: 12px;
+  margin: var(--space-sm) 0 0;
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-sm);
+}
+
+.project-facts div,
+.project-credits dl div {
+  display: grid;
+  gap: 4px;
+}
+
+.project-facts dt,
+.project-credits dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+
+.project-facts dd,
+.project-credits dd {
+  margin: 0;
+}
+
+.project-role-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.project-role-list li {
+  list-style: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 4px;
+  color: var(--foreground-soft);
+  font-weight: 680;
+}
+
+
+@media (min-width: 700px) {
+  .featured-project-meta,
+  .project-facts {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+
+  .selected-projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .selected-project:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .selected-projects-grid[data-count="1"] {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-projects-grid[data-count="2"] {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  }
+
+  .selected-projects-grid[data-count="2"] .selected-project:first-child {
+    grid-column: auto;
+  }
+
+  .project-media-layout {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .project-media-item.full,
+  .project-media-item.wide {
+    grid-column: 1 / -1;
+  }
+
+  .project-media-item.half,
+  .project-media-item.pair,
+  .project-media-item.portrait,
+  .project-media-item.triptych {
+    grid-column: span 3;
+  }
+
+  .project-media-item.wide {
+    max-width: var(--content-max);
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 980px) {
+  .selected-projects-grid {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  }
+
+  .selected-project:first-child {
+    grid-row: span 2;
+  }
+
+  .selected-projects-grid[data-count="1"] {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-projects-grid[data-count="2"] {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  }
+
+  .selected-projects-grid[data-count="2"] .selected-project:first-child {
+    grid-row: auto;
+  }
+
+  .project-row {
+    grid-template-columns: minmax(5.5rem, 7rem) minmax(260px, 0.48fr) minmax(0, 1fr);
+    align-items: start;
+    gap: var(--space-lg);
+  }
+
+  .project-list[data-count="1"] .project-row {
+    grid-template-columns: minmax(5.5rem, 7rem) minmax(0, 1fr);
+  }
+
+  .project-list[data-count="2"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-list[data-count="2"] .project-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-media-item.triptych,
+  .project-media-item.portrait {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1920px) {
+  .project-media-item.wide {
+    max-width: var(--content-max);
+  }
+}

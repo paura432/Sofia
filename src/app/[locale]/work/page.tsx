@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import { AnimatedLine } from "@/components/motion/animated-line";
-import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
 import { StaggerGroup } from "@/components/motion/stagger";
-import { ProjectMediaLayout } from "@/components/project-media-layout";
+import { ProjectIndex } from "@/components/project-index";
 import { featuredWork } from "@/content/experience";
 import {
   getPublishedProjects,
@@ -29,7 +28,6 @@ type ExperienceCopy = {
 
 type ProjectCopy = {
   title: string;
-  description?: string;
   media?: Record<string, { alt?: string; caption?: string; title?: string }>;
 };
 
@@ -56,7 +54,6 @@ export default async function WorkPage() {
     getTranslations("Projects"),
   ]);
   const publishedProjects = getPublishedProjects();
-  const showProjectFilters = publishedProjects.length >= 5;
   const disciplineLabel = (project: PortfolioProject) =>
     project.discipline
       .map((discipline) => projectsText(`disciplines.${discipline}`))
@@ -79,72 +76,15 @@ export default async function WorkPage() {
       >
         <div className="container">
           {publishedProjects.length > 0 ? (
-            <>
-              {showProjectFilters ? (
-                <nav className="project-filter-bar" aria-label={t("aria")}>
-                  {[
-                    "reporting",
-                    "interview",
-                    "photography",
-                    "video",
-                    "communication",
-                  ].map((discipline) => (
-                    <a href={`#${discipline}`} key={discipline}>
-                      {projectsText(`disciplines.${discipline}`)}
-                    </a>
-                  ))}
-                </nav>
-              ) : null}
-
-              <div className="project-list">
-                {publishedProjects.map((project, index) => {
-                  const copy = projectsText.raw(
-                    `items.${project.translationKey}`,
-                  ) as ProjectCopy;
-                  const cover = project.cover ?? project.media?.[0];
-
-                  return (
-                    <StaggerGroup
-                      as="article"
-                      className="project-row"
-                      key={project.id}
-                      step={40}
-                    >
-                      <p className="case-number">
-                        {String(index + 1).padStart(2, "0")}
-                      </p>
-                      {cover ? (
-                        <ProjectMediaLayout
-                          copy={copy.media}
-                          media={[cover]}
-                          playLabel={projectsText("play")}
-                        />
-                      ) : null}
-                      <div>
-                        <p className="case-discipline">
-                          {disciplineLabel(project)}
-                        </p>
-                        <h2>{copy.title}</h2>
-                        {project.organisation ? (
-                          <p className="case-role">
-                            {project.organisation} · {project.year}
-                          </p>
-                        ) : null}
-                        {copy.description ? <p>{copy.description}</p> : null}
-                        <MotionLink
-                          href={{
-                            pathname: "/work/[slug]",
-                            params: { slug: project.slug },
-                          }}
-                        >
-                          {projectsText("viewProject")}
-                        </MotionLink>
-                      </div>
-                    </StaggerGroup>
-                  );
-                })}
-              </div>
-            </>
+            <ProjectIndex
+              copyFor={(project) =>
+                projectsText.raw(`items.${project.translationKey}`) as ProjectCopy
+              }
+              disciplineLabel={disciplineLabel}
+              playLabel={projectsText("play")}
+              projects={publishedProjects}
+              viewLabel={projectsText("viewProject")}
+            />
           ) : (
             <div className="case-list">
               <AnimatedLine tone="strong" />

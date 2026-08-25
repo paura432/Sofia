@@ -71,6 +71,12 @@ export type ProjectCredit = {
   name: string;
 };
 
+/** Control interno. No se pinta en la web pública. */
+export type ProjectRights = {
+  verified: boolean;
+  note?: string;
+};
+
 export type PortfolioProject = {
   id: string;
   slug: string;
@@ -88,6 +94,12 @@ export type PortfolioProject = {
   roleKeys?: string[];
   credits?: ProjectCredit[];
   sourceUrl?: string;
+  /**
+   * Orden editorial. Menor = más arriba. Independiente del año y de la
+   * posición en este array. Sin `order`, se conserva el orden de declaración.
+   */
+  order?: number;
+  rights?: ProjectRights;
 };
 
 export type PublishedPortfolioProject = PortfolioProject & {
@@ -157,17 +169,31 @@ export function getMediaSizes(layout: MediaLayout = "wide") {
   return mediaSizes[layout];
 }
 
-export function focalPointStyle(media: ProjectMedia) {
-  if (!media.focalPoint) {
-    return undefined;
-  }
+export function focalPointStyle(media: Pick<ProjectMedia, "focalPoint">) {
+  const x = media.focalPoint?.x ?? 50;
+  const y = media.focalPoint?.y ?? 50;
+  return `${x}% ${y}%`;
+}
 
-  return `${media.focalPoint.x}% ${media.focalPoint.y}%`;
+function isValidFocalPoint(point: MediaFocalPoint) {
+  return (
+    Number.isFinite(point.x) &&
+    Number.isFinite(point.y) &&
+    point.x >= 0 &&
+    point.x <= 100 &&
+    point.y >= 0 &&
+    point.y <= 100
+  );
 }
 
 export function hasMediaAsset(media: ProjectMedia) {
   if (media.type === "image") {
-    return Boolean(media.src && (media.decorative || media.altKey));
+    const hasIdentity = Boolean(media.src && (media.decorative || media.altKey));
+    const hasGeometry = Boolean(
+      media.aspectRatio || (media.width && media.height),
+    );
+
+    return hasIdentity && hasGeometry;
   }
 
   if (media.type === "video") {
@@ -196,19 +222,44 @@ export function isRenderableProject(
   return project.published === true && hasRenderableProjectContent(project);
 }
 
+function byEditorialOrder<T extends PortfolioProject>(list: T[]) {
+  return list
+    .map((project, index) => ({ project, index }))
+    .sort((a, b) => {
+      const orderA = a.project.order ?? a.index;
+      const orderB = b.project.order ?? b.index;
+      return orderA - orderB;
+    })
+    .map(({ project }) => project);
+}
+
 export function getPublishedProjects() {
-  return projects.filter(isRenderableProject);
+  return byEditorialOrder(projects.filter(isRenderableProject));
+}
+
+export function getReporterReel() {
+  return getPublishedProjects().find((project) => project.reporterReel);
 }
 
 export function getFeaturedProject() {
-  return (
-    getPublishedProjects().find((project) => project.featured) ??
-    getPublishedProjects()[0]
+  const reel = getReporterReel();
+  const pool = getPublishedProjects().filter(
+    (project) => project.id !== reel?.id,
   );
+
+  return pool.find((project) => project.featured) ?? pool[0];
 }
 
 export function getSelectedProjects(limit = 3) {
-  return getPublishedProjects().slice(0, limit);
+  const featured = getFeaturedProject();
+  const reel = getReporterReel();
+  const skip = new Set(
+    [featured?.id, reel?.id].filter((id): id is string => Boolean(id)),
+  );
+
+  return getPublishedProjects()
+    .filter((project) => !skip.has(project.id))
+    .slice(0, limit);
 }
 
 export function getProjectBySlug(slug: string) {
@@ -250,6 +301,14 @@ function warnIncompleteMedia() {
       warn(`${project.slug}: published sin cover`);
     }
 
+    if (project.published && project.rights?.verified !== true) {
+      warn(`${project.slug}: published sin rights.verified`);
+    }
+
+    if (project.published && !hasRenderableProjectContent(project)) {
+      warn(`${project.slug}: published pero incompleto (sin media renderizable)`);
+    }
+
     const seenIds = new Set<string>();
     const seenPositions = new Set<number>();
 
@@ -268,6 +327,10 @@ function warnIncompleteMedia() {
         seenPositions.add(media.position);
       }
 
+      if (media.focalPoint && !isValidFocalPoint(media.focalPoint)) {
+        warn(`${label}: focalPoint fuera de 0–100`);
+      }
+
       if (media.type === "image") {
         if (!media.decorative && !media.altKey) {
           warn(`${label}: imagen sin altKey y sin decorative`);
@@ -283,6 +346,13 @@ function warnIncompleteMedia() {
         }
         if (!media.titleKey) {
           warn(`${label}: vídeo sin titleKey`);
+        }
+        const hasPlayableSource =
+          media.provider === "native"
+            ? Boolean(media.src)
+            : Boolean(media.provider && media.videoId);
+        if (!hasPlayableSource) {
+          warn(`${label}: vídeo sin fuente reproducible`);
         }
       }
     }

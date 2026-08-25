@@ -38,7 +38,10 @@ export function SelectedProjects({
         <p className="eyebrow" id="selected-projects">
           {eyebrow}
         </p>
-        <div className="selected-projects-grid">
+        <div
+          className="selected-projects-grid"
+          data-count={visibleProjects.length}
+        >
           {visibleProjects.map((project) => (
             <StaggerGroup
               as="article"

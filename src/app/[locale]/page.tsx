@@ -10,10 +10,12 @@ import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
 import { StaggerGroup } from "@/components/motion/stagger";
 import { PracticeIndex } from "@/components/practice-index";
+import { ReporterReel } from "@/components/reporter-reel";
 import { SectionHeading } from "@/components/section-heading";
 import { SelectedProjects } from "@/components/selected-projects";
 import {
   getFeaturedProject,
+  getReporterReel,
   getSelectedProjects,
   type PortfolioProject,
 } from "@/content/projects";
@@ -54,6 +56,11 @@ export default async function Home() {
     getTranslations("Projects"),
   ]);
   const featuredProject = getFeaturedProject();
+  const reporterReel = getReporterReel();
+  const reelMedia = reporterReel
+    ? (reporterReel.media?.find((media) => media.type === "video") ??
+      reporterReel.cover)
+    : undefined;
   const selectedProjects = getSelectedProjects(3);
   const disciplineLabel = (project: PortfolioProject) =>
     project.discipline
@@ -65,6 +72,22 @@ export default async function Home() {
   return (
     <main id="main">
       <Hero />
+
+      {reporterReel && reelMedia ? (
+        <ReporterReel
+          eyebrow={projectsText("reelEyebrow")}
+          href={{
+            pathname: "/work/[slug]",
+            params: { slug: reporterReel.slug },
+          }}
+          media={reelMedia}
+          mediaCopy={projectCopy(reporterReel).media}
+          meta={projectsText("reelMeta")}
+          playLabel={projectsText("play")}
+          title={projectCopy(reporterReel).title}
+          viewLabel={projectsText("viewProject")}
+        />
+      ) : null}
 
       {featuredProject ? (
         <FeaturedProject

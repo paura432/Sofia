@@ -95,6 +95,9 @@
     "format": "Formato",
     "location": "Localización",
     "play": "Reproducir",
+    "reelEyebrow": "Reporter reel",
+    "reelMeta": "TV reporting · Entrevistas · Cobertura de campo",
+    "transcript": "Transcripción",
     "locations": {
       "madrid": "Madrid"
     },
@@ -110,12 +113,13 @@
   "Profile": {
     "aboutPreview": "Periodista y comunicadora audiovisual con experiencia en televisión, fotografía y comunicación digital.",
     "aboutContinuation": "Combina reporterismo, creación visual y estrategia de contenidos desde Madrid.",
-    "bio": "Periodista y comunicadora audiovisual formada en la Universidad Rey Juan Carlos. Trabaja como reportera de televisión en Grupo Cadena Media, cubriendo eventos y entrevistas en directo y escribiendo las piezas que salen a antena.",
+    "bio": "Periodista y comunicadora audiovisual formada en la Universidad Rey Juan Carlos. Trabaja como reportera de televisión en Grupo Cadena Media, cubriendo eventos y entrevistas en directo y redactando guiones y piezas informativas.",
     "aboutTrajectory": "En paralelo ha desarrollado una trayectoria en comunicación digital: equipo de comunicación de URJCmun entre 2022 y 2026, comunicación corporativa y producción audiovisual en Annie Bonnie, y fotografía de retrato en entornos turísticos con Isocero.",
     "interests": "Interés profesional en medios, producción audiovisual, comunicación y proyectos culturales.",
     "aboutPageEyebrow": "Sobre mí",
     "aboutPageTitle": "Perfil profesional",
     "aboutHeroTitle": "Entre televisión, fotografía y comunicación digital.",
+    "portraitAlt": "Retrato de Sofía Chernikova",
     "bioEyebrow": "Bio",
     "bioTitle": "Periodismo y comunicación audiovisual desde Madrid.",
     "trajectoryEyebrow": "Trayectoria",
@@ -180,7 +184,7 @@
         "role": "Reportera TV",
         "discipline": "Reporterismo / Televisión",
         "period": "2024 — Actualidad",
-        "summary": "Reporterismo de televisión: cobertura en directo, entrevistas a artistas y figuras públicas, y redacción de las piezas informativas que salen a antena.",
+        "summary": "Reporterismo de televisión: cobertura en directo, entrevistas a artistas y figuras públicas, y redacción de guiones y piezas informativas.",
         "context": "Televisión de proximidad y contenidos informativos.",
         "responsibilities": {
           "liveCoverage": "Cobertura de eventos y ruedas de prensa en directo.",

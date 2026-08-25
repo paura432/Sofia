@@ -16,7 +16,6 @@ type FeaturedProjectProps = {
     params: { slug: string };
   };
   playLabel: string;
-  /** Copy traducida de la pieza; el título solo actúa de reserva. */
   mediaCopy?: Record<string, { alt?: string; title?: string }>;
 };
 
@@ -42,19 +41,19 @@ export function FeaturedProject({
     <section className="section featured-project" aria-labelledby="featured-project">
       <Reveal className="container">
         <p className="eyebrow">{eyebrow}</p>
+        <ProjectMediaLayout
+          copy={{
+            [featuredMedia.id]: {
+              alt: title,
+              title,
+              ...mediaCopy?.[featuredMedia.id],
+            },
+          }}
+          media={[featuredMedia]}
+          playLabel={playLabel}
+          preloadFirst
+        />
         <Link className="featured-project-link" href={href}>
-          <ProjectMediaLayout
-            copy={{
-              [featuredMedia.id]: {
-                alt: title,
-                title,
-                ...mediaCopy?.[featuredMedia.id],
-              },
-            }}
-            media={[featuredMedia]}
-            playLabel={playLabel}
-            preloadFirst
-          />
           <span className="featured-project-meta">
             <span>
               <span className="display-section" id="featured-project">

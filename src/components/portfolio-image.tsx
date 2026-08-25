@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 
 import { MediaCaption } from "@/components/media-caption";
 import { MediaReveal } from "@/components/motion/media-reveal";
@@ -21,6 +22,8 @@ type PortfolioImageProps = {
   /** Solo cuando la imagen es realmente el LCP: inserta un `<link rel=preload>`. */
   preload?: boolean;
   sizes?: string;
+  /** False en photo essays largos: un solo MediaReveal envuelve el grupo. */
+  reveal?: boolean;
 };
 
 export function PortfolioImage({
@@ -35,6 +38,7 @@ export function PortfolioImage({
   fill = false,
   preload = false,
   sizes,
+  reveal = true,
 }: PortfolioImageProps) {
   if (!media.src || (!media.decorative && !alt)) {
     return null;
@@ -52,7 +56,7 @@ export function PortfolioImage({
     preload,
     sizes: sizes ?? getMediaSizes(media.layout),
     src: media.src,
-    style: objectPosition ? { objectPosition } : undefined,
+    style: { objectPosition },
     ...blur,
   };
 
@@ -61,7 +65,7 @@ export function PortfolioImage({
    * encuadre. El `<source>` sirve el archivo tal cual, así que por defecto
    * se prefiere una única fuente optimizada por Next más `focalPoint`.
    */
-  const withMobileArtDirection = (image: React.ReactNode) =>
+  const withMobileArtDirection = (image: ReactNode) =>
     media.mobileSrc ? (
       <picture>
         <source media="(max-width: 699px)" srcSet={media.mobileSrc} />
@@ -81,16 +85,23 @@ export function PortfolioImage({
     />
   );
 
+  const frame = (inner: ReactNode) =>
+    reveal ? (
+      <MediaReveal className="portfolio-image-frame">{inner}</MediaReveal>
+    ) : (
+      <div className="portfolio-image-frame">{inner}</div>
+    );
+
   if (fill) {
     return (
       <figure className={figureClassName}>
-        <MediaReveal className="portfolio-image-frame">
+        {frame(
           <div className="portfolio-image-inner" style={{ aspectRatio: ratio }}>
             {withMobileArtDirection(
               <Image alt={resolvedAlt} fill {...shared} />,
             )}
-          </div>
-        </MediaReveal>
+          </div>,
+        )}
         {figcaption}
       </figure>
     );
@@ -102,16 +113,27 @@ export function PortfolioImage({
 
   return (
     <figure className={figureClassName}>
-      <MediaReveal>
-        {withMobileArtDirection(
+      {reveal ? (
+        <MediaReveal>
+          {withMobileArtDirection(
+            <Image
+              alt={resolvedAlt}
+              height={media.height}
+              width={media.width}
+              {...shared}
+            />,
+          )}
+        </MediaReveal>
+      ) : (
+        withMobileArtDirection(
           <Image
             alt={resolvedAlt}
             height={media.height}
             width={media.width}
             {...shared}
           />,
-        )}
-      </MediaReveal>
+        )
+      )}
       {figcaption}
     </figure>
   );

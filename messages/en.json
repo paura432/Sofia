@@ -95,6 +95,9 @@
     "format": "Format",
     "location": "Location",
     "play": "Play",
+    "reelEyebrow": "Reporter reel",
+    "reelMeta": "TV reporting · Interviews · Field coverage",
+    "transcript": "Transcript",
     "locations": {
       "madrid": "Madrid"
     },
@@ -110,12 +113,13 @@
   "Profile": {
     "aboutPreview": "Journalist and audiovisual communicator with experience in television, photography and digital communications.",
     "aboutContinuation": "She combines reporting, visual creation and content strategy from Madrid.",
-    "bio": "Journalist and audiovisual communicator educated at Universidad Rey Juan Carlos. She works as a television reporter at Grupo Cadena Media, covering live events and interviews and writing the pieces that go on air.",
+    "bio": "Journalist and audiovisual communicator educated at Universidad Rey Juan Carlos. She works as a television reporter at Grupo Cadena Media, covering live events and interviews and writing scripts and news pieces.",
     "aboutTrajectory": "In parallel, she has developed a path in digital communications: the URJCmun communications team between 2022 and 2026, corporate communications and audiovisual production at Annie Bonnie, and portrait photography in tourism settings with Isocero.",
     "interests": "Professional interest in media, audiovisual production, communications and cultural projects.",
     "aboutPageEyebrow": "About",
     "aboutPageTitle": "Professional profile",
     "aboutHeroTitle": "Across television, photography and digital communications.",
+    "portraitAlt": "Portrait of Sofía Chernikova",
     "bioEyebrow": "Bio",
     "bioTitle": "Journalism and audiovisual communications from Madrid.",
     "trajectoryEyebrow": "Path",
@@ -180,7 +184,7 @@
         "role": "TV reporter",
         "discipline": "Reporting / Television",
         "period": "2024 — Present",
-        "summary": "Television reporting: live coverage, interviews with artists and public figures, and writing the news pieces that go on air.",
+        "summary": "Television reporting: live coverage, interviews with artists and public figures, and writing scripts and news pieces.",
         "context": "Local television and news content.",
         "responsibilities": {
           "liveCoverage": "Live coverage of events and press conferences.",

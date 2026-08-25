@@ -88,6 +88,7 @@ export function pageMetadata({
   title,
   description,
   ogAlt,
+  ogImage,
 }: {
   locale: Locale;
   pathname: AppPathname;
@@ -96,8 +97,12 @@ export function pageMetadata({
   title: string;
   description: string;
   ogAlt: string;
+  ogImage?: string;
 }): Metadata {
   const pageUrl = canonicalPath ?? localizedPath(pathname, locale);
+  const og =
+    ogImage ??
+    `${localizedPath("/", locale) === "/" ? "" : "/en"}/opengraph-image`;
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -131,7 +136,7 @@ export function pageMetadata({
       description,
       images: [
         {
-          url: `${localizedPath("/", locale) === "/" ? "" : "/en"}/opengraph-image`,
+          url: og,
           width: 1200,
           height: 630,
           alt: ogAlt,
@@ -142,7 +147,7 @@ export function pageMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [`${localizedPath("/", locale) === "/" ? "" : "/en"}/opengraph-image`],
+      images: [og],
     },
   };
 }

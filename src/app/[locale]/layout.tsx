@@ -14,6 +14,8 @@ import { serializeJsonLd } from "@/lib/json-ld";
 import { pageMetadata, personJsonLd } from "@/lib/metadata";
 
 import "../globals.css";
+import "../../styles/media.css";
+import "../../styles/motion.css";
 
 const sans = Geist({
   subsets: ["latin"],

@@ -11,6 +11,17 @@ export const currentPositionIds = [
   "urjcmun",
 ] as const;
 
+/** Retrato editorial. Sin `src` no se renderiza nada en About. */
+export type ProfilePortrait = {
+  src: string;
+  width: number;
+  height: number;
+  altKey: "portraitAlt";
+  focalPoint?: { x: number; y: number };
+};
+
+export const portrait: ProfilePortrait | undefined = undefined;
+
 export const tools = [
   "Adobe Premiere",
   "DaVinci Resolve",

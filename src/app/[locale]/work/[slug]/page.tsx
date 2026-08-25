@@ -33,7 +33,15 @@ type ProjectCopy = {
   result?: string;
   roles?: string[];
   credits?: Record<string, string>;
-  media?: Record<string, { alt?: string; caption?: string; title?: string }>;
+  media?: Record<
+    string,
+    {
+      alt?: string;
+      caption?: string;
+      title?: string;
+      transcript?: string;
+    }
+  >;
 };
 
 export function generateStaticParams() {
@@ -65,12 +73,18 @@ export async function generateMetadata({
   ) as ProjectCopy;
   const alternates = projectAlternates(project.slug);
 
+  const coverSrc =
+    project.cover?.type === "image" && project.cover.src
+      ? project.cover.src
+      : undefined;
+
   return pageMetadata({
     alternateLanguages: alternates.languages,
     canonicalPath: projectPath(project.slug, locale),
     description: copy.description,
     locale,
     ogAlt: metadata("ogAlt"),
+    ogImage: coverSrc,
     pathname: "/work/[slug]",
     title: copy.title,
   });
@@ -141,6 +155,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               media={[heroMedia]}
               playLabel={t("play")}
               preloadFirst
+              transcriptLabel={t("transcript")}
             />
           </div>
         </section>
@@ -176,6 +191,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               copy={copy.media}
               media={detailMedia}
               playLabel={t("play")}
+              transcriptLabel={t("transcript")}
             />
           </div>
         </section>
