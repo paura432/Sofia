@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import { AnimatedLine } from "@/components/motion/animated-line";
+import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
 import { StaggerGroup } from "@/components/motion/stagger";
 import { ProjectIndex } from "@/components/project-index";
@@ -124,6 +125,11 @@ export default async function WorkPage() {
               })}
             </div>
           )}
+          {publishedProjects.length === 0 ? (
+            <div className="work-fallback-footer">
+              <MotionLink href="/experience">{t("viewExperience")}</MotionLink>
+            </div>
+          ) : null}
         </div>
       </section>
     </main>

@@ -30,9 +30,8 @@ export function ReporterReel({
   return (
     <section className="section reporter-reel" aria-labelledby="reporter-reel">
       <Reveal className="container">
-        <p className="eyebrow" id="reporter-reel">
-          {eyebrow}
-        </p>
+        <p className="eyebrow">{eyebrow}</p>
+        <h2 className="display-section" id="reporter-reel">{title}</h2>
         <ProjectMediaLayout
           copy={{
             [media.id]: {

@@ -4,7 +4,6 @@ import { getTranslations } from "next-intl/server";
 import { ContactBlock } from "@/components/contact-block";
 import { FeaturedProject } from "@/components/featured-project";
 import { Hero } from "@/components/hero";
-import { LanguagesStrip } from "@/components/languages-strip";
 import { AnimatedLine } from "@/components/motion/animated-line";
 import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
@@ -175,12 +174,6 @@ export default async function Home() {
             <MotionLink href="/experience">{home("viewExperience")}</MotionLink>
             <MotionLink href="/about">{home("moreAbout")}</MotionLink>
           </div>
-        </Reveal>
-      </section>
-
-      <section className="section compact-section" aria-labelledby="languages">
-        <Reveal className="container">
-          <LanguagesStrip />
         </Reveal>
       </section>
 

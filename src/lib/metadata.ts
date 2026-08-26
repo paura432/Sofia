@@ -4,7 +4,8 @@ import { siteConfig } from "@/content/profile";
 import type { AppPathname, Locale } from "@/i18n/routing";
 
 export const SITE_URL = "https://sofiachernikova.vercel.app";
-export const IS_PUBLIC = false;
+/** Preview: false. Launch: set NEXT_PUBLIC_IS_PUBLIC=true in Vercel. */
+export const IS_PUBLIC = process.env.NEXT_PUBLIC_IS_PUBLIC === "true";
 
 export const localizedPathnames: Record<AppPathname, Record<Locale, string>> = {
   "/": {

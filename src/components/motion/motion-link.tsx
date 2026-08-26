@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 type MotionLinkProps = {
   children: ReactNode;
   className?: string;
+  newTabHint?: string;
 } & (
   | { href: ComponentProps<typeof Link>["href"]; external?: false }
   | { href: string; external: true }
@@ -14,27 +15,41 @@ type MotionLinkProps = {
  * Link editorial con subrayado y flecha. El hover vive en CSS (`.text-link`,
  * `.arrow-link`), así que no necesita JavaScript ni cambia de tamaño.
  */
-export function MotionLink({ children, className, ...link }: MotionLinkProps) {
+export function MotionLink({
+  children,
+  className,
+  newTabHint,
+  ...link
+}: MotionLinkProps) {
   const classNames = ["text-link", "arrow-link", className]
     .filter(Boolean)
     .join(" ");
-  const label = (
+  const suffix = (
     <>
-      {children} <span aria-hidden="true">↗</span>
+      {" "}
+      <span aria-hidden="true">↗</span>
+      {newTabHint ? <span className="sr-only">{newTabHint}</span> : null}
     </>
   );
 
   if (link.external) {
     return (
-      <a className={classNames} href={link.href} rel="noreferrer" target="_blank">
-        {label}
+      <a
+        className={classNames}
+        href={link.href}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {children}
+        {suffix}
       </a>
     );
   }
 
   return (
     <Link className={classNames} href={link.href}>
-      {label}
+      {children}
+      <span aria-hidden="true"> ↗</span>
     </Link>
   );
 }

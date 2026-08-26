@@ -38,6 +38,8 @@
     "menu": "Menú",
     "mobileSummary": "Menú",
     "mobileAria": "Navegación móvil",
+    "closeMenu": "Cerrar menú",
+    "opensInNewTab": "(abre en nueva pestaña)",
     "localeAria": "Cambiar idioma",
     "localeNames": {
       "es": "Español",
@@ -76,7 +78,8 @@
     "pageTitle": "Trabajo seleccionado",
     "pageText": "Cuatro contextos profesionales donde se ha construido el perfil: televisión, comunicación digital, contenido corporativo y fotografía.",
     "aria": "Trabajo seleccionado",
-    "fallbackAria": "Experiencia profesional seleccionada"
+    "fallbackAria": "Experiencia profesional seleccionada",
+    "viewExperience": "Ver trayectoria completa"
   },
   "Projects": {
     "featuredEyebrow": "Destacado",
@@ -108,7 +111,59 @@
       "photography": "FOTOGRAFÍA",
       "communication": "COMUNICACIÓN"
     },
-    "items": {}
+    "items": {
+      "grupo-cadena-media": {
+        "title": "Reportera TV — Grupo Cadena Media",
+        "description": "Cobertura en directo, entrevistas y piezas informativas en televisión de proximidad.",
+        "dek": "Reporterismo de televisión en Grupo Cadena Media.",
+        "format": "Televisión · Reportaje",
+        "context": "Televisión de proximidad y contenidos informativos.",
+        "roles": [
+          "Cobertura de eventos y ruedas de prensa en directo.",
+          "Entrevistas a artistas, actores y figuras públicas.",
+          "Redacción de guiones y piezas informativas."
+        ]
+      },
+      "urjcmun": {
+        "title": "URJCmun — Comunicación digital",
+        "description": "Trayectoria en el equipo de comunicación del modelo de Naciones Unidas de la URJC, con foco en redes y contenido audiovisual.",
+        "dek": "Deputy Director for Social Media desde 2026.",
+        "format": "Comunicación digital · Social media",
+        "context": "Modelo de Naciones Unidas de la Universidad Rey Juan Carlos.",
+        "roles": [
+          "Dirección de la estrategia de redes y del calendario editorial.",
+          "Copy, métricas y posicionamiento de la identidad digital.",
+          "Diseño de contenido gráfico y audiovisual.",
+          "Coordinación de reporteros y creadores de contenido.",
+          "Cobertura de eventos y producción de contenido en tiempo real."
+        ]
+      },
+      "annie-bonnie": {
+        "title": "Annie Bonnie — Comunicación corporativa",
+        "description": "Comunicación corporativa de extremo a extremo: producción audiovisual, contenido web, social y cobertura de eventos bajo un mismo calendario editorial.",
+        "format": "Comunicación corporativa · Audiovisual",
+        "context": "Consultora de comunicación, estrategia, marketing de contenidos y relaciones públicas.",
+        "roles": [
+          "Grabación y edición de piezas audiovisuales para redes y comunicación interna.",
+          "Redacción de artículos para blog corporativo y contenidos web.",
+          "Organización y cobertura de eventos corporativos.",
+          "Gestión del calendario editorial y apoyo en estrategia de contenidos.",
+          "Comunicación con público y colaboradores."
+        ]
+      },
+      "isocero": {
+        "title": "Isocero — Fotografía de retrato",
+        "description": "Fotografía de retrato en entornos turísticos: dirección de sesión, edición profesional y relación comercial directa con el cliente.",
+        "format": "Fotografía · Retrato",
+        "context": "Estudio especializado en fotografía de retrato en entornos hoteleros y turísticos.",
+        "roles": [
+          "Dirección de personas durante la sesión: familias y retrato infantil.",
+          "Búsqueda de localización e iluminación dentro del entorno hotelero.",
+          "Edición profesional de las imágenes.",
+          "Presentación del trabajo, asesoramiento y venta al cliente."
+        ]
+      }
+    }
   },
   "Profile": {
     "aboutPreview": "Periodista y comunicadora audiovisual con experiencia en televisión, fotografía y comunicación digital.",

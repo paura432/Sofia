@@ -36,6 +36,7 @@
 .featured-project-meta .display-section {
   color: var(--foreground);
   text-transform: none;
+  margin: 0;
 }
 
 .selected-projects-grid,
@@ -173,7 +174,7 @@
   place-items: center;
   border: 1px solid currentColor;
   border-radius: 999px;
-  background: rgba(17, 17, 15, 0.42);
+  background: var(--foreground-overlay);
   font-size: 1rem;
 }
 
@@ -301,6 +302,10 @@
   border-top: 1px solid var(--line);
   padding-top: var(--space-sm);
   text-decoration: none;
+}
+
+.next-project-link h2 {
+  margin: 0;
 }
 
 .next-project-discipline {

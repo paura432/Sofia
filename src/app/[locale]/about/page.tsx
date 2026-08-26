@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Fragment } from "react";
 import { getTranslations } from "next-intl/server";
 
 import { ContactBlock } from "@/components/contact-block";
@@ -109,21 +108,25 @@ export default async function AboutPage() {
         <StaggerGroup className="container detail-grid-inner">
           <article>
             <p className="eyebrow">{profile("educationEyebrow")}</p>
+            <h2 className="display-section" id="education">
+              {profile("educationTitle")}
+            </h2>
             {educationItems.map((item) => (
-              <Fragment key={item.institution}>
-                <h2 className="display-section" id="education">
-                  {item.institution}
-                </h2>
+              <div className="education-entry" key={item.institution}>
+                <h3>{item.institution}</h3>
                 <p>
                   {item.program}
                   <br />
                   {item.period}
                 </p>
-              </Fragment>
+              </div>
             ))}
           </article>
-          <article>
+          <article aria-labelledby="languages">
             <p className="eyebrow">{profile("languagesEyebrow")}</p>
+            <h2 className="display-section" id="languages">
+              {profile("languagesTitle")}
+            </h2>
             <div className="compact-list">
               {languageItems.map((language) => (
                 <p key={language.code}>
@@ -132,8 +135,11 @@ export default async function AboutPage() {
               ))}
             </div>
           </article>
-          <article>
+          <article aria-labelledby="tools">
             <p className="eyebrow">{profile("toolsEyebrow")}</p>
+            <h2 className="display-section" id="tools">
+              {profile("toolsTitle")}
+            </h2>
             <div className="tool-cloud">
               {tools.map((tool) => (
                 <span key={tool}>{tool}</span>

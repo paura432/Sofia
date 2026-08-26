@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 
 import type { Locale } from "@/i18n/routing";
+import { brandColors } from "@/lib/brand-colors";
 import enMessages from "../../../messages/en.json";
 import esMessages from "../../../messages/es.json";
 
@@ -29,10 +30,10 @@ export default async function Image({ params }: ImageProps) {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#f6f1e8",
-          color: "#11110f",
+          background: brandColors.background,
+          color: brandColors.foreground,
           padding: 72,
-          borderTop: "14px solid #a52522",
+          borderTop: `14px solid ${brandColors.accent}`,
           fontFamily: "Georgia, serif",
         }}
       >

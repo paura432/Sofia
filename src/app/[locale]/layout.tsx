@@ -9,6 +9,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { MotionProvider } from "@/components/motion/motion-provider";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { brandColors } from "@/lib/brand-colors";
 import { isLocale, locales, type Locale } from "@/i18n/routing";
 import { serializeJsonLd } from "@/lib/json-ld";
 import { pageMetadata, personJsonLd } from "@/lib/metadata";
@@ -56,7 +57,7 @@ export async function generateMetadata({
 }
 
 export const viewport: Viewport = {
-  themeColor: "#f6f1e8",
+  themeColor: brandColors.background,
   colorScheme: "light",
 };
 

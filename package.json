@@ -9,7 +9,11 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "react-doctor": "react-doctor -y --score"
+    "react-doctor": "react-doctor -y --score",
+    "media:image": "node scripts/media/convert-image.mjs",
+    "media:folder": "node scripts/media/convert-folder.mjs",
+    "media:inspect": "node scripts/media/inspect-image.mjs",
+    "media:doctor": "node scripts/media/doctor.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "2.0.1",
@@ -27,6 +31,7 @@
     "eslint": "9.39.5",
     "eslint-config-next": "16.3.3",
     "react-doctor": "0.9.12",
+    "sharp": "0.35.3",
     "typescript": "5.9.3"
   }
 }

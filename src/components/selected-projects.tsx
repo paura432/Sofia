@@ -35,9 +35,7 @@ export function SelectedProjects({
   return (
     <section className="section selected-projects" aria-labelledby="selected-projects">
       <div className="container">
-        <p className="eyebrow" id="selected-projects">
-          {eyebrow}
-        </p>
+        <h2 className="display-section" id="selected-projects">{eyebrow}</h2>
         <div
           className="selected-projects-grid"
           data-count={visibleProjects.length}

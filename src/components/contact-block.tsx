@@ -13,6 +13,7 @@ export async function ContactBlock({
   page = false,
 }: ContactBlockProps) {
   const t = await getTranslations("Contact");
+  const navigation = await getTranslations("Navigation");
   const hero = await getTranslations("Hero");
   const Heading = page ? "h1" : "h2";
   const headingClass = page ? "display-page" : "display-section";
@@ -54,8 +55,14 @@ export async function ContactBlock({
             <div>
               <dt>{t("linkedin")}</dt>
               <dd>
-                <a href={siteConfig.linkedin} rel="noreferrer" target="_blank">
-                  LinkedIn <span aria-hidden="true">↗</span>
+                <a
+                  href={siteConfig.linkedin}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {t("linkedin")}
+                  <span aria-hidden="true"> ↗</span>
+                  <span className="sr-only">{navigation("opensInNewTab")}</span>
                 </a>
               </dd>
             </div>

@@ -56,9 +56,9 @@ export function FeaturedProject({
         <Link className="featured-project-link" href={href}>
           <span className="featured-project-meta">
             <span>
-              <span className="display-section" id="featured-project">
+              <h2 className="display-section" id="featured-project">
                 {title}
-              </span>
+              </h2>
               {organisation ? <span>{organisation}</span> : null}
               <span>{discipline}</span>
             </span>

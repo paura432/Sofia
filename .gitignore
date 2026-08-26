@@ -15,3 +15,11 @@ yarn-error.log*
 pnpm-debug.log*
 
 .DS_Store
+
+# Local photograph originals (never publish / never commit)
+.media-source/
+incoming-media/
+
+# Media ingest temporary files
+*.tmp-media-ingest*
+*.tmp-media

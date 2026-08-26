@@ -42,9 +42,10 @@ export async function generateMetadata({
 }
 
 export default async function ExperiencePage() {
-  const [t, projectsText] = await Promise.all([
+  const [t, projectsText, navigation] = await Promise.all([
     getTranslations("Experience"),
     getTranslations("Projects"),
+    getTranslations("Navigation"),
   ]);
 
   return (
@@ -76,20 +77,25 @@ export default async function ExperiencePage() {
                 <PeriodDisplay period={copy.period} />
                 <div>
                   <p className="case-discipline">{copy.discipline}</p>
-                  <h2>{item.company}</h2>
-                  <p className="trajectory-role">{copy.role}</p>
                   {item.companyUrl ? (
-                    <p>
+                    <h2>
                       <a
                         className="company-link"
                         href={item.companyUrl}
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         target="_blank"
                       >
-                        {item.company} <span aria-hidden="true">↗</span>
+                        {item.company}
+                        <span aria-hidden="true"> ↗</span>
+                        <span className="sr-only">
+                          {navigation("opensInNewTab")}
+                        </span>
                       </a>
-                    </p>
-                  ) : null}
+                    </h2>
+                  ) : (
+                    <h2>{item.company}</h2>
+                  )}
+                  <p className="trajectory-role">{copy.role}</p>
                   {copy.context ? (
                     <p className="company-context">{copy.context}</p>
                   ) : null}

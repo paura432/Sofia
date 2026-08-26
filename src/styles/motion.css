@@ -127,8 +127,21 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .media-reveal > * {
     transform: none !important;
+  }
+
+  [data-reveal][data-revealed="hidden"],
+  [data-stagger][data-revealed="hidden"] > *,
+  .animated-line[data-revealed="hidden"],
+  .media-reveal[data-revealed="hidden"] {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
   }
 }
 

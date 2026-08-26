@@ -232,9 +232,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       {nextProject ? (
         <section className="section next-project" aria-labelledby="next-project">
           <div className="container">
-            <p className="eyebrow" id="next-project">
-              {t("nextProject")}
-            </p>
+            <p className="eyebrow">{t("nextProject")}</p>
             <Link
               className="next-project-link"
               href={{
@@ -245,7 +243,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <span className="next-project-discipline">
                 {disciplineLabel(nextProject, t)}
               </span>
-              <span className="display-section">
+              <h2 className="display-section" id="next-project">
                 {
                   (
                     t.raw(
@@ -253,7 +251,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     ) as ProjectCopy
                   ).title
                 }
-              </span>
+              </h2>
               <span className="next-project-year">
                 {nextProject.year} <span aria-hidden="true">→</span>
               </span>

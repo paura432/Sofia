@@ -5,10 +5,11 @@ import { Reveal } from "@/components/motion/reveal";
 import { siteConfig } from "@/content/profile";
 
 export async function SiteFooter() {
-  const [t, hero, contact] = await Promise.all([
+  const [t, hero, contact, navigation] = await Promise.all([
     getTranslations("Footer"),
     getTranslations("Hero"),
     getTranslations("Contact"),
+    getTranslations("Navigation"),
   ]);
 
   return (
@@ -28,8 +29,14 @@ export async function SiteFooter() {
             <a href={`mailto:${siteConfig.email}`}>
               {contact("email")} <span aria-hidden="true">↗</span>
             </a>
-            <a href={siteConfig.linkedin} rel="noreferrer" target="_blank">
-              LinkedIn <span aria-hidden="true">↗</span>
+            <a
+              href={siteConfig.linkedin}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {contact("linkedin")}
+              <span aria-hidden="true"> ↗</span>
+              <span className="sr-only">{navigation("opensInNewTab")}</span>
             </a>
           </div>
         </div>

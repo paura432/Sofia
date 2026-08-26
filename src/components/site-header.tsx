@@ -26,13 +26,13 @@ export async function SiteHeader() {
       <a className="skip-link" href="#main">
         {t("skip")}
       </a>
-      <nav className="container nav-shell" aria-label={t("sectionsAria")}>
+      <div className="container nav-shell">
         <Link className="brand" href="/" aria-label={t("homeAria")}>
           {siteConfig.name}
         </Link>
 
-        <div className="desktop-nav">
-          <div className="desktop-nav-links" aria-label={t("sectionsAria")}>
+        <nav className="desktop-nav" aria-label={t("sectionsAria")}>
+          <div className="desktop-nav-links">
             {navItems.map((item) => (
               <NavLink
                 href={item.href}
@@ -45,10 +45,11 @@ export async function SiteHeader() {
             ariaLabel={t("localeAria")}
             labels={localeLabels}
           />
-        </div>
+        </nav>
 
         <MobileNav
           brand={siteConfig.name}
+          closeLabel={t("closeMenu")}
           linksAriaLabel={t("mobileAria")}
           links={navItems.map((item) => (
             <NavLink
@@ -64,7 +65,7 @@ export async function SiteHeader() {
           menuLabel={t("menu")}
           summaryLabel={t("mobileSummary")}
         />
-      </nav>
+      </div>
     </header>
   );
 }
