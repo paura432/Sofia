@@ -81,9 +81,15 @@ Verificar:
 
 ## Estado actual
 
-| Slug | Copy ES/EN | Media | published |
-|---|---|---|---|
-| grupo-cadena-media | ✓ | pendiente | false |
-| urjcmun | ✓ | pendiente | false |
-| annie-bonnie | ✓ | pendiente | false |
-| isocero | ✓ | pendiente | false |
+| Slug | Copy ES/EN | Media | published | Notas |
+|---|---|---|---|---|
+| grupo-cadena-media | ✓ | pendiente | false | Prioridad 1 — reportera TV |
+| urjcmun | ✓ | pendiente | false | |
+| annie-bonnie | ✓ | pendiente | false | |
+| isocero | ✓ | pendiente | false | |
+| retrato-editorial | ✓ 14 alts ES/EN | ✓ 14 WebP | false | `year` pendiente confirmación editorial |
+| musica-en-directo | ✓ 6 alts ES/EN | ✓ 6 WebP | false | `year` pendiente confirmación editorial |
+| calle-documental | ✓ 4 alts ES/EN | ✓ 4 WebP | false | `year` pendiente confirmación editorial |
+
+Masters web de los 3 proyectos fotográficos: `public/media/projects/` — pendiente de commit.
+Originales y ZIPs: `incoming-media/` — ignorado por Git, intactos.

@@ -177,6 +177,108 @@
           "Venta de fotografías personalizadas.",
           "Atención y asesoramiento al cliente."
         ]
+      },
+      "retrato-editorial": {
+        "title": "Retrato & Editorial",
+        "description": "Fotografía de retrato y editorial en espacios urbanos, de estudio y exteriores.",
+        "format": "Fotografía · Retrato · Editorial",
+        "roles": [
+          "Fotografía"
+        ],
+        "media": {
+          "r01": {
+            "alt": "Dos personas con camisetas negras ante un muro con graffiti bajo estructuras de hormigón"
+          },
+          "r02": {
+            "alt": "Persona sentada en una terraza urbana con vegetación y luces decorativas"
+          },
+          "r03": {
+            "alt": "Retrato cercano de una persona con gafas de sol y camisa verde a cuadros"
+          },
+          "r04": {
+            "alt": "Retrato de un hombre con camiseta roja y las manos apoyadas en la cabeza"
+          },
+          "r05": {
+            "alt": "Persona sentada en un banco ante un mural urbano con graffiti de colores"
+          },
+          "r06": {
+            "alt": "Dos personas con camisetas negras frente a ventanas industriales con graffiti"
+          },
+          "r07": {
+            "alt": "Persona sonriente en silla amarilla ante una pared con luces de neón"
+          },
+          "r08": {
+            "alt": "Persona sentada en un espacio de luz roja con letrero de neón"
+          },
+          "r09": {
+            "alt": "Hombre acuclillado sobre una escultura de adoquines en una plaza urbana"
+          },
+          "r10": {
+            "alt": "Persona de pie ante un mural de graffiti azul y morado al atardecer"
+          },
+          "r11": {
+            "alt": "Músico tocando la guitarra eléctrica en un escenario con fondo claro"
+          },
+          "r12": {
+            "alt": "Persona con jersey de crochet sentada junto a un espejo de aro naranja"
+          },
+          "r13": {
+            "alt": "Persona mirando su reflejo en un espejo de aro naranja sobre fondo blanco"
+          },
+          "r14": {
+            "alt": "Retrato en picado de una persona con traje de rayas y gafas de cristal verde"
+          }
+        }
+      },
+      "musica-en-directo": {
+        "title": "Música en directo",
+        "description": "Cobertura fotográfica de actuaciones musicales en directo.",
+        "format": "Fotografía · Conciertos",
+        "roles": [
+          "Fotografía"
+        ],
+        "media": {
+          "m01": {
+            "alt": "Artista de espaldas con los brazos levantados ante el público en un concierto nocturno, en blanco y negro"
+          },
+          "m02": {
+            "alt": "Artista en escenario iluminado con luz amarilla y humo extendiendo el brazo"
+          },
+          "m03": {
+            "alt": "Artista cantando con micrófono rodeado de manos del público levantadas"
+          },
+          "m04": {
+            "alt": "Artista cantando al aire libre con micrófono bajo un cielo azul"
+          },
+          "m05": {
+            "alt": "Artista cantando en escenario al aire libre contra un cielo azul con nubes"
+          },
+          "m06": {
+            "alt": "Multitud en concierto nocturno con pantallas de móvil encendidas y crowd surfing"
+          }
+        }
+      },
+      "calle-documental": {
+        "title": "Calle & Documental",
+        "description": "Fotografía documental y de calle.",
+        "format": "Fotografía · Documental",
+        "roles": [
+          "Fotografía"
+        ],
+        "media": {
+          "c01": {
+            "alt": "Edificio histórico iluminado en lila durante la noche con multitud de personas en la calle"
+          },
+          "c02": {
+            "alt": "Multitud con carteles en manifestación nocturna ante un edificio iluminado en violeta"
+          },
+          "c03": {
+            "alt": "Fachada de cristal con reflejo de una cúpula clásica, en blanco y negro"
+          },
+          "c04": {
+            "alt": "Patio con macetas alineadas y sus sombras visto a través de una verja"
+          }
+        }
       }
     }
   },
@@ -219,21 +321,38 @@
         "number": "01",
         "code": "REPORTING",
         "title": "Televisión, entrevistas y cobertura",
-        "items": ["Reporterismo", "Entrevistas", "Cobertura", "Guion", "Presentación ante cámara"],
+        "items": [
+          "Reporterismo",
+          "Entrevistas",
+          "Cobertura",
+          "Guion",
+          "Presentación ante cámara"
+        ],
         "metadata": "REPORTING · INTERVIEWS · VIDEO"
       },
       {
         "number": "02",
         "code": "VISUAL",
         "title": "Fotografía y narrativa visual",
-        "items": ["Fotografía", "Vídeo", "Edición", "Narrativa visual"],
+        "items": [
+          "Fotografía",
+          "Vídeo",
+          "Edición",
+          "Narrativa visual"
+        ],
         "metadata": "PHOTO · VIDEO · EDITING"
       },
       {
         "number": "03",
         "code": "COMMUNICATION",
         "title": "Contenido y comunicación digital",
-        "items": ["Social Media", "Contenido", "Estrategia", "Copywriting", "Coordinación"],
+        "items": [
+          "Social Media",
+          "Contenido",
+          "Estrategia",
+          "Copywriting",
+          "Coordinación"
+        ],
         "metadata": "SOCIAL · CONTENT · STRATEGY"
       }
     ]
@@ -322,11 +441,31 @@
   "Languages": {
     "eyebrow": "Idiomas",
     "items": [
-      { "code": "ES", "name": "Español", "level": "Nativo" },
-      { "code": "RU", "name": "Ruso", "level": "Nativo" },
-      { "code": "EN", "name": "Inglés", "level": "Avanzado" },
-      { "code": "VAL", "name": "Valenciano", "level": "Avanzado" },
-      { "code": "IT", "name": "Italiano", "level": "Intermedio" }
+      {
+        "code": "ES",
+        "name": "Español",
+        "level": "Nativo"
+      },
+      {
+        "code": "RU",
+        "name": "Ruso",
+        "level": "Nativo"
+      },
+      {
+        "code": "EN",
+        "name": "Inglés",
+        "level": "Avanzado"
+      },
+      {
+        "code": "VAL",
+        "name": "Valenciano",
+        "level": "Avanzado"
+      },
+      {
+        "code": "IT",
+        "name": "Italiano",
+        "level": "Intermedio"
+      }
     ]
   },
   "Contact": {
