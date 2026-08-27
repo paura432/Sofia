@@ -65,11 +65,11 @@
   },
   "Home": {
     "currentEyebrow": "Career",
-    "currentTitle": "Recent roles",
+    "currentTitle": "Current & recent",
     "practiceEyebrow": "Practice",
     "practiceTitle": "Three connected areas",
     "practiceText": "She reports, interviews and covers events; photographs and edits; writes and produces digital content.",
-    "aboutEyebrow": "Profile",
+    "aboutEyebrow": "About",
     "viewExperience": "View experience",
     "moreAbout": "Read more"
   },
@@ -195,7 +195,7 @@
     "toolsEyebrow": "Tools",
     "toolsTitle": "Tools and workflow",
     "experienceEyebrow": "Now",
-    "experienceTitle": "Recent roles",
+    "experienceTitle": "Current & recent",
     "viewFullExperience": "View full experience ↗"
   },
   "CurrentPositions": {

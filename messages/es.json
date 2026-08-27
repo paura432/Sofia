@@ -65,11 +65,11 @@
   },
   "Home": {
     "currentEyebrow": "Trayectoria",
-    "currentTitle": "Posiciones recientes",
+    "currentTitle": "Actual y reciente",
     "practiceEyebrow": "Práctica",
     "practiceTitle": "Tres áreas conectadas",
     "practiceText": "Reporta, entrevista y cubre eventos; fotografía y edita; escribe y produce contenido digital.",
-    "aboutEyebrow": "Perfil",
+    "aboutEyebrow": "Sobre mí",
     "viewExperience": "Ver experiencia",
     "moreAbout": "Leer más"
   },
@@ -195,7 +195,7 @@
     "toolsEyebrow": "Herramientas",
     "toolsTitle": "Herramientas y flujo de trabajo",
     "experienceEyebrow": "Ahora",
-    "experienceTitle": "Posiciones recientes",
+    "experienceTitle": "Actual y reciente",
     "viewFullExperience": "Ver experiencia completa ↗"
   },
   "CurrentPositions": {

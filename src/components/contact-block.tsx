@@ -12,9 +12,11 @@ export async function ContactBlock({
   compact = false,
   page = false,
 }: ContactBlockProps) {
-  const t = await getTranslations("Contact");
-  const navigation = await getTranslations("Navigation");
-  const hero = await getTranslations("Hero");
+  const [t, navigation, hero] = await Promise.all([
+    getTranslations("Contact"),
+    getTranslations("Navigation"),
+    getTranslations("Hero"),
+  ]);
   const Heading = page ? "h1" : "h2";
   const headingClass = page ? "display-page" : "display-section";
 

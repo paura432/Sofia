@@ -23,14 +23,6 @@ export const SUPPORTED_INPUT_EXTENSIONS = new Set([
   ".heif",
 ]);
 
-/** Always accepted; HEIC/HEIF probed at runtime. */
-export const CORE_INPUT_EXTENSIONS = new Set([
-  ".jpg",
-  ".jpeg",
-  ".png",
-  ".webp",
-]);
-
 /**
  * This Sharp build exposes HEIF for AVIF only (fileSuffix: .avif).
  * Apple HEIC is not supported — convert to JPG/PNG first.

@@ -23,15 +23,14 @@ function MobileNavLinks({
 
   return (
     <MobileNavCloseProvider onClose={onNavigate}>
-      <div
+      <nav
         aria-label={ariaLabel}
         className="mobile-nav-links"
         data-revealed={revealed}
         data-stagger=""
-        role="navigation"
       >
         {children}
-      </div>
+      </nav>
     </MobileNavCloseProvider>
   );
 }

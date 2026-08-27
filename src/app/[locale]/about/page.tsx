@@ -66,8 +66,9 @@ export default async function AboutPage() {
     getTranslations("Experience"),
   ]);
 
+  const aboutExperienceIdSet = new Set<string>(aboutExperienceIds);
   const aboutSummary = experience.filter((item) =>
-    (aboutExperienceIds as readonly string[]).includes(item.id),
+    aboutExperienceIdSet.has(item.id),
   );
   const educationItems = education.raw("items") as Education[];
   const languageItems = languages.raw("items") as Language[];
