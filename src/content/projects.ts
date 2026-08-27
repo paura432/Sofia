@@ -108,6 +108,23 @@ export type PublishedPortfolioProject = PortfolioProject & {
 
 export const projects: PortfolioProject[] = [
   {
+    id: "reporter-reel",
+    slug: "reporter-reel",
+    year: "2024 — Actualidad",
+    locationKey: "madrid",
+    discipline: ["reporting", "interview", "video"],
+    experienceId: "grupo-cadena-media",
+    reporterReel: true,
+    order: 0,
+    published: false,
+    translationKey: "reporter-reel",
+    rights: {
+      verified: false,
+      note: "Pendiente el archivo definitivo del reel y los créditos de cada pieza.",
+    },
+    // media: pegar tras `pnpm media:video` — ver docs/first-project-publish.md
+  },
+  {
     id: "grupo-cadena-media",
     slug: "grupo-cadena-media",
     year: "2024 — Actualidad",

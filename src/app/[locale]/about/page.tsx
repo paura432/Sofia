@@ -9,7 +9,12 @@ import { Reveal } from "@/components/motion/reveal";
 import { StaggerGroup } from "@/components/motion/stagger";
 import { PeriodDisplay } from "@/components/period-display";
 import { experience } from "@/content/experience";
-import { portrait, siteConfig, tools } from "@/content/profile";
+import {
+  aboutExperienceIds,
+  portrait,
+  siteConfig,
+  tools,
+} from "@/content/profile";
 import { focalPointStyle } from "@/content/projects";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
@@ -61,6 +66,9 @@ export default async function AboutPage() {
     getTranslations("Experience"),
   ]);
 
+  const aboutSummary = experience.filter((item) =>
+    (aboutExperienceIds as readonly string[]).includes(item.id),
+  );
   const educationItems = education.raw("items") as Education[];
   const languageItems = languages.raw("items") as Language[];
 
@@ -159,7 +167,7 @@ export default async function AboutPage() {
           </Reveal>
           <AnimatedLine tone="strong" />
           <div className="about-summary">
-            {experience.map((item) => {
+            {aboutSummary.map((item) => {
               const copy = experienceText.raw(
                 `items.${item.id}`,
               ) as ExperienceCopy;

@@ -4,7 +4,7 @@ Source of truth for product and visual direction. Skills reference this file ins
 
 ## Product
 
-Professional portfolio of **journalist + audiovisual communicator + visual storyteller**.
+Professional portfolio of a **journalist + TV reporter + visual storyteller**.
 
 Stack: Next.js App Router, next-intl (ES/EN), CSS tokens in `globals.css`, Motion library, no Tailwind.
 

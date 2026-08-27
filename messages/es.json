@@ -1,29 +1,29 @@
 {
   "Metadata": {
-    "siteTitle": "Sofía Chernikova — Periodista y comunicadora audiovisual",
-    "siteDescription": "Portfolio profesional de Sofía Chernikova: televisión, reporterismo, fotografía, comunicación digital y producción audiovisual desde Madrid.",
+    "siteTitle": "Sofía Chernikova — Periodista y Reportera TV",
+    "siteDescription": "Periodista y reportera de televisión en Madrid. Reporterismo, entrevistas, cobertura audiovisual, fotografía y comunicación digital.",
     "ogAlt": "Portfolio profesional de Sofía Chernikova",
-    "personRole": "Periodista y comunicadora audiovisual",
+    "personRole": "Periodista y Reportera TV",
     "pages": {
       "home": {
-        "title": "Sofía Chernikova — Periodista y comunicadora audiovisual",
-        "description": "Periodista y comunicadora audiovisual en Madrid. Televisión, imagen, reporterismo y comunicación digital."
+        "title": "Sofía Chernikova — Periodista y Reportera TV",
+        "description": "Periodista y reportera de televisión en Madrid. Reporterismo, entrevistas, cobertura audiovisual, fotografía y comunicación digital."
       },
       "work": {
         "title": "Trabajo",
-        "description": "Áreas de trabajo de Sofía Chernikova: televisión, fotografía, narrativa visual y comunicación digital."
+        "description": "Trabajo de Sofía Chernikova: reporterismo de televisión, entrevistas, fotografía y comunicación digital."
       },
       "about": {
         "title": "Sobre mí",
-        "description": "Perfil profesional de Sofía Chernikova, periodista y comunicadora audiovisual formada en la Universidad Rey Juan Carlos."
+        "description": "Perfil de Sofía Chernikova, periodista y comunicadora audiovisual formada en la Universidad Rey Juan Carlos."
       },
       "experience": {
         "title": "Experiencia",
-        "description": "Experiencia profesional de Sofía Chernikova en televisión, comunicación digital, comunicación corporativa y fotografía."
+        "description": "Trayectoria de Sofía Chernikova en televisión, comunicación digital, comunicación corporativa y fotografía."
       },
       "contact": {
         "title": "Contacto",
-        "description": "Contacto profesional de Sofía Chernikova para proyectos, medios, producción audiovisual y comunicación."
+        "description": "Contacto profesional de Sofía Chernikova para medios, coberturas, producción audiovisual y comunicación."
       },
       "notFound": {
         "title": "Página no encontrada",
@@ -54,21 +54,21 @@
   },
   "Hero": {
     "dateline": "MADRID — 2026",
-    "role": "Periodista · Comunicadora audiovisual",
+    "role": "Periodista · Reportera TV · Comunicadora audiovisual",
     "availability": "Disponible para nuevas oportunidades",
     "location": "Madrid, España",
     "headline": "Periodismo, imagen y narrativa digital.",
-    "summary": "Trabajo entre el terreno, la cámara y la estrategia de contenidos: reportajes, entrevistas, fotografía y comunicación audiovisual.",
+    "summary": "Reporterismo, entrevistas y cobertura audiovisual desde Madrid, combinando trabajo en cámara, producción visual y comunicación digital.",
     "actionsAria": "Acciones principales",
     "viewWork": "Ver trabajo",
     "contact": "Contactar"
   },
   "Home": {
-    "currentEyebrow": "Ahora",
-    "currentTitle": "Posiciones actuales",
+    "currentEyebrow": "Trayectoria",
+    "currentTitle": "Posiciones recientes",
     "practiceEyebrow": "Práctica",
     "practiceTitle": "Tres áreas conectadas",
-    "practiceText": "Una práctica profesional situada entre reporterismo, imagen y comunicación estratégica.",
+    "practiceText": "Reporta, entrevista y cubre eventos; fotografía y edita; escribe y produce contenido digital.",
     "aboutEyebrow": "Perfil",
     "viewExperience": "Ver experiencia",
     "moreAbout": "Leer más"
@@ -76,7 +76,7 @@
   "Work": {
     "pageEyebrow": "Trabajo",
     "pageTitle": "Trabajo seleccionado",
-    "pageText": "Cuatro contextos profesionales donde se ha construido el perfil: televisión, comunicación digital, contenido corporativo y fotografía.",
+    "pageText": "Reporterismo de televisión, comunicación digital, contenido corporativo y fotografía.",
     "aria": "Trabajo seleccionado",
     "fallbackAria": "Experiencia profesional seleccionada",
     "viewExperience": "Ver trayectoria completa"
@@ -99,7 +99,7 @@
     "location": "Localización",
     "play": "Reproducir",
     "reelEyebrow": "Reporter reel",
-    "reelMeta": "TV reporting · Entrevistas · Cobertura de campo",
+    "reelMeta": "Reporterismo TV · Entrevistas · Cobertura de eventos",
     "transcript": "Transcripción",
     "locations": {
       "madrid": "Madrid"
@@ -112,82 +112,91 @@
       "communication": "COMUNICACIÓN"
     },
     "items": {
+      "reporter-reel": {
+        "title": "Reporter reel",
+        "description": "Selección de coberturas, entrevistas y piezas de reporterismo.",
+        "dek": "Reporterismo en estrenos, festivales y ruedas de prensa.",
+        "format": "Televisión · Reel",
+        "context": "Cobertura de eventos, entrevistas y reporterismo de campo.",
+        "roles": [
+          "Reporterismo en estrenos, festivales y ruedas de prensa.",
+          "Entrevistas a artistas, actores y figuras públicas."
+        ]
+      },
       "grupo-cadena-media": {
         "title": "Reportera TV — Grupo Cadena Media",
-        "description": "Cobertura en directo, entrevistas y piezas informativas en televisión de proximidad.",
+        "description": "Cobertura de eventos y ruedas de prensa, entrevistas y piezas informativas para televisión.",
         "dek": "Reporterismo de televisión en Grupo Cadena Media.",
         "format": "Televisión · Reportaje",
         "context": "Televisión de proximidad y contenidos informativos.",
         "roles": [
-          "Cobertura de eventos y ruedas de prensa en directo.",
+          "Cobertura de eventos y ruedas de prensa.",
           "Entrevistas a artistas, actores y figuras públicas.",
+          "Reporterismo en eventos y estrenos.",
           "Redacción de guiones y piezas informativas."
         ]
       },
       "urjcmun": {
-        "title": "URJCmun — Comunicación digital",
-        "description": "Trayectoria en el equipo de comunicación del modelo de Naciones Unidas de la URJC, con foco en redes y contenido audiovisual.",
-        "dek": "Deputy Director for Social Media desde 2026.",
-        "format": "Comunicación digital · Social media",
+        "title": "URJCmun — Comunicación y Social Media",
+        "description": "Trayectoria en el equipo de comunicación del modelo de Naciones Unidas de la URJC desde 2022.",
+        "dek": "Deputy Director for Social Media en 2026.",
+        "format": "Comunicación · Social Media",
         "context": "Modelo de Naciones Unidas de la Universidad Rey Juan Carlos.",
         "roles": [
-          "Dirección de la estrategia de redes y del calendario editorial.",
-          "Copy, métricas y posicionamiento de la identidad digital.",
-          "Diseño de contenido gráfico y audiovisual.",
+          "Estrategia y gestión de redes sociales.",
+          "Calendario editorial, copy y métricas.",
+          "Producción de contenido gráfico y audiovisual.",
           "Coordinación de reporteros y creadores de contenido.",
           "Cobertura de eventos y producción de contenido en tiempo real."
         ]
       },
       "annie-bonnie": {
         "title": "Annie Bonnie — Comunicación corporativa",
-        "description": "Comunicación corporativa de extremo a extremo: producción audiovisual, contenido web, social y cobertura de eventos bajo un mismo calendario editorial.",
+        "description": "Contenidos digitales y corporativos: redacción, producción audiovisual, eventos y planificación editorial.",
         "format": "Comunicación corporativa · Audiovisual",
         "context": "Consultora de comunicación, estrategia, marketing de contenidos y relaciones públicas.",
         "roles": [
-          "Grabación y edición de piezas audiovisuales para redes y comunicación interna.",
           "Redacción de artículos para blog corporativo y contenidos web.",
-          "Organización y cobertura de eventos corporativos.",
-          "Gestión del calendario editorial y apoyo en estrategia de contenidos.",
-          "Comunicación con público y colaboradores."
+          "Grabación y edición de piezas audiovisuales.",
+          "Producción de contenido para redes sociales y comunicación interna.",
+          "Organización y cobertura de eventos.",
+          "Apoyo en estrategia de contenidos y calendario editorial."
         ]
       },
       "isocero": {
         "title": "Isocero — Fotografía de retrato",
-        "description": "Fotografía de retrato en entornos turísticos: dirección de sesión, edición profesional y relación comercial directa con el cliente.",
+        "description": "Fotografía de retrato en entornos turísticos: sesiones, edición profesional y trato directo con el cliente.",
         "format": "Fotografía · Retrato",
         "context": "Estudio especializado en fotografía de retrato en entornos hoteleros y turísticos.",
         "roles": [
-          "Dirección de personas durante la sesión: familias y retrato infantil.",
-          "Búsqueda de localización e iluminación dentro del entorno hotelero.",
-          "Edición profesional de las imágenes.",
-          "Presentación del trabajo, asesoramiento y venta al cliente."
+          "Sesiones fotográficas con familias y niños.",
+          "Edición profesional de imágenes.",
+          "Venta de fotografías personalizadas.",
+          "Atención y asesoramiento al cliente."
         ]
       }
     }
   },
   "Profile": {
-    "aboutPreview": "Periodista y comunicadora audiovisual con experiencia en televisión, fotografía y comunicación digital.",
-    "aboutContinuation": "Combina reporterismo, creación visual y estrategia de contenidos desde Madrid.",
-    "bio": "Periodista y comunicadora audiovisual formada en la Universidad Rey Juan Carlos. Trabaja como reportera de televisión en Grupo Cadena Media, cubriendo eventos y entrevistas en directo y redactando guiones y piezas informativas.",
-    "aboutTrajectory": "En paralelo ha desarrollado una trayectoria en comunicación digital: equipo de comunicación de URJCmun entre 2022 y 2026, comunicación corporativa y producción audiovisual en Annie Bonnie, y fotografía de retrato en entornos turísticos con Isocero.",
-    "interests": "Interés profesional en medios, producción audiovisual, comunicación y proyectos culturales.",
+    "aboutPreview": "Periodista y comunicadora audiovisual especializada en reporterismo, entrevistas y cobertura de eventos.",
+    "aboutContinuation": "Con experiencia complementaria en fotografía, producción de contenidos y comunicación digital.",
+    "bio": "Sofía Chernikova es periodista y comunicadora audiovisual formada en la Universidad Rey Juan Carlos. Su trayectoria combina reporterismo televisivo, entrevistas, cobertura de eventos, fotografía y comunicación digital.",
+    "aboutTrajectory": "Desde 2024 trabaja como reportera de televisión, realizando coberturas, entrevistas y piezas informativas. Paralelamente, ha desarrollado experiencia en comunicación digital, producción de contenidos, dirección de Social Media, comunicación corporativa y fotografía profesional.",
+    "interests": "Su perfil combina trabajo en cámara, narrativa visual y estrategia de contenidos, con especial interés por medios, producción audiovisual y proyectos culturales.",
     "aboutPageEyebrow": "Sobre mí",
-    "aboutPageTitle": "Perfil profesional",
-    "aboutHeroTitle": "Entre televisión, fotografía y comunicación digital.",
+    "aboutHeroTitle": "Reportera de televisión en Madrid.",
     "portraitAlt": "Retrato de Sofía Chernikova",
     "bioEyebrow": "Bio",
     "bioTitle": "Periodismo y comunicación audiovisual desde Madrid.",
-    "trajectoryEyebrow": "Trayectoria",
-    "trajectoryTitle": "Comunicación, televisión e imagen",
     "educationEyebrow": "Formación",
     "educationTitle": "Educación",
     "languagesEyebrow": "Idiomas",
     "languagesTitle": "Idiomas",
     "toolsEyebrow": "Herramientas",
     "toolsTitle": "Herramientas y flujo de trabajo",
-    "experienceEyebrow": "Progresión",
-    "experienceTitle": "Cómo se ha construido el perfil.",
-    "viewFullExperience": "Ver experiencia completa"
+    "experienceEyebrow": "Ahora",
+    "experienceTitle": "Posiciones recientes",
+    "viewFullExperience": "Ver experiencia completa ↗"
   },
   "CurrentPositions": {
     "items": {
@@ -206,53 +215,52 @@
       {
         "number": "01",
         "code": "REPORTING",
-        "title": "Televisión y reportaje",
-        "items": ["Cobertura", "Entrevistas", "Piezas informativas"],
-        "metadata": "REPORTING · ENTREVISTAS · VÍDEO"
+        "title": "Televisión, entrevistas y cobertura",
+        "items": ["Reporterismo", "Entrevistas", "Cobertura", "Guion", "Presentación ante cámara"],
+        "metadata": "REPORTING · INTERVIEWS · VIDEO"
       },
       {
         "number": "02",
         "code": "VISUAL",
         "title": "Fotografía y narrativa visual",
-        "items": ["Retrato", "Eventos", "Reportaje"],
-        "metadata": "FOTO · EVENTOS · EDICIÓN"
+        "items": ["Fotografía", "Vídeo", "Edición", "Narrativa visual"],
+        "metadata": "PHOTO · VIDEO · EDITING"
       },
       {
         "number": "03",
         "code": "COMMUNICATION",
-        "title": "Contenido y comunicación",
-        "items": ["Social media", "Producción audiovisual", "Contenido digital"],
-        "metadata": "SOCIAL · CONTENIDO · ESTRATEGIA"
+        "title": "Contenido y comunicación digital",
+        "items": ["Social Media", "Contenido", "Estrategia", "Copywriting", "Coordinación"],
+        "metadata": "SOCIAL · CONTENT · STRATEGY"
       }
     ]
   },
   "Experience": {
     "pageEyebrow": "Experiencia",
     "pageTitle": "Trayectoria profesional",
-    "pageText": "Experiencia en televisión, comunicación digital, comunicación corporativa y fotografía, con foco en producción de contenido y narrativa audiovisual.",
-    "featuredEyebrow": "Trabajo",
-    "featuredTitle": "Experiencia seleccionada",
+    "pageText": "Reporterismo de televisión, comunicación digital, comunicación corporativa y fotografía.",
     "responsibilitiesLabel": "Responsabilidades",
-    "progressionLabel": "Evolución interna",
+    "progressionLabel": "Roles desempeñados",
     "items": {
       "grupo-cadena-media": {
         "role": "Reportera TV",
-        "discipline": "Reporterismo / Televisión",
+        "discipline": "Reporterismo · Televisión · Entrevistas",
         "period": "2024 — Actualidad",
-        "summary": "Reporterismo de televisión: cobertura en directo, entrevistas a artistas y figuras públicas, y redacción de guiones y piezas informativas.",
+        "summary": "Cobertura de eventos y ruedas de prensa, realización de entrevistas y redacción de guiones y piezas informativas para televisión.",
         "context": "Televisión de proximidad y contenidos informativos.",
         "responsibilities": {
-          "liveCoverage": "Cobertura de eventos y ruedas de prensa en directo.",
+          "eventCoverage": "Cobertura de eventos y ruedas de prensa.",
           "interviews": "Entrevistas a artistas, actores y figuras públicas.",
+          "eventReporting": "Reporterismo en eventos y estrenos.",
           "scripts": "Redacción de guiones y piezas informativas."
         }
       },
       "urjcmun": {
         "role": "Deputy Director for Social Media",
-        "discipline": "Comunicación digital",
+        "discipline": "Comunicación · Social Media · Liderazgo",
         "period": "2022 — 2026",
-        "summary": "Trayectoria dentro del equipo de comunicación desde 2022, con distintas funciones antes de asumir la dirección adjunta de Social Media en 2026.",
-        "context": "Modelo de Naciones Unidas de la Universidad Rey Juan Carlos.",
+        "summary": "Trayectoria dentro del equipo de Comunicación de URJCmun desde 2022, participando en distintas funciones antes de asumir en 2026 la dirección adjunta de Social Media.",
+        "context": "Modelo de Naciones Unidas de la Universidad Rey Juan Carlos, incluida su edición URJCmun TEEN.",
         "progression": {
           "communicationTeam": "Communication Team",
           "cameraOperator": "Camera Operator",
@@ -260,38 +268,41 @@
           "deputyDirector": "Deputy Director for Social Media"
         },
         "responsibilities": {
-          "socialStrategy": "Dirección de la estrategia de redes y del calendario editorial.",
-          "copyMetrics": "Copy, métricas y posicionamiento de la identidad digital.",
-          "graphicDesign": "Diseño de contenido gráfico y audiovisual.",
+          "socialStrategy": "Estrategia y gestión de redes sociales.",
+          "copyMetrics": "Calendario editorial, copy y métricas.",
+          "graphicDesign": "Producción de contenido gráfico y audiovisual.",
           "teamCoordination": "Coordinación de reporteros y creadores de contenido.",
-          "liveContent": "Cobertura de eventos y producción de contenido en tiempo real."
+          "liveContent": "Cobertura de eventos y producción de contenido en tiempo real.",
+          "digitalIdentity": "Desarrollo de identidad digital y posicionamiento."
         }
       },
       "annie-bonnie": {
-        "role": "Comunicación corporativa",
-        "discipline": "Comunicación corporativa",
+        "role": "Comunicación Corporativa",
+        "discipline": "Contenido · Audiovisual · Comunicación",
         "period": "2025 — 2026",
-        "summary": "Comunicación corporativa de extremo a extremo: producción audiovisual, contenido web, social y cobertura de eventos bajo un mismo calendario editorial.",
+        "summary": "Desarrollo de contenidos digitales y corporativos, combinando redacción, producción audiovisual, eventos y planificación editorial.",
         "context": "Consultora de comunicación, estrategia, marketing de contenidos y relaciones públicas.",
         "responsibilities": {
-          "videoProduction": "Grabación y edición de piezas audiovisuales para redes y comunicación interna.",
           "writing": "Redacción de artículos para blog corporativo y contenidos web.",
-          "events": "Organización y cobertura de eventos corporativos.",
-          "calendar": "Gestión del calendario editorial y apoyo en estrategia de contenidos.",
-          "stakeholders": "Comunicación con público y colaboradores."
+          "videoProduction": "Grabación y edición de piezas audiovisuales.",
+          "socialContent": "Producción de contenido para redes sociales y comunicación interna.",
+          "events": "Organización y cobertura de eventos.",
+          "stakeholders": "Comunicación con público y colaboradores.",
+          "calendar": "Apoyo en estrategia de contenidos y calendario editorial."
         }
       },
       "isocero": {
-        "role": "Fotógrafa",
-        "discipline": "Fotografía",
+        "role": "Fotógrafa en Hoteles",
+        "discipline": "Fotografía · Retrato · Atención al cliente",
         "period": "2023",
-        "summary": "Fotografía de retrato en entornos turísticos: dirección de sesión, edición profesional y relación comercial directa con el cliente.",
+        "summary": "Fotografía de retrato en entornos turísticos, combinando realización de sesiones, edición profesional y relación directa con clientes.",
         "context": "Estudio especializado en fotografía de retrato en entornos hoteleros y turísticos.",
         "responsibilities": {
-          "sessionDirection": "Dirección de personas durante la sesión: familias y retrato infantil.",
-          "locationLight": "Búsqueda de localización e iluminación dentro del entorno hotelero.",
-          "editing": "Edición profesional de las imágenes.",
-          "sales": "Presentación del trabajo, asesoramiento y venta al cliente."
+          "photoSessions": "Sesiones fotográficas con familias y niños.",
+          "editing": "Edición profesional de imágenes.",
+          "sales": "Venta de fotografías personalizadas.",
+          "clientService": "Atención y asesoramiento al cliente.",
+          "fastPaced": "Trabajo en entornos dinámicos y orientados al cliente."
         }
       }
     }
@@ -318,16 +329,16 @@
   "Contact": {
     "eyebrow": "Contacto",
     "title": "Para medios, proyectos y colaboraciones.",
-    "body": "Disponible para oportunidades profesionales relacionadas con televisión, producción audiovisual, contenido digital, fotografía y comunicación.",
+    "body": "Disponible para oportunidades profesionales en televisión, reporterismo, producción audiovisual, fotografía y comunicación digital.",
     "email": "Email",
     "linkedin": "LinkedIn",
     "base": "Base",
     "contactPageEyebrow": "Contacto",
     "contactPageTitle": "Hablemos",
-    "contactPageText": "Para consultas profesionales, medios, proyectos audiovisuales o comunicación digital, puedes contactar por email o LinkedIn."
+    "contactPageText": "Para consultas profesionales, medios, coberturas o proyectos audiovisuales, puedes contactar por email o LinkedIn."
   },
   "Footer": {
-    "line": "Periodismo, imagen y comunicación audiovisual.",
+    "line": "Periodismo, imagen y narrativa digital.",
     "location": "Madrid, España"
   },
   "NotFound": {

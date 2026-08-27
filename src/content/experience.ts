@@ -5,21 +5,25 @@ export type ExperienceId =
   | "isocero";
 
 export type ResponsibilityKey =
-  | "liveCoverage"
+  | "eventCoverage"
   | "interviews"
+  | "eventReporting"
   | "scripts"
   | "socialStrategy"
   | "copyMetrics"
   | "graphicDesign"
   | "teamCoordination"
   | "liveContent"
+  | "digitalIdentity"
   | "videoProduction"
+  | "socialContent"
   | "writing"
   | "events"
   | "calendar"
   | "stakeholders"
-  | "sessionDirection"
-  | "locationLight"
+  | "photoSessions"
+  | "clientService"
+  | "fastPaced"
   | "editing"
   | "sales";
 
@@ -44,7 +48,12 @@ export const experience: ExperienceItem[] = [
   {
     id: "grupo-cadena-media",
     company: "Grupo Cadena Media",
-    responsibilityKeys: ["liveCoverage", "interviews", "scripts"],
+    responsibilityKeys: [
+      "eventCoverage",
+      "interviews",
+      "eventReporting",
+      "scripts",
+    ],
     featured: true,
     source: "cv",
     verification: "verified",
@@ -64,6 +73,7 @@ export const experience: ExperienceItem[] = [
       "graphicDesign",
       "teamCoordination",
       "liveContent",
+      "digitalIdentity",
     ],
     source: "cv",
     verification: "verified",
@@ -72,11 +82,12 @@ export const experience: ExperienceItem[] = [
     id: "annie-bonnie",
     company: "Annie Bonnie",
     responsibilityKeys: [
-      "videoProduction",
       "writing",
+      "videoProduction",
+      "socialContent",
       "events",
-      "calendar",
       "stakeholders",
+      "calendar",
     ],
     source: "cv",
     verification: "verified",
@@ -84,7 +95,13 @@ export const experience: ExperienceItem[] = [
   {
     id: "isocero",
     company: "Isocero",
-    responsibilityKeys: ["sessionDirection", "locationLight", "editing", "sales"],
+    responsibilityKeys: [
+      "photoSessions",
+      "editing",
+      "sales",
+      "clientService",
+      "fastPaced",
+    ],
     source: "cv",
     verification: "verified",
   },
