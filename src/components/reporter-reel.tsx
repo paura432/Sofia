@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/motion/reveal";
 import { MotionLink } from "@/components/motion/motion-link";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
-import type { ProjectMedia } from "@/content/projects";
+import type { MediaCopy, ProjectMedia } from "@/content/projects";
 
 type ReporterReelProps = {
   eyebrow: string;
@@ -9,7 +9,7 @@ type ReporterReelProps = {
   title: string;
   playLabel: string;
   media: ProjectMedia;
-  mediaCopy?: Record<string, { alt?: string; title?: string }>;
+  mediaCopy?: Record<string, MediaCopy>;
   href: {
     pathname: "/work/[slug]";
     params: { slug: string };

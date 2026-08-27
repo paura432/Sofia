@@ -7,9 +7,11 @@ import { Reveal } from "@/components/motion/reveal";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
 import {
+  buildProjectMediaCopy,
   getNextProject,
   getProjectBySlug,
   getPublishedProjects,
+  type MediaCopy,
   type PortfolioProject,
 } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
@@ -33,15 +35,7 @@ type ProjectCopy = {
   result?: string;
   roles?: string[];
   credits?: Record<string, string>;
-  media?: Record<
-    string,
-    {
-      alt?: string;
-      caption?: string;
-      title?: string;
-      transcript?: string;
-    }
-  >;
+  media?: Record<string, MediaCopy>;
 };
 
 export function generateStaticParams() {
@@ -106,6 +100,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   const t = await getTranslations("Projects");
   const copy = t.raw(`items.${project.translationKey}`) as ProjectCopy;
+  const locationLabel = project.locationKey
+    ? t(`locations.${project.locationKey}`)
+    : undefined;
+  const mediaCopy = buildProjectMediaCopy(project, copy.media, {
+    date: project.year,
+    location: locationLabel,
+  });
   const heroMedia = project.cover ?? project.media?.find((media) => media.featured);
   const detailMedia = project.media?.filter((media) => media.id !== heroMedia?.id);
   const nextProject = getNextProject(project.slug);
@@ -151,7 +152,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <section className="section project-hero-media" aria-label={copy.title}>
           <div className="container">
             <ProjectMediaLayout
-              copy={copy.media}
+              copy={mediaCopy}
               media={[heroMedia]}
               playLabel={t("play")}
               preloadFirst
@@ -188,7 +189,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <section className="section">
           <div className="container">
             <ProjectMediaLayout
-              copy={copy.media}
+              copy={mediaCopy}
               media={detailMedia}
               playLabel={t("play")}
               transcriptLabel={t("transcript")}

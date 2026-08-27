@@ -102,7 +102,10 @@
     "reelMeta": "Reporterismo TV · Entrevistas · Cobertura de eventos",
     "transcript": "Transcripción",
     "locations": {
-      "madrid": "Madrid"
+      "madrid": "Madrid",
+      "tenerife": "Tenerife",
+      "torrejon-de-ardoz": "Torrejón de Ardoz",
+      "valencia": "Valencia"
     },
     "disciplines": {
       "reporting": "REPORTING",

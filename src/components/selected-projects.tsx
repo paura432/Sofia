@@ -1,7 +1,7 @@
 import { MotionLink } from "@/components/motion/motion-link";
 import { StaggerGroup } from "@/components/motion/stagger";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
-import type { ProjectMedia } from "@/content/projects";
+import type { MediaCopy, ProjectMedia } from "@/content/projects";
 
 type SelectedProjectItem = {
   slug: string;
@@ -10,7 +10,7 @@ type SelectedProjectItem = {
   organisation?: string;
   discipline: string;
   media?: ProjectMedia;
-  mediaCopy?: Record<string, { alt?: string; title?: string }>;
+  mediaCopy?: Record<string, MediaCopy>;
 };
 
 type SelectedProjectsProps = {

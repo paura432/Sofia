@@ -8,7 +8,9 @@ import { StaggerGroup } from "@/components/motion/stagger";
 import { ProjectIndex } from "@/components/project-index";
 import { featuredWork } from "@/content/experience";
 import {
+  buildProjectMediaCopy,
   getPublishedProjects,
+  type MediaCopy,
   type PortfolioProject,
 } from "@/content/projects";
 import type { Locale } from "@/i18n/routing";
@@ -29,7 +31,7 @@ type ExperienceCopy = {
 
 type ProjectCopy = {
   title: string;
-  media?: Record<string, { alt?: string; caption?: string; title?: string }>;
+  media?: Record<string, MediaCopy>;
 };
 
 export async function generateMetadata({
@@ -78,9 +80,22 @@ export default async function WorkPage() {
         <div className="container">
           {publishedProjects.length > 0 ? (
             <ProjectIndex
-              copyFor={(project) =>
-                projectsText.raw(`items.${project.translationKey}`) as ProjectCopy
-              }
+              copyFor={(project) => {
+                const raw = projectsText.raw(
+                  `items.${project.translationKey}`,
+                ) as ProjectCopy;
+                const location = project.locationKey
+                  ? projectsText(`locations.${project.locationKey}`)
+                  : undefined;
+
+                return {
+                  title: raw.title,
+                  media: buildProjectMediaCopy(project, raw.media, {
+                    date: project.year,
+                    location,
+                  }),
+                };
+              }}
               disciplineLabel={disciplineLabel}
               playLabel={projectsText("play")}
               projects={publishedProjects}

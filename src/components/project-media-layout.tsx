@@ -2,21 +2,13 @@ import { MediaCaption } from "@/components/media-caption";
 import { MediaReveal } from "@/components/motion/media-reveal";
 import { PortfolioImage } from "@/components/portfolio-image";
 import { PortfolioVideo } from "@/components/portfolio-video";
-import type { ProjectMedia } from "@/content/projects";
+import type { MediaCopy, ProjectMedia } from "@/content/projects";
 
-type MediaCopy = {
-  alt?: string;
-  caption?: string;
-  title?: string;
-  location?: string;
-  date?: string;
-  credit?: string;
-  transcript?: string;
-};
+type MediaCopyProps = MediaCopy;
 
 type ProjectMediaLayoutProps = {
   media?: ProjectMedia[];
-  copy?: Record<string, MediaCopy>;
+  copy?: Record<string, MediaCopyProps>;
   playLabel: string;
   /** Marca la primera pieza como LCP. Solo en heros above the fold. */
   preloadFirst?: boolean;

@@ -35,6 +35,17 @@ export type VideoTrack = {
   default?: boolean;
 };
 
+/** Textos visibles de un asset. Viven en `messages` bajo `Projects.items.*.media`. */
+export type MediaCopy = {
+  alt?: string;
+  caption?: string;
+  title?: string;
+  location?: string;
+  date?: string;
+  credit?: string;
+  transcript?: string;
+};
+
 export type ProjectMedia = {
   id: string;
   type: MediaType;
@@ -122,7 +133,7 @@ export const projects: PortfolioProject[] = [
       verified: false,
       note: "Pendiente el archivo definitivo del reel y los créditos de cada pieza.",
     },
-    // media: pegar tras `pnpm media:video` — ver docs/first-project-publish.md
+    // media: pegar tras ingest de poster/vídeo — ver docs/first-project-publish.md
   },
   {
     id: "grupo-cadena-media",
@@ -206,6 +217,75 @@ export function focalPointStyle(media: Pick<ProjectMedia, "focalPoint">) {
   const x = media.focalPoint?.x ?? 50;
   const y = media.focalPoint?.y ?? 50;
   return `${x}% ${y}%`;
+}
+
+function mediaTranslationBlock(
+  translations: Record<string, MediaCopy> | undefined,
+  key: string | undefined,
+) {
+  if (!key || !translations) return undefined;
+  return translations[key];
+}
+
+/**
+ * Une `id` y claves opcionales (`altKey`, `captionKey`, `creditKey`, …) con la
+ * copy de `messages`. Los campos del bloque `id` tienen prioridad; las claves
+ * apuntan al mismo objeto o a bloques distintos según curación.
+ */
+export function resolveMediaItemCopy(
+  media: ProjectMedia,
+  translations: Record<string, MediaCopy> | undefined,
+  defaults?: Pick<MediaCopy, "location" | "date">,
+): MediaCopy {
+  const primary = mediaTranslationBlock(translations, media.id) ?? {};
+
+  return {
+    alt:
+      primary.alt ??
+      mediaTranslationBlock(translations, media.altKey)?.alt ??
+      mediaTranslationBlock(translations, media.titleKey)?.title,
+    caption:
+      primary.caption ??
+      mediaTranslationBlock(translations, media.captionKey)?.caption,
+    title:
+      primary.title ?? mediaTranslationBlock(translations, media.titleKey)?.title,
+    credit:
+      primary.credit ??
+      mediaTranslationBlock(translations, media.creditKey)?.credit,
+    transcript:
+      primary.transcript ??
+      (media.transcriptKey
+        ? mediaTranslationBlock(translations, media.transcriptKey)?.transcript
+        : undefined),
+    location: primary.location ?? defaults?.location,
+    date: primary.date ?? defaults?.date,
+  };
+}
+
+/** Mapa `media.id` → copy resuelta para ProjectMediaLayout. */
+export function buildProjectMediaCopy(
+  project: PortfolioProject,
+  translations: Record<string, MediaCopy> | undefined,
+  defaults?: Pick<MediaCopy, "location" | "date">,
+) {
+  const items = [project.cover, ...(project.media ?? [])].filter(
+    Boolean,
+  ) as ProjectMedia[];
+  const baseDefaults = {
+    location: defaults?.location,
+    date: defaults?.date ?? project.year,
+  };
+  const resolved: Record<string, MediaCopy> = {};
+
+  for (const media of items) {
+    resolved[media.id] = resolveMediaItemCopy(
+      media,
+      translations,
+      baseDefaults,
+    );
+  }
+
+  return resolved;
 }
 
 function isValidFocalPoint(point: MediaFocalPoint) {

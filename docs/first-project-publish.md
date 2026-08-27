@@ -21,21 +21,21 @@ Checklist para pasar de `published: false` a Home/Work con evidencia real. Sin p
 ## Ingest de imagen
 
 ```bash
-pnpm media:inspect --input "/ruta/original.jpg"
-pnpm media:image --input "/ruta/original.jpg" \
+pnpm media:inspect -- --input "/ruta/original.jpg"
+pnpm media:image -- --input "/ruta/original.jpg" \
   --project grupo-cadena-media \
   --name grupo-cadena-media-cover \
   --profile photo
 ```
 
-Pegar bloque `cover` en `src/content/projects.ts`:
+Poster de vídeo: mismo comando con `--profile poster`.
 
 ```ts
 cover: {
   id: "cover",
   type: "image",
   src: "/media/projects/grupo-cadena-media/grupo-cadena-media-cover.webp",
-  aspectRatio: "16:9", // o el que devuelva el CLI
+  aspectRatio: "16:9",
   width: 1920,
   height: 1080,
   altKey: "cover",
@@ -43,6 +43,10 @@ cover: {
   creditKey: "cover",
 },
 ```
+
+## Pegar en `projects.ts`
+
+Pegar bloque `cover` en `src/content/projects.ts`.
 
 Añadir en `messages/es.json` y `messages/en.json` bajo `Projects.items.grupo-cadena-media`:
 
@@ -56,7 +60,7 @@ Añadir en `messages/es.json` y `messages/en.json` bajo `Projects.items.grupo-ca
 }
 ```
 
-## Publicar
+## Publicar proyecto
 
 ```ts
 published: true,
@@ -71,9 +75,9 @@ Verificar:
 
 ## No publicar
 
-- `public/media/projects/pipeline-test/` — solo prueba de pipeline
 - Assets sin `rights.verified`
 - Imágenes de stock o placeholders
+- Masters de prueba del pipeline en `public/media/`
 
 ## Estado actual
 

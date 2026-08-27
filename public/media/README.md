@@ -24,9 +24,9 @@ carpeta permanece vacía hasta que llegue material real.
 Ingest local:
 
 ```bash
-pnpm media:inspect --input "…"
-pnpm media:image --input "…" --project urjcmun --name urjcmun-stage --profile photo
-pnpm media:folder --input "…" --project urjcmun --profile photo
+pnpm media:inspect -- --input "…"
+pnpm media:image -- --input "…" --project urjcmun --name urjcmun-stage --profile photo
+pnpm media:folder -- --input "…" --project urjcmun --profile photo
 pnpm media:doctor
 ```
 

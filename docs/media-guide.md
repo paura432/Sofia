@@ -59,15 +59,17 @@ Los originales **no** viven en `public/`.
 
 ### Comandos
 
-```bash
-pnpm media:inspect --input "/ruta/photo.jpg"
+Con pnpm, separa flags con `--`:
 
-pnpm media:image --input "/ruta/photo.jpg" \
+```bash
+pnpm media:inspect -- --input "/ruta/photo.jpg"
+
+pnpm media:image -- --input "/ruta/photo.jpg" \
   --project urjcmun \
   --name urjcmun-stage \
   --profile photo
 
-pnpm media:folder --input "/ruta/fotos" \
+pnpm media:folder -- --input "/ruta/fotos" \
   --project urjcmun \
   --profile photo \
   --dry-run
@@ -77,7 +79,19 @@ pnpm media:doctor
 
 Flags útiles: `--quality 70–95`, `--max-edge`, `--overwrite`, `--dry-run`, `--json-output <path>`, `--destination profile`.
 
-`pnpm media:image --help` resume las flags. Este documento es la guía completa.
+`pnpm media:image -- --help` resume las flags. Este documento es la guía completa.
+
+### Claves de copy (`altKey`, `captionKey`, `creditKey`)
+
+En `projects.ts` se declaran claves que apuntan a bloques en `messages`:
+
+```ts
+altKey: "cover",
+captionKey: "cover",
+creditKey: "cover",
+```
+
+En runtime, `buildProjectMediaCopy()` une `id` + claves con `Projects.items.[slug].media`. La `location` del proyecto (`locationKey`) y el `year` se aplican como defaults por asset salvo override en copy.
 
 ### Perfiles
 
@@ -136,6 +150,19 @@ Si quality 88–90 degrada de forma visible: `--quality 92` **en esa imagen**. N
 ### Batch
 
 `media:folder` numera de forma determinista (`urjcmun-001.webp`…). Detecta duplicados binarios (SHA-256). Un fallo no deja archivos parciales; el lote continúa; exit code ≠ 0 si hubo errores.
+
+---
+
+## Calibración de calidad (primeras fotos reales)
+
+No asumir que quality 90 es perfecta para todas las imágenes.
+
+1. Elegir 5–10 assets difíciles: piel, pelo, sombras, luces, ruido, bokeh, texto, gradientes, nocturnas.
+2. Comparar original vs WebP master al 100%.
+3. Si una imagen concreta necesita más calidad: `pnpm media:image -- … --quality 92` solo para esa imagen.
+4. No cambiar defaults globales en `config.mjs` sin evidencia visual de varias fotos.
+
+Sin sharpen global. Sin compresión iterativa por tamaño objetivo.
 
 ---
 
@@ -200,20 +227,20 @@ Sin `blurDataURL`, `placeholder="empty"`. Sin shimmer.
 
 ## Add video
 
-1. `provider`: `native` | `youtube` | `vimeo`.
-2. `src` o `videoId`.
-3. Poster real (`pnpm media:image --profile poster`). `mobilePoster` solo si hace falta.
-4. `duration`.
-5. Title ES.
-6. Title EN.
-7. `tracks` (VTT reales, nunca ficticios). YouTube/Vimeo: subtítulos en la plataforma, no pistas locales sobre el iframe.
-8. `transcript` en la copy si existe. Si no, no se pinta nada.
-9. Rol de Sofía.
-10. Credits verificados.
+1. Confirmar `rights` antes de cualquier asset.
+2. `provider`: `native` | `youtube` | `vimeo`.
+3. `src` o `videoId`.
+4. Poster real (`pnpm media:image -- --profile poster`). `mobilePoster` solo si hace falta.
+5. `duration`.
+6. Title ES / EN (`titleKey` → `messages`).
+7. `tracks` (VTT reales en `public/media/projects/[slug]/`, nunca ficticios). YouTube/Vimeo: subtítulos en la plataforma.
+8. `transcriptKey` + copy si existe transcript. Si no, no se pinta nada.
+9. Rol de Sofía en `roles`.
+10. Credits verificados en `messages` y `project.credits`.
 11. `sourceUrl`.
-12. `rights`.
+12. `rights.verified: true` antes de `published: true`.
 
-El player no existe hasta el clic. Nativo: `preload="none"`. YouTube: `youtube-nocookie`.
+El player no existe hasta el clic. Nativo: `preload="none"`. YouTube: `youtube-nocookie`. Sin iframe inicial.
 
 ---
 

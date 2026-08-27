@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/motion/reveal";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
-import type { ProjectMedia } from "@/content/projects";
+import type { MediaCopy, ProjectMedia } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
 
 type FeaturedProjectProps = {
@@ -16,7 +16,7 @@ type FeaturedProjectProps = {
     params: { slug: string };
   };
   playLabel: string;
-  mediaCopy?: Record<string, { alt?: string; title?: string }>;
+  mediaCopy?: Record<string, MediaCopy>;
 };
 
 export function FeaturedProject({

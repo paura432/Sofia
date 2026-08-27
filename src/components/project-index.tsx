@@ -1,12 +1,12 @@
 import { MotionLink } from "@/components/motion/motion-link";
 import { StaggerGroup } from "@/components/motion/stagger";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
-import type { PortfolioProject } from "@/content/projects";
+import type { MediaCopy, PortfolioProject } from "@/content/projects";
 
 type ProjectCopy = {
   title: string;
   description?: string;
-  media?: Record<string, { alt?: string; caption?: string; title?: string }>;
+  media?: Record<string, MediaCopy>;
 };
 
 type ProjectIndexProps = {

@@ -13,9 +13,11 @@ import { ReporterReel } from "@/components/reporter-reel";
 import { SectionHeading } from "@/components/section-heading";
 import { SelectedProjects } from "@/components/selected-projects";
 import {
+  buildProjectMediaCopy,
   getFeaturedProject,
   getReporterReel,
   getSelectedProjects,
+  type MediaCopy,
   type PortfolioProject,
 } from "@/content/projects";
 import { currentPositionIds } from "@/content/profile";
@@ -28,8 +30,23 @@ type PageProps = {
 
 type ProjectCopy = {
   title: string;
-  media?: Record<string, { alt?: string; title?: string }>;
+  media?: Record<string, MediaCopy>;
 };
+
+function projectMediaCopy(
+  project: PortfolioProject,
+  raw: ProjectCopy,
+  projectsText: (key: string) => string,
+) {
+  const location = project.locationKey
+    ? projectsText(`locations.${project.locationKey}`)
+    : undefined;
+
+  return buildProjectMediaCopy(project, raw.media, {
+    date: project.year,
+    location,
+  });
+}
 
 export async function generateMetadata({
   params,
@@ -67,6 +84,8 @@ export default async function Home() {
       .join(" · ");
   const projectCopy = (project: PortfolioProject) =>
     projectsText.raw(`items.${project.translationKey}`) as ProjectCopy;
+  const resolvedMediaCopy = (project: PortfolioProject) =>
+    projectMediaCopy(project, projectCopy(project), projectsText);
 
   return (
     <main id="main">
@@ -80,7 +99,7 @@ export default async function Home() {
             params: { slug: reporterReel.slug },
           }}
           media={reelMedia}
-          mediaCopy={projectCopy(reporterReel).media}
+          mediaCopy={resolvedMediaCopy(reporterReel)}
           meta={projectsText("reelMeta")}
           playLabel={projectsText("play")}
           title={projectCopy(reporterReel).title}
@@ -97,7 +116,7 @@ export default async function Home() {
             pathname: "/work/[slug]",
             params: { slug: featuredProject.slug },
           }}
-          mediaCopy={projectCopy(featuredProject).media}
+          mediaCopy={resolvedMediaCopy(featuredProject)}
           organisation={featuredProject.organisation}
           playLabel={projectsText("play")}
           title={projectCopy(featuredProject).title}
@@ -154,7 +173,7 @@ export default async function Home() {
         projects={selectedProjects.map((project, index) => ({
           discipline: disciplineLabel(project),
           media: project.cover ?? project.media?.[0],
-          mediaCopy: projectCopy(project).media,
+          mediaCopy: resolvedMediaCopy(project),
           number: String(index + 1).padStart(2, "0"),
           organisation: project.organisation,
           slug: project.slug,
