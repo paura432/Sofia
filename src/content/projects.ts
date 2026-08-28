@@ -192,15 +192,14 @@ export const projects: PortfolioProject[] = [
     translationKey: "isocero",
   },
   // ─── Proyectos fotográficos — drafts ────────────────────────────────────────
-  // year: "Pendiente" — campo required pero no confirmado editorialmente.
-  // No publicar hasta confirmar año, rights.verified y copy completa.
+  // year: "Pendiente" — confirmar editorialmente cuando haya fecha definitiva.
   {
     id: "retrato-editorial",
     slug: "retrato-editorial",
     year: "Pendiente",
     discipline: ["photography"],
     order: 10,
-    published: false,
+    published: true,
     translationKey: "retrato-editorial",
     rights: {
       verified: false,
@@ -399,7 +398,7 @@ export const projects: PortfolioProject[] = [
     year: "Pendiente",
     discipline: ["photography"],
     order: 11,
-    published: false,
+    published: true,
     translationKey: "musica-en-directo",
     rights: {
       verified: false,
@@ -493,7 +492,7 @@ export const projects: PortfolioProject[] = [
     year: "Pendiente",
     discipline: ["photography"],
     order: 12,
-    published: false,
+    published: true,
     translationKey: "calle-documental",
     rights: {
       verified: false,

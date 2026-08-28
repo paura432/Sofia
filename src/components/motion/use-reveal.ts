@@ -14,6 +14,17 @@ type RevealOptions = {
   amount?: number;
 };
 
+function isInViewport(node: HTMLElement) {
+  const rect = node.getBoundingClientRect();
+
+  return (
+    rect.bottom > 0 &&
+    rect.right > 0 &&
+    rect.top < window.innerHeight &&
+    rect.left < window.innerWidth
+  );
+}
+
 /**
  * Oculta el elemento justo antes del primer paint del cliente y lo revela
  * cuando entra en viewport. El HTML del servidor sale visible, así que sin JS
@@ -38,15 +49,21 @@ export function useReveal<T extends HTMLElement>({
 
     setIsHidden(true);
 
+    let frame = 0;
+
+    const show = () => {
+      setIsHidden(false);
+
+      if (once) {
+        observer.disconnect();
+      }
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            setIsHidden(false);
-
-            if (once) {
-              observer.disconnect();
-            }
+            show();
           } else if (!once) {
             setIsHidden(true);
           }
@@ -57,7 +74,15 @@ export function useReveal<T extends HTMLElement>({
 
     observer.observe(node);
 
-    return () => observer.disconnect();
+    // Respaldo para piezas above-the-fold cuando el observer no dispara a tiempo.
+    if (isInViewport(node)) {
+      frame = requestAnimationFrame(show);
+    }
+
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
   }, [amount, once]);
 
   return { ref, revealed: isHidden ? ("hidden" as const) : undefined };

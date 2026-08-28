@@ -21,14 +21,17 @@ export function MediaReveal({ children, className, delay = 0 }: MediaRevealProps
     delay ? { "--reveal-delay": `${delay}ms` } : {}
   ) as CSSProperties;
 
+  // El observer va en un ancla sin clip-path: si observamos el mismo nodo que
+  // ocultamos con inset(), intersectionRatio queda en 0 y la foto nunca revela.
   return (
-    <div
-      className={["media-reveal", className].filter(Boolean).join(" ")}
-      data-revealed={revealed}
-      ref={ref}
-      style={style}
-    >
-      {children}
+    <div ref={ref} className="media-reveal-anchor">
+      <div
+        className={["media-reveal", className].filter(Boolean).join(" ")}
+        data-revealed={revealed}
+        style={style}
+      >
+        {children}
+      </div>
     </div>
   );
 }
