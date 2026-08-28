@@ -1,7 +1,11 @@
 import { MotionLink } from "@/components/motion/motion-link";
 import { StaggerGroup } from "@/components/motion/stagger";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
-import type { MediaCopy, PortfolioProject } from "@/content/projects";
+import {
+  publishableYear,
+  type MediaCopy,
+  type PortfolioProject,
+} from "@/content/projects";
 
 type ProjectCopy = {
   title: string;
@@ -33,6 +37,7 @@ export function ProjectIndex({
       {projects.map((project, index) => {
         const copy = copyFor(project);
         const cover = project.cover ?? project.media?.[0];
+        const year = publishableYear(project.year);
 
         return (
           <StaggerGroup
@@ -56,7 +61,8 @@ export function ProjectIndex({
               <h2>{copy.title}</h2>
               {project.organisation ? (
                 <p className="case-role">
-                  {project.organisation} · {project.year}
+                  {project.organisation}
+                  {year ? ` · ${year}` : null}
                 </p>
               ) : null}
               <MotionLink

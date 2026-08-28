@@ -625,6 +625,10 @@ export function resolveMediaItemCopy(
   };
 }
 
+export function publishableYear(year?: string) {
+  return year && year !== "Pendiente" ? year : undefined;
+}
+
 /** Mapa `media.id` → copy resuelta para ProjectMediaLayout. */
 export function buildProjectMediaCopy(
   project: PortfolioProject,
@@ -636,7 +640,7 @@ export function buildProjectMediaCopy(
   ) as ProjectMedia[];
   const baseDefaults = {
     location: defaults?.location,
-    date: defaults?.date ?? project.year,
+    date: publishableYear(defaults?.date ?? project.year),
   };
   const resolved: Record<string, MediaCopy> = {};
 

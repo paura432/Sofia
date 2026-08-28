@@ -88,6 +88,10 @@
   aspect-ratio: 4 / 3;
 }
 
+.project-media-item.full .portfolio-image-inner {
+  max-height: 85vh;
+}
+
 /* Un vertical a ancho completo en móvil puede pasar de una pantalla entera.
    Se acota la altura y el recorte lo decide `focalPoint`, no el azar. */
 @media (max-width: 699px) {
@@ -418,11 +422,6 @@
   .project-media-item.triptych {
     grid-column: span 3;
   }
-
-  .project-media-item.wide {
-    max-width: var(--content-max);
-    margin-inline: auto;
-  }
 }
 
 @media (min-width: 980px) {
@@ -469,11 +468,5 @@
   .project-media-item.triptych,
   .project-media-item.portrait {
     grid-column: span 2;
-  }
-}
-
-@media (min-width: 1920px) {
-  .project-media-item.wide {
-    max-width: var(--content-max);
   }
 }

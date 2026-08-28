@@ -11,6 +11,7 @@ import {
   getNextProject,
   getProjectBySlug,
   getPublishedProjects,
+  publishableYear,
   type MediaCopy,
   type PortfolioProject,
 } from "@/content/projects";
@@ -104,7 +105,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     ? t(`locations.${project.locationKey}`)
     : undefined;
   const mediaCopy = buildProjectMediaCopy(project, copy.media, {
-    date: project.year,
     location: locationLabel,
   });
   const heroMedia = project.cover ?? project.media?.find((media) => media.featured);
@@ -134,10 +134,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <dd>{t(`locations.${project.locationKey}`)}</dd>
               </div>
             ) : null}
-            <div>
-              <dt>{t("year")}</dt>
-              <dd>{project.year}</dd>
-            </div>
+            {publishableYear(project.year) ? (
+              <div>
+                <dt>{t("year")}</dt>
+                <dd>{publishableYear(project.year)}</dd>
+              </div>
+            ) : null}
             {copy.format ? (
               <div>
                 <dt>{t("format")}</dt>
@@ -254,7 +256,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 }
               </h2>
               <span className="next-project-year">
-                {nextProject.year} <span aria-hidden="true">→</span>
+                {publishableYear(nextProject.year) ?? null}{" "}
+                <span aria-hidden="true">→</span>
               </span>
             </Link>
           </div>

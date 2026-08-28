@@ -44,7 +44,11 @@ export function PortfolioImage({
     return null;
   }
 
-  const ratio = media.aspectRatio?.replace(":", " / ");
+  const ratio =
+    media.aspectRatio?.replace(":", " / ") ??
+    (media.width && media.height
+      ? `${media.width} / ${media.height}`
+      : undefined);
   const figureClassName = ["portfolio-image", className].filter(Boolean).join(" ");
   const objectPosition = focalPointStyle(media);
   const blur = media.blurDataURL
