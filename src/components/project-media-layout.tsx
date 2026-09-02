@@ -3,7 +3,13 @@ import type { ReactNode } from "react";
 import { MediaCaption } from "@/components/media-caption";
 import { PortfolioImage } from "@/components/portfolio-image";
 import { PortfolioVideo } from "@/components/portfolio-video";
-import type { MediaCopy, NarrativeRole, ProjectMedia } from "@/content/projects";
+import type {
+  MediaCopy,
+  MediaLayout,
+  NarrativeRole,
+  ProjectMedia,
+} from "@/content/projects";
+import { getMediaSizes } from "@/content/projects";
 
 type MediaCopyProps = MediaCopy;
 
@@ -34,16 +40,46 @@ function inferNarrativeRole(index: number, total: number): NarrativeRole {
   return "development";
 }
 
-function narrativeWrapper(
-  role: NarrativeRole,
-  key: string,
-  children: ReactNode,
-) {
-  return (
-    <div className="project-media-narrative" data-narrative={role} key={key}>
-      {children}
-    </div>
-  );
+/** Layouts that share a row only with the same consecutive token. */
+const ROW_LAYOUTS: ReadonlySet<MediaLayout> = new Set([
+  "pair",
+  "half",
+  "triptych",
+]);
+
+function rowSize(layout: MediaLayout) {
+  if (layout === "triptych") return 3;
+  if (layout === "pair" || layout === "half") return 2;
+  return 1;
+}
+
+/**
+ * Marks leftover row tokens so CSS can center them.
+ * Does not reorder. Does not pair distinct layouts.
+ */
+export function markSoloLayouts(media: ProjectMedia[]): boolean[] {
+  const layouts = media.map((item) => item.layout ?? "wide");
+  const solo = layouts.map((layout) => layout === "portrait");
+  let i = 0;
+
+  while (i < layouts.length) {
+    const layout = layouts[i];
+    if (!layout || !ROW_LAYOUTS.has(layout)) {
+      i += 1;
+      continue;
+    }
+
+    let run = 1;
+    while (layouts[i + run] === layout) run += 1;
+    const size = rowSize(layout);
+    const leftover = run % size;
+    for (let offset = run - leftover; offset < run; offset += 1) {
+      solo[i + offset] = true;
+    }
+    i += run;
+  }
+
+  return solo;
 }
 
 export function ProjectMediaLayout({
@@ -62,12 +98,26 @@ export function ProjectMediaLayout({
     return null;
   }
 
+  const solo = markSoloLayouts(usableMedia);
+
   const items = usableMedia.map((item, index) => {
     const itemCopy = copy[item.id] ?? {};
-    const className = `project-media-item ${item.layout ?? "wide"}`;
+    const isSolo = solo[index] ?? false;
+    const className = [
+      "project-media-item",
+      item.layout ?? "wide",
+      isSolo ? "is-solo" : null,
+    ]
+      .filter(Boolean)
+      .join(" ");
     const captionIndex = String(index + 1).padStart(2, "0");
     const narrativeRole =
       item.narrativeRole ?? inferNarrativeRole(index, usableMedia.length);
+    const sizes = getMediaSizes(
+      isSolo && (item.layout === "pair" || item.layout === "half" || item.layout === "triptych")
+        ? "portrait"
+        : item.layout,
+    );
     const transcript =
       item.transcriptKey && itemCopy.transcript && transcriptLabel ? (
         <details className="media-transcript">
@@ -76,11 +126,19 @@ export function ProjectMediaLayout({
         </details>
       ) : null;
 
+    const wrap = (node: ReactNode) => (
+      <div
+        className="project-media-narrative"
+        data-narrative={narrativeRole}
+        key={item.id}
+      >
+        {node}
+      </div>
+    );
+
     if (item.type === "video") {
-      return narrativeWrapper(
-        narrativeRole,
-        item.id,
-        <figure className={className}>
+      return wrap(
+        <figure className={className} data-narrative={narrativeRole}>
           <PortfolioVideo
             media={item}
             playLabel={playLabel}
@@ -100,9 +158,7 @@ export function ProjectMediaLayout({
     }
 
     if (item.type === "image") {
-      return narrativeWrapper(
-        narrativeRole,
-        item.id,
+      return wrap(
         <PortfolioImage
           alt={itemCopy.alt ?? ""}
           caption={itemCopy.caption}
@@ -115,6 +171,7 @@ export function ProjectMediaLayout({
           media={item}
           preload={preloadFirst && index === 0}
           reveal
+          sizes={sizes}
         />,
       );
     }
@@ -123,10 +180,8 @@ export function ProjectMediaLayout({
       return null;
     }
 
-    return narrativeWrapper(
-      narrativeRole,
-      item.id,
-      <figure className={className}>
+    return wrap(
+      <figure className={className} data-narrative={narrativeRole}>
         <a
           className="project-embed-link"
           href={item.externalUrl}

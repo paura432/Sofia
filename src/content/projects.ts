@@ -284,7 +284,7 @@ const mediaSizes: Record<MediaLayout, string> = {
   wide: "(max-width: 699px) 100vw, (max-width: 1300px) 92vw, 1180px",
   half: "(max-width: 699px) 100vw, (max-width: 1600px) 46vw, 710px",
   portrait:
-    "(max-width: 699px) 100vw, (max-width: 1023px) 46vw, (max-width: 1600px) 31vw, 470px",
+    "(max-width: 699px) 92vw, (max-width: 1023px) 52vw, (max-width: 1600px) 46vw, 680px",
   pair: "(max-width: 699px) 100vw, (max-width: 1600px) 46vw, 710px",
   triptych:
     "(max-width: 699px) 100vw, (max-width: 1023px) 46vw, (max-width: 1600px) 31vw, 470px",

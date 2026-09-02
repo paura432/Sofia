@@ -128,7 +128,7 @@
 
 .project-row-cover .portfolio-image-inner,
 .selected-project .portfolio-image-inner {
-  max-height: min(48vh, 380px);
+  max-height: min(52vh, 480px);
 }
 
 /* Motor editorial: una columna en móvil, seis columnas a partir de tablet.
@@ -203,7 +203,7 @@
 
 .project-row-cover .project-media-item.full .portfolio-image-inner,
 .selected-project .project-media-item.full .portfolio-image-inner {
-  max-height: min(48vh, 380px);
+  max-height: min(52vh, 480px);
 }
 
 .project-media-item.full {
@@ -586,17 +586,52 @@
   }
 
   .project-row-link {
-    grid-template-columns: minmax(5.5rem, 7rem) minmax(0, 1fr) minmax(240px, 0.42fr);
-    align-items: center;
-    gap: var(--space-lg);
+    grid-template-columns: minmax(5.5rem, 7rem) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: end;
+    gap: var(--space-md) var(--space-lg);
+  }
+
+  .project-row-link .case-number {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+  }
+
+  .project-row-link .project-row-copy {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .project-row-link .project-row-cover {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
   }
 
   .project-row[data-align="end"] .project-row-copy {
-    order: 2;
+    text-align: end;
   }
 
-  .project-row[data-align="end"] .project-row-cover {
-    order: 3;
+  .project-row-cover .project-media-layout,
+  .project-row-cover .project-media-narrative,
+  .project-row-cover .project-media-item,
+  .project-row-cover .portfolio-image,
+  .project-row-cover .portfolio-image-frame {
+    width: 100%;
+  }
+
+  .project-row-cover .project-media-narrative {
+    grid-column: 1 / -1;
+  }
+
+  .project-row-cover .portfolio-image-inner,
+  .project-row-cover .project-media-item.full .portfolio-image-inner {
+    width: 100%;
+    aspect-ratio: unset !important;
+    height: clamp(280px, 38vw, 520px);
+    max-height: min(62vh, 640px);
+    min-height: 0;
   }
 
   .project-list[data-count="1"] .project-row-link {
@@ -608,7 +643,15 @@
   }
 
   .project-list[data-count="2"] .project-row-link {
-    grid-template-columns: minmax(5.5rem, 7rem) minmax(0, 1fr) minmax(240px, 0.42fr);
+    grid-template-columns: minmax(5.5rem, 7rem) minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-row-cover .portfolio-image-inner,
+  .project-row-cover .project-media-item.full .portfolio-image-inner {
+    height: clamp(360px, 44vh, 600px);
+    max-height: min(72vh, 760px);
   }
 }
 
