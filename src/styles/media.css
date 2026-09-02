@@ -132,34 +132,33 @@
 }
 
 /* Motor editorial: una columna en móvil, seis columnas a partir de tablet.
-   Cada layout reclama su fracción; no hay page builder ni celdas vacías. */
+   El wrapper narrative usa display:contents para que pair/portrait
+   participen en el grid (DOM = orden visual). */
 .project-media-layout {
+  --media-gap: var(--space-sm);
+  --media-gap-large: clamp(2rem, 6vw, 5.5rem);
   display: grid;
-  row-gap: clamp(2rem, 6vw, 5.5rem);
-  column-gap: var(--space-sm);
+  row-gap: var(--media-gap-large);
+  column-gap: var(--media-gap);
 }
 
 .project-media-layout[data-rhythm="sparse"] {
-  row-gap: clamp(3.2rem, 10vw, 8rem);
+  --media-gap-large: clamp(3.2rem, 10vw, 8rem);
 }
 
 .project-media-layout[data-rhythm="studio"] {
-  row-gap: clamp(3.6rem, 11vw, 9rem);
+  --media-gap-large: clamp(3.6rem, 11vw, 9rem);
 }
 
-.project-media-narrative[data-narrative="opening"] {
-  margin-top: 0;
+.project-media-narrative {
+  display: contents;
 }
 
-.project-media-narrative[data-narrative="context"] {
+.project-media-narrative[data-narrative="context"] .project-media-item:is(.full, .wide, .portrait, .is-solo) {
   margin-top: clamp(0.5rem, 2vw, 1.5rem);
 }
 
-.project-media-narrative[data-narrative="development"] {
-  margin-top: 0;
-}
-
-.project-media-narrative[data-narrative="peak"] {
+.project-media-narrative[data-narrative="peak"] .project-media-item:is(.full, .wide, .portrait, .is-solo) {
   margin-top: clamp(1rem, 4vw, 3rem);
 }
 
@@ -168,7 +167,7 @@
   grid-column: 1 / -1;
 }
 
-.project-media-narrative[data-narrative="closing"] {
+.project-media-narrative[data-narrative="closing"] .project-media-item {
   margin-top: clamp(2rem, 6vw, 5rem);
   margin-bottom: clamp(0.5rem, 2vw, 1rem);
 }
@@ -213,7 +212,14 @@
 /* Un vertical a ancho completo en móvil puede pasar de una pantalla entera.
    Se acota la altura y el recorte lo decide `focalPoint`, no el azar. */
 @media (max-width: 699px) {
-  .project-media-item.portrait .portfolio-image-inner {
+  .project-media-item.portrait,
+  .project-media-item.is-solo {
+    width: min(92%, 34rem);
+    margin-inline: auto;
+  }
+
+  .project-media-item.portrait .portfolio-image-inner,
+  .project-media-item.is-solo .portfolio-image-inner {
     max-height: 78vh;
   }
 }
@@ -551,12 +557,15 @@
     grid-column: span 3;
   }
 
-  .project-media-item.portrait {
-    grid-column: span 3;
+  .project-media-item.portrait,
+  .project-media-item.is-solo {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(52%, 36rem);
   }
 
   .project-media-item.triptych {
-    grid-column: span 2;
+    grid-column: span 3;
   }
 }
 
@@ -656,11 +665,12 @@
 }
 
 @media (min-width: 1024px) {
-  .project-media-item.portrait {
-    grid-column: 3 / span 2;
+  .project-media-item.portrait,
+  .project-media-item.is-solo {
+    width: min(46%, 32rem);
   }
 
-  .project-media-item.triptych {
+  .project-media-item.triptych:not(.is-solo) {
     grid-column: span 2;
   }
 }

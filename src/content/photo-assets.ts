@@ -129,7 +129,7 @@ export const musica_en_directo_media: ProjectMedia[] = [
       height: 2800,
       aspectRatio: "2:3",
       blurDataURL: "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoQABgAPzmEuVOvKKWisAgB4CcJbACdACHeomNXI2rGN7LwgAD+nmB3M2sGF2gPfqGoCrjS9lR7bY1v5rFK2bRXj3rE1trea7NjRmoOyM8TH1PCRGDBNMPGsojAwiPhgaY8O9VlZW5KC/U8A1+UAAAA",
-      layout: "portrait",
+      layout: "pair",
       position: 11,
       altKey: "musica-en-directo-11",
     },
