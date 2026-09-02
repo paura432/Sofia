@@ -43,21 +43,14 @@
     "localeAria": "Cambiar idioma",
     "localeNames": {
       "es": "Español",
-      "en": "English"
+      "en": "English",
+      "ru": "Русский"
     },
     "items": {
       "work": "Trabajo",
       "about": "Perfil",
       "experience": "Experiencia",
       "contact": "Contacto"
-    },
-    "workMenu": {
-      "index": "Índice",
-      "stories": "Historias",
-      "allWork": "Todo el trabajo",
-      "photography": "Fotografía",
-      "trajectory": "Trayectoria",
-      "viewAll": "Ver todo"
     }
   },
   "Hero": {
@@ -78,16 +71,33 @@
     "practiceTitle": "Tres áreas conectadas",
     "practiceText": "Reporta, entrevista y cubre eventos; fotografía y edita; escribe y produce contenido digital.",
     "aboutEyebrow": "Perfil",
+    "profileEyebrow": "Perfil",
     "viewExperience": "Ver experiencia",
     "moreAbout": "Leer más"
   },
   "Work": {
     "pageEyebrow": "Trabajo",
     "pageTitle": "Historias",
-    "pageText": "Cobertura, entrevistas y narrativa visual.",
+    "pageText": "Reporterismo, comunicación y narrativa visual con evidencia publicada.",
+    "reportingEyebrow": "Trayectoria",
+    "reportingTitle": "Televisión y comunicación",
+    "reportingText": "Cobertura, entrevistas y producción en medios y organizaciones.",
+    "photographyEyebrow": "Fotografía",
+    "photographyTitle": "Series editoriales",
+    "photographyText": "Documentación visual publicada en cuatro historias y archivo ampliado.",
     "aria": "Trabajo seleccionado",
     "fallbackAria": "Experiencia profesional seleccionada",
-    "viewExperience": "Ver trayectoria completa"
+    "viewExperience": "Ver trayectoria completa",
+    "archiveTitle": "Archivo fotográfico",
+    "archiveTotal": "74 imágenes",
+    "archiveMusica": "Música",
+    "archiveRetrato": "Retrato",
+    "archiveEstudio": "Estudio",
+    "archiveCalle": "Calle",
+    "archiveClose": "Cerrar",
+    "archivePrev": "Anterior",
+    "archiveNext": "Siguiente",
+    "archiveImageLabel": "{group}, imagen {index}"
   },
   "Projects": {
     "featuredEyebrow": "Destacado",
@@ -97,6 +107,13 @@
     "viewRelatedWork": "Ver {count, plural, one {# proyecto} other {# proyectos}}",
     "viewOriginal": "Ver original",
     "nextProject": "Siguiente historia",
+    "prevProject": "Historia anterior",
+    "moreFromSeries": "Más de esta serie",
+    "moreFromSeriesCount": "{count} imágenes",
+    "viewerPrev": "Anterior",
+    "viewerNext": "Siguiente",
+    "viewerClose": "Cerrar",
+    "projectNavAria": "Navegación entre historias",
     "context": "Contexto",
     "role": "Rol",
     "credits": "Créditos",
@@ -188,53 +205,53 @@
       },
       "retrato-editorial": {
         "title": "Retrato & Editorial",
-        "description": "Fotografía de retrato y editorial en espacios urbanos, de estudio y exteriores.",
+        "description": "Fotografía de retrato en localización urbana.",
         "format": "Fotografía · Retrato · Editorial",
         "roles": [
           "Fotografía"
         ],
         "media": {
-          "r01": {
+          "retrato-editorial-01": {
             "alt": "Dos personas con camisetas negras ante un muro con graffiti bajo estructuras de hormigón"
           },
-          "r02": {
-            "alt": "Persona sentada en una terraza urbana con vegetación y luces decorativas"
+          "retrato-editorial-02": {
+            "alt": "Retrato urbano junto a una arquitectura de hormigón"
           },
-          "r03": {
-            "alt": "Retrato cercano de una persona con gafas de sol y camisa verde a cuadros"
-          },
-          "r04": {
-            "alt": "Retrato de un hombre con camiseta roja y las manos apoyadas en la cabeza"
-          },
-          "r05": {
-            "alt": "Persona sentada en un banco ante un mural urbano con graffiti de colores"
-          },
-          "r06": {
+          "retrato-editorial-03": {
             "alt": "Dos personas con camisetas negras frente a ventanas industriales con graffiti"
           },
-          "r07": {
+          "retrato-editorial-04": {
+            "alt": "Retrato en localización urbana"
+          },
+          "retrato-editorial-05": {
+            "alt": "Retrato editorial en un entorno urbano"
+          },
+          "retrato-editorial-06": {
+            "alt": "Persona sentada en una terraza urbana con vegetación y luces decorativas"
+          },
+          "retrato-editorial-07": {
             "alt": "Persona sonriente en silla amarilla ante una pared con luces de neón"
           },
-          "r08": {
+          "retrato-editorial-08": {
+            "alt": "Retrato de un hombre con camiseta roja y las manos apoyadas en la cabeza"
+          },
+          "retrato-editorial-09": {
+            "alt": "Persona sentada en un banco ante un mural urbano con graffiti de colores"
+          },
+          "retrato-editorial-10": {
+            "alt": "Retrato en un espacio de luz roja"
+          },
+          "retrato-editorial-11": {
             "alt": "Persona sentada en un espacio de luz roja con letrero de neón"
           },
-          "r09": {
+          "retrato-editorial-12": {
             "alt": "Hombre acuclillado sobre una escultura de adoquines en una plaza urbana"
           },
-          "r10": {
+          "retrato-editorial-13": {
+            "alt": "Retrato cercano de una persona con gafas de sol y camisa verde a cuadros"
+          },
+          "retrato-editorial-14": {
             "alt": "Persona de pie ante un mural de graffiti azul y morado al atardecer"
-          },
-          "r11": {
-            "alt": "Músico tocando la guitarra eléctrica en un escenario con fondo claro"
-          },
-          "r12": {
-            "alt": "Persona con jersey de crochet sentada junto a un espejo de aro naranja"
-          },
-          "r13": {
-            "alt": "Persona mirando su reflejo en un espejo de aro naranja sobre fondo blanco"
-          },
-          "r14": {
-            "alt": "Retrato en picado de una persona con traje de rayas y gafas de cristal verde"
           }
         }
       },
@@ -246,25 +263,46 @@
           "Fotografía"
         ],
         "media": {
-          "m01": {
+          "musica-en-directo-01": {
             "alt": "Artista de espaldas con los brazos levantados ante el público en un concierto nocturno, en blanco y negro"
           },
-          "m02": {
+          "musica-en-directo-02": {
             "alt": "Artista en escenario iluminado con luz amarilla y humo extendiendo el brazo"
           },
-          "m03": {
+          "musica-en-directo-03": {
             "alt": "Artista cantando con micrófono rodeado de manos del público levantadas"
           },
-          "m04": {
+          "musica-en-directo-04": {
             "alt": "Artista cantando al aire libre con micrófono bajo un cielo azul"
           },
-          "m05": {
+          "musica-en-directo-05": {
             "alt": "Artista cantando en escenario al aire libre contra un cielo azul con nubes"
           },
-          "m06": {
-            "alt": "Multitud en concierto nocturno con pantallas de móvil encendidas y crowd surfing"
+          "musica-en-directo-06": {
+            "alt": "Músico en escenario con guitarra bajo luz de escenario"
           },
-          "m07": {
+          "musica-en-directo-07": {
+            "alt": "Público y escenario durante una actuación en directo"
+          },
+          "musica-en-directo-08": {
+            "alt": "Artista y público en un concierto, en blanco y negro"
+          },
+          "musica-en-directo-09": {
+            "alt": "Gesto del artista frente al público en un concierto nocturno"
+          },
+          "musica-en-directo-10": {
+            "alt": "Retrato de un músico en escenario"
+          },
+          "musica-en-directo-11": {
+            "alt": "Músico en escena con iluminación de concierto"
+          },
+          "musica-en-directo-12": {
+            "alt": "Vista amplia de un concierto con público"
+          },
+          "musica-en-directo-13": {
+            "alt": "Escenario y público durante una actuación"
+          },
+          "musica-en-directo-14": {
             "alt": "Artista con micrófono ante el público y las manos levantadas, en blanco y negro"
           }
         }
@@ -277,32 +315,76 @@
           "Fotografía"
         ],
         "media": {
-          "c01": {
+          "calle-documental-01": {
             "alt": "Edificio histórico iluminado en lila durante la noche con multitud de personas en la calle"
           },
-          "c02": {
+          "calle-documental-02": {
+            "alt": "Calle nocturna con gente reunida frente a un edificio iluminado"
+          },
+          "calle-documental-03": {
             "alt": "Multitud con carteles en manifestación nocturna ante un edificio iluminado en violeta"
           },
-          "c03": {
+          "calle-documental-04": {
+            "alt": "Retrato documental en la calle"
+          },
+          "calle-documental-05": {
+            "alt": "Escena de calle a plena luz"
+          },
+          "calle-documental-06": {
             "alt": "Fachada de cristal con reflejo de una cúpula clásica, en blanco y negro"
           },
-          "c04": {
+          "calle-documental-07": {
             "alt": "Patio con macetas alineadas y sus sombras visto a través de una verja"
           },
-          "c05": {
-            "alt": "Persona de espaldas con los brazos en alto en una concentración nocturna"
-          },
-          "c06": {
-            "alt": "Parque urbano con una persona de brazos abiertos y un niño corriendo sobre el césped"
-          },
-          "c07": {
+          "calle-documental-08": {
             "alt": "Persona de espaldas apoyada en un muro con grafiti rosa bajo un cielo despejado"
+          }
+        }
+      },
+      "estudio-editorial": {
+        "title": "Estudio & Editorial",
+        "description": "Retrato de estudio y fotografía editorial.",
+        "format": "Fotografía · Estudio · Editorial",
+        "roles": [
+          "Fotografía"
+        ],
+        "media": {
+          "estudio-editorial-01": {
+            "alt": "Persona con jersey de crochet sentada junto a un espejo de aro naranja"
+          },
+          "estudio-editorial-02": {
+            "alt": "Persona mirando su reflejo en un espejo de aro naranja sobre fondo blanco"
+          },
+          "estudio-editorial-03": {
+            "alt": "Músico tocando la guitarra eléctrica en un escenario con fondo claro"
+          },
+          "estudio-editorial-04": {
+            "alt": "Retrato de estudio sobre fondo claro"
+          },
+          "estudio-editorial-05": {
+            "alt": "Retrato de estudio, encuadre cercano"
+          },
+          "estudio-editorial-06": {
+            "alt": "Retrato en picado de una persona con traje de rayas y gafas de cristal verde"
+          },
+          "estudio-editorial-07": {
+            "alt": "Retrato de estudio de tres cuartos"
+          },
+          "estudio-editorial-08": {
+            "alt": "Retrato de estudio de cuerpo entero"
+          },
+          "estudio-editorial-09": {
+            "alt": "Retrato editorial de estudio"
+          },
+          "estudio-editorial-10": {
+            "alt": "Retrato editorial de estudio, segundo encuadre"
           }
         }
       }
     }
   },
   "Profile": {
+    "statement": "Periodista y comunicadora audiovisual. Reporterismo, entrevistas y narrativa visual.",
     "aboutPreview": "Periodista y comunicadora audiovisual. Reporterismo, entrevistas y cobertura de eventos.",
     "aboutContinuation": "Fotografía, producción y comunicación digital como parte del mismo oficio.",
     "bio": "Formada en la Universidad Rey Juan Carlos. Trabaja en reporterismo televisivo, entrevistas y cobertura de eventos, con una práctica paralela en fotografía y comunicación digital.",
@@ -326,10 +408,12 @@
   "CurrentPositions": {
     "items": {
       "grupo-cadena-media": {
+        "company": "Grupo Cadena Media",
         "role": "Reportera TV",
         "period": "2024 — Actualidad"
       },
       "urjcmun": {
+        "company": "URJCmun",
         "role": "Deputy Director for Social Media",
         "period": "2026"
       }
@@ -511,5 +595,16 @@
     "title": "Página no encontrada",
     "body": "La página que buscas no existe o ha cambiado de dirección.",
     "home": "Volver al inicio"
+  },
+  "WorkRail": {
+    "label": "Historias",
+    "back": "Trabajo",
+    "prev": "Historia anterior",
+    "next": "Historia siguiente",
+    "archive": "Archivo 74",
+    "musica-en-directo": "Música",
+    "calle-documental": "Calle",
+    "estudio-editorial": "Estudio",
+    "retrato-editorial": "Retrato"
   }
 }

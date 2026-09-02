@@ -1,7 +1,9 @@
+import type { ReactNode } from "react";
+
 import { MediaCaption } from "@/components/media-caption";
 import { PortfolioImage } from "@/components/portfolio-image";
 import { PortfolioVideo } from "@/components/portfolio-video";
-import type { MediaCopy, ProjectMedia } from "@/content/projects";
+import type { MediaCopy, NarrativeRole, ProjectMedia } from "@/content/projects";
 
 type MediaCopyProps = MediaCopy;
 
@@ -13,12 +15,35 @@ type ProjectMediaLayoutProps = {
   preloadFirst?: boolean;
   trackLabels?: Record<string, string>;
   transcriptLabel?: string;
+  className?: string;
+  rhythm?: "default" | "sparse" | "studio";
 };
 
 function sortMedia(media: ProjectMedia[]) {
   return media
     .slice()
     .sort((a, b) => (a.position ?? 0) - (b.position ?? 0));
+}
+
+function inferNarrativeRole(index: number, total: number): NarrativeRole {
+  if (total <= 1) return "opening";
+  if (index === 0) return "opening";
+  if (index === 1) return "context";
+  if (index === total - 1) return "closing";
+  if (index === Math.max(2, Math.floor(total * 0.65))) return "peak";
+  return "development";
+}
+
+function narrativeWrapper(
+  role: NarrativeRole,
+  key: string,
+  children: ReactNode,
+) {
+  return (
+    <div className="project-media-narrative" data-narrative={role} key={key}>
+      {children}
+    </div>
+  );
 }
 
 export function ProjectMediaLayout({
@@ -28,6 +53,8 @@ export function ProjectMediaLayout({
   preloadFirst = false,
   trackLabels,
   transcriptLabel,
+  className,
+  rhythm = "default",
 }: ProjectMediaLayoutProps) {
   const usableMedia = sortMedia(media ?? []);
 
@@ -39,6 +66,8 @@ export function ProjectMediaLayout({
     const itemCopy = copy[item.id] ?? {};
     const className = `project-media-item ${item.layout ?? "wide"}`;
     const captionIndex = String(index + 1).padStart(2, "0");
+    const narrativeRole =
+      item.narrativeRole ?? inferNarrativeRole(index, usableMedia.length);
     const transcript =
       item.transcriptKey && itemCopy.transcript && transcriptLabel ? (
         <details className="media-transcript">
@@ -48,8 +77,10 @@ export function ProjectMediaLayout({
       ) : null;
 
     if (item.type === "video") {
-      return (
-        <figure className={className} key={item.id}>
+      return narrativeWrapper(
+        narrativeRole,
+        item.id,
+        <figure className={className}>
           <PortfolioVideo
             media={item}
             playLabel={playLabel}
@@ -64,12 +95,14 @@ export function ProjectMediaLayout({
             location={itemCopy.location}
           />
           {transcript}
-        </figure>
+        </figure>,
       );
     }
 
     if (item.type === "image") {
-      return (
+      return narrativeWrapper(
+        narrativeRole,
+        item.id,
         <PortfolioImage
           alt={itemCopy.alt ?? ""}
           caption={itemCopy.caption}
@@ -78,12 +111,11 @@ export function ProjectMediaLayout({
           date={itemCopy.date}
           fill
           index={captionIndex}
-          key={item.id}
           location={itemCopy.location}
           media={item}
           preload={preloadFirst && index === 0}
           reveal
-        />
+        />,
       );
     }
 
@@ -91,8 +123,10 @@ export function ProjectMediaLayout({
       return null;
     }
 
-    return (
-      <figure className={className} key={item.id}>
+    return narrativeWrapper(
+      narrativeRole,
+      item.id,
+      <figure className={className}>
         <a
           className="project-embed-link"
           href={item.externalUrl}
@@ -108,9 +142,16 @@ export function ProjectMediaLayout({
           index={captionIndex}
           location={itemCopy.location}
         />
-      </figure>
+      </figure>,
     );
   });
 
-  return <div className="project-media-layout">{items}</div>;
+  return (
+    <div
+      className={["project-media-layout", className].filter(Boolean).join(" ")}
+      data-rhythm={rhythm === "default" ? undefined : rhythm}
+    >
+      {items}
+    </div>
+  );
 }

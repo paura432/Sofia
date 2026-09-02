@@ -43,21 +43,14 @@
     "localeAria": "Change language",
     "localeNames": {
       "es": "Español",
-      "en": "English"
+      "en": "English",
+      "ru": "Русский"
     },
     "items": {
       "work": "Work",
       "about": "Profile",
       "experience": "Experience",
       "contact": "Contact"
-    },
-    "workMenu": {
-      "index": "Index",
-      "stories": "Stories",
-      "allWork": "All work",
-      "photography": "Photography",
-      "trajectory": "Experience",
-      "viewAll": "View all"
     }
   },
   "Hero": {
@@ -78,16 +71,33 @@
     "practiceTitle": "Three connected areas",
     "practiceText": "She reports, interviews and covers events; photographs and edits; writes and produces digital content.",
     "aboutEyebrow": "Profile",
+    "profileEyebrow": "Profile",
     "viewExperience": "View experience",
     "moreAbout": "Read more"
   },
   "Work": {
     "pageEyebrow": "Work",
     "pageTitle": "Stories",
-    "pageText": "Coverage, interviews and visual storytelling.",
+    "pageText": "Reporting, communications and visual storytelling with published evidence.",
+    "reportingEyebrow": "Career",
+    "reportingTitle": "Television and communications",
+    "reportingText": "Coverage, interviews and production for media and organisations.",
+    "photographyEyebrow": "Photography",
+    "photographyTitle": "Editorial series",
+    "photographyText": "Published visual work across four stories and an extended archive.",
     "aria": "Selected work",
     "fallbackAria": "Selected professional experience",
-    "viewExperience": "View full experience"
+    "viewExperience": "View full experience",
+    "archiveTitle": "Photographic archive",
+    "archiveTotal": "74 images",
+    "archiveMusica": "Music",
+    "archiveRetrato": "Portrait",
+    "archiveEstudio": "Studio",
+    "archiveCalle": "Street",
+    "archiveClose": "Close",
+    "archivePrev": "Previous",
+    "archiveNext": "Next",
+    "archiveImageLabel": "{group}, image {index}"
   },
   "Projects": {
     "featuredEyebrow": "Featured",
@@ -97,6 +107,13 @@
     "viewRelatedWork": "View {count, plural, one {# project} other {# projects}}",
     "viewOriginal": "View original",
     "nextProject": "Next story",
+    "prevProject": "Previous story",
+    "moreFromSeries": "More from this series",
+    "moreFromSeriesCount": "{count} images",
+    "viewerPrev": "Previous",
+    "viewerNext": "Next",
+    "viewerClose": "Close",
+    "projectNavAria": "Story navigation",
     "context": "Context",
     "role": "Role",
     "credits": "Credits",
@@ -188,53 +205,53 @@
       },
       "retrato-editorial": {
         "title": "Portrait & Editorial",
-        "description": "Portrait and editorial photography in urban spaces, studio settings and outdoors.",
+        "description": "Location portrait photography in urban settings.",
         "format": "Photography · Portrait · Editorial",
         "roles": [
           "Photography"
         ],
         "media": {
-          "r01": {
-            "alt": "Two people in black t-shirts against a graffiti wall beneath concrete structures"
+          "retrato-editorial-01": {
+            "alt": "Two people in black t-shirts before a graffiti wall under concrete structures"
           },
-          "r02": {
-            "alt": "Person sitting on an urban rooftop terrace with plants and decorative lights"
+          "retrato-editorial-02": {
+            "alt": "Urban portrait beside concrete architecture"
           },
-          "r03": {
-            "alt": "Close portrait of a person wearing sunglasses and a green plaid shirt"
-          },
-          "r04": {
-            "alt": "Portrait of a man in a red jersey with both hands resting on his head"
-          },
-          "r05": {
-            "alt": "Person sitting on a bench in front of a colourful urban graffiti mural"
-          },
-          "r06": {
+          "retrato-editorial-03": {
             "alt": "Two people in black t-shirts in front of industrial windows with graffiti"
           },
-          "r07": {
-            "alt": "Smiling person in a yellow chair against a neon-lit wall"
+          "retrato-editorial-04": {
+            "alt": "Portrait in an urban location"
           },
-          "r08": {
-            "alt": "Person sitting in a red-lit space with a neon sign"
+          "retrato-editorial-05": {
+            "alt": "Editorial portrait in an urban setting"
           },
-          "r09": {
+          "retrato-editorial-06": {
+            "alt": "Person seated on an urban terrace with plants and string lights"
+          },
+          "retrato-editorial-07": {
+            "alt": "Smiling person on a yellow chair against a wall with neon lights"
+          },
+          "retrato-editorial-08": {
+            "alt": "Portrait of a man in a red t-shirt with hands on his head"
+          },
+          "retrato-editorial-09": {
+            "alt": "Person seated on a bench in front of a colourful graffiti mural"
+          },
+          "retrato-editorial-10": {
+            "alt": "Portrait in a red-lit interior"
+          },
+          "retrato-editorial-11": {
+            "alt": "Person seated in a red-lit space with a neon sign"
+          },
+          "retrato-editorial-12": {
             "alt": "Man crouching on a cobblestone sculpture in an urban square"
           },
-          "r10": {
-            "alt": "Person standing in front of a blue and purple graffiti mural at dusk"
+          "retrato-editorial-13": {
+            "alt": "Close portrait of a person with sunglasses and a green checked shirt"
           },
-          "r11": {
-            "alt": "Musician playing a green electric guitar on a stage with a light background"
-          },
-          "r12": {
-            "alt": "Person in a colourful crochet sweater sitting next to an orange-framed round mirror"
-          },
-          "r13": {
-            "alt": "Person looking at their reflection in an orange-framed round mirror against a white background"
-          },
-          "r14": {
-            "alt": "Overhead portrait of a person in a pinstripe suit and green-lensed glasses"
+          "retrato-editorial-14": {
+            "alt": "Person standing before a blue and purple graffiti mural at dusk"
           }
         }
       },
@@ -246,26 +263,47 @@
           "Photography"
         ],
         "media": {
-          "m01": {
-            "alt": "Artist with arms raised facing the crowd at a night concert, in black and white"
+          "musica-en-directo-01": {
+            "alt": "Performer seen from behind with arms raised before a concert crowd at night, in black and white"
           },
-          "m02": {
-            "alt": "Artist on a stage lit with yellow light and smoke, reaching one arm out"
+          "musica-en-directo-02": {
+            "alt": "Performer on a yellow-lit smoky stage reaching an arm forward"
           },
-          "m03": {
-            "alt": "Artist singing into a microphone surrounded by raised audience hands"
+          "musica-en-directo-03": {
+            "alt": "Singer with a microphone surrounded by raised hands"
           },
-          "m04": {
-            "alt": "Artist singing outdoors into a microphone under a blue sky"
+          "musica-en-directo-04": {
+            "alt": "Singer outdoors with a microphone against a blue sky"
           },
-          "m05": {
-            "alt": "Artist singing on an outdoor stage against a blue sky with clouds"
+          "musica-en-directo-05": {
+            "alt": "Singer on an outdoor stage against a blue sky with clouds"
           },
-          "m06": {
-            "alt": "Crowd at an outdoor night concert with lit phone screens and crowd surfing"
+          "musica-en-directo-06": {
+            "alt": "Musician on stage with a guitar under stage lighting"
           },
-          "m07": {
-            "alt": "Performer with a microphone in front of a crowd with raised hands, in black and white"
+          "musica-en-directo-07": {
+            "alt": "Crowd and stage during a live performance"
+          },
+          "musica-en-directo-08": {
+            "alt": "Performer and crowd at a concert, in black and white"
+          },
+          "musica-en-directo-09": {
+            "alt": "Performer facing the crowd at a night concert"
+          },
+          "musica-en-directo-10": {
+            "alt": "Portrait of a musician on stage"
+          },
+          "musica-en-directo-11": {
+            "alt": "Musician on stage with concert lighting"
+          },
+          "musica-en-directo-12": {
+            "alt": "Wide view of a concert and audience"
+          },
+          "musica-en-directo-13": {
+            "alt": "Stage and audience during a live set"
+          },
+          "musica-en-directo-14": {
+            "alt": "Singer with a microphone before a crowd with raised hands, in black and white"
           }
         }
       },
@@ -277,32 +315,76 @@
           "Photography"
         ],
         "media": {
-          "c01": {
-            "alt": "Historic building illuminated in purple at night with a crowd in the street"
+          "calle-documental-01": {
+            "alt": "Historic building lit in lilac at night with a crowd in the street"
           },
-          "c02": {
-            "alt": "Crowd holding signs at a night demonstration in front of a purple-lit building"
+          "calle-documental-02": {
+            "alt": "Night street with people gathered in front of a lit building"
           },
-          "c03": {
+          "calle-documental-03": {
+            "alt": "Crowd with signs at a night demonstration in front of a violet-lit building"
+          },
+          "calle-documental-04": {
+            "alt": "Documentary portrait in the street"
+          },
+          "calle-documental-05": {
+            "alt": "Street scene in daylight"
+          },
+          "calle-documental-06": {
             "alt": "Glass facade reflecting a classical dome, in black and white"
           },
-          "c04": {
-            "alt": "Courtyard with aligned potted plants and their shadows seen through an iron gate"
+          "calle-documental-07": {
+            "alt": "Courtyard with potted plants and shadows seen through a grille"
           },
-          "c05": {
-            "alt": "Person seen from behind with arms raised at a night gathering"
+          "calle-documental-08": {
+            "alt": "Person seen from behind leaning on a wall with pink graffiti under a clear sky"
+          }
+        }
+      },
+      "estudio-editorial": {
+        "title": "Studio & Editorial",
+        "description": "Studio portrait and editorial photography.",
+        "format": "Photography · Studio · Editorial",
+        "roles": [
+          "Photography"
+        ],
+        "media": {
+          "estudio-editorial-01": {
+            "alt": "Person in a crochet jumper seated beside an orange ring mirror"
           },
-          "c06": {
-            "alt": "Urban park with a person standing arms outstretched and a child running on the grass"
+          "estudio-editorial-02": {
+            "alt": "Person looking at their reflection in an orange ring mirror on a white background"
           },
-          "c07": {
-            "alt": "Person seen from behind leaning on a wall of pink graffiti under a clear sky"
+          "estudio-editorial-03": {
+            "alt": "Musician playing an electric guitar on a pale studio backdrop"
+          },
+          "estudio-editorial-04": {
+            "alt": "Studio portrait on a pale background"
+          },
+          "estudio-editorial-05": {
+            "alt": "Close studio portrait"
+          },
+          "estudio-editorial-06": {
+            "alt": "High-angle portrait of a person in a pinstripe suit and green-tinted glasses"
+          },
+          "estudio-editorial-07": {
+            "alt": "Three-quarter studio portrait"
+          },
+          "estudio-editorial-08": {
+            "alt": "Full-length studio portrait"
+          },
+          "estudio-editorial-09": {
+            "alt": "Editorial studio portrait"
+          },
+          "estudio-editorial-10": {
+            "alt": "Editorial studio portrait, second frame"
           }
         }
       }
     }
   },
   "Profile": {
+    "statement": "Journalist and audiovisual communications professional. Reporting, interviews and visual storytelling.",
     "aboutPreview": "Journalist and audiovisual communications professional. Reporting, interviews and event coverage.",
     "aboutContinuation": "Photography, production and digital communications as part of the same practice.",
     "bio": "Educated at Universidad Rey Juan Carlos. She works in television reporting, interviews and event coverage, with a parallel practice in photography and digital communications.",
@@ -326,10 +408,12 @@
   "CurrentPositions": {
     "items": {
       "grupo-cadena-media": {
+        "company": "Grupo Cadena Media",
         "role": "TV Reporter",
         "period": "2024 — Present"
       },
       "urjcmun": {
+        "company": "URJCmun",
         "role": "Deputy Director for Social Media",
         "period": "2026"
       }
@@ -511,5 +595,16 @@
     "title": "Page not found",
     "body": "The page you are looking for does not exist or has moved.",
     "home": "Back home"
+  },
+  "WorkRail": {
+    "label": "Stories",
+    "back": "Work",
+    "prev": "Previous story",
+    "next": "Next story",
+    "archive": "Archive 74",
+    "musica-en-directo": "Music",
+    "calle-documental": "Street",
+    "estudio-editorial": "Studio",
+    "retrato-editorial": "Portrait"
   }
 }

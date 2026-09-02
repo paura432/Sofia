@@ -41,6 +41,7 @@ export async function ContactBlock({
           >
             {page ? t("contactPageTitle") : t("title")}
           </Heading>
+          {page ? <p className="contact-page-lead">{t("contactPageText")}</p> : null}
         </div>
         <div className="contact-copy">
           <a className="contact-email" href={`mailto:${siteConfig.email}`}>

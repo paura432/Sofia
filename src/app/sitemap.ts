@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { pendingVerification } from "@/content/pending-verification";
 import { getPublishedProjects } from "@/content/projects";
-import type { Locale, PublicAppPathname } from "@/i18n/routing";
+import { locales, type PublicAppPathname } from "@/i18n/routing";
 import { localizedUrl, projectUrl } from "@/lib/metadata";
 
 const routes: PublicAppPathname[] = [
@@ -12,7 +12,14 @@ const routes: PublicAppPathname[] = [
   "/experience",
   "/contact",
 ];
-const locales: Locale[] = ["es", "en"];
+
+function languageMap(make: (locale: (typeof locales)[number]) => string) {
+  return {
+    es: make("es"),
+    en: make("en"),
+    ru: make("ru"),
+  };
+}
 
 // ponytail: build-time guard so the internal audit registry stays wired in
 if (pendingVerification.length < 1) {
@@ -27,10 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: route === "/" ? 1 : 0.7,
       alternates: {
-        languages: {
-          es: localizedUrl(route, "es"),
-          en: localizedUrl(route, "en"),
-        },
+        languages: languageMap((item) => localizedUrl(route, item)),
       },
     })),
   );
@@ -42,10 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.6,
       alternates: {
-        languages: {
-          es: projectUrl(project.slug, "es"),
-          en: projectUrl(project.slug, "en"),
-        },
+        languages: languageMap((item) => projectUrl(project.slug, item)),
       },
     })),
   );

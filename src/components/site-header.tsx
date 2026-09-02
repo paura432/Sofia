@@ -3,35 +3,16 @@ import { getTranslations } from "next-intl/server";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { MobileNav } from "@/components/mobile-nav";
 import { NavLink } from "@/components/nav-link";
-import { WorkNav } from "@/components/work-nav";
-import { getPublishedProjects } from "@/content/projects";
 import { siteConfig } from "@/content/profile";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 
 export async function SiteHeader() {
-  const [t, projectsText] = await Promise.all([
-    getTranslations("Navigation"),
-    getTranslations("Projects"),
-  ]);
+  const t = await getTranslations("Navigation");
   const localeLabels: Record<Locale, string> = {
     es: t("localeNames.es"),
     en: t("localeNames.en"),
-  };
-  const stories = getPublishedProjects().map((project) => ({
-    slug: project.slug,
-    title: (
-      projectsText.raw(`items.${project.translationKey}`) as { title: string }
-    ).title,
-  }));
-  const workCopy = {
-    work: t("items.work"),
-    indexLabel: t("workMenu.index"),
-    storiesLabel: t("workMenu.stories"),
-    allWork: t("workMenu.allWork"),
-    photography: t("workMenu.photography"),
-    trajectory: t("workMenu.trajectory"),
-    viewAll: t("workMenu.viewAll"),
+    ru: t("localeNames.ru"),
   };
 
   return (
@@ -46,8 +27,9 @@ export async function SiteHeader() {
 
         <nav className="desktop-nav" aria-label={t("sectionsAria")}>
           <div className="desktop-nav-links">
-            <WorkNav copy={workCopy} stories={stories} variant="desktop" />
+            <NavLink href="/work" label={t("items.work")} />
             <NavLink href="/about" label={t("items.about")} />
+            <NavLink href="/experience" label={t("items.experience")} />
             <NavLink href="/contact" label={t("items.contact")} />
           </div>
           <LocaleSwitcher
@@ -62,9 +44,10 @@ export async function SiteHeader() {
           linksAriaLabel={t("mobileAria")}
           links={
             <>
-              <WorkNav copy={workCopy} stories={stories} variant="mobile" />
+              <NavLink href="/work" index="01" label={t("items.work")} />
               <NavLink href="/about" index="02" label={t("items.about")} />
-              <NavLink href="/contact" index="03" label={t("items.contact")} />
+              <NavLink href="/experience" index="03" label={t("items.experience")} />
+              <NavLink href="/contact" index="04" label={t("items.contact")} />
             </>
           }
           localeSwitcher={

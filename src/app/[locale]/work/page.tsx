@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
+import { ExperienceHighlights } from "@/components/experience-highlights";
 import { AnimatedLine } from "@/components/motion/animated-line";
 import { MotionLink } from "@/components/motion/motion-link";
-import { Reveal } from "@/components/motion/reveal";
-import { StaggerGroup } from "@/components/motion/stagger";
+import { PhotoArchive } from "@/components/photo-archive";
 import { ProjectIndex } from "@/components/project-index";
-import { featuredWork } from "@/content/experience";
+import { Reveal } from "@/components/motion/reveal";
+import { SectionHeading } from "@/components/section-heading";
+import { experience } from "@/content/experience";
+import { currentPositionIds } from "@/content/profile";
 import {
   buildProjectMediaCopy,
   getPublishedProjects,
@@ -34,6 +37,10 @@ type ProjectCopy = {
   media?: Record<string, MediaCopy>;
 };
 
+const reportingItems = currentPositionIds
+  .map((id) => experience.find((item) => item.id === id))
+  .filter((item): item is (typeof experience)[number] => Boolean(item));
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -51,7 +58,7 @@ export async function generateMetadata({
 }
 
 export default async function WorkPage() {
-  const [t, experience, projectsText] = await Promise.all([
+  const [t, experienceText, projectsText] = await Promise.all([
     getTranslations("Work"),
     getTranslations("Experience"),
     getTranslations("Projects"),
@@ -72,14 +79,44 @@ export default async function WorkPage() {
         </Reveal>
       </section>
 
-      <section
-        aria-label={publishedProjects.length > 0 ? t("aria") : t("fallbackAria")}
-        className="section"
-        data-portfolio-pieces={publishedProjects.length}
-        id="fotografia"
-      >
-        <div className="container">
-          {publishedProjects.length > 0 ? (
+      <section className="section" aria-labelledby="work-reporting" id="trayectoria">
+        <div className="container editorial-grid">
+          <SectionHeading
+            eyebrow={t("reportingEyebrow")}
+            id="work-reporting"
+            text={t("reportingText")}
+            title={t("reportingTitle")}
+          />
+          <div>
+            <ExperienceHighlights
+              copyFor={(id) =>
+                experienceText.raw(`items.${id}`) as ExperienceCopy
+              }
+              items={reportingItems}
+              numberFor={(index) => String(index + 1).padStart(2, "0")}
+              responsibilityKeysFor={(item) => item.responsibilityKeys.slice(0, 3)}
+            />
+            <div className="work-section-footer">
+              <MotionLink href="/experience">{t("viewExperience")}</MotionLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {publishedProjects.length > 0 ? (
+        <section
+          aria-labelledby="work-photography"
+          className="section"
+          data-portfolio-pieces={publishedProjects.length}
+          id="fotografia"
+        >
+          <div className="container editorial-grid">
+            <SectionHeading
+              eyebrow={t("photographyEyebrow")}
+              id="work-photography"
+              text={t("photographyText")}
+              title={t("photographyTitle")}
+            />
             <ProjectIndex
               copyFor={(project) => {
                 const raw = projectsText.raw(
@@ -102,52 +139,30 @@ export default async function WorkPage() {
               projects={publishedProjects}
               viewLabel={projectsText("viewProject")}
             />
-          ) : (
-            <div className="case-list">
-              <AnimatedLine tone="strong" />
-              {featuredWork.map((item) => {
-                const copy = experience.raw(`items.${item.id}`) as ExperienceCopy;
+          </div>
+        </section>
+      ) : null}
 
-                return (
-                  <StaggerGroup
-                    as="article"
-                    className="case-row"
-                    key={item.id}
-                    step={30}
-                  >
-                    <p className="case-number">{item.number}</p>
-                    <div>
-                      <p className="case-discipline">{copy.discipline}</p>
-                      <h2>{item.company}</h2>
-                      <p className="case-role">
-                        {copy.role} · {copy.period}
-                      </p>
-                      {copy.context ? (
-                        <p className="company-context">{copy.context}</p>
-                      ) : null}
-                    </div>
-                    <div>
-                      <p>{copy.summary}</p>
-                      <ul>
-                        {item.responsibilityKeys.map((key) => (
-                          <li key={`${item.id}-${key}`}>
-                            {copy.responsibilities[key]}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </StaggerGroup>
-                );
-              })}
-            </div>
-          )}
-          {publishedProjects.length === 0 ? (
-            <div className="work-fallback-footer">
-              <MotionLink href="/experience">{t("viewExperience")}</MotionLink>
-            </div>
-          ) : null}
-        </div>
-      </section>
+      {publishedProjects.length > 0 ? (
+        <>
+          <div className="container work-archive-separator">
+            <AnimatedLine tone="strong" />
+          </div>
+          <PhotoArchive
+            closeLabel={t("archiveClose")}
+            groups={[
+              { id: "musica", title: t("archiveMusica") },
+              { id: "retrato", title: t("archiveRetrato") },
+              { id: "estudio", title: t("archiveEstudio") },
+              { id: "calle", title: t("archiveCalle") },
+            ]}
+            nextLabel={t("archiveNext")}
+            prevLabel={t("archivePrev")}
+            title={t("archiveTitle")}
+            totalLabel={t("archiveTotal")}
+          />
+        </>
+      ) : null}
     </main>
   );
 }

@@ -1,0 +1,610 @@
+{
+  "Metadata": {
+    "siteTitle": "Sofía Chernikova — журналист и телерепортёр",
+    "siteDescription": "Журналист и телерепортёр в Мадриде. Репортаж, интервью, аудиовизуальное освещение, фотография и цифровая коммуникация.",
+    "ogAlt": "Профессиональное портфолио Sofía Chernikova",
+    "personRole": "Журналист и телерепортёр",
+    "pages": {
+      "home": {
+        "title": "Sofía Chernikova — журналист и телерепортёр",
+        "description": "Журналист и телерепортёр в Мадриде. Репортаж, интервью, аудиовизуальное освещение, фотография и цифровая коммуникация."
+      },
+      "work": {
+        "title": "Работы",
+        "description": "Работы Sofía Chernikova: телерепортаж, интервью, фотография и цифровая коммуникация."
+      },
+      "about": {
+        "title": "Профиль",
+        "description": "Профиль Sofía Chernikova, журналиста и специалиста по аудиовизуальной коммуникации, выпускницы Universidad Rey Juan Carlos."
+      },
+      "experience": {
+        "title": "Опыт",
+        "description": "Профессиональный путь Sofía Chernikova: телевидение, цифровая и корпоративная коммуникация, фотография."
+      },
+      "contact": {
+        "title": "Контакты",
+        "description": "Профессиональный контакт Sofía Chernikova для СМИ, съёмок, аудиовизуального производства и коммуникации."
+      },
+      "notFound": {
+        "title": "Страница не найдена",
+        "description": "Запрошенная страница не существует или изменила адрес."
+      }
+    }
+  },
+  "Navigation": {
+    "skip": "Перейти к содержанию",
+    "homeAria": "На главную",
+    "sectionsAria": "Основная навигация",
+    "menu": "Меню",
+    "mobileSummary": "Меню",
+    "mobileAria": "Мобильная навигация",
+    "closeMenu": "Закрыть меню",
+    "opensInNewTab": "(откроется в новой вкладке)",
+    "localeAria": "Сменить язык",
+    "localeNames": {
+      "es": "Español",
+      "en": "English",
+      "ru": "Русский"
+    },
+    "items": {
+      "work": "Работы",
+      "about": "Профиль",
+      "experience": "Опыт",
+      "contact": "Контакты"
+    }
+  },
+  "Hero": {
+    "dateline": "МАДРИД — 2026",
+    "role": "Журналист · телерепортёр · аудиовизуальная коммуникация",
+    "availability": "Открыта к новым проектам · Мадрид",
+    "location": "Мадрид, Испания",
+    "headline": "Журналистика, изображение и цифровой нарратив.",
+    "summary": "Репортаж, интервью и визуальное производство из Мадрида.",
+    "actionsAria": "Основные действия",
+    "viewWork": "Смотреть работы",
+    "contact": "Контакты"
+  },
+  "Home": {
+    "currentEyebrow": "Путь",
+    "currentTitle": "Сейчас и недавно",
+    "practiceEyebrow": "Практика",
+    "practiceTitle": "Три связанные области",
+    "practiceText": "Репортаж, интервью и освещение событий; фотография и монтаж; тексты и цифровой контент.",
+    "aboutEyebrow": "Профиль",
+    "profileEyebrow": "Профиль",
+    "viewExperience": "Смотреть опыт",
+    "moreAbout": "Читать дальше"
+  },
+  "Work": {
+    "pageEyebrow": "Работы",
+    "pageTitle": "Истории",
+    "pageText": "Репортаж, коммуникации и визуальный нарратив с опубликованными материалами.",
+    "reportingEyebrow": "Карьера",
+    "reportingTitle": "Телевидение и коммуникации",
+    "reportingText": "Освещение, интервью и производство для медиа и организаций.",
+    "photographyEyebrow": "Фотография",
+    "photographyTitle": "Редакционные серии",
+    "photographyText": "Опубликованная визуальная работа в четырёх историях и расширенном архиве.",
+    "aria": "Избранные работы",
+    "fallbackAria": "Избранный профессиональный опыт",
+    "viewExperience": "Смотреть полный опыт",
+    "archiveTitle": "Фотоархив",
+    "archiveTotal": "74 изображения",
+    "archiveMusica": "Музыка",
+    "archiveRetrato": "Портрет",
+    "archiveEstudio": "Студия",
+    "archiveCalle": "Улица",
+    "archiveClose": "Закрыть",
+    "archiveImageLabel": "{group}, изображение {index}",
+    "archivePrev": "Назад",
+    "archiveNext": "Далее"
+  },
+  "Projects": {
+    "featuredEyebrow": "Главное",
+    "selectedEyebrow": "Избранные работы",
+    "allEyebrow": "Портфолио",
+    "viewProject": "Смотреть историю",
+    "viewRelatedWork": "Смотреть {count, plural, one {# проект} few {# проекта} many {# проектов} other {# проекта}}",
+    "viewOriginal": "Смотреть оригинал",
+    "nextProject": "Следующая история",
+    "prevProject": "Предыдущая история",
+    "moreFromSeries": "Ещё из этой серии",
+    "moreFromSeriesCount": "{count} изображений",
+    "viewerPrev": "Назад",
+    "viewerNext": "Далее",
+    "viewerClose": "Закрыть",
+    "projectNavAria": "Навигация между историями",
+    "context": "Контекст",
+    "role": "Роль",
+    "credits": "Титки",
+    "publication": "Результат / публикация",
+    "organisation": "Организация",
+    "year": "Год",
+    "format": "Формат",
+    "location": "Место",
+    "play": "Смотреть",
+    "reelEyebrow": "Репортёрский рил",
+    "reelMeta": "Телерепортаж · Интервью · Освещение событий",
+    "transcript": "Расшифровка",
+    "locations": {
+      "madrid": "Мадрид",
+      "tenerife": "Тенерифе",
+      "torrejon-de-ardoz": "Торрехон-де-Ардос",
+      "valencia": "Валенсия"
+    },
+    "disciplines": {
+      "reporting": "Репортаж",
+      "interview": "Интервью",
+      "video": "Видео",
+      "photography": "Фотография",
+      "communication": "Коммуникация"
+    },
+    "items": {
+      "reporter-reel": {
+        "title": "Репортёрский рил",
+        "description": "Подборка сюжетов, интервью и репортажей.",
+        "dek": "Репортаж с премьер, фестивалей и пресс-конференций.",
+        "format": "Телевидение · Рил",
+        "context": "Освещение событий, интервью и полевой репортаж.",
+        "roles": [
+          "Репортаж с премьер, фестивалей и пресс-конференций.",
+          "Интервью с артистами, актёрами и публичными фигурами."
+        ]
+      },
+      "grupo-cadena-media": {
+        "title": "Телерепортёр — Grupo Cadena Media",
+        "description": "Освещение событий и пресс-конференций, интервью и информационные сюжеты для телевидения.",
+        "dek": "Телерепортаж в Grupo Cadena Media.",
+        "format": "Телевидение · Репортаж",
+        "context": "Региональное телевидение и информационный контент.",
+        "roles": [
+          "Освещение событий и пресс-конференций.",
+          "Интервью с артистами, актёрами и публичными фигурами.",
+          "Репортаж с мероприятий и премьер.",
+          "Написание сценариев и информационных сюжетов."
+        ]
+      },
+      "urjcmun": {
+        "title": "URJCmun — коммуникации и социальные сети",
+        "description": "Работа в команде коммуникаций Модели ООН URJC с 2022 года.",
+        "dek": "Deputy Director for Social Media в 2026 году.",
+        "format": "Коммуникации · Социальные сети",
+        "context": "Модель ООН Universidad Rey Juan Carlos.",
+        "roles": [
+          "Стратегия и ведение социальных сетей.",
+          "Редакционное планирование, тексты и метрики.",
+          "Графический и аудиовизуальный контент.",
+          "Координация репортёров и авторов.",
+          "Освещение событий и контент в реальном времени."
+        ]
+      },
+      "annie-bonnie": {
+        "title": "Annie Bonnie — корпоративные коммуникации",
+        "description": "Цифровой и корпоративный контент: тексты, видео, события и редакционное планирование.",
+        "format": "Корпоративные коммуникации · Аудиовизуал",
+        "context": "Консалтинг по коммуникации, стратегии, контент-маркетингу и PR.",
+        "roles": [
+          "Тексты для корпоративного блога и сайта.",
+          "Съёмка и монтаж видео.",
+          "Контент для социальных сетей и внутренней коммуникации.",
+          "Поддержка организации и освещения событий.",
+          "Поддержка контент-стратегии и редакционного календаря."
+        ]
+      },
+      "isocero": {
+        "title": "Isocero — портретная фотография",
+        "description": "Портретная фотография в туристической среде: съёмки, профессиональная обработка и работа с клиентами.",
+        "format": "Фотография · Портрет",
+        "context": "Студия портретной фотографии в отелях и туристических пространствах.",
+        "roles": [
+          "Съёмки с семьями и детьми.",
+          "Профессиональная обработка изображений.",
+          "Продажа персонализированных фотографий.",
+          "Работа с клиентами и консультации."
+        ]
+      },
+      "retrato-editorial": {
+        "title": "Портрет и editorial",
+        "description": "Портретная и editorial-фотография в городе, студии и на улице.",
+        "format": "Фотография · Портрет · Editorial",
+        "roles": [
+          "Фотография"
+        ],
+        "media": {
+          "retrato-editorial-01": {
+            "alt": "Two people in black t-shirts before a graffiti wall under concrete structures"
+          },
+          "retrato-editorial-02": {
+            "alt": "Urban portrait beside concrete architecture"
+          },
+          "retrato-editorial-03": {
+            "alt": "Two people in black t-shirts in front of industrial windows with graffiti"
+          },
+          "retrato-editorial-04": {
+            "alt": "Portrait in an urban location"
+          },
+          "retrato-editorial-05": {
+            "alt": "Editorial portrait in an urban setting"
+          },
+          "retrato-editorial-06": {
+            "alt": "Person seated on an urban terrace with plants and string lights"
+          },
+          "retrato-editorial-07": {
+            "alt": "Smiling person on a yellow chair against a wall with neon lights"
+          },
+          "retrato-editorial-08": {
+            "alt": "Portrait of a man in a red t-shirt with hands on his head"
+          },
+          "retrato-editorial-09": {
+            "alt": "Person seated on a bench in front of a colourful graffiti mural"
+          },
+          "retrato-editorial-10": {
+            "alt": "Portrait in a red-lit interior"
+          },
+          "retrato-editorial-11": {
+            "alt": "Person seated in a red-lit space with a neon sign"
+          },
+          "retrato-editorial-12": {
+            "alt": "Man crouching on a cobblestone sculpture in an urban square"
+          },
+          "retrato-editorial-13": {
+            "alt": "Close portrait of a person with sunglasses and a green checked shirt"
+          },
+          "retrato-editorial-14": {
+            "alt": "Person standing before a blue and purple graffiti mural at dusk"
+          }
+        }
+      },
+      "musica-en-directo": {
+        "title": "Музыка вживую",
+        "description": "Концертная фотография живых выступлений.",
+        "format": "Фотография · Концерты",
+        "roles": [
+          "Фотография"
+        ],
+        "media": {
+          "musica-en-directo-01": {
+            "alt": "Performer seen from behind with arms raised before a concert crowd at night, in black and white"
+          },
+          "musica-en-directo-02": {
+            "alt": "Performer on a yellow-lit smoky stage reaching an arm forward"
+          },
+          "musica-en-directo-03": {
+            "alt": "Singer with a microphone surrounded by raised hands"
+          },
+          "musica-en-directo-04": {
+            "alt": "Singer outdoors with a microphone against a blue sky"
+          },
+          "musica-en-directo-05": {
+            "alt": "Singer on an outdoor stage against a blue sky with clouds"
+          },
+          "musica-en-directo-06": {
+            "alt": "Musician on stage with a guitar under stage lighting"
+          },
+          "musica-en-directo-07": {
+            "alt": "Crowd and stage during a live performance"
+          },
+          "musica-en-directo-08": {
+            "alt": "Performer and crowd at a concert, in black and white"
+          },
+          "musica-en-directo-09": {
+            "alt": "Performer facing the crowd at a night concert"
+          },
+          "musica-en-directo-10": {
+            "alt": "Portrait of a musician on stage"
+          },
+          "musica-en-directo-11": {
+            "alt": "Musician on stage with concert lighting"
+          },
+          "musica-en-directo-12": {
+            "alt": "Wide view of a concert and audience"
+          },
+          "musica-en-directo-13": {
+            "alt": "Stage and audience during a live set"
+          },
+          "musica-en-directo-14": {
+            "alt": "Singer with a microphone before a crowd with raised hands, in black and white"
+          }
+        }
+      },
+      "calle-documental": {
+        "title": "Улица и документалка",
+        "description": "Документальная и уличная фотография.",
+        "format": "Фотография · Документалка",
+        "roles": [
+          "Фотография"
+        ],
+        "media": {
+          "calle-documental-01": {
+            "alt": "Historic building lit in lilac at night with a crowd in the street"
+          },
+          "calle-documental-02": {
+            "alt": "Night street with people gathered in front of a lit building"
+          },
+          "calle-documental-03": {
+            "alt": "Crowd with signs at a night demonstration in front of a violet-lit building"
+          },
+          "calle-documental-04": {
+            "alt": "Documentary portrait in the street"
+          },
+          "calle-documental-05": {
+            "alt": "Street scene in daylight"
+          },
+          "calle-documental-06": {
+            "alt": "Glass facade reflecting a classical dome, in black and white"
+          },
+          "calle-documental-07": {
+            "alt": "Courtyard with potted plants and shadows seen through a grille"
+          },
+          "calle-documental-08": {
+            "alt": "Person seen from behind leaning on a wall with pink graffiti under a clear sky"
+          }
+        }
+      },
+      "estudio-editorial": {
+        "title": "Студия и editorial",
+        "description": "Студийный портрет и editorial-съёмка.",
+        "format": "Фотография · Студия · Editorial",
+        "roles": [
+          "Фотография"
+        ],
+        "media": {
+          "estudio-editorial-01": {
+            "alt": "Person in a crochet jumper seated beside an orange ring mirror"
+          },
+          "estudio-editorial-02": {
+            "alt": "Person looking at their reflection in an orange ring mirror on a white background"
+          },
+          "estudio-editorial-03": {
+            "alt": "Musician playing an electric guitar on a pale studio backdrop"
+          },
+          "estudio-editorial-04": {
+            "alt": "Studio portrait on a pale background"
+          },
+          "estudio-editorial-05": {
+            "alt": "Close studio portrait"
+          },
+          "estudio-editorial-06": {
+            "alt": "High-angle portrait of a person in a pinstripe suit and green-tinted glasses"
+          },
+          "estudio-editorial-07": {
+            "alt": "Three-quarter studio portrait"
+          },
+          "estudio-editorial-08": {
+            "alt": "Full-length studio portrait"
+          },
+          "estudio-editorial-09": {
+            "alt": "Editorial studio portrait"
+          },
+          "estudio-editorial-10": {
+            "alt": "Editorial studio portrait, second frame"
+          }
+        }
+      }
+    }
+  },
+  "Profile": {
+    "statement": "Журналист и специалист по аудиовизуальной коммуникации. Репортаж, интервью и визуальный нарратив.",
+    "aboutPreview": "Журналист и специалист по аудиовизуальной коммуникации. Репортаж, интервью и освещение событий.",
+    "aboutContinuation": "Фотография, продакшн и цифровая коммуникация — часть той же практики.",
+    "bio": "Образование — Universidad Rey Juan Carlos. Работает в телерепортаже, интервью и освещении событий, параллельно занимается фотографией и цифровой коммуникацией.",
+    "aboutTrajectory": "С 2024 года работает телерепортёром.",
+    "interests": "Работа в кадре, визуальный нарратив и контент для СМИ, аудиовизуальное производство и культурные проекты.",
+    "aboutPageEyebrow": "Профиль",
+    "aboutHeroTitle": "Телерепортёр.",
+    "portraitAlt": "Портрет Sofía Chernikova",
+    "bioEyebrow": "Био",
+    "bioTitle": "Практика и образование.",
+    "educationEyebrow": "Образование",
+    "educationTitle": "Образование",
+    "languagesEyebrow": "Языки",
+    "languagesTitle": "Языки",
+    "toolsEyebrow": "Инструменты",
+    "toolsTitle": "Инструменты и процесс",
+    "experienceEyebrow": "Сейчас",
+    "experienceTitle": "Сейчас и недавно",
+    "viewFullExperience": "Смотреть полный опыт ↗"
+  },
+  "CurrentPositions": {
+    "items": {
+      "grupo-cadena-media": {
+        "company": "Grupo Cadena Media",
+        "role": "Телерепортёр",
+        "period": "2024 — настоящее время"
+      },
+      "urjcmun": {
+        "company": "URJCmun",
+        "role": "Deputy Director for Social Media",
+        "period": "2026"
+      }
+    }
+  },
+  "Practices": {
+    "items": [
+      {
+        "number": "01",
+        "code": "REPORTING",
+        "title": "Телевидение, интервью и репортаж",
+        "items": [
+          "Репортаж",
+          "Интервью",
+          "Освещение",
+          "Сценарий",
+          "Работа в кадре"
+        ],
+        "metadata": "REPORTING · INTERVIEWS · VIDEO"
+      },
+      {
+        "number": "02",
+        "code": "VISUAL",
+        "title": "Фотография и визуальный нарратив",
+        "items": [
+          "Фотография",
+          "Видео",
+          "Монтаж",
+          "Визуальный нарратив"
+        ],
+        "metadata": "PHOTO · VIDEO · EDITING"
+      },
+      {
+        "number": "03",
+        "code": "COMMUNICATION",
+        "title": "Контент и цифровая коммуникация",
+        "items": [
+          "Социальные сети",
+          "Контент",
+          "Стратегия",
+          "Копирайтинг",
+          "Координация"
+        ],
+        "metadata": "SOCIAL · CONTENT · STRATEGY"
+      }
+    ]
+  },
+  "Experience": {
+    "pageEyebrow": "Опыт",
+    "pageTitle": "Профессиональный путь",
+    "pageText": "Телерепортаж, цифровая коммуникация, корпоративная коммуникация и фотография.",
+    "responsibilitiesLabel": "Обязанности",
+    "progressionLabel": "Роли в URJCmun",
+    "items": {
+      "grupo-cadena-media": {
+        "role": "Телерепортёр",
+        "discipline": "Репортаж · Телевидение · Интервью",
+        "period": "2024 — настоящее время",
+        "summary": "Освещение событий и пресс-конференций, интервью, сценарии и информационные сюжеты для телевидения.",
+        "context": "Региональное телевидение и информационный контент.",
+        "responsibilities": {
+          "eventCoverage": "Освещение событий и пресс-конференций.",
+          "interviews": "Интервью с артистами, актёрами и публичными фигурами.",
+          "eventReporting": "Репортаж с мероприятий и премьер.",
+          "scripts": "Написание сценариев и информационных сюжетов."
+        }
+      },
+      "urjcmun": {
+        "role": "Deputy Director for Social Media",
+        "discipline": "Коммуникации · Социальные сети · Лидерство",
+        "period": "2022 — 2026",
+        "summary": "Путь в команде коммуникаций URJCmun с 2022 года: разные роли, затем в 2026 — Deputy Director for Social Media.",
+        "context": "Модель ООН Universidad Rey Juan Carlos, включая издание URJCmun TEEN.",
+        "progression": {
+          "communicationTeam": "Communication Team",
+          "cameraOperator": "Camera Operator",
+          "delegate": "Delegate",
+          "deputyDirector": "Deputy Director for Social Media"
+        },
+        "responsibilities": {
+          "socialStrategy": "Стратегия и ведение социальных сетей.",
+          "copyMetrics": "Редакционное планирование, тексты и метрики.",
+          "graphicDesign": "Графический и аудиовизуальный контент.",
+          "teamCoordination": "Координация репортёров и авторов.",
+          "liveContent": "Освещение событий и контент в реальном времени.",
+          "digitalIdentity": "Цифровая идентичность и позиционирование."
+        }
+      },
+      "annie-bonnie": {
+        "role": "Корпоративные коммуникации",
+        "discipline": "Контент · Аудиовизуал · Коммуникация",
+        "period": "2025 — 2026",
+        "summary": "Цифровой и корпоративный контент: тексты, видеопродакшн, события и редакционное планирование.",
+        "context": "Консалтинг по коммуникации, стратегии, контент-маркетингу и PR.",
+        "responsibilities": {
+          "writing": "Тексты для корпоративного блога и сайта.",
+          "videoProduction": "Съёмка и монтаж видео.",
+          "socialContent": "Контент для социальных сетей и внутренней коммуникации.",
+          "events": "Поддержка организации и освещения событий.",
+          "stakeholders": "Коммуникация с аудиторией и партнёрами.",
+          "calendar": "Поддержка контент-стратегии и редакционного календаря."
+        }
+      },
+      "isocero": {
+        "role": "Фотограф в отелях",
+        "discipline": "Фотография · Портрет · Работа с клиентами",
+        "period": "2023",
+        "summary": "Портретная фотография в туристической среде: съёмки, профессиональная обработка и прямая работа с клиентами.",
+        "context": "Студия портретной фотографии в отелях и туристических пространствах.",
+        "responsibilities": {
+          "photoSessions": "Съёмки с семьями и детьми.",
+          "editing": "Профессиональная обработка изображений.",
+          "sales": "Продажа персонализированных фотографий.",
+          "clientService": "Работа с клиентами и консультации.",
+          "fastPaced": "Работа в динамичной клиентской среде."
+        }
+      }
+    }
+  },
+  "Education": {
+    "items": [
+      {
+        "institution": "Universidad Rey Juan Carlos",
+        "program": "Журналистика и аудиовизуальная коммуникация",
+        "period": "2021 — 2026"
+      }
+    ]
+  },
+  "Languages": {
+    "eyebrow": "Языки",
+    "items": [
+      {
+        "code": "ES",
+        "name": "Испанский",
+        "level": "Родной"
+      },
+      {
+        "code": "RU",
+        "name": "Русский",
+        "level": "Родной"
+      },
+      {
+        "code": "EN",
+        "name": "Английский",
+        "level": "Продвинутый"
+      },
+      {
+        "code": "VAL",
+        "name": "Валенсийский",
+        "level": "Продвинутый"
+      },
+      {
+        "code": "IT",
+        "name": "Итальянский",
+        "level": "Средний"
+      }
+    ]
+  },
+  "Contact": {
+    "eyebrow": "Контакты",
+    "title": "Поговорим?",
+    "body": "Телевидение, репортаж, аудиовизуальное производство и коммуникация.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "base": "База",
+    "baseValue": "Мадрид",
+    "contactPageEyebrow": "Контакты",
+    "contactPageTitle": "Поговорим?",
+    "contactPageText": "Email или LinkedIn."
+  },
+  "Footer": {
+    "cue": "Поговорим?",
+    "line": "Журналистика, изображение и цифровой нарратив.",
+    "location": "Мадрид",
+    "copyright": "© 2026 Sofía Chernikova"
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "Страница не найдена",
+    "body": "Страницы нет или она сменила адрес.",
+    "home": "На главную"
+  },
+  "WorkRail": {
+    "label": "Истории",
+    "back": "Работа",
+    "prev": "Предыдущая история",
+    "next": "Следующая история",
+    "archive": "Архив 74",
+    "musica-en-directo": "Музыка",
+    "calle-documental": "Улица",
+    "estudio-editorial": "Студия",
+    "retrato-editorial": "Портрет"
+  }
+}

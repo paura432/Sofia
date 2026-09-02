@@ -2,13 +2,18 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 
+import { MoreFromSeries } from "@/components/more-from-series";
 import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
 import {
+  getAdditionalPhotosForProject,
+} from "@/content/photo-archive-data";
+import {
   buildProjectMediaCopy,
   getNextProject,
+  getPrevProject,
   getProjectBySlug,
   getPublishedProjects,
   publishableYear,
@@ -110,6 +115,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const heroMedia = project.cover ?? project.media?.find((media) => media.featured);
   const detailMedia = project.media?.filter((media) => media.id !== heroMedia?.id);
   const nextProject = getNextProject(project.slug);
+  const prevProject = getPrevProject(project.slug);
+  const additionalPhotos = getAdditionalPhotosForProject(project.slug);
 
   const published = getPublishedProjects();
   const projectIndex = published.findIndex((item) => item.slug === project.slug);
@@ -181,6 +188,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               copy={mediaCopy}
               media={detailMedia}
               playLabel={t("play")}
+              rhythm={
+                project.slug === "calle-documental"
+                  ? "sparse"
+                  : project.slug === "estudio-editorial"
+                    ? "studio"
+                    : "default"
+              }
               transcriptLabel={t("transcript")}
             />
           </div>
@@ -219,34 +233,67 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
       ) : null}
 
-      {nextProject ? (
-        <section className="section next-project" aria-labelledby="next-project">
-          <div className="container">
-            <p className="eyebrow">{t("nextProject")}</p>
-            <Link
-              className="next-project-link"
-              href={{
-                pathname: "/work/[slug]",
-                params: { slug: nextProject.slug },
-              }}
-            >
-              <span className="next-project-discipline">
-                {disciplineLabel(nextProject, t)}
-              </span>
-              <h2 className="display-section" id="next-project">
-                {
-                  (
-                    t.raw(
-                      `items.${nextProject.translationKey}`,
-                    ) as ProjectCopy
-                  ).title
-                }
-              </h2>
-              <span className="next-project-year">
-                {publishableYear(nextProject.year) ?? null}{" "}
-                <span aria-hidden="true">→</span>
-              </span>
-            </Link>
+      {additionalPhotos.length > 0 ? (
+        <MoreFromSeries
+          closeLabel={t("viewerClose")}
+          countLabel={t("moreFromSeriesCount", {
+            count: additionalPhotos.length,
+          })}
+          items={additionalPhotos}
+          nextLabel={t("viewerNext")}
+          prevLabel={t("viewerPrev")}
+          title={t("moreFromSeries")}
+        />
+      ) : null}
+
+      {prevProject || nextProject ? (
+        <section
+          aria-label={t("projectNavAria")}
+          className="section project-nav-footer"
+        >
+          <div className="container project-nav-footer-inner">
+            {prevProject ? (
+              <Link
+                className="project-nav-link project-nav-prev"
+                href={{
+                  pathname: "/work/[slug]",
+                  params: { slug: prevProject.slug },
+                }}
+              >
+                <span className="eyebrow">{t("prevProject")}</span>
+                <span className="project-nav-title">
+                  {
+                    (
+                      t.raw(
+                        `items.${prevProject.translationKey}`,
+                      ) as ProjectCopy
+                    ).title
+                  }
+                </span>
+              </Link>
+            ) : (
+              <span />
+            )}
+            {nextProject ? (
+              <Link
+                className="project-nav-link project-nav-next"
+                href={{
+                  pathname: "/work/[slug]",
+                  params: { slug: nextProject.slug },
+                }}
+              >
+                <span className="eyebrow">{t("nextProject")}</span>
+                <span className="project-nav-title">
+                  {
+                    (
+                      t.raw(
+                        `items.${nextProject.translationKey}`,
+                      ) as ProjectCopy
+                    ).title
+                  }
+                </span>
+              </Link>
+            ) : null}
           </div>
         </section>
       ) : null}

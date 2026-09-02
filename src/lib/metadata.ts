@@ -14,32 +14,39 @@ export const localizedPathnames: Record<
   "/": {
     es: "/",
     en: "/en",
+    ru: "/ru",
   },
   "/work": {
     es: "/trabajo",
     en: "/en/work",
+    ru: "/ru/rabota",
   },
   "/work/[slug]": {
     es: "/trabajo/[slug]",
     en: "/en/work/[slug]",
+    ru: "/ru/rabota/[slug]",
   },
   "/about": {
     es: "/sobre-mi",
     en: "/en/about",
+    ru: "/ru/o-sebe",
   },
   "/experience": {
     es: "/experiencia",
     en: "/en/experience",
+    ru: "/ru/opyt",
   },
   "/contact": {
     es: "/contacto",
     en: "/en/contact",
+    ru: "/ru/kontakty",
   },
 };
 
 const ogLocales: Record<Locale, string> = {
   es: "es_ES",
   en: "en_GB",
+  ru: "ru_RU",
 };
 
 function absoluteUrl(path: string) {
@@ -55,7 +62,7 @@ export function localizedUrl(pathname: PublicAppPathname, locale: Locale) {
 }
 
 export function projectPath(slug: string, locale: Locale) {
-  return locale === "es" ? `/trabajo/${slug}` : `/en/work/${slug}`;
+  return localizedPathnames["/work/[slug]"][locale].replace("[slug]", slug);
 }
 
 export function projectUrl(slug: string, locale: Locale) {
@@ -68,6 +75,7 @@ export function projectAlternates(slug: string) {
     languages: {
       es: projectUrl(slug, "es"),
       en: projectUrl(slug, "en"),
+      ru: projectUrl(slug, "ru"),
       "x-default": projectUrl(slug, "es"),
     },
   };
@@ -79,6 +87,7 @@ export function alternatesFor(pathname: PublicAppPathname) {
     languages: {
       es: localizedUrl(pathname, "es"),
       en: localizedUrl(pathname, "en"),
+      ru: localizedUrl(pathname, "ru"),
       "x-default": localizedUrl(pathname, "es"),
     },
   };
@@ -106,7 +115,7 @@ export function pageMetadata({
   const pageUrl = canonicalPath ?? localizedPath(pathname, locale);
   const og =
     ogImage ??
-    `${localizedPath("/", locale) === "/" ? "" : "/en"}/opengraph-image`;
+    `${locale === "es" ? "" : `/${locale}`}/opengraph-image`;
 
   return {
     metadataBase: new URL(SITE_URL),

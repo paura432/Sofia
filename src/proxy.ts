@@ -14,9 +14,12 @@ const legacyRedirects = new Map([
 ]);
 
 export default function proxy(request: NextRequest) {
-  const isDevMediaPath = ["/dev/media", "/es/dev/media", "/en/dev/media"].includes(
-    request.nextUrl.pathname,
-  );
+  const isDevMediaPath = [
+    "/dev/media",
+    "/es/dev/media",
+    "/en/dev/media",
+    "/ru/dev/media",
+  ].includes(request.nextUrl.pathname);
 
   if (isDevMediaPath && process.env.NODE_ENV !== "development") {
     return new NextResponse(null, { status: 404 });

@@ -10,7 +10,9 @@ export async function Hero() {
     <section className="hero section section-first" aria-labelledby="hero-title">
       <div className="container hero-grid">
         <HeroEntrance className="hero-meta" delay={0}>
+          <p className="hero-dateline">{t("dateline")}</p>
           <p>{t("role")}</p>
+          <p className="hero-location">{t("location")}</p>
         </HeroEntrance>
         <div className="hero-copy">
           <HeroEntrance

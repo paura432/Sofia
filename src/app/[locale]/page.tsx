@@ -8,7 +8,6 @@ import { AnimatedLine } from "@/components/motion/animated-line";
 import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
 import { StaggerGroup } from "@/components/motion/stagger";
-import { PracticeIndex } from "@/components/practice-index";
 import { ReporterReel } from "@/components/reporter-reel";
 import { SectionHeading } from "@/components/section-heading";
 import { SelectedProjects } from "@/components/selected-projects";
@@ -156,11 +155,7 @@ export default async function Home() {
                     {positions(`items.${id}.period`)}
                   </p>
                   <div>
-                    <h3>
-                      {id === "grupo-cadena-media"
-                        ? "Grupo Cadena Media"
-                        : "URJCmun"}
-                    </h3>
+                    <h3>{positions(`items.${id}.company`)}</h3>
                     <p>{positions(`items.${id}.role`)}</p>
                   </div>
                 </div>
@@ -170,25 +165,12 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="practice">
-        <div className="container editorial-grid">
-          <SectionHeading
-            eyebrow={home("practiceEyebrow")}
-            id="practice"
-            text={home("practiceText")}
-            title={home("practiceTitle")}
-          />
-          <PracticeIndex />
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="about-preview">
-        <Reveal className="container about-preview">
-          <p className="eyebrow">{home("aboutEyebrow")}</p>
-          <h2 className="display-section" id="about-preview">
-            {profile("aboutPreview")}
-          </h2>
-          <p>{profile("aboutContinuation")}</p>
+      <section className="section" aria-labelledby="profile-brief">
+        <Reveal className="container profile-brief">
+          <p className="eyebrow">{home("profileEyebrow")}</p>
+          <p className="display-section profile-statement" id="profile-brief">
+            {profile("statement")}
+          </p>
           <div className="split-heading-links">
             <MotionLink href="/experience">{home("viewExperience")}</MotionLink>
             <MotionLink href="/about">{home("moreAbout")}</MotionLink>

@@ -116,7 +116,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 40;
+  z-index: var(--z-scroll-progress);
   height: 2px;
   transform-origin: left;
   background: var(--accent);

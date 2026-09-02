@@ -32,7 +32,10 @@ type NavLinkProps = {
 
 export function NavLink({ href, label, index }: NavLinkProps) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive =
+    href === "/work"
+      ? pathname === "/work" || pathname.startsWith("/work/")
+      : pathname === href;
   const closeMobileNav = useContext(MobileNavCloseContext);
 
   return (

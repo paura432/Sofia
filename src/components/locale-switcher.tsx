@@ -19,6 +19,7 @@ type LocaleSwitcherProps = {
 const shortLabels: Record<Locale, string> = {
   es: "ES",
   en: "EN",
+  ru: "RU",
 };
 
 export function LocaleSwitcher({ ariaLabel, labels }: LocaleSwitcherProps) {

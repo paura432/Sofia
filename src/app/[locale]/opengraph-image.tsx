@@ -1,9 +1,9 @@
 import { ImageResponse } from "next/og";
 
-import type { Locale } from "@/i18n/routing";
 import { brandColors } from "@/lib/brand-colors";
 import enMessages from "../../../messages/en.json";
 import esMessages from "../../../messages/es.json";
+import ruMessages from "../../../messages/ru.json";
 
 export const size = {
   width: 1200,
@@ -18,7 +18,12 @@ type ImageProps = {
 
 export default async function Image({ params }: ImageProps) {
   const { locale } = await params;
-  const messages = locale === "en" ? enMessages : esMessages;
+  const catalog: Record<string, typeof esMessages> = {
+    es: esMessages,
+    en: enMessages,
+    ru: ruMessages,
+  };
+  const messages = catalog[locale] ?? esMessages;
   const hero = messages.Hero;
 
   return new ImageResponse(

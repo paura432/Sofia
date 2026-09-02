@@ -16,19 +16,22 @@ export async function SiteFooter() {
         <AnimatedLine tone="strong" />
       </div>
       <div className="container site-footer-inner">
-        <p>
-          {t("location")}
-          <span aria-hidden="true"> · </span>
-          <a
-            href={siteConfig.linkedin}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            {contact("linkedin")}
-            <span aria-hidden="true"> ↗</span>
-            <span className="sr-only">{navigation("opensInNewTab")}</span>
-          </a>
-        </p>
+        <div className="site-footer-primary">
+          <p className="footer-tagline">{t("line")}</p>
+          <p className="site-footer-contact">
+            {t("location")}
+            <span aria-hidden="true"> · </span>
+            <a
+              href={siteConfig.linkedin}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {contact("linkedin")}
+              <span aria-hidden="true"> ↗</span>
+              <span className="sr-only">{navigation("opensInNewTab")}</span>
+            </a>
+          </p>
+        </div>
         <p className="footer-copy">{t("copyright")}</p>
       </div>
     </footer>
