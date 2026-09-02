@@ -151,10 +151,10 @@ export default async function WorkPage() {
           <PhotoArchive
             closeLabel={t("archiveClose")}
             groups={[
-              { id: "musica", title: t("archiveMusica") },
-              { id: "retrato", title: t("archiveRetrato") },
-              { id: "estudio", title: t("archiveEstudio") },
-              { id: "calle", title: t("archiveCalle") },
+              { id: "musica", title: t("archiveMusicaFull") },
+              { id: "retrato", title: t("archiveRetratoFull") },
+              { id: "estudio", title: t("archiveEstudioFull") },
+              { id: "calle", title: t("archiveCalleFull") },
             ]}
             nextLabel={t("archiveNext")}
             prevLabel={t("archivePrev")}
