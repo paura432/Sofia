@@ -2,10 +2,16 @@ import type { MetadataRoute } from "next";
 
 import { pendingVerification } from "@/content/pending-verification";
 import { getPublishedProjects } from "@/content/projects";
-import type { AppPathname, Locale } from "@/i18n/routing";
+import type { Locale, PublicAppPathname } from "@/i18n/routing";
 import { localizedUrl, projectUrl } from "@/lib/metadata";
 
-const routes: AppPathname[] = ["/", "/work", "/about", "/experience", "/contact"];
+const routes: PublicAppPathname[] = [
+  "/",
+  "/work",
+  "/about",
+  "/experience",
+  "/contact",
+];
 const locales: Locale[] = ["es", "en"];
 
 // ponytail: build-time guard so the internal audit registry stays wired in

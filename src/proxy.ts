@@ -14,6 +14,20 @@ const legacyRedirects = new Map([
 ]);
 
 export default function proxy(request: NextRequest) {
+  const isDevMediaPath = ["/dev/media", "/es/dev/media", "/en/dev/media"].includes(
+    request.nextUrl.pathname,
+  );
+
+  if (isDevMediaPath && process.env.NODE_ENV !== "development") {
+    return new NextResponse(null, { status: 404 });
+  }
+
+  if (request.nextUrl.pathname === "/dev/media") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/en/dev/media";
+    return NextResponse.rewrite(url);
+  }
+
   const redirectTarget = legacyRedirects.get(request.nextUrl.pathname);
 
   if (redirectTarget) {

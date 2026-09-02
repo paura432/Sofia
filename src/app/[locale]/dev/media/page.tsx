@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 
 import { MediaCaption } from "@/components/media-caption";
-import type { AspectRatio, MediaLayout } from "@/content/projects";
-import { getMediaSizes } from "@/content/projects";
+import { ProjectMediaLayout } from "@/components/project-media-layout";
+import {
+  buildProjectMediaCopy,
+  getMediaSizes,
+  projects,
+  publishableYear,
+  type AspectRatio,
+  type MediaCopy,
+  type MediaLayout,
+  type PortfolioProject,
+  type ProjectMedia,
+} from "@/content/projects";
 
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
@@ -27,14 +38,36 @@ const layouts: MediaLayout[] = [
   "triptych",
 ];
 
+const draftPhotoSlugs = [
+  "retrato-editorial",
+  "musica-en-directo",
+  "calle-documental",
+] as const;
+
 const longTitle = {
   es: "Cobertura del pleno extraordinario sobre la financiación autonómica y sus consecuencias para los ayuntamientos del sur de Madrid",
   en: "Coverage of the extraordinary plenary on regional funding and its consequences for municipalities in southern Madrid",
 } as const;
 
+type ProjectCopy = {
+  title: string;
+  format?: string;
+  media?: Record<string, MediaCopy>;
+};
+
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
+
+function isDraftProject(
+  project: PortfolioProject | undefined,
+): project is PortfolioProject {
+  return Boolean(project && project.published === false);
+}
+
+function isProjectMedia(media: ProjectMedia | undefined): media is ProjectMedia {
+  return Boolean(media);
+}
 
 function Block({
   ratio,
@@ -66,7 +99,11 @@ export default async function DevMediaLab({ params }: PageProps) {
   }
 
   const { locale } = await params;
+  const projectsText = await getTranslations("Projects");
   const title = locale === "en" ? longTitle.en : longTitle.es;
+  const draftPhotos = draftPhotoSlugs
+    .map((slug) => projects.find((project) => project.slug === slug))
+    .filter(isDraftProject);
 
   return (
     <main className="dev-media" id="main">
@@ -203,6 +240,41 @@ export default async function DevMediaLab({ params }: PageProps) {
         <div className="container">
           <p className="eyebrow">Títulos largos</p>
           <h2 className="display-section">{title}</h2>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <p className="eyebrow">Draft Photo QA</p>
+          {draftPhotos.map((project) => {
+            const copy = projectsText.raw(
+              `items.${project.translationKey}`,
+            ) as ProjectCopy;
+            const mediaCopy = buildProjectMediaCopy(project, copy.media);
+            const media = [project.cover, ...(project.media ?? [])].filter(
+              isProjectMedia,
+            );
+
+            return (
+              <article className="selected-project" key={project.id}>
+                <div className="featured-project-meta">
+                  <span>
+                    <span>{copy.format ?? project.discipline.join(" · ")}</span>
+                    <h2 className="display-section">{copy.title}</h2>
+                  </span>
+                  <span>
+                    {publishableYear(project.year) ?? "Draft"} ·{" "}
+                    {project.rights?.verified ? "Rights OK" : "Rights pending"}
+                  </span>
+                </div>
+                <ProjectMediaLayout
+                  copy={mediaCopy}
+                  media={media}
+                  playLabel={projectsText("play")}
+                />
+              </article>
+            );
+          })}
         </div>
       </section>
     </main>

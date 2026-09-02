@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 
 import { siteConfig } from "@/content/profile";
-import type { AppPathname, Locale } from "@/i18n/routing";
+import type { Locale, PublicAppPathname } from "@/i18n/routing";
 
 export const SITE_URL = "https://sofiachernikova.vercel.app";
 /** Preview: false. Launch: set NEXT_PUBLIC_IS_PUBLIC=true in Vercel. */
 export const IS_PUBLIC = process.env.NEXT_PUBLIC_IS_PUBLIC === "true";
 
-export const localizedPathnames: Record<AppPathname, Record<Locale, string>> = {
+export const localizedPathnames: Record<
+  PublicAppPathname,
+  Record<Locale, string>
+> = {
   "/": {
     es: "/",
     en: "/en",
@@ -43,11 +46,11 @@ function absoluteUrl(path: string) {
   return new URL(path, SITE_URL).toString();
 }
 
-export function localizedPath(pathname: AppPathname, locale: Locale) {
+export function localizedPath(pathname: PublicAppPathname, locale: Locale) {
   return localizedPathnames[pathname][locale];
 }
 
-export function localizedUrl(pathname: AppPathname, locale: Locale) {
+export function localizedUrl(pathname: PublicAppPathname, locale: Locale) {
   return absoluteUrl(localizedPath(pathname, locale));
 }
 
@@ -70,7 +73,7 @@ export function projectAlternates(slug: string) {
   };
 }
 
-export function alternatesFor(pathname: AppPathname) {
+export function alternatesFor(pathname: PublicAppPathname) {
   return {
     canonical: localizedPath(pathname, "es"),
     languages: {
@@ -92,7 +95,7 @@ export function pageMetadata({
   ogImage,
 }: {
   locale: Locale;
-  pathname: AppPathname;
+  pathname: PublicAppPathname;
   canonicalPath?: string;
   alternateLanguages?: Record<string, string>;
   title: string;

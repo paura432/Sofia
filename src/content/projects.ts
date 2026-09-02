@@ -199,7 +199,7 @@ export const projects: PortfolioProject[] = [
     year: "Pendiente",
     discipline: ["photography"],
     order: 10,
-    published: true,
+    published: false,
     translationKey: "retrato-editorial",
     rights: {
       verified: false,
@@ -398,7 +398,7 @@ export const projects: PortfolioProject[] = [
     year: "Pendiente",
     discipline: ["photography"],
     order: 11,
-    published: true,
+    published: false,
     translationKey: "musica-en-directo",
     rights: {
       verified: false,
@@ -492,7 +492,7 @@ export const projects: PortfolioProject[] = [
     year: "Pendiente",
     discipline: ["photography"],
     order: 12,
-    published: true,
+    published: false,
     translationKey: "calle-documental",
     rights: {
       verified: false,

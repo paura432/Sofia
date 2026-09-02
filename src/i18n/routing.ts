@@ -27,12 +27,17 @@ export const routing = defineRouting({
       es: "/contacto",
       en: "/contact",
     },
+    "/dev/media": {
+      es: "/dev/media",
+      en: "/dev/media",
+    },
   },
 });
 
 export type Locale = (typeof routing.locales)[number];
 export type AppPathname = keyof typeof routing.pathnames;
-export type StaticAppPathname = Exclude<AppPathname, "/work/[slug]">;
+export type PublicAppPathname = Exclude<AppPathname, "/dev/media">;
+export type StaticAppPathname = Exclude<PublicAppPathname, "/work/[slug]">;
 
 export const locales = routing.locales;
 export const defaultLocale = routing.defaultLocale;
