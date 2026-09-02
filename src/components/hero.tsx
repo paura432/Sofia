@@ -20,12 +20,12 @@ export async function Hero() {
           </HeroEntrance>
           <HeroEntrance
             as="h1"
-            className="display-hero"
+            className="display-hero hero-name"
             delay={130}
             id="hero-title"
           >
-            <span>Sofía</span>
-            <span>Chernikova</span>
+            <span className="hero-name-line">Sofía</span>
+            <span className="hero-name-line">Chernikova</span>
           </HeroEntrance>
           <HeroEntrance as="p" className="hero-headline" delay={190}>
             {t("headline")}

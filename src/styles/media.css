@@ -62,7 +62,8 @@
    Cada layout reclama su fracción; no hay page builder ni celdas vacías. */
 .project-media-layout {
   display: grid;
-  gap: var(--space-md) var(--space-sm);
+  row-gap: var(--space-lg);
+  column-gap: var(--space-sm);
 }
 
 .project-media-item,
@@ -72,7 +73,7 @@
 
 .portfolio-image {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   margin: 0;
 }
 
@@ -110,8 +111,16 @@
 
 .portfolio-image img {
   width: 100%;
-  height: auto;
   display: block;
+}
+
+/* `fill` reserva ratio en el padre; la imagen ocupa el frame completo. */
+.portfolio-image-inner img {
+  height: 100%;
+}
+
+.portfolio-image-frame > img {
+  height: auto;
 }
 
 /* Sin min-height: el `aspect-ratio` reserva el espacio exacto y evitamos que
@@ -205,11 +214,11 @@
 .media-caption {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: 4px 10px;
-  max-width: 52ch;
+  gap: 4px 12px;
+  max-width: 48ch;
   color: var(--muted);
-  font-size: 0.8rem;
-  line-height: 1.5;
+  font-size: 0.78rem;
+  line-height: 1.55;
 }
 
 .media-caption-index {
@@ -412,16 +421,26 @@
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .project-media-item.full,
-  .project-media-item.wide {
+  .project-media-item.full {
     grid-column: 1 / -1;
   }
 
+  /* Wide respira lateralmente frente a full: mismo grid, menos ancho útil. */
+  .project-media-item.wide {
+    grid-column: 2 / 6;
+  }
+
   .project-media-item.half,
-  .project-media-item.pair,
-  .project-media-item.portrait,
-  .project-media-item.triptych {
+  .project-media-item.pair {
     grid-column: span 3;
+  }
+
+  .project-media-item.portrait {
+    grid-column: span 3;
+  }
+
+  .project-media-item.triptych {
+    grid-column: span 2;
   }
 }
 
@@ -466,8 +485,11 @@
 }
 
 @media (min-width: 1024px) {
-  .project-media-item.triptych,
   .project-media-item.portrait {
+    grid-column: 3 / span 2;
+  }
+
+  .project-media-item.triptych {
     grid-column: span 2;
   }
 }
