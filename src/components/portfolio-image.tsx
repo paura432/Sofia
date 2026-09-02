@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import type { ReactNode } from "react";
 
 import { MediaCaption } from "@/components/media-caption";
 import { MediaReveal } from "@/components/motion/media-reveal";
+import { useProjectPhotoOpen } from "@/components/project-photo-viewer";
 import {
   focalPointStyle,
   getMediaSizes,
@@ -40,6 +43,8 @@ export function PortfolioImage({
   sizes,
   reveal = true,
 }: PortfolioImageProps) {
+  const openPhoto = useProjectPhotoOpen(media.id);
+
   if (!media.src || (!media.decorative && !alt)) {
     return null;
   }
@@ -56,6 +61,34 @@ export function PortfolioImage({
     : ({ placeholder: "empty" } as const);
 
   const resolvedAlt = media.decorative ? "" : alt;
+  const canOpen =
+    Boolean(openPhoto) &&
+    !media.decorative &&
+    Boolean(media.src && media.width && media.height);
+
+  const frame = (inner: ReactNode) =>
+    reveal ? (
+      <MediaReveal className="portfolio-image-frame">{inner}</MediaReveal>
+    ) : (
+      <div className="portfolio-image-frame">{inner}</div>
+    );
+
+  const frameInner = (inner: ReactNode) => {
+    const revealed = frame(inner);
+    if (!canOpen || !openPhoto) return revealed;
+    return (
+      <button
+        aria-haspopup="dialog"
+        aria-label={resolvedAlt || undefined}
+        className="portfolio-image-open"
+        onClick={openPhoto}
+        type="button"
+      >
+        {revealed}
+      </button>
+    );
+  };
+
   const shared = {
     preload,
     sizes: sizes ?? getMediaSizes(media.layout),
@@ -89,17 +122,10 @@ export function PortfolioImage({
     />
   );
 
-  const frame = (inner: ReactNode) =>
-    reveal ? (
-      <MediaReveal className="portfolio-image-frame">{inner}</MediaReveal>
-    ) : (
-      <div className="portfolio-image-frame">{inner}</div>
-    );
-
   if (fill) {
     return (
       <figure className={figureClassName}>
-        {frame(
+        {frameInner(
           <div className="portfolio-image-inner" style={{ aspectRatio: ratio }}>
             {withMobileArtDirection(
               <Image alt={resolvedAlt} fill {...shared} />,
@@ -117,18 +143,7 @@ export function PortfolioImage({
 
   return (
     <figure className={figureClassName}>
-      {reveal ? (
-        <MediaReveal>
-          {withMobileArtDirection(
-            <Image
-              alt={resolvedAlt}
-              height={media.height}
-              width={media.width}
-              {...shared}
-            />,
-          )}
-        </MediaReveal>
-      ) : (
+      {frameInner(
         withMobileArtDirection(
           <Image
             alt={resolvedAlt}
@@ -136,7 +151,7 @@ export function PortfolioImage({
             width={media.width}
             {...shared}
           />,
-        )
+        ),
       )}
       {figcaption}
     </figure>

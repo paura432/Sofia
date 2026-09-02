@@ -7,6 +7,8 @@ import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
+import { ProjectPhotoViewer } from "@/components/project-photo-viewer";
+import type { PhotoViewerItem } from "@/components/photo-viewer-dialog";
 import {
   getAdditionalPhotosForProject,
 } from "@/content/photo-archive-data";
@@ -19,6 +21,7 @@ import {
   publishableYear,
   type MediaCopy,
   type PortfolioProject,
+  type ProjectMedia,
 } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
@@ -90,6 +93,40 @@ export async function generateMetadata({
   });
 }
 
+function essayViewerItems(
+  pieces: (ProjectMedia | undefined)[],
+  copy: Record<string, MediaCopy>,
+  fallback: string,
+): PhotoViewerItem[] {
+  const items: PhotoViewerItem[] = [];
+  const seen = new Set<string>();
+
+  for (const media of pieces) {
+    if (
+      !media ||
+      media.type !== "image" ||
+      !media.src ||
+      !media.width ||
+      !media.height ||
+      seen.has(media.id)
+    ) {
+      continue;
+    }
+    seen.add(media.id);
+    const piece = copy[media.id];
+    items.push({
+      id: media.id,
+      src: media.src,
+      width: media.width,
+      height: media.height,
+      blurDataURL: media.blurDataURL,
+      label: piece?.alt || piece?.caption || fallback,
+    });
+  }
+
+  return items;
+}
+
 function disciplineLabel(project: PortfolioProject, t: (key: string) => string) {
   return project.discipline
     .map((discipline) => t(`disciplines.${discipline}`))
@@ -128,9 +165,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     locationLabel,
     visibleYear,
   ].filter(Boolean) as string[];
+  const essayPhotos = essayViewerItems(
+    [heroMedia, ...(detailMedia ?? [])],
+    mediaCopy,
+    copy.title,
+  );
 
   return (
     <main id="main">
+      <ProjectPhotoViewer
+        closeLabel={t("viewerClose")}
+        items={essayPhotos}
+        nextLabel={t("viewerNext")}
+        prevLabel={t("viewerPrev")}
+      >
       <ScrollProgress />
       <section className="page-hero project-detail-hero section section-first">
         <Reveal className="container page-hero-inner">
@@ -297,6 +345,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </section>
       ) : null}
+      </ProjectPhotoViewer>
     </main>
   );
 }
