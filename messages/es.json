@@ -14,7 +14,7 @@
         "description": "Trabajo de Sofía Chernikova: reporterismo de televisión, entrevistas, fotografía y comunicación digital."
       },
       "about": {
-        "title": "Sobre mí",
+        "title": "Perfil",
         "description": "Perfil de Sofía Chernikova, periodista y comunicadora audiovisual formada en la Universidad Rey Juan Carlos."
       },
       "experience": {
@@ -47,21 +47,29 @@
     },
     "items": {
       "work": "Trabajo",
-      "about": "Sobre mí",
+      "about": "Perfil",
       "experience": "Experiencia",
       "contact": "Contacto"
+    },
+    "workMenu": {
+      "index": "Índice",
+      "stories": "Historias",
+      "allWork": "Todo el trabajo",
+      "photography": "Fotografía",
+      "trajectory": "Trayectoria",
+      "viewAll": "Ver todo"
     }
   },
   "Hero": {
     "dateline": "MADRID — 2026",
     "role": "Periodista · Reportera TV · Comunicadora audiovisual",
-    "availability": "Disponible para nuevas oportunidades",
+    "availability": "Disponible para nuevos proyectos · Madrid",
     "location": "Madrid, España",
     "headline": "Periodismo, imagen y narrativa digital.",
-    "summary": "Reporterismo, entrevistas y cobertura audiovisual desde Madrid, combinando trabajo en cámara, producción visual y comunicación digital.",
+    "summary": "Reporterismo, entrevistas y producción visual desde Madrid.",
     "actionsAria": "Acciones principales",
     "viewWork": "Ver trabajo",
-    "contact": "Contactar"
+    "contact": "Contacto"
   },
   "Home": {
     "currentEyebrow": "Trayectoria",
@@ -69,14 +77,14 @@
     "practiceEyebrow": "Práctica",
     "practiceTitle": "Tres áreas conectadas",
     "practiceText": "Reporta, entrevista y cubre eventos; fotografía y edita; escribe y produce contenido digital.",
-    "aboutEyebrow": "Sobre mí",
+    "aboutEyebrow": "Perfil",
     "viewExperience": "Ver experiencia",
     "moreAbout": "Leer más"
   },
   "Work": {
     "pageEyebrow": "Trabajo",
-    "pageTitle": "Trabajo seleccionado",
-    "pageText": "Reporterismo de televisión, comunicación digital, contenido corporativo y fotografía.",
+    "pageTitle": "Historias",
+    "pageText": "Cobertura, entrevistas y narrativa visual.",
     "aria": "Trabajo seleccionado",
     "fallbackAria": "Experiencia profesional seleccionada",
     "viewExperience": "Ver trayectoria completa"
@@ -85,7 +93,7 @@
     "featuredEyebrow": "Destacado",
     "selectedEyebrow": "Trabajo seleccionado",
     "allEyebrow": "Portfolio",
-    "viewProject": "Ver proyecto",
+    "viewProject": "Ver historia",
     "viewRelatedWork": "Ver {count, plural, one {# proyecto} other {# proyectos}}",
     "viewOriginal": "Ver original",
     "nextProject": "Siguiente historia",
@@ -108,11 +116,11 @@
       "valencia": "Valencia"
     },
     "disciplines": {
-      "reporting": "REPORTING",
-      "interview": "ENTREVISTA",
-      "video": "VÍDEO",
-      "photography": "FOTOGRAFÍA",
-      "communication": "COMUNICACIÓN"
+      "reporting": "Reporting",
+      "interview": "Entrevista",
+      "video": "Vídeo",
+      "photography": "Fotografía",
+      "communication": "Comunicación"
     },
     "items": {
       "reporter-reel": {
@@ -255,6 +263,9 @@
           },
           "m06": {
             "alt": "Multitud en concierto nocturno con pantallas de móvil encendidas y crowd surfing"
+          },
+          "m07": {
+            "alt": "Artista con micrófono ante el público y las manos levantadas, en blanco y negro"
           }
         }
       },
@@ -277,22 +288,31 @@
           },
           "c04": {
             "alt": "Patio con macetas alineadas y sus sombras visto a través de una verja"
+          },
+          "c05": {
+            "alt": "Persona de espaldas con los brazos en alto en una concentración nocturna"
+          },
+          "c06": {
+            "alt": "Parque urbano con una persona de brazos abiertos y un niño corriendo sobre el césped"
+          },
+          "c07": {
+            "alt": "Persona de espaldas apoyada en un muro con grafiti rosa bajo un cielo despejado"
           }
         }
       }
     }
   },
   "Profile": {
-    "aboutPreview": "Periodista y comunicadora audiovisual especializada en reporterismo, entrevistas y cobertura de eventos.",
-    "aboutContinuation": "Con experiencia complementaria en fotografía, producción de contenidos y comunicación digital.",
-    "bio": "Sofía Chernikova es periodista y comunicadora audiovisual formada en la Universidad Rey Juan Carlos. Su trayectoria combina reporterismo televisivo, entrevistas, cobertura de eventos, fotografía y comunicación digital.",
-    "aboutTrajectory": "Desde 2024 trabaja como reportera de televisión, realizando coberturas, entrevistas y piezas informativas. Paralelamente, ha desarrollado experiencia en comunicación digital, producción de contenidos, dirección de Social Media, comunicación corporativa y fotografía profesional.",
-    "interests": "Su perfil combina trabajo en cámara, narrativa visual y estrategia de contenidos, con especial interés por medios, producción audiovisual y proyectos culturales.",
-    "aboutPageEyebrow": "Sobre mí",
-    "aboutHeroTitle": "Reportera de televisión en Madrid.",
+    "aboutPreview": "Periodista y comunicadora audiovisual. Reporterismo, entrevistas y cobertura de eventos.",
+    "aboutContinuation": "Fotografía, producción y comunicación digital como parte del mismo oficio.",
+    "bio": "Formada en la Universidad Rey Juan Carlos. Trabaja en reporterismo televisivo, entrevistas y cobertura de eventos, con una práctica paralela en fotografía y comunicación digital.",
+    "aboutTrajectory": "Desde 2024 trabaja como reportera de televisión.",
+    "interests": "Cámara, narrativa visual y contenidos para medios, producción audiovisual y proyectos culturales.",
+    "aboutPageEyebrow": "Perfil",
+    "aboutHeroTitle": "Reportera de televisión.",
     "portraitAlt": "Retrato de Sofía Chernikova",
     "bioEyebrow": "Bio",
-    "bioTitle": "Periodismo y comunicación audiovisual desde Madrid.",
+    "bioTitle": "Oficio y formación.",
     "educationEyebrow": "Formación",
     "educationTitle": "Educación",
     "languagesEyebrow": "Idiomas",
@@ -470,18 +490,21 @@
   },
   "Contact": {
     "eyebrow": "Contacto",
-    "title": "Para medios, proyectos y colaboraciones.",
-    "body": "Disponible para oportunidades profesionales en televisión, reporterismo, producción audiovisual, fotografía y comunicación digital.",
+    "title": "¿Hablamos?",
+    "body": "Para televisión, reporterismo, producción audiovisual y comunicación.",
     "email": "Email",
     "linkedin": "LinkedIn",
     "base": "Base",
+    "baseValue": "Madrid",
     "contactPageEyebrow": "Contacto",
-    "contactPageTitle": "Hablemos",
-    "contactPageText": "Para consultas profesionales, medios, coberturas o proyectos audiovisuales, puedes contactar por email o LinkedIn."
+    "contactPageTitle": "¿Hablamos?",
+    "contactPageText": "Email o LinkedIn."
   },
   "Footer": {
+    "cue": "¿Hablamos?",
     "line": "Periodismo, imagen y narrativa digital.",
-    "location": "Madrid, España"
+    "location": "Madrid",
+    "copyright": "© 2026 Sofía Chernikova"
   },
   "NotFound": {
     "eyebrow": "404",

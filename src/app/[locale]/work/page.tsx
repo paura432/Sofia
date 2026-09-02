@@ -76,6 +76,7 @@ export default async function WorkPage() {
         aria-label={publishedProjects.length > 0 ? t("aria") : t("fallbackAria")}
         className="section"
         data-portfolio-pieces={publishedProjects.length}
+        id="fotografia"
       >
         <div className="container">
           {publishedProjects.length > 0 ? (

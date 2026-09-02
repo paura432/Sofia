@@ -77,7 +77,7 @@ export default async function Home() {
     ? (reporterReel.media?.find((media) => media.type === "video") ??
       reporterReel.cover)
     : undefined;
-  const selectedProjects = getSelectedProjects(3);
+  const selectedProjects = getSelectedProjects(2);
   const disciplineLabel = (project: PortfolioProject) =>
     project.discipline
       .map((discipline) => projectsText(`disciplines.${discipline}`))
@@ -125,6 +125,21 @@ export default async function Home() {
         />
       ) : null}
 
+      <SelectedProjects
+        eyebrow={projectsText("selectedEyebrow")}
+        playLabel={projectsText("play")}
+        projects={selectedProjects.map((project, index) => ({
+          discipline: disciplineLabel(project),
+          media: project.cover ?? project.media?.[0],
+          mediaCopy: resolvedMediaCopy(project),
+          number: String(index + 1).padStart(2, "0"),
+          organisation: project.organisation,
+          slug: project.slug,
+          title: projectCopy(project).title,
+        }))}
+        viewLabel={projectsText("viewProject")}
+      />
+
       <section className="section" aria-labelledby="current">
         <div className="container editorial-grid">
           <SectionHeading
@@ -166,21 +181,6 @@ export default async function Home() {
           <PracticeIndex />
         </div>
       </section>
-
-      <SelectedProjects
-        eyebrow={projectsText("selectedEyebrow")}
-        playLabel={projectsText("play")}
-        projects={selectedProjects.map((project, index) => ({
-          discipline: disciplineLabel(project),
-          media: project.cover ?? project.media?.[0],
-          mediaCopy: resolvedMediaCopy(project),
-          number: String(index + 1).padStart(2, "0"),
-          organisation: project.organisation,
-          slug: project.slug,
-          title: projectCopy(project).title,
-        }))}
-        viewLabel={projectsText("viewProject")}
-      />
 
       <section className="section" aria-labelledby="about-preview">
         <Reveal className="container about-preview">

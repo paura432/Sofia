@@ -14,7 +14,7 @@
         "description": "Sofía Chernikova's work: television reporting, interviews, photography and digital communications."
       },
       "about": {
-        "title": "About",
+        "title": "Profile",
         "description": "Profile of Sofía Chernikova, a journalist and audiovisual communications professional educated at Universidad Rey Juan Carlos."
       },
       "experience": {
@@ -47,18 +47,26 @@
     },
     "items": {
       "work": "Work",
-      "about": "About",
+      "about": "Profile",
       "experience": "Experience",
       "contact": "Contact"
+    },
+    "workMenu": {
+      "index": "Index",
+      "stories": "Stories",
+      "allWork": "All work",
+      "photography": "Photography",
+      "trajectory": "Experience",
+      "viewAll": "View all"
     }
   },
   "Hero": {
     "dateline": "MADRID — 2026",
     "role": "Journalist · TV Reporter · Audiovisual Communications",
-    "availability": "Available for new opportunities",
+    "availability": "Available for new projects · Madrid",
     "location": "Madrid, Spain",
     "headline": "Journalism, visual storytelling & digital media.",
-    "summary": "Reporting, interviews and audiovisual coverage from Madrid, combining on-camera journalism, visual production and digital communications.",
+    "summary": "Reporting, interviews and visual production from Madrid.",
     "actionsAria": "Primary actions",
     "viewWork": "View work",
     "contact": "Contact"
@@ -69,14 +77,14 @@
     "practiceEyebrow": "Practice",
     "practiceTitle": "Three connected areas",
     "practiceText": "She reports, interviews and covers events; photographs and edits; writes and produces digital content.",
-    "aboutEyebrow": "About",
+    "aboutEyebrow": "Profile",
     "viewExperience": "View experience",
     "moreAbout": "Read more"
   },
   "Work": {
     "pageEyebrow": "Work",
-    "pageTitle": "Selected work",
-    "pageText": "Television reporting, digital communications, corporate content and photography.",
+    "pageTitle": "Stories",
+    "pageText": "Coverage, interviews and visual storytelling.",
     "aria": "Selected work",
     "fallbackAria": "Selected professional experience",
     "viewExperience": "View full experience"
@@ -85,7 +93,7 @@
     "featuredEyebrow": "Featured",
     "selectedEyebrow": "Selected work",
     "allEyebrow": "Portfolio",
-    "viewProject": "View project",
+    "viewProject": "View story",
     "viewRelatedWork": "View {count, plural, one {# project} other {# projects}}",
     "viewOriginal": "View original",
     "nextProject": "Next story",
@@ -108,11 +116,11 @@
       "valencia": "Valencia"
     },
     "disciplines": {
-      "reporting": "REPORTING",
-      "interview": "INTERVIEW",
-      "video": "VIDEO",
-      "photography": "PHOTOGRAPHY",
-      "communication": "COMMUNICATIONS"
+      "reporting": "Reporting",
+      "interview": "Interview",
+      "video": "Video",
+      "photography": "Photography",
+      "communication": "Communications"
     },
     "items": {
       "reporter-reel": {
@@ -255,6 +263,9 @@
           },
           "m06": {
             "alt": "Crowd at an outdoor night concert with lit phone screens and crowd surfing"
+          },
+          "m07": {
+            "alt": "Performer with a microphone in front of a crowd with raised hands, in black and white"
           }
         }
       },
@@ -277,22 +288,31 @@
           },
           "c04": {
             "alt": "Courtyard with aligned potted plants and their shadows seen through an iron gate"
+          },
+          "c05": {
+            "alt": "Person seen from behind with arms raised at a night gathering"
+          },
+          "c06": {
+            "alt": "Urban park with a person standing arms outstretched and a child running on the grass"
+          },
+          "c07": {
+            "alt": "Person seen from behind leaning on a wall of pink graffiti under a clear sky"
           }
         }
       }
     }
   },
   "Profile": {
-    "aboutPreview": "Journalist and audiovisual communications professional working across reporting, interviews and event coverage.",
-    "aboutContinuation": "With additional experience in photography, content production and digital communications.",
-    "bio": "Sofía Chernikova is a journalist and audiovisual communications professional educated at Universidad Rey Juan Carlos. Her work spans television reporting, interviews, event coverage, photography and digital communications.",
-    "aboutTrajectory": "Since 2024, she has worked as a TV reporter covering events, conducting interviews and contributing to news pieces. Alongside reporting, she has developed experience in digital communications, content production, social media leadership, corporate communications and professional photography.",
-    "interests": "Her profile combines on-camera journalism, visual storytelling and content strategy, with a particular interest in media, audiovisual production and cultural projects.",
-    "aboutPageEyebrow": "About",
-    "aboutHeroTitle": "A television reporter based in Madrid.",
+    "aboutPreview": "Journalist and audiovisual communications professional. Reporting, interviews and event coverage.",
+    "aboutContinuation": "Photography, production and digital communications as part of the same practice.",
+    "bio": "Educated at Universidad Rey Juan Carlos. She works in television reporting, interviews and event coverage, with a parallel practice in photography and digital communications.",
+    "aboutTrajectory": "Since 2024 she has worked as a TV reporter.",
+    "interests": "On-camera work, visual storytelling and content for media, audiovisual production and cultural projects.",
+    "aboutPageEyebrow": "Profile",
+    "aboutHeroTitle": "A television reporter.",
     "portraitAlt": "Portrait of Sofía Chernikova",
     "bioEyebrow": "Bio",
-    "bioTitle": "Journalism and audiovisual communications from Madrid.",
+    "bioTitle": "Practice and education.",
     "educationEyebrow": "Education",
     "educationTitle": "Education",
     "languagesEyebrow": "Languages",
@@ -470,18 +490,21 @@
   },
   "Contact": {
     "eyebrow": "Contact",
-    "title": "For media, projects and collaborations.",
-    "body": "Available for professional opportunities in television, reporting, audiovisual production, photography and digital communications.",
+    "title": "Shall we talk?",
+    "body": "For television, reporting, audiovisual production and communications.",
     "email": "Email",
     "linkedin": "LinkedIn",
     "base": "Base",
+    "baseValue": "Madrid",
     "contactPageEyebrow": "Contact",
-    "contactPageTitle": "Let's talk",
-    "contactPageText": "For professional enquiries, media, coverage or audiovisual projects, you can get in touch by email or LinkedIn."
+    "contactPageTitle": "Shall we talk?",
+    "contactPageText": "Email or LinkedIn."
   },
   "Footer": {
+    "cue": "Shall we talk?",
     "line": "Journalism, visual storytelling and digital media.",
-    "location": "Madrid, Spain"
+    "location": "Madrid",
+    "copyright": "© 2026 Sofía Chernikova"
   },
   "NotFound": {
     "eyebrow": "404",

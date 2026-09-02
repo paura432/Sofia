@@ -1,4 +1,3 @@
-import { MotionLink } from "@/components/motion/motion-link";
 import { StaggerGroup } from "@/components/motion/stagger";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
 import {
@@ -6,6 +5,7 @@ import {
   type MediaCopy,
   type PortfolioProject,
 } from "@/content/projects";
+import { Link } from "@/i18n/navigation";
 
 type ProjectCopy = {
   title: string;
@@ -38,42 +38,49 @@ export function ProjectIndex({
         const copy = copyFor(project);
         const cover = project.cover ?? project.media?.[0];
         const year = publishableYear(project.year);
+        const align = index % 2 === 0 ? "end" : "start";
 
         return (
           <StaggerGroup
             as="article"
             className="project-row"
+            data-align={align}
             key={project.id}
             step={40}
           >
-            <p className="case-number">
-              {String(index + 1).padStart(2, "0")}
-            </p>
-            {cover ? (
-              <ProjectMediaLayout
-                copy={copy.media}
-                media={[cover]}
-                playLabel={playLabel}
-              />
-            ) : null}
-            <div>
-              <p className="case-discipline">{disciplineLabel(project)}</p>
-              <h2>{copy.title}</h2>
-              {project.organisation ? (
-                <p className="case-role">
-                  {project.organisation}
-                  {year ? ` · ${year}` : null}
-                </p>
+            <Link
+              className="project-row-link"
+              href={{
+                pathname: "/work/[slug]",
+                params: { slug: project.slug },
+              }}
+            >
+              <p className="case-number">
+                {String(index + 1).padStart(2, "0")}
+              </p>
+              {cover ? (
+                <div className="project-row-cover">
+                  <ProjectMediaLayout
+                    copy={copy.media}
+                    media={[cover]}
+                    playLabel={playLabel}
+                  />
+                </div>
               ) : null}
-              <MotionLink
-                href={{
-                  pathname: "/work/[slug]",
-                  params: { slug: project.slug },
-                }}
-              >
-                {viewLabel}
-              </MotionLink>
-            </div>
+              <div className="project-row-copy">
+                <p className="case-discipline">{disciplineLabel(project)}</p>
+                <h2>{copy.title}</h2>
+                {project.organisation || year ? (
+                  <p className="case-role">
+                    {[project.organisation, year].filter(Boolean).join(" · ")}
+                  </p>
+                ) : null}
+                <span className="project-row-cta">
+                  {viewLabel}
+                  <span aria-hidden="true"> →</span>
+                </span>
+              </div>
+            </Link>
           </StaggerGroup>
         );
       })}

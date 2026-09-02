@@ -12,10 +12,9 @@ export async function ContactBlock({
   compact = false,
   page = false,
 }: ContactBlockProps) {
-  const [t, navigation, hero] = await Promise.all([
+  const [t, navigation] = await Promise.all([
     getTranslations("Contact"),
     getTranslations("Navigation"),
-    getTranslations("Hero"),
   ]);
   const Heading = page ? "h1" : "h2";
   const headingClass = page ? "display-page" : "display-section";
@@ -44,35 +43,22 @@ export async function ContactBlock({
           </Heading>
         </div>
         <div className="contact-copy">
-          <p>{page ? t("contactPageText") : t("body")}</p>
-          <dl className="contact-list">
-            <div>
-              <dt>{t("email")}</dt>
-              <dd>
-                <a href={`mailto:${siteConfig.email}`}>
-                  {siteConfig.email} <span aria-hidden="true">↗</span>
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt>{t("linkedin")}</dt>
-              <dd>
-                <a
-                  href={siteConfig.linkedin}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {t("linkedin")}
-                  <span aria-hidden="true"> ↗</span>
-                  <span className="sr-only">{navigation("opensInNewTab")}</span>
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt>{t("base")}</dt>
-              <dd>{hero("location")}</dd>
-            </div>
-          </dl>
+          <a className="contact-email" href={`mailto:${siteConfig.email}`}>
+            {siteConfig.email} <span aria-hidden="true">↗</span>
+          </a>
+          <p className="contact-meta">
+            {t("baseValue")}
+            <span aria-hidden="true"> · </span>
+            <a
+              href={siteConfig.linkedin}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {t("linkedin")}
+              <span aria-hidden="true"> ↗</span>
+              <span className="sr-only">{navigation("opensInNewTab")}</span>
+            </a>
+          </p>
         </div>
       </Reveal>
     </section>

@@ -11,35 +11,33 @@ export async function Hero() {
       <div className="container hero-grid">
         <HeroEntrance className="hero-meta" delay={0}>
           <p>{t("role")}</p>
-          <p>{t("location")}</p>
-          <p>{t("availability")}</p>
         </HeroEntrance>
         <div className="hero-copy">
-          <HeroEntrance as="p" className="dateline" delay={70}>
-            {t("dateline")}
-          </HeroEntrance>
           <HeroEntrance
             as="h1"
             className="display-hero hero-name"
-            delay={130}
+            delay={70}
             id="hero-title"
           >
             <span className="hero-name-line">Sofía</span>
             <span className="hero-name-line">Chernikova</span>
           </HeroEntrance>
-          <HeroEntrance as="p" className="hero-headline" delay={190}>
+          <HeroEntrance as="p" className="hero-headline" delay={130}>
             {t("headline")}
           </HeroEntrance>
-          <HeroEntrance as="p" className="hero-summary" delay={250}>
+          <HeroEntrance as="p" className="hero-summary" delay={190}>
             {t("summary")}
           </HeroEntrance>
           <HeroEntrance
             aria-label={t("actionsAria")}
             className="hero-actions"
-            delay={310}
+            delay={250}
           >
             <MotionLink href="/work">{t("viewWork")}</MotionLink>
             <MotionLink href="/contact">{t("contact")}</MotionLink>
+          </HeroEntrance>
+          <HeroEntrance as="p" className="hero-status" delay={310}>
+            {t("availability")}
           </HeroEntrance>
         </div>
       </div>

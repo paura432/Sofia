@@ -79,7 +79,6 @@ export default async function AboutPage() {
         <Reveal className="container page-hero-inner">
           <p className="eyebrow">{profile("aboutPageEyebrow")}</p>
           <h1 className="display-page">{profile("aboutHeroTitle")}</h1>
-          <p>{profile("aboutPreview")}</p>
         </Reveal>
       </section>
 
@@ -107,7 +106,6 @@ export default async function AboutPage() {
               </figure>
             ) : null}
             <p>{profile("bio")}</p>
-            <p>{profile("aboutTrajectory")}</p>
             <p>{profile("interests")}</p>
           </div>
         </Reveal>

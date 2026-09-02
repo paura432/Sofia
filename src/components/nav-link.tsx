@@ -6,6 +6,10 @@ import type { StaticAppPathname } from "@/i18n/routing";
 
 const MobileNavCloseContext = createContext<(() => void) | null>(null);
 
+export function useMobileNavClose() {
+  return useContext(MobileNavCloseContext);
+}
+
 export function MobileNavCloseProvider({
   onClose,
   children,

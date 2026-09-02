@@ -1,5 +1,4 @@
 import { MediaCaption } from "@/components/media-caption";
-import { MediaReveal } from "@/components/motion/media-reveal";
 import { PortfolioImage } from "@/components/portfolio-image";
 import { PortfolioVideo } from "@/components/portfolio-video";
 import type { MediaCopy, ProjectMedia } from "@/content/projects";
@@ -35,8 +34,6 @@ export function ProjectMediaLayout({
   if (usableMedia.length === 0) {
     return null;
   }
-
-  const groupReveal = usableMedia.length > 6;
 
   const items = usableMedia.map((item, index) => {
     const itemCopy = copy[item.id] ?? {};
@@ -85,7 +82,7 @@ export function ProjectMediaLayout({
           location={itemCopy.location}
           media={item}
           preload={preloadFirst && index === 0}
-          reveal={!groupReveal}
+          reveal
         />
       );
     }
@@ -115,7 +112,5 @@ export function ProjectMediaLayout({
     );
   });
 
-  const grid = <div className="project-media-layout">{items}</div>;
-
-  return groupReveal ? <MediaReveal>{grid}</MediaReveal> : grid;
+  return <div className="project-media-layout">{items}</div>;
 }

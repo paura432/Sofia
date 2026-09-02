@@ -1,7 +1,7 @@
-import { MotionLink } from "@/components/motion/motion-link";
 import { StaggerGroup } from "@/components/motion/stagger";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
 import type { MediaCopy, ProjectMedia } from "@/content/projects";
+import { Link } from "@/i18n/navigation";
 
 type SelectedProjectItem = {
   slug: string;
@@ -47,33 +47,37 @@ export function SelectedProjects({
               key={project.slug}
               step={40}
             >
-              <p className="case-number">{project.number}</p>
-              {project.media ? (
-                <ProjectMediaLayout
-                  copy={{
-                    [project.media.id]: {
-                      alt: project.title,
-                      title: project.title,
-                      ...project.mediaCopy?.[project.media.id],
-                    },
-                  }}
-                  media={[project.media]}
-                  playLabel={playLabel}
-                />
-              ) : null}
-              <div>
-                <p className="case-discipline">{project.discipline}</p>
-                <h2>{project.title}</h2>
-                {project.organisation ? <p>{project.organisation}</p> : null}
-              </div>
-              <MotionLink
+              <Link
+                className="selected-project-link"
                 href={{
                   pathname: "/work/[slug]",
                   params: { slug: project.slug },
                 }}
               >
-                {viewLabel}
-              </MotionLink>
+                <p className="case-number">{project.number}</p>
+                {project.media ? (
+                  <ProjectMediaLayout
+                    copy={{
+                      [project.media.id]: {
+                        alt: project.title,
+                        title: project.title,
+                        ...project.mediaCopy?.[project.media.id],
+                      },
+                    }}
+                    media={[project.media]}
+                    playLabel={playLabel}
+                  />
+                ) : null}
+                <div>
+                  <p className="case-discipline">{project.discipline}</p>
+                  <h2>{project.title}</h2>
+                  {project.organisation ? <p>{project.organisation}</p> : null}
+                  <span className="project-row-cta">
+                    {viewLabel}
+                    <span aria-hidden="true"> →</span>
+                  </span>
+                </div>
+              </Link>
             </StaggerGroup>
           ))}
         </div>

@@ -3,22 +3,35 @@ import { getTranslations } from "next-intl/server";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { MobileNav } from "@/components/mobile-nav";
 import { NavLink } from "@/components/nav-link";
+import { WorkNav } from "@/components/work-nav";
+import { getPublishedProjects } from "@/content/projects";
 import { siteConfig } from "@/content/profile";
 import { Link } from "@/i18n/navigation";
-import type { Locale, StaticAppPathname } from "@/i18n/routing";
-
-const navItems: Array<{ href: StaticAppPathname; key: string; index: string }> = [
-  { href: "/work", key: "work", index: "01" },
-  { href: "/about", key: "about", index: "02" },
-  { href: "/experience", key: "experience", index: "03" },
-  { href: "/contact", key: "contact", index: "04" },
-];
+import type { Locale } from "@/i18n/routing";
 
 export async function SiteHeader() {
-  const t = await getTranslations("Navigation");
+  const [t, projectsText] = await Promise.all([
+    getTranslations("Navigation"),
+    getTranslations("Projects"),
+  ]);
   const localeLabels: Record<Locale, string> = {
     es: t("localeNames.es"),
     en: t("localeNames.en"),
+  };
+  const stories = getPublishedProjects().map((project) => ({
+    slug: project.slug,
+    title: (
+      projectsText.raw(`items.${project.translationKey}`) as { title: string }
+    ).title,
+  }));
+  const workCopy = {
+    work: t("items.work"),
+    indexLabel: t("workMenu.index"),
+    storiesLabel: t("workMenu.stories"),
+    allWork: t("workMenu.allWork"),
+    photography: t("workMenu.photography"),
+    trajectory: t("workMenu.trajectory"),
+    viewAll: t("workMenu.viewAll"),
   };
 
   return (
@@ -33,13 +46,9 @@ export async function SiteHeader() {
 
         <nav className="desktop-nav" aria-label={t("sectionsAria")}>
           <div className="desktop-nav-links">
-            {navItems.map((item) => (
-              <NavLink
-                href={item.href}
-                key={item.href}
-                label={t(`items.${item.key}`)}
-              />
-            ))}
+            <WorkNav copy={workCopy} stories={stories} variant="desktop" />
+            <NavLink href="/about" label={t("items.about")} />
+            <NavLink href="/contact" label={t("items.contact")} />
           </div>
           <LocaleSwitcher
             ariaLabel={t("localeAria")}
@@ -51,14 +60,13 @@ export async function SiteHeader() {
           brand={siteConfig.name}
           closeLabel={t("closeMenu")}
           linksAriaLabel={t("mobileAria")}
-          links={navItems.map((item) => (
-            <NavLink
-              href={item.href}
-              index={item.index}
-              key={item.href}
-              label={t(`items.${item.key}`)}
-            />
-          ))}
+          links={
+            <>
+              <WorkNav copy={workCopy} stories={stories} variant="mobile" />
+              <NavLink href="/about" index="02" label={t("items.about")} />
+              <NavLink href="/contact" index="03" label={t("items.contact")} />
+            </>
+          }
           localeSwitcher={
             <LocaleSwitcher ariaLabel={t("localeAria")} labels={localeLabels} />
           }

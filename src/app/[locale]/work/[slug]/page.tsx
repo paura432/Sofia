@@ -111,42 +111,31 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const detailMedia = project.media?.filter((media) => media.id !== heroMedia?.id);
   const nextProject = getNextProject(project.slug);
 
+  const published = getPublishedProjects();
+  const projectIndex = published.findIndex((item) => item.slug === project.slug);
+  const projectOrdinal = String(projectIndex + 1).padStart(2, "0");
+  const projectTotal = String(published.length).padStart(2, "0");
+  const visibleYear = publishableYear(project.year);
+  const facts = [
+    copy.format,
+    locationLabel,
+    visibleYear,
+  ].filter(Boolean) as string[];
+
   return (
     <main id="main">
       <ScrollProgress />
       <section className="page-hero project-detail-hero section section-first">
         <Reveal className="container page-hero-inner">
           <p className="eyebrow">
-            01 / {disciplineLabel(project, t)}
+            {projectOrdinal} / {projectTotal}
           </p>
+          <p className="project-kicker">{disciplineLabel(project, t)}</p>
           <h1 className="display-page">{copy.title}</h1>
           {copy.dek ? <p>{copy.dek}</p> : null}
-          <dl className="project-facts">
-            {project.organisation ? (
-              <div>
-                <dt>{t("organisation")}</dt>
-                <dd>{project.organisation}</dd>
-              </div>
-            ) : null}
-            {project.locationKey ? (
-              <div>
-                <dt>{t("location")}</dt>
-                <dd>{t(`locations.${project.locationKey}`)}</dd>
-              </div>
-            ) : null}
-            {publishableYear(project.year) ? (
-              <div>
-                <dt>{t("year")}</dt>
-                <dd>{publishableYear(project.year)}</dd>
-              </div>
-            ) : null}
-            {copy.format ? (
-              <div>
-                <dt>{t("format")}</dt>
-                <dd>{copy.format}</dd>
-              </div>
-            ) : null}
-          </dl>
+          {facts.length > 0 ? (
+            <p className="project-story-meta">{facts.join(" · ")}</p>
+          ) : null}
         </Reveal>
       </section>
 
@@ -164,16 +153,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
       ) : null}
 
-      {copy.context || copy.roles?.length ? (
+      {copy.context ? (
         <section className="section project-detail-copy">
           <Reveal className="container editorial-grid">
-            {copy.context ? (
-              <div>
-                <p className="eyebrow">{t("context")}</p>
-                <p>{copy.context}</p>
-              </div>
-            ) : null}
-            {copy.roles?.length ? (
+            <div>
+              <p className="eyebrow">{t("context")}</p>
+              <p>{copy.context}</p>
+            </div>
+            {copy.roles && copy.roles.length > 1 ? (
               <div>
                 <p className="eyebrow">{t("role")}</p>
                 <ul className="project-role-list">
