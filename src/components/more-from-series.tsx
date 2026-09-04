@@ -20,8 +20,40 @@ type MoreFromSeriesProps = {
   items: ArchivePhoto[];
   nextLabel: string;
   prevLabel: string;
-  title: string;
+  sectionLabel: string;
+  seriesLabel: string;
+  storyLabel: string;
 };
+
+export function SeriesModeNav({
+  active,
+  sectionLabel,
+  seriesLabel,
+  storyLabel,
+}: {
+  active: "story" | "series";
+  sectionLabel: string;
+  seriesLabel: string;
+  storyLabel: string;
+}) {
+  return (
+    <nav aria-label={sectionLabel} className="series-mode-nav">
+      <a
+        aria-current={active === "story" ? "location" : undefined}
+        href="#historia"
+      >
+        {storyLabel}
+      </a>
+      <span aria-hidden="true">|</span>
+      <a
+        aria-current={active === "series" ? "location" : undefined}
+        href="#serie-completa"
+      >
+        {seriesLabel}
+      </a>
+    </nav>
+  );
+}
 
 function moreSizes(landscape: boolean) {
   return landscape
@@ -62,7 +94,9 @@ export function MoreFromSeries({
   items,
   nextLabel,
   prevLabel,
-  title,
+  sectionLabel,
+  seriesLabel,
+  storyLabel,
 }: MoreFromSeriesProps) {
   const frameRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
@@ -88,13 +122,13 @@ export function MoreFromSeries({
     () =>
       items.map((item, index) => ({
         id: item.id,
-        label: `${title} ${index + 1}`,
+        label: `${seriesLabel} ${index + 1}`,
         src: item.src,
         width: item.width,
         height: item.height,
         blurDataURL: item.blurDataURL,
       })),
-    [items, title],
+    [items, seriesLabel],
   );
 
   if (items.length === 0) {
@@ -119,10 +153,15 @@ export function MoreFromSeries({
         );
 
   return (
-    <section className="section more-from-series">
+    <section className="section more-from-series" id="serie-completa">
       <div className="more-from-series-frame" ref={frameRef}>
         <header className="more-from-series-header">
-          <p className="eyebrow">{title}</p>
+          <SeriesModeNav
+            active="series"
+            sectionLabel={sectionLabel}
+            seriesLabel={seriesLabel}
+            storyLabel={storyLabel}
+          />
           <p>{countLabel}</p>
         </header>
         {items.length === 1 ? (

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 
-import { MoreFromSeries } from "@/components/more-from-series";
+import { MoreFromSeries, SeriesModeNav } from "@/components/more-from-series";
 import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
@@ -10,7 +10,7 @@ import { ProjectMediaLayout } from "@/components/project-media-layout";
 import { ProjectPhotoViewer } from "@/components/project-photo-viewer";
 import type { PhotoViewerItem } from "@/components/photo-viewer-dialog";
 import {
-  getAdditionalPhotosForProject,
+  getArchivePhotosForProject,
 } from "@/content/photo-archive-data";
 import {
   buildProjectMediaCopy,
@@ -153,7 +153,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const detailMedia = project.media?.filter((media) => media.id !== heroMedia?.id);
   const nextProject = getNextProject(project.slug);
   const prevProject = getPrevProject(project.slug);
-  const additionalPhotos = getAdditionalPhotosForProject(project.slug);
+  const seriesPhotos = getArchivePhotosForProject(project.slug);
 
   const published = getPublishedProjects();
   const projectIndex = published.findIndex((item) => item.slug === project.slug);
@@ -195,8 +195,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </section>
 
       {heroMedia ? (
-        <section className="section project-hero-media" aria-label={copy.title}>
-          <div className="container">
+        <section
+          aria-label={copy.title}
+          className="section project-hero-media"
+          id="historia"
+        >
+          <div className="project-media-canvas">
+            {seriesPhotos.length > 0 ? (
+              <header className="more-from-series-header">
+                <SeriesModeNav
+                  active="story"
+                  sectionLabel={t("seriesNavigation")}
+                  seriesLabel={t("seriesComplete")}
+                  storyLabel={t("seriesStory")}
+                />
+              </header>
+            ) : null}
             <ProjectMediaLayout
               copy={mediaCopy}
               media={[heroMedia]}
@@ -231,7 +245,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       {detailMedia && detailMedia.length > 0 ? (
         <section className="section">
-          <div className="container">
+          <div className="project-media-canvas">
             <ProjectMediaLayout
               copy={mediaCopy}
               media={detailMedia}
@@ -281,16 +295,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
       ) : null}
 
-      {additionalPhotos.length > 0 ? (
+      {seriesPhotos.length > 0 ? (
         <MoreFromSeries
           closeLabel={t("viewerClose")}
-          countLabel={t("moreFromSeriesCount", {
-            count: additionalPhotos.length,
+          countLabel={t("seriesCompleteCount", {
+            count: seriesPhotos.length,
           })}
-          items={additionalPhotos}
+          items={seriesPhotos}
           nextLabel={t("viewerNext")}
           prevLabel={t("viewerPrev")}
-          title={t("moreFromSeries")}
+          sectionLabel={t("seriesNavigation")}
+          seriesLabel={t("seriesComplete")}
+          storyLabel={t("seriesStory")}
         />
       ) : null}
 

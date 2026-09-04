@@ -173,6 +173,12 @@ export function getAdditionalPhotosForProject(slug: string): ArchivePhoto[] {
   return getAdditionalArchivePhotos(slug as ProjectArchiveSlug);
 }
 
+export function getArchivePhotosForProject(slug: string): ArchivePhoto[] {
+  if (!(slug in projectArchiveGroupMap)) return [];
+  const groupId = projectArchiveGroupMap[slug as ProjectArchiveSlug];
+  return [...photoArchiveGroups[groupId]];
+}
+
 export function flattenArchiveGroups(
   groups: { id: keyof typeof photoArchiveGroups; title: string }[],
 ): ArchivePhoto[] {
