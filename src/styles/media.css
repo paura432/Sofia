@@ -126,6 +126,13 @@
   margin-bottom: 0;
 }
 
+.project-media-canvas {
+  width: 100%;
+  max-width: var(--photo-canvas-max);
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
+
 .project-row-cover .portfolio-image-inner,
 .selected-project .portfolio-image-inner {
   max-height: min(52vh, 480px);

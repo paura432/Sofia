@@ -277,17 +277,17 @@ export const projects: PortfolioProject[] = [
 /**
  * `sizes` por layout. Los cortes siguen el grid editorial: una columna en
  * móvil, media columna en tablet y la fracción real del container en desktop
- * (`--container-max: 1440px` menos `--page-gutter`).
+ * (`--photo-canvas-max: 1920px` menos `--page-gutter` en detalle).
  */
 const mediaSizes: Record<MediaLayout, string> = {
-  full: "(max-width: 699px) 100vw, (max-width: 1600px) 92vw, 1440px",
-  wide: "(max-width: 699px) 100vw, (max-width: 1300px) 92vw, 1180px",
-  half: "(max-width: 699px) 100vw, (max-width: 1600px) 46vw, 710px",
+  full: "(max-width: 699px) 100vw, (max-width: 1920px) 92vw, 1920px",
+  wide: "(max-width: 699px) 100vw, (max-width: 1300px) 92vw, 1280px",
+  half: "(max-width: 699px) 100vw, (max-width: 1920px) 46vw, 930px",
   portrait:
-    "(max-width: 699px) 92vw, (max-width: 1023px) 52vw, (max-width: 1600px) 46vw, 680px",
-  pair: "(max-width: 699px) 100vw, (max-width: 1600px) 46vw, 710px",
+    "(max-width: 699px) 92vw, (max-width: 1023px) 52vw, (max-width: 1920px) 42vw, 720px",
+  pair: "(max-width: 699px) 100vw, (max-width: 1920px) 46vw, 930px",
   triptych:
-    "(max-width: 699px) 100vw, (max-width: 1023px) 46vw, (max-width: 1600px) 31vw, 470px",
+    "(max-width: 699px) 100vw, (max-width: 1023px) 46vw, (max-width: 1920px) 31vw, 600px",
 };
 
 export function getMediaSizes(layout: MediaLayout = "wide") {
