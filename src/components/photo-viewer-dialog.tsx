@@ -35,8 +35,13 @@ export function PhotoViewerDialog({
   const closeRef = useRef<HTMLButtonElement>(null);
   const openerRef = useRef<HTMLElement | null>(null);
   const scrollYRef = useRef(0);
+  const onCloseRef = useRef(onClose);
   const titleId = useId();
   const active = activeIndex === null ? null : items[activeIndex];
+
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -75,6 +80,11 @@ export function PhotoViewerDialog({
     if (activeIndex === null) return;
 
     const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onCloseRef.current();
+        return;
+      }
       if (event.key === "ArrowLeft" && activeIndex > 0) {
         event.preventDefault();
         onNavigate(activeIndex - 1);
@@ -88,73 +98,79 @@ export function PhotoViewerDialog({
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [activeIndex, items.length, onNavigate]);
 
-  if (!active || activeIndex === null) {
-    return null;
-  }
-
   return (
     <dialog
-      aria-labelledby={titleId}
+      aria-labelledby={active ? titleId : undefined}
       className="photo-archive-dialog"
       onClick={(event) => {
         if (event.target === event.currentTarget) onClose();
+      }}
+      onCancel={(event) => {
+        event.preventDefault();
+        onClose();
       }}
       onClose={() => {
         if (activeIndex !== null) onClose();
       }}
       ref={dialogRef}
     >
-      <button
-        className="photo-viewer-close"
-        onClick={onClose}
-        ref={closeRef}
-        type="button"
-      >
-        {closeLabel}
-      </button>
-      <figure
-        className="photo-archive-viewer"
-        onClick={(event) => event.stopPropagation()}
-      >
-        <Image
-          alt={active.label}
-          height={active.height}
-          sizes="100dvw"
-          src={active.src}
-          style={{
-            height: "auto",
-            maxHeight: "calc(100dvh - 9rem)",
-            maxWidth: "calc(100dvw - 2.5rem)",
-            width: "auto",
-          }}
-          width={active.width}
-        />
-        <figcaption id={titleId}>{active.label}</figcaption>
-      </figure>
-      {items.length > 1 ? (
-        <div
-          className="photo-viewer-controls"
-          onClick={(event) => event.stopPropagation()}
-        >
+      {active && activeIndex !== null ? (
+        <>
           <button
-            disabled={activeIndex === 0}
-            onClick={() => onNavigate(activeIndex - 1)}
+            className="photo-viewer-close"
+            onClick={onClose}
+            ref={closeRef}
             type="button"
           >
-            ← {prevLabel}
+            {closeLabel}
           </button>
-          <span>
-            {String(activeIndex + 1).padStart(2, "0")} /{" "}
-            {String(items.length).padStart(2, "0")}
-          </span>
-          <button
-            disabled={activeIndex === items.length - 1}
-            onClick={() => onNavigate(activeIndex + 1)}
-            type="button"
+          <figure
+            className="photo-archive-viewer"
+            onClick={(event) => event.stopPropagation()}
           >
-            {nextLabel} →
-          </button>
-        </div>
+            <Image
+              alt={active.label}
+              height={active.height}
+              sizes="100dvw"
+              src={active.src}
+              style={{
+                height: "auto",
+                maxHeight:
+                  "calc(100dvh - 9rem - env(safe-area-inset-top) - env(safe-area-inset-bottom))",
+                maxWidth:
+                  "calc(100dvw - 2.5rem - env(safe-area-inset-left) - env(safe-area-inset-right))",
+                width: "auto",
+              }}
+              width={active.width}
+            />
+            <figcaption id={titleId}>{active.label}</figcaption>
+          </figure>
+          {items.length > 1 ? (
+            <div
+              className="photo-viewer-controls"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <button
+                disabled={activeIndex === 0}
+                onClick={() => onNavigate(activeIndex - 1)}
+                type="button"
+              >
+                ← {prevLabel}
+              </button>
+              <span>
+                {String(activeIndex + 1).padStart(2, "0")} /{" "}
+                {String(items.length).padStart(2, "0")}
+              </span>
+              <button
+                disabled={activeIndex === items.length - 1}
+                onClick={() => onNavigate(activeIndex + 1)}
+                type="button"
+              >
+                {nextLabel} →
+              </button>
+            </div>
+          ) : null}
+        </>
       ) : null}
     </dialog>
   );
