@@ -30,6 +30,7 @@ Update procedure: manual review → diff → copy new version → update this fi
 
 | Skill | Path | Purpose |
 |---|---|---|
+| caveman | `.cursor/skills/caveman/` | Aggressive root-cause audit before implementation |
 | sofia-editorial-ux | `.cursor/skills/sofia-editorial-ux/` | Creative director — identity and constraints |
 | sofia-ux-review | `.cursor/skills/sofia-ux-review/` | Manual orchestrator — full audit pipeline |
 
