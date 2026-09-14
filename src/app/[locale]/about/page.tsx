@@ -96,7 +96,7 @@ export default async function AboutPage() {
                 <Image
                   alt={profile(portrait.altKey)}
                   height={portrait.height}
-                  sizes="(max-width: 699px) 100vw, 420px"
+                  sizes="(max-width: 699px) 100vw, 460px"
                   src={portrait.src}
                   style={{
                     objectPosition: focalPointStyle(portrait),

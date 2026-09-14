@@ -438,7 +438,7 @@
 
 .about-portrait {
   margin: 0 0 var(--space-sm);
-  max-width: 420px;
+  width: min(100%, 460px);
 }
 
 .about-portrait img {

@@ -26,7 +26,13 @@ export type ProfilePortrait = {
   focalPoint?: { x: number; y: number };
 };
 
-export const portrait: ProfilePortrait | undefined = undefined;
+export const portrait: ProfilePortrait | undefined = {
+  src: "/media/profile/portrait.webp",
+  width: 1066,
+  height: 1600,
+  altKey: "portraitAlt",
+  focalPoint: { x: 50, y: 28 },
+};
 
 export const tools = [
   "Premiere Pro",
