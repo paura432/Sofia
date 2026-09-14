@@ -1081,6 +1081,17 @@ p {
   container-name: hero-copy;
 }
 
+.hero-portrait {
+  width: min(100%, 28rem);
+  margin: 0;
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .hero .display-hero,
 .hero-name {
   display: flex;
@@ -1833,8 +1844,14 @@ body:has(.contact-page-block) .site-footer-contact {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(150px, 0.22fr) minmax(0, 1fr);
+    grid-template-columns: minmax(150px, 0.2fr) minmax(0, 1fr) minmax(220px, 0.38fr);
     align-items: center;
+  }
+
+  .hero-portrait {
+    width: 100%;
+    max-width: 28rem;
+    justify-self: end;
   }
 
   .display-hero {
