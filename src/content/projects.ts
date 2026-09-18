@@ -1,4 +1,5 @@
 import type { ExperienceId } from "@/content/experience";
+import { getMuxThumbnailUrl } from "@/lib/mux";
 import {
   calle_documental_cover,
   calle_documental_media,
@@ -75,6 +76,7 @@ export type ProjectMedia = {
   videoId?: string;
   /** Public Mux Playback ID. Never expose a Mux API secret. */
   muxPlaybackId?: string;
+  posterTime?: number;
   externalUrl?: string;
   width?: number;
   height?: number;
@@ -212,7 +214,7 @@ export const projects: PortfolioProject[] = [
     published: false,
     translationKey: "isocero",
   },
-  // year hidden when "Pendiente" (`publishableYear`).
+  // Film remains unpublished until each public playback endpoint is verified.
   {
     id: "4-minutos",
     slug: "4-minutos",
@@ -227,7 +229,12 @@ export const projects: PortfolioProject[] = [
       type: "video",
       layout: "full",
       aspectRatio: "16:9",
-      poster: "/media/audiovisual/4-minutos-poster.webp",
+      muxPlaybackId: "m2dxVaMBZKQ8wX7dNCsOlic6QwJB3O2OISItsFiOHbF2OO",
+      posterTime: 202,
+      poster: getMuxThumbnailUrl("m2dxVaMBZKQ8wX7dNCsOlic6QwJB3O2OISItsFiOHbF2OO", {
+        time: 202,
+        width: 1600,
+      }),
       provider: "mux",
       titleKey: "4-minutos-poster",
       duration: "03:59",
@@ -246,7 +253,12 @@ export const projects: PortfolioProject[] = [
       type: "video",
       layout: "full",
       aspectRatio: "16:9",
-      poster: "/media/audiovisual/tras-el-sofa-poster.webp",
+      muxPlaybackId: "6EyrkximJ0V2KpOdeJLvf2miHudBAOp2EcNOu54sjPg",
+      posterTime: 303,
+      poster: getMuxThumbnailUrl("6EyrkximJ0V2KpOdeJLvf2miHudBAOp2EcNOu54sjPg", {
+        time: 303,
+        width: 1600,
+      }),
       provider: "mux",
       titleKey: "tras-el-sofa-poster",
       duration: "05:59",
@@ -265,7 +277,12 @@ export const projects: PortfolioProject[] = [
       type: "video",
       layout: "full",
       aspectRatio: "16:9",
-      poster: "/media/audiovisual/version-beta-poster.webp",
+      muxPlaybackId: "pOfGCwjIQAJINOlF5rVSWVQIGL9aGKwhNLAeJWZrO2ag",
+      posterTime: 50,
+      poster: getMuxThumbnailUrl("pOfGCwjIQAJINOlF5rVSWVQIGL9aGKwhNLAeJWZrO2ag", {
+        time: 50,
+        width: 1600,
+      }),
       provider: "mux",
       titleKey: "version-beta-poster",
       duration: "00:58",
@@ -456,17 +473,18 @@ export function hasMediaAsset(media: ProjectMedia) {
   }
 
   if (media.type === "video") {
-    const hasPlayableSource =
-      media.provider === "native"
-        ? Boolean(media.src)
-        : media.provider === "mux"
-          ? true
-          : Boolean(media.provider && media.videoId);
+    const hasPlayableSource = hasPlayableVideoSource(media);
 
     return Boolean(media.poster && media.titleKey && hasPlayableSource);
   }
 
   return Boolean(media.externalUrl && media.titleKey);
+}
+
+function hasPlayableVideoSource(media: ProjectMedia) {
+  if (media.provider === "native") return Boolean(media.src);
+  if (media.provider === "mux") return Boolean(media.muxPlaybackId);
+  return Boolean(media.provider && media.videoId);
 }
 
 export function hasRenderableProjectContent(project: PortfolioProject) {
@@ -623,10 +641,7 @@ function warnIncompleteMedia() {
         if (!media.titleKey) {
           warn(`${label}: vídeo sin titleKey`);
         }
-        const hasPlayableSource =
-          media.provider === "native"
-            ? Boolean(media.src)
-            : Boolean(media.provider && media.videoId);
+        const hasPlayableSource = hasPlayableVideoSource(media);
         if (!hasPlayableSource) {
           warn(`${label}: vídeo sin fuente reproducible`);
         }

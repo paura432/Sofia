@@ -40,6 +40,7 @@ export function PortfolioVideo({
 }: PortfolioVideoProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [posterVisible, setPosterVisible] = useState(true);
+  const [posterFailed, setPosterFailed] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const ratio = media.aspectRatio?.replace(":", " / ") ?? "16 / 9";
   const frameClassName = ["portfolio-video", className].filter(Boolean).join(" ");
@@ -66,9 +67,12 @@ export function PortfolioVideo({
       {isPlaying && media.provider === "mux" && media.muxPlaybackId ? (
         <MuxPlayer
           accentColor="#a52522"
+          autoPlay={false}
           className="portfolio-video-player"
+          loop={false}
           metadata={{ video_title: title }}
           playbackId={media.muxPlaybackId}
+          playsInline
           preload="none"
           streamType="on-demand"
         />
@@ -108,7 +112,7 @@ export function PortfolioVideo({
         />
       ) : null}
 
-      {posterVisible && canPlay ? (
+      {posterVisible && canPlay && !posterFailed ? (
         <button
           aria-label={`${playLabel}: ${title}`}
           className="portfolio-video-poster"
@@ -130,6 +134,7 @@ export function PortfolioVideo({
                 sizes={sizes ?? getMediaSizes(media.layout)}
                 src={media.poster}
                 style={{ objectPosition }}
+                onError={() => setPosterFailed(true)}
               />
             </picture>
           ) : (
@@ -139,6 +144,7 @@ export function PortfolioVideo({
               sizes={sizes ?? getMediaSizes(media.layout)}
               src={media.poster}
               style={{ objectPosition }}
+              onError={() => setPosterFailed(true)}
             />
           )}
           <span className="portfolio-video-play" aria-hidden="true">
@@ -149,8 +155,7 @@ export function PortfolioVideo({
           ) : null}
         </button>
       ) : posterVisible ? (
-        <div className="portfolio-video-poster" role="img" aria-label={title}>
-          <Image alt="" fill sizes={sizes ?? getMediaSizes(media.layout)} src={media.poster} style={{ objectPosition }} />
+        <div className="portfolio-video-poster portfolio-video-poster-fallback" role="img" aria-label={title}>
           {media.duration ? <span className="portfolio-video-duration">{media.duration}</span> : null}
         </div>
       ) : null}

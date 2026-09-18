@@ -15,8 +15,8 @@ public/media/profile/
   portrait.webp
 ```
 
-Audiovisual posters use `public/media/audiovisual/[slug]-poster.webp`.
-Use real approved frames only; no generated or stock substitutes.
+Mux-backed audiovisual posters use Mux Image API thumbnails; no video or local
+poster is required in `public/`.
 
 No se añaden placeholders, imágenes de stock ni sustitutos generados: la
 carpeta permanece vacía hasta que llegue material real.

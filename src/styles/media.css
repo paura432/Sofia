@@ -283,6 +283,10 @@
   transition: opacity var(--motion-interface) var(--ease-out-editorial);
 }
 
+.portfolio-video-poster-fallback {
+  background: var(--foreground);
+}
+
 /* El player ocupa exactamente el mismo frame: el poster solo se desvanece,
    nada se mueve ni se remonta debajo. */
 .portfolio-video-poster[data-state="exiting"] {
