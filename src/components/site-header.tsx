@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { MobileNav } from "@/components/mobile-nav";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { NavLink } from "@/components/nav-link";
 import { siteConfig } from "@/content/profile";
 import { Link } from "@/i18n/navigation";
@@ -36,6 +37,7 @@ export async function SiteHeader() {
             ariaLabel={t("localeAria")}
             labels={localeLabels}
           />
+          <ThemeToggle darkLabel={t("theme.dark")} lightLabel={t("theme.light")} />
         </nav>
 
         <MobileNav
@@ -51,7 +53,10 @@ export async function SiteHeader() {
             </>
           }
           localeSwitcher={
-            <LocaleSwitcher ariaLabel={t("localeAria")} labels={localeLabels} />
+            <>
+              <LocaleSwitcher ariaLabel={t("localeAria")} labels={localeLabels} />
+              <ThemeToggle darkLabel={t("theme.dark")} lightLabel={t("theme.light")} />
+            </>
           }
           menuLabel={t("menu")}
           summaryLabel={t("mobileSummary")}
