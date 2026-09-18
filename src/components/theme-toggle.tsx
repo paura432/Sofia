@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Theme = "dark" | "light";
 
@@ -10,11 +10,13 @@ type ThemeToggleProps = {
 };
 
 export function ThemeToggle({ darkLabel, lightLabel }: ThemeToggleProps) {
-  const [theme, setTheme] = useState<Theme>(() =>
-    typeof document !== "undefined" && document.documentElement.dataset.theme === "light"
-      ? "light"
-      : "dark",
-  );
+  const [theme, setTheme] = useState<Theme>("dark");
+
+  useEffect(() => {
+    queueMicrotask(() => {
+      setTheme(document.documentElement.dataset.theme === "light" ? "light" : "dark");
+    });
+  }, []);
 
   const next = theme === "dark" ? "light" : "dark";
   const label = next === "light" ? lightLabel : darkLabel;
