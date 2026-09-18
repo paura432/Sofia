@@ -110,7 +110,7 @@ export default async function WorkPage() {
       </section>
 
       {audiovisualProjects.length > 0 ? (
-        <section aria-labelledby="work-audiovisual" className="section" id="audiovisual">
+        <section aria-labelledby="work-audiovisual" className="section work-film-section" id="audiovisual">
           <div className="container work-project-section">
             <SectionHeading
               eyebrow={t("audiovisualEyebrow")}

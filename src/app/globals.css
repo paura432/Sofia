@@ -4,14 +4,17 @@
 
 :root {
   color-scheme: light;
-  --background: #f6f1e8;
-  --surface: #ebe3d6;
-  --foreground: #11110f;
-  --foreground-soft: #383632;
-  --muted: #625c54;
-  --line: #d8d0c2;
+  --background: #f8f8f5;
+  --surface: #efefeb;
+  --foreground: #151513;
+  --foreground-soft: #454541;
+  --muted: #676761;
+  --line: #ddddd7;
   --accent: #a52522;
   --accent-foreground: #fff8ef;
+  --film: #10100f;
+  --film-foreground: #f8f8f5;
+  --film-muted: #b9b9b0;
 
   /* typography scale */
   --text-2xs: 0.72rem;
@@ -211,6 +214,39 @@ p {
 
 .section-first {
   border-top: 0;
+}
+
+.work-film-section {
+  border-color: var(--film);
+  background: var(--film);
+  color: var(--film-foreground);
+}
+
+.work-film-section .section-heading p:not(.eyebrow),
+.work-film-section .case-discipline,
+.work-film-section .case-role,
+.work-film-section .project-row-cta {
+  color: var(--film-muted);
+}
+
+.work-film-section .project-row,
+.work-film-section .selected-project {
+  border-color: color-mix(in srgb, var(--film-foreground) 18%, transparent);
+}
+
+.featured-project-film {
+  border-color: var(--film);
+  background: var(--film);
+  color: var(--film-foreground);
+}
+
+.featured-project-film .featured-project-meta,
+.featured-project-film .media-caption {
+  color: var(--film-muted);
+}
+
+.featured-project-film .featured-project-meta .display-section {
+  color: var(--film-foreground);
 }
 
 .compact-section {
