@@ -21,6 +21,17 @@ type ProjectIndexProps = {
   copyFor: (project: PortfolioProject) => ProjectCopy;
 };
 
+function mediaOrientation(project: PortfolioProject) {
+  const media = project.cover ?? project.media?.[0];
+  if (!media) return "landscape";
+  if (media.aspectRatio === "2:3" || media.aspectRatio === "4:5") {
+    return "portrait";
+  }
+  return media.width && media.height && media.width < media.height
+    ? "portrait"
+    : "landscape";
+}
+
 export function ProjectIndex({
   projects,
   playLabel,
@@ -42,6 +53,7 @@ export function ProjectIndex({
           <StaggerGroup
             as="article"
             className="project-row"
+            data-orientation={mediaOrientation(project)}
             key={project.id}
             step={40}
           >

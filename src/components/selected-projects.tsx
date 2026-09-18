@@ -13,6 +13,16 @@ type SelectedProjectItem = {
   mediaCopy?: Record<string, MediaCopy>;
 };
 
+function mediaOrientation(media: ProjectMedia) {
+  if (media.aspectRatio === "2:3" || media.aspectRatio === "4:5") {
+    return "portrait";
+  }
+  if (media.width && media.height && media.width < media.height) {
+    return "portrait";
+  }
+  return "landscape";
+}
+
 type SelectedProjectsProps = {
   eyebrow: string;
   playLabel: string;
@@ -44,6 +54,7 @@ export function SelectedProjects({
             <StaggerGroup
               as="article"
               className="selected-project"
+              data-orientation={mediaOrientation(project.media!)}
               key={project.slug}
               step={40}
             >

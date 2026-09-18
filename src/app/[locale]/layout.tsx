@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 import { Geist, Newsreader } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -9,7 +10,6 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { MotionProvider } from "@/components/motion/motion-provider";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { brandColors } from "@/lib/brand-colors";
 import { isLocale, locales, type Locale } from "@/i18n/routing";
 import { serializeJsonLd } from "@/lib/json-ld";
 import { pageMetadata, personJsonLd } from "@/lib/metadata";
@@ -57,8 +57,8 @@ export async function generateMetadata({
 }
 
 export const viewport: Viewport = {
-  themeColor: brandColors.background,
-  colorScheme: "light",
+  themeColor: "#0d0d0c",
+  colorScheme: "dark light",
 };
 
 export default async function LocaleLayout({
@@ -82,7 +82,13 @@ export default async function LocaleLayout({
       lang={locale}
       className={`${sans.variable} ${serif.variable}`}
       data-scroll-behavior="smooth"
+      data-theme="dark"
     >
+      <head>
+        <Script id="theme-bootstrap" strategy="beforeInteractive">
+          {`try { const theme = localStorage.getItem("sofia-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}`}
+        </Script>
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           <MotionProvider>

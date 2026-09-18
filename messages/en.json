@@ -32,6 +32,10 @@
     }
   },
   "Navigation": {
+    "theme": {
+      "dark": "Switch to dark mode",
+      "light": "Switch to light mode"
+    },
     "skip": "Skip to content",
     "homeAria": "Go to home",
     "sectionsAria": "Primary navigation",

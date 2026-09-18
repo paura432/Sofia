@@ -3,18 +3,19 @@
    ========================================================================== */
 
 :root {
-  color-scheme: light;
-  --background: #f8f8f5;
-  --surface: #efefeb;
-  --foreground: #151513;
-  --foreground-soft: #454541;
-  --muted: #676761;
-  --line: #ddddd7;
-  --accent: #a52522;
+  color-scheme: dark;
+  --background: #0d0d0c;
+  --surface: #171715;
+  --surface-raised: #20201d;
+  --foreground: #f1efe8;
+  --foreground-soft: #cbc8bf;
+  --muted: #9b988f;
+  --line: #34342f;
+  --accent: #c84842;
   --accent-foreground: #fff8ef;
-  --film: #10100f;
-  --film-foreground: #f8f8f5;
-  --film-muted: #b9b9b0;
+  --film: #050505;
+  --film-foreground: #f7f5ee;
+  --film-muted: #bbb8af;
 
   /* typography scale */
   --text-2xs: 0.72rem;
@@ -57,6 +58,22 @@
   --motion-distance-md: 8px;
   --motion-distance-reveal: 14px;
   --ease-out-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --background: #f8f8f5;
+  --surface: #efefeb;
+  --surface-raised: #e7e7e1;
+  --foreground: #151513;
+  --foreground-soft: #454541;
+  --muted: #676761;
+  --line: #ddddd7;
+  --accent: #a52522;
+  --accent-foreground: #fff8ef;
+  --film: #10100f;
+  --film-foreground: #f8f8f5;
+  --film-muted: #b9b9b0;
 }
 
 /* ==========================================================================
@@ -340,6 +357,23 @@ p {
   background: var(--header-surface);
   backdrop-filter: blur(10px);
   transition: border-color var(--motion-interface) var(--ease-out-editorial);
+}
+
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  min-height: 44px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
 }
 
 .nav-shell {
@@ -1196,7 +1230,7 @@ p {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 .hero .display-hero,

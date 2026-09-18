@@ -32,6 +32,10 @@
     }
   },
   "Navigation": {
+    "theme": {
+      "dark": "Activar modo oscuro",
+      "light": "Activar modo claro"
+    },
     "skip": "Saltar al contenido",
     "homeAria": "Ir al inicio",
     "sectionsAria": "Navegación principal",

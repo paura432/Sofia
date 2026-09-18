@@ -68,7 +68,7 @@ export default async function Home() {
     getTranslations("CurrentPositions"),
     getTranslations("Projects"),
   ]);
-  const selectedProjects = getSelectedProjects(2);
+  const selectedProjects = getSelectedProjects(3);
   const featuredAudiovisual = getPublishedProjects().find(
     (project) => project.featured && project.discipline.includes("audiovisual"),
   );
