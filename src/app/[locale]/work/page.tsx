@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { ExperienceHighlights } from "@/components/experience-highlights";
 import { AnimatedLine } from "@/components/motion/animated-line";
-import { MotionLink } from "@/components/motion/motion-link";
 import { PhotoArchive } from "@/components/photo-archive";
 import { ProjectIndex } from "@/components/project-index";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { experience } from "@/content/experience";
-import { currentPositionIds } from "@/content/profile";
 import {
   buildProjectMediaCopy,
   getPublishedProjects,
@@ -23,23 +19,10 @@ type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-type ExperienceCopy = {
-  discipline: string;
-  role: string;
-  period: string;
-  summary: string;
-  context?: string;
-  responsibilities: Record<string, string>;
-};
-
 type ProjectCopy = {
   title: string;
   media?: Record<string, MediaCopy>;
 };
-
-const reportingItems = currentPositionIds
-  .map((id) => experience.find((item) => item.id === id))
-  .filter((item): item is (typeof experience)[number] => Boolean(item));
 
 export async function generateMetadata({
   params,
@@ -58,9 +41,8 @@ export async function generateMetadata({
 }
 
 export default async function WorkPage() {
-  const [t, experienceText, projectsText] = await Promise.all([
+  const [t, projectsText] = await Promise.all([
     getTranslations("Work"),
-    getTranslations("Experience"),
     getTranslations("Projects"),
   ]);
   const publishedProjects = getPublishedProjects();
@@ -169,29 +151,6 @@ export default async function WorkPage() {
         </>
       ) : null}
 
-      <section className="section" aria-labelledby="work-reporting" id="trayectoria">
-        <div className="container editorial-grid">
-          <SectionHeading
-            eyebrow={t("reportingEyebrow")}
-            id="work-reporting"
-            text={t("reportingText")}
-            title={t("reportingTitle")}
-          />
-          <div>
-            <ExperienceHighlights
-              copyFor={(id) =>
-                experienceText.raw(`items.${id}`) as ExperienceCopy
-              }
-              items={reportingItems}
-              numberFor={(index) => String(index + 1).padStart(2, "0")}
-              responsibilityKeysFor={(item) => item.responsibilityKeys.slice(0, 3)}
-            />
-            <div className="work-section-footer">
-              <MotionLink href="/experience">{t("viewExperience")}</MotionLink>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
