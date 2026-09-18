@@ -746,6 +746,28 @@ p {
   padding-top: var(--space-lg);
 }
 
+.project-detail-film {
+  background: var(--film);
+  color: var(--film-foreground);
+}
+
+.project-detail-film .section {
+  border-color: color-mix(in srgb, var(--film-foreground) 16%, transparent);
+}
+
+.project-detail-film .page-hero p:not(.eyebrow):not(.project-kicker):not(.project-story-meta),
+.project-detail-film .project-kicker,
+.project-detail-film .project-story-meta,
+.project-detail-film .project-detail-copy,
+.project-detail-film .project-credits dt {
+  color: var(--film-muted);
+}
+
+.project-detail-film .project-nav-title,
+.project-detail-film .display-page {
+  color: var(--film-foreground);
+}
+
 .more-from-series-frame {
   width: 100%;
   max-width: var(--photo-canvas-max);
@@ -1718,18 +1740,16 @@ p {
 
 .detail-grid-inner {
   display: grid;
-  gap: 1px;
-  background: var(--line);
+  gap: var(--space-lg);
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 
 .detail-grid-inner article {
   display: grid;
   align-content: start;
   gap: var(--space-sm);
-  background: var(--background);
-  padding: var(--space-md);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: var(--space-md);
 }
 
 .detail-grid-inner .display-section {
@@ -1793,19 +1813,17 @@ p {
 }
 
 .trajectory-row h2 {
-  font-family: var(--font-sans), Arial, sans-serif;
-  font-size: clamp(1.15rem, 1.8vw, 1.55rem);
-  font-weight: 720;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 500;
   line-height: 1.15;
-  text-transform: uppercase;
 }
 
 .trajectory-role {
   margin-top: 10px;
   color: var(--muted);
   font-size: var(--text-ui);
-  font-weight: 720;
-  text-transform: uppercase;
+  font-weight: 620;
 }
 
 /* ==========================================================================

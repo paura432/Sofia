@@ -161,6 +161,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const projectOrdinal = String(projectIndex + 1).padStart(2, "0");
   const projectTotal = String(published.length).padStart(2, "0");
   const visibleYear = publishableYear(project.year);
+  const isFilm = project.discipline.includes("audiovisual");
   const facts = [
     copy.format,
     locationLabel,
@@ -173,7 +174,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   );
 
   return (
-    <main id="main">
+    <main className={isFilm ? "project-detail-film" : undefined} id="main">
       <ProjectPhotoViewer
         closeLabel={t("viewerClose")}
         items={essayPhotos}
@@ -187,7 +188,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {projectOrdinal} / {projectTotal}
           </p>
           <p className="project-kicker">{disciplineLabel(project, t)}</p>
-          <h1 className="display-page">{copy.title}</h1>
+          <h1 className="display-page project-title">{copy.title}</h1>
           {copy.dek ? <p>{copy.dek}</p> : null}
           {facts.length > 0 ? (
             <p className="project-story-meta">{facts.join(" · ")}</p>

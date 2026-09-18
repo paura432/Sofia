@@ -58,7 +58,7 @@ export function ProjectIndex({
               <div className="project-row-copy">
                 <div className="project-row-information">
                   <p className="case-discipline">{disciplineLabel(project)}</p>
-                  <h2>{copy.title}</h2>
+                  <h2 className="project-title">{copy.title}</h2>
                   {project.organisation || year ? (
                     <p className="case-role">
                       {[project.organisation, year].filter(Boolean).join(" · ")}
