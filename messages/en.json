@@ -420,7 +420,7 @@
     "toolsTitle": "Tools and workflow",
     "experienceEyebrow": "Now",
     "experienceTitle": "Current & recent",
-    "viewFullExperience": "View full experience ↗"
+    "viewFullExperience": "View full experience"
   },
   "CurrentPositions": {
     "items": {
@@ -616,6 +616,9 @@
   "WorkRail": {
     "label": "Stories",
     "back": "Work",
+    "index": "Index",
+    "audiovisual": "Audiovisual",
+    "photography": "Photography",
     "prev": "Previous story",
     "next": "Next story",
     "archive": "Archive 74",

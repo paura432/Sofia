@@ -420,7 +420,7 @@
     "toolsTitle": "Инструменты и процесс",
     "experienceEyebrow": "Сейчас",
     "experienceTitle": "Сейчас и недавно",
-    "viewFullExperience": "Смотреть полный опыт ↗"
+    "viewFullExperience": "Смотреть полный опыт"
   },
   "CurrentPositions": {
     "items": {
@@ -616,6 +616,9 @@
   "WorkRail": {
     "label": "Истории",
     "back": "Работа",
+    "index": "Индекс",
+    "audiovisual": "Аудиовизуальное",
+    "photography": "Фотография",
     "prev": "Предыдущая история",
     "next": "Следующая история",
     "archive": "Архив 74",

@@ -325,7 +325,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   params: { slug: prevProject.slug },
                 }}
               >
-                <span className="eyebrow">{t("prevProject")}</span>
+                <span className="project-nav-heading">
+                  <span aria-hidden="true" className="project-nav-arrow">←</span>
+                  <span className="eyebrow">{t("prevProject")}</span>
+                </span>
                 <span className="project-nav-title">
                   {
                     (
@@ -347,7 +350,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   params: { slug: nextProject.slug },
                 }}
               >
-                <span className="eyebrow">{t("nextProject")}</span>
+                <span className="project-nav-heading">
+                  <span className="eyebrow">{t("nextProject")}</span>
+                  <span aria-hidden="true" className="project-nav-arrow">→</span>
+                </span>
                 <span className="project-nav-title">
                   {
                     (

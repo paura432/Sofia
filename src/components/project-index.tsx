@@ -38,13 +38,10 @@ export function ProjectIndex({
         const copy = copyFor(project);
         const cover = project.cover ?? project.media?.[0];
         const year = publishableYear(project.year);
-        const align = index % 2 === 0 ? "end" : "start";
-
         return (
           <StaggerGroup
             as="article"
             className="project-row"
-            data-align={align}
             key={project.id}
             step={40}
           >
@@ -58,6 +55,21 @@ export function ProjectIndex({
               <p className="case-number">
                 {String(index + 1).padStart(2, "0")}
               </p>
+              <div className="project-row-copy">
+                <div className="project-row-information">
+                  <p className="case-discipline">{disciplineLabel(project)}</p>
+                  <h2>{copy.title}</h2>
+                  {project.organisation || year ? (
+                    <p className="case-role">
+                      {[project.organisation, year].filter(Boolean).join(" · ")}
+                    </p>
+                  ) : null}
+                </div>
+                <span className="project-row-cta">
+                  {viewLabel}
+                  <span aria-hidden="true">→</span>
+                </span>
+              </div>
               {cover ? (
                 <div className="project-row-cover">
                   <ProjectMediaLayout
@@ -67,19 +79,6 @@ export function ProjectIndex({
                   />
                 </div>
               ) : null}
-              <div className="project-row-copy">
-                <p className="case-discipline">{disciplineLabel(project)}</p>
-                <h2>{copy.title}</h2>
-                {project.organisation || year ? (
-                  <p className="case-role">
-                    {[project.organisation, year].filter(Boolean).join(" · ")}
-                  </p>
-                ) : null}
-                <span className="project-row-cta">
-                  {viewLabel}
-                  <span aria-hidden="true"> →</span>
-                </span>
-              </div>
             </Link>
           </StaggerGroup>
         );

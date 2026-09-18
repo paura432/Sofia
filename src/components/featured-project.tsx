@@ -71,7 +71,7 @@ export function FeaturedProject({
             </span>
             <span>
               {visibleYear ? `${visibleYear} ` : null}
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">→</span>
             </span>
           </span>
         </Link>

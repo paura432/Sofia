@@ -13,7 +13,7 @@ export default async function NotFound() {
           <h1 className="display-page">{t("title")}</h1>
           <p>{t("body")}</p>
           <Link className="text-link arrow-link" href="/">
-            {t("home")} <span aria-hidden="true">↗</span>
+            {t("home")} <span aria-hidden="true">→</span>
           </Link>
         </div>
       </section>

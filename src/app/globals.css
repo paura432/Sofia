@@ -373,9 +373,10 @@ p {
 
 .work-rail-back {
   grid-area: back;
+  gap: 6px;
 }
 
-.work-rail-stories {
+.work-rail-context {
   grid-area: stories;
 }
 
@@ -399,7 +400,7 @@ p {
   color: var(--accent);
 }
 
-.work-rail-stories {
+.work-rail-context {
   display: flex;
   gap: 8px 18px;
   min-width: 0;
@@ -408,11 +409,11 @@ p {
   scroll-snap-type: x proximity;
 }
 
-.work-rail-stories::-webkit-scrollbar {
+.work-rail-context::-webkit-scrollbar {
   display: none;
 }
 
-.work-rail-stories a {
+.work-rail-context a {
   flex: 0 0 auto;
   scroll-snap-align: start;
 }
@@ -635,6 +636,9 @@ p {
 
 .photo-viewer-controls button {
   min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   border: 0;
   padding: 0;
   background: transparent;
@@ -809,6 +813,40 @@ p {
   max-width: 34ch;
   color: inherit;
   text-decoration: none;
+}
+
+.project-nav-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.project-nav-next .project-nav-heading {
+  justify-content: flex-end;
+}
+
+.project-nav-arrow,
+.work-rail-arrow,
+.photo-viewer-arrow {
+  display: inline-block;
+  flex: 0 0 auto;
+  line-height: 1;
+  transition: transform var(--motion-fast) var(--ease-out-editorial);
+}
+
+@media (hover: hover) {
+  .work-rail-back:hover .work-rail-arrow,
+  .work-rail-pager a:first-child:hover .work-rail-arrow,
+  .project-nav-prev:hover .project-nav-arrow,
+  .photo-viewer-controls button:first-child:hover .photo-viewer-arrow {
+    transform: translateX(-3px);
+  }
+
+  .work-rail-pager a:last-child:hover .work-rail-arrow,
+  .project-nav-next:hover .project-nav-arrow,
+  .photo-viewer-controls button:last-child:hover .photo-viewer-arrow {
+    transform: translateX(3px);
+  }
 }
 
 .project-nav-next {
@@ -1103,7 +1141,7 @@ p {
   overflow-wrap: normal;
   word-break: keep-all;
   hyphens: none;
-  font-size: clamp(2.6rem, 16cqi, 6.75rem);
+  font-size: clamp(2.6rem, 14cqi, 6.75rem);
 }
 
 .hero-name-line {
@@ -1840,6 +1878,11 @@ body:has(.contact-page-block) .site-footer-contact {
     padding: 0 var(--page-gutter);
   }
 
+  .work-rail-inner:not([data-project]) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "stories";
+  }
+
   .mobile-nav {
     display: none;
   }
@@ -1862,7 +1905,7 @@ body:has(.contact-page-block) .site-footer-contact {
 
   .hero .display-hero,
   .hero-name {
-    font-size: clamp(2.6rem, 16cqi, 6.75rem);
+    font-size: clamp(2.6rem, 14cqi, 6.75rem);
   }
 
   .editorial-grid,

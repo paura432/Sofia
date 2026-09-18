@@ -152,7 +152,7 @@ export function MobileNav({
         ref={triggerRef}
         type="button"
       >
-        {summaryLabel}
+        {isOpen ? closeLabel : summaryLabel}
       </button>
 
       <AnimatePresence>

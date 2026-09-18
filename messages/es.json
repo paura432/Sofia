@@ -442,7 +442,7 @@
     "toolsTitle": "Herramientas y flujo de trabajo",
     "experienceEyebrow": "Ahora",
     "experienceTitle": "Actual y reciente",
-    "viewFullExperience": "Ver experiencia completa ↗"
+    "viewFullExperience": "Ver experiencia completa"
   },
   "CurrentPositions": {
     "items": {
@@ -638,6 +638,9 @@
   "WorkRail": {
     "label": "Historias",
     "back": "Trabajo",
+    "index": "Índice",
+    "audiovisual": "Audiovisual",
+    "photography": "Fotografía",
     "prev": "Historia anterior",
     "next": "Historia siguiente",
     "archive": "Archivo 74",
