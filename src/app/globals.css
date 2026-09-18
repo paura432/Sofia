@@ -183,8 +183,8 @@ p {
 .experience-period {
   color: var(--muted);
   font-size: var(--text-xs);
-  font-weight: 780;
-  letter-spacing: 0;
+  font-weight: 650;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -467,6 +467,7 @@ p {
 
 .photo-archive {
   scroll-margin-top: calc(var(--header-height) + var(--work-rail-height) + 12px);
+  border-top: 1px solid var(--foreground);
   padding-bottom: var(--space-section);
 }
 
@@ -734,6 +735,15 @@ p {
 .project-hero-media,
 .more-from-series {
   scroll-margin-top: calc(var(--header-height) + var(--work-rail-height) + 12px);
+}
+
+.project-detail-copy,
+.project-credits {
+  border-top: 0;
+}
+
+.project-detail-copy {
+  padding-top: var(--space-lg);
 }
 
 .more-from-series-frame {
@@ -1604,6 +1614,17 @@ p {
   min-height: calc(100svh - var(--header-height));
   display: grid;
   align-items: center;
+  background: var(--film);
+  color: var(--film-foreground);
+}
+
+.contact-page-block .contact-page-lead,
+.contact-page-block .contact-meta {
+  color: var(--film-muted);
+}
+
+.contact-page-block .contact-email {
+  color: var(--film-foreground);
 }
 
 .contact-block .display-page,
@@ -1741,6 +1762,11 @@ p {
 .about-summary {
   display: grid;
   gap: 0;
+}
+
+.detail-grid,
+.trajectory {
+  border-top: 0;
 }
 
 .about-summary-item {
