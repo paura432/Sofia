@@ -8,20 +8,20 @@ export default async function WorkLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [rail] = await Promise.all([
-    getTranslations("WorkRail"),
-  ]);
+  const rail = await getTranslations("WorkRail");
   const stories = getPublishedProjects().map((project) => ({
     slug: project.slug,
-    label: rail(project.slug),
   }));
 
   return (
     <>
       <WorkRail
+        audiovisualLabel={rail("audiovisual")}
         archiveLabel={rail("archive")}
         backLabel={rail("back")}
+        indexLabel={rail("index")}
         nextLabel={rail("next")}
+        photographyLabel={rail("photography")}
         prevLabel={rail("prev")}
         stories={stories}
         workLabel={rail("label")}

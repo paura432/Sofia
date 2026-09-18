@@ -155,7 +155,8 @@ export function PhotoViewerDialog({
                 onClick={() => onNavigate(activeIndex - 1)}
                 type="button"
               >
-                ← {prevLabel}
+                <span aria-hidden="true" className="photo-viewer-arrow">←</span>
+                {prevLabel}
               </button>
               <span>
                 {String(activeIndex + 1).padStart(2, "0")} /{" "}
@@ -166,7 +167,8 @@ export function PhotoViewerDialog({
                 onClick={() => onNavigate(activeIndex + 1)}
                 type="button"
               >
-                {nextLabel} →
+                {nextLabel}
+                <span aria-hidden="true" className="photo-viewer-arrow">→</span>
               </button>
             </div>
           ) : null}

@@ -110,8 +110,8 @@ export default async function WorkPage() {
       </section>
 
       {audiovisualProjects.length > 0 ? (
-        <section aria-labelledby="work-audiovisual" className="section" id="audiovisual">
-          <div className="container editorial-grid">
+        <section aria-labelledby="work-audiovisual" className="section work-film-section" id="audiovisual">
+          <div className="container work-project-section">
             <SectionHeading
               eyebrow={t("audiovisualEyebrow")}
               id="work-audiovisual"
@@ -139,7 +139,7 @@ export default async function WorkPage() {
           data-portfolio-pieces={photographyProjects.length}
           id="fotografia"
         >
-          <div className="container editorial-grid">
+          <div className="container work-project-section">
             <SectionHeading
               eyebrow={t("photographyEyebrow")}
               id="work-photography"

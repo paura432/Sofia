@@ -22,6 +22,7 @@ type FeaturedProjectProps = {
   playLabel: string;
   mediaCopy?: Record<string, MediaCopy>;
   headingId?: string;
+  tone?: "film";
 };
 
 export function FeaturedProject({
@@ -36,6 +37,7 @@ export function FeaturedProject({
   playLabel,
   mediaCopy,
   headingId = "featured-project",
+  tone,
 }: FeaturedProjectProps) {
   const visibleYear = publishableYear(year);
   const featuredMedia = video ?? cover;
@@ -45,7 +47,10 @@ export function FeaturedProject({
   }
 
   return (
-    <section className="section featured-project" aria-labelledby={headingId}>
+    <section
+      aria-labelledby={headingId}
+      className={`section featured-project${tone ? ` featured-project-${tone}` : ""}`}
+    >
       <Reveal className="container">
         <p className="eyebrow">{eyebrow}</p>
         <Link className="featured-project-link" href={href}>
@@ -71,7 +76,7 @@ export function FeaturedProject({
             </span>
             <span>
               {visibleYear ? `${visibleYear} ` : null}
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">→</span>
             </span>
           </span>
         </Link>

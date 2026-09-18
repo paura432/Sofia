@@ -49,7 +49,7 @@ export function MotionLink({
   return (
     <Link className={classNames} href={link.href}>
       {children}
-      <span aria-hidden="true"> ↗</span>
+      <span aria-hidden="true">→</span>
     </Link>
   );
 }

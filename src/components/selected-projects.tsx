@@ -74,7 +74,7 @@ export function SelectedProjects({
                   {project.organisation ? <p>{project.organisation}</p> : null}
                   <span className="project-row-cta">
                     {viewLabel}
-                    <span aria-hidden="true"> →</span>
+                    <span aria-hidden="true">→</span>
                   </span>
                 </div>
               </Link>

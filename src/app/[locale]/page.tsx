@@ -8,14 +8,11 @@ import { AnimatedLine } from "@/components/motion/animated-line";
 import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
 import { StaggerGroup } from "@/components/motion/stagger";
-import { ReporterReel } from "@/components/reporter-reel";
 import { SectionHeading } from "@/components/section-heading";
 import { SelectedProjects } from "@/components/selected-projects";
 import {
   buildProjectMediaCopy,
-  getFeaturedProject,
   getPublishedProjects,
-  getReporterReel,
   getSelectedProjects,
   type MediaCopy,
   type PortfolioProject,
@@ -71,12 +68,6 @@ export default async function Home() {
     getTranslations("CurrentPositions"),
     getTranslations("Projects"),
   ]);
-  const featuredProject = getFeaturedProject();
-  const reporterReel = getReporterReel();
-  const reelMedia = reporterReel
-    ? (reporterReel.media?.find((media) => media.type === "video") ??
-      reporterReel.cover)
-    : undefined;
   const selectedProjects = getSelectedProjects(2);
   const featuredAudiovisual = getPublishedProjects().find(
     (project) => project.featured && project.discipline.includes("audiovisual"),
@@ -94,40 +85,6 @@ export default async function Home() {
     <main id="main">
       <Hero />
 
-      {reporterReel && reelMedia ? (
-        <ReporterReel
-          eyebrow={projectsText("reelEyebrow")}
-          href={{
-            pathname: "/work/[slug]",
-            params: { slug: reporterReel.slug },
-          }}
-          media={reelMedia}
-          mediaCopy={resolvedMediaCopy(reporterReel)}
-          meta={projectsText("reelMeta")}
-          playLabel={projectsText("play")}
-          title={projectCopy(reporterReel).title}
-          viewLabel={projectsText("viewProject")}
-        />
-      ) : null}
-
-      {featuredProject ? (
-        <FeaturedProject
-          cover={featuredProject.cover}
-          discipline={disciplineLabel(featuredProject)}
-          eyebrow={projectsText("featuredEyebrow")}
-          href={{
-            pathname: "/work/[slug]",
-            params: { slug: featuredProject.slug },
-          }}
-          mediaCopy={resolvedMediaCopy(featuredProject)}
-          organisation={featuredProject.organisation}
-          playLabel={projectsText("play")}
-          title={projectCopy(featuredProject).title}
-          video={featuredProject.media?.find((media) => media.type === "video")}
-          year={featuredProject.year}
-        />
-      ) : null}
-
       {featuredAudiovisual ? (
         <FeaturedProject
           cover={featuredAudiovisual.cover}
@@ -138,6 +95,7 @@ export default async function Home() {
           mediaCopy={resolvedMediaCopy(featuredAudiovisual)}
           playLabel={projectsText("play")}
           title={projectCopy(featuredAudiovisual).title}
+          tone="film"
           year={featuredAudiovisual.year}
         />
       ) : null}
