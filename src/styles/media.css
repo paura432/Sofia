@@ -163,7 +163,7 @@
 .project-row-copy h2 {
   max-width: 18ch;
   font-family: var(--font-serif), Georgia, serif;
-  font-size: clamp(1.8rem, 5.5vw, 2.8rem);
+  font-size: clamp(2rem, 5.5vw, 3.5rem);
   font-weight: 500;
   line-height: 0.98;
 }
@@ -598,7 +598,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .selected-project:first-child {
+  .selected-project[data-orientation="portrait"] {
     grid-column: 1 / -1;
   }
 
@@ -610,7 +610,7 @@
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   }
 
-  .selected-projects-grid[data-count="2"] .selected-project:first-child {
+  .selected-projects-grid[data-count="2"] .selected-project[data-orientation="portrait"] {
     grid-column: auto;
   }
 
@@ -649,7 +649,7 @@
     grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
   }
 
-  .selected-project:first-child {
+  .selected-project[data-orientation="portrait"] {
     grid-row: span 2;
   }
 
@@ -661,7 +661,7 @@
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   }
 
-  .selected-projects-grid[data-count="2"] .selected-project:first-child {
+  .selected-projects-grid[data-count="2"] .selected-project[data-orientation="portrait"] {
     grid-row: auto;
   }
 
@@ -714,13 +714,20 @@
     grid-column: 1 / -1;
   }
 
-  .project-row-cover .portfolio-image-inner,
-  .project-row-cover .project-media-item.full .portfolio-image-inner {
+  .project-row[data-orientation="landscape"] .project-row-cover .portfolio-image-inner,
+  .project-row[data-orientation="landscape"] .project-row-cover .project-media-item.full .portfolio-image-inner {
     width: 100%;
-    aspect-ratio: unset !important;
-    height: clamp(280px, 38vw, 520px);
-    max-height: min(62vh, 640px);
-    min-height: 0;
+    aspect-ratio: 16 / 8 !important;
+  }
+
+  .project-row[data-orientation="portrait"] .project-row-cover {
+    width: min(54%, 40rem);
+    margin-left: auto;
+  }
+
+  .project-row[data-orientation="portrait"] .project-row-cover .portfolio-image-inner {
+    width: 100%;
+    aspect-ratio: 2 / 3 !important;
   }
 
   .project-list[data-count="1"] .project-row-link {
@@ -737,10 +744,8 @@
 }
 
 @media (min-width: 1200px) {
-  .project-row-cover .portfolio-image-inner,
-  .project-row-cover .project-media-item.full .portfolio-image-inner {
-    height: clamp(360px, 44vh, 600px);
-    max-height: min(72vh, 760px);
+  .project-row[data-orientation="portrait"] .project-row-cover {
+    width: min(46%, 42rem);
   }
 }
 

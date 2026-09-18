@@ -531,16 +531,12 @@ export function getFeaturedProject() {
 }
 
 export function getSelectedProjects(limit = 3) {
-  const featured = getFeaturedProject();
   const reel = getReporterReel();
-  const skip = new Set(
-    [featured?.id, reel?.id].filter((id): id is string => Boolean(id)),
-  );
 
   return getPublishedProjects()
     .filter(
       (project) =>
-        !skip.has(project.id) && !project.discipline.includes("audiovisual"),
+        project.id !== reel?.id && !project.discipline.includes("audiovisual"),
     )
     .slice(0, limit);
 }
