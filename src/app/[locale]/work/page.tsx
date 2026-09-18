@@ -77,36 +77,12 @@ export default async function WorkPage() {
 
   return (
     <main id="main">
-      <section className="page-hero section section-first">
+      <section className="page-hero work-page-hero section section-first">
         <Reveal className="container page-hero-inner">
           <p className="eyebrow">{t("pageEyebrow")}</p>
           <h1 className="display-page">{t("pageTitle")}</h1>
           <p>{t("pageText")}</p>
         </Reveal>
-      </section>
-
-      <section className="section" aria-labelledby="work-reporting" id="trayectoria">
-        <div className="container editorial-grid">
-          <SectionHeading
-            eyebrow={t("reportingEyebrow")}
-            id="work-reporting"
-            text={t("reportingText")}
-            title={t("reportingTitle")}
-          />
-          <div>
-            <ExperienceHighlights
-              copyFor={(id) =>
-                experienceText.raw(`items.${id}`) as ExperienceCopy
-              }
-              items={reportingItems}
-              numberFor={(index) => String(index + 1).padStart(2, "0")}
-              responsibilityKeysFor={(item) => item.responsibilityKeys.slice(0, 3)}
-            />
-            <div className="work-section-footer">
-              <MotionLink href="/experience">{t("viewExperience")}</MotionLink>
-            </div>
-          </div>
-        </div>
       </section>
 
       {audiovisualProjects.length > 0 ? (
@@ -192,6 +168,30 @@ export default async function WorkPage() {
           />
         </>
       ) : null}
+
+      <section className="section" aria-labelledby="work-reporting" id="trayectoria">
+        <div className="container editorial-grid">
+          <SectionHeading
+            eyebrow={t("reportingEyebrow")}
+            id="work-reporting"
+            text={t("reportingText")}
+            title={t("reportingTitle")}
+          />
+          <div>
+            <ExperienceHighlights
+              copyFor={(id) =>
+                experienceText.raw(`items.${id}`) as ExperienceCopy
+              }
+              items={reportingItems}
+              numberFor={(index) => String(index + 1).padStart(2, "0")}
+              responsibilityKeysFor={(item) => item.responsibilityKeys.slice(0, 3)}
+            />
+            <div className="work-section-footer">
+              <MotionLink href="/experience">{t("viewExperience")}</MotionLink>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

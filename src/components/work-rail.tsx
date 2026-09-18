@@ -52,7 +52,7 @@ export function WorkRail({
           </Link>
         ) : (
           <div className="work-rail-context">
-            <Link aria-current="page" href="/work">{indexLabel}</Link>
+            <Link href="/work">{indexLabel}</Link>
             <Link
               href={{ pathname: "/work", hash: "audiovisual" }}
             >
