@@ -14,6 +14,7 @@ import { SelectedProjects } from "@/components/selected-projects";
 import {
   buildProjectMediaCopy,
   getFeaturedProject,
+  getPublishedProjects,
   getReporterReel,
   getSelectedProjects,
   type MediaCopy,
@@ -77,6 +78,9 @@ export default async function Home() {
       reporterReel.cover)
     : undefined;
   const selectedProjects = getSelectedProjects(2);
+  const featuredAudiovisual = getPublishedProjects().find(
+    (project) => project.featured && project.discipline.includes("audiovisual"),
+  );
   const disciplineLabel = (project: PortfolioProject) =>
     project.discipline
       .map((discipline) => projectsText(`disciplines.${discipline}`))
@@ -121,6 +125,19 @@ export default async function Home() {
           title={projectCopy(featuredProject).title}
           video={featuredProject.media?.find((media) => media.type === "video")}
           year={featuredProject.year}
+        />
+      ) : null}
+
+      {featuredAudiovisual ? (
+        <FeaturedProject
+          cover={featuredAudiovisual.cover}
+          discipline={disciplineLabel(featuredAudiovisual)}
+          eyebrow={projectsText("audiovisualEyebrow")}
+          href={{ pathname: "/work/[slug]", params: { slug: featuredAudiovisual.slug } }}
+          mediaCopy={resolvedMediaCopy(featuredAudiovisual)}
+          playLabel={projectsText("play")}
+          title={projectCopy(featuredAudiovisual).title}
+          year={featuredAudiovisual.year}
         />
       ) : null}
 

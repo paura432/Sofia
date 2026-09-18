@@ -44,6 +44,7 @@ type ProjectCopy = {
   result?: string;
   roles?: string[];
   credits?: Record<string, string>;
+  creditLabels?: Record<string, string>;
   media?: Record<string, MediaCopy>;
 };
 
@@ -229,7 +230,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <p className="eyebrow">{t("context")}</p>
               <p>{copy.context}</p>
             </div>
-            {copy.roles && copy.roles.length > 1 ? (
+            {copy.roles && copy.roles.length > 0 ? (
               <div>
                 <p className="eyebrow">{t("role")}</p>
                 <ul className="project-role-list">
@@ -284,9 +285,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <Reveal className="container editorial-grid">
             <p className="eyebrow">{t("credits")}</p>
             <dl>
-              {Object.entries(copy.credits).map(([label, value]) => (
-                <div key={label}>
-                  <dt>{label}</dt>
+              {Object.entries(copy.credits).map(([key, value]) => (
+                <div key={key}>
+                  <dt>{copy.creditLabels?.[key] ?? key}</dt>
                   <dd>{value}</dd>
                 </div>
               ))}

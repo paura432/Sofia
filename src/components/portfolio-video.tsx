@@ -1,9 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 
 import { focalPointStyle, getMediaSizes, type ProjectMedia } from "@/content/projects";
+
+const MuxPlayer = dynamic(() => import("@mux/mux-player-react"), { ssr: false });
 
 type PortfolioVideoProps = {
   media: ProjectMedia;
@@ -42,6 +45,11 @@ export function PortfolioVideo({
   const frameClassName = ["portfolio-video", className].filter(Boolean).join(" ");
   const objectPosition = focalPointStyle(media);
   const mobilePoster = media.mobilePoster;
+  const canPlay = media.provider === "mux"
+    ? Boolean(media.muxPlaybackId)
+    : media.provider === "native"
+      ? Boolean(media.src)
+      : Boolean(embedSrc(media));
 
   useEffect(() => {
     if (isPlaying && media.provider === "native") {
@@ -55,6 +63,16 @@ export function PortfolioVideo({
 
   return (
     <div className={frameClassName} style={{ aspectRatio: ratio }}>
+      {isPlaying && media.provider === "mux" && media.muxPlaybackId ? (
+        <MuxPlayer
+          accentColor="#a52522"
+          className="portfolio-video-player"
+          metadata={{ video_title: title }}
+          playbackId={media.muxPlaybackId}
+          preload="none"
+          streamType="on-demand"
+        />
+      ) : null}
       {isPlaying && media.provider === "native" && media.src ? (
         <video
           className="portfolio-video-player"
@@ -90,7 +108,7 @@ export function PortfolioVideo({
         />
       ) : null}
 
-      {posterVisible ? (
+      {posterVisible && canPlay ? (
         <button
           aria-label={`${playLabel}: ${title}`}
           className="portfolio-video-poster"
@@ -130,6 +148,11 @@ export function PortfolioVideo({
             <span className="portfolio-video-duration">{media.duration}</span>
           ) : null}
         </button>
+      ) : posterVisible ? (
+        <div className="portfolio-video-poster" role="img" aria-label={title}>
+          <Image alt="" fill sizes={sizes ?? getMediaSizes(media.layout)} src={media.poster} style={{ objectPosition }} />
+          {media.duration ? <span className="portfolio-video-duration">{media.duration}</span> : null}
+        </div>
       ) : null}
     </div>
   );

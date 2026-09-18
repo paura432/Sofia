@@ -14,12 +14,13 @@ export type ProjectDiscipline =
   | "reporting"
   | "interview"
   | "video"
+  | "audiovisual"
   | "photography"
   | "communication";
 
 export type MediaType = "image" | "video" | "embed";
 
-export type VideoProvider = "youtube" | "vimeo" | "native";
+export type VideoProvider = "youtube" | "vimeo" | "native" | "mux";
 
 export type MediaLayout =
   | "full"
@@ -72,6 +73,8 @@ export type ProjectMedia = {
   poster?: string;
   provider?: VideoProvider;
   videoId?: string;
+  /** Public Mux Playback ID. Never expose a Mux API secret. */
+  muxPlaybackId?: string;
   externalUrl?: string;
   width?: number;
   height?: number;
@@ -210,6 +213,64 @@ export const projects: PortfolioProject[] = [
     translationKey: "isocero",
   },
   // year hidden when "Pendiente" (`publishableYear`).
+  {
+    id: "4-minutos",
+    slug: "4-minutos",
+    year: "",
+    discipline: ["audiovisual"],
+    featured: true,
+    order: 4,
+    published: false,
+    translationKey: "4-minutos",
+    cover: {
+      id: "4-minutos-poster",
+      type: "video",
+      layout: "full",
+      aspectRatio: "16:9",
+      poster: "/media/audiovisual/4-minutos-poster.webp",
+      provider: "mux",
+      titleKey: "4-minutos-poster",
+      duration: "03:59",
+    },
+  },
+  {
+    id: "tras-el-sofa",
+    slug: "tras-el-sofa",
+    year: "",
+    discipline: ["audiovisual"],
+    order: 5,
+    published: false,
+    translationKey: "tras-el-sofa",
+    cover: {
+      id: "tras-el-sofa-poster",
+      type: "video",
+      layout: "full",
+      aspectRatio: "16:9",
+      poster: "/media/audiovisual/tras-el-sofa-poster.webp",
+      provider: "mux",
+      titleKey: "tras-el-sofa-poster",
+      duration: "05:59",
+    },
+  },
+  {
+    id: "version-beta",
+    slug: "version-beta",
+    year: "",
+    discipline: ["audiovisual"],
+    order: 6,
+    published: false,
+    translationKey: "version-beta",
+    cover: {
+      id: "version-beta-poster",
+      type: "video",
+      layout: "full",
+      aspectRatio: "16:9",
+      poster: "/media/audiovisual/version-beta-poster.webp",
+      provider: "mux",
+      titleKey: "version-beta-poster",
+      duration: "00:58",
+    },
+  },
   {
     id: "musica-en-directo",
     slug: "musica-en-directo",
@@ -398,7 +459,9 @@ export function hasMediaAsset(media: ProjectMedia) {
     const hasPlayableSource =
       media.provider === "native"
         ? Boolean(media.src)
-        : Boolean(media.provider && media.videoId);
+        : media.provider === "mux"
+          ? true
+          : Boolean(media.provider && media.videoId);
 
     return Boolean(media.poster && media.titleKey && hasPlayableSource);
   }

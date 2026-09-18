@@ -82,6 +82,9 @@
     "reportingEyebrow": "Карьера",
     "reportingTitle": "Телевидение и коммуникации",
     "reportingText": "Освещение, интервью и производство для медиа и организаций.",
+    "audiovisualEyebrow": "Кино и аудиовизуал",
+    "audiovisualTitle": "Аудиовизуальные работы",
+    "audiovisualText": "Режиссура, монтаж и аудиовизуальный нарратив в художественных и промо-проектах.",
     "photographyEyebrow": "Фотография",
     "photographyTitle": "Редакционные серии",
     "photographyText": "Опубликованная визуальная работа в четырёх историях и расширенном архиве.",
@@ -107,6 +110,7 @@
   "Projects": {
     "featuredEyebrow": "Главное",
     "selectedEyebrow": "Избранные работы",
+    "audiovisualEyebrow": "Избранный аудиовизуал",
     "allEyebrow": "Портфолио",
     "viewProject": "Смотреть историю",
     "viewRelatedWork": "Смотреть {count, plural, one {# проект} few {# проекта} many {# проектов} other {# проекта}}",
@@ -145,10 +149,14 @@
       "reporting": "Репортаж",
       "interview": "Интервью",
       "video": "Видео",
+      "audiovisual": "Кино и аудиовизуал",
       "photography": "Фотография",
       "communication": "Коммуникация"
     },
     "items": {
+      "4-minutos": {"title": "4 MINUTOS", "description": "Городской ночной короткометражный фильм о взаимодействии двух молодых людей, снятый в чёрно-белой эстетике.", "format": "Короткометражный фильм · 03:59", "context": "Движение камеры, актёрская игра и прямой визуальный язык создают живую, шероховатую атмосферу.", "roles": ["Режиссура — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "sound": "María Rodríguez", "cast": "Eneko Valle García · Fran Vidales Santos", "equipment": "Nikon D3300 · iPhone 13"}, "creditLabels": {"direction": "Режиссура", "sound": "Звук", "cast": "Актёры", "equipment": "Оборудование"}, "media": {"4-minutos-poster": {"title": "4 MINUTOS", "alt": "Чёрно-белый кадр взаимодействия двух персонажей"}}},
+      "tras-el-sofa": {"title": "Tras el sofá", "description": "Интимная драматическая короткометражная работа о разговоре и эмоциональной ситуации в домашнем пространстве.", "format": "Короткометражный фильм · 05:59", "context": "Актёрская игра, крупные планы и детали интерьера поддерживают драматическое напряжение.", "roles": ["Режиссура — Sofía Chernikova", "Монтаж — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "editing": "Sofía Chernikova"}, "creditLabels": {"direction": "Режиссура", "editing": "Монтаж"}, "media": {"tras-el-sofa-poster": {"title": "Tras el sofá", "alt": "Крупный план героини в домашнем интерьере"}}},
+      "version-beta": {"title": "VERSIÓN BETA", "description": "Быстрый городской промо-тизер, сочетающий обращения в кадре, действие и графические элементы.", "format": "Промо-ролик · 00:58", "context": "Работа представляет проект об аутентичности, переменах и вторых шансах.", "media": {"version-beta-poster": {"title": "VERSIÓN BETA", "alt": "Главный герой рядом с надписью VERSIÓN BETA"}}},
       "reporter-reel": {
         "title": "Репортёрский рил",
         "description": "Подборка сюжетов, интервью и репортажей.",
@@ -615,5 +623,8 @@
     "calle-documental": "Улица",
     "estudio-editorial": "Студия",
     "retrato-editorial": "Портрет"
+    ,"4-minutos": "4 MINUTOS"
+    ,"tras-el-sofa": "Tras el sofá"
+    ,"version-beta": "VERSIÓN BETA"
   }
 }

@@ -82,6 +82,9 @@
     "reportingEyebrow": "Career",
     "reportingTitle": "Television and communications",
     "reportingText": "Coverage, interviews and production for media and organisations.",
+    "audiovisualEyebrow": "Film & Audiovisual",
+    "audiovisualTitle": "Audiovisual work",
+    "audiovisualText": "Direction, editing and audiovisual storytelling across fiction and promotional work.",
     "photographyEyebrow": "Photography",
     "photographyTitle": "Editorial series",
     "photographyText": "Published visual work across four stories and an extended archive.",
@@ -107,6 +110,7 @@
   "Projects": {
     "featuredEyebrow": "Featured",
     "selectedEyebrow": "Selected work",
+    "audiovisualEyebrow": "Selected audiovisual work",
     "allEyebrow": "Portfolio",
     "viewProject": "View story",
     "viewRelatedWork": "View {count, plural, one {# project} other {# projects}}",
@@ -145,10 +149,14 @@
       "reporting": "Reporting",
       "interview": "Interview",
       "video": "Video",
+      "audiovisual": "Film & Audiovisual",
       "photography": "Photography",
       "communication": "Communications"
     },
     "items": {
+      "4-minutos": {"title": "4 MINUTOS", "description": "An urban, nocturnal short following two young people through close staging and black-and-white imagery.", "format": "Short film · 03:59", "context": "Moving camera, performance and direct visual language create an immediate, raw atmosphere.", "roles": ["Direction — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "sound": "María Rodríguez", "cast": "Eneko Valle García · Fran Vidales Santos", "equipment": "Nikon D3300 · iPhone 13"}, "creditLabels": {"direction": "Direction", "sound": "Sound", "cast": "Cast", "equipment": "Equipment"}, "media": {"4-minutos-poster": {"title": "4 MINUTOS", "alt": "Black-and-white frame of two characters interacting"}}},
+      "tras-el-sofa": {"title": "Tras el sofá", "description": "An intimate dramatic short built around a conversation and an emotional situation in a domestic space.", "format": "Short film · 05:59", "context": "Performance, close shots and environmental detail sustain its narrative tension.", "roles": ["Direction — Sofía Chernikova", "Editing — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "editing": "Sofía Chernikova"}, "creditLabels": {"direction": "Direction", "editing": "Editing"}, "media": {"tras-el-sofa-poster": {"title": "Tras el sofá", "alt": "Close portrait of a protagonist in a domestic interior"}}},
+      "version-beta": {"title": "VERSIÓN BETA", "description": "A fast-cut, urban promotional teaser combining testimonials, action and graphic elements.", "format": "Promotional piece · 00:58", "context": "It presents a proposal centred on authenticity, change and second chances.", "media": {"version-beta-poster": {"title": "VERSIÓN BETA", "alt": "Protagonist beside the VERSIÓN BETA title"}}},
       "reporter-reel": {
         "title": "Reporter reel",
         "description": "A selection of coverage, interviews and reporting pieces.",
@@ -615,5 +623,8 @@
     "calle-documental": "Street",
     "estudio-editorial": "Studio",
     "retrato-editorial": "Portrait"
+    ,"4-minutos": "4 MINUTOS"
+    ,"tras-el-sofa": "Tras el sofá"
+    ,"version-beta": "VERSIÓN BETA"
   }
 }

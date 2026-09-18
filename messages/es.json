@@ -82,6 +82,9 @@
     "reportingEyebrow": "Trayectoria",
     "reportingTitle": "Televisión y comunicación",
     "reportingText": "Cobertura, entrevistas y producción en medios y organizaciones.",
+    "audiovisualEyebrow": "Cine & Audiovisual",
+    "audiovisualTitle": "Piezas audiovisuales",
+    "audiovisualText": "Dirección, montaje y narrativa audiovisual en proyectos de ficción y promoción.",
     "photographyEyebrow": "Fotografía",
     "photographyTitle": "Series editoriales",
     "photographyText": "Documentación visual publicada en cuatro historias y archivo ampliado.",
@@ -107,6 +110,7 @@
   "Projects": {
     "featuredEyebrow": "Destacado",
     "selectedEyebrow": "Trabajo seleccionado",
+    "audiovisualEyebrow": "Audiovisual seleccionado",
     "allEyebrow": "Portfolio",
     "viewProject": "Ver historia",
     "viewRelatedWork": "Ver {count, plural, one {# proyecto} other {# proyectos}}",
@@ -145,10 +149,36 @@
       "reporting": "Reporting",
       "interview": "Entrevista",
       "video": "Vídeo",
+      "audiovisual": "Cine & Audiovisual",
       "photography": "Fotografía",
       "communication": "Comunicación"
     },
     "items": {
+      "4-minutos": {
+        "title": "4 MINUTOS",
+        "description": "Pieza audiovisual de estética urbana y nocturna que sigue la interacción entre dos jóvenes a través de una puesta en escena cercana y un tratamiento visual en blanco y negro.",
+        "format": "Cortometraje · 03:59",
+        "context": "El proyecto combina cámara en movimiento, interpretación y lenguaje directo para construir una atmósfera espontánea y áspera.",
+        "roles": ["Dirección — Sofía Chernikova"],
+        "credits": {"direction": "Sofía Chernikova", "sound": "María Rodríguez", "cast": "Eneko Valle García · Fran Vidales Santos", "equipment": "Nikon D3300 · iPhone 13"}, "creditLabels": {"direction": "Dirección", "sound": "Sonido", "cast": "Reparto", "equipment": "Equipo"},
+        "media": {"4-minutos-poster": {"title": "4 MINUTOS", "alt": "Fotograma en blanco y negro de dos personajes en interacción"}}
+      },
+      "tras-el-sofa": {
+        "title": "Tras el sofá",
+        "description": "Cortometraje dramático de tono íntimo construido alrededor de una conversación y una situación emocional en un espacio doméstico.",
+        "format": "Cortometraje · 05:59",
+        "context": "La pieza utiliza interpretación, planos cerrados y detalles del entorno para sostener la tensión narrativa.",
+        "roles": ["Dirección — Sofía Chernikova", "Montaje — Sofía Chernikova"],
+        "credits": {"direction": "Sofía Chernikova", "editing": "Sofía Chernikova"}, "creditLabels": {"direction": "Dirección", "editing": "Montaje"},
+        "media": {"tras-el-sofa-poster": {"title": "Tras el sofá", "alt": "Primer plano de una protagonista en un interior doméstico"}}
+      },
+      "version-beta": {
+        "title": "VERSIÓN BETA",
+        "description": "Teaser audiovisual de montaje rápido y estética urbana que combina testimonios a cámara, acción y recursos gráficos.",
+        "format": "Pieza promocional · 00:58",
+        "context": "Presenta una propuesta centrada en autenticidad, cambio y segundas oportunidades.",
+        "media": {"version-beta-poster": {"title": "VERSIÓN BETA", "alt": "Protagonista junto al título VERSIÓN BETA"}}
+      },
       "reporter-reel": {
         "title": "Reporter reel",
         "description": "Selección de coberturas, entrevistas y piezas de reporterismo.",
@@ -615,5 +645,8 @@
     "calle-documental": "Calle",
     "estudio-editorial": "Estudio",
     "retrato-editorial": "Retrato"
+    ,"4-minutos": "4 MINUTOS"
+    ,"tras-el-sofa": "Tras el sofá"
+    ,"version-beta": "VERSIÓN BETA"
   }
 }

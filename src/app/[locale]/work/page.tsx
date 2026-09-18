@@ -64,6 +64,12 @@ export default async function WorkPage() {
     getTranslations("Projects"),
   ]);
   const publishedProjects = getPublishedProjects();
+  const audiovisualProjects = publishedProjects.filter((project) =>
+    project.discipline.includes("audiovisual"),
+  );
+  const photographyProjects = publishedProjects.filter((project) =>
+    project.discipline.includes("photography") && !project.discipline.includes("audiovisual"),
+  );
   const disciplineLabel = (project: PortfolioProject) =>
     project.discipline
       .map((discipline) => projectsText(`disciplines.${discipline}`))
@@ -103,11 +109,34 @@ export default async function WorkPage() {
         </div>
       </section>
 
-      {publishedProjects.length > 0 ? (
+      {audiovisualProjects.length > 0 ? (
+        <section aria-labelledby="work-audiovisual" className="section" id="audiovisual">
+          <div className="container editorial-grid">
+            <SectionHeading
+              eyebrow={t("audiovisualEyebrow")}
+              id="work-audiovisual"
+              text={t("audiovisualText")}
+              title={t("audiovisualTitle")}
+            />
+            <ProjectIndex
+              copyFor={(project) => {
+                const raw = projectsText.raw(`items.${project.translationKey}`) as ProjectCopy;
+                return { title: raw.title, media: buildProjectMediaCopy(project, raw.media) };
+              }}
+              disciplineLabel={disciplineLabel}
+              playLabel={projectsText("play")}
+              projects={audiovisualProjects}
+              viewLabel={projectsText("viewProject")}
+            />
+          </div>
+        </section>
+      ) : null}
+
+      {photographyProjects.length > 0 ? (
         <section
           aria-labelledby="work-photography"
           className="section"
-          data-portfolio-pieces={publishedProjects.length}
+          data-portfolio-pieces={photographyProjects.length}
           id="fotografia"
         >
           <div className="container editorial-grid">
@@ -136,7 +165,7 @@ export default async function WorkPage() {
               }}
               disciplineLabel={disciplineLabel}
               playLabel={projectsText("play")}
-              projects={publishedProjects}
+              projects={photographyProjects}
               viewLabel={projectsText("viewProject")}
             />
           </div>
