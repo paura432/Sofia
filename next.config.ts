@@ -3,7 +3,13 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [new URL("https://image.mux.com/**")],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "image.mux.com",
+        pathname: "/**",
+      },
+    ],
   },
 };
 

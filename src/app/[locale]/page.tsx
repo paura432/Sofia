@@ -133,6 +133,7 @@ export default async function Home() {
           cover={featuredAudiovisual.cover}
           discipline={disciplineLabel(featuredAudiovisual)}
           eyebrow={projectsText("audiovisualEyebrow")}
+          headingId="featured-audiovisual"
           href={{ pathname: "/work/[slug]", params: { slug: featuredAudiovisual.slug } }}
           mediaCopy={resolvedMediaCopy(featuredAudiovisual)}
           playLabel={projectsText("play")}

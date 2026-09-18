@@ -214,7 +214,7 @@ export const projects: PortfolioProject[] = [
     published: false,
     translationKey: "isocero",
   },
-  // Film remains unpublished until each public playback endpoint is verified.
+  // Mux Image API and public HLS playback verified 2026-09-18.
   {
     id: "4-minutos",
     slug: "4-minutos",
@@ -222,16 +222,16 @@ export const projects: PortfolioProject[] = [
     discipline: ["audiovisual"],
     featured: true,
     order: 4,
-    published: false,
+    published: true,
     translationKey: "4-minutos",
     cover: {
       id: "4-minutos-poster",
       type: "video",
       layout: "full",
       aspectRatio: "16:9",
-      muxPlaybackId: "m2dxVaMBZKQ8wX7dNCsOlic6QwJB3O2OISItsFiOHbF2OO",
+      muxPlaybackId: "m2dxVaMBZKQ8wX7dNCs01ic6QwJB302OISItsFiOHbF200",
       posterTime: 202,
-      poster: getMuxThumbnailUrl("m2dxVaMBZKQ8wX7dNCsOlic6QwJB3O2OISItsFiOHbF2OO", {
+      poster: getMuxThumbnailUrl("m2dxVaMBZKQ8wX7dNCs01ic6QwJB302OISItsFiOHbF200", {
         time: 202,
         width: 1600,
       }),
@@ -246,16 +246,16 @@ export const projects: PortfolioProject[] = [
     year: "",
     discipline: ["audiovisual"],
     order: 5,
-    published: false,
+    published: true,
     translationKey: "tras-el-sofa",
     cover: {
       id: "tras-el-sofa-poster",
       type: "video",
       layout: "full",
       aspectRatio: "16:9",
-      muxPlaybackId: "6EyrkximJ0V2KpOdeJLvf2miHudBAOp2EcNOu54sjPg",
+      muxPlaybackId: "6EyrkximJOV2KpOdeJLvf2miHudBAOp2EcNOu54sjPg",
       posterTime: 303,
-      poster: getMuxThumbnailUrl("6EyrkximJ0V2KpOdeJLvf2miHudBAOp2EcNOu54sjPg", {
+      poster: getMuxThumbnailUrl("6EyrkximJOV2KpOdeJLvf2miHudBAOp2EcNOu54sjPg", {
         time: 303,
         width: 1600,
       }),
@@ -270,16 +270,16 @@ export const projects: PortfolioProject[] = [
     year: "",
     discipline: ["audiovisual"],
     order: 6,
-    published: false,
+    published: true,
     translationKey: "version-beta",
     cover: {
       id: "version-beta-poster",
       type: "video",
       layout: "full",
       aspectRatio: "16:9",
-      muxPlaybackId: "pOfGCwjIQAJINOlF5rVSWVQIGL9aGKwhNLAeJWZrO2ag",
+      muxPlaybackId: "pOfGCwjlQAJJN01F5rVSWVQIGL9aGKwhNLAeJWzEr02ag",
       posterTime: 50,
-      poster: getMuxThumbnailUrl("pOfGCwjIQAJINOlF5rVSWVQIGL9aGKwhNLAeJWZrO2ag", {
+      poster: getMuxThumbnailUrl("pOfGCwjlQAJJN01F5rVSWVQIGL9aGKwhNLAeJWzEr02ag", {
         time: 50,
         width: 1600,
       }),
@@ -523,7 +523,8 @@ export function getReporterReel() {
 export function getFeaturedProject() {
   const reel = getReporterReel();
   const pool = getPublishedProjects().filter(
-    (project) => project.id !== reel?.id,
+    (project) =>
+      project.id !== reel?.id && !project.discipline.includes("audiovisual"),
   );
 
   return pool.find((project) => project.featured) ?? pool[0];
@@ -537,7 +538,10 @@ export function getSelectedProjects(limit = 3) {
   );
 
   return getPublishedProjects()
-    .filter((project) => !skip.has(project.id))
+    .filter(
+      (project) =>
+        !skip.has(project.id) && !project.discipline.includes("audiovisual"),
+    )
     .slice(0, limit);
 }
 
