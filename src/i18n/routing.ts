@@ -17,6 +17,11 @@ export const routing = defineRouting({
       en: "/work/[slug]",
       ru: "/rabota/[slug]",
     },
+    "/work/archive": {
+      es: "/trabajo/archivo",
+      en: "/work/archive",
+      ru: "/rabota/arhiv",
+    },
     "/about": {
       es: "/sobre-mi",
       en: "/about",

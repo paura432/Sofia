@@ -1,6 +1,7 @@
 import { StaggerGroup } from "@/components/motion/stagger";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
 import {
+  getPublishedProjectOrdinal,
   publishableYear,
   type MediaCopy,
   type PortfolioProject,
@@ -45,7 +46,7 @@ export function ProjectIndex({
 
   return (
     <div className="project-list" data-count={projects.length}>
-      {projects.map((project, index) => {
+      {projects.map((project) => {
         const copy = copyFor(project);
         const cover = project.cover ?? project.media?.[0];
         const year = publishableYear(project.year);
@@ -53,6 +54,7 @@ export function ProjectIndex({
           <StaggerGroup
             as="article"
             className="project-row"
+            data-index-layout={project.indexLayout ?? mediaOrientation(project)}
             data-orientation={mediaOrientation(project)}
             key={project.id}
             step={40}
@@ -65,7 +67,7 @@ export function ProjectIndex({
               }}
             >
               <p className="case-number">
-                {String(index + 1).padStart(2, "0")}
+                {String(getPublishedProjectOrdinal(project)).padStart(2, "0")}
               </p>
               <div className="project-row-copy">
                 <div className="project-row-information">

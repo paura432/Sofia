@@ -40,6 +40,8 @@ export type NarrativeRole =
 
 export type AspectRatio = "3:2" | "4:3" | "16:9" | "4:5" | "2:3" | "1:1";
 
+export type IndexLayout = "cinematic" | "wide" | "portrait" | "split";
+
 /** Porcentajes 0-100 que se traducen a `object-position: x% y%`. */
 export type MediaFocalPoint = {
   x: number;
@@ -121,6 +123,8 @@ export type PortfolioProject = {
   discipline: ProjectDiscipline[];
   experienceId?: ExperienceId;
   featured?: boolean;
+  /** Composición del índice, declarada por proyecto y nunca por posición. */
+  indexLayout?: IndexLayout;
   reporterReel?: boolean;
   published: boolean;
   translationKey: string;
@@ -221,6 +225,7 @@ export const projects: PortfolioProject[] = [
     year: "",
     discipline: ["audiovisual"],
     featured: true,
+    indexLayout: "cinematic",
     order: 4,
     published: true,
     translationKey: "4-minutos",
@@ -245,6 +250,7 @@ export const projects: PortfolioProject[] = [
     slug: "tras-el-sofa",
     year: "",
     discipline: ["audiovisual"],
+    indexLayout: "cinematic",
     order: 5,
     published: true,
     translationKey: "tras-el-sofa",
@@ -269,6 +275,7 @@ export const projects: PortfolioProject[] = [
     slug: "version-beta",
     year: "",
     discipline: ["audiovisual"],
+    indexLayout: "cinematic",
     order: 6,
     published: true,
     translationKey: "version-beta",
@@ -295,6 +302,7 @@ export const projects: PortfolioProject[] = [
     discipline: ["photography"],
     order: 10,
     featured: true,
+    indexLayout: "wide",
     published: true,
     translationKey: "musica-en-directo",
     rights: {
@@ -309,6 +317,7 @@ export const projects: PortfolioProject[] = [
     slug: "calle-documental",
     year: "Pendiente",
     discipline: ["photography"],
+    indexLayout: "split",
     order: 11,
     published: true,
     translationKey: "calle-documental",
@@ -324,6 +333,7 @@ export const projects: PortfolioProject[] = [
     slug: "estudio-editorial",
     year: "Pendiente",
     discipline: ["photography"],
+    indexLayout: "wide",
     order: 12,
     published: true,
     translationKey: "estudio-editorial",
@@ -339,6 +349,7 @@ export const projects: PortfolioProject[] = [
     slug: "retrato-editorial",
     year: "Pendiente",
     discipline: ["photography"],
+    indexLayout: "portrait",
     order: 13,
     published: true,
     translationKey: "retrato-editorial",
@@ -514,6 +525,10 @@ function byEditorialOrder<T extends PortfolioProject>(list: T[]) {
 
 export function getPublishedProjects() {
   return byEditorialOrder(projects.filter(isRenderableProject));
+}
+
+export function getPublishedProjectOrdinal(project: PortfolioProject) {
+  return getPublishedProjects().findIndex((item) => item.id === project.id) + 1;
 }
 
 export function getReporterReel() {

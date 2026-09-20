@@ -136,6 +136,7 @@ export default async function WorkPage() {
             <AnimatedLine tone="strong" />
           </div>
           <PhotoArchive
+            archiveLabel={t("archiveExplore")}
             closeLabel={t("archiveClose")}
             groups={[
               { id: "musica", title: t("archiveMusicaFull") },
@@ -147,6 +148,7 @@ export default async function WorkPage() {
             prevLabel={t("archivePrev")}
             title={t("archiveTitle")}
             totalLabel={t("archiveTotal")}
+            preview
           />
         </>
       ) : null}

@@ -75,37 +75,30 @@ export default async function AboutPage() {
 
   return (
     <main id="main">
-      <section className="page-hero section section-first">
-        <Reveal className="container page-hero-inner">
-          <p className="eyebrow">{profile("aboutPageEyebrow")}</p>
-          <h1 className="display-page">{profile("aboutHeroTitle")}</h1>
-        </Reveal>
-      </section>
-
-      <section className="section" aria-labelledby="brief-bio">
-        <Reveal className="container about-columns">
-          <div>
+      <section className="section section-first about-opening" aria-labelledby="brief-bio">
+        <Reveal className="container about-opening-grid">
+          <div className="about-opening-title">
+            <p className="eyebrow">{profile("aboutPageEyebrow")}</p>
+            <h1 className="display-page">{profile("aboutHeroTitle")}</h1>
             <p className="eyebrow">{profile("bioEyebrow")}</p>
             <h2 className="display-section" id="brief-bio">
               {profile("bioTitle")}
             </h2>
           </div>
-          <div className="body-copy">
-            {portrait ? (
-              <figure className="about-portrait">
-                <Image
-                  alt={profile(portrait.altKey)}
-                  height={portrait.height}
-                  preload
-                  sizes="(max-width: 699px) 100vw, 460px"
-                  src={portrait.src}
-                  style={{
-                    objectPosition: focalPointStyle(portrait),
-                  }}
-                  width={portrait.width}
-                />
-              </figure>
-            ) : null}
+          {portrait ? (
+            <figure className="about-portrait">
+              <Image
+                alt={profile(portrait.altKey)}
+                height={portrait.height}
+                preload
+                sizes="(max-width: 699px) 100vw, 48vw"
+                src={portrait.src}
+                style={{ objectPosition: focalPointStyle(portrait) }}
+                width={portrait.width}
+              />
+            </figure>
+          ) : null}
+          <div className="body-copy about-opening-copy">
             <p>{profile("bio")}</p>
             <p>{profile("interests")}</p>
           </div>

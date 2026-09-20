@@ -26,6 +26,11 @@ export const localizedPathnames: Record<
     en: "/en/work/[slug]",
     ru: "/ru/rabota/[slug]",
   },
+  "/work/archive": {
+    es: "/trabajo/archivo",
+    en: "/en/work/archive",
+    ru: "/ru/rabota/arhiv",
+  },
   "/about": {
     es: "/sobre-mi",
     en: "/en/about",

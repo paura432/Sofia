@@ -18,16 +18,19 @@ import {
   buildJustifiedRows,
   isArchiveMobile,
 } from "@/lib/justified-rows";
+import { Link } from "@/i18n/navigation";
 
 type GroupId = keyof typeof photoArchiveGroups;
 
 type PhotoArchiveProps = {
+  archiveLabel?: string;
   closeLabel: string;
   groups: { id: GroupId; title: string }[];
   nextLabel: string;
   prevLabel: string;
   title: string;
   totalLabel: string;
+  preview?: boolean;
 };
 
 const SECTION_INDEX = ["01", "02", "03", "04"] as const;
@@ -89,12 +92,14 @@ function ArchiveThumb({
 }
 
 export function PhotoArchive({
+  archiveLabel,
   closeLabel,
   groups,
   nextLabel,
   prevLabel,
   title,
   totalLabel,
+  preview = false,
 }: PhotoArchiveProps) {
   const t = useTranslations("Work");
   const frameRef = useRef<HTMLDivElement>(null);
@@ -120,14 +125,19 @@ export function PhotoArchive({
   const flatItems = useMemo(
     () =>
       groups.flatMap((group) =>
-        photoArchiveGroups[group.id].map((item, index) =>
-          toViewerItem(
-            item,
-            t("archiveImageLabel", { group: group.title, index: index + 1 }),
+        photoArchiveGroups[group.id]
+          .slice(0, preview ? 1 : undefined)
+          .map((item, index) =>
+            toViewerItem(
+              item,
+              t("archiveImageLabel", {
+                group: group.title,
+                index: index + 1,
+              }),
+            ),
           ),
-        ),
       ),
-    [groups, t],
+    [groups, preview, t],
   );
   const indexById = useMemo(
     () =>
@@ -147,18 +157,22 @@ export function PhotoArchive({
           <p className="eyebrow">{title}</p>
           <p>{totalLabel}</p>
         </header>
-        <nav aria-label={title} className="photo-archive-index">
-          <a href="#archivo">
-            {t("archiveIndexAll")} {PHOTO_ARCHIVE_COUNT}
-          </a>
-          {groups.map((group) => (
-            <a href={`#archivo-${group.id}`} key={group.id}>
-              {t(INDEX_KEY[group.id])} {photoArchiveGroups[group.id].length}
+        {preview ? null : (
+          <nav aria-label={title} className="photo-archive-index">
+            <a href="#archivo">
+              {t("archiveIndexAll")} {PHOTO_ARCHIVE_COUNT}
             </a>
-          ))}
-        </nav>
+            {groups.map((group) => (
+              <a href={`#archivo-${group.id}`} key={group.id}>
+                {t(INDEX_KEY[group.id])} {photoArchiveGroups[group.id].length}
+              </a>
+            ))}
+          </nav>
+        )}
         {groups.map((group, groupIndex) => {
-          const photos: ArchivePhoto[] = [...photoArchiveGroups[group.id]];
+          const photos: ArchivePhoto[] = [
+            ...photoArchiveGroups[group.id].slice(0, preview ? 1 : undefined),
+          ];
           const localIndex = new Map<string, number>(
             photos.map((photo, index) => [photo.id, index]),
           );
@@ -257,6 +271,11 @@ export function PhotoArchive({
             </section>
           );
         })}
+        {preview && archiveLabel ? (
+          <Link className="photo-archive-link" href="/work/archive">
+            {archiveLabel}
+          </Link>
+        ) : null}
       </div>
       <PhotoViewerDialog
         activeIndex={activeIndex}

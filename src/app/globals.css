@@ -283,6 +283,7 @@ p {
 
 .editorial-grid,
 .about-columns,
+.about-opening-grid,
 .contact-grid {
   display: grid;
   gap: var(--space-lg);
@@ -290,6 +291,7 @@ p {
 
 .editorial-grid > *,
 .about-columns > *,
+.about-opening-grid > *,
 .contact-grid > *,
 .hero-grid > *,
 .practice-item > *,
@@ -520,7 +522,7 @@ p {
   gap: 8px 18px;
   margin: 0 0 var(--space-lg);
   font-size: var(--text-2xs);
-  font-weight: 760;
+  font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -534,7 +536,7 @@ p {
   padding-bottom: 8px;
   border-bottom: 1px solid var(--line);
   font-size: var(--text-xs);
-  font-weight: 760;
+  font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -649,7 +651,7 @@ p {
   color: inherit;
   font: inherit;
   font-size: var(--text-2xs);
-  font-weight: 760;
+  font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   cursor: pointer;
@@ -681,7 +683,7 @@ p {
   max-width: min(72vw, 28rem);
   margin: 0;
   font-size: var(--text-2xs);
-  font-weight: 760;
+  font-weight: 560;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -698,7 +700,7 @@ p {
   gap: 12px;
   padding: 0 1.25rem;
   font-size: var(--text-2xs);
-  font-weight: 760;
+  font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -1814,6 +1816,49 @@ p {
   color: var(--foreground-soft);
 }
 
+.photo-archive-link {
+  display: inline-flex;
+  margin-top: var(--space-sm);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.about-opening {
+  padding-bottom: var(--space-xl);
+}
+
+.about-opening-grid {
+  align-items: start;
+}
+
+.about-opening-title {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.about-opening-title .display-page {
+  max-width: 11ch;
+}
+
+.about-opening-title .display-section {
+  max-width: 14ch;
+}
+
+.about-opening .about-portrait {
+  margin: 0;
+}
+
+.about-opening .about-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.about-opening-copy {
+  max-width: 38ch;
+}
+
 /* El filo superior lo dibuja AnimatedLine. */
 .about-summary {
   display: grid;
@@ -2080,6 +2125,15 @@ body:has(.contact-page-block) .site-footer-contact {
 }
 
 @media (min-width: 1100px) {
+  .about-opening-grid {
+    grid-template-columns: minmax(0, 4fr) minmax(18rem, 4fr) minmax(0, 3fr);
+    gap: clamp(32px, 4vw, 72px);
+  }
+
+  .about-opening-copy {
+    align-self: end;
+  }
+
   .about-columns {
     grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
     gap: clamp(40px, 5vw, 80px);
