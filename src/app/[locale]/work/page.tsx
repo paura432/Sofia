@@ -4,11 +4,19 @@ import { getTranslations } from "next-intl/server";
 import { AnimatedLine } from "@/components/motion/animated-line";
 import { PhotoArchive } from "@/components/photo-archive";
 import { ProjectIndex } from "@/components/project-index";
+import {
+  ReportingIndex,
+  type ReportingStory,
+} from "@/components/reporting-index";
+import { ReporterReel } from "@/components/reporter-reel";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import {
   buildProjectMediaCopy,
+  hasMediaAsset,
+  hasProjectDetailPage,
   getPublishedProjects,
+  publishableYear,
   type MediaCopy,
   type PortfolioProject,
 } from "@/content/projects";
@@ -21,6 +29,7 @@ type PageProps = {
 
 type ProjectCopy = {
   title: string;
+  roles?: string[];
   media?: Record<string, MediaCopy>;
 };
 
@@ -49,8 +58,63 @@ export default async function WorkPage() {
   const audiovisualProjects = publishedProjects.filter((project) =>
     project.discipline.includes("audiovisual"),
   );
+  const reportingProjects = publishedProjects.filter((project) =>
+    project.discipline.includes("reporting") &&
+      !project.discipline.includes("audiovisual"),
+  );
+  const reporterReel = reportingProjects.find((project) => project.reporterReel);
+  const reporterReelMedia = [reporterReel?.cover, ...(reporterReel?.media ?? [])]
+    .find((media) => media?.type === "video");
+  const reporterReelCopy = reporterReel
+    ? (projectsText.raw(
+        `items.${reporterReel.translationKey}`,
+      ) as ProjectCopy)
+    : undefined;
+  const reportingPieces = reportingProjects.filter(
+    (project) => project !== reporterReel,
+  );
+  const reportingStories = reportingPieces.flatMap((project): ReportingStory[] => {
+    const raw = projectsText.raw(
+      `items.${project.translationKey}`,
+    ) as ProjectCopy;
+    const media = [project.cover, ...(project.media ?? [])].filter(
+      Boolean,
+    ) as NonNullable<typeof project.cover>[];
+    const poster =
+      media.find((item) => item.type === "image" && hasMediaAsset(item)) ??
+      media.find((item) => item.type === "video" && item.poster && hasMediaAsset(item));
+    const video = media.find(
+      (item) =>
+        item.type === "video" && item.aspectRatio && hasMediaAsset(item),
+    );
+    const posterSrc = poster?.type === "image" ? poster.src : poster?.poster;
+    const posterRatio = poster?.aspectRatio?.replace(":", " / ") ??
+      (poster?.width && poster.height
+        ? `${poster.width} / ${poster.height}`
+        : undefined);
+
+    if (!poster || !posterSrc || !posterRatio || !project.sourceUrl) return [];
+
+    return [{
+      id: project.id,
+      slug: project.slug,
+      title: raw.title,
+      roles: raw.roles,
+      organisation: project.organisation,
+      year: publishableYear(project.year),
+      sourceUrl: project.sourceUrl,
+      detailPage: hasProjectDetailPage(project),
+      posterSrc,
+      posterAlt: raw.media?.[poster.id]?.alt ?? raw.title,
+      posterRatio,
+      video,
+      playLabel: projectsText("playCoverage", { title: raw.title }),
+    }];
+  });
   const photographyProjects = publishedProjects.filter((project) =>
-    project.discipline.includes("photography") && !project.discipline.includes("audiovisual"),
+    project.discipline.includes("photography") &&
+      !project.discipline.includes("audiovisual") &&
+      !project.discipline.includes("reporting"),
   );
   const disciplineLabel = (project: PortfolioProject) =>
     project.discipline
@@ -66,6 +130,57 @@ export default async function WorkPage() {
           <p>{t("pageText")}</p>
         </Reveal>
       </section>
+
+      {reportingProjects.length > 0 ? (
+        <section
+          aria-labelledby="work-reporting"
+          className="section"
+          id="reporting"
+        >
+          <div className="container work-project-section">
+            <SectionHeading
+              eyebrow={t("reportingPortfolioEyebrow")}
+              id="work-reporting"
+              text={t("reportingPortfolioText")}
+              title={t("reportingPortfolioTitle")}
+            />
+            {reporterReel && reporterReelMedia && reporterReelCopy ? (
+              <ReporterReel
+                eyebrow={projectsText("reelEyebrow")}
+                href={{
+                  pathname: "/work/[slug]",
+                  params: { slug: reporterReel.slug },
+                }}
+                media={reporterReelMedia}
+                mediaCopy={buildProjectMediaCopy(
+                  reporterReel,
+                  reporterReelCopy.media,
+                )}
+                meta={reporterReelCopy.roles?.join(" · ")}
+                playLabel={projectsText("play")}
+                title={reporterReelCopy.title}
+                viewLabel={projectsText("viewReel")}
+              />
+            ) : null}
+            {reportingPieces.length > 0 ? (
+              <div className="work-project-section">
+                <SectionHeading
+                  eyebrow={t("reportingCoverageEyebrow")}
+                  id="work-reporting-coverage"
+                  text={t("reportingCoverageText")}
+                  title={t("reportingCoverageTitle")}
+                />
+                <ReportingIndex
+                  closePlayerLabel={projectsText("viewerClose")}
+                  playLabel={projectsText("play")}
+                  projects={reportingStories}
+                  viewOriginalLabel={projectsText("viewOriginal")}
+                />
+              </div>
+            ) : null}
+          </div>
+        </section>
+      ) : null}
 
       {audiovisualProjects.length > 0 ? (
         <section aria-labelledby="work-audiovisual" className="section work-film-section" id="audiovisual">

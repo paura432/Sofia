@@ -38,7 +38,14 @@ export type NarrativeRole =
   | "peak"
   | "closing";
 
-export type AspectRatio = "3:2" | "4:3" | "16:9" | "4:5" | "2:3" | "1:1";
+export type AspectRatio =
+  | "3:2"
+  | "4:3"
+  | "16:9"
+  | "9:16"
+  | "4:5"
+  | "2:3"
+  | "1:1";
 
 /** Porcentajes 0-100 que se traducen a `object-position: x% y%`. */
 export type MediaFocalPoint = {
@@ -122,6 +129,8 @@ export type PortfolioProject = {
   experienceId?: ExperienceId;
   featured?: boolean;
   reporterReel?: boolean;
+  /** Reporting stories default to Work-only; opt in when case-study context exists. */
+  detailPage?: boolean;
   published: boolean;
   translationKey: string;
   cover?: ProjectMedia;
@@ -451,6 +460,15 @@ export function buildProjectMediaCopy(
   return resolved;
 }
 
+function isPublicHttpUrl(value?: string) {
+  try {
+    const protocol = new URL(value ?? "").protocol;
+    return protocol === "http:" || protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
 function isValidFocalPoint(point: MediaFocalPoint) {
   return (
     Number.isFinite(point.x) &&
@@ -478,7 +496,7 @@ export function hasMediaAsset(media: ProjectMedia) {
     return Boolean(media.poster && media.titleKey && hasPlayableSource);
   }
 
-  return Boolean(media.externalUrl && media.titleKey);
+  return Boolean(isPublicHttpUrl(media.externalUrl) && media.titleKey);
 }
 
 function hasPlayableVideoSource(media: ProjectMedia) {
@@ -498,7 +516,39 @@ export function hasRenderableProjectContent(project: PortfolioProject) {
 export function isRenderableProject(
   project: PortfolioProject,
 ): project is PublishedPortfolioProject {
-  return project.published === true && hasRenderableProjectContent(project);
+  if (!project.published || !hasRenderableProjectContent(project)) return false;
+  if (!project.discipline.includes("reporting")) return true;
+
+  const media = [project.cover, ...(project.media ?? [])].filter(
+    Boolean,
+  ) as ProjectMedia[];
+  const hasPoster = media.some(
+    (item) => {
+      if (item.type === "image") return hasMediaAsset(item);
+      return Boolean(
+        item.type === "video" &&
+          item.poster &&
+          hasMediaAsset(item) &&
+          item.aspectRatio,
+      );
+    },
+  );
+  const hasReelVideo =
+    !project.reporterReel ||
+    media.some(
+      (item) =>
+        item.type === "video" &&
+        item.poster &&
+        hasMediaAsset(item) &&
+        item.aspectRatio,
+    );
+  return Boolean(
+    isPublicHttpUrl(project.sourceUrl) &&
+      project.roleKeys?.some(Boolean) &&
+      project.rights?.verified &&
+      hasPoster &&
+      hasReelVideo,
+  );
 }
 
 function byEditorialOrder<T extends PortfolioProject>(list: T[]) {
@@ -516,6 +566,17 @@ export function getPublishedProjects() {
   return byEditorialOrder(projects.filter(isRenderableProject));
 }
 
+export function hasProjectDetailPage(project: PortfolioProject) {
+  return (
+    project.detailPage ??
+    (!project.discipline.includes("reporting") || project.reporterReel === true)
+  );
+}
+
+export function getDetailedProjects() {
+  return getPublishedProjects().filter(hasProjectDetailPage);
+}
+
 export function getReporterReel() {
   return getPublishedProjects().find((project) => project.reporterReel);
 }
@@ -524,7 +585,9 @@ export function getFeaturedProject() {
   const reel = getReporterReel();
   const pool = getPublishedProjects().filter(
     (project) =>
-      project.id !== reel?.id && !project.discipline.includes("audiovisual"),
+      project.id !== reel?.id &&
+      !project.discipline.includes("audiovisual") &&
+      !project.discipline.includes("reporting"),
   );
 
   return pool.find((project) => project.featured) ?? pool[0];
@@ -536,13 +599,15 @@ export function getSelectedProjects(limit = 3) {
   return getPublishedProjects()
     .filter(
       (project) =>
-        project.id !== reel?.id && !project.discipline.includes("audiovisual"),
+        project.id !== reel?.id &&
+        !project.discipline.includes("audiovisual") &&
+        !project.discipline.includes("reporting"),
     )
     .slice(0, limit);
 }
 
 export function getProjectBySlug(slug: string) {
-  return getPublishedProjects().find((project) => project.slug === slug);
+  return getDetailedProjects().find((project) => project.slug === slug);
 }
 
 export function getRelatedProjects(experienceId: ExperienceId) {
@@ -552,30 +617,30 @@ export function getRelatedProjects(experienceId: ExperienceId) {
 }
 
 export function getNextProject(currentSlug: string) {
-  const publishedProjects = getPublishedProjects();
-  const currentIndex = publishedProjects.findIndex(
+  const detailProjects = getDetailedProjects();
+  const currentIndex = detailProjects.findIndex(
     (project) => project.slug === currentSlug,
   );
 
-  if (currentIndex === -1 || publishedProjects.length < 2) {
+  if (currentIndex === -1 || detailProjects.length < 2) {
     return undefined;
   }
 
-  return publishedProjects[(currentIndex + 1) % publishedProjects.length];
+  return detailProjects[(currentIndex + 1) % detailProjects.length];
 }
 
 export function getPrevProject(currentSlug: string) {
-  const publishedProjects = getPublishedProjects();
-  const currentIndex = publishedProjects.findIndex(
+  const detailProjects = getDetailedProjects();
+  const currentIndex = detailProjects.findIndex(
     (project) => project.slug === currentSlug,
   );
 
-  if (currentIndex === -1 || publishedProjects.length < 2) {
+  if (currentIndex === -1 || detailProjects.length < 2) {
     return undefined;
   }
 
-  return publishedProjects[
-    (currentIndex - 1 + publishedProjects.length) % publishedProjects.length
+  return detailProjects[
+    (currentIndex - 1 + detailProjects.length) % detailProjects.length
   ];
 }
 

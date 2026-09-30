@@ -23,12 +23,19 @@ cuando `Verified` es `yes` y existen archivo y derechos.
 | Video | Archivo o enlace del vídeo |
 | Photos | Archivos fotográficos disponibles |
 | Original URL | Publicación original, si existe |
+| Platform | Mux / YouTube / Vimeo / LinkedIn / Instagram / TikTok / external |
+| Aspect ratio | Ratio original: 9:16 / 16:9 / 1:1 / 4:5 |
+| Embed status | Verificado / fallback a fuente / pendiente |
+| Poster | Ruta de asset autorizado |
+| Featured | yes / no; solo selección editorial verificada |
+| Case study route | yes / no; no por defecto para coberturas breves |
 | Rights | Titular de los derechos y condiciones de uso |
 | Credits | Cámara, edición, producción y demás créditos |
 | Verified | yes / no |
+| Publication status | pending / published / rejected |
 
 ## Registro
 
-| Event | Date | Organisation | Interviewee | Role | Video | Photos | Original URL | Rights | Credits | Verified |
-|---|---|---|---|---|---|---|---|---|---|---|
-|  |  |  |  |  |  |  |  |  |  | no |
+| Event | Date | Organisation | Interviewee | Role | Video URL | Photos | Original URL | Platform | Aspect ratio | Embed status | Poster | Featured | Case study route | Rights | Credits | Verified | Publication status |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|  |  |  |  |  |  |  |  |  |  |  |  | no | no |  |  | no | pending |

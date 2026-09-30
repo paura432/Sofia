@@ -5,7 +5,7 @@ import type { MediaCopy, ProjectMedia } from "@/content/projects";
 
 type ReporterReelProps = {
   eyebrow: string;
-  meta: string;
+  meta?: string;
   title: string;
   playLabel: string;
   media: ProjectMedia;
@@ -44,7 +44,7 @@ export function ReporterReel({
           playLabel={playLabel}
           preloadFirst
         />
-        <p className="reporter-reel-meta">{meta}</p>
+        {meta ? <p className="reporter-reel-meta">{meta}</p> : null}
         <MotionLink href={href}>{viewLabel}</MotionLink>
       </Reveal>
     </section>

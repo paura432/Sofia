@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 import { WorkRail } from "@/components/work-rail";
-import { getPublishedProjects } from "@/content/projects";
+import { getDetailedProjects, getPublishedProjects } from "@/content/projects";
 
 export default async function WorkLayout({
   children,
@@ -9,9 +9,13 @@ export default async function WorkLayout({
   children: React.ReactNode;
 }) {
   const rail = await getTranslations("WorkRail");
-  const stories = getPublishedProjects().map((project) => ({
+  const projects = getPublishedProjects();
+  const stories = getDetailedProjects().map((project) => ({
     slug: project.slug,
   }));
+  const hasReporting = projects.some((project) =>
+    project.discipline.includes("reporting"),
+  );
 
   return (
     <>
@@ -22,6 +26,8 @@ export default async function WorkLayout({
         indexLabel={rail("index")}
         nextLabel={rail("next")}
         photographyLabel={rail("photography")}
+        reportingLabel={rail("reporting")}
+        hasReporting={hasReporting}
         prevLabel={rail("prev")}
         stories={stories}
         workLabel={rail("label")}

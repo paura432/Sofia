@@ -1,4 +1,4 @@
-# Content inventory — Reporter Reel
+# Content inventory — Reporting
 
 Registro interno de coberturas potenciales detectadas en el reporter reel de Sofía Chernikova.
 **No son proyectos verificados.** No se publican hasta completar verificación, archivo y derechos.
@@ -9,10 +9,21 @@ Relacionado: [`content-intake.md`](content-intake.md) (tabla operativa por pieza
 
 | Campo | Valor |
 |---|---|
-| Reel detectado | Sí (publicación propia de Sofía) |
-| Archivo definitivo | Pendiente |
+| Reporter Reel | Proyecto interno no publicado; URL y archivo definitivos pendientes |
+| URL de cobertura | No hay URLs de piezas en el inventario ni en `src/content/` |
 | Proyecto en `projects.ts` | `reporter-reel`, `published: false` |
 | Status por defecto | `pending-piece-verification` |
+
+## URL audit
+
+No publicar ningún candidato de abajo: el inventario no contiene su URL de origen,
+poster autorizado ni rol verificado. La única URL de LinkedIn en `src/content/profile.ts`
+es un perfil, no una publicación de cobertura; no se cuenta como pieza y su acceso
+público no se ha comprobado.
+
+| URL | Provider | Tipo / acceso | Contenido / rol | Verificación | Decisión |
+|---|---|---|---|---|---|
+| https://www.linkedin.com/in/sofia-chernikova | LinkedIn | Perfil; fetch respondió HTTP 429 | No identifica una pieza | No verificable | Excluir de coberturas |
 
 ## Reglas
 
