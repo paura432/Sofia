@@ -5,6 +5,12 @@ Registro interno de coberturas potenciales detectadas en el reporter reel de Sof
 
 Relacionado: [`content-intake.md`](content-intake.md) (tabla operativa por pieza).
 
+La lista de candidatos de este documento es únicamente una ayuda de
+investigación; no representa proyectos publicados ni reemplaza la tabla
+operativa de `content-intake.md`. Experiencias como Grupo Cadena Media y
+URJCmun viven en `experience.ts`; solo una pieza concreta y verificable vive
+en `projects.ts`.
+
 ## Estado global
 
 | Campo | Valor |

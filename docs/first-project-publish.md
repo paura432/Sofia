@@ -1,95 +1,30 @@
-# Primer proyecto publicable
+# Reporting piece publication checklist
 
-Checklist para pasar de `published: false` a Home/Work con evidencia real. Sin placeholders en producción.
+`Grupo Cadena Media`, URJCmun, Annie Bonnie and Isocero are employment or
+organizational experiences, not portfolio projects by themselves. Their verified
+career history lives in `src/content/experience.ts` and `messages/*/Experience`.
 
-## Orden recomendado
+This checklist applies only to a concrete reporting piece or the separate
+Reporter Reel. Candidate names in `content-inventory.md` are not publishable work.
 
-1. **Grupo Cadena Media** (`order: 1`, `featured: true`) — reportera TV, prioridad recruiter.
-2. URJCmun — cuando haya foto/vídeo verificable.
-3. Annie Bonnie · Isocero — según derechos y material.
+## Before adding a piece
 
-## Antes de `published: true`
+- Record one row in `content-intake.md` with an accessible original source URL.
+- Verify the exact title/event/date/organization and Sofía's role against sources.
+- Confirm the video or photo asset, poster, rights, credits, aspect ratio and
+  source attribution. Do not download or rehost third-party social video.
+- If a field is not confirmed, leave it blank; do not infer it.
 
-- [ ] Asset master en `public/media/projects/[slug]/`
-- [ ] `pnpm media:doctor` sin errores
-- [ ] Copy en `messages/*/Projects.items.[slug]` (title, description, roles)
-- [ ] `alt` ES/EN en `media.cover.altKey` → claves en `items.[slug].media`
-- [ ] `rights.verified: true` + nota interna si aplica
-- [ ] Revisión visual original vs WebP
-- [ ] `pnpm dev` → `/dev/media` solo en desarrollo
+## Publish
 
-## Ingest de imagen
+Only add a concrete piece to `src/content/projects.ts` when its source, media,
+role, copy and rights are verified. Add ES/EN/RU copy under
+`Projects.items.[slug]`; require `sourceUrl`, role, poster, rights and `published`
+guards for reporting. Keep brief coverages without unnecessary detail pages.
 
-```bash
-pnpm media:inspect -- --input "/ruta/original.jpg"
-pnpm media:image -- --input "/ruta/original.jpg" \
-  --project grupo-cadena-media \
-  --name grupo-cadena-media-cover \
-  --profile photo
-```
+The Reporter Reel is a separate selection, not a company project or a list of
+individual coverage cards. Keep it unpublished until its actual reel/master,
+credits and rights are verified.
 
-Poster de vídeo: mismo comando con `--profile poster`.
-
-```ts
-cover: {
-  id: "cover",
-  type: "image",
-  src: "/media/projects/grupo-cadena-media/grupo-cadena-media-cover.webp",
-  aspectRatio: "16:9",
-  width: 1920,
-  height: 1080,
-  altKey: "cover",
-  captionKey: "cover",
-  creditKey: "cover",
-},
-```
-
-## Pegar en `projects.ts`
-
-Pegar bloque `cover` en `src/content/projects.ts`.
-
-Añadir en `messages/es.json` y `messages/en.json` bajo `Projects.items.grupo-cadena-media`:
-
-```json
-"media": {
-  "cover": {
-    "alt": "…",
-    "caption": "…",
-    "credit": "Foto: …"
-  }
-}
-```
-
-## Publicar proyecto
-
-```ts
-published: true,
-rights: { verified: true, note: "…" },
-```
-
-Verificar:
-
-- Home: featured + selected
-- `/trabajo/grupo-cadena-media` y `/en/work/grupo-cadena-media`
-- Build: `pnpm build`
-
-## No publicar
-
-- Assets sin `rights.verified`
-- Imágenes de stock o placeholders
-- Masters de prueba del pipeline en `public/media/`
-
-## Estado actual
-
-| Slug | Copy ES/EN | Media | published | Notas |
-|---|---|---|---|---|
-| grupo-cadena-media | ✓ | pendiente | false | Prioridad 1 — reportera TV |
-| urjcmun | ✓ | pendiente | false | |
-| annie-bonnie | ✓ | pendiente | false | |
-| isocero | ✓ | pendiente | false | |
-| retrato-editorial | ✓ 14 alts ES/EN | ✓ 14 WebP | false | `year` pendiente confirmación editorial |
-| musica-en-directo | ✓ 6 alts ES/EN | ✓ 6 WebP | false | `year` pendiente confirmación editorial |
-| calle-documental | ✓ 4 alts ES/EN | ✓ 4 WebP | false | `year` pendiente confirmación editorial |
-
-Masters web de los 3 proyectos fotográficos: `public/media/projects/` — pendiente de commit.
-Originales y ZIPs: `incoming-media/` — ignorado por Git, intactos.
+Run `pnpm typecheck`, `pnpm lint`, `pnpm build`, `pnpm media:doctor` and
+`pnpm react-doctor` before publication.

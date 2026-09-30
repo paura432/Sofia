@@ -23,3 +23,6 @@ incoming-media/
 # Media ingest temporary files
 *.tmp-media-ingest*
 *.tmp-media
+
+# Generated local photo-review workspace
+tmp/photo-review/

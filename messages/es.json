@@ -202,58 +202,6 @@
           "Entrevistas a artistas, actores y figuras públicas."
         ]
       },
-      "grupo-cadena-media": {
-        "title": "Reportera TV — Grupo Cadena Media",
-        "description": "Cobertura de eventos y ruedas de prensa, entrevistas y piezas informativas para televisión.",
-        "dek": "Reporterismo de televisión en Grupo Cadena Media.",
-        "format": "Televisión · Reportaje",
-        "context": "Televisión de proximidad y contenidos informativos.",
-        "roles": [
-          "Cobertura de eventos y ruedas de prensa.",
-          "Entrevistas a artistas, actores y figuras públicas.",
-          "Reporterismo en eventos y estrenos.",
-          "Redacción de guiones y piezas informativas."
-        ]
-      },
-      "urjcmun": {
-        "title": "URJCmun — Comunicación y Social Media",
-        "description": "Trayectoria en el equipo de comunicación del modelo de Naciones Unidas de la URJC desde 2022.",
-        "dek": "Deputy Director for Social Media en 2026.",
-        "format": "Comunicación · Social Media",
-        "context": "Modelo de Naciones Unidas de la Universidad Rey Juan Carlos.",
-        "roles": [
-          "Estrategia y gestión de redes sociales.",
-          "Calendario editorial, copy y métricas.",
-          "Producción de contenido gráfico y audiovisual.",
-          "Coordinación de reporteros y creadores de contenido.",
-          "Cobertura de eventos y producción de contenido en tiempo real."
-        ]
-      },
-      "annie-bonnie": {
-        "title": "Annie Bonnie — Comunicación corporativa",
-        "description": "Contenidos digitales y corporativos: redacción, producción audiovisual, eventos y planificación editorial.",
-        "format": "Comunicación corporativa · Audiovisual",
-        "context": "Consultora de comunicación, estrategia, marketing de contenidos y relaciones públicas.",
-        "roles": [
-          "Redacción de artículos para blog corporativo y contenidos web.",
-          "Grabación y edición de piezas audiovisuales.",
-          "Producción de contenido para redes sociales y comunicación interna.",
-          "Organización y cobertura de eventos.",
-          "Apoyo en estrategia de contenidos y calendario editorial."
-        ]
-      },
-      "isocero": {
-        "title": "Isocero — Fotografía de retrato",
-        "description": "Fotografía de retrato en entornos turísticos: sesiones, edición profesional y trato directo con el cliente.",
-        "format": "Fotografía · Retrato",
-        "context": "Estudio especializado en fotografía de retrato en entornos hoteleros y turísticos.",
-        "roles": [
-          "Sesiones fotográficas con familias y niños.",
-          "Edición profesional de imágenes.",
-          "Venta de fotografías personalizadas.",
-          "Atención y asesoramiento al cliente."
-        ]
-      },
       "retrato-editorial": {
         "title": "Retrato & Editorial",
         "description": "Fotografía de retrato en localización urbana.",

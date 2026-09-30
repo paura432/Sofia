@@ -180,58 +180,6 @@
           "Interviews with artists, actors and public figures."
         ]
       },
-      "grupo-cadena-media": {
-        "title": "TV Reporter — Grupo Cadena Media",
-        "description": "Event and press conference coverage, interviews, and news pieces for television.",
-        "dek": "Television reporting at Grupo Cadena Media.",
-        "format": "Television · Reporting",
-        "context": "Local television and news content.",
-        "roles": [
-          "Coverage of events and press conferences.",
-          "Interviews with artists, actors and public figures.",
-          "Reporting from events and premieres.",
-          "Writing scripts and news pieces."
-        ]
-      },
-      "urjcmun": {
-        "title": "URJCmun — Communications and social media",
-        "description": "Progression within the communications team of the Model United Nations at URJC since 2022.",
-        "dek": "Deputy Director for Social Media in 2026.",
-        "format": "Communications · Social media",
-        "context": "Model United Nations at Universidad Rey Juan Carlos.",
-        "roles": [
-          "Social media strategy and management.",
-          "Editorial planning, copywriting and performance metrics.",
-          "Graphic and audiovisual content production.",
-          "Coordination of reporters and content creators.",
-          "Event coverage and real-time content production."
-        ]
-      },
-      "annie-bonnie": {
-        "title": "Annie Bonnie — Corporate communications",
-        "description": "Digital and corporate content combining writing, audiovisual production, events and editorial planning.",
-        "format": "Corporate communications · Audiovisual",
-        "context": "Communications, strategy, content marketing and public relations consultancy.",
-        "roles": [
-          "Writing articles for corporate blogs and web content.",
-          "Recording and editing audiovisual pieces.",
-          "Producing content for social media and internal communications.",
-          "Supporting the organisation and coverage of events.",
-          "Supporting content strategy and editorial planning."
-        ]
-      },
-      "isocero": {
-        "title": "Isocero — Portrait photography",
-        "description": "Portrait photography in tourism settings: sessions, professional editing and direct client interaction.",
-        "format": "Photography · Portrait",
-        "context": "Studio specialising in portrait photography in hotel and tourism settings.",
-        "roles": [
-          "Photography sessions with families and children.",
-          "Professional image editing.",
-          "Sales of personalised photographs.",
-          "Direct client service and product guidance."
-        ]
-      },
       "retrato-editorial": {
         "title": "Portrait & Editorial",
         "description": "Location portrait photography in urban settings.",

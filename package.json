@@ -13,6 +13,7 @@
     "media:image": "node scripts/media/convert-image.mjs",
     "media:folder": "node scripts/media/convert-folder.mjs",
     "media:inspect": "node scripts/media/inspect-image.mjs",
+    "media:review": "node scripts/media/photo-review.mjs",
     "media:doctor": "node scripts/media/doctor.mjs"
   },
   "dependencies": {

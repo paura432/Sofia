@@ -4,6 +4,11 @@ Registro interno para catalogar cada cobertura antes de convertirla en Project.
 No se publica nada desde aquí: una pieza solo pasa a `src/content/projects.ts`
 cuando `Verified` es `yes` y existen archivo y derechos.
 
+**Fuente operativa única para reporting pendiente:** esta tabla contiene una fila
+por pieza y sus evidencias. `content-inventory.md` solo conserva nombres
+candidatos y el resultado de la auditoría de URLs; no es otra fuente de datos.
+Experiencias laborales pertenecen a `src/content/experience.ts`, no a Projects.
+
 ## Cómo usarlo
 
 1. Una fila por cobertura.
