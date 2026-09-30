@@ -3,6 +3,8 @@ import { getMuxThumbnailUrl } from "@/lib/mux";
 import {
   calle_documental_cover,
   calle_documental_media,
+  entre_tiendas_y_tambores_cover,
+  entre_tiendas_y_tambores_media,
   estudio_editorial_cover,
   estudio_editorial_media,
   musica_en_directo_cover,
@@ -348,6 +350,21 @@ export const projects: PortfolioProject[] = [
     },
     cover: retrato_editorial_cover,
     media: retrato_editorial_media,
+  },
+  {
+    id: "entre-tiendas-y-tambores",
+    slug: "entre-tiendas-y-tambores",
+    year: "",
+    discipline: ["photography"],
+    order: 14,
+    published: false,
+    translationKey: "entre-tiendas-y-tambores",
+    cover: entre_tiendas_y_tambores_cover,
+    media: entre_tiendas_y_tambores_media,
+    rights: {
+      verified: false,
+      note: "Permisos de imagen, titularidad, crédito y rol fotográfico pendientes de confirmación directa.",
+    },
   },
 
 ];

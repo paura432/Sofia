@@ -303,6 +303,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           countLabel={t("seriesCompleteCount", {
             count: seriesPhotos.length,
           })}
+          copy={copy.media}
           items={seriesPhotos}
           nextLabel={t("viewerNext")}
           prevLabel={t("viewerPrev")}

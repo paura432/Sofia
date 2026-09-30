@@ -171,6 +171,62 @@ export const musica_en_directo_media: ProjectMedia[] = [
     }
 ];
 
+const tiendasyTamboresPortraits = new Set([
+  "003",
+  "006",
+  "008",
+  "022",
+  "034",
+  "035",
+]);
+
+function plazaPhoto(
+  id: string,
+  layout: ProjectMedia["layout"],
+  position: number,
+  narrativeRole?: ProjectMedia["narrativeRole"],
+): ProjectMedia {
+  const number = id.slice(-3);
+  const portrait = tiendasyTamboresPortraits.has(number);
+
+  return {
+    id,
+    type: "image",
+    src: `/media/projects/entre-tiendas-y-tambores/entre-tiendas-y-tambores-${number}.webp`,
+    width: portrait ? 1867 : 2800,
+    height: portrait ? 2800 : 1867,
+    aspectRatio: portrait ? "2:3" : "3:2",
+    layout,
+    position,
+    altKey: id,
+    narrativeRole,
+  };
+}
+
+export const entre_tiendas_y_tambores_cover = plazaPhoto(
+  "entre-tiendas-y-tambores-001",
+  "full",
+  1,
+  "opening",
+);
+
+export const entre_tiendas_y_tambores_media: ProjectMedia[] = [
+  plazaPhoto("entre-tiendas-y-tambores-004", "wide", 2, "context"),
+  plazaPhoto("entre-tiendas-y-tambores-007", "pair", 3, "development"),
+  plazaPhoto("entre-tiendas-y-tambores-009", "pair", 4, "development"),
+  plazaPhoto("entre-tiendas-y-tambores-011", "wide", 5, "development"),
+  plazaPhoto("entre-tiendas-y-tambores-017", "wide", 6, "development"),
+  plazaPhoto("entre-tiendas-y-tambores-012", "wide", 7, "context"),
+  plazaPhoto("entre-tiendas-y-tambores-016", "pair", 8, "development"),
+  plazaPhoto("entre-tiendas-y-tambores-018", "pair", 9, "development"),
+  plazaPhoto("entre-tiendas-y-tambores-023", "wide", 10, "peak"),
+  plazaPhoto("entre-tiendas-y-tambores-025", "pair", 11, "development"),
+  plazaPhoto("entre-tiendas-y-tambores-027", "pair", 12, "peak"),
+  plazaPhoto("entre-tiendas-y-tambores-030", "pair", 13, "development"),
+  plazaPhoto("entre-tiendas-y-tambores-031", "pair", 14, "peak"),
+  plazaPhoto("entre-tiendas-y-tambores-038", "wide", 15, "closing"),
+];
+
 export const estudio_editorial_cover: ProjectMedia =
 {
       id: "estudio-editorial-01",

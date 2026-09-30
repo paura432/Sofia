@@ -88,8 +88,40 @@ if (PHOTO_ARCHIVE_COUNT !== 74) {
   throw new Error(`photo archive ${PHOTO_ARCHIVE_COUNT} !== 74`);
 }
 
-export type ArchivePhoto =
-  (typeof photoArchiveGroups)[keyof typeof photoArchiveGroups][number];
+export type ArchivePhoto = {
+  id: string;
+  original: string;
+  src: string;
+  width: number;
+  height: number;
+  aspectRatio?: string;
+  blurDataURL?: string;
+};
+
+const plazaSeriesOriginals = [
+  "00001", "00002", "00003", "00006", "00007", "00009", "00010", "00012",
+  "00014", "00015", "00017", "00018", "00019", "00023", "00031", "00033",
+  "00036", "00038", "00039", "00042", "00043", "00048", "00050", "00052",
+  "00054", "00056", "00058", "00060", "00064", "00065", "00066", "00067",
+  "00068", "00070", "00072", "00074", "00076", "00077",
+] as const;
+const plazaPortraits = new Set(["00003", "00009", "00012", "00048", "00070", "00072"]);
+
+const plazaSeriesPhotos: ArchivePhoto[] = plazaSeriesOriginals.map(
+  (sourceNumber, index) => {
+    const number = String(index + 1).padStart(3, "0");
+    const portrait = plazaPortraits.has(sourceNumber);
+
+    return {
+      id: `entre-tiendas-y-tambores-${number}`,
+      original: `image${sourceNumber}.jpeg`,
+      src: `/media/projects/entre-tiendas-y-tambores/entre-tiendas-y-tambores-${number}.webp`,
+      width: portrait ? 1867 : 2800,
+      height: portrait ? 2800 : 1867,
+      aspectRatio: portrait ? "2:3" : "3:2",
+    };
+  },
+);
 
 export const projectArchiveGroupMap = {
   "musica-en-directo": "musica",
@@ -174,6 +206,7 @@ export function getAdditionalPhotosForProject(slug: string): ArchivePhoto[] {
 }
 
 export function getArchivePhotosForProject(slug: string): ArchivePhoto[] {
+  if (slug === "entre-tiendas-y-tambores") return [...plazaSeriesPhotos];
   if (!(slug in projectArchiveGroupMap)) return [];
   const groupId = projectArchiveGroupMap[slug as ProjectArchiveSlug];
   return [...photoArchiveGroups[groupId]];
