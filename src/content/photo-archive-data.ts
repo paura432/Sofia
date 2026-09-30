@@ -105,21 +105,24 @@ const plazaSeriesOriginals = [
   "00054", "00056", "00058", "00060", "00064", "00065", "00066", "00067",
   "00068", "00070", "00072", "00074", "00076", "00077",
 ] as const;
+// Keep legacy sequence IDs stable; image00060 is explicitly REJECTED in the curation table below.
+const plazaSeriesExclusions = new Set(["00060"]);
 const plazaPortraits = new Set(["00003", "00009", "00012", "00048", "00070", "00072"]);
 
-const plazaSeriesPhotos: ArchivePhoto[] = plazaSeriesOriginals.map(
+const plazaSeriesPhotos: ArchivePhoto[] = plazaSeriesOriginals.flatMap(
   (sourceNumber, index) => {
+    if (plazaSeriesExclusions.has(sourceNumber)) return [];
     const number = String(index + 1).padStart(3, "0");
     const portrait = plazaPortraits.has(sourceNumber);
 
-    return {
+    return [{
       id: `entre-tiendas-y-tambores-${number}`,
       original: `image${sourceNumber}.jpeg`,
       src: `/media/projects/entre-tiendas-y-tambores/entre-tiendas-y-tambores-${number}.webp`,
       width: portrait ? 1867 : 2800,
       height: portrait ? 2800 : 1867,
       aspectRatio: portrait ? "2:3" : "3:2",
-    };
+    }];
   },
 );
 

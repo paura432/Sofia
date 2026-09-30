@@ -11,7 +11,7 @@ ignorada por Git en `.media-source/`.
 - 55 horizontales, 22 verticales, 0 cuadradas. Cinco originales contienen GPS; el pipeline elimina EXIF/GPS de los másteres.
 - Comparación con el portfolio existente: no hay duplicados exactos ni coincidencias visuales por dHash ≤10.
 - La inspección de los 77 fotogramas y las candidatas ampliadas muestra continuidad visual suficiente: tiendas y carteles en una plaza, grupos reunidos y músicos/percussionistas durante el día y la noche. La decisión describe una única serie visual; no identifica su contexto externo.
-- 38 seleccionadas: 15 en el ensayo principal (incluida portada) + 23 solo en la serie completa. 39 rechazadas por repetición de encuadre, obstrucciones, blur, baja legibilidad o menor aportación narrativa. Las variantes parecidas se excluyen editorialmente, no se etiquetan como duplicados técnicos.
+- 37 seleccionadas: 15 en el ensayo principal (incluida portada) + 22 solo en la serie completa. 40 rechazadas por repetición de encuadre, obstrucciones, blur, baja legibilidad o menor aportación narrativa. Las variantes parecidas se excluyen editorialmente, no se etiquetan como duplicados técnicos.
 
 ## Identidad editorial
 
@@ -22,7 +22,7 @@ ignorada por Git en `.media-source/`.
 
 ## Tabla de selección
 
-`Sxx` es la posición en la serie completa (orden de originales seleccionados); `Pxx` es la posición en el ensayo. Las 38 seleccionadas se publican en la galería completa en el orden `Sxx`.
+`Sxx` es la posición editorial histórica en la secuencia completa; `Pxx` es la posición en el ensayo. Las 37 seleccionadas se publican en la galería completa en el orden `Sxx`; la secuencia conserva el hueco S28 porque image00060 está rechazada.
 
 | ORIGINAL | STATUS | REASON | POSITION | LAYOUT | NARRATIVE ROLE |
 | --- | --- | --- | ---: | --- | --- |
