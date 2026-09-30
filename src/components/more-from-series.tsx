@@ -8,6 +8,7 @@ import {
   type PhotoViewerItem,
 } from "@/components/photo-viewer-dialog";
 import type { ArchivePhoto } from "@/content/photo-archive-data";
+import type { MediaCopy } from "@/content/projects";
 import {
   buildJustifiedRows,
   isArchiveMobile,
@@ -18,6 +19,7 @@ type MoreFromSeriesProps = {
   closeLabel: string;
   countLabel: string;
   items: ArchivePhoto[];
+  copy?: Record<string, MediaCopy>;
   nextLabel: string;
   prevLabel: string;
   sectionLabel: string;
@@ -91,6 +93,7 @@ function SeriesThumb({
 export function MoreFromSeries({
   closeLabel,
   countLabel,
+  copy = {},
   items,
   nextLabel,
   prevLabel,
@@ -122,13 +125,13 @@ export function MoreFromSeries({
     () =>
       items.map((item, index) => ({
         id: item.id,
-        label: `${seriesLabel} ${index + 1}`,
+        label: copy[item.id]?.alt ?? `${seriesLabel} ${index + 1}`,
         src: item.src,
         width: item.width,
         height: item.height,
         blurDataURL: item.blurDataURL,
       })),
-    [items, seriesLabel],
+    [copy, items, seriesLabel],
   );
 
   if (items.length === 0) {
