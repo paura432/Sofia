@@ -24,7 +24,11 @@ type ProjectIndexProps = {
 function mediaOrientation(project: PortfolioProject) {
   const media = project.cover ?? project.media?.[0];
   if (!media) return "landscape";
-  if (media.aspectRatio === "2:3" || media.aspectRatio === "4:5") {
+  if (
+    media.aspectRatio === "9:16" ||
+    media.aspectRatio === "2:3" ||
+    media.aspectRatio === "4:5"
+  ) {
     return "portrait";
   }
   return media.width && media.height && media.width < media.height

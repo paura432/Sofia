@@ -15,7 +15,9 @@ type WorkRailProps = {
   indexLabel: string;
   nextLabel: string;
   photographyLabel: string;
+  reportingLabel: string;
   prevLabel: string;
+  hasReporting: boolean;
   stories: WorkRailStory[];
   workLabel: string;
 };
@@ -27,6 +29,8 @@ export function WorkRail({
   indexLabel,
   nextLabel,
   photographyLabel,
+  reportingLabel,
+  hasReporting,
   prevLabel,
   stories,
   workLabel,
@@ -53,6 +57,11 @@ export function WorkRail({
         ) : (
           <div className="work-rail-context">
             <Link href="/work">{indexLabel}</Link>
+            {hasReporting ? (
+              <Link href={{ pathname: "/work", hash: "reporting" }}>
+                {reportingLabel}
+              </Link>
+            ) : null}
             <Link
               href={{ pathname: "/work", hash: "audiovisual" }}
             >

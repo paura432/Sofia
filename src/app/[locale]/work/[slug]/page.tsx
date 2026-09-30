@@ -14,10 +14,10 @@ import {
 } from "@/content/photo-archive-data";
 import {
   buildProjectMediaCopy,
+  getDetailedProjects,
   getNextProject,
   getPrevProject,
   getProjectBySlug,
-  getPublishedProjects,
   publishableYear,
   type MediaCopy,
   type PortfolioProject,
@@ -50,7 +50,7 @@ type ProjectCopy = {
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
-    getPublishedProjects().map((project) => ({
+    getDetailedProjects().map((project) => ({
       locale,
       slug: project.slug,
     })),
@@ -156,10 +156,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const prevProject = getPrevProject(project.slug);
   const seriesPhotos = getArchivePhotosForProject(project.slug);
 
-  const published = getPublishedProjects();
-  const projectIndex = published.findIndex((item) => item.slug === project.slug);
+  const detailedProjects = getDetailedProjects();
+  const projectIndex = detailedProjects.findIndex(
+    (item) => item.slug === project.slug,
+  );
   const projectOrdinal = String(projectIndex + 1).padStart(2, "0");
-  const projectTotal = String(published.length).padStart(2, "0");
+  const projectTotal = String(detailedProjects.length).padStart(2, "0");
   const visibleYear = publishableYear(project.year);
   const isFilm = project.discipline.includes("audiovisual");
   const facts = [
