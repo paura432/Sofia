@@ -106,8 +106,8 @@ ignorada por Git en `.media-source/`.
 
 ## Estado de publicación
 
-- Proyecto en `projects.ts`: `published: false`.
-- `rights.verified: false`; titularidad, permisos de imagen, crédito y rol de Sofía necesitan confirmación directa. No inferirlos de la entrega del ZIP.
+- Proyecto en `projects.ts`: `published: true` por instrucción explícita de publicación; el ZIP se entregó como proyecto fotográfico del portfolio de Sofía.
+- `rights.verified: false`; la publicación no cambia el estado interno de titularidad, permisos de imagen ni créditos. No inferirlos de la entrega del ZIP.
 - El nuevo proyecto no altera Home ni el orden/covers/copy de proyectos previos. Se asigna orden editorial 14 en Work al quedar publicable.
 - `PHOTO_ARCHIVE_COUNT` y Archivo 74 permanecen intactos; esta serie usa datos de galería separados.
-- No hay pruebas de permisos en los archivos recibidos. El proyecto debe seguir oculto hasta confirmarlos.
+- No hay pruebas de permisos en los archivos recibidos. El proyecto queda publicado por instrucción del usuario; confirmar permisos y créditos sigue pendiente internamente.

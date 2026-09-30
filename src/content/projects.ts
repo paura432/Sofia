@@ -366,7 +366,7 @@ export const projects: PortfolioProject[] = [
     year: "",
     discipline: ["photography"],
     order: 14,
-    published: false,
+    published: true,
     translationKey: "entre-tiendas-y-tambores",
     cover: entre_tiendas_y_tambores_cover,
     media: entre_tiendas_y_tambores_media,
