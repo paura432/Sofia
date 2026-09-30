@@ -15,21 +15,22 @@ en `projects.ts`.
 
 | Campo | Valor |
 |---|---|
-| Reporter Reel | Proyecto interno no publicado; URL y archivo definitivos pendientes |
-| URL de cobertura | No hay URLs de piezas en el inventario ni en `src/content/` |
+| Reporter Reel | Proyecto interno no publicado; publicación social localizada e integrada como `sourceUrl`; archivo/poster autorizados, derechos y créditos pendientes |
+| URLs individuales de cobertura | No se localizaron en este pase; los fragmentos candidatos aparecen en la transcripción del resumen de LinkedIn, sin fuente original ni crédito individual |
 | Proyecto en `projects.ts` | `reporter-reel`, `published: false` |
 | Status por defecto | `pending-piece-verification` |
 
 ## URL audit
 
-No publicar ningún candidato de abajo: el inventario no contiene su URL de origen,
-poster autorizado ni rol verificado. La única URL de LinkedIn en `src/content/profile.ts`
-es un perfil, no una publicación de cobertura; no se cuenta como pieza y su acceso
-público no se ha comprobado.
+No publicar las coberturas candidatas: no se localizaron publicaciones originales
+individuales, posters autorizados ni créditos/roles confirmados. La publicación
+social del Reporter Reel es evidencia del resumen y de sus segmentos, no reemplaza
+la fuente original de cada cobertura. El enlace de perfil en `src/content/profile.ts`
+no se trata como URL de pieza.
 
 | URL | Provider | Tipo / acceso | Contenido / rol | Verificación | Decisión |
 |---|---|---|---|---|---|
-| https://www.linkedin.com/in/sofia-chernikova | LinkedIn | Perfil; fetch respondió HTTP 429 | No identifica una pieza | No verificable | Excluir de coberturas |
+| https://es.linkedin.com/posts/sofia-chernikova_hace-unos-a%C3%B1os-habr%C3%ADa-visto-muchas-de-estas-activity-7486385459078746112--ATZ | LinkedIn | SOCIAL SOURCE; post público con transcripción; enlace a la publicación, no playback independiente | Resumen de temporada publicado bajo el perfil de Sofía; el texto refiere entrevistas con micrófono y el transcript incluye menciones de las candidatas | VERIFIED para el post/resumen; PROBABLE para las piezas individuales | Integrar solo como `reporter-reel.sourceUrl`; conservar `published: false`, sin derechos/créditos/poster no se publica |
 
 ## Reglas
 

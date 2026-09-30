@@ -163,6 +163,8 @@ export const projects: PortfolioProject[] = [
     reporterReel: true,
     order: 0,
     published: false,
+    sourceUrl:
+      "https://es.linkedin.com/posts/sofia-chernikova_hace-unos-a%C3%B1os-habr%C3%ADa-visto-muchas-de-estas-activity-7486385459078746112--ATZ",
     translationKey: "reporter-reel",
     rights: {
       verified: false,
