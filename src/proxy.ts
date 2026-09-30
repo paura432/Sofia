@@ -25,9 +25,24 @@ export default function proxy(request: NextRequest) {
     return new NextResponse(null, { status: 404 });
   }
 
+  const devMediaLocale = request.nextUrl.pathname.match(
+    /^\/(es|en|ru)\/dev\/media$/,
+  )?.[1];
+
+  if (devMediaLocale && process.env.NODE_ENV === "development") {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${devMediaLocale}/dev/media`;
+    return NextResponse.rewrite(url);
+  }
+
   if (request.nextUrl.pathname === "/dev/media") {
     const url = request.nextUrl.clone();
-    url.pathname = "/en/dev/media";
+    const requestedLocale = request.nextUrl.searchParams.get("locale");
+    const locale = ["es", "en", "ru"].includes(requestedLocale ?? "")
+      ? requestedLocale
+      : "en";
+    url.pathname = `/${locale}/dev/media`;
+    url.searchParams.delete("locale");
     return NextResponse.rewrite(url);
   }
 

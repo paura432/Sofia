@@ -11,6 +11,7 @@ import {
 import { ReporterReel } from "@/components/reporter-reel";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/section-heading";
+import { ShortFormReporting, type ShortFormStory } from "@/components/short-form-reporting";
 import {
   buildProjectMediaCopy,
   hasMediaAsset,
@@ -50,9 +51,10 @@ export async function generateMetadata({
 }
 
 export default async function WorkPage() {
-  const [t, projectsText] = await Promise.all([
+  const [t, projectsText, navigationText] = await Promise.all([
     getTranslations("Work"),
     getTranslations("Projects"),
+    getTranslations("Navigation"),
   ]);
   const publishedProjects = getPublishedProjects();
   const audiovisualProjects = publishedProjects.filter((project) =>
@@ -70,10 +72,17 @@ export default async function WorkPage() {
         `items.${reporterReel.translationKey}`,
       ) as ProjectCopy)
     : undefined;
-  const reportingPieces = reportingProjects.filter(
-    (project) => project !== reporterReel,
+  const coverageProjects = reportingProjects.filter(
+    (project) =>
+      project !== reporterReel && project.reportingFormat !== "short-form",
   );
-  const reportingStories = reportingPieces.flatMap((project): ReportingStory[] => {
+  const selectedCoverageProjects = coverageProjects
+    .filter((project) => project.reportingFeatured)
+    .slice(0, 6);
+  const shortFormProjects = reportingProjects.filter(
+    (project) => project !== reporterReel && project.reportingFormat === "short-form",
+  );
+  const reportingStories = selectedCoverageProjects.flatMap((project): ReportingStory[] => {
     const raw = projectsText.raw(
       `items.${project.translationKey}`,
     ) as ProjectCopy;
@@ -111,6 +120,48 @@ export default async function WorkPage() {
       playLabel: projectsText("playCoverage", { title: raw.title }),
     }];
   });
+  const shortFormStories = shortFormProjects.flatMap((project): ShortFormStory[] => {
+    const raw = projectsText.raw(
+      `items.${project.translationKey}`,
+    ) as ProjectCopy;
+    const media = [project.cover, ...(project.media ?? [])].filter(
+      Boolean,
+    ) as NonNullable<typeof project.cover>[];
+    const video = media.find(
+      (item) =>
+        item.type === "video" &&
+        hasMediaAsset(item) &&
+        (item.aspectRatio || (item.width && item.height)),
+    );
+    const poster =
+      video ?? media.find((item) => item.type === "image" && hasMediaAsset(item));
+    const posterSrc = poster?.type === "image" ? poster.src : poster?.poster;
+    const posterRatio = poster?.aspectRatio?.replace(":", " / ") ??
+      (poster?.width && poster.height
+        ? `${poster.width} / ${poster.height}`
+        : "9 / 16");
+
+    if (!poster || !posterSrc || !project.sourceUrl) return [];
+
+    return [{
+      id: project.id,
+      title: raw.title,
+      organisation: project.organisation,
+      role: raw.roles?.join(" · "),
+      year: publishableYear(project.year),
+      sourceUrl: project.sourceUrl,
+      posterSrc,
+      posterAlt: raw.media?.[poster.id]?.alt ?? raw.title,
+      posterRatio,
+      video,
+      playLabel: projectsText("playCoverage", { title: raw.title }),
+    }];
+  });
+  const showReporting = Boolean(
+    (reporterReel && reporterReelMedia && reporterReelCopy) ||
+      reportingStories.length ||
+      shortFormStories.length,
+  );
   const photographyProjects = publishedProjects.filter((project) =>
     project.discipline.includes("photography") &&
       !project.discipline.includes("audiovisual") &&
@@ -131,7 +182,7 @@ export default async function WorkPage() {
         </Reveal>
       </section>
 
-      {reportingProjects.length > 0 ? (
+      {showReporting ? (
         <section
           aria-labelledby="work-reporting"
           className="section"
@@ -162,7 +213,7 @@ export default async function WorkPage() {
                 viewLabel={projectsText("viewReel")}
               />
             ) : null}
-            {reportingPieces.length > 0 ? (
+            {reportingStories.length > 0 ? (
               <div className="work-project-section">
                 <SectionHeading
                   eyebrow={t("reportingCoverageEyebrow")}
@@ -174,6 +225,21 @@ export default async function WorkPage() {
                   closePlayerLabel={projectsText("viewerClose")}
                   playLabel={projectsText("play")}
                   projects={reportingStories}
+                  viewOriginalLabel={projectsText("viewOriginal")}
+                />
+              </div>
+            ) : null}
+            {shortFormStories.length > 0 ? (
+              <div className="work-project-section">
+                <SectionHeading
+                  eyebrow={t("shortFormEyebrow")}
+                  id="work-reporting-short-form"
+                  text={t("shortFormText")}
+                  title={t("shortFormTitle")}
+                />
+                <ShortFormReporting
+                  opensInNewTabLabel={navigationText("opensInNewTab")}
+                  projects={shortFormStories}
                   viewOriginalLabel={projectsText("viewOriginal")}
                 />
               </div>

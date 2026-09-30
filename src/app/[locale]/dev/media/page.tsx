@@ -5,6 +5,10 @@ import { getTranslations } from "next-intl/server";
 import { MediaCaption } from "@/components/media-caption";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
 import {
+  ShortFormReporting,
+  type ShortFormStory,
+} from "@/components/short-form-reporting";
+import {
   buildProjectMediaCopy,
   getMediaSizes,
   projects,
@@ -15,6 +19,7 @@ import {
   type PortfolioProject,
   type ProjectMedia,
 } from "@/content/projects";
+import type { Locale } from "@/i18n/routing";
 
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
@@ -99,11 +104,54 @@ export default async function DevMediaLab({ params }: PageProps) {
   }
 
   const { locale } = await params;
-  const projectsText = await getTranslations("Projects");
+  const translationLocale = locale as Locale;
+  const projectsText = await getTranslations({ locale: translationLocale, namespace: "Projects" });
+  const workText = await getTranslations({ locale: translationLocale, namespace: "Work" });
+  const navigationText = await getTranslations({ locale: translationLocale, namespace: "Navigation" });
   const title = locale === "en" ? longTitle.en : longTitle.es;
   const draftPhotos = draftPhotoSlugs
     .map((slug) => projects.find((project) => project.slug === slug))
     .filter(isDraftProject);
+  const fixturePoster = projects.find(
+    (project) => project.slug === "musica-en-directo",
+  )?.cover;
+
+  if (
+    !fixturePoster ||
+    fixturePoster.type !== "image" ||
+    !fixturePoster.src ||
+    !fixturePoster.aspectRatio
+  ) {
+    notFound();
+  }
+  const fixturePosterSrc = fixturePoster.src;
+  const fixturePosterRatio = "9 / 16";
+
+  const shortFormFixtures = (count: number): ShortFormStory[] =>
+    Array.from({ length: count }, (_, index) => {
+      const storyTitle = index === 0
+        ? title
+        : locale === "en"
+        ? `QA sample ${String(index + 1).padStart(2, "0")}`
+        : locale === "ru"
+          ? `Образец QA ${String(index + 1).padStart(2, "0")}`
+          : `Muestra de diseño ${String(index + 1).padStart(2, "0")}`;
+
+      return {
+        id: `short-form-fixture-${count}-${index}`,
+        title: storyTitle,
+        organisation: "Dev fixture",
+        role: locale === "en" ? "Sample role" : "Rol de muestra",
+        year: "2026",
+        sourceUrl: "/dev/media",
+        posterSrc: fixturePosterSrc,
+        posterAlt: locale === "en"
+          ? "Existing portfolio photograph reused only as a layout fixture"
+          : "Fotografía existente usada solo como muestra de diseño",
+        posterRatio: fixturePosterRatio,
+        playLabel: projectsText("playCoverage", { title: storyTitle }),
+      };
+    });
 
   return (
     <main className="dev-media" id="main">
@@ -277,6 +325,22 @@ export default async function DevMediaLab({ params }: PageProps) {
           })}
         </div>
       </section>
+
+      {[1, 4, 8, 20].map((count) => (
+        <section className="section" key={`short-form-${count}`}>
+          <div className="container">
+            <p className="eyebrow">Dev fixture · {count} short-form cards</p>
+            <h2 className="display-section">
+              {workText("shortFormTitle")}
+            </h2>
+            <ShortFormReporting
+              opensInNewTabLabel={navigationText("opensInNewTab")}
+              projects={shortFormFixtures(count)}
+              viewOriginalLabel={projectsText("viewOriginal")}
+            />
+          </div>
+        </section>
+      ))}
     </main>
   );
 }

@@ -21,6 +21,8 @@ export type ProjectDiscipline =
   | "photography"
   | "communication";
 
+export type ReportingFormat = "coverage" | "short-form";
+
 export type MediaType = "image" | "video" | "embed";
 
 export type VideoProvider = "youtube" | "vimeo" | "native" | "mux";
@@ -131,6 +133,10 @@ export type PortfolioProject = {
   experienceId?: ExperienceId;
   featured?: boolean;
   reporterReel?: boolean;
+  /** Reporting presentation; reporterReel remains a separate editorial feature. */
+  reportingFormat?: ReportingFormat;
+  /** Explicit Work selection; independent from Home/audiovisual `featured`. */
+  reportingFeatured?: boolean;
   /** Reporting stories default to Work-only; opt in when case-study context exists. */
   detailPage?: boolean;
   published: boolean;

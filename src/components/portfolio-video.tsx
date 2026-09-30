@@ -14,6 +14,9 @@ type PortfolioVideoProps = {
   title: string;
   className?: string;
   sizes?: string;
+  posterAlt?: string;
+  active?: boolean;
+  onActivate?: () => void;
   /** Etiquetas ya traducidas de las pistas de subtítulos, por `labelKey`. */
   trackLabels?: Record<string, string>;
 };
@@ -36,9 +39,13 @@ export function PortfolioVideo({
   title,
   className,
   sizes,
+  posterAlt,
+  active,
+  onActivate,
   trackLabels = {},
 }: PortfolioVideoProps) {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [localActive, setLocalActive] = useState(false);
+  const isPlaying = active ?? localActive;
   const [posterVisible, setPosterVisible] = useState(true);
   const [posterFailed, setPosterFailed] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -57,6 +64,8 @@ export function PortfolioVideo({
       void videoRef.current?.play();
     }
   }, [isPlaying, media.provider]);
+
+  const showPoster = posterVisible || !isPlaying;
 
   if (!media.poster || !title) {
     return null;
@@ -112,12 +121,15 @@ export function PortfolioVideo({
         />
       ) : null}
 
-      {posterVisible && canPlay && !posterFailed ? (
+      {showPoster && canPlay && !posterFailed ? (
         <button
           aria-label={`${playLabel}: ${title}`}
           className="portfolio-video-poster"
           data-state={isPlaying ? "exiting" : "idle"}
-          onClick={() => setIsPlaying(true)}
+          onClick={() => {
+            setLocalActive(true);
+            onActivate?.();
+          }}
           onTransitionEnd={() => {
             if (isPlaying) {
               setPosterVisible(false);
@@ -129,7 +141,7 @@ export function PortfolioVideo({
             <picture>
               <source media="(max-width: 699px)" srcSet={mobilePoster} />
               <Image
-                alt=""
+                alt={posterAlt ?? ""}
                 fill
                 sizes={sizes ?? getMediaSizes(media.layout)}
                 src={media.poster}
@@ -139,7 +151,7 @@ export function PortfolioVideo({
             </picture>
           ) : (
             <Image
-              alt=""
+              alt={posterAlt ?? ""}
               fill
               sizes={sizes ?? getMediaSizes(media.layout)}
               src={media.poster}
@@ -154,7 +166,7 @@ export function PortfolioVideo({
             <span className="portfolio-video-duration">{media.duration}</span>
           ) : null}
         </button>
-      ) : posterVisible ? (
+      ) : showPoster ? (
         <div className="portfolio-video-poster portfolio-video-poster-fallback" role="img" aria-label={title}>
           {media.duration ? <span className="portfolio-video-duration">{media.duration}</span> : null}
         </div>
