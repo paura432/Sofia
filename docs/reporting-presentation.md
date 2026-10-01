@@ -1,19 +1,23 @@
-# Presentación editorial de reporting
+# Presentación editorial de Work y reporting
 
-En Work, reporting es una familia editorial: **Reporter Reel** (recopilatorio
-protagonista), **Selected Reporting** (3–6 coberturas de mayor valor editorial)
-y **Short-form Reporting** (piezas breves/verticales). Short-form no es una
-disciplina independiente. Las coberturas seleccionadas se optan explícitamente
-con `reportingFeatured`; el formato se indica con `reportingFormat`, no se
-deduce del aspect ratio. Reporter Reel conserva su tratamiento propio.
+`/work` (`/trabajo`) funciona como índice editorial: presenta una selección
+breve por disciplina y deriva a colecciones completas, sin montar el archivo
+fotográfico. Reporting, audiovisual y fotografía tienen índices propios;
+`/work/photography/archive` conserva el archivo completo de 74 imágenes y sus
+controles existentes.
 
-Short-form no requiere página de detalle. Work puede mostrar más material que
-Home; una colección grande se organiza en una cuadrícula compacta y, en móvil,
-una fila horizontal manual, no con cards grandes ni autoplay. Sin piezas
-publicadas y renderizables no se muestra el módulo ni un placeholder.
+Reporting es una familia editorial: **Reporter Reel**, **Selected Reporting**
+(3–6 coberturas) y **Short-form Reporting**. El formato se indica con
+`reportingFormat`, no se deduce del aspect ratio. Short-form no requiere detalle
+individual. Las piezas restantes usan una lista compacta enlazada a su fuente,
+sin inventar póster o página de proyecto.
 
-Home no cambia mientras no haya reporting publicado. Cuando exista, valorar el
-Reporter Reel solo si está publicado y renderizable, hasta 3 coberturas
-seleccionadas y, si añade valor, una preview de 3–4 short-form con CTA a Work.
-Si las coberturas seleccionadas ya representan bien el trabajo, omitir esa
-preview; no todos los reels tienen que aparecer en Home.
+Los proyectos solo se muestran si superan las guardas de publicación y medios
+existentes. Sin una pieza real, publicada y renderizable, el índice no muestra
+un placeholder ni aparece en la navegación; el acceso directo a reporting no
+publicado devuelve 404. La Home no cambia en esta refactorización.
+
+Las rutas nuevas tienen slugs ES/EN/RU, metadata localizada, canonical/hreflang
+y sitemap. Las páginas de detalle mantienen las rutas actuales; su navegación
+prev/next se limita a proyectos detallados de la misma disciplina. El rail
+contextual enlaza a las colecciones disponibles.

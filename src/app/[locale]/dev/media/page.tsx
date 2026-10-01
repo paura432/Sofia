@@ -336,6 +336,8 @@ export default async function DevMediaLab({ params }: PageProps) {
             <ShortFormReporting
               opensInNewTabLabel={navigationText("opensInNewTab")}
               projects={shortFormFixtures(count)}
+              showLessLabel={workText("shortFormShowLess")}
+              showMoreLabel={workText("shortFormShowMore", { count: "{count}" })}
               viewOriginalLabel={projectsText("viewOriginal")}
             />
           </div>

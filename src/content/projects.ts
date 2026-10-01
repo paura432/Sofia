@@ -22,6 +22,7 @@ export type ProjectDiscipline =
   | "communication";
 
 export type ReportingFormat = "coverage" | "short-form";
+export type ProjectSection = "reporting" | "audiovisual" | "photography";
 
 export type MediaType = "image" | "video" | "embed";
 
@@ -536,6 +537,18 @@ export function getPublishedProjects() {
   return byEditorialOrder(projects.filter(isRenderableProject));
 }
 
+export function getProjectSection(project: PortfolioProject): ProjectSection | undefined {
+  if (project.discipline.includes("reporting") && !project.discipline.includes("audiovisual")) {
+    return "reporting";
+  }
+  if (project.discipline.includes("audiovisual")) return "audiovisual";
+  if (project.discipline.includes("photography")) return "photography";
+}
+
+export function getProjectsInSection(section: ProjectSection) {
+  return getPublishedProjects().filter((project) => getProjectSection(project) === section);
+}
+
 export function hasProjectDetailPage(project: PortfolioProject) {
   return (
     project.detailPage ??
@@ -545,6 +558,11 @@ export function hasProjectDetailPage(project: PortfolioProject) {
 
 export function getDetailedProjects() {
   return getPublishedProjects().filter(hasProjectDetailPage);
+}
+
+export function getDetailedProjectsInSection(project: PortfolioProject) {
+  const section = getProjectSection(project);
+  return getDetailedProjects().filter((item) => getProjectSection(item) === section);
 }
 
 export function getReporterReel() {
@@ -587,7 +605,9 @@ export function getRelatedProjects(experienceId: ExperienceId) {
 }
 
 export function getNextProject(currentSlug: string) {
-  const detailProjects = getDetailedProjects();
+  const current = getProjectBySlug(currentSlug);
+  if (!current) return undefined;
+  const detailProjects = getDetailedProjectsInSection(current);
   const currentIndex = detailProjects.findIndex(
     (project) => project.slug === currentSlug,
   );
@@ -600,7 +620,9 @@ export function getNextProject(currentSlug: string) {
 }
 
 export function getPrevProject(currentSlug: string) {
-  const detailProjects = getDetailedProjects();
+  const current = getProjectBySlug(currentSlug);
+  if (!current) return undefined;
+  const detailProjects = getDetailedProjectsInSection(current);
   const currentIndex = detailProjects.findIndex(
     (project) => project.slug === currentSlug,
   );

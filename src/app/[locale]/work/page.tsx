@@ -1,48 +1,35 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { AnimatedLine } from "@/components/motion/animated-line";
-import { PhotoArchive } from "@/components/photo-archive";
 import { ProjectIndex } from "@/components/project-index";
-import {
-  ReportingIndex,
-  type ReportingStory,
-} from "@/components/reporting-index";
+import { ReportingIndex, type ReportingStory } from "@/components/reporting-index";
 import { ReporterReel } from "@/components/reporter-reel";
-import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { ShortFormReporting, type ShortFormStory } from "@/components/short-form-reporting";
+import { SelectedProjects } from "@/components/selected-projects";
+import { Reveal } from "@/components/motion/reveal";
+import { PHOTO_ARCHIVE_COUNT } from "@/content/photo-archive-count";
 import {
   buildProjectMediaCopy,
+  getProjectsInSection,
+  getReporterReel,
   hasMediaAsset,
-  hasProjectDetailPage,
-  getPublishedProjects,
-  publishableYear,
   type MediaCopy,
   type PortfolioProject,
 } from "@/content/projects";
+import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
+import { toReportingStory, type ReportingCopy } from "@/lib/reporting-content";
 import { pageMetadata } from "@/lib/metadata";
 
-type PageProps = {
-  params: Promise<{ locale: string }>;
-};
+type PageProps = { params: Promise<{ locale: string }> };
 
-type ProjectCopy = {
-  title: string;
-  roles?: string[];
-  media?: Record<string, MediaCopy>;
-};
-
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  const { locale: rawLocale } = await params;
-  const locale = rawLocale as Locale;
-  const t = await getTranslations({ locale, namespace: "Metadata" });
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const lang = locale as Locale;
+  const t = await getTranslations({ locale: lang, namespace: "Metadata" });
 
   return pageMetadata({
-    locale,
+    locale: lang,
     pathname: "/work",
     title: t("pages.work.title"),
     description: t("pages.work.description"),
@@ -50,127 +37,49 @@ export async function generateMetadata({
   });
 }
 
+type ProjectCopy = ReportingCopy & { format?: string };
+
 export default async function WorkPage() {
-  const [t, projectsText, navigationText] = await Promise.all([
+  const [t, projectsText] = await Promise.all([
     getTranslations("Work"),
     getTranslations("Projects"),
-    getTranslations("Navigation"),
   ]);
-  const publishedProjects = getPublishedProjects();
-  const audiovisualProjects = publishedProjects.filter((project) =>
-    project.discipline.includes("audiovisual"),
+  const reporting = getProjectsInSection("reporting");
+  const audiovisual = getProjectsInSection("audiovisual");
+  const photography = getProjectsInSection("photography");
+  const reel = getReporterReel();
+  const reelVideo = reel && [reel.cover, ...(reel.media ?? [])].find(
+    (media) => media?.type === "video" && hasMediaAsset(media),
   );
-  const reportingProjects = publishedProjects.filter((project) =>
-    project.discipline.includes("reporting") &&
-      !project.discipline.includes("audiovisual"),
-  );
-  const reporterReel = reportingProjects.find((project) => project.reporterReel);
-  const reporterReelMedia = [reporterReel?.cover, ...(reporterReel?.media ?? [])]
-    .find((media) => media?.type === "video");
-  const reporterReelCopy = reporterReel
-    ? (projectsText.raw(
-        `items.${reporterReel.translationKey}`,
-      ) as ProjectCopy)
+  const reelCopy = reel
+    ? projectsText.raw(`items.${reel.translationKey}`) as ProjectCopy
     : undefined;
-  const coverageProjects = reportingProjects.filter(
-    (project) =>
-      project !== reporterReel && project.reportingFormat !== "short-form",
-  );
-  const selectedCoverageProjects = coverageProjects
-    .filter((project) => project.reportingFeatured)
-    .slice(0, 6);
-  const shortFormProjects = reportingProjects.filter(
-    (project) => project !== reporterReel && project.reportingFormat === "short-form",
-  );
-  const reportingStories = selectedCoverageProjects.flatMap((project): ReportingStory[] => {
-    const raw = projectsText.raw(
-      `items.${project.translationKey}`,
-    ) as ProjectCopy;
-    const media = [project.cover, ...(project.media ?? [])].filter(
-      Boolean,
-    ) as NonNullable<typeof project.cover>[];
-    const poster =
-      media.find((item) => item.type === "image" && hasMediaAsset(item)) ??
-      media.find((item) => item.type === "video" && item.poster && hasMediaAsset(item));
-    const video = media.find(
-      (item) =>
-        item.type === "video" && item.aspectRatio && hasMediaAsset(item),
-    );
-    const posterSrc = poster?.type === "image" ? poster.src : poster?.poster;
-    const posterRatio = poster?.aspectRatio?.replace(":", " / ") ??
-      (poster?.width && poster.height
-        ? `${poster.width} / ${poster.height}`
-        : undefined);
-
-    if (!poster || !posterSrc || !posterRatio || !project.sourceUrl) return [];
-
-    return [{
-      id: project.id,
-      slug: project.slug,
-      title: raw.title,
-      roles: raw.roles,
-      organisation: project.organisation,
-      year: publishableYear(project.year),
-      sourceUrl: project.sourceUrl,
-      detailPage: hasProjectDetailPage(project),
-      posterSrc,
-      posterAlt: raw.media?.[poster.id]?.alt ?? raw.title,
-      posterRatio,
-      video,
-      playLabel: projectsText("playCoverage", { title: raw.title }),
-    }];
-  });
-  const shortFormStories = shortFormProjects.flatMap((project): ShortFormStory[] => {
-    const raw = projectsText.raw(
-      `items.${project.translationKey}`,
-    ) as ProjectCopy;
-    const media = [project.cover, ...(project.media ?? [])].filter(
-      Boolean,
-    ) as NonNullable<typeof project.cover>[];
-    const video = media.find(
-      (item) =>
-        item.type === "video" &&
-        hasMediaAsset(item) &&
-        (item.aspectRatio || (item.width && item.height)),
-    );
-    const poster =
-      video ?? media.find((item) => item.type === "image" && hasMediaAsset(item));
-    const posterSrc = poster?.type === "image" ? poster.src : poster?.poster;
-    const posterRatio = poster?.aspectRatio?.replace(":", " / ") ??
-      (poster?.width && poster.height
-        ? `${poster.width} / ${poster.height}`
-        : "9 / 16");
-
-    if (!poster || !posterSrc || !project.sourceUrl) return [];
-
-    return [{
-      id: project.id,
-      title: raw.title,
-      organisation: project.organisation,
-      role: raw.roles?.join(" · "),
-      year: publishableYear(project.year),
-      sourceUrl: project.sourceUrl,
-      posterSrc,
-      posterAlt: raw.media?.[poster.id]?.alt ?? raw.title,
-      posterRatio,
-      video,
-      playLabel: projectsText("playCoverage", { title: raw.title }),
-    }];
-  });
-  const showReporting = Boolean(
-    (reporterReel && reporterReelMedia && reporterReelCopy) ||
-      reportingStories.length ||
-      shortFormStories.length,
-  );
-  const photographyProjects = publishedProjects.filter((project) =>
-    project.discipline.includes("photography") &&
-      !project.discipline.includes("audiovisual") &&
-      !project.discipline.includes("reporting"),
-  );
+  const selectedReporting = reporting
+    .filter((project) => project !== reel && project.reportingFeatured)
+    .slice(0, 3)
+    .flatMap((project): ReportingStory[] => {
+      const copy = projectsText.raw(`items.${project.translationKey}`) as ProjectCopy;
+      const story = toReportingStory(
+        project,
+        copy,
+        projectsText("playCoverage", { title: copy.title }),
+      );
+      return story ? [story] : [];
+    });
+  const audiovisualPreview = [
+    ...audiovisual.filter((project) => project.featured),
+    ...audiovisual.filter((project) => !project.featured),
+  ].slice(0, 1);
+  const photographyPreview = [
+    ...photography.filter((project) => project.featured),
+    ...photography.filter((project) => !project.featured),
+  ].slice(0, 3);
+  const copyFor = (project: PortfolioProject) =>
+    projectsText.raw(`items.${project.translationKey}`) as ProjectCopy;
+  const mediaCopyFor = (project: PortfolioProject) =>
+    buildProjectMediaCopy(project, copyFor(project).media);
   const disciplineLabel = (project: PortfolioProject) =>
-    project.discipline
-      .map((discipline) => projectsText(`disciplines.${discipline}`))
-      .join(" · ");
+    project.discipline.map((item) => projectsText(`disciplines.${item}`)).join(" · ");
 
   return (
     <main id="main">
@@ -182,156 +91,123 @@ export default async function WorkPage() {
         </Reveal>
       </section>
 
-      {showReporting ? (
-        <section
-          aria-labelledby="work-reporting"
-          className="section"
-          id="reporting"
-        >
+      {((reel && reelVideo && reelCopy) || selectedReporting.length > 0) ? (
+        <section aria-labelledby="work-reporting" className="section">
           <div className="container work-project-section">
             <SectionHeading
               eyebrow={t("reportingPortfolioEyebrow")}
               id="work-reporting"
-              text={t("reportingPortfolioText")}
               title={t("reportingPortfolioTitle")}
+              text={t("reportingPortfolioText")}
             />
-            {reporterReel && reporterReelMedia && reporterReelCopy ? (
+            {reel && reelVideo && reelCopy ? (
               <ReporterReel
                 eyebrow={projectsText("reelEyebrow")}
-                href={{
-                  pathname: "/work/[slug]",
-                  params: { slug: reporterReel.slug },
-                }}
-                media={reporterReelMedia}
-                mediaCopy={buildProjectMediaCopy(
-                  reporterReel,
-                  reporterReelCopy.media,
-                )}
-                meta={reporterReelCopy.roles?.join(" · ")}
+                href={{ pathname: "/work/[slug]", params: { slug: reel.slug } }}
+                media={reelVideo}
+                mediaCopy={buildProjectMediaCopy(reel, reelCopy.media)}
+                meta={reelCopy.roles?.join(" · ")}
                 playLabel={projectsText("play")}
-                title={reporterReelCopy.title}
+                title={reelCopy.title}
                 viewLabel={projectsText("viewReel")}
               />
             ) : null}
-            {reportingStories.length > 0 ? (
-              <div className="work-project-section">
-                <SectionHeading
-                  eyebrow={t("reportingCoverageEyebrow")}
-                  id="work-reporting-coverage"
-                  text={t("reportingCoverageText")}
-                  title={t("reportingCoverageTitle")}
-                />
-                <ReportingIndex
-                  closePlayerLabel={projectsText("viewerClose")}
-                  playLabel={projectsText("play")}
-                  projects={reportingStories}
-                  viewOriginalLabel={projectsText("viewOriginal")}
-                />
-              </div>
+            {selectedReporting.length ? (
+              <ReportingIndex
+                closePlayerLabel={projectsText("viewerClose")}
+                playLabel={projectsText("play")}
+                projects={selectedReporting}
+                viewOriginalLabel={projectsText("viewOriginal")}
+              />
             ) : null}
-            {shortFormStories.length > 0 ? (
-              <div className="work-project-section">
-                <SectionHeading
-                  eyebrow={t("shortFormEyebrow")}
-                  id="work-reporting-short-form"
-                  text={t("shortFormText")}
-                  title={t("shortFormTitle")}
-                />
-                <ShortFormReporting
-                  opensInNewTabLabel={navigationText("opensInNewTab")}
-                  projects={shortFormStories}
-                  viewOriginalLabel={projectsText("viewOriginal")}
-                />
-              </div>
-            ) : null}
+            <Link className="work-preview-cta" href="/work/reporting">
+              {t("viewReporting")}
+              <span aria-hidden="true">↗</span>
+            </Link>
           </div>
         </section>
       ) : null}
 
-      {audiovisualProjects.length > 0 ? (
-        <section aria-labelledby="work-audiovisual" className="section work-film-section" id="audiovisual">
+      {audiovisualPreview.length ? (
+        <section aria-labelledby="work-audiovisual" className="section work-film-section">
           <div className="container work-project-section">
             <SectionHeading
               eyebrow={t("audiovisualEyebrow")}
               id="work-audiovisual"
-              text={t("audiovisualText")}
               title={t("audiovisualTitle")}
+              text={t("audiovisualText")}
             />
             <ProjectIndex
-              copyFor={(project) => {
-                const raw = projectsText.raw(`items.${project.translationKey}`) as ProjectCopy;
-                return { title: raw.title, media: buildProjectMediaCopy(project, raw.media) };
-              }}
+              copyFor={(project) => ({
+                title: copyFor(project).title,
+                media: mediaCopyFor(project),
+              })}
               disciplineLabel={disciplineLabel}
               playLabel={projectsText("play")}
-              projects={audiovisualProjects}
+              projects={audiovisualPreview}
               viewLabel={projectsText("viewProject")}
             />
+            <Link className="work-preview-cta" href="/work/audiovisual">
+              {t("viewAudiovisual")}
+              <span aria-hidden="true">↗</span>
+            </Link>
           </div>
         </section>
       ) : null}
 
-      {photographyProjects.length > 0 ? (
-        <section
-          aria-labelledby="work-photography"
-          className="section"
-          data-portfolio-pieces={photographyProjects.length}
-          id="fotografia"
-        >
+      {photographyPreview.length ? (
+        <section aria-labelledby="work-photography" className="section">
           <div className="container work-project-section">
             <SectionHeading
               eyebrow={t("photographyEyebrow")}
               id="work-photography"
-              text={t("photographyText")}
               title={t("photographyTitle")}
+              text={t("photographyText")}
             />
-            <ProjectIndex
-              copyFor={(project) => {
-                const raw = projectsText.raw(
-                  `items.${project.translationKey}`,
-                ) as ProjectCopy;
-                const location = project.locationKey
-                  ? projectsText(`locations.${project.locationKey}`)
-                  : undefined;
-
-                return {
-                  title: raw.title,
-                  media: buildProjectMediaCopy(project, raw.media, {
-                    date: project.year,
-                    location,
-                  }),
-                };
-              }}
-              disciplineLabel={disciplineLabel}
+            <SelectedProjects
+              eyebrow={t("photographyPreviewLabel")}
               playLabel={projectsText("play")}
-              projects={photographyProjects}
+              projects={photographyPreview.map((project, index) => ({
+                discipline: disciplineLabel(project),
+                media: project.cover ?? project.media?.[0],
+                mediaCopy: mediaCopyFor(project),
+                number: String(index + 1).padStart(2, "0"),
+                organisation: project.organisation,
+                slug: project.slug,
+                title: copyFor(project).title,
+              }))}
               viewLabel={projectsText("viewProject")}
             />
+            <div className="work-preview-actions">
+              <Link className="work-preview-cta" href="/work/photography">
+                {t("viewPhotography")}
+                <span aria-hidden="true">↗</span>
+              </Link>
+              <Link className="work-preview-cta" href="/work/photography/archive">
+                {t("explorePhotoArchive")}
+                <span aria-hidden="true">↗</span>
+              </Link>
+            </div>
           </div>
         </section>
       ) : null}
 
-      {publishedProjects.length > 0 ? (
-        <>
-          <div className="container work-archive-separator">
-            <AnimatedLine tone="strong" />
+      <section aria-labelledby="work-archive" className="section work-archive-teaser">
+        <div className="container">
+          <div>
+            <p className="eyebrow">{t("archiveTeaserEyebrow")}</p>
+            <h2 className="display-section" id="work-archive">{t("archiveTitle")}</h2>
+            <p>{t("archiveTeaserGroups")}</p>
           </div>
-          <PhotoArchive
-            closeLabel={t("archiveClose")}
-            groups={[
-              { id: "musica", title: t("archiveMusicaFull") },
-              { id: "retrato", title: t("archiveRetratoFull") },
-              { id: "estudio", title: t("archiveEstudioFull") },
-              { id: "calle", title: t("archiveCalleFull") },
-            ]}
-            nextLabel={t("archiveNext")}
-            prevLabel={t("archivePrev")}
-            title={t("archiveTitle")}
-            totalLabel={t("archiveTotal")}
-          />
-        </>
-      ) : null}
-
+          <p className="work-archive-count">
+            <span>{PHOTO_ARCHIVE_COUNT}</span> {t("archiveCountLabel")}
+          </p>
+          <Link className="work-preview-cta" href="/work/photography/archive">
+            {t("explorePhotoArchive")}
+            <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

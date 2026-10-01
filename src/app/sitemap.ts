@@ -8,6 +8,10 @@ import { localizedUrl, projectUrl } from "@/lib/metadata";
 const routes: PublicAppPathname[] = [
   "/",
   "/work",
+  "/work/reporting",
+  "/work/audiovisual",
+  "/work/photography",
+  "/work/photography/archive",
   "/about",
   "/experience",
   "/contact",

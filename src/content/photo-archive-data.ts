@@ -83,7 +83,9 @@ export const photoArchiveGroups = {
   ]
 } as const;
 
-export const PHOTO_ARCHIVE_COUNT = Object.values(photoArchiveGroups).reduce((n, g) => n + g.length, 0);
+import { PHOTO_ARCHIVE_COUNT } from "@/content/photo-archive-count";
+
+export { PHOTO_ARCHIVE_COUNT };
 if (PHOTO_ARCHIVE_COUNT !== 74) {
   throw new Error(`photo archive ${PHOTO_ARCHIVE_COUNT} !== 74`);
 }

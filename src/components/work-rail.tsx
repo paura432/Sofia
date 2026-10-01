@@ -2,10 +2,12 @@
 
 import { useParams } from "next/navigation";
 
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
+import type { ProjectSection } from "@/content/projects";
 
 export type WorkRailStory = {
   slug: string;
+  section?: ProjectSection;
 };
 
 type WorkRailProps = {
@@ -18,6 +20,8 @@ type WorkRailProps = {
   reportingLabel: string;
   prevLabel: string;
   hasReporting: boolean;
+  hasAudiovisual: boolean;
+  hasPhotography: boolean;
   stories: WorkRailStory[];
   workLabel: string;
 };
@@ -31,17 +35,31 @@ export function WorkRail({
   photographyLabel,
   reportingLabel,
   hasReporting,
+  hasAudiovisual,
+  hasPhotography,
   prevLabel,
   stories,
   workLabel,
 }: WorkRailProps) {
   const params = useParams<{ slug?: string }>();
+  const pathname = usePathname();
   const slug = typeof params.slug === "string" ? params.slug : undefined;
-  const index = slug
-    ? stories.findIndex((story) => story.slug === slug)
+  const currentStory = slug ? stories.find((story) => story.slug === slug) : undefined;
+  const sectionStories = currentStory
+    ? stories.filter((story) => story.section === currentStory.section)
+    : [];
+  const index = currentStory
+    ? sectionStories.findIndex((story) => story.slug === currentStory.slug)
     : -1;
-  const prev = index > -1 ? stories[(index - 1 + stories.length) % stories.length] : undefined;
-  const next = index > -1 ? stories[(index + 1) % stories.length] : undefined;
+  const prev = index > -1
+    ? sectionStories[(index - 1 + sectionStories.length) % sectionStories.length]
+    : undefined;
+  const next = index > -1
+    ? sectionStories[(index + 1) % sectionStories.length]
+    : undefined;
+  const backHref = currentStory?.section
+    ? `/work/${currentStory.section}` as const
+    : "/work";
 
   return (
     <nav aria-label={workLabel} className="work-rail">
@@ -50,7 +68,7 @@ export function WorkRail({
         data-project={slug ? "true" : undefined}
       >
         {slug ? (
-          <Link className="work-rail-back" href="/work">
+          <Link className="work-rail-back" href={backHref}>
             <span aria-hidden="true" className="work-rail-arrow">←</span>
             {backLabel}
           </Link>
@@ -58,23 +76,25 @@ export function WorkRail({
           <div className="work-rail-context">
             <Link href="/work">{indexLabel}</Link>
             {hasReporting ? (
-              <Link href={{ pathname: "/work", hash: "reporting" }}>
+              <Link aria-current={pathname === "/work/reporting" ? "page" : undefined} href="/work/reporting">
                 {reportingLabel}
               </Link>
             ) : null}
-            <Link
-              href={{ pathname: "/work", hash: "audiovisual" }}
-            >
-              {audiovisualLabel}
-            </Link>
-            <Link
-              href={{ pathname: "/work", hash: "fotografia" }}
-            >
-              {photographyLabel}
-            </Link>
-            <Link href={{ pathname: "/work", hash: "archivo" }}>
-              {archiveLabel}
-            </Link>
+            {hasAudiovisual ? (
+              <Link aria-current={pathname === "/work/audiovisual" ? "page" : undefined} href="/work/audiovisual">
+                {audiovisualLabel}
+              </Link>
+            ) : null}
+            {hasPhotography ? (
+              <Link aria-current={pathname === "/work/photography" ? "page" : undefined} href="/work/photography">
+                {photographyLabel}
+              </Link>
+            ) : null}
+            {hasPhotography ? (
+              <Link aria-current={pathname === "/work/photography/archive" ? "page" : undefined} href="/work/photography/archive">
+                {archiveLabel}
+              </Link>
+            ) : null}
           </div>
         )}
 
@@ -88,7 +108,7 @@ export function WorkRail({
             </Link>
             <span>
               {String(index + 1).padStart(2, "0")} /{" "}
-              {String(stories.length).padStart(2, "0")}
+              {String(sectionStories.length).padStart(2, "0")}
             </span>
             <Link
               aria-label={nextLabel}

@@ -13,6 +13,22 @@
         "title": "Trabajo",
         "description": "Trabajo de Sofía Chernikova: reporterismo de televisión, entrevistas, fotografía y comunicación digital."
       },
+      "reporting": {
+        "title": "Reportajes e entrevistas",
+        "description": "Reportajes, entrevistas, coberturas y piezas breves de Sofía Chernikova."
+      },
+      "audiovisual": {
+        "title": "Trabajo audiovisual",
+        "description": "Cortometrajes y proyectos audiovisuales de Sofía Chernikova."
+      },
+      "photography": {
+        "title": "Fotografía",
+        "description": "Series y ensayos fotográficos de Sofía Chernikova."
+      },
+      "photoArchive": {
+        "title": "Archivo fotográfico",
+        "description": "Explora las 74 fotografías del archivo de Sofía Chernikova."
+      },
       "about": {
         "title": "Perfil",
         "description": "Perfil de Sofía Chernikova, periodista y comunicadora audiovisual formada en la Universidad Rey Juan Carlos."
@@ -89,9 +105,22 @@
     "reportingCoverageEyebrow": "REPORTING",
     "reportingCoverageTitle": "Coberturas seleccionadas",
     "reportingCoverageText": "Una selección editorial de piezas de reporterismo.",
+    "reportingMoreTitle": "Más coberturas",
     "shortFormEyebrow": "REPORTING",
     "shortFormTitle": "FORMATO BREVE",
     "shortFormText": "Una selección de entrevistas, coberturas y piezas periodísticas en formato vertical.",
+    "shortFormShowMore": "Ver {count} piezas más",
+    "shortFormShowLess": "Ver menos",
+    "viewReporting": "Ver todos los reportajes",
+    "viewAudiovisual": "Ver audiovisual",
+    "viewPhotography": "Ver fotografía",
+    "photographyPreviewLabel": "Series seleccionadas",
+    "explorePhotoArchive": "Explorar archivo fotográfico",
+    "archiveTeaserEyebrow": "Archivo fotográfico",
+    "archiveTeaserGroups": "Música · Retrato · Estudio · Calle",
+    "archiveCountLabel": "fotografías",
+    "backToWork": "Trabajo",
+    "backToPhotography": "Fotografía",
     "reportingEyebrow": "Trayectoria",
     "reportingTitle": "Televisión y comunicación",
     "reportingText": "Cobertura, entrevistas y producción en medios y organizaciones.",
@@ -100,7 +129,7 @@
     "audiovisualText": "Dirección, montaje y narrativa audiovisual en proyectos de ficción y promoción.",
     "photographyEyebrow": "Fotografía",
     "photographyTitle": "Series editoriales",
-    "photographyText": "Documentación visual publicada en cuatro historias y archivo ampliado.",
+    "photographyText": "Documentación visual publicada en cinco historias y un archivo de 74 fotografías.",
     "aria": "Trabajo seleccionado",
     "fallbackAria": "Experiencia profesional seleccionada",
     "viewExperience": "Ver trayectoria completa",

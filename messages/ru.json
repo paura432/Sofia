@@ -13,6 +13,22 @@
         "title": "Работы",
         "description": "Работы Sofía Chernikova: телерепортаж, интервью, фотография и цифровая коммуникация."
       },
+      "reporting": {
+        "title": "Репортажи и интервью",
+        "description": "Репортажи, интервью, освещение событий и короткие журналистские материалы Sofía Chernikova."
+      },
+      "audiovisual": {
+        "title": "Аудиовизуальные работы",
+        "description": "Короткометражные фильмы и аудиовизуальные проекты Sofía Chernikova."
+      },
+      "photography": {
+        "title": "Фотография",
+        "description": "Фотосерии и фотоэссе Sofía Chernikova."
+      },
+      "photoArchive": {
+        "title": "Фотоархив",
+        "description": "Все 74 фотографии в архиве Sofía Chernikova."
+      },
       "about": {
         "title": "Профиль",
         "description": "Профиль Sofía Chernikova, журналиста и специалиста по аудиовизуальной коммуникации, выпускницы Universidad Rey Juan Carlos."
@@ -89,9 +105,22 @@
     "reportingCoverageEyebrow": "Репортажи",
     "reportingCoverageTitle": "Избранные репортажи",
     "reportingCoverageText": "Редакционная подборка журналистских материалов.",
+    "reportingMoreTitle": "Другие репортажи",
     "shortFormEyebrow": "РЕПОРТАЖИ",
     "shortFormTitle": "КОРОТКИЙ ФОРМАТ",
     "shortFormText": "Подборка интервью, репортажей и журналистских материалов в вертикальном формате.",
+    "shortFormShowMore": "Показать ещё {count}",
+    "shortFormShowLess": "Свернуть",
+    "viewReporting": "Все репортажи",
+    "viewAudiovisual": "Аудиовизуальные работы",
+    "viewPhotography": "Фотография",
+    "photographyPreviewLabel": "Избранные серии",
+    "explorePhotoArchive": "Открыть фотоархив",
+    "archiveTeaserEyebrow": "Фотоархив",
+    "archiveTeaserGroups": "Музыка · Портрет · Студия · Улица",
+    "archiveCountLabel": "фотографий",
+    "backToWork": "Работы",
+    "backToPhotography": "Фотография",
     "reportingEyebrow": "Карьера",
     "reportingTitle": "Телевидение и коммуникации",
     "reportingText": "Освещение, интервью и производство для медиа и организаций.",
@@ -100,7 +129,7 @@
     "audiovisualText": "Режиссура, монтаж и аудиовизуальный нарратив в художественных и промо-проектах.",
     "photographyEyebrow": "Фотография",
     "photographyTitle": "Редакционные серии",
-    "photographyText": "Опубликованная визуальная работа в четырёх историях и расширенном архиве.",
+    "photographyText": "Опубликованные визуальные истории и фотоархив из 74 фотографий.",
     "aria": "Избранные работы",
     "fallbackAria": "Избранный профессиональный опыт",
     "viewExperience": "Смотреть полный опыт",

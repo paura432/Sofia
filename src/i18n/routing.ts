@@ -12,6 +12,26 @@ export const routing = defineRouting({
       en: "/work",
       ru: "/rabota",
     },
+    "/work/reporting": {
+      es: "/trabajo/reportajes",
+      en: "/work/reporting",
+      ru: "/rabota/reportazhi",
+    },
+    "/work/audiovisual": {
+      es: "/trabajo/audiovisual",
+      en: "/work/audiovisual",
+      ru: "/rabota/audiovizualnoe",
+    },
+    "/work/photography": {
+      es: "/trabajo/fotografia",
+      en: "/work/photography",
+      ru: "/rabota/fotografiya",
+    },
+    "/work/photography/archive": {
+      es: "/trabajo/fotografia/archivo",
+      en: "/work/photography/archive",
+      ru: "/rabota/fotografiya/arkhiv",
+    },
     "/work/[slug]": {
       es: "/trabajo/[slug]",
       en: "/work/[slug]",
