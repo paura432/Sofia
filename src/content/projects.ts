@@ -188,8 +188,8 @@ export const projects: PortfolioProject[] = [
     year: "",
     discipline: ["reporting", "video"],
     reportingFormat: "short-form",
-    featured: true,
-    order: 2,
+    featured: false,
+    order: 3,
     published: false,
     translationKey: "short-form-001",
     rights: { verified: false, note: "Source, publication rights and credits pending." },
@@ -201,8 +201,9 @@ export const projects: PortfolioProject[] = [
       provider: "mux",
       width: 720,
       height: 1280,
-      duration: "01:03",
-      posterTime: 59.5,
+      duration: "03:48",
+      titleKey: "short-form-001-video",
+      posterTime: 45.8,
     },
   },
   {
@@ -211,8 +212,8 @@ export const projects: PortfolioProject[] = [
     year: "",
     discipline: ["reporting", "video"],
     reportingFormat: "short-form",
-    featured: false,
-    order: 3,
+    featured: true,
+    order: 1,
     published: false,
     translationKey: "short-form-002",
     rights: { verified: false, note: "Source, publication rights and credits pending." },
@@ -225,7 +226,8 @@ export const projects: PortfolioProject[] = [
       width: 576,
       height: 1024,
       duration: "02:44",
-      posterTime: 57.3,
+      titleKey: "short-form-002-video",
+      posterTime: 55.3,
     },
   },
   {
@@ -245,10 +247,11 @@ export const projects: PortfolioProject[] = [
       layout: "portrait",
       aspectRatio: "9:16",
       provider: "mux",
-      width: 576,
-      height: 1024,
+      width: 720,
+      height: 1280,
       duration: "00:58",
-      posterTime: 55.3,
+      titleKey: "short-form-003-video",
+      posterTime: 59.5,
     },
   },
   {
@@ -268,10 +271,34 @@ export const projects: PortfolioProject[] = [
       layout: "portrait",
       aspectRatio: "9:16",
       provider: "mux",
-      width: 720,
-      height: 1280,
-      duration: "03:49",
-      posterTime: 45.8,
+      width: 576,
+      height: 1024,
+      duration: "02:43",
+      titleKey: "short-form-004-video",
+      posterTime: 57.3,
+    },
+  },
+  {
+    id: "silver-praxis-condicion-perfecta",
+    slug: "silver-praxis-condicion-perfecta",
+    year: "",
+    discipline: ["audiovisual"],
+    order: 4.5,
+    published: false,
+    translationKey: "silver-praxis-condicion-perfecta",
+    roleKeys: ["shooting", "post-production"],
+    rights: { verified: false, note: "Portfolio permission and music/artist rights pending." },
+    cover: {
+      id: "silver-praxis-condicion-perfecta-video",
+      type: "video",
+      layout: "full",
+      aspectRatio: "16:9",
+      provider: "mux",
+      width: 1920,
+      height: 1080,
+      duration: "03:05",
+      titleKey: "silver-praxis-condicion-perfecta-video",
+      posterTime: 65.1,
     },
   },
   // Mux Image API and public HLS playback verified 2026-09-18.
@@ -583,6 +610,12 @@ export function isRenderableProject(
   project: PortfolioProject,
 ): project is PublishedPortfolioProject {
   if (!project.published || !hasRenderableProjectContent(project)) return false;
+  if (
+    project.id === "silver-praxis-condicion-perfecta" &&
+    (!project.roleKeys?.some(Boolean) || project.rights?.verified !== true)
+  ) {
+    return false;
+  }
   if (!project.discipline.includes("reporting")) return true;
 
   const media = [project.cover, ...(project.media ?? [])].filter(
@@ -608,8 +641,18 @@ export function isRenderableProject(
         hasMediaAsset(item) &&
         item.aspectRatio,
     );
+  const hasOwnMuxShortForm =
+    project.reportingFormat === "short-form" &&
+    media.some(
+      (item) =>
+        item.type === "video" &&
+        item.provider === "mux" &&
+        item.muxPlaybackId &&
+        item.poster &&
+        item.aspectRatio,
+    );
   return Boolean(
-    isPublicHttpUrl(project.sourceUrl) &&
+    (isPublicHttpUrl(project.sourceUrl) || hasOwnMuxShortForm) &&
       project.roleKeys?.some(Boolean) &&
       project.rights?.verified &&
       hasPoster &&
@@ -658,6 +701,10 @@ export function getProjectSection(project: PortfolioProject): ProjectSection | u
 
 export function getProjectsInSection(section: ProjectSection) {
   return getPublishedProjects().filter((project) => getProjectSection(project) === section);
+}
+
+export function hasPublishedReporting() {
+  return getProjectsInSection("reporting").length > 0;
 }
 
 export function hasProjectDetailPage(project: PortfolioProject) {

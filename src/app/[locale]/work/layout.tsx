@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 import { WorkRail } from "@/components/work-rail";
-import { getDetailedProjects, getProjectSection, getProjectsInSection } from "@/content/projects";
+import { getDetailedProjects, getProjectSection, getProjectsInSection, hasPublishedReporting } from "@/content/projects";
 
 export default async function WorkLayout({
   children,
@@ -15,7 +15,7 @@ export default async function WorkLayout({
   }));
   const hasAudiovisual = getProjectsInSection("audiovisual").length > 0;
   const hasPhotography = getProjectsInSection("photography").length > 0;
-  const hasReporting = getProjectsInSection("reporting").length > 0;
+  const hasReporting = hasPublishedReporting();
 
   return (
     <>

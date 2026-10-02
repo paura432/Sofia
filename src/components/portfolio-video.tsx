@@ -76,7 +76,7 @@ export function PortfolioVideo({
       {isPlaying && media.provider === "mux" && media.muxPlaybackId ? (
         <MuxPlayer
           accentColor="#a52522"
-          autoPlay={false}
+          autoPlay
           className="portfolio-video-player"
           loop={false}
           metadata={{ video_title: title }}

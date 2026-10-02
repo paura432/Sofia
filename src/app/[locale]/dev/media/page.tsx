@@ -116,10 +116,10 @@ export default async function DevMediaLab({ params }: PageProps) {
   const draftPhotos = draftPhotoSlugs
     .map((slug) => projects.find((project) => project.slug === slug))
     .filter(isDraftProject);
-  const shortFormDrafts = sortShortFormProjects(
+  const muxDrafts = sortShortFormProjects(
     projects.filter(
       (project) =>
-        project.published === false && project.reportingFormat === "short-form",
+        project.published === false && project.cover?.provider === "mux",
     ),
   );
   const fixturePoster = projects.find(
@@ -213,37 +213,55 @@ export default async function DevMediaLab({ params }: PageProps) {
         </div>
       </section>
 
-      {shortFormDrafts.length > 0 ? (
+      {muxDrafts.length > 0 ? (
         <section aria-labelledby="reel-ingest-drafts" className="section">
           <div className="container">
             <p className="eyebrow">Ingest · private drafts</p>
             <h2 className="display-section" id="reel-ingest-drafts">
-              Short-form review
+              Mux draft review
             </h2>
             <p>
-              Mux upload is blocked until server credentials and the approved
-              ingest path are available. No source videos or playback IDs are
-              exposed here; posters, role, provenance and rights remain pending.
+              Internal review only. No uploads are performed here. Asset IDs,
+              Playback IDs and posters are shown only when verified values are
+              connected; editorial rights and role remain independent gates.
             </p>
             <div className="project-media-layout">
-              {shortFormDrafts.map((project) => (
+              {muxDrafts.map((project) => {
+                const copy = projectsText.raw(
+                  `items.${project.translationKey}`,
+                ) as ProjectCopy;
+                const cover = project.cover;
+
+                return (
                 <article className="selected-project" key={project.id}>
                   <div className="featured-project-meta">
                     <span>
-                      <span>Draft · order {project.order} · {project.featured ? "featured candidate" : "not featured"}</span>
-                      <h3 className="display-section">{project.id}</h3>
+                      <span>{project.discipline.includes("audiovisual") ? "Audiovisual" : "Reporting · short-form"} · order {project.order} · {project.featured ? "featured candidate" : "not featured"}</span>
+                      <h3 className="display-section">{copy.title}</h3>
                     </span>
                     <span>
-                      {project.cover?.duration ?? "Duration pending"} · {project.cover?.width}×{project.cover?.height} · poster {project.cover?.posterTime}s
+                      {cover?.duration ?? "Duration pending"} · {cover?.width && cover.height ? `${cover.width}×${cover.height}` : "dimensions pending"} · poster {cover?.posterTime ?? "pending"}s
                     </span>
                   </div>
+                  {cover?.poster && cover.muxPlaybackId ? (
+                    <ProjectMediaLayout
+                      copy={buildProjectMediaCopy(project, copy.media)}
+                      media={[cover]}
+                      playLabel={projectsText("play")}
+                    />
+                  ) : null}
                   <p>
-                    Mux: NOT UPLOADED · playback: missing · poster: candidate only ·
-                    published: {String(project.published)} · rights: {project.rights?.verified ? "verified" : "pending"}
+                    Mux asset ID: pending account verification · Playback ID: {cover?.muxPlaybackId ?? "pending"} · poster: {cover?.poster ? "connected" : "pending"} ({cover?.posterTime ?? "pending"}s) · ratio: {cover?.aspectRatio ?? "pending"}
                   </p>
-                  <p>Pending: public title/copy, role, source URL, organisation, year, credits and publication permission.</p>
+                  <p>
+                    Title: {copy.title} · {project.id === "silver-praxis-condicion-perfecta" ? "provided title" : "proposed title"} · role: {project.roleKeys?.some(Boolean) ? (project.id === "silver-praxis-condicion-perfecta" ? "visible in credits" : "pending confirmation") : "pending"} · rights: {project.rights?.verified ? "verified" : "pending"}
+                  </p>
+                  <p>
+                    published: {String(project.published)} · source: {project.sourceUrl ?? (project.reportingFormat === "short-form" ? "optional for own Mux master" : "pending")} · year: {publishableYear(project.year) ?? "pending"}
+                  </p>
                 </article>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

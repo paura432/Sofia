@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { ProjectIndex } from "@/components/project-index";
 import { ReportingIndex, type ReportingStory } from "@/components/reporting-index";
 import { ReporterReel } from "@/components/reporter-reel";
+import { ShortFormReporting, type ShortFormStory } from "@/components/short-form-reporting";
 import { SectionHeading } from "@/components/section-heading";
 import { SelectedProjects } from "@/components/selected-projects";
 import { Reveal } from "@/components/motion/reveal";
@@ -12,13 +13,15 @@ import {
   buildProjectMediaCopy,
   getProjectsInSection,
   getReporterReel,
+  hasPublishedReporting,
   hasMediaAsset,
+  sortShortFormProjects,
   type MediaCopy,
   type PortfolioProject,
 } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
-import { toReportingStory, type ReportingCopy } from "@/lib/reporting-content";
+import { toReportingStory, toShortFormStory, type ReportingCopy } from "@/lib/reporting-content";
 import { pageMetadata } from "@/lib/metadata";
 
 type PageProps = { params: Promise<{ locale: string }> };
@@ -40,9 +43,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 type ProjectCopy = ReportingCopy & { format?: string };
 
 export default async function WorkPage() {
-  const [t, projectsText] = await Promise.all([
+  const [t, projectsText, navigationText] = await Promise.all([
     getTranslations("Work"),
     getTranslations("Projects"),
+    getTranslations("Navigation"),
   ]);
   const reporting = getProjectsInSection("reporting");
   const audiovisual = getProjectsInSection("audiovisual");
@@ -66,6 +70,15 @@ export default async function WorkPage() {
       );
       return story ? [story] : [];
     });
+  const shortFormStories = sortShortFormProjects(
+    reporting.filter(
+      (project) => project !== reel && project.reportingFormat === "short-form",
+    ),
+  ).flatMap((project): ShortFormStory[] => {
+    const copy = projectsText.raw(`items.${project.translationKey}`) as ReportingCopy;
+    const story = toShortFormStory(project, copy, projectsText("play"));
+    return story ? [story] : [];
+  });
   const audiovisualPreview = [
     ...audiovisual.filter((project) => project.featured),
     ...audiovisual.filter((project) => !project.featured),
@@ -91,7 +104,7 @@ export default async function WorkPage() {
         </Reveal>
       </section>
 
-      {((reel && reelVideo && reelCopy) || selectedReporting.length > 0) ? (
+      {hasPublishedReporting() ? (
         <section aria-labelledby="work-reporting" className="section">
           <div className="container work-project-section">
             <SectionHeading
@@ -111,6 +124,24 @@ export default async function WorkPage() {
                 title={reelCopy.title}
                 viewLabel={projectsText("viewReel")}
               />
+            ) : null}
+            {shortFormStories.length ? (
+              <>
+                <SectionHeading
+                  eyebrow={t("shortFormEyebrow")}
+                  id="work-short-form"
+                  title={t("shortFormTitle")}
+                  text={t("shortFormText")}
+                />
+                <ShortFormReporting
+                  label={t("shortFormTitle")}
+                  opensInNewTabLabel={navigationText("opensInNewTab")}
+                  projects={shortFormStories}
+                  showLessLabel={t("shortFormShowLess")}
+                  showMoreLabel={t("shortFormShowMore", { count: "{count}" })}
+                  viewOriginalLabel={projectsText("viewOriginal")}
+                />
+              </>
             ) : null}
             {selectedReporting.length ? (
               <ReportingIndex

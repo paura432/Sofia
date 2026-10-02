@@ -12,6 +12,7 @@ import {
   buildProjectMediaCopy,
   getProjectsInSection,
   getReporterReel,
+  hasPublishedReporting,
   hasMediaAsset,
   sortShortFormProjects,
 } from "@/content/projects";
@@ -48,7 +49,7 @@ export default async function ReportingPage() {
     getTranslations("Navigation"),
   ]);
   const projects = getProjectsInSection("reporting");
-  if (!projects.length) notFound();
+  if (!hasPublishedReporting()) notFound();
   const reel = getReporterReel();
   const reelVideo = reel && [reel.cover, ...(reel.media ?? [])].find(
     (media) => media?.type === "video" && hasMediaAsset(media),

@@ -1,178 +1,90 @@
-# Short-form reels ingest manifest
+# Mux video integration manifest
 
-Ingest review date: 2026-10-02. Source archive: `videos_reels.zip` in the local workspace; SHA-256 `f1a8f5fa8ab6b750ec21ccffb302937605e9fc862b8b6be710ffdff0bbe98d15`; 200,788,024 bytes; 7 entries total (5 MP4, 2 JPEG). The archive listing was checked before selective extraction; it contained no absolute/traversal paths, executables, or OS metadata folders. Originals were not transformed or copied into public assets.
+Review: 2026-10-02. Source archive `videos_reels.zip`: 200,788,024 bytes, SHA-256 `f1a8f5fa8ab6b750ec21ccffb302937605e9fc862b8b6be710ffdff0bbe98d15`; 7 entries (5 MP4, 2 JPEG). ZIP listing was checked before extraction; no traversal/absolute paths, executable or OS metadata entries were found. No video was uploaded or copied to `public/`.
 
-The four reel candidates below were extracted to a temporary directory outside the repository for technical and visual review. Seven frames per clip (5%, 20%, 35%, 50%, 65%, 80%, 95%) were sampled and reviewed. No exact duplicates or likely alternate exports were found among these four. The two `yoigo_video...` files differ substantially in length and visible content. The archive also contains `Silver Praxis - Condición Perfecta (Videoclip).mp4` (77,989,035 bytes); by instruction it was not extracted, probed, hashed or viewed and is excluded from this reporting ingest.
+## Mux asset lookup state
 
-`VERIFIED` below means verified from file metadata or direct frame review only. `VISIBLE / INFERRED` describes what the frames suggest and is not confirmation of employment, event, client, role, date or credits. `UNKNOWN` remains unasserted. No project is public. The short proposed copy is editorial-review material only, not localized public content.
+The five assets and their READY metadata below are reported in the user-provided task. I could not independently query Mux: this workspace has no Mux credentials/environment variables, and the dashboard opens at its login page. No Asset IDs or Playback IDs have yet been retrieved or verified. Consequently no public ID is in code, no thumbnail response or real playback is claimed, and all five projects remain drafts. Do not interpret local ZIP/source files as newly uploaded Mux assets.
 
-## Reel 01
+| Piece | Mux title | Asset ID | Public Playback ID | Mux duration / format | Status |
+|---|---|---|---|---|---|
+| Short A / `short-form-001` | `SaveVid` (3:48, 720p, 9:16, 30 fps) | Pending account lookup | Pending account lookup | 03:48 / 9:16 | READY per supplied metadata; API unverified |
+| Short B / `short-form-002` | `yoigo_video_no_watermark (1)` | Pending account lookup | Pending account lookup | 00:58 / 720p / 9:16 / 30 fps | READY per supplied metadata; API unverified |
+| Short C / `short-form-003` | `SaveVid` (1:02, 720p, 9:16, ~29.68 fps) | Pending account lookup | Pending account lookup | 01:02 / 9:16 | READY per supplied metadata; API unverified |
+| Short D / `short-form-004` | `yoigo_video_no_watermark` | Pending account lookup | Pending account lookup | 02:43 / 720p / 9:16 / 30 fps | READY per supplied metadata; API unverified |
+| Audiovisual / `silver-praxis-condicion-perfecta` | `Silver Praxis - Condición Perfecta (Videoclip)` | Pending account lookup | Pending account lookup | 03:05 / 1080p / 16:9 / 30 fps | READY per supplied metadata; API unverified |
 
-- Internal ID: `short-form-001`
-- Source filename: `SaveVid.Net_AQN75Me9b7v36c8RAAPOVb_B09DRpXmY-TGQycAZhmSRtG8iNIkVRxBnIdwcX4VRw8fjxmlYuIlwr0aUpEAc316cFrLOjhzvReV2QdM.mp4`
-- SHA-256: `5cfc379bf7e771d612d4e05d289c5eb053f965c8bb5d50e64c6cb63babbe26af`
-- Technical: 10,888,645 bytes; H.264 + AAC stereo 44.1 kHz; 720×1280; 9:16; 29.68 fps; 62.669 s; video 1,323,894 bps, container ~1,389,982 bps; audio present.
-- Visual analysis: **VERIFIED** Sofia speaks to camera, intercut with MyMUN/URJCmun interface captures and explanatory overlays. **VISIBLE TEXT** includes “PERO… NO SABES USAR MYMUN”, “URJCmun 2026”, and “PARTE DE URJCMUN 2026”. **VISIBLE / INFERRED** on-camera explainer/tutorial. Sofía visible: YES; on camera: YES; interview: NO; B-roll/screens: YES. Branding/text is visual evidence only; affiliation, event, role and year of publication are **UNKNOWN**.
-- Possible editorial type: on-camera / explainer (inferred; not a confirmed professional role).
-- Public title: **PENDING**. Proposed internal title: “Guía visual de MyMUN” (**PROPOSED_TITLE**, not verified).
-- Organisation, year, role, source URL, rights and credits: **PENDING**.
-- Proposed description ES: “Pieza vertical en la que Sofía explica MyMUN a cámara y muestra pantallas de la plataforma.”
-- Proposed description EN: “A vertical piece in which Sofía explains MyMUN on camera and shows screens from the platform.”
-- Proposed description RU: “Вертикальный ролик: София на камеру объясняет MyMUN и показывает экраны платформы.”
-- Project: `published:false`, `featured:true`, order 1; dimensions/duration recorded. Playback ID and poster URL intentionally absent.
+The two `SaveVid` records are distinguished by duration and frame rate, not title alone. Local source files match those duration/ratio descriptions: the 03:48 outdoor clip is `SaveVid.Net_AQOKgMidocHxLUKXRGcY7MgY6XO0p4Ppb6fW47uYFwHIVrgEJnklHIgOOdiS3apIv__2i1UALt-yR46uleNYLoziK7i4esYOQDzYv3g.mp4` (SHA-256 `767ce2c84d189cda7f83aa029c50197e6bad2e68d577aa08dfc36eb5574e30a3`); the 01:02 MyMUN/interface clip is `SaveVid.Net_AQN75Me9b7v36c8RAAPOVb_B09DRpXmY-TGQycAZhmSRtG8iNIkVRxBnIdwcX4VRw8fjxmlYuIlwr0aUpEAc316cFrLOjhzvReV2QdM.mp4` (SHA-256 `5cfc379bf7e771d612d4e05d289c5eb053f965c8bb5d50e64c6cb63babbe26af`). This is a metadata match, not independent confirmation of Mux asset identity.
 
-## Reel 02
+## Four short-form pieces
 
-- Internal ID: `short-form-002`
-- Source filename: `yoigo_video_no_watermark.mp4`
-- SHA-256: `6b980eaefaa560e10bee4cdf0aabeacd40fdfcfd0450ac757023285885005574`
-- Technical: 21,949,521 bytes; H.264 + AAC stereo 44.1 kHz; 576×1024; SAR 1:1, DAR 9:16; 30 fps; 163.648 s; video 1,034,465 bps, total ~1,073,011 bps; audio present.
-- Visual analysis: **VERIFIED** Sofia appears on camera demonstrating a smartphone; product/device and packaging B-roll are intercut. **VISIBLE TEXT/BRANDING** includes “EL FOCO”, “A TU ARTISTA FAVORITO”, “LARGA DISTANCIA”, “VELVET GLASS”, “90W PLUS”, and `vivo` on the device. **VISIBLE / INFERRED** product/device explainer. Sofía visible: YES; on camera: YES; interview: NO; B-roll: YES. A client, paid partnership, production credit, publication date and professional role are **UNKNOWN**.
-- Possible editorial type: on-camera / product explainer (inferred).
-- Public title: **PENDING**. Proposed internal title: “Demostración de un smartphone” (**PROPOSED_TITLE**, not verified).
-- Organisation, year, role, source URL, rights and credits: **PENDING**.
-- Proposed description ES: “Pieza vertical con una demostración de un smartphone a cámara y planos de detalle del dispositivo.”
-- Proposed description EN: “A vertical piece featuring an on-camera smartphone demonstration and close-ups of the device.”
-- Proposed description RU: “Вертикальный ролик с демонстрацией смартфона на камеру и крупными планами устройства.”
-- Project: `published:false`, `featured:true`, order 2; dimensions/duration recorded. Playback ID and poster URL intentionally absent. Its Reporting fit should be confirmed, given the product-led subject.
+The four local clips were each sampled at 5%, 20%, 35%, 50%, 65%, 80%, 95% and visually reviewed. The labels below distinguish observed frames from inferred editorial type. No client, organization, contract, event, date or rights are inferred from a logo or file.
 
-## Reel 03
+### Short A — `short-form-001`
 
-- Internal ID: `short-form-003`
-- Source filename: `yoigo_video_no_watermark (1).mp4`
-- SHA-256: `0e941c5613db70f655c1c68ccccced724bc6615e3c2e510f66aae8e3c83e0502`
-- Technical: 14,857,732 bytes; H.264 + AAC stereo 44.1 kHz; 576×1024; SAR 1:1, DAR 9:16; 30 fps; 58.189 s; video 2,004,616 bps, total ~2,042,685 bps; audio present.
-- Visual analysis: **VERIFIED** Sofia holds a branded microphone; another person and another woman appear in the same interview-like setting, with display/prop shots and overlays. **VISIBLE TEXT/BRANDING** includes `@YOIGO`, `@STARCHANNEL_ES`, “DEL METRO A TU SALÓN DE STAR”, “YO QUE SOY FAN DEL MERCHANDISING”, “PORQUE SE VIENEN COSITAS MUY FUERTES”, and visible “YOIGO TV / STAR” signage. **VISIBLE / INFERRED** interview/event-style coverage. Sofía visible: YES; on camera: YES; interview: UNCLEAR (the format looks interview-like, but the sampled frames do not verify question/answer or identities); B-roll: YES. Event/program, location, organization relationship, role and year are **UNKNOWN**.
-- Possible editorial type: interview / event coverage (inferred, not a verified assignment).
-- Public title: **PENDING**. Proposed internal title: “Conversación en un espacio de entrevistas” (**PROPOSED_TITLE**, not verified).
-- Organisation, year, role, source URL, rights and credits: **PENDING**.
-- Proposed description ES: “Pieza vertical con Sofía y otras personas en un espacio con micrófonos, rótulos y planos de recurso.”
-- Proposed description EN: “A vertical piece featuring Sofía and other people in a setting with microphones, on-screen text and cutaway shots.”
-- Proposed description RU: “Вертикальный ролик с Софией и другими людьми в пространстве с микрофонами, титрами и перебивками.”
-- Project: `published:false`, `featured:false`, order 3; dimensions/duration recorded. Playback ID and poster URL intentionally absent. It has strong visible interpersonal/reporting cues but its specific context and role still require confirmation.
+- Source: `SaveVid.Net_AQOKgMidocHxLUKXRGcY7MgY6XO0p4Ppb6fW47uYFwHIVrgEJnklHIgOOdiS3apIv__2i1UALt-yR46uleNYLoziK7i4esYOQDzYv3g.mp4`; 74,915,604 bytes; SHA-256 `767ce2c84d189cda7f83aa029c50197e6bad2e68d577aa08dfc36eb5574e30a3`.
+- Local technical probe: H.264/AAC stereo, 720×1280, 9:16, 30 fps, 228.876 s (~03:49 by nearest-second rounding). Mux metadata supplied: about 03:48, 720p, 30 fps.
+- **Observed:** Sofía walks and speaks to camera outdoors with a camera around her neck; street/plaza cutaways. Sofía visible/on camera: yes/yes. Interview: no. B-roll: yes. Branding/graphics/subtitles: none clearly legible in sampled frames. Event identifiable: no. Context and professional role: pending.
+- Type: walk-and-talk / other (inferred). Proposed title: “Intervención a cámara en exteriores”.
+- Proposed ES: “Pieza vertical en exteriores, con Sofía hablando a cámara y planos de calles y plazas.” EN: “A vertical outdoor piece with Sofía speaking to camera, intercut with street and plaza shots.” RU: “Вертикальный ролик на улице: София говорит на камеру, чередуясь с планами улиц и площадей.”
+- Poster candidate: 45.8 s, Sofía in an urban setting with camera visible; face clear and no text overlay. No thumbnail URL until a public Playback ID is verified.
+- Role, year, source URL, credits and rights: pending. `published:false`, `featured:false`, editorial `order:3`.
 
-## Reel 04
+### Short B — `short-form-002`
 
-- Internal ID: `short-form-004`
-- Source filename: `SaveVid.Net_AQOKgMidocHxLUKXRGcY7MgY6XO0p4Ppb6fW47uYFwHIVrgEJnklHIgOOdiS3apIv__2i1UALt-yR46uleNYLoziK7i4esYOQDzYv3g.mp4`
-- SHA-256: `767ce2c84d189cda7f83aa029c50197e6bad2e68d577aa08dfc36eb5574e30a3`
-- Technical: 74,915,604 bytes; H.264 + AAC stereo 44.1 kHz; 720×1280; 9:16; 30 fps; 228.876 s; video 2,544,653 bps, total ~2,618,554 bps; audio present.
-- Visual analysis: **VERIFIED** Sofia is outdoors with a camera around her neck, speaking while walking; intercut with city street/plaza establishing shots. **VISIBLE / INFERRED** walk-and-talk. Sofía visible: YES; on camera: YES; interview: NO; B-roll: YES. Subject, location, assignment, year, organization and professional role are **UNKNOWN**.
-- Possible editorial type: on-camera walk-and-talk / other (inferred).
-- Public title: **PENDING**. Proposed internal title: “Intervención a cámara en exteriores” (**PROPOSED_TITLE**, not verified).
-- Organisation, year, role, source URL, rights and credits: **PENDING**.
-- Proposed description ES: “Pieza vertical en exteriores, con Sofía hablando a cámara y planos de calles y plazas.”
-- Proposed description EN: “A vertical outdoor piece with Sofía speaking to camera, intercut with street and plaza shots.”
-- Proposed description RU: “Вертикальный ролик на улице: София говорит на камеру, чередуясь с планами улиц и площадей.”
-- Project: `published:false`, `featured:false`, order 4; dimensions/duration recorded. Playback ID and poster URL intentionally absent. Context is too unclear to lead a Reporting selection without confirmation.
+- Source: `yoigo_video_no_watermark (1).mp4`; 14,857,732 bytes; SHA-256 `0e941c5613db70f655c1c68ccccced724bc6615e3c2e510f66aae8e3c83e0502`.
+- Local technical probe: H.264/AAC stereo, 576×1024, SAR 1:1/DAR 9:16, 30 fps, 58.189 s. Mux metadata supplied: 00:58, 720p, 30 fps.
+- **Observed:** Sofía holds a microphone; other people, signage, overlays and cutaways are visible. Text/branding includes `@YOIGO`, `@STARCHANNEL_ES` and “YOIGO TV / STAR”. Sofía visible/on camera: yes/yes. Interview: unclear from frames alone. Another person/B-roll/graphics: yes/yes/yes. Event identifiable: unclear. Branding does not verify an employment or client relationship.
+- Type: interview/event coverage (inferred). Proposed title: “Conversación en un espacio con micrófonos”.
+- Proposed ES: “Pieza vertical con Sofía, otra persona y micrófonos en un espacio con branding visible.” EN: “A vertical piece featuring Sofía, another person and microphones in a setting with visible branding.” RU: “Вертикальный ролик с Софией, другим человеком и микрофонами в пространстве с заметным брендингом.”
+- Poster candidate: 55.3 s, Sofía with microphone, face clear and setting recognizable.
+- Role, event/program, year, source URL, credits and rights: pending. `published:false`, `featured:true`, editorial `order:1`.
 
-## Mux status
+### Short C — `short-form-003`
 
-The existing project has a Mux player and thumbnail helper, but no reusable upload pipeline or available Mux upload credentials were found in this workspace. No upload was attempted; the local user-provided assets must not be described as Mux assets. No Asset IDs or Playback IDs are available for these four files. Do not confuse their state with the three previously integrated audiovisual projects.
+- Source: `SaveVid.Net_AQN75Me9b7v36c8RAAPOVb_B09DRpXmY-TGQycAZhmSRtG8iNIkVRxBnIdwcX4VRw8fjxmlYuIlwr0aUpEAc316cFrLOjhzvReV2QdM.mp4`; 10,888,645 bytes; SHA-256 `5cfc379bf7e771d612d4e05d289c5eb053f965c8bb5d50e64c6cb63babbe26af`.
+- Local technical probe: H.264/AAC stereo, 720×1280, 9:16, 29.68 fps, 62.669 s. Mux metadata supplied: approx. 01:02, 720p, ~29.68 fps.
+- **Observed:** Sofía speaks to camera; interface/screens and graphics/text are intercut. Visible text includes MyMUN/URJCmun references. Sofía visible/on camera: yes/yes. Interview: no. Other person: not apparent in sampled frames. B-roll/screens/graphics: yes/yes. Embedded subtitles: no clear subtitle track identified visually; overlays are present. Event/affiliation: unknown.
+- Type: on-camera explainer (inferred). Proposed title: “Guía visual de MyMUN”.
+- Proposed ES: “Pieza vertical en la que Sofía explica MyMUN a cámara y muestra pantallas de la plataforma.” EN: “A vertical piece in which Sofía explains MyMUN on camera and shows screens from the platform.” RU: “Вертикальный ролик: София на камеру объясняет MyMUN и показывает экраны платформы.”
+- Poster candidate: 59.5 s, clear close-up of Sofía; graphic remains away from her face.
+- Role, event/year, organization, source URL, credits and rights: pending. `published:false`, `featured:true`, editorial `order:2`.
 
-| Reel | Asset ID | Public Playback ID | Upload status | Duration |
-|---|---|---|---|---:|
-| 01 | — | — | `MUX_UPLOAD_BLOCKED` (credentials/pipeline unavailable) | 01:03 |
-| 02 | — | — | `MUX_UPLOAD_BLOCKED` (credentials/pipeline unavailable) | 02:44 |
-| 03 | — | — | `MUX_UPLOAD_BLOCKED` (credentials/pipeline unavailable) | 00:58 |
-| 04 | — | — | `MUX_UPLOAD_BLOCKED` (credentials/pipeline unavailable) | 03:49 |
+### Short D — `short-form-004`
 
-No secret values are recorded here. Existing Mux IDs and projects, including Silver Praxis, were not changed.
+- Source: `yoigo_video_no_watermark.mp4`; 21,949,521 bytes; SHA-256 `6b980eaefaa560e10bee4cdf0aabeacd40fdfcfd0450ac757023285885005574`.
+- Local technical probe: H.264/AAC stereo, 576×1024, SAR 1:1/DAR 9:16, 30 fps, 163.648 s. Mux metadata supplied: 02:43, 720p, 30 fps.
+- **Observed:** Sofía demonstrates a smartphone; device and packaging close-ups are intercut. Visible text includes “EL FOCO”, “A TU ARTISTA FAVORITO”, “LARGA DISTANCIA”, “VELVET GLASS”, “90W PLUS” and vivo branding on the device. Sofía visible/on camera: yes/yes. Interview: no. B-roll/graphics: yes/yes. Event identifiable: no. Whether this was commercial work or a Reporting assignment: unknown.
+- Type: product/device explainer (inferred). Proposed title: “Demostración de un smartphone”.
+- Proposed ES: “Pieza vertical con una demostración de un smartphone a cámara y planos de detalle del dispositivo.” EN: “A vertical piece featuring an on-camera smartphone demonstration and close-ups of the device.” RU: “Вертикальный ролик с демонстрацией смартфона на камеру и крупными планами устройства.”
+- Poster candidate: 57.3 s, Sofía holding the phone; product is visible and composition differs from the other posters.
+- Role, client/organization, year, source URL, credits, Reporting fit and rights: pending. `published:false`, `featured:false`, editorial `order:4`.
 
-## Poster candidates
+Proposed order: B (interaction/interview-like setting), C (direct explanation plus interface), A (outdoor walk-and-talk), D (product-led piece; least clear Reporting evidence). The first two flags are editorial priorities only, not publication approval.
 
-Candidate moments were selected from reviewed frames for distinct compositions. They are proposed Mux Image API `posterTime` values only; there are no generated local posters and no working thumbnail until a Playback ID exists.
+## Silver Praxis — audiovisual project
 
-| Reel | Candidate time | Reason |
-|---|---:|---|
-| 01 | 59.5 s | Clear Sofia close-up against foliage; legible lower overlay; distinct from the other candidates. |
-| 02 | 57.3 s | Sofia seated holding the phone; clear product context and a different composition. |
-| 03 | 55.3 s | Sofia with microphone in the interview-like setting; face clear, context visible. |
-| 04 | 45.8 s | Sofia outdoors with camera around her neck; face visible and no overlay. |
+- ZIP source: `Silver Praxis - Condición Perfecta (Videoclip).mp4`; 77,989,035 bytes; SHA-256 `3fe9db4e44eb70dbe32fec369d0df16f7b14db1356667097f0008a6c39fe600f`.
+- Local `ffprobe`: H.264/AAC stereo, 1920×1080, 16:9, 30 fps, 185.945 s (~03:06 nearest-second). User-provided Mux metadata: READY, 03:05, 1080p, 30 fps.
+- Seven representative frames were reviewed at 5–95%. **Observed:** a male performer appears in a white shirt, then in red-lit car/interior scenes, a corridor, a planted outdoor setting and a table scene. The credit frame at 176.7 s visibly reads “SHOT Y POST PRODUCCION — SOFIA CHERNIKOVA”; it also attributes creative direction/styling/lettering to Briza Sanchez and production/mix/master to Silver Praxis. The visible Sofía credit supports filming and post-production as her credited roles; no directing credit is inferred.
+- Poster candidate: 65.1 s (35%); frontal performer in a clean, symmetrical corridor, no overlaid credits and distinct from the red-lit/table frames. This is a human-selected candidate, not a Mux thumbnail yet.
+- Project: `silver-praxis-condicion-perfecta`; title `Silver Praxis — Condición Perfecta`; `discipline:["audiovisual"]`; format ES `Videoclip`, EN `Music video`, RU `Музыкальный клип`; 16:9; duration 03:05. Draft only: Mux IDs and poster are not connected; rights/music/talent permission remain unverified. `rights.verified:false`, `published:false`.
+- Provisional audiovisual placement: after `4 MINUTOS`, before `Tras el sofá` (project order 4.5). Its staged nocturnal/urban performance imagery sits closest to the existing urban short, while remaining a distinct music video. Existing `featured` and other project orders remain untouched.
 
-## Editorial order proposal
+## Gates and delivery state
 
-Order is a review proposal, not a publication claim. Because this batch does not establish all expected reporting roles, the first two `featured` flags are merely internal curation candidates and do not make them public.
+`MUX_ASSETS`: five existing READY assets reported by the user; not independently queried. `MUX_PLAYBACK_IDS`: all five pending authenticated account lookup. `MUX_POSTERS`: candidate times selected, image URLs pending IDs. `PUBLICATION_STATUS`: all five remain unpublished. No local media is referenced from the public site.
 
-### 01 — Reel 03 (`short-form-003`)
+The previous Reporting gate required a public HTTP `sourceUrl` for every reporting project, plus role, verified rights and a renderable poster/video. It now permits a short-form project to omit `sourceUrl` only when it has its own playable Mux video, poster and aspect ratio. Coverage projects still require a public HTTP source URL. All Reporting items continue to require `roleKeys`, `rights.verified`, a poster, and renderable video/media. No rights or roles were weakened. Silver Praxis remains manually unpublished until portfolio and music/artist rights are confirmed.
 
-- What we see: Sofia with a microphone and other people in a branded interview-like space.
-- Why it leads: strongest visible interpersonal/coverage cues and a clear, differentiated poster.
-- What it demonstrates: on-camera presence and an apparent interaction; not a confirmed reporting assignment.
-- Confirmed metadata: visual contents, portrait format, codec, duration and dimensions.
-- Pending: official title, event/program, date, role, organization, source URL, credits and rights.
+`hasPublishedReporting()` is the shared content gate for the Reporting route, `/work` preview, Work rail and sitemap. With these five drafts, `/[locale]/work/reporting` remains 404 (unless other qualifying published Reporting content exists); none is added to public navigation or sitemap. Once a reel passes the gate, the existing page places Reporter Reel first if available, then short-form, then selected/more coverage. `/dev/media` displays all Mux drafts and their verified state; the production guard remains.
 
-### 02 — Reel 01 (`short-form-001`)
+`PortfolioVideo` still renders the poster first and mounts only after its play button is activated. A short-form card controls a single `activeId`; the newly mounted Mux player requests autoplay after that explicit click, with `preload="none"`, `playsInline`, controls, and no autoplay on page load. Actual playback and thumbnail HTTP responses remain unverified until public Playback IDs are retrieved.
 
-- What we see: direct address intercut with a MyMUN interface and explanatory text.
-- Why second: demonstrates a different mode—direct explanation plus screen-based demonstration.
-- What it demonstrates: visible on-camera explanation; affiliation and professional role remain unconfirmed.
-- Confirmed metadata: visual contents, portrait format, codec, duration and dimensions.
-- Pending: official title, event/year, role, organization, source URL, credits and rights.
+## INFORMATION NEEDED
 
-### 03 — Reel 02 (`short-form-002`)
+- Mux account access: sign in to the Mux dashboard tab so the five Asset IDs and public Playback IDs can be read and verified. No password or OTP should be shared in chat.
+- For each short-form: official title/context, exact credited role, year/date, original URL if public, required credits, and portfolio rights. For D, confirm it belongs in Reporting rather than commercial/personal content.
+- For Silver Praxis: confirm portfolio/music/talent rights and source URL. The on-screen credit already evidences Sofía's listed filming and post-production roles; confirm the intended year and any additional credits.
 
-- What we see: phone demonstration, Sofia on camera, device close-ups and visible vivo branding.
-- Why third: distinct product/demo format adds visual breadth, but its fit in Reporting is uncertain.
-- Confirmed metadata: visible contents, portrait format, codec, duration and dimensions.
-- Pending: whether it belongs in this portfolio section, plus title, client/organization, role, date, source, credits and rights.
-
-### 04 — Reel 04 (`short-form-004`)
-
-- What we see: Sofia speaking while walking outdoors with a camera, intercut with street/plaza shots.
-- Why fourth: clear direct address, but without context it gives the least verifiable professional evidence.
-- Confirmed metadata: visible contents, portrait format, codec, duration and dimensions.
-- Pending: subject, place, assignment, title, organization, role, date, source, credits and rights.
-
-## Publication and route gates
-
-All four drafts are `published:false`, rights are unverified, and there are no playback IDs, playable posters, verified source URLs, public titles, or confirmed roles. `isRenderableProject` therefore filters them out. `/[locale]/work/reporting` still returns 404 when no other published Reporting project exists; this ingest does not change that behavior. The Reporting navigation and sitemap remain unchanged. There is no public short-form section yet, no player to test, and no public routes for these drafts. `/[locale]/dev/media` remains development-only and now lists the draft metadata/status without video sources or fabricated posters.
-
-No responsive browser QA or real playback QA can be claimed for this batch before Mux readiness. The existing player architecture was not changed; existing lazy playback behavior remains in place.
-
-## INFORMATION NEEDED FROM SOFÍA
-
-For each candidate that should remain in the Reporting portfolio:
-
-- Confirm that the source file may be used publicly in this portfolio, including any third-party, event, employer, client, talent, music or platform permissions and required credits.
-- Provide the original URL for this specific piece (not a general profile), the official title, publication year/date, organization/program, and Sofía’s exact credited role.
-- Confirm preferred ordering and whether the piece is Reporting evidence rather than personal/promotional material.
-
-### Reel 01
-
-- Confirm what MyMUN / URJCmun event or activity the video relates to and the exact role, organization, and year.
-- Confirm official public title, original URL and publication permission/credits.
-
-### Reel 02
-
-- Confirm whether this is commercial/branded work, the client/commissioning party and credited role, or personal content; confirm it belongs under Reporting.
-- Confirm official title, source URL, year, publication permission and required brand/talent/music credits.
-
-### Reel 03
-
-- Identify the event/program and other participants if they should be named; confirm whether this is an interview, event coverage or another format, plus Sofía’s exact role.
-- Confirm official title, original URL, year, publication permission and required Yoigo/StarChannel/event/talent credits.
-
-### Reel 04
-
-- Confirm the subject, location and assignment (if any), and Sofía’s role; otherwise confirm if it is personal/non-reporting material.
-- Confirm official title, source URL, year, publication permission and credits.
-
-## Complete video inventory
-
-| # | File | Size | Duration | Resolution | Ratio | FPS | Audio | SHA-256 | Classification |
-|---:|---|---:|---:|---|---|---:|---|---|---|
-| 01 | `SaveVid.Net_AQN75Me9b7v36c8RAAPOVb_B09DRpXmY-TGQycAZhmSRtG8iNIkVRxBnIdwcX4VRw8fjxmlYuIlwr0aUpEAc316cFrLOjhzvReV2QdM.mp4` | 10,888,645 | 62.669 s | 720×1280 | 9:16 | 29.68 | AAC stereo | `5cfc379bf7e771d612d4e05d289c5eb053f965c8bb5d50e64c6cb63babbe26af` | UNIQUE |
-| 02 | `yoigo_video_no_watermark.mp4` | 21,949,521 | 163.648 s | 576×1024 | 9:16 | 30 | AAC stereo | `6b980eaefaa560e10bee4cdf0aabeacd40fdfcfd0450ac757023285885005574` | UNIQUE |
-| 03 | `yoigo_video_no_watermark (1).mp4` | 14,857,732 | 58.189 s | 576×1024 | 9:16 | 30 | AAC stereo | `0e941c5613db70f655c1c68ccccced724bc6615e3c2e510f66aae8e3c83e0502` | UNIQUE |
-| 04 | `SaveVid.Net_AQOKgMidocHxLUKXRGcY7MgY6XO0p4Ppb6fW47uYFwHIVrgEJnklHIgOOdiS3apIv__2i1UALt-yR46uleNYLoziK7i4esYOQDzYv3g.mp4` | 74,915,604 | 228.876 s | 720×1280 | 9:16 | 30 | AAC stereo | `767ce2c84d189cda7f83aa029c50197e6bad2e68d577aa08dfc36eb5574e30a3` | UNIQUE |
-| — | `Silver Praxis - Condición Perfecta (Videoclip).mp4` | 77,989,035 (archive listing only) | Not inspected | Not inspected | Not inspected | Not inspected | Not inspected | Not computed | EXCLUDED BY INSTRUCTION; untouched |
-
-The two JPEGs in the archive are auxiliary candidate images, not linked to these projects. One depicts Sofia with visible MyMUN-related text; the other is a monochrome street-wall/signage image. Neither is adopted as a project poster; posters are intended to come from Mux after upload and Playback ID assignment.
-
-| Order | ID | Source | Duration | Format | What happens | Sofia visible | Type | Mux | Poster | Title | Role | Rights | Source URL | Published |
-|---:|---|---|---:|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `short-form-003` | `yoigo_video_no_watermark (1).mp4` | 00:58 | 9:16 | Mic, other people, overlays and cutaways in interview-like branded space | Yes | interview/coverage inferred | MUX_UPLOAD_BLOCKED | candidate 55.3s; no URL yet | Pending | Pending | Pending | Pending | false |
-| 2 | `short-form-001` | `SaveVid.Net_AQN75Me9b7v36c8RAAPOVb_B09DRpXmY-TGQycAZhmSRtG8iNIkVRxBnIdwcX4VRw8fjxmlYuIlwr0aUpEAc316cFrLOjhzvReV2QdM.mp4` | 01:03 | 9:16 | Sofia explains MyMUN to camera with interface screens | Yes | on-camera explainer inferred | MUX_UPLOAD_BLOCKED | candidate 59.5s; no URL yet | Pending | Pending | Pending | Pending | false |
-| 3 | `short-form-002` | `yoigo_video_no_watermark.mp4` | 02:44 | 9:16 | Phone demonstration with device/packaging close-ups and vivo branding | Yes | product explainer inferred | MUX_UPLOAD_BLOCKED | candidate 57.3s; no URL yet | Pending | Pending | Pending | Pending | false |
-| 4 | `short-form-004` | `SaveVid.Net_AQOKgMidocHxLUKXRGcY7MgY6XO0p4Ppb6fW47uYFwHIVrgEJnklHIgOOdiS3apIv__2i1UALt-yR46uleNYLoziK7i4esYOQDzYv3g.mp4` | 03:49 | 9:16 | Outdoor walk-and-talk with street/plaza cutaways | Yes | other / walk-and-talk inferred | MUX_UPLOAD_BLOCKED | candidate 45.8s; no URL yet | Pending | Pending | Pending | Pending | false |
+No playback IDs, Asset IDs, secret values, or claims of successful playback are recorded here until checked against the Mux account/API.

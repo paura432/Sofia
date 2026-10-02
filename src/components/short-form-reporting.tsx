@@ -12,7 +12,7 @@ export type ShortFormStory = {
   organisation?: string;
   role?: string;
   year?: string;
-  sourceUrl: string;
+  sourceUrl?: string;
   posterSrc: string;
   posterAlt: string;
   posterRatio: string;
@@ -88,20 +88,29 @@ export function ShortFormReporting({
                   title={project.title}
                 />
               ) : (
-                <a
-                  aria-label={`${viewOriginalLabel}: ${project.title} ${opensInNewTabLabel}`}
-                  className="short-form-poster-link"
-                  href={project.sourceUrl}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
+                project.sourceUrl ? (
+                  <a
+                    aria-label={`${viewOriginalLabel}: ${project.title} ${opensInNewTabLabel}`}
+                    className="short-form-poster-link"
+                    href={project.sourceUrl}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <Image
+                      alt={project.posterAlt}
+                      fill
+                      sizes="(max-width: 699px) 78vw, (max-width: 899px) 45vw, (max-width: 1199px) 30vw, 300px"
+                      src={project.posterSrc}
+                    />
+                  </a>
+                ) : (
                   <Image
                     alt={project.posterAlt}
                     fill
                     sizes="(max-width: 699px) 78vw, (max-width: 899px) 45vw, (max-width: 1199px) 30vw, 300px"
                     src={project.posterSrc}
                   />
-                </a>
+                )
               )}
             </div>
             <div className="short-form-copy">
@@ -114,16 +123,18 @@ export function ShortFormReporting({
               ) : null}
               <h3>{project.title}</h3>
               {project.role ? <p className="short-form-role">{project.role}</p> : null}
-              <a
-                aria-label={`${viewOriginalLabel}: ${project.title} ${opensInNewTabLabel}`}
-                className="project-row-cta"
-                href={project.sourceUrl}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                {viewOriginalLabel}
-                <span aria-hidden="true">↗</span>
-              </a>
+              {project.sourceUrl ? (
+                <a
+                  aria-label={`${viewOriginalLabel}: ${project.title} ${opensInNewTabLabel}`}
+                  className="project-row-cta"
+                  href={project.sourceUrl}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {viewOriginalLabel}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              ) : null}
             </div>
           </article>
         ))}

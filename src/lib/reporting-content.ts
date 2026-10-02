@@ -90,7 +90,7 @@ export function toShortFormStory(
   );
   const posterSrc = poster?.type === "image" ? poster.src : poster?.poster;
 
-  if (!poster || !posterSrc || !project.sourceUrl) return undefined;
+  if (!poster || !posterSrc || !copy.title) return undefined;
 
   return {
     id: project.id,
