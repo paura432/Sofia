@@ -237,7 +237,7 @@ export const projects: PortfolioProject[] = [
     discipline: ["reporting", "video"],
     reportingFormat: "short-form",
     featured: true,
-    order: 1,
+    order: 2,
     published: false,
     translationKey: "short-form-003",
     rights: { verified: false, note: "Source, publication rights and credits pending." },
