@@ -116,6 +116,12 @@ export default async function DevMediaLab({ params }: PageProps) {
   const draftPhotos = draftPhotoSlugs
     .map((slug) => projects.find((project) => project.slug === slug))
     .filter(isDraftProject);
+  const shortFormDrafts = sortShortFormProjects(
+    projects.filter(
+      (project) =>
+        project.published === false && project.reportingFormat === "short-form",
+    ),
+  );
   const fixturePoster = projects.find(
     (project) => project.slug === "musica-en-directo",
   )?.cover;
@@ -206,6 +212,42 @@ export default async function DevMediaLab({ params }: PageProps) {
           </p>
         </div>
       </section>
+
+      {shortFormDrafts.length > 0 ? (
+        <section aria-labelledby="reel-ingest-drafts" className="section">
+          <div className="container">
+            <p className="eyebrow">Ingest · private drafts</p>
+            <h2 className="display-section" id="reel-ingest-drafts">
+              Short-form review
+            </h2>
+            <p>
+              Mux upload is blocked until server credentials and the approved
+              ingest path are available. No source videos or playback IDs are
+              exposed here; posters, role, provenance and rights remain pending.
+            </p>
+            <div className="project-media-layout">
+              {shortFormDrafts.map((project) => (
+                <article className="selected-project" key={project.id}>
+                  <div className="featured-project-meta">
+                    <span>
+                      <span>Draft · order {project.order} · {project.featured ? "featured candidate" : "not featured"}</span>
+                      <h3 className="display-section">{project.id}</h3>
+                    </span>
+                    <span>
+                      {project.cover?.duration ?? "Duration pending"} · {project.cover?.width}×{project.cover?.height} · poster {project.cover?.posterTime}s
+                    </span>
+                  </div>
+                  <p>
+                    Mux: NOT UPLOADED · playback: missing · poster: candidate only ·
+                    published: {String(project.published)} · rights: {project.rights?.verified ? "verified" : "pending"}
+                  </p>
+                  <p>Pending: public title/copy, role, source URL, organisation, year, credits and publication permission.</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section">
         <div className="container">
