@@ -180,8 +180,7 @@ export const projects: PortfolioProject[] = [
     },
     // media: pegar tras ingest de poster/vídeo — ver docs/first-project-publish.md
   },
-  // Ingest editorial candidates from videos_reels.zip; keep unpublished until
-  // Mux, title, provenance, role and rights are verified (see manifest).
+  // Short-form Mux videos; owner confirmed publication permission on 2026-10-02.
   {
     id: "short-form-001",
     slug: "short-form-001",
@@ -190,9 +189,10 @@ export const projects: PortfolioProject[] = [
     reportingFormat: "short-form",
     featured: true,
     order: 1,
-    published: false,
+    published: true,
     translationKey: "short-form-001",
-    rights: { verified: false, note: "Source, publication rights and credits pending." },
+    roleKeys: ["on-camera"],
+    rights: { verified: true, note: "Publication approved by owner on 2026-10-02." },
     cover: {
       id: "short-form-001-video",
       type: "video",
@@ -219,9 +219,10 @@ export const projects: PortfolioProject[] = [
     reportingFormat: "short-form",
     featured: true,
     order: 2,
-    published: false,
+    published: true,
     translationKey: "short-form-002",
-    rights: { verified: false, note: "Source, publication rights and credits pending." },
+    roleKeys: ["on-camera"],
+    rights: { verified: true, note: "Publication approved by owner on 2026-10-02." },
     cover: {
       id: "short-form-002-video",
       type: "video",
@@ -248,9 +249,10 @@ export const projects: PortfolioProject[] = [
     reportingFormat: "short-form",
     featured: true,
     order: 3,
-    published: false,
+    published: true,
     translationKey: "short-form-003",
-    rights: { verified: false, note: "Source, publication rights and credits pending." },
+    roleKeys: ["on-camera"],
+    rights: { verified: true, note: "Publication approved by owner on 2026-10-02." },
     cover: {
       id: "short-form-003-video",
       type: "video",
@@ -277,9 +279,10 @@ export const projects: PortfolioProject[] = [
     reportingFormat: "short-form",
     featured: false,
     order: 4,
-    published: false,
+    published: true,
     translationKey: "short-form-004",
-    rights: { verified: false, note: "Context, source, publication rights and credits pending." },
+    roleKeys: ["on-camera"],
+    rights: { verified: true, note: "Publication approved by owner on 2026-10-02." },
     cover: {
       id: "short-form-004-video",
       type: "video",
@@ -304,10 +307,10 @@ export const projects: PortfolioProject[] = [
     year: "",
     discipline: ["audiovisual"],
     order: 4.5,
-    published: false,
+    published: true,
     translationKey: "silver-praxis-condicion-perfecta",
     roleKeys: ["shooting", "post-production"],
-    rights: { verified: false, note: "Portfolio permission and music/artist rights pending." },
+    rights: { verified: true, note: "Publication approved by owner on 2026-10-02." },
     cover: {
       id: "silver-praxis-condicion-perfecta-video",
       type: "video",

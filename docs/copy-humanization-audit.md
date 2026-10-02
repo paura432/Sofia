@@ -29,7 +29,7 @@
 
 ### Needs Sofia
 
-The referenced “Documento Maestro” was not present in the repository. The edits therefore use the available source files and avoid adding personal claims. The four short-form items remain unpublished because their source, rights and credits are pending in project data; no public “04 piezas” claim was added. These answers would support a later voice pass:
+The referenced “Documento Maestro” was not present in the repository. The edits therefore use the available source files and avoid adding personal claims. At the time of this copy pass, the four short-form items were unpublished. The owner subsequently confirmed they are theirs and approved publication; they are now published in project data without invented client/event credits or a public “04 piezas” claim. These answers would support a later voice pass:
 
 1. ¿Qué tipo de trabajos te gustaría hacer más?
 2. ¿Qué disfrutas más: cubrir, entrevistar o presentar?
