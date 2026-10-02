@@ -13,6 +13,7 @@ import {
   getProjectsInSection,
   getReporterReel,
   hasMediaAsset,
+  sortShortFormProjects,
 } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -75,14 +76,15 @@ export default async function ReportingPage() {
     const story = toMoreReportingStory(project, copy);
     return story ? [story] : [];
   });
-  const shortFormStories = projects
-    .filter((project) => project !== reel && project.reportingFormat === "short-form")
+  const shortFormStories = sortShortFormProjects(
+    projects.filter((project) => project !== reel && project.reportingFormat === "short-form"),
+  )
     .flatMap((project): ShortFormStory[] => {
       const copy = projectsText.raw(`items.${project.translationKey}`) as ReportingCopy;
       const story = toShortFormStory(
         project,
         copy,
-        projectsText("playCoverage", { title: copy.title }),
+        projectsText("play"),
       );
       return story ? [story] : [];
     });
@@ -111,8 +113,29 @@ export default async function ReportingPage() {
         />
       ) : null}
 
+      {shortFormStories.length ? (
+        <section aria-labelledby="reporting-short-form" className="section reporting-followup-section">
+          <div className="container work-project-section">
+            <SectionHeading
+              eyebrow={t("shortFormEyebrow")}
+              id="reporting-short-form"
+              text={t("shortFormText")}
+              title={t("shortFormTitle")}
+            />
+            <ShortFormReporting
+              label={t("shortFormTitle")}
+              opensInNewTabLabel={navigationText("opensInNewTab")}
+              projects={shortFormStories}
+              showLessLabel={t("shortFormShowLess")}
+              showMoreLabel={t("shortFormShowMore", { count: "{count}" })}
+              viewOriginalLabel={projectsText("viewOriginal")}
+            />
+          </div>
+        </section>
+      ) : null}
+
       {selectedStories.length ? (
-        <section aria-labelledby="reporting-selected" className="section">
+        <section aria-labelledby="reporting-selected" className="section reporting-followup-section">
           <div className="container work-project-section">
             <SectionHeading
               eyebrow={t("reportingCoverageEyebrow")}
@@ -131,33 +154,13 @@ export default async function ReportingPage() {
       ) : null}
 
       {moreStories.length ? (
-        <section className="section">
+        <section className="section reporting-followup-section">
           <div className="container">
             <MoreReporting
               opensInNewTabLabel={navigationText("opensInNewTab")}
               projects={moreStories}
               startAt={selectedStories.length + 1}
               title={t("reportingMoreTitle")}
-              viewOriginalLabel={projectsText("viewOriginal")}
-            />
-          </div>
-        </section>
-      ) : null}
-
-      {shortFormStories.length ? (
-        <section aria-labelledby="reporting-short-form" className="section">
-          <div className="container work-project-section">
-            <SectionHeading
-              eyebrow={t("shortFormEyebrow")}
-              id="reporting-short-form"
-              text={t("shortFormText")}
-              title={t("shortFormTitle")}
-            />
-            <ShortFormReporting
-              opensInNewTabLabel={navigationText("opensInNewTab")}
-              projects={shortFormStories}
-              showLessLabel={t("shortFormShowLess")}
-              showMoreLabel={t("shortFormShowMore", { count: "{count}" })}
               viewOriginalLabel={projectsText("viewOriginal")}
             />
           </div>

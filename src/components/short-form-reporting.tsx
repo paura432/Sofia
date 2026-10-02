@@ -22,6 +22,7 @@ export type ShortFormStory = {
 
 type ShortFormReportingProps = {
   projects: ShortFormStory[];
+  label: string;
   viewOriginalLabel: string;
   opensInNewTabLabel: string;
   showMoreLabel: string;
@@ -30,6 +31,7 @@ type ShortFormReportingProps = {
 
 export function ShortFormReporting({
   projects,
+  label,
   viewOriginalLabel,
   opensInNewTabLabel,
   showMoreLabel,
@@ -45,7 +47,29 @@ export function ShortFormReporting({
 
   return (
     <div className="short-form-group">
-      <div className="short-form-reporting" data-count={projects.length} id={listId}>
+      <div
+        aria-label={label}
+        className="short-form-reporting"
+        data-count={projects.length}
+        id={listId}
+        onKeyDown={(event) => {
+          if (
+            (event.key !== "ArrowLeft" && event.key !== "ArrowRight") ||
+            event.currentTarget.scrollWidth <= event.currentTarget.clientWidth
+          ) {
+            return;
+          }
+          event.preventDefault();
+          event.currentTarget.scrollBy({
+            left:
+              event.key === "ArrowRight"
+                ? event.currentTarget.clientWidth
+                : -event.currentTarget.clientWidth,
+          });
+        }}
+        role="region"
+        tabIndex={0}
+      >
         {visibleProjects.map((project) => (
           <article className="short-form-card" key={project.id}>
             <div

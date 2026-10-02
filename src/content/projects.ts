@@ -132,6 +132,7 @@ export type PortfolioProject = {
   locationKey?: string;
   discipline: ProjectDiscipline[];
   experienceId?: ExperienceId;
+  /** Broad editorial feature flag; Short-form Reporting uses it as priority. */
   featured?: boolean;
   reporterReel?: boolean;
   /** Reporting presentation; reporterReel remains a separate editorial feature. */
@@ -530,6 +531,22 @@ function byEditorialOrder<T extends PortfolioProject>(list: T[]) {
       const orderB = b.project.order ?? b.index;
       return orderA - orderB;
     })
+    .map(({ project }) => project);
+}
+
+export function sortShortFormProjects<
+  T extends Pick<PortfolioProject, "id" | "featured" | "order">,
+>(items: readonly T[]): T[] {
+  const sourceOrder = new Map(projects.map((project, index) => [project.id, index]));
+
+  return items
+    .map((project, index) => ({ project, index }))
+    .sort((a, b) =>
+      Number(b.project.featured === true) - Number(a.project.featured === true) ||
+      (a.project.order ?? sourceOrder.get(a.project.id) ?? a.index) -
+        (b.project.order ?? sourceOrder.get(b.project.id) ?? b.index) ||
+      a.index - b.index,
+    )
     .map(({ project }) => project);
 }
 

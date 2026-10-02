@@ -3,7 +3,10 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 
 import { MediaCaption } from "@/components/media-caption";
+import { MoreReporting, type MoreReportingStory } from "@/components/more-reporting";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
+import { ReportingIndex, type ReportingStory } from "@/components/reporting-index";
+import { SectionHeading } from "@/components/section-heading";
 import {
   ShortFormReporting,
   type ShortFormStory,
@@ -13,6 +16,7 @@ import {
   getMediaSizes,
   projects,
   publishableYear,
+  sortShortFormProjects,
   type AspectRatio,
   type MediaCopy,
   type MediaLayout,
@@ -126,6 +130,11 @@ export default async function DevMediaLab({ params }: PageProps) {
   }
   const fixturePosterSrc = fixturePoster.src;
   const fixturePosterRatio = "9 / 16";
+  const fixtureAlt = locale === "en"
+    ? "Existing portfolio image used only as a development layout fixture"
+    : locale === "ru"
+      ? "Существующее фото портфолио только для теста макета"
+      : "Imagen existente usada solo como muestra de maquetación";
 
   const shortFormFixtures = (count: number): ShortFormStory[] =>
     Array.from({ length: count }, (_, index) => {
@@ -145,13 +154,44 @@ export default async function DevMediaLab({ params }: PageProps) {
         year: "2026",
         sourceUrl: "/dev/media",
         posterSrc: fixturePosterSrc,
-        posterAlt: locale === "en"
-          ? "Existing portfolio photograph reused only as a layout fixture"
-          : "Fotografía existente usada solo como muestra de diseño",
+        posterAlt: fixtureAlt,
         posterRatio: fixturePosterRatio,
         playLabel: projectsText("playCoverage", { title: storyTitle }),
       };
     });
+  const shortFormOrderFixture = sortShortFormProjects([
+    { id: "A", featured: true, order: 3 },
+    { id: "B", featured: true, order: 1 },
+    { id: "C", featured: false, order: 2 },
+    { id: "D", featured: true, order: 2 },
+    { id: "E", featured: false, order: 1 },
+  ]);
+  const expectedShortFormOrder = ["B", "D", "A", "E", "C"];
+  const shortFormOrderPassed = shortFormOrderFixture.every(
+    (item, index) => item.id === expectedShortFormOrder[index],
+  );
+  const fixtureReportingStories: ReportingStory[] = Array.from(
+    { length: 5 },
+    (_, index) => ({
+      id: `reporting-selected-fixture-${index + 1}`,
+      slug: `fixture-${index + 1}`,
+      title: `${locale === "en" ? "Dev fixture" : locale === "ru" ? "Тест макета" : "Muestra de diseño"} · ${String(index + 1).padStart(2, "0")}`,
+      sourceUrl: "/dev/media",
+      detailPage: false,
+      posterSrc: fixturePosterSrc,
+      posterAlt: fixtureAlt,
+      posterRatio: fixturePosterRatio,
+      playLabel: projectsText("play"),
+    }),
+  );
+  const fixtureMoreStories: MoreReportingStory[] = Array.from(
+    { length: 10 },
+    (_, index) => ({
+      id: `reporting-more-fixture-${index + 1}`,
+      title: `${locale === "en" ? "Dev fixture" : locale === "ru" ? "Тест макета" : "Muestra de diseño"} · ${String(index + 6).padStart(2, "0")}`,
+      sourceUrl: "/dev/media",
+    }),
+  );
 
   return (
     <main className="dev-media" id="main">
@@ -326,7 +366,7 @@ export default async function DevMediaLab({ params }: PageProps) {
         </div>
       </section>
 
-      {[1, 4, 8, 20].map((count) => (
+      {[1, 3, 4, 8, 20].map((count) => (
         <section className="section" key={`short-form-${count}`}>
           <div className="container">
             <p className="eyebrow">Dev fixture · {count} short-form cards</p>
@@ -334,6 +374,7 @@ export default async function DevMediaLab({ params }: PageProps) {
               {workText("shortFormTitle")}
             </h2>
             <ShortFormReporting
+              label={workText("shortFormTitle")}
               opensInNewTabLabel={navigationText("opensInNewTab")}
               projects={shortFormFixtures(count)}
               showLessLabel={workText("shortFormShowLess")}
@@ -343,6 +384,83 @@ export default async function DevMediaLab({ params }: PageProps) {
           </div>
         </section>
       ))}
+
+      <section aria-labelledby="reporting-layout-fixture" className="section">
+        <div className="container">
+          <p className="eyebrow">Dev fixture · Reporting hierarchy</p>
+          <h2 className="display-section" id="reporting-layout-fixture">
+            Reporter Reel → {workText("shortFormTitle")} → {workText("reportingCoverageTitle")} → {workText("reportingMoreTitle")}
+          </h2>
+          <p>
+            {locale === "en"
+              ? "Layout-only sample. No draft content, credits or publication rights are represented."
+              : locale === "ru"
+                ? "Только тест макета. Не представляет черновой контент, авторство или права на публикацию."
+                : "Muestra solo de maquetación. No representa contenido, créditos ni derechos de publicación."}
+          </p>
+          <p data-short-form-order={shortFormOrderPassed ? "pass" : "fail"}>
+            {locale === "en" ? "Editorial order fixture" : locale === "ru" ? "Проверка редакционного порядка" : "Fixture de orden editorial"}: {shortFormOrderFixture.map((item) => item.id).join(" → ")} · {shortFormOrderPassed ? "PASS" : "FAIL"}
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="reporting-reel-fixture" className="section reporter-reel">
+        <div className="container work-project-section">
+          <p className="eyebrow">Dev fixture · {projectsText("reelEyebrow")}</p>
+          <h2 className="display-section" id="reporting-reel-fixture">
+            {projectsText("reelEyebrow")}
+          </h2>
+          <ProjectMediaLayout
+            copy={{ "reporting-reel-fixture-poster": { alt: fixtureAlt } }}
+            media={[{
+              id: "reporting-reel-fixture-poster",
+              type: "image",
+              layout: "wide",
+              aspectRatio: "16:9",
+              src: fixturePosterSrc,
+            }]}
+            playLabel={projectsText("play")}
+          />
+        </div>
+      </section>
+
+      <section aria-labelledby="reporting-short-form-fixture" className="section reporting-followup-section" id="reporting-short-form-fixture-section">
+        <div className="container work-project-section">
+          <SectionHeading eyebrow="Dev fixture" id="reporting-short-form-fixture" title={workText("shortFormTitle")} />
+          <ShortFormReporting
+            label={workText("shortFormTitle")}
+            opensInNewTabLabel={navigationText("opensInNewTab")}
+            projects={shortFormFixtures(4)}
+            showLessLabel={workText("shortFormShowLess")}
+            showMoreLabel={workText("shortFormShowMore", { count: "{count}" })}
+            viewOriginalLabel={projectsText("viewOriginal")}
+          />
+        </div>
+      </section>
+
+      <section aria-labelledby="reporting-selected-fixture" className="section reporting-followup-section">
+        <div className="container work-project-section">
+          <SectionHeading eyebrow="Dev fixture" id="reporting-selected-fixture" title={workText("reportingCoverageTitle")} />
+          <ReportingIndex
+            closePlayerLabel={projectsText("viewerClose")}
+            playLabel={projectsText("play")}
+            projects={fixtureReportingStories}
+            viewOriginalLabel={projectsText("viewOriginal")}
+          />
+        </div>
+      </section>
+
+      <section className="section reporting-followup-section">
+        <div className="container">
+          <MoreReporting
+            opensInNewTabLabel={navigationText("opensInNewTab")}
+            projects={fixtureMoreStories}
+            startAt={6}
+            title={workText("reportingMoreTitle")}
+            viewOriginalLabel={projectsText("viewOriginal")}
+          />
+        </div>
+      </section>
     </main>
   );
 }

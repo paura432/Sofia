@@ -1,14 +1,14 @@
 import type { MetadataRoute } from "next";
 
 import { pendingVerification } from "@/content/pending-verification";
-import { getPublishedProjects } from "@/content/projects";
+import { getProjectsInSection, getPublishedProjects } from "@/content/projects";
 import { locales, type PublicAppPathname } from "@/i18n/routing";
 import { localizedUrl, projectUrl } from "@/lib/metadata";
 
 const routes: PublicAppPathname[] = [
   "/",
   "/work",
-  "/work/reporting",
+  ...(getProjectsInSection("reporting").length ? ["/work/reporting" as const] : []),
   "/work/audiovisual",
   "/work/photography",
   "/work/photography/archive",

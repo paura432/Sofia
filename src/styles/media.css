@@ -605,6 +605,22 @@
   text-transform: uppercase;
 }
 
+.reporting-followup-section {
+  padding-block: var(--space-md);
+}
+
+.reporting-followup-section .work-project-section {
+  gap: var(--space-md);
+}
+
+.reporting-followup-section .display-section {
+  font-size: clamp(1.5rem, 2.7vw, 2.5rem);
+}
+
+.reporting-followup-section .more-reporting {
+  margin-top: 0;
+}
+
 .reporting-index {
   display: grid;
   gap: var(--space-lg);
@@ -716,6 +732,11 @@
   scrollbar-width: thin;
 }
 
+.short-form-reporting:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .short-form-card {
   flex: 0 0 min(78vw, 320px);
   min-width: 0;
@@ -747,6 +768,23 @@
   display: grid;
   gap: 6px;
   padding-top: 10px;
+}
+
+.short-form-copy .project-row-cta {
+  min-height: 44px;
+  width: fit-content;
+}
+
+.short-form-more {
+  min-height: 44px;
+  margin-top: var(--space-sm);
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  padding: 0 0 0.25rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
 }
 
 .short-form-copy h3 {
