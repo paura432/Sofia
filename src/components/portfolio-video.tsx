@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import type { MuxPlayerRefAttributes } from "@mux/mux-player-react";
 
 import { focalPointStyle, getMediaSizes, type ProjectMedia } from "@/content/projects";
 
@@ -93,9 +94,18 @@ export function PortfolioVideo({
           className="portfolio-video-player"
           loop={false}
           metadata={{ video_title: title }}
+          muted
+          noMutedPref
+          onPlay={(event) => {
+            const player = event.currentTarget as unknown as MuxPlayerRefAttributes;
+            player.muted = true;
+          }}
           playbackId={media.muxPlaybackId}
           playsInline
           preload="none"
+          ref={(player) => {
+            if (player) player.muted = true;
+          }}
           streamType="on-demand"
         />
       ) : null}
