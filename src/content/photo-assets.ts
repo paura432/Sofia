@@ -526,21 +526,6 @@ export const retrato_editorial_media: ProjectMedia[] = [
 
 export const calle_documental_cover: ProjectMedia =
 {
-      id: "calle-documental-01",
-      type: "image",
-      src: "/media/projects/calle-documental/calle-documental-01.webp",
-      width: 2800,
-      height: 1867,
-      aspectRatio: "3:2",
-      blurDataURL: "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAwCdASoYABAAPzmGuVOvKSWisAgB4CcJQBbZBDvUX0xobUsN11AA/ujF84xHKx7jh10nj4rdraPQ6BcdhqgZW2w5wopTeoAAAA==",
-      layout: "full",
-      position: 1,
-      altKey: "calle-documental-01",
-      focalPoint: { x: 60, y: 50 },
-    };
-
-export const calle_documental_media: ProjectMedia[] = [
-    {
       id: "calle-documental-02",
       type: "image",
       src: "/media/projects/calle-documental/calle-documental-02.webp",
@@ -548,9 +533,24 @@ export const calle_documental_media: ProjectMedia[] = [
       height: 1867,
       aspectRatio: "3:2",
       blurDataURL: "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQBACdASoYABAAPzmGu1OvKSYisAgB4CcJQBOgBAqbfeDHbT6QHyGYAAD+6NVaFblvEjPnqzJKibqNqwxkovFEqm9IwhIG9NoPL4+wNyv0+WP3d8AsuYez/uAdkhQDvz/UoAAA",
+      layout: "full",
+      position: 1,
+      altKey: "calle-documental-02",
+      focalPoint: { x: 50, y: 50 },
+    };
+
+export const calle_documental_media: ProjectMedia[] = [
+    {
+      id: "calle-documental-01",
+      type: "image",
+      src: "/media/projects/calle-documental/calle-documental-01.webp",
+      width: 2800,
+      height: 1867,
+      aspectRatio: "3:2",
+      blurDataURL: "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAwCdASoYABAAPzmGuVOvKSWisAgB4CcJQBbZBDvUX0xobUsN11AA/ujF84xHKx7jh10nj4rdraPQ6BcdhqgZW2w5wopTeoAAAA==",
       layout: "wide",
       position: 2,
-      altKey: "calle-documental-02",
+      altKey: "calle-documental-01",
     },
     {
       id: "calle-documental-03",

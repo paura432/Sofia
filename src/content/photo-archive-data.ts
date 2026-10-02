@@ -83,6 +83,12 @@ export const photoArchiveGroups = {
   ]
 } as const;
 
+export function getArchiveGroupPhotos(group: keyof typeof photoArchiveGroups) {
+  const photos = photoArchiveGroups[group];
+  if (group !== "musica") return photos;
+  return [photos[1], photos[0], ...photos.slice(2)];
+}
+
 import { PHOTO_ARCHIVE_COUNT } from "@/content/photo-archive-count";
 
 export { PHOTO_ARCHIVE_COUNT };

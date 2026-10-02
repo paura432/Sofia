@@ -11,6 +11,7 @@ import {
 import {
   PHOTO_ARCHIVE_COUNT,
   photoArchiveGroups,
+  getArchiveGroupPhotos,
   type ArchivePhoto,
 } from "@/content/photo-archive-data";
 import {
@@ -120,7 +121,7 @@ export function PhotoArchive({
   const flatItems = useMemo(
     () =>
       groups.flatMap((group) =>
-        photoArchiveGroups[group.id].map((item, index) =>
+        getArchiveGroupPhotos(group.id).map((item, index) =>
           toViewerItem(
             item,
             t("archiveImageLabel", { group: group.title, index: index + 1 }),
@@ -158,7 +159,7 @@ export function PhotoArchive({
           ))}
         </nav>
         {groups.map((group, groupIndex) => {
-          const photos: ArchivePhoto[] = [...photoArchiveGroups[group.id]];
+          const photos: ArchivePhoto[] = [...getArchiveGroupPhotos(group.id)];
           const localIndex = new Map<string, number>(
             photos.map((photo, index) => [photo.id, index]),
           );
