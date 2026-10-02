@@ -107,7 +107,7 @@ export default async function WorkPage() {
         <Reveal className="container page-hero-inner work-index-heading">
           <p className="eyebrow">{t("pageEyebrow")}</p>
           <h1 className="display-page">{t("pageTitle")}</h1>
-          <p>{t("pageText")}</p>
+          {t("pageText") ? <p>{t("pageText")}</p> : null}
         </Reveal>
       </section>
 
@@ -128,9 +128,9 @@ export default async function WorkPage() {
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <div className="discipline-index-copy">
-                      <p className="eyebrow">{entry.kicker}</p>
+                      {entry.kicker ? <p className="eyebrow">{entry.kicker}</p> : null}
                       <h2>{entry.title}</h2>
-                      <p>{entry.description}</p>
+                      {entry.description ? <p>{entry.description}</p> : null}
                       <span className="discipline-index-action">
                         {entry.action} <span aria-hidden="true">↗</span>
                       </span>

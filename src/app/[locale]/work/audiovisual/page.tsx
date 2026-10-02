@@ -37,9 +37,9 @@ export default async function AudiovisualPage() {
     <main id="main">
       <section className="page-hero section section-first">
         <Reveal className="container page-hero-inner">
-          <p className="eyebrow">{t("audiovisualEyebrow")}</p>
+          {t("audiovisualEyebrow") ? <p className="eyebrow">{t("audiovisualEyebrow")}</p> : null}
           <h1 className="display-page">{t("audiovisualTitle")}</h1>
-          <p>{t("audiovisualText")}</p>
+          {t("audiovisualText") ? <p>{t("audiovisualText")}</p> : null}
           <Link className="work-back-link" href="/work">← {t("backToWork")}</Link>
         </Reveal>
       </section>

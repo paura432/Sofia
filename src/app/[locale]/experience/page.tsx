@@ -53,9 +53,9 @@ export default async function ExperiencePage() {
     <main id="main">
       <section className="page-hero section section-first">
         <Reveal className="container page-hero-inner">
-          <p className="eyebrow">{t("pageEyebrow")}</p>
+          {t("pageEyebrow") ? <p className="eyebrow">{t("pageEyebrow")}</p> : null}
           <h1 className="display-page">{t("pageTitle")}</h1>
-          <p>{t("pageText")}</p>
+          {t("pageText") ? <p>{t("pageText")}</p> : null}
         </Reveal>
       </section>
 

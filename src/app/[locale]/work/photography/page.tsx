@@ -38,9 +38,9 @@ export default async function PhotographyPage() {
     <main id="main">
       <section className="page-hero section section-first">
         <Reveal className="container page-hero-inner">
-          <p className="eyebrow">{t("photographyEyebrow")}</p>
+          {t("photographyEyebrow") ? <p className="eyebrow">{t("photographyEyebrow")}</p> : null}
           <h1 className="display-page">{t("photographyTitle")}</h1>
-          <p>{t("photographyText")}</p>
+          {t("photographyText") ? <p>{t("photographyText")}</p> : null}
           <Link className="work-back-link" href="/work">← {t("backToWork")}</Link>
         </Reveal>
       </section>

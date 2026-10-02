@@ -1,13 +1,13 @@
 {
   "Metadata": {
     "siteTitle": "Sofía Chernikova — Periodista y Reportera TV",
-    "siteDescription": "Periodista y reportera de televisión en Madrid. Reporterismo, entrevistas, cobertura audiovisual, fotografía y comunicación digital.",
+    "siteDescription": "Periodista y reportera de televisión en Madrid. Reportajes, entrevistas, fotografía y vídeo.",
     "ogAlt": "Portfolio profesional de Sofía Chernikova",
     "personRole": "Periodista y Reportera TV",
     "pages": {
       "home": {
         "title": "Sofía Chernikova — Periodista y Reportera TV",
-        "description": "Periodista y reportera de televisión en Madrid. Reporterismo, entrevistas, cobertura audiovisual, fotografía y comunicación digital."
+        "description": "Periodista y reportera de televisión en Madrid. Reportajes, entrevistas, fotografía y vídeo."
       },
       "work": {
         "title": "Trabajo",
@@ -31,7 +31,7 @@
       },
       "about": {
         "title": "Perfil",
-        "description": "Perfil de Sofía Chernikova, periodista y comunicadora audiovisual formada en la Universidad Rey Juan Carlos."
+        "description": "Perfil de Sofía Chernikova, periodista y reportera de televisión, con formación en Periodismo y Comunicación Audiovisual en la Universidad Rey Juan Carlos."
       },
       "experience": {
         "title": "Experiencia",
@@ -74,12 +74,12 @@
     }
   },
   "Hero": {
-    "dateline": "MADRID — 2026",
-    "role": "Periodista · Reportera TV · Comunicadora audiovisual",
-    "availability": "Disponible para nuevos proyectos · Madrid",
+    "dateline": "MADRID",
+    "role": "Periodista · Reportera de televisión",
+    "availability": "",
     "location": "Madrid, España",
-    "headline": "Periodismo, imagen y narrativa digital.",
-    "summary": "Reporterismo, entrevistas y producción visual desde Madrid.",
+    "headline": "",
+    "summary": "Reportajes, entrevistas y vídeo desde Madrid.",
     "actionsAria": "Acciones principales",
     "viewWork": "Ver trabajo",
     "contact": "Contacto"
@@ -96,19 +96,19 @@
     "moreAbout": "Leer más"
   },
   "Work": {
-    "pageEyebrow": "Trabajo",
-    "pageTitle": "Historias",
-    "pageText": "Reportajes, entrevistas, cine y series fotográficas.",
-    "reportingPortfolioEyebrow": "Disciplina",
+    "pageEyebrow": "Portfolio",
+    "pageTitle": "Trabajo",
+    "pageText": "",
+    "reportingPortfolioEyebrow": "",
     "reportingPortfolioTitle": "REPORTING",
-    "reportingPortfolioText": "Entrevistas y coberturas periodísticas.",
+    "reportingPortfolioText": "",
     "reportingCoverageEyebrow": "REPORTING",
-    "reportingCoverageTitle": "Coberturas seleccionadas",
-    "reportingCoverageText": "Una selección editorial de piezas de reporterismo.",
+    "reportingCoverageTitle": "Coberturas",
+    "reportingCoverageText": "",
     "reportingMoreTitle": "Más coberturas",
-    "shortFormEyebrow": "REPORTING",
+    "shortFormEyebrow": "",
     "shortFormTitle": "FORMATO BREVE",
-    "shortFormText": "Reportajes, entrevistas y coberturas creados para formatos verticales.",
+    "shortFormText": "",
     "shortFormShowMore": "Ver {count} piezas más",
     "shortFormShowLess": "Ver menos",
     "viewReporting": "Ver todos los reportajes",
@@ -121,15 +121,15 @@
     "archiveCountLabel": "fotografías",
     "backToWork": "Trabajo",
     "backToPhotography": "Fotografía",
-    "reportingEyebrow": "Trayectoria",
-    "reportingTitle": "Televisión y comunicación",
-    "reportingText": "Cobertura, entrevistas y producción en medios y organizaciones.",
-    "audiovisualEyebrow": "Cine & Audiovisual",
-    "audiovisualTitle": "Piezas audiovisuales",
-    "audiovisualText": "Dirección, montaje y narrativa audiovisual en proyectos de ficción y promoción.",
-    "photographyEyebrow": "Fotografía",
-    "photographyTitle": "Series editoriales",
-    "photographyText": "Documentación visual publicada en cinco historias y un archivo de 74 fotografías.",
+    "reportingEyebrow": "",
+    "reportingTitle": "Reporting",
+    "reportingText": "",
+    "audiovisualEyebrow": "",
+    "audiovisualTitle": "Audiovisual",
+    "audiovisualText": "",
+    "photographyEyebrow": "",
+    "photographyTitle": "Fotografía",
+    "photographyText": "",
     "aria": "Trabajo seleccionado",
     "fallbackAria": "Experiencia profesional seleccionada",
     "viewExperience": "Ver trayectoria completa",
@@ -152,14 +152,14 @@
   "Projects": {
     "featuredEyebrow": "Destacado",
     "selectedEyebrow": "Trabajo seleccionado",
-    "audiovisualEyebrow": "Audiovisual seleccionado",
+    "audiovisualEyebrow": "Audiovisual",
     "allEyebrow": "Portfolio",
-    "viewProject": "Ver historia",
+    "viewProject": "Ver proyecto",
     "viewReel": "Ver reel",
     "viewRelatedWork": "Ver {count, plural, one {# proyecto} other {# proyectos}}",
     "viewOriginal": "Ver original",
-    "nextProject": "Siguiente historia",
-    "prevProject": "Historia anterior",
+    "nextProject": "Proyecto siguiente",
+    "prevProject": "Proyecto anterior",
     "moreFromSeries": "Más de esta serie",
     "moreFromSeriesCount": "{count} imágenes",
     "seriesNavigation": "Navegación de serie fotográfica",
@@ -169,7 +169,7 @@
     "viewerPrev": "Anterior",
     "viewerNext": "Siguiente",
     "viewerClose": "Cerrar",
-    "projectNavAria": "Navegación entre historias",
+    "projectNavAria": "Navegación entre proyectos",
     "context": "Contexto",
     "role": "Rol",
     "credits": "Créditos",
@@ -200,34 +200,31 @@
     "items": {
       "4-minutos": {
         "title": "4 MINUTOS",
-        "description": "Pieza audiovisual de estética urbana y nocturna que sigue la interacción entre dos jóvenes a través de una puesta en escena cercana y un tratamiento visual en blanco y negro.",
+        "description": "Cortometraje en blanco y negro sobre el encuentro entre dos jóvenes.",
         "format": "Cortometraje · 03:59",
-        "context": "El proyecto combina cámara en movimiento, interpretación y lenguaje directo para construir una atmósfera espontánea y áspera.",
         "roles": ["Dirección — Sofía Chernikova"],
         "credits": {"direction": "Sofía Chernikova", "sound": "María Rodríguez", "cast": "Eneko Valle García · Fran Vidales Santos", "equipment": "Nikon D3300 · iPhone 13"}, "creditLabels": {"direction": "Dirección", "sound": "Sonido", "cast": "Reparto", "equipment": "Equipo"},
         "media": {"4-minutos-poster": {"title": "4 MINUTOS", "alt": "Fotograma en blanco y negro de dos personajes en interacción"}}
       },
       "tras-el-sofa": {
         "title": "Tras el sofá",
-        "description": "Cortometraje dramático de tono íntimo construido alrededor de una conversación y una situación emocional en un espacio doméstico.",
+        "description": "Cortometraje dramático ambientado en un interior doméstico.",
         "format": "Cortometraje · 05:59",
-        "context": "La pieza utiliza interpretación, planos cerrados y detalles del entorno para sostener la tensión narrativa.",
         "roles": ["Dirección — Sofía Chernikova", "Montaje — Sofía Chernikova"],
         "credits": {"direction": "Sofía Chernikova", "editing": "Sofía Chernikova"}, "creditLabels": {"direction": "Dirección", "editing": "Montaje"},
         "media": {"tras-el-sofa-poster": {"title": "Tras el sofá", "alt": "Primer plano de una protagonista en un interior doméstico"}}
       },
       "version-beta": {
         "title": "VERSIÓN BETA",
-        "description": "Teaser audiovisual de montaje rápido y estética urbana que combina testimonios a cámara, acción y recursos gráficos.",
+        "description": "Pieza promocional con testimonios a cámara, acción y grafismos.",
         "format": "Pieza promocional · 00:58",
-        "context": "Presenta una propuesta centrada en autenticidad, cambio y segundas oportunidades.",
         "media": {"version-beta-poster": {"title": "VERSIÓN BETA", "alt": "Protagonista junto al título VERSIÓN BETA"}}
       },
-      "short-form-001": {"title": "Intervención a cámara en exteriores", "description": "Pieza vertical en la que Sofía habla a cámara en un entorno exterior urbano, con planos de recurso del lugar.", "media": {"short-form-001-video": {"title": "Intervención a cámara en exteriores", "alt": "Sofía en una pieza vertical grabada en exteriores"}}},
-      "short-form-002": {"title": "Conversación en un espacio con micrófonos", "description": "Pieza vertical con Sofía, otra persona y micrófonos en un espacio con branding visible.", "media": {"short-form-002-video": {"title": "Conversación en un espacio con micrófonos", "alt": "Sofía con un micrófono en un espacio con otras personas"}}},
-      "short-form-003": {"title": "Guía visual de MyMUN", "description": "Pieza vertical en la que Sofía explica MyMUN a cámara y muestra pantallas de la plataforma.", "media": {"short-form-003-video": {"title": "Guía visual de MyMUN", "alt": "Sofía junto a pantallas y grafismos sobre MyMUN"}}},
-      "short-form-004": {"title": "Presentación de smartphone en exteriores", "description": "Pieza vertical en la que Sofía presenta un smartphone a cámara en exteriores.", "media": {"short-form-004-video": {"title": "Presentación de smartphone en exteriores", "alt": "Sofía presenta un smartphone a cámara en exteriores"}}},
-      "silver-praxis-condicion-perfecta": {"title": "Silver Praxis — Condición Perfecta", "description": "Videoclip musical con planos del artista en interiores y localizaciones urbanas nocturnas.", "format": "Videoclip", "context": "En los créditos en pantalla, Sofía Chernikova figura en rodaje y postproducción.", "roles": ["Rodaje y postproducción — Sofía Chernikova"], "credits": {"filming": "Sofía Chernikova", "creative": "Briza Sanchez", "production": "Silver Praxis"}, "creditLabels": {"filming": "Rodaje y postproducción", "creative": "Dirección creativa, estilismo y lettering", "production": "Producción, mezcla y master"}, "media": {"silver-praxis-condicion-perfecta-video": {"title": "Silver Praxis — Condición Perfecta", "alt": "Fotograma del videoclip con el artista en un interior iluminado en tonos rojos"}}},
+      "short-form-001": {"title": "A cámara · exteriores", "description": "", "media": {"short-form-001-video": {"title": "A cámara · exteriores", "alt": "Sofía en una pieza vertical grabada en exteriores"}}},
+      "short-form-002": {"title": "Micrófono", "description": "", "media": {"short-form-002-video": {"title": "Micrófono", "alt": "Sofía con un micrófono en un espacio con otras personas"}}},
+      "short-form-003": {"title": "MyMUN", "description": "", "media": {"short-form-003-video": {"title": "MyMUN", "alt": "Sofía junto a pantallas y grafismos sobre MyMUN"}}},
+      "short-form-004": {"title": "Smartphone · exteriores", "description": "", "media": {"short-form-004-video": {"title": "Smartphone · exteriores", "alt": "Sofía presenta un smartphone a cámara en exteriores"}}},
+      "silver-praxis-condicion-perfecta": {"title": "Silver Praxis — Condición Perfecta", "description": "Videoclip de «Condición Perfecta», de Silver Praxis.", "format": "Videoclip", "roles": ["Rodaje y postproducción — Sofía Chernikova"], "credits": {"filming": "Sofía Chernikova", "creative": "Briza Sanchez", "production": "Silver Praxis"}, "creditLabels": {"filming": "Rodaje y postproducción", "creative": "Dirección creativa, estilismo y lettering", "production": "Producción, mezcla y master"}, "media": {"silver-praxis-condicion-perfecta-video": {"title": "Silver Praxis — Condición Perfecta", "alt": "Fotograma del videoclip con el artista en un interior iluminado en tonos rojos"}}},
       "reporter-reel": {
         "title": "Reporter reel",
         "description": "Selección de coberturas, entrevistas y piezas de reporterismo.",
@@ -465,17 +462,17 @@
     }
   },
   "Profile": {
-    "statement": "Periodista y comunicadora audiovisual. Reporterismo, entrevistas y narrativa visual.",
-    "aboutPreview": "Periodista y comunicadora audiovisual. Reporterismo, entrevistas y cobertura de eventos.",
-    "aboutContinuation": "Fotografía, producción y comunicación digital como parte del mismo oficio.",
-    "bio": "Formada en la Universidad Rey Juan Carlos. Trabaja en reporterismo televisivo, entrevistas y cobertura de eventos, con una práctica paralela en fotografía y comunicación digital.",
-    "aboutTrajectory": "Desde 2024 trabaja como reportera de televisión.",
-    "interests": "Cámara, narrativa visual y contenidos para medios, producción audiovisual y proyectos culturales.",
+    "statement": "Soy periodista y reportera de televisión. También he trabajado en fotografía y vídeo.",
+    "aboutPreview": "Soy periodista y reportera de televisión.",
+    "aboutContinuation": "",
+    "bio": "Trabajo como reportera de televisión en Grupo Cadena Media desde 2024. Cubro eventos y ruedas de prensa, entrevisto y escribo guiones y piezas informativas. También he trabajado en fotografía y comunicación digital.",
+    "aboutTrajectory": "",
+    "interests": "",
     "aboutPageEyebrow": "Perfil",
     "aboutHeroTitle": "Reportera de televisión.",
     "portraitAlt": "Retrato de Sofía Chernikova",
     "bioEyebrow": "Bio",
-    "bioTitle": "Oficio y formación.",
+    "bioTitle": "Sobre mí",
     "educationEyebrow": "Formación",
     "educationTitle": "Educación",
     "languagesEyebrow": "Idiomas",
@@ -518,12 +515,11 @@
       {
         "number": "02",
         "code": "VISUAL",
-        "title": "Fotografía y narrativa visual",
+        "title": "Fotografía y edición",
         "items": [
           "Fotografía",
           "Vídeo",
-          "Edición",
-          "Narrativa visual"
+          "Edición"
         ],
         "metadata": "PHOTO · VIDEO · EDITING"
       },
@@ -543,9 +539,9 @@
     ]
   },
   "Experience": {
-    "pageEyebrow": "Experiencia",
-    "pageTitle": "Trayectoria profesional",
-    "pageText": "Reporterismo de televisión, comunicación digital, comunicación corporativa y fotografía.",
+    "pageEyebrow": "",
+    "pageTitle": "Experiencia",
+    "pageText": "",
     "responsibilitiesLabel": "Responsabilidades",
     "progressionLabel": "Roles desempeñados",
     "items": {
@@ -554,7 +550,6 @@
         "discipline": "Reporterismo · Televisión · Entrevistas",
         "period": "2024 — Actualidad",
         "summary": "Cobertura de eventos y ruedas de prensa, realización de entrevistas y redacción de guiones y piezas informativas para televisión.",
-        "context": "Televisión de proximidad y contenidos informativos.",
         "responsibilities": {
           "eventCoverage": "Cobertura de eventos y ruedas de prensa.",
           "interviews": "Entrevistas a artistas, actores y figuras públicas.",
@@ -566,7 +561,7 @@
         "role": "Deputy Director for Social Media",
         "discipline": "Comunicación · Social Media · Liderazgo",
         "period": "2022 — 2026",
-        "summary": "Trayectoria dentro del equipo de Comunicación de URJCmun desde 2022, participando en distintas funciones antes de asumir en 2026 la dirección adjunta de Social Media.",
+        "summary": "De Communication Team y Camera Operator a Deputy Director for Social Media (2026).",
         "context": "Modelo de Naciones Unidas de la Universidad Rey Juan Carlos, incluida su edición URJCmun TEEN.",
         "progression": {
           "communicationTeam": "Communication Team",
@@ -587,7 +582,7 @@
         "role": "Comunicación Corporativa",
         "discipline": "Contenido · Audiovisual · Comunicación",
         "period": "2025 — 2026",
-        "summary": "Desarrollo de contenidos digitales y corporativos, combinando redacción, producción audiovisual, eventos y planificación editorial.",
+        "summary": "Redacción, producción audiovisual, eventos y planificación editorial.",
         "context": "Consultora de comunicación, estrategia, marketing de contenidos y relaciones públicas.",
         "responsibilities": {
           "writing": "Redacción de artículos para blog corporativo y contenidos web.",
@@ -602,7 +597,7 @@
         "role": "Fotógrafa en Hoteles",
         "discipline": "Fotografía · Retrato · Atención al cliente",
         "period": "2023",
-        "summary": "Fotografía de retrato en entornos turísticos, combinando realización de sesiones, edición profesional y relación directa con clientes.",
+        "summary": "Sesiones de retrato, edición y atención a clientes en hoteles.",
         "context": "Estudio especializado en fotografía de retrato en entornos hoteleros y turísticos.",
         "responsibilities": {
           "photoSessions": "Sesiones fotográficas con familias y niños.",
@@ -656,18 +651,17 @@
   "Contact": {
     "eyebrow": "Contacto",
     "title": "¿Hablamos?",
-    "body": "Para televisión, reporterismo, producción audiovisual y comunicación.",
+    "body": "",
     "email": "Email",
     "linkedin": "LinkedIn",
     "base": "Base",
     "baseValue": "Madrid",
     "contactPageEyebrow": "Contacto",
     "contactPageTitle": "¿Hablamos?",
-    "contactPageText": "Para proyectos editoriales, televisión y producción audiovisual."
+    "contactPageText": ""
   },
   "Footer": {
     "cue": "¿Hablamos?",
-    "line": "Periodismo, imagen y narrativa digital.",
     "location": "Madrid",
     "copyright": "© 2026 Sofía Chernikova"
   },
@@ -678,14 +672,14 @@
     "home": "Volver al inicio"
   },
   "WorkRail": {
-    "label": "Historias",
-    "back": "Trabajo",
+    "label": "Trabajo",
+    "back": "Volver",
     "index": "Índice",
     "reporting": "Reporting",
     "audiovisual": "Audiovisual",
     "photography": "Fotografía",
-    "prev": "Historia anterior",
-    "next": "Historia siguiente",
+    "prev": "Proyecto anterior",
+    "next": "Proyecto siguiente",
     "archive": "Archivo 74",
     "musica-en-directo": "Música",
     "calle-documental": "Calle",

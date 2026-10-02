@@ -1,13 +1,13 @@
 {
   "Metadata": {
     "siteTitle": "Sofía Chernikova — журналист и телерепортёр",
-    "siteDescription": "Журналист и телерепортёр в Мадриде. Репортаж, интервью, аудиовизуальное освещение, фотография и цифровая коммуникация.",
+    "siteDescription": "Журналистка и телерепортёр в Мадриде. Репортажи, интервью, фотография и видео.",
     "ogAlt": "Профессиональное портфолио Sofía Chernikova",
     "personRole": "Журналист и телерепортёр",
     "pages": {
       "home": {
         "title": "Sofía Chernikova — журналист и телерепортёр",
-        "description": "Журналист и телерепортёр в Мадриде. Репортаж, интервью, аудиовизуальное освещение, фотография и цифровая коммуникация."
+        "description": "Журналистка и телерепортёр в Мадриде. Репортажи, интервью, фотография и видео."
       },
       "work": {
         "title": "Работы",
@@ -31,7 +31,7 @@
       },
       "about": {
         "title": "Профиль",
-        "description": "Профиль Sofía Chernikova, журналиста и специалиста по аудиовизуальной коммуникации, выпускницы Universidad Rey Juan Carlos."
+        "description": "Профиль Sofía Chernikova — журналистки и телерепортёра. Изучала журналистику и аудиовизуальную коммуникацию в Universidad Rey Juan Carlos."
       },
       "experience": {
         "title": "Опыт",
@@ -74,12 +74,12 @@
     }
   },
   "Hero": {
-    "dateline": "МАДРИД — 2026",
-    "role": "Журналист · телерепортёр · аудиовизуальная коммуникация",
-    "availability": "Открыта к новым проектам · Мадрид",
+    "dateline": "МАДРИД",
+    "role": "Журналист · телерепортёр",
+    "availability": "",
     "location": "Мадрид, Испания",
-    "headline": "Журналистика, изображение и цифровой нарратив.",
-    "summary": "Репортаж, интервью и визуальное производство из Мадрида.",
+    "headline": "",
+    "summary": "Телерепортажи, интервью и видео из Мадрида.",
     "actionsAria": "Основные действия",
     "viewWork": "Смотреть работы",
     "contact": "Контакты"
@@ -96,19 +96,19 @@
     "moreAbout": "Читать дальше"
   },
   "Work": {
-    "pageEyebrow": "Работы",
-    "pageTitle": "Истории",
-    "pageText": "Репортажи, интервью, кино и фотографические серии.",
-    "reportingPortfolioEyebrow": "Раздел",
+    "pageEyebrow": "Портфолио",
+    "pageTitle": "Работы",
+    "pageText": "",
+    "reportingPortfolioEyebrow": "",
     "reportingPortfolioTitle": "Репортажи",
-    "reportingPortfolioText": "Интервью и освещение событий.",
+    "reportingPortfolioText": "",
     "reportingCoverageEyebrow": "Репортажи",
-    "reportingCoverageTitle": "Избранные репортажи",
-    "reportingCoverageText": "Редакционная подборка журналистских материалов.",
+    "reportingCoverageTitle": "Репортажи",
+    "reportingCoverageText": "",
     "reportingMoreTitle": "Другие репортажи",
-    "shortFormEyebrow": "РЕПОРТАЖИ",
+    "shortFormEyebrow": "",
     "shortFormTitle": "КОРОТКИЙ ФОРМАТ",
-    "shortFormText": "Репортажи, интервью и освещение событий, созданные для вертикальных форматов.",
+    "shortFormText": "",
     "shortFormShowMore": "Показать ещё {count}",
     "shortFormShowLess": "Свернуть",
     "viewReporting": "Все репортажи",
@@ -121,15 +121,15 @@
     "archiveCountLabel": "фотографий",
     "backToWork": "Работы",
     "backToPhotography": "Фотография",
-    "reportingEyebrow": "Карьера",
-    "reportingTitle": "Телевидение и коммуникации",
-    "reportingText": "Освещение, интервью и производство для медиа и организаций.",
-    "audiovisualEyebrow": "Кино и аудиовизуал",
+    "reportingEyebrow": "",
+    "reportingTitle": "Репортажи",
+    "reportingText": "",
+    "audiovisualEyebrow": "",
     "audiovisualTitle": "Аудиовизуальные работы",
-    "audiovisualText": "Режиссура, монтаж и аудиовизуальный нарратив в художественных и промо-проектах.",
-    "photographyEyebrow": "Фотография",
-    "photographyTitle": "Редакционные серии",
-    "photographyText": "Опубликованные визуальные истории и фотоархив из 74 фотографий.",
+    "audiovisualText": "",
+    "photographyEyebrow": "",
+    "photographyTitle": "Фотография",
+    "photographyText": "",
     "aria": "Избранные работы",
     "fallbackAria": "Избранный профессиональный опыт",
     "viewExperience": "Смотреть полный опыт",
@@ -152,14 +152,14 @@
   "Projects": {
     "featuredEyebrow": "Главное",
     "selectedEyebrow": "Избранные работы",
-    "audiovisualEyebrow": "Избранный аудиовизуал",
+    "audiovisualEyebrow": "Кино и видео",
     "allEyebrow": "Портфолио",
-    "viewProject": "Смотреть историю",
+    "viewProject": "Смотреть проект",
     "viewReel": "Смотреть репортажный ролик",
     "viewRelatedWork": "Смотреть {count, plural, one {# проект} few {# проекта} many {# проектов} other {# проекта}}",
     "viewOriginal": "Смотреть оригинал",
-    "nextProject": "Следующая история",
-    "prevProject": "Предыдущая история",
+    "nextProject": "Следующий проект",
+    "prevProject": "Предыдущий проект",
     "moreFromSeries": "Ещё из этой серии",
     "moreFromSeriesCount": "{count} изображений",
     "seriesNavigation": "Навигация по фотосерии",
@@ -169,7 +169,7 @@
     "viewerPrev": "Назад",
     "viewerNext": "Далее",
     "viewerClose": "Закрыть",
-    "projectNavAria": "Навигация между историями",
+    "projectNavAria": "Навигация между проектами",
     "context": "Контекст",
     "role": "Роль",
     "credits": "Титки",
@@ -198,14 +198,14 @@
       "communication": "Коммуникация"
     },
     "items": {
-      "4-minutos": {"title": "4 MINUTOS", "description": "Городской ночной короткометражный фильм о взаимодействии двух молодых людей, снятый в чёрно-белой эстетике.", "format": "Короткометражный фильм · 03:59", "context": "Движение камеры, актёрская игра и прямой визуальный язык создают живую, шероховатую атмосферу.", "roles": ["Режиссура — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "sound": "María Rodríguez", "cast": "Eneko Valle García · Fran Vidales Santos", "equipment": "Nikon D3300 · iPhone 13"}, "creditLabels": {"direction": "Режиссура", "sound": "Звук", "cast": "Актёры", "equipment": "Оборудование"}, "media": {"4-minutos-poster": {"title": "4 MINUTOS", "alt": "Чёрно-белый кадр взаимодействия двух персонажей"}}},
-      "tras-el-sofa": {"title": "Tras el sofá", "description": "Интимная драматическая короткометражная работа о разговоре и эмоциональной ситуации в домашнем пространстве.", "format": "Короткометражный фильм · 05:59", "context": "Актёрская игра, крупные планы и детали интерьера поддерживают драматическое напряжение.", "roles": ["Режиссура — Sofía Chernikova", "Монтаж — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "editing": "Sofía Chernikova"}, "creditLabels": {"direction": "Режиссура", "editing": "Монтаж"}, "media": {"tras-el-sofa-poster": {"title": "Tras el sofá", "alt": "Крупный план героини в домашнем интерьере"}}},
-      "version-beta": {"title": "VERSIÓN BETA", "description": "Быстрый городской промо-тизер, сочетающий обращения в кадре, действие и графические элементы.", "format": "Промо-ролик · 00:58", "context": "Работа представляет проект об аутентичности, переменах и вторых шансах.", "media": {"version-beta-poster": {"title": "VERSIÓN BETA", "alt": "Главный герой рядом с надписью VERSIÓN BETA"}}},
-      "short-form-001": {"title": "Выступление на камеру на улице", "description": "Вертикальный ролик, в котором София говорит на камеру в городской обстановке; его дополняют планы места съёмки.", "media": {"short-form-001-video": {"title": "Выступление на камеру на улице", "alt": "София в вертикальном ролике, снятом на улице"}}},
-      "short-form-002": {"title": "Разговор в пространстве с микрофонами", "description": "Вертикальный ролик с Софией, ещё одним человеком и микрофонами в пространстве с заметным брендингом.", "media": {"short-form-002-video": {"title": "Разговор в пространстве с микрофонами", "alt": "София с микрофоном в пространстве с другими людьми"}}},
-      "short-form-003": {"title": "Визуальный гид по MyMUN", "description": "Вертикальный ролик: София на камеру объясняет MyMUN и показывает экраны платформы.", "media": {"short-form-003-video": {"title": "Визуальный гид по MyMUN", "alt": "София рядом с экранами и графикой MyMUN"}}},
-      "short-form-004": {"title": "Презентация смартфона на улице", "description": "Вертикальный ролик, в котором София представляет смартфон на камеру на улице.", "media": {"short-form-004-video": {"title": "Презентация смартфона на улице", "alt": "София представляет смартфон на камеру на улице"}}},
-      "silver-praxis-condicion-perfecta": {"title": "Silver Praxis — Condición Perfecta", "description": "Музыкальный клип с планами артиста в интерьерах и ночных городских локациях.", "format": "Музыкальный клип", "context": "В титрах указано, что София Черникова отвечала за съёмку и постпродакшн.", "roles": ["Съёмка и постпродакшн — Sofía Chernikova"], "credits": {"filming": "Sofía Chernikova", "creative": "Briza Sanchez", "production": "Silver Praxis"}, "creditLabels": {"filming": "Съёмка и постпродакшн", "creative": "Креативная режиссура, стайлинг и леттеринг", "production": "Продакшн, сведение и мастеринг"}, "media": {"silver-praxis-condicion-perfecta-video": {"title": "Silver Praxis — Condición Perfecta", "alt": "Кадр из клипа: артист в интерьере с красным освещением"}}},
+      "4-minutos": {"title": "4 MINUTOS", "description": "Чёрно-белый короткометражный фильм о встрече двух молодых людей.", "format": "Короткометражный фильм · 03:59", "roles": ["Режиссура — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "sound": "María Rodríguez", "cast": "Eneko Valle García · Fran Vidales Santos", "equipment": "Nikon D3300 · iPhone 13"}, "creditLabels": {"direction": "Режиссура", "sound": "Звук", "cast": "Актёры", "equipment": "Оборудование"}, "media": {"4-minutos-poster": {"title": "4 MINUTOS", "alt": "Чёрно-белый кадр взаимодействия двух персонажей"}}},
+      "tras-el-sofa": {"title": "Tras el sofá", "description": "Драматический короткометражный фильм, действие которого происходит в домашнем интерьере.", "format": "Короткометражный фильм · 05:59", "roles": ["Режиссура — Sofía Chernikova", "Монтаж — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "editing": "Sofía Chernikova"}, "creditLabels": {"direction": "Режиссура", "editing": "Монтаж"}, "media": {"tras-el-sofa-poster": {"title": "Tras el sofá", "alt": "Крупный план героини в домашнем интерьере"}}},
+      "version-beta": {"title": "VERSIÓN BETA", "description": "Проморолик с обращениями в кадре, действием и графикой.", "format": "Проморолик · 00:58", "media": {"version-beta-poster": {"title": "VERSIÓN BETA", "alt": "Главный герой рядом с надписью VERSIÓN BETA"}}},
+      "short-form-001": {"title": "На камеру · улица", "description": "", "media": {"short-form-001-video": {"title": "На камеру · улица", "alt": "София в вертикальном ролике, снятом на улице"}}},
+      "short-form-002": {"title": "Микрофон", "description": "", "media": {"short-form-002-video": {"title": "Микрофон", "alt": "София с микрофоном в пространстве с другими людьми"}}},
+      "short-form-003": {"title": "MyMUN", "description": "", "media": {"short-form-003-video": {"title": "MyMUN", "alt": "София рядом с экранами и графикой MyMUN"}}},
+      "short-form-004": {"title": "Смартфон · улица", "description": "", "media": {"short-form-004-video": {"title": "Смартфон · улица", "alt": "София представляет смартфон на камеру на улице"}}},
+      "silver-praxis-condicion-perfecta": {"title": "Silver Praxis — Condición Perfecta", "description": "Клип на песню «Condición Perfecta» группы Silver Praxis.", "format": "Музыкальный клип", "roles": ["Съёмка и постпродакшн — Sofía Chernikova"], "credits": {"filming": "Sofía Chernikova", "creative": "Briza Sanchez", "production": "Silver Praxis"}, "creditLabels": {"filming": "Съёмка и постпродакшн", "creative": "Креативная режиссура, стайлинг и леттеринг", "production": "Продакшн, сведение и мастеринг"}, "media": {"silver-praxis-condicion-perfecta-video": {"title": "Silver Praxis — Condición Perfecta", "alt": "Кадр из клипа: артист в интерьере с красным освещением"}}},
       "reporter-reel": {
         "title": "Репортёрский рил",
         "description": "Подборка сюжетов, интервью и репортажей.",
@@ -443,23 +443,23 @@
     }
   },
   "Profile": {
-    "statement": "Журналист и специалист по аудиовизуальной коммуникации. Репортаж, интервью и визуальный нарратив.",
-    "aboutPreview": "Журналист и специалист по аудиовизуальной коммуникации. Репортаж, интервью и освещение событий.",
-    "aboutContinuation": "Фотография, продакшн и цифровая коммуникация — часть той же практики.",
-    "bio": "Образование — Universidad Rey Juan Carlos. Работает в телерепортаже, интервью и освещении событий, параллельно занимается фотографией и цифровой коммуникацией.",
-    "aboutTrajectory": "С 2024 года работает телерепортёром.",
-    "interests": "Работа в кадре, визуальный нарратив и контент для СМИ, аудиовизуальное производство и культурные проекты.",
+    "statement": "Я журналистка и телерепортёр. Также работала в фотографии и видеопроизводстве.",
+    "aboutPreview": "Я журналист и телерепортёр.",
+    "aboutContinuation": "",
+    "bio": "С 2024 года я работаю телерепортёром в Grupo Cadena Media. Освещаю события и пресс-конференции, беру интервью, пишу сценарии и информационные сюжеты. Также работала в фотографии и цифровых коммуникациях.",
+    "aboutTrajectory": "",
+    "interests": "",
     "aboutPageEyebrow": "Профиль",
     "aboutHeroTitle": "Телерепортёр.",
     "portraitAlt": "Портрет Sofía Chernikova",
     "bioEyebrow": "Био",
-    "bioTitle": "Практика и образование.",
+    "bioTitle": "Обо мне",
     "educationEyebrow": "Образование",
     "educationTitle": "Образование",
     "languagesEyebrow": "Языки",
     "languagesTitle": "Языки",
     "toolsEyebrow": "Инструменты",
-    "toolsTitle": "Инструменты и процесс",
+    "toolsTitle": "Инструменты",
     "experienceEyebrow": "Сейчас",
     "experienceTitle": "Сейчас и недавно",
     "viewFullExperience": "Смотреть полный опыт"
@@ -496,12 +496,11 @@
       {
         "number": "02",
         "code": "VISUAL",
-        "title": "Фотография и визуальный нарратив",
+        "title": "Фотография и монтаж",
         "items": [
           "Фотография",
           "Видео",
-          "Монтаж",
-          "Визуальный нарратив"
+          "Монтаж"
         ],
         "metadata": "PHOTO · VIDEO · EDITING"
       },
@@ -521,9 +520,9 @@
     ]
   },
   "Experience": {
-    "pageEyebrow": "Опыт",
-    "pageTitle": "Профессиональный путь",
-    "pageText": "Телерепортаж, цифровая коммуникация, корпоративная коммуникация и фотография.",
+    "pageEyebrow": "",
+    "pageTitle": "Опыт",
+    "pageText": "",
     "responsibilitiesLabel": "Обязанности",
     "progressionLabel": "Роли в URJCmun",
     "items": {
@@ -532,7 +531,6 @@
         "discipline": "Репортаж · Телевидение · Интервью",
         "period": "2024 — настоящее время",
         "summary": "Освещение событий и пресс-конференций, интервью, сценарии и информационные сюжеты для телевидения.",
-        "context": "Региональное телевидение и информационный контент.",
         "responsibilities": {
           "eventCoverage": "Освещение событий и пресс-конференций.",
           "interviews": "Интервью с артистами, актёрами и публичными фигурами.",
@@ -544,7 +542,7 @@
         "role": "Deputy Director for Social Media",
         "discipline": "Коммуникации · Социальные сети · Лидерство",
         "period": "2022 — 2026",
-        "summary": "Путь в команде коммуникаций URJCmun с 2022 года: разные роли, затем в 2026 — Deputy Director for Social Media.",
+        "summary": "От Communication Team и Camera Operator до Deputy Director for Social Media (2026).",
         "context": "Модель ООН Universidad Rey Juan Carlos, включая издание URJCmun TEEN.",
         "progression": {
           "communicationTeam": "Communication Team",
@@ -565,7 +563,7 @@
         "role": "Корпоративные коммуникации",
         "discipline": "Контент · Аудиовизуал · Коммуникация",
         "period": "2025 — 2026",
-        "summary": "Цифровой и корпоративный контент: тексты, видеопродакшн, события и редакционное планирование.",
+        "summary": "Тексты, видеопроизводство, мероприятия и редакционное планирование.",
         "context": "Консалтинг по коммуникации, стратегии, контент-маркетингу и PR.",
         "responsibilities": {
           "writing": "Тексты для корпоративного блога и сайта.",
@@ -580,7 +578,7 @@
         "role": "Фотограф в отелях",
         "discipline": "Фотография · Портрет · Работа с клиентами",
         "period": "2023",
-        "summary": "Портретная фотография в туристической среде: съёмки, профессиональная обработка и прямая работа с клиентами.",
+        "summary": "Портретные съёмки, обработка и работа с клиентами в отелях.",
         "context": "Студия портретной фотографии в отелях и туристических пространствах.",
         "responsibilities": {
           "photoSessions": "Съёмки с семьями и детьми.",
@@ -634,18 +632,17 @@
   "Contact": {
     "eyebrow": "Контакты",
     "title": "Поговорим?",
-    "body": "Телевидение, репортаж, аудиовизуальное производство и коммуникация.",
+    "body": "",
     "email": "Email",
     "linkedin": "LinkedIn",
     "base": "База",
     "baseValue": "Мадрид",
     "contactPageEyebrow": "Контакты",
     "contactPageTitle": "Поговорим?",
-    "contactPageText": "Для редакционных, телевизионных и аудиовизуальных проектов."
+    "contactPageText": ""
   },
   "Footer": {
     "cue": "Поговорим?",
-    "line": "Журналистика, изображение и цифровой нарратив.",
     "location": "Мадрид",
     "copyright": "© 2026 Sofía Chernikova"
   },
@@ -656,14 +653,14 @@
     "home": "На главную"
   },
   "WorkRail": {
-    "label": "Истории",
-    "back": "Работа",
+    "label": "Работы",
+    "back": "Назад",
     "index": "Индекс",
     "reporting": "Репортажи",
     "audiovisual": "Аудиовизуальное",
     "photography": "Фотография",
-    "prev": "Предыдущая история",
-    "next": "Следующая история",
+    "prev": "Предыдущий проект",
+    "next": "Следующий проект",
     "archive": "Архив 74",
     "musica-en-directo": "Музыка",
     "calle-documental": "Улица",

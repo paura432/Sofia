@@ -20,9 +20,6 @@ export async function Hero({ videoPreview }: HeroProps = {}) {
     <section className="hero section section-first" aria-labelledby="hero-title">
       <div className="container hero-grid">
         <div className="hero-copy">
-          <HeroEntrance as="p" className="hero-dateline" delay={0}>
-            {t("dateline")} · {t("location")}
-          </HeroEntrance>
           <HeroEntrance
             as="h1"
             className="display-hero hero-name"
@@ -75,9 +72,6 @@ export async function Hero({ videoPreview }: HeroProps = {}) {
           >
             <MotionLink href="/work">{t("viewWork")}</MotionLink>
             <MotionLink href="/contact">{t("contact")}</MotionLink>
-          </HeroEntrance>
-          <HeroEntrance as="p" className="hero-status" delay={310}>
-            {t("availability")}
           </HeroEntrance>
         </div>
       </div>

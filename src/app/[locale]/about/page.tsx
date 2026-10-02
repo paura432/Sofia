@@ -89,7 +89,6 @@ export default async function AboutPage() {
               </figure>
             ) : null}
             <p>{profile("bio")}</p>
-            <p>{profile("interests")}</p>
           </div>
         </Reveal>
       </section>

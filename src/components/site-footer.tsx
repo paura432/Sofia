@@ -17,7 +17,6 @@ export async function SiteFooter() {
       </div>
       <div className="container site-footer-inner">
         <div className="site-footer-primary">
-          <p className="footer-tagline">{t("line")}</p>
           <p className="site-footer-contact">
             {t("location")}
             <span aria-hidden="true"> · </span>

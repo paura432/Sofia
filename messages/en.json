@@ -1,13 +1,13 @@
 {
   "Metadata": {
     "siteTitle": "Sofía Chernikova — Journalist & TV Reporter",
-    "siteDescription": "Madrid-based journalist and TV reporter working across interviews, event coverage, visual storytelling and digital communications.",
+    "siteDescription": "Madrid-based journalist and TV reporter. Television reports, interviews, photography and video.",
     "ogAlt": "Professional portfolio of Sofía Chernikova",
     "personRole": "Journalist and TV Reporter",
     "pages": {
       "home": {
         "title": "Sofía Chernikova — Journalist & TV Reporter",
-        "description": "Madrid-based journalist and TV reporter working across interviews, event coverage, visual storytelling and digital communications."
+        "description": "Madrid-based journalist and TV reporter. Television reports, interviews, photography and video."
       },
       "work": {
         "title": "Work",
@@ -31,7 +31,7 @@
       },
       "about": {
         "title": "Profile",
-        "description": "Profile of Sofía Chernikova, a journalist and audiovisual communications professional educated at Universidad Rey Juan Carlos."
+        "description": "Profile of Sofía Chernikova, a journalist and TV reporter who studied Journalism and Audiovisual Communication at Universidad Rey Juan Carlos."
       },
       "experience": {
         "title": "Experience",
@@ -74,12 +74,12 @@
     }
   },
   "Hero": {
-    "dateline": "MADRID — 2026",
-    "role": "Journalist · TV Reporter · Audiovisual Communications",
-    "availability": "Available for new projects · Madrid",
+    "dateline": "MADRID",
+    "role": "Journalist · TV reporter",
+    "availability": "",
     "location": "Madrid, Spain",
-    "headline": "Journalism, visual storytelling & digital media.",
-    "summary": "Reporting, interviews and visual production from Madrid.",
+    "headline": "",
+    "summary": "TV reporting, interviews and video from Madrid.",
     "actionsAria": "Primary actions",
     "viewWork": "View work",
     "contact": "Contact"
@@ -96,19 +96,19 @@
     "moreAbout": "Read more"
   },
   "Work": {
-    "pageEyebrow": "Work",
-    "pageTitle": "Stories",
-    "pageText": "Reporting, interviews, film and photographic series.",
-    "reportingPortfolioEyebrow": "Discipline",
+    "pageEyebrow": "Portfolio",
+    "pageTitle": "Work",
+    "pageText": "",
+    "reportingPortfolioEyebrow": "",
     "reportingPortfolioTitle": "REPORTING",
-    "reportingPortfolioText": "Interviews and journalistic coverage.",
+    "reportingPortfolioText": "",
     "reportingCoverageEyebrow": "REPORTING",
-    "reportingCoverageTitle": "Selected Reporting",
-    "reportingCoverageText": "An editorial selection of reporting work.",
+    "reportingCoverageTitle": "Coverage",
+    "reportingCoverageText": "",
     "reportingMoreTitle": "More reporting",
-    "shortFormEyebrow": "REPORTING",
+    "shortFormEyebrow": "",
     "shortFormTitle": "SHORT-FORM REPORTING",
-    "shortFormText": "Reporting, interviews and coverage produced for vertical formats.",
+    "shortFormText": "",
     "shortFormShowMore": "See {count} more pieces",
     "shortFormShowLess": "Show less",
     "viewReporting": "Explore all reporting",
@@ -121,15 +121,15 @@
     "archiveCountLabel": "photographs",
     "backToWork": "Work",
     "backToPhotography": "Photography",
-    "reportingEyebrow": "Career",
-    "reportingTitle": "Television and communications",
-    "reportingText": "Coverage, interviews and production for media and organisations.",
-    "audiovisualEyebrow": "Film & Audiovisual",
-    "audiovisualTitle": "Audiovisual work",
-    "audiovisualText": "Direction, editing and audiovisual storytelling across fiction and promotional work.",
-    "photographyEyebrow": "Photography",
-    "photographyTitle": "Editorial series",
-    "photographyText": "Published visual work across five stories and an archive of 74 photographs.",
+    "reportingEyebrow": "",
+    "reportingTitle": "Reporting",
+    "reportingText": "",
+    "audiovisualEyebrow": "",
+    "audiovisualTitle": "Audiovisual",
+    "audiovisualText": "",
+    "photographyEyebrow": "",
+    "photographyTitle": "Photography",
+    "photographyText": "",
     "aria": "Selected work",
     "fallbackAria": "Selected professional experience",
     "viewExperience": "View full experience",
@@ -152,14 +152,14 @@
   "Projects": {
     "featuredEyebrow": "Featured",
     "selectedEyebrow": "Selected work",
-    "audiovisualEyebrow": "Selected audiovisual work",
+    "audiovisualEyebrow": "Audiovisual",
     "allEyebrow": "Portfolio",
-    "viewProject": "View story",
+    "viewProject": "View project",
     "viewReel": "View reel",
     "viewRelatedWork": "View {count, plural, one {# project} other {# projects}}",
     "viewOriginal": "View original",
-    "nextProject": "Next story",
-    "prevProject": "Previous story",
+    "nextProject": "Next project",
+    "prevProject": "Previous project",
     "moreFromSeries": "More from this series",
     "moreFromSeriesCount": "{count} images",
     "seriesNavigation": "Photo series navigation",
@@ -169,7 +169,7 @@
     "viewerPrev": "Previous",
     "viewerNext": "Next",
     "viewerClose": "Close",
-    "projectNavAria": "Story navigation",
+    "projectNavAria": "Project navigation",
     "context": "Context",
     "role": "Role",
     "credits": "Credits",
@@ -198,17 +198,17 @@
       "communication": "Communications"
     },
     "items": {
-      "4-minutos": {"title": "4 MINUTOS", "description": "An urban, nocturnal short following two young people through close staging and black-and-white imagery.", "format": "Short film · 03:59", "context": "Moving camera, performance and direct visual language create an immediate, raw atmosphere.", "roles": ["Direction — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "sound": "María Rodríguez", "cast": "Eneko Valle García · Fran Vidales Santos", "equipment": "Nikon D3300 · iPhone 13"}, "creditLabels": {"direction": "Direction", "sound": "Sound", "cast": "Cast", "equipment": "Equipment"}, "media": {"4-minutos-poster": {"title": "4 MINUTOS", "alt": "Black-and-white frame of two characters interacting"}}},
-      "tras-el-sofa": {"title": "Tras el sofá", "description": "An intimate dramatic short built around a conversation and an emotional situation in a domestic space.", "format": "Short film · 05:59", "context": "Performance, close shots and environmental detail sustain its narrative tension.", "roles": ["Direction — Sofía Chernikova", "Editing — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "editing": "Sofía Chernikova"}, "creditLabels": {"direction": "Direction", "editing": "Editing"}, "media": {"tras-el-sofa-poster": {"title": "Tras el sofá", "alt": "Close portrait of a protagonist in a domestic interior"}}},
-      "version-beta": {"title": "VERSIÓN BETA", "description": "A fast-cut, urban promotional teaser combining testimonials, action and graphic elements.", "format": "Promotional piece · 00:58", "context": "It presents a proposal centred on authenticity, change and second chances.", "media": {"version-beta-poster": {"title": "VERSIÓN BETA", "alt": "Protagonist beside the VERSIÓN BETA title"}}},
-      "short-form-001": {"title": "On-camera piece outdoors", "description": "A vertical piece in which Sofía speaks to camera in an urban outdoor setting, intercut with location shots.", "media": {"short-form-001-video": {"title": "On-camera piece outdoors", "alt": "Sofía in a vertical piece filmed outdoors"}}},
-      "short-form-002": {"title": "Conversation in a microphone setting", "description": "A vertical piece featuring Sofía, another person and microphones in a setting with visible branding.", "media": {"short-form-002-video": {"title": "Conversation in a microphone setting", "alt": "Sofía holding a microphone with other people in the setting"}}},
-      "short-form-003": {"title": "MyMUN visual guide", "description": "A vertical piece in which Sofía explains MyMUN on camera and shows screens from the platform.", "media": {"short-form-003-video": {"title": "MyMUN visual guide", "alt": "Sofía alongside screens and MyMUN graphics"}}},
-      "short-form-004": {"title": "Smartphone presentation outdoors", "description": "A vertical piece in which Sofía presents a smartphone to camera outdoors.", "media": {"short-form-004-video": {"title": "Smartphone presentation outdoors", "alt": "Sofía presenting a smartphone to camera outdoors"}}},
-      "silver-praxis-condicion-perfecta": {"title": "Silver Praxis — Condición Perfecta", "description": "A music video featuring the artist in interior scenes and urban locations at night.", "format": "Music video", "context": "The on-screen credits list Sofía Chernikova for filming and post-production.", "roles": ["Filming and post-production — Sofía Chernikova"], "credits": {"filming": "Sofía Chernikova", "creative": "Briza Sanchez", "production": "Silver Praxis"}, "creditLabels": {"filming": "Filming and post-production", "creative": "Creative direction, styling and lettering", "production": "Production, mix and master"}, "media": {"silver-praxis-condicion-perfecta-video": {"title": "Silver Praxis — Condición Perfecta", "alt": "A frame from the music video showing the artist in a red-lit interior"}}},
+      "4-minutos": {"title": "4 MINUTOS", "description": "A short film in black and white about two young people meeting.", "format": "Short film · 03:59", "roles": ["Direction — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "sound": "María Rodríguez", "cast": "Eneko Valle García · Fran Vidales Santos", "equipment": "Nikon D3300 · iPhone 13"}, "creditLabels": {"direction": "Direction", "sound": "Sound", "cast": "Cast", "equipment": "Equipment"}, "media": {"4-minutos-poster": {"title": "4 MINUTOS", "alt": "Black-and-white frame of two characters interacting"}}},
+      "tras-el-sofa": {"title": "Tras el sofá", "description": "A dramatic short film set in a home interior.", "format": "Short film · 05:59", "roles": ["Direction — Sofía Chernikova", "Editing — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "editing": "Sofía Chernikova"}, "creditLabels": {"direction": "Direction", "editing": "Editing"}, "media": {"tras-el-sofa-poster": {"title": "Tras el sofá", "alt": "Close portrait of a protagonist in a domestic interior"}}},
+      "version-beta": {"title": "VERSIÓN BETA", "description": "A promotional video with on-camera testimonials, action and graphics.", "format": "Promotional piece · 00:58", "media": {"version-beta-poster": {"title": "VERSIÓN BETA", "alt": "Protagonist beside the VERSIÓN BETA title"}}},
+      "short-form-001": {"title": "On camera · outdoors", "description": "", "media": {"short-form-001-video": {"title": "On camera · outdoors", "alt": "Sofía in a vertical piece filmed outdoors"}}},
+      "short-form-002": {"title": "Microphone", "description": "", "media": {"short-form-002-video": {"title": "Microphone", "alt": "Sofía holding a microphone with other people in the setting"}}},
+      "short-form-003": {"title": "MyMUN", "description": "", "media": {"short-form-003-video": {"title": "MyMUN", "alt": "Sofía alongside screens and MyMUN graphics"}}},
+      "short-form-004": {"title": "Smartphone · outdoors", "description": "", "media": {"short-form-004-video": {"title": "Smartphone · outdoors", "alt": "Sofía presenting a smartphone to camera outdoors"}}},
+      "silver-praxis-condicion-perfecta": {"title": "Silver Praxis — Condición Perfecta", "description": "The music video for ‘Condición Perfecta’ by Silver Praxis.", "format": "Music video", "roles": ["Filming and post-production — Sofía Chernikova"], "credits": {"filming": "Sofía Chernikova", "creative": "Briza Sanchez", "production": "Silver Praxis"}, "creditLabels": {"filming": "Filming and post-production", "creative": "Creative direction, styling and lettering", "production": "Production, mix and master"}, "media": {"silver-praxis-condicion-perfecta-video": {"title": "Silver Praxis — Condición Perfecta", "alt": "A frame from the music video showing the artist in a red-lit interior"}}},
       "reporter-reel": {
         "title": "Reporter reel",
-        "description": "A selection of coverage, interviews and reporting pieces.",
+    "description": "",
         "dek": "Reporting from premieres, festivals and press conferences.",
         "format": "Television · Reel",
         "context": "Event coverage, interviews and field reporting.",
@@ -443,23 +443,23 @@
     }
   },
   "Profile": {
-    "statement": "Journalist and audiovisual communications professional. Reporting, interviews and visual storytelling.",
-    "aboutPreview": "Journalist and audiovisual communications professional. Reporting, interviews and event coverage.",
-    "aboutContinuation": "Photography, production and digital communications as part of the same practice.",
-    "bio": "Educated at Universidad Rey Juan Carlos. She works in television reporting, interviews and event coverage, with a parallel practice in photography and digital communications.",
-    "aboutTrajectory": "Since 2024 she has worked as a TV reporter.",
-    "interests": "On-camera work, visual storytelling and content for media, audiovisual production and cultural projects.",
+    "statement": "I’m a journalist and TV reporter. I’ve also worked in photography and video.",
+    "aboutPreview": "I’m a journalist and TV reporter.",
+    "aboutContinuation": "",
+    "bio": "I’ve worked as a TV reporter at Grupo Cadena Media since 2024. I cover events and press conferences, conduct interviews, and write scripts and news pieces. I’ve also worked in photography and digital communications.",
+    "aboutTrajectory": "",
+    "interests": "",
     "aboutPageEyebrow": "Profile",
     "aboutHeroTitle": "A television reporter.",
     "portraitAlt": "Portrait of Sofía Chernikova",
     "bioEyebrow": "Bio",
-    "bioTitle": "Practice and education.",
+    "bioTitle": "About",
     "educationEyebrow": "Education",
     "educationTitle": "Education",
     "languagesEyebrow": "Languages",
     "languagesTitle": "Languages",
     "toolsEyebrow": "Tools",
-    "toolsTitle": "Tools and workflow",
+    "toolsTitle": "Tools",
     "experienceEyebrow": "Now",
     "experienceTitle": "Current & recent",
     "viewFullExperience": "View full experience"
@@ -496,12 +496,11 @@
       {
         "number": "02",
         "code": "VISUAL",
-        "title": "Photography & visual storytelling",
+        "title": "Photography & editing",
         "items": [
           "Photography",
           "Video",
-          "Editing",
-          "Visual Storytelling"
+          "Editing"
         ],
         "metadata": "PHOTO · VIDEO · EDITING"
       },
@@ -521,9 +520,9 @@
     ]
   },
   "Experience": {
-    "pageEyebrow": "Experience",
-    "pageTitle": "Professional path",
-    "pageText": "Television reporting, digital communications, corporate communications and photography.",
+    "pageEyebrow": "",
+    "pageTitle": "Experience",
+    "pageText": "",
     "responsibilitiesLabel": "Responsibilities",
     "progressionLabel": "Roles across URJCmun",
     "items": {
@@ -532,7 +531,6 @@
         "discipline": "Reporting · Television · Interviews",
         "period": "2024 — Present",
         "summary": "Event and press conference coverage, interviews, and writing scripts and news pieces for television.",
-        "context": "Local television and news content.",
         "responsibilities": {
           "eventCoverage": "Coverage of events and press conferences.",
           "interviews": "Interviews with artists, actors and public figures.",
@@ -544,7 +542,7 @@
         "role": "Deputy Director for Social Media",
         "discipline": "Communications · Social Media · Leadership",
         "period": "2022 — 2026",
-        "summary": "Progression within URJCmun's Communications team since 2022, contributing across different roles before becoming Deputy Director for Social Media in 2026.",
+        "summary": "From Communication Team and Camera Operator to Deputy Director for Social Media (2026).",
         "context": "Model United Nations at Universidad Rey Juan Carlos, including its URJCmun TEEN edition.",
         "progression": {
           "communicationTeam": "Communication Team",
@@ -565,7 +563,7 @@
         "role": "Corporate Communications",
         "discipline": "Content · Audiovisual · Communications",
         "period": "2025 — 2026",
-        "summary": "Digital and corporate content work combining writing, audiovisual production, events and editorial planning.",
+        "summary": "Writing, video production, events and editorial planning.",
         "context": "Communications, strategy, content marketing and public relations consultancy.",
         "responsibilities": {
           "writing": "Writing articles for corporate blogs and web content.",
@@ -580,7 +578,7 @@
         "role": "Hotel Photographer",
         "discipline": "Photography · Portraiture · Client Experience",
         "period": "2023",
-        "summary": "Portrait photography in tourism settings, combining photography sessions, professional editing and direct client interaction.",
+        "summary": "Portrait sessions, editing and client service in hotels.",
         "context": "Studio specialising in portrait photography in hotel and tourism settings.",
         "responsibilities": {
           "photoSessions": "Photography sessions with families and children.",
@@ -634,18 +632,17 @@
   "Contact": {
     "eyebrow": "Contact",
     "title": "Shall we talk?",
-    "body": "For television, reporting, audiovisual production and communications.",
+    "body": "",
     "email": "Email",
     "linkedin": "LinkedIn",
     "base": "Base",
     "baseValue": "Madrid",
     "contactPageEyebrow": "Contact",
     "contactPageTitle": "Shall we talk?",
-    "contactPageText": "For editorial, television and audiovisual production projects."
+    "contactPageText": ""
   },
   "Footer": {
     "cue": "Shall we talk?",
-    "line": "Journalism, visual storytelling and digital media.",
     "location": "Madrid",
     "copyright": "© 2026 Sofía Chernikova"
   },
@@ -656,14 +653,14 @@
     "home": "Back home"
   },
   "WorkRail": {
-    "label": "Stories",
-    "back": "Work",
+    "label": "Work",
+    "back": "Back",
     "index": "Index",
     "reporting": "Reporting",
     "audiovisual": "Audiovisual",
     "photography": "Photography",
-    "prev": "Previous story",
-    "next": "Next story",
+    "prev": "Previous project",
+    "next": "Next project",
     "archive": "Archive 74",
     "musica-en-directo": "Music",
     "calle-documental": "Street",

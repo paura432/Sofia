@@ -94,9 +94,9 @@ export default async function ReportingPage() {
     <main id="main">
       <section className="page-hero section section-first">
         <Reveal className="container page-hero-inner">
-          <p className="eyebrow">{t("reportingPortfolioEyebrow")}</p>
+          {t("reportingPortfolioEyebrow") ? <p className="eyebrow">{t("reportingPortfolioEyebrow")}</p> : null}
           <h1 className="display-page">{t("reportingPortfolioTitle")}</h1>
-          <p>{t("reportingPortfolioText")}</p>
+          {t("reportingPortfolioText") ? <p>{t("reportingPortfolioText")}</p> : null}
           <Link className="work-back-link" href="/work">← {t("backToWork")}</Link>
         </Reveal>
       </section>

@@ -10,7 +10,7 @@ type SectionHeadingProps = {
 export function SectionHeading({ eyebrow, title, id, text }: SectionHeadingProps) {
   return (
     <Reveal className="section-heading">
-      <p className="eyebrow">{eyebrow}</p>
+      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
       <h2 className="display-section" id={id}>
         {title}
       </h2>
