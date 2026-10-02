@@ -4,9 +4,13 @@ import { getTranslations } from "next-intl/server";
 import { HeroEntrance } from "@/components/hero-entrance";
 import { MotionLink } from "@/components/motion/motion-link";
 import { portrait } from "@/content/profile";
-import { focalPointStyle } from "@/content/projects";
+import { focalPointStyle, type ProjectMedia } from "@/content/projects";
 
-export async function Hero() {
+type HeroProps = {
+  videoPreview?: { media: ProjectMedia; title: string; alt: string };
+};
+
+export async function Hero({ videoPreview }: HeroProps = {}) {
   const [t, profile] = await Promise.all([
     getTranslations("Hero"),
     getTranslations("Profile"),
@@ -32,7 +36,22 @@ export async function Hero() {
             {t("role")}
           </HeroEntrance>
         </div>
-        {portrait ? (
+        {videoPreview ? (
+          <HeroEntrance as="figure" className="hero-portrait hero-portrait-reel" delay={130}>
+            <div
+              className="portfolio-video"
+              style={{ aspectRatio: videoPreview.media.aspectRatio?.replace(":", " / ") ?? "9 / 16" }}
+            >
+              <Image
+                alt={videoPreview.alt || videoPreview.title}
+                fill
+                preload
+                sizes="(max-width: 699px) 92vw, 430px"
+                src={videoPreview.media.poster ?? ""}
+              />
+            </div>
+          </HeroEntrance>
+        ) : portrait ? (
           <HeroEntrance as="figure" className="hero-portrait" delay={130}>
             <Image
               alt={profile(portrait.altKey)}

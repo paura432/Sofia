@@ -17,6 +17,7 @@ type PortfolioVideoProps = {
   posterAlt?: string;
   active?: boolean;
   onActivate?: () => void;
+  onDeactivate?: () => void;
   /** Etiquetas ya traducidas de las pistas de subtítulos, por `labelKey`. */
   trackLabels?: Record<string, string>;
 };
@@ -42,6 +43,7 @@ export function PortfolioVideo({
   posterAlt,
   active,
   onActivate,
+  onDeactivate,
   trackLabels = {},
 }: PortfolioVideoProps) {
   const [localActive, setLocalActive] = useState(false);
@@ -58,6 +60,17 @@ export function PortfolioVideo({
     : media.provider === "native"
       ? Boolean(media.src)
       : Boolean(embedSrc(media));
+
+  useEffect(() => {
+    const handleOtherVideoActivation = (event: Event) => {
+      if ((event as CustomEvent<string>).detail === media.id) return;
+      setLocalActive(false);
+      onDeactivate?.();
+    };
+
+    window.addEventListener("portfolio-video-activate", handleOtherVideoActivation);
+    return () => window.removeEventListener("portfolio-video-activate", handleOtherVideoActivation);
+  }, [media.id, onDeactivate]);
 
   useEffect(() => {
     if (isPlaying && media.provider === "native") {
@@ -127,6 +140,9 @@ export function PortfolioVideo({
           className="portfolio-video-poster"
           data-state={isPlaying ? "exiting" : "idle"}
           onClick={() => {
+            window.dispatchEvent(
+              new CustomEvent("portfolio-video-activate", { detail: media.id }),
+            );
             setLocalActive(true);
             onActivate?.();
           }}

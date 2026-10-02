@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useId, useState } from "react";
+import { useCallback, useId, useState } from "react";
 
 import { PortfolioVideo } from "@/components/portfolio-video";
 import type { ProjectMedia } from "@/content/projects";
@@ -40,6 +40,7 @@ export function ShortFormReporting({
   const [activeId, setActiveId] = useState<string | null>(null);
   const [expanded, setExpanded] = useState(false);
   const listId = useId();
+  const deactivate = useCallback(() => setActiveId(null), []);
 
   if (!projects.length) return null;
   const visibleProjects = projects.slice(0, expanded ? projects.length : 8);
@@ -82,6 +83,7 @@ export function ShortFormReporting({
                   className="short-form-video"
                   media={project.video}
                   onActivate={() => setActiveId(project.id)}
+                  onDeactivate={deactivate}
                   playLabel={project.playLabel}
                   posterAlt={project.posterAlt}
                   sizes="(max-width: 699px) 78vw, (max-width: 899px) 45vw, (max-width: 1199px) 30vw, 300px"
