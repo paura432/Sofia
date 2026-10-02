@@ -98,7 +98,7 @@
   "Work": {
     "pageEyebrow": "Trabajo",
     "pageTitle": "Historias",
-    "pageText": "Reporterismo, comunicación y narrativa visual con evidencia publicada.",
+    "pageText": "Reportajes, entrevistas, cine y series fotográficas.",
     "reportingPortfolioEyebrow": "Disciplina",
     "reportingPortfolioTitle": "REPORTING",
     "reportingPortfolioText": "Entrevistas y coberturas periodísticas.",
@@ -663,7 +663,7 @@
     "baseValue": "Madrid",
     "contactPageEyebrow": "Contacto",
     "contactPageTitle": "¿Hablamos?",
-    "contactPageText": "Email o LinkedIn."
+    "contactPageText": "Para proyectos editoriales, televisión y producción audiovisual."
   },
   "Footer": {
     "cue": "¿Hablamos?",

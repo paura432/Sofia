@@ -53,7 +53,7 @@ export function FeaturedProject({
     >
       <Reveal className="container">
         <p className="eyebrow">{eyebrow}</p>
-        <Link className="featured-project-link" href={href}>
+        <div className="featured-project-link">
           <ProjectMediaLayout
             copy={{
               [featuredMedia.id]: {
@@ -68,18 +68,20 @@ export function FeaturedProject({
           />
           <span className="featured-project-meta">
             <span>
-              <h2 className="display-section" id={headingId}>
-                {title}
-              </h2>
+              <Link href={href}>
+                <h2 className="display-section" id={headingId}>{title}</h2>
+              </Link>
               {organisation ? <span>{organisation}</span> : null}
               <span>{discipline}</span>
             </span>
             <span>
               {visibleYear ? `${visibleYear} ` : null}
-              <span aria-hidden="true">→</span>
+              <Link aria-label={title} href={href}>
+                <span aria-hidden="true">→</span>
+              </Link>
             </span>
           </span>
-        </Link>
+        </div>
       </Reveal>
     </section>
   );

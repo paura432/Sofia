@@ -98,7 +98,7 @@
   "Work": {
     "pageEyebrow": "Работы",
     "pageTitle": "Истории",
-    "pageText": "Репортаж, коммуникации и визуальный нарратив с опубликованными материалами.",
+    "pageText": "Репортажи, интервью, кино и фотографические серии.",
     "reportingPortfolioEyebrow": "Раздел",
     "reportingPortfolioTitle": "Репортажи",
     "reportingPortfolioText": "Интервью и освещение событий.",
@@ -641,7 +641,7 @@
     "baseValue": "Мадрид",
     "contactPageEyebrow": "Контакты",
     "contactPageTitle": "Поговорим?",
-    "contactPageText": "Email или LinkedIn."
+    "contactPageText": "Для редакционных, телевизионных и аудиовизуальных проектов."
   },
   "Footer": {
     "cue": "Поговорим?",

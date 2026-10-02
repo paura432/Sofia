@@ -3,14 +3,9 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 import { ContactBlock } from "@/components/contact-block";
-import { AnimatedLine } from "@/components/motion/animated-line";
-import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
 import { StaggerGroup } from "@/components/motion/stagger";
-import { PeriodDisplay } from "@/components/period-display";
-import { experience } from "@/content/experience";
 import {
-  aboutExperienceIds,
   portrait,
   siteConfig,
   tools,
@@ -35,13 +30,6 @@ type Language = {
   level: string;
 };
 
-type ExperienceCopy = {
-  discipline: string;
-  role: string;
-  period: string;
-  summary: string;
-};
-
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -59,17 +47,11 @@ export async function generateMetadata({
 }
 
 export default async function AboutPage() {
-  const [profile, education, languages, experienceText] = await Promise.all([
+  const [profile, education, languages] = await Promise.all([
     getTranslations("Profile"),
     getTranslations("Education"),
     getTranslations("Languages"),
-    getTranslations("Experience"),
   ]);
-
-  const aboutExperienceIdSet = new Set<string>(aboutExperienceIds);
-  const aboutSummary = experience.filter((item) =>
-    aboutExperienceIdSet.has(item.id),
-  );
   const educationItems = education.raw("items") as Education[];
   const languageItems = languages.raw("items") as Language[];
 
@@ -155,47 +137,6 @@ export default async function AboutPage() {
             </div>
           </article>
         </StaggerGroup>
-      </section>
-
-      <section className="section" aria-labelledby="about-experience">
-        <div className="container">
-          <Reveal className="section-heading section-heading-spaced">
-            <p className="eyebrow">{profile("experienceEyebrow")}</p>
-            <h2 className="display-section" id="about-experience">
-              {profile("experienceTitle")}
-            </h2>
-          </Reveal>
-          <AnimatedLine tone="strong" />
-          <div className="about-summary">
-            {aboutSummary.map((item) => {
-              const copy = experienceText.raw(
-                `items.${item.id}`,
-              ) as ExperienceCopy;
-
-              return (
-                <StaggerGroup
-                  as="article"
-                  className="about-summary-item"
-                  key={item.id}
-                  step={30}
-                >
-                  <PeriodDisplay period={copy.period} />
-                  <div>
-                    <p className="case-discipline">{copy.discipline}</p>
-                    <h3>{item.company}</h3>
-                    <p className="case-role">{copy.role}</p>
-                  </div>
-                  <p>{copy.summary}</p>
-                </StaggerGroup>
-              );
-            })}
-          </div>
-          <div className="about-summary-footer">
-            <MotionLink href="/experience">
-              {profile("viewFullExperience")}
-            </MotionLink>
-          </div>
-        </div>
       </section>
 
       {siteConfig.hasCv ? (

@@ -707,6 +707,34 @@ export function hasPublishedReporting() {
   return getProjectsInSection("reporting").length > 0;
 }
 
+export function getHomeReportingSelection(limit = 4) {
+  const reporting = getProjectsInSection("reporting").filter(
+    (project) => !project.reporterReel,
+  );
+  const shortForm = sortShortFormProjects(
+    reporting.filter((project) => project.reportingFormat === "short-form"),
+  );
+  const selected = reporting.filter((project) => project.reportingFeatured);
+
+  return (shortForm.length ? shortForm : selected).slice(0, limit);
+}
+
+export function getHomeAudiovisualSelection(limit = 1) {
+  const audiovisual = getProjectsInSection("audiovisual");
+  return [
+    ...audiovisual.filter((project) => project.featured),
+    ...audiovisual.filter((project) => !project.featured),
+  ].slice(0, limit);
+}
+
+export function getHomePhotographySelection(limit = 2) {
+  const photography = getProjectsInSection("photography");
+  return [
+    ...photography.filter((project) => project.featured),
+    ...photography.filter((project) => !project.featured),
+  ].slice(0, limit);
+}
+
 export function hasProjectDetailPage(project: PortfolioProject) {
   return (
     project.detailPage ??

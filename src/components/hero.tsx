@@ -15,12 +15,10 @@ export async function Hero() {
   return (
     <section className="hero section section-first" aria-labelledby="hero-title">
       <div className="container hero-grid">
-        <HeroEntrance className="hero-meta" delay={0}>
-          <p className="hero-dateline">{t("dateline")}</p>
-          <p>{t("role")}</p>
-          <p className="hero-location">{t("location")}</p>
-        </HeroEntrance>
         <div className="hero-copy">
+          <HeroEntrance as="p" className="hero-dateline" delay={0}>
+            {t("dateline")} · {t("location")}
+          </HeroEntrance>
           <HeroEntrance
             as="h1"
             className="display-hero hero-name"
@@ -31,8 +29,23 @@ export async function Hero() {
             <span className="hero-name-line">Chernikova</span>
           </HeroEntrance>
           <HeroEntrance as="p" className="hero-headline" delay={130}>
-            {t("headline")}
+            {t("role")}
           </HeroEntrance>
+        </div>
+        {portrait ? (
+          <HeroEntrance as="figure" className="hero-portrait" delay={130}>
+            <Image
+              alt={profile(portrait.altKey)}
+              height={portrait.height}
+              preload
+              sizes="(max-width: 699px) 92vw, (max-width: 979px) 52vw, 40vw"
+              src={portrait.src}
+              style={{ objectPosition: focalPointStyle(portrait) }}
+              width={portrait.width}
+            />
+          </HeroEntrance>
+        ) : null}
+        <div className="hero-support">
           <HeroEntrance as="p" className="hero-summary" delay={190}>
             {t("summary")}
           </HeroEntrance>
@@ -48,19 +61,6 @@ export async function Hero() {
             {t("availability")}
           </HeroEntrance>
         </div>
-        {portrait ? (
-          <HeroEntrance as="figure" className="hero-portrait" delay={130}>
-            <Image
-              alt={profile(portrait.altKey)}
-              height={portrait.height}
-              preload
-              sizes="(max-width: 699px) 100vw, (max-width: 979px) 460px, 30vw"
-              src={portrait.src}
-              style={{ objectPosition: focalPointStyle(portrait) }}
-              width={portrait.width}
-            />
-          </HeroEntrance>
-        ) : null}
       </div>
     </section>
   );

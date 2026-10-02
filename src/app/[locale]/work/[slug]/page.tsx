@@ -164,11 +164,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const projectTotal = String(detailedProjects.length).padStart(2, "0");
   const visibleYear = publishableYear(project.year);
   const isFilm = project.discipline.includes("audiovisual");
-  const facts = [
-    copy.format,
-    locationLabel,
-    visibleYear,
-  ].filter(Boolean) as string[];
+  const roleLabels = copy.roles?.filter(Boolean) ?? [];
   const essayPhotos = essayViewerItems(
     [heroMedia, ...(detailMedia ?? [])],
     mediaCopy,
@@ -192,9 +188,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <p className="project-kicker">{disciplineLabel(project, t)}</p>
           <h1 className="display-page project-title">{copy.title}</h1>
           {copy.dek ? <p>{copy.dek}</p> : null}
-          {facts.length > 0 ? (
-            <p className="project-story-meta">{facts.join(" · ")}</p>
-          ) : null}
         </Reveal>
       </section>
 
@@ -226,6 +219,36 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
       ) : null}
 
+      {roleLabels.length || project.organisation || copy.format || locationLabel || visibleYear || project.sourceUrl ? (
+        <section className="section project-detail-meta" aria-label={copy.title}>
+          <div className="container project-detail-meta-inner">
+            <dl className="project-detail-facts">
+              {roleLabels.length ? (
+                <div className="project-detail-primary-fact">
+                  <dt>{t("role")}</dt>
+                  <dd>{roleLabels.join(" · ")}</dd>
+                </div>
+              ) : null}
+              {project.organisation ? (
+                <div><dt>{t("organisation")}</dt><dd>{project.organisation}</dd></div>
+              ) : null}
+              {copy.format ? (
+                <div><dt>{t("format")}</dt><dd>{copy.format}</dd></div>
+              ) : null}
+              {locationLabel ? (
+                <div><dt>{t("location")}</dt><dd>{locationLabel}</dd></div>
+              ) : null}
+              {visibleYear ? (
+                <div><dt>{t("year")}</dt><dd>{visibleYear}</dd></div>
+              ) : null}
+            </dl>
+            {project.sourceUrl ? (
+              <MotionLink external href={project.sourceUrl}>{t("viewOriginal")}</MotionLink>
+            ) : null}
+          </div>
+        </section>
+      ) : null}
+
       {copy.context ? (
         <section className="section project-detail-copy">
           <Reveal className="container editorial-grid">
@@ -233,16 +256,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <p className="eyebrow">{t("context")}</p>
               <p>{copy.context}</p>
             </div>
-            {copy.roles && copy.roles.length > 0 ? (
-              <div>
-                <p className="eyebrow">{t("role")}</p>
-                <ul className="project-role-list">
-                  {copy.roles.map((role) => (
-                    <li key={role}>{role}</li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
           </Reveal>
         </section>
       ) : null}
@@ -267,17 +280,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
       ) : null}
 
-      {copy.result || project.sourceUrl ? (
+      {copy.result ? (
         <section className="section project-publication">
           <Reveal className="container editorial-grid">
             <p className="eyebrow">{t("publication")}</p>
             <div>
               {copy.result ? <p>{copy.result}</p> : null}
-              {project.sourceUrl ? (
-                <MotionLink external href={project.sourceUrl}>
-                  {t("viewOriginal")}
-                </MotionLink>
-              ) : null}
             </div>
           </Reveal>
         </section>

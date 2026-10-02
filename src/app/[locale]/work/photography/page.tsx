@@ -59,6 +59,7 @@ export default async function PhotographyPage() {
             disciplineLabel={(project) => project.discipline.map((item) => projectsText(`disciplines.${item}`)).join(" · ")}
             playLabel={projectsText("play")}
             projects={projects}
+            presentation="series"
             viewLabel={projectsText("viewProject")}
           />
           <Link

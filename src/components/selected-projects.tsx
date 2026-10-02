@@ -58,37 +58,36 @@ export function SelectedProjects({
               key={project.slug}
               step={40}
             >
-              <Link
-                className="selected-project-link"
-                href={{
-                  pathname: "/work/[slug]",
-                  params: { slug: project.slug },
-                }}
-              >
-                <p className="case-number">{project.number}</p>
-                {project.media ? (
-                  <ProjectMediaLayout
-                    copy={{
-                      [project.media.id]: {
-                        alt: project.title,
-                        title: project.title,
-                        ...project.mediaCopy?.[project.media.id],
-                      },
-                    }}
-                    media={[project.media]}
-                    playLabel={playLabel}
-                  />
-                ) : null}
-                <div>
-                  <p className="case-discipline">{project.discipline}</p>
+              <p className="case-number">{project.number}</p>
+              {project.media ? (
+                <ProjectMediaLayout
+                  copy={{
+                    [project.media.id]: {
+                      alt: project.title,
+                      title: project.title,
+                      ...project.mediaCopy?.[project.media.id],
+                    },
+                  }}
+                  media={[project.media]}
+                  playLabel={playLabel}
+                />
+              ) : null}
+              <div className="selected-project-copy">
+                <p className="case-discipline">{project.discipline}</p>
+                <Link
+                  className="selected-project-title"
+                  href={{ pathname: "/work/[slug]", params: { slug: project.slug } }}
+                >
                   <h2>{project.title}</h2>
-                  {project.organisation ? <p>{project.organisation}</p> : null}
-                  <span className="project-row-cta">
-                    {viewLabel}
-                    <span aria-hidden="true">→</span>
-                  </span>
-                </div>
-              </Link>
+                </Link>
+                {project.organisation ? <p>{project.organisation}</p> : null}
+                <Link
+                  className="project-row-cta"
+                  href={{ pathname: "/work/[slug]", params: { slug: project.slug } }}
+                >
+                  {viewLabel}<span aria-hidden="true">→</span>
+                </Link>
+              </div>
             </StaggerGroup>
           ))}
         </div>

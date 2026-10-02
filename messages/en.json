@@ -98,7 +98,7 @@
   "Work": {
     "pageEyebrow": "Work",
     "pageTitle": "Stories",
-    "pageText": "Reporting, communications and visual storytelling with published evidence.",
+    "pageText": "Reporting, interviews, film and photographic series.",
     "reportingPortfolioEyebrow": "Discipline",
     "reportingPortfolioTitle": "REPORTING",
     "reportingPortfolioText": "Interviews and journalistic coverage.",
@@ -641,7 +641,7 @@
     "baseValue": "Madrid",
     "contactPageEyebrow": "Contact",
     "contactPageTitle": "Shall we talk?",
-    "contactPageText": "Email or LinkedIn."
+    "contactPageText": "For editorial, television and audiovisual production projects."
   },
   "Footer": {
     "cue": "Shall we talk?",

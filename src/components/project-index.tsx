@@ -19,6 +19,7 @@ type ProjectIndexProps = {
   viewLabel: string;
   disciplineLabel: (project: PortfolioProject) => string;
   copyFor: (project: PortfolioProject) => ProjectCopy;
+  presentation?: "filmography" | "series";
 };
 
 function mediaOrientation(project: PortfolioProject) {
@@ -42,13 +43,14 @@ export function ProjectIndex({
   viewLabel,
   disciplineLabel,
   copyFor,
+  presentation = "filmography",
 }: ProjectIndexProps) {
   if (projects.length === 0) {
     return null;
   }
 
   return (
-    <div className="project-list" data-count={projects.length}>
+    <div className="project-list" data-count={projects.length} data-presentation={presentation}>
       {projects.map((project, index) => {
         const copy = copyFor(project);
         const cover = project.cover ?? project.media?.[0];
@@ -61,32 +63,9 @@ export function ProjectIndex({
             key={project.id}
             step={40}
           >
-            <Link
-              className="project-row-link"
-              href={{
-                pathname: "/work/[slug]",
-                params: { slug: project.slug },
-              }}
-            >
-              <p className="case-number">
-                {String(index + 1).padStart(2, "0")}
-              </p>
-              <div className="project-row-copy">
-                <div className="project-row-information">
-                  <p className="case-discipline">{disciplineLabel(project)}</p>
-                  <h2 className="project-title">{copy.title}</h2>
-                  {project.organisation || year ? (
-                    <p className="case-role">
-                      {[project.organisation, year].filter(Boolean).join(" · ")}
-                    </p>
-                  ) : null}
-                </div>
-                <span className="project-row-cta">
-                  {viewLabel}
-                  <span aria-hidden="true">→</span>
-                </span>
-              </div>
-              {cover ? (
+            <>
+              <p className="case-number">{String(index + 1).padStart(2, "0")}</p>
+              {presentation === "series" && cover ? (
                 <div className="project-row-cover">
                   <ProjectMediaLayout
                     copy={copy.media}
@@ -95,7 +74,39 @@ export function ProjectIndex({
                   />
                 </div>
               ) : null}
-            </Link>
+              <div className="project-row-copy">
+                <div className="project-row-information">
+                  <p className="case-discipline">{disciplineLabel(project)}</p>
+                  <Link
+                    className="project-row-title"
+                    href={{ pathname: "/work/[slug]", params: { slug: project.slug } }}
+                  >
+                    <h2>{copy.title}</h2>
+                  </Link>
+                  {project.organisation || year ? (
+                    <p className="case-role">
+                      {[project.organisation, year].filter(Boolean).join(" · ")}
+                    </p>
+                  ) : null}
+                </div>
+                <Link
+                  className="project-row-cta"
+                  href={{ pathname: "/work/[slug]", params: { slug: project.slug } }}
+                >
+                  {viewLabel}
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+              {presentation !== "series" && cover ? (
+                <div className="project-row-cover">
+                  <ProjectMediaLayout
+                    copy={copy.media}
+                    media={[cover]}
+                    playLabel={playLabel}
+                  />
+                </div>
+              ) : null}
+            </>
           </StaggerGroup>
         );
       })}

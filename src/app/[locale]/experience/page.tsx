@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import { AnimatedLine } from "@/components/motion/animated-line";
-import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
 import { StaggerGroup } from "@/components/motion/stagger";
 import { PeriodDisplay } from "@/components/period-display";
 import { experience } from "@/content/experience";
-import { getRelatedProjects } from "@/content/projects";
+import { getRelatedProjects, hasProjectDetailPage } from "@/content/projects";
+import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -24,6 +24,7 @@ type ExperienceCopy = {
   responsibilities: Record<string, string>;
   progression?: Record<string, string>;
 };
+type ProjectCopy = { title: string };
 
 export async function generateMetadata({
   params,
@@ -121,12 +122,29 @@ export default async function ExperiencePage() {
                       </li>
                     ))}
                   </ul>
-                  {relatedProjects.length > 0 ? (
-                    <MotionLink href="/work">
-                      {projectsText("viewRelatedWork", {
-                        count: relatedProjects.length,
+                  {relatedProjects.length ? (
+                    <ul className="trajectory-project-links">
+                      {relatedProjects.map((project) => {
+                        const projectCopy = projectsText.raw(
+                          `items.${project.translationKey}`,
+                        ) as ProjectCopy;
+
+                        return (
+                          <li key={project.id}>
+                            {hasProjectDetailPage(project) ? (
+                              <Link href={{ pathname: "/work/[slug]", params: { slug: project.slug } }}>
+                                {projectCopy.title} <span aria-hidden="true">↗</span>
+                              </Link>
+                            ) : project.sourceUrl ? (
+                              <a href={project.sourceUrl} rel="noopener noreferrer" target="_blank">
+                                {projectCopy.title} <span aria-hidden="true">↗</span>
+                                <span className="sr-only">{navigation("opensInNewTab")}</span>
+                              </a>
+                            ) : null}
+                          </li>
+                        );
                       })}
-                    </MotionLink>
+                    </ul>
                   ) : null}
                 </div>
               </StaggerGroup>
