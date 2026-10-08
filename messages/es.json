@@ -80,7 +80,7 @@
   },
   "Work": {
     "pageTitle": "Trabajo",
-    "pageText": "Reportajes ante la cámara, cine y vídeo detrás de ella, y fotografía. Todo en una página.",
+    "pageText": "Primero, ante la cámara. Después, lo que ruedo y lo que fotografío.",
     "sectionsAria": "Secciones de Trabajo",
     "reportingNav": "Reportajes",
     "audiovisualNav": "Audiovisual",
@@ -88,13 +88,13 @@
     "archiveNav": "Archivo",
     "reportingKicker": "Reportajes",
     "reportingTitle": "Ante la cámara",
-    "reportingText": "Piezas verticales: una entrevista, un paseo a cámara, una guía y una prueba de producto. Se reproducen con sonido.",
+    "reportingText": "Entrevista, paseo a cámara, guía y prueba de producto, en vertical. Mejor con sonido.",
     "audiovisualKicker": "Audiovisual",
     "audiovisualTitle": "Detrás de la cámara",
-    "audiovisualText": "Dos cortometrajes dirigidos, un videoclip rodado y postproducido y una pieza promocional.",
+    "audiovisualText": "Cortometrajes que dirijo y monto, y un videoclip que rodé y posproduje.",
     "photographyKicker": "Fotografía",
     "photographyTitle": "Conciertos, calle y retrato",
-    "photographyText": "Cinco series y un archivo de 74 imágenes.",
+    "photographyText": "Series completas y un archivo de 74 fotografías para mirar sin prisa.",
     "seriesCount": "{count, plural, one {# fotografía} other {# fotografías}}",
     "archiveTeaser": "{count} fotografías, por temas",
     "shortFormShowMore": "Ver {count} piezas más",
@@ -164,7 +164,7 @@
       "reporting": "Reporting",
       "interview": "Entrevista",
       "video": "Vídeo",
-      "audiovisual": "Cine & Audiovisual",
+      "audiovisual": "Audiovisual",
       "photography": "Fotografía",
       "communication": "Comunicación"
     },
@@ -240,11 +240,11 @@
         }
       },
       "short-form-002": {
-        "title": "En el decorado de «9-1-1»",
+        "title": "En el decorado de «9‑1‑1»",
         "description": "Entrevista micrófono en mano dentro de un decorado de la serie, en la estación de Chamartín.",
         "media": {
           "short-form-002-video": {
-            "title": "En el decorado de «9-1-1»",
+            "title": "En el decorado de «9‑1‑1»",
             "alt": "Sofía sonríe con un micrófono, sentada en un sofá naranja dentro de un decorado"
           }
         }
@@ -260,11 +260,11 @@
         }
       },
       "short-form-004": {
-        "title": "Probando el vivo X300 Pro",
+        "title": "Probando el vivo X300 Pro",
         "description": "Primeras impresiones de un smartphone: cámara, pantalla y accesorios, con planos de detalle.",
         "media": {
           "short-form-004-video": {
-            "title": "Probando el vivo X300 Pro",
+            "title": "Probando el vivo X300 Pro",
             "alt": "Primer plano de Sofía hablando a cámara en una habitación clara"
           }
         }

@@ -234,7 +234,6 @@ h2 {
 }
 
 .hero-name span:last-child {
-  color: var(--foreground-soft);
   font-weight: 260;
 }
 
@@ -845,13 +844,16 @@ h2 {
   font-variant-numeric: tabular-nums;
 }
 
-.series-cover-archive img {
-  filter: grayscale(1) contrast(1.05);
-  opacity: 0.55;
+.series-cover-archive::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgb(14 13 12 / 78%));
 }
 
 .series-archive-count {
   position: absolute;
+  z-index: 1;
   inset: auto auto 12px 16px;
   color: #f3eee6;
   font-family: var(--font-serif), Georgia, serif;
@@ -1303,4 +1305,62 @@ h2 {
   .photo-archive-viewer img {
     animation: none;
   }
+}
+
+/* Detalle: la obra y su ficha se leen juntas; sin vacíos de una pantalla. */
+.project-detail-hero {
+  padding-block: clamp(28px, 5vw, 64px) clamp(20px, 3vw, 36px);
+}
+
+.project-hero-media {
+  padding-block: clamp(16px, 3vw, 40px);
+  border-top: 0;
+}
+
+.project-detail-meta,
+.project-credits {
+  padding-block: clamp(24px, 4vw, 56px);
+}
+
+.project-detail-meta {
+  border-top: 0;
+}
+
+/* Duración legible sobre cualquier póster. */
+.portfolio-video-duration,
+.film-duration {
+  right: 10px;
+  bottom: 10px;
+  z-index: 3;
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: rgb(14 13 12 / 62%);
+  color: #f3eee6;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  text-shadow: none;
+}
+
+/* Trabajo: las cuatro secciones siempre visibles, también en móvil. */
+.section-nav ul {
+  flex-wrap: wrap;
+  overflow: visible;
+}
+
+@media (max-width: 699px) {
+  .section-nav a {
+    padding: 8px 10px;
+  }
+
+  .hero-actions > * {
+    flex: 1 1 0;
+  }
+}
+
+.project-credits dl {
+  display: grid;
+  gap: 18px;
 }

@@ -98,7 +98,7 @@
     "archiveNext": "Next",
     "archiveImageLabel": "{group}, image {index}",
     "pageTitle": "Work",
-    "pageText": "On-camera reporting, film and video from behind it, and photography. All on one page.",
+    "pageText": "First, on camera. Then, what I shoot and what I photograph.",
     "sectionsAria": "Work sections",
     "reportingNav": "Reporting",
     "audiovisualNav": "Film & video",
@@ -106,13 +106,13 @@
     "archiveNav": "Archive",
     "reportingKicker": "Reporting",
     "reportingTitle": "On camera",
-    "reportingText": "Vertical pieces: an interview, a walk-and-talk, a how-to and a product test. They play with sound.",
+    "reportingText": "Interview, walk-and-talk, how-to and product test, shot vertically. Best with sound.",
     "audiovisualKicker": "Film & video",
     "audiovisualTitle": "Behind the camera",
-    "audiovisualText": "Two short films as director, a music video shot and post-produced, and a promotional piece.",
+    "audiovisualText": "Short films I directed and edited, and a music video I shot and post-produced.",
     "photographyKicker": "Photography",
     "photographyTitle": "Concerts, street and portrait",
-    "photographyText": "Five series and an archive of 74 images.",
+    "photographyText": "Complete series and an archive of 74 photographs to look at slowly.",
     "seriesCount": "{count, plural, one {# photograph} other {# photographs}}",
     "archiveTeaser": "{count} photographs, by theme",
     "shortFormShowMore": "Show {count} more",
@@ -166,7 +166,7 @@
       "reporting": "Reporting",
       "interview": "Interview",
       "video": "Video",
-      "audiovisual": "Film & Audiovisual",
+      "audiovisual": "Film & video",
       "photography": "Photography",
       "communication": "Communications"
     },
@@ -242,11 +242,11 @@
         }
       },
       "short-form-002": {
-        "title": "On the ‘9-1-1’ set",
+        "title": "On the ‘9‑1‑1’ set",
         "description": "A handheld-mic interview inside a set built for the series, at Chamartín station.",
         "media": {
           "short-form-002-video": {
-            "title": "On the ‘9-1-1’ set",
+            "title": "On the ‘9‑1‑1’ set",
             "alt": "Sofía smiles holding a microphone, sitting on an orange sofa inside a set"
           }
         }
@@ -262,11 +262,11 @@
         }
       },
       "short-form-004": {
-        "title": "Testing the vivo X300 Pro",
+        "title": "Testing the vivo X300 Pro",
         "description": "First impressions of a smartphone: camera, screen and accessories, with close-ups.",
         "media": {
           "short-form-004-video": {
-            "title": "Testing the vivo X300 Pro",
+            "title": "Testing the vivo X300 Pro",
             "alt": "Close-up of Sofía speaking to camera in a bright room"
           }
         }

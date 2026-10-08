@@ -41,7 +41,8 @@ export default async function WorkPage() {
   const reels = getReelStories(projectsText);
   const films = getFilmEntries(projectsText);
   const series = getSeriesEntries(projectsText, (count) => t("seriesCount", { count }));
-  const archiveCover = getArchiveGroupPhotos("calle")[0];
+  // Foto vertical de escenario: distinta de las portadas de serie y legible bajo el "74".
+  const archiveCover = getArchiveGroupPhotos("musica").find((photo) => photo.id === "musica-img-4954");
 
   const sections = [
     { id: "reporting", label: t("reportingNav"), count: reels.length },

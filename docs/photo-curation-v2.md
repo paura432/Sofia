@@ -247,3 +247,16 @@ Orden: 13 · 08 · 01+04 · img-5860+14 · 09 · 11 · 12 · img-5487+07. Salen 
 - `pair` siempre con dos imágenes consecutivas de la misma orientación (comprobado
   en cada orden propuesto).
 - Ninguna decisión cambia derechos, créditos ni `rights.verified`.
+
+## Ajustes tras la revisión crítica externa (2026-10-08)
+
+Una segunda revisión, hecha sobre capturas reales por alguien que no participó en la curación, detectó dos portadas débiles en el formato 4:5 de las rejillas:
+
+| Serie | Portada v2 | Portada final | Motivo |
+|---|---|---|---|
+| Retrato & Editorial | 13 | **08** (focal 48,38) | 13 es un primer plano ladeado que en 4:5 pierde contexto y se lee blando en móvil; 08 es frontal, nítido, con el gesto de las manos y un rojo que lo distingue del resto. 13 pasa a ser la segunda imagen (wide). |
+| Calle & Documental | 07 | **04** (focal 52,42) | 07 queda dominada por césped desenfocado en primer plano; 04 es vertical de origen (recorte limpio a 4:5) y tiene un sujeto humano claro en la calle. 07 pasa a la secuencia (wide). |
+
+La tarjeta de Archivo usa ahora `musica-img-4954` (vertical, escenario) sin desaturar, con un degradado sólo en la base para leer el "74".
+
+Póster del reel del hero (`short-form-002`, t=51 s): la revisión señaló que el tronco del decorado roba protagonismo. Se mantiene: todos los fotogramas del tramo en solitario incluyen ese decorado y es la pieza que mejor demuestra el trabajo de reportera (entrevista con micrófono). Alternativa si Sofía lo prefiere: abrir el monitor con `short-form-003` (primer plano con mirada a cámara).

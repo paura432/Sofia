@@ -53,7 +53,7 @@ export function ReelStage({ stories, listLabel, nowShowingLabel, soundHint }: Re
           {selected.description ? (
             <span className="reel-stage-description">{selected.description}</span>
           ) : null}
-          <span className="reel-stage-hint">{soundHint}</span>
+          {playing ? null : <span className="reel-stage-hint">{soundHint}</span>}
         </figcaption>
       </figure>
 

@@ -307,6 +307,20 @@ export const estudio_editorial_media: ProjectMedia[] = [
 
 export const retrato_editorial_cover: ProjectMedia =
 {
+      id: "retrato-editorial-08",
+      type: "image",
+      src: "/media/projects/retrato-editorial/retrato-editorial-08.webp",
+      width: 2800,
+      height: 2003,
+      blurDataURL: "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBQCdASoYABEAPzmQvFgvKaWqKAqp4CcJbACnFBEcsSLOa47XNhOIT8pAM+4/+1QAAP6LkliF7Ufp2mc3U+418jQ0CqJzy2Tc6ClhMaYN2zhVZLzBSq/f5N/r/WDCKkBpdW9zkMJyTjr6jMkYImQKfY2n6miz1Uk1+AL4P+lAAA==",
+      layout: "full",
+      position: 1,
+      altKey: "retrato-editorial-08",
+      focalPoint: { x: 48, y: 38 },
+    };
+
+export const retrato_editorial_media: ProjectMedia[] = [
+    {
       id: "retrato-editorial-13",
       type: "image",
       src: "/media/projects/retrato-editorial/retrato-editorial-13.webp",
@@ -314,24 +328,10 @@ export const retrato_editorial_cover: ProjectMedia =
       height: 1867,
       aspectRatio: "3:2",
       blurDataURL: "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoYABAAPzmGuVOvKSWisAgB4CcJbACdACPOzjDzPN22fu+wAP6p9CjdOFZwHHsZJjuGn9Sihpc3OEkMq7pH3IVcVwG7pLligzRdkt/NGYJ2L/+0To6caLTcW0tZbiQvlGCBO5ZUvBYsakxBBiB+69x5QfO/Cled4RnvxCNA4p3xOAAA",
-      layout: "full",
-      position: 1,
-      altKey: "retrato-editorial-13",
-      focalPoint: { x: 40, y: 42 },
-    };
-
-export const retrato_editorial_media: ProjectMedia[] = [
-    {
-      id: "retrato-editorial-08",
-      type: "image",
-      src: "/media/projects/retrato-editorial/retrato-editorial-08.webp",
-      width: 2800,
-      height: 2003,
-      blurDataURL: "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBQCdASoYABEAPzmQvFgvKaWqKAqp4CcJbACnFBEcsSLOa47XNhOIT8pAM+4/+1QAAP6LkliF7Ufp2mc3U+418jQ0CqJzy2Tc6ClhMaYN2zhVZLzBSq/f5N/r/WDCKkBpdW9zkMJyTjr6jMkYImQKfY2n6miz1Uk1+AL4P+lAAA==",
       layout: "wide",
       position: 2,
-      altKey: "retrato-editorial-08",
-      focalPoint: { x: 50, y: 30 },
+      altKey: "retrato-editorial-13",
+      focalPoint: { x: 40, y: 42 },
     },
     {
       id: "retrato-editorial-01",
@@ -421,17 +421,17 @@ export const retrato_editorial_media: ProjectMedia[] = [
 
 export const calle_documental_cover: ProjectMedia =
 {
-      id: "calle-documental-07",
+      id: "calle-documental-04",
       type: "image",
-      src: "/media/projects/calle-documental/calle-documental-07.webp",
-      width: 2800,
-      height: 1867,
-      aspectRatio: "3:2",
-      blurDataURL: "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoYABAAPzmEuVOvKKWisAgB4CcJbAAATpFn4Mr9rvKz8UAA/qKqXs1qBmi2R//JFc7SW7ipO6RFJ58K6BWVAasyHEuSS7MM069UDEXc3j/INvUQCmuiCtyfhJ9TrTIiJPFamYqHLK5BCcCWgtLd4BGuwAA=",
+      src: "/media/projects/calle-documental/calle-documental-04.webp",
+      width: 1867,
+      height: 2800,
+      aspectRatio: "2:3",
+      blurDataURL: "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABwBACdASoQABgAPzmEuVOvKKWisAgB4CcJagAD5LH2+5f1CfW00BtMXuS+OAD+0DX/4GU2jmjQ3PcNDxlfKVcu99KOEw39yZ18Nrhxh8IEKjcjhEQRKq5AJMFynUnjUVzyxmPMRMDpX9LKF7nN8c0nzTd/NRgyD9u/qm+mIhM+xjVucK4LGi5AAAA=",
       layout: "full",
       position: 1,
-      altKey: "calle-documental-07",
-      focalPoint: { x: 42, y: 62 },
+      altKey: "calle-documental-04",
+      focalPoint: { x: 52, y: 42 },
     };
 
 export const calle_documental_media: ProjectMedia[] = [
@@ -448,16 +448,17 @@ export const calle_documental_media: ProjectMedia[] = [
       altKey: "calle-documental-05",
     },
     {
-      id: "calle-documental-04",
+      id: "calle-documental-07",
       type: "image",
-      src: "/media/projects/calle-documental/calle-documental-04.webp",
-      width: 1867,
-      height: 2800,
-      aspectRatio: "2:3",
-      blurDataURL: "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABwBACdASoQABgAPzmEuVOvKKWisAgB4CcJagAD5LH2+5f1CfW00BtMXuS+OAD+0DX/4GU2jmjQ3PcNDxlfKVcu99KOEw39yZ18Nrhxh8IEKjcjhEQRKq5AJMFynUnjUVzyxmPMRMDpX9LKF7nN8c0nzTd/NRgyD9u/qm+mIhM+xjVucK4LGi5AAAA=",
-      layout: "portrait",
+      src: "/media/projects/calle-documental/calle-documental-07.webp",
+      width: 2800,
+      height: 1867,
+      aspectRatio: "3:2",
+      blurDataURL: "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoYABAAPzmEuVOvKKWisAgB4CcJbAAATpFn4Mr9rvKz8UAA/qKqXs1qBmi2R//JFc7SW7ipO6RFJ58K6BWVAasyHEuSS7MM069UDEXc3j/INvUQCmuiCtyfhJ9TrTIiJPFamYqHLK5BCcCWgtLd4BGuwAA=",
+      layout: "wide",
       position: 3,
-      altKey: "calle-documental-04",
+      altKey: "calle-documental-07",
+      focalPoint: { x: 42, y: 62 },
     },
     {
       id: "calle-documental-08",
