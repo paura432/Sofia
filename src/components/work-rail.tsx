@@ -11,110 +11,76 @@ export type WorkRailStory = {
 };
 
 type WorkRailProps = {
-  audiovisualLabel: string;
-  archiveLabel: string;
-  backLabel: string;
-  indexLabel: string;
-  nextLabel: string;
-  photographyLabel: string;
-  reportingLabel: string;
-  prevLabel: string;
-  hasReporting: boolean;
-  hasAudiovisual: boolean;
-  hasPhotography: boolean;
-  stories: WorkRailStory[];
   workLabel: string;
+  sectionLabels: Record<ProjectSection, string>;
+  archiveSectionLabel: string;
+  nextLabel: string;
+  prevLabel: string;
+  stories: WorkRailStory[];
 };
 
+/**
+ * Barra de contexto para las páginas que cuelgan de Trabajo (detalle y
+ * archivo). El índice de Trabajo no la necesita: tiene su propia navegación
+ * por secciones.
+ */
 export function WorkRail({
-  audiovisualLabel,
-  archiveLabel,
-  backLabel,
-  indexLabel,
+  workLabel,
+  sectionLabels,
+  archiveSectionLabel,
   nextLabel,
-  photographyLabel,
-  reportingLabel,
-  hasReporting,
-  hasAudiovisual,
-  hasPhotography,
   prevLabel,
   stories,
-  workLabel,
 }: WorkRailProps) {
   const params = useParams<{ slug?: string }>();
   const pathname = usePathname();
   const slug = typeof params.slug === "string" ? params.slug : undefined;
+  const isArchive = pathname === "/work/photography/archive";
+
+  if (!slug && !isArchive) return null;
+
   const currentStory = slug ? stories.find((story) => story.slug === slug) : undefined;
+  const section: ProjectSection = currentStory?.section ?? "photography";
   const sectionStories = currentStory
     ? stories.filter((story) => story.section === currentStory.section)
     : [];
   const index = currentStory
     ? sectionStories.findIndex((story) => story.slug === currentStory.slug)
     : -1;
-  const prev = index > -1
+  const prev = index > -1 && sectionStories.length > 1
     ? sectionStories[(index - 1 + sectionStories.length) % sectionStories.length]
     : undefined;
-  const next = index > -1
+  const next = index > -1 && sectionStories.length > 1
     ? sectionStories[(index + 1) % sectionStories.length]
     : undefined;
-  const backHref = currentStory?.section
-    ? `/work/${currentStory.section}` as const
-    : "/work";
 
   return (
     <nav aria-label={workLabel} className="work-rail">
-      <div
-        className="work-rail-inner"
-        data-project={slug ? "true" : undefined}
-      >
-        {slug ? (
-          <Link className="work-rail-back" href={backHref}>
-            <span aria-hidden="true" className="work-rail-arrow">←</span>
-            {backLabel}
+      <div className="work-rail-inner">
+        <p className="work-rail-trail">
+          <Link href="/work">{workLabel}</Link>
+          <span aria-hidden="true">/</span>
+          <Link href={{ pathname: "/work", hash: section }}>
+            {isArchive ? archiveSectionLabel : sectionLabels[section]}
           </Link>
-        ) : (
-          <div className="work-rail-context">
-            <Link href="/work">{indexLabel}</Link>
-            {hasReporting ? (
-              <Link aria-current={pathname === "/work/reporting" ? "page" : undefined} href="/work/reporting">
-                {reportingLabel}
-              </Link>
-            ) : null}
-            {hasAudiovisual ? (
-              <Link aria-current={pathname === "/work/audiovisual" ? "page" : undefined} href="/work/audiovisual">
-                {audiovisualLabel}
-              </Link>
-            ) : null}
-            {hasPhotography ? (
-              <Link aria-current={pathname === "/work/photography" ? "page" : undefined} href="/work/photography">
-                {photographyLabel}
-              </Link>
-            ) : null}
-            {hasPhotography ? (
-              <Link aria-current={pathname === "/work/photography/archive" ? "page" : undefined} href="/work/photography/archive">
-                {archiveLabel}
-              </Link>
-            ) : null}
-          </div>
-        )}
+        </p>
 
-        {slug && prev && next ? (
+        {prev && next ? (
           <p className="work-rail-pager">
             <Link
               aria-label={prevLabel}
               href={{ pathname: "/work/[slug]", params: { slug: prev.slug } }}
             >
-              <span aria-hidden="true" className="work-rail-arrow">←</span>
+              <span aria-hidden="true">←</span>
             </Link>
-            <span>
-              {String(index + 1).padStart(2, "0")} /{" "}
-              {String(sectionStories.length).padStart(2, "0")}
+            <span className="work-rail-count">
+              {index + 1}/{sectionStories.length}
             </span>
             <Link
               aria-label={nextLabel}
               href={{ pathname: "/work/[slug]", params: { slug: next.slug } }}
             >
-              <span aria-hidden="true" className="work-rail-arrow">→</span>
+              <span aria-hidden="true">→</span>
             </Link>
           </p>
         ) : null}

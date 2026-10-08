@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
+import { CopyEmail } from "@/components/copy-email";
 import { Reveal } from "@/components/motion/reveal";
 import { siteConfig } from "@/content/profile";
 
@@ -17,7 +18,6 @@ export async function ContactBlock({
     getTranslations("Navigation"),
   ]);
   const Heading = page ? "h1" : "h2";
-  const headingClass = page ? "display-page" : "display-section";
 
   return (
     <section
@@ -31,35 +31,43 @@ export async function ContactBlock({
       aria-labelledby={page ? "contact-title" : "contact-heading"}
     >
       <Reveal className="container contact-grid">
-        <div>
-          <p className="eyebrow">
+        <div className="contact-heading">
+          <p className="on-air">
+            <span aria-hidden="true" className="rec-dot" />
             {page ? t("contactPageEyebrow") : t("eyebrow")}
           </p>
-          <Heading
-            className={headingClass}
-            id={page ? "contact-title" : "contact-heading"}
-          >
+          <Heading className="contact-title" id={page ? "contact-title" : "contact-heading"}>
             {page ? t("contactPageTitle") : t("title")}
           </Heading>
           {page ? <p className="contact-page-lead">{t("contactPageText")}</p> : null}
         </div>
         <div className="contact-copy">
           <a className="contact-email" href={`mailto:${siteConfig.email}`}>
-            {siteConfig.email} <span aria-hidden="true">↗</span>
+            {siteConfig.email}
           </a>
-          <p className="contact-meta">
-            {t("baseValue")}
-            <span aria-hidden="true"> · </span>
-            <a
-              href={siteConfig.linkedin}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              {t("linkedin")}
-              <span aria-hidden="true"> ↗</span>
-              <span className="sr-only">{navigation("opensInNewTab")}</span>
-            </a>
-          </p>
+          <CopyEmail copiedLabel={t("copied")} email={siteConfig.email} label={t("copy")} />
+          <dl className="contact-meta">
+            <div>
+              <dt>{t("linkedin")}</dt>
+              <dd>
+                <a href={siteConfig.linkedin} rel="noopener noreferrer" target="_blank">
+                  /in/sofia-chernikova
+                  <span aria-hidden="true"> ↗</span>
+                  <span className="sr-only">{navigation("opensInNewTab")}</span>
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt>{t("base")}</dt>
+              <dd>{t("baseValue")}</dd>
+            </div>
+            {page ? (
+              <div>
+                <dt>{t("languages")}</dt>
+                <dd>{t("languagesValue")}</dd>
+              </div>
+            ) : null}
+          </dl>
         </div>
       </Reveal>
     </section>

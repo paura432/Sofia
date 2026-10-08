@@ -44,6 +44,7 @@ export type ExperienceItem = {
   verification: "verified" | "pending";
 };
 
+// Orden: puesto en curso primero; después por fecha de fin y de inicio, descendente.
 export const experience: ExperienceItem[] = [
   {
     id: "grupo-cadena-media",
@@ -55,6 +56,20 @@ export const experience: ExperienceItem[] = [
       "scripts",
     ],
     featured: true,
+    source: "cv",
+    verification: "verified",
+  },
+  {
+    id: "annie-bonnie",
+    company: "Annie Bonnie",
+    responsibilityKeys: [
+      "writing",
+      "videoProduction",
+      "socialContent",
+      "events",
+      "stakeholders",
+      "calendar",
+    ],
     source: "cv",
     verification: "verified",
   },
@@ -79,20 +94,6 @@ export const experience: ExperienceItem[] = [
     verification: "verified",
   },
   {
-    id: "annie-bonnie",
-    company: "Annie Bonnie",
-    responsibilityKeys: [
-      "writing",
-      "videoProduction",
-      "socialContent",
-      "events",
-      "stakeholders",
-      "calendar",
-    ],
-    source: "cv",
-    verification: "verified",
-  },
-  {
     id: "isocero",
     company: "Isocero",
     responsibilityKeys: [
@@ -106,9 +107,3 @@ export const experience: ExperienceItem[] = [
     verification: "verified",
   },
 ];
-
-export const featuredWork = experience.map((item, index) => ({
-  ...item,
-  number: String(index + 1).padStart(2, "0"),
-  responsibilityKeys: item.responsibilityKeys.slice(0, 3),
-}));

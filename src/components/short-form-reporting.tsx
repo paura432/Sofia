@@ -9,6 +9,7 @@ import type { ProjectMedia } from "@/content/projects";
 export type ShortFormStory = {
   id: string;
   title: string;
+  description?: string;
   organisation?: string;
   role?: string;
   year?: string;
@@ -53,23 +54,7 @@ export function ShortFormReporting({
         className="short-form-reporting"
         data-count={projects.length}
         id={listId}
-        onKeyDown={(event) => {
-          if (
-            (event.key !== "ArrowLeft" && event.key !== "ArrowRight") ||
-            event.currentTarget.scrollWidth <= event.currentTarget.clientWidth
-          ) {
-            return;
-          }
-          event.preventDefault();
-          event.currentTarget.scrollBy({
-            left:
-              event.key === "ArrowRight"
-                ? event.currentTarget.clientWidth
-                : -event.currentTarget.clientWidth,
-          });
-        }}
-        role="region"
-        tabIndex={0}
+        role="group"
       >
         {visibleProjects.map((project) => (
           <article className="short-form-card" key={project.id}>
@@ -86,7 +71,7 @@ export function ShortFormReporting({
                   onDeactivate={deactivate}
                   playLabel={project.playLabel}
                   posterAlt={project.posterAlt}
-                  sizes="(max-width: 699px) 78vw, (max-width: 899px) 45vw, (max-width: 1199px) 30vw, 300px"
+                  sizes="(max-width: 999px) 34vw, 300px"
                   title={project.title}
                 />
               ) : (
@@ -101,7 +86,7 @@ export function ShortFormReporting({
                     <Image
                       alt={project.posterAlt}
                       fill
-                      sizes="(max-width: 699px) 78vw, (max-width: 899px) 45vw, (max-width: 1199px) 30vw, 300px"
+                      sizes="(max-width: 999px) 34vw, 300px"
                       src={project.posterSrc}
                     />
                   </a>
@@ -109,7 +94,7 @@ export function ShortFormReporting({
                   <Image
                     alt={project.posterAlt}
                     fill
-                    sizes="(max-width: 699px) 78vw, (max-width: 899px) 45vw, (max-width: 1199px) 30vw, 300px"
+                    sizes="(max-width: 999px) 34vw, 300px"
                     src={project.posterSrc}
                   />
                 )
@@ -124,7 +109,9 @@ export function ShortFormReporting({
                 </p>
               ) : null}
               <h3>{project.title}</h3>
-              {project.role ? <p className="short-form-role">{project.role}</p> : null}
+              {project.description ? (
+                <p className="short-form-description">{project.description}</p>
+              ) : null}
               {project.sourceUrl ? (
                 <a
                   aria-label={`${viewOriginalLabel}: ${project.title} ${opensInNewTabLabel}`}

@@ -32,7 +32,7 @@ export default async function PhotographyArchivePage() {
           <p className="eyebrow">{t("photographyEyebrow")}</p>
           <h1 className="display-page">{t("archiveTitle")}</h1>
           <p>{PHOTO_ARCHIVE_COUNT} {t("archiveCountLabel")}</p>
-          <Link className="work-back-link" href="/work/photography">← {t("backToPhotography")}</Link>
+          <Link className="work-back-link" href={{ pathname: "/work", hash: "photography" }}>← {t("backToPhotography")}</Link>
         </Reveal>
       </section>
       <PhotoArchive

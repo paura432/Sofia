@@ -1,29 +1,17 @@
 {
   "Metadata": {
     "siteTitle": "Sofía Chernikova — Periodista y Reportera TV",
-    "siteDescription": "Periodista y reportera de televisión en Madrid. Reportajes, entrevistas, fotografía y vídeo.",
+    "siteDescription": "Sofía Chernikova, periodista y reportera de televisión en Madrid. Reportajes ante la cámara, cortometrajes y fotografía.",
     "ogAlt": "Portfolio profesional de Sofía Chernikova",
     "personRole": "Periodista y Reportera TV",
     "pages": {
       "home": {
         "title": "Sofía Chernikova — Periodista y Reportera TV",
-        "description": "Periodista y reportera de televisión en Madrid. Reportajes, entrevistas, fotografía y vídeo."
+        "description": "Sofía Chernikova, periodista y reportera de televisión en Madrid. Reportajes ante la cámara, cortometrajes y fotografía."
       },
       "work": {
         "title": "Trabajo",
-        "description": "Trabajo de Sofía Chernikova: reporterismo de televisión, entrevistas, fotografía y comunicación digital."
-      },
-      "reporting": {
-        "title": "Reportajes e entrevistas",
-        "description": "Reportajes, entrevistas, coberturas y piezas breves de Sofía Chernikova."
-      },
-      "audiovisual": {
-        "title": "Trabajo audiovisual",
-        "description": "Cortometrajes y proyectos audiovisuales de Sofía Chernikova."
-      },
-      "photography": {
-        "title": "Fotografía",
-        "description": "Series y ensayos fotográficos de Sofía Chernikova."
+        "description": "Reportajes ante la cámara, cortometrajes, videoclip y series fotográficas de Sofía Chernikova."
       },
       "photoArchive": {
         "title": "Archivo fotográfico",
@@ -74,65 +62,48 @@
     }
   },
   "Hero": {
-    "dateline": "MADRID",
-    "role": "Periodista · Reportera de televisión",
-    "availability": "",
-    "location": "Madrid, España",
-    "headline": "",
-    "summary": "Reportajes, entrevistas y vídeo desde Madrid.",
+    "dateline": "Periodista · Madrid",
+    "role": "Reportera de televisión",
+    "summary": "Desde 2024 cubro estrenos, festivales y ruedas de prensa para Grupo Cadena Media, y entrevisto a artistas y figuras públicas. Detrás de la cámara, dirijo cortometrajes y fotografío conciertos, retratos y calle.",
     "actionsAria": "Acciones principales",
-    "viewWork": "Ver trabajo",
-    "contact": "Contacto"
+    "viewWork": "Ver todo el trabajo",
+    "contact": "Escríbeme",
+    "reelListLabel": "Piezas ante la cámara",
+    "nowShowing": "En pantalla",
+    "soundHint": "Con sonido · pulsa para ver"
   },
   "Home": {
-    "currentEyebrow": "Trayectoria",
-    "currentTitle": "Actual y reciente",
-    "practiceEyebrow": "Práctica",
-    "practiceTitle": "Tres áreas conectadas",
-    "practiceText": "Reporta, entrevista y cubre eventos; fotografía y edita; escribe y produce contenido digital.",
-    "aboutEyebrow": "Perfil",
-    "profileEyebrow": "Perfil",
-    "viewExperience": "Ver experiencia",
-    "moreAbout": "Leer más"
+    "pathEyebrow": "Trayectoria",
+    "pathTitle": "Dónde he trabajado",
+    "viewExperience": "Experiencia completa",
+    "moreAbout": "Perfil"
   },
   "Work": {
-    "pageEyebrow": "Portfolio",
     "pageTitle": "Trabajo",
-    "pageText": "",
-    "reportingPortfolioEyebrow": "",
-    "reportingPortfolioTitle": "REPORTING",
-    "reportingPortfolioText": "",
-    "reportingCoverageEyebrow": "REPORTING",
-    "reportingCoverageTitle": "Coberturas",
-    "reportingCoverageText": "",
-    "reportingMoreTitle": "Más coberturas",
-    "shortFormEyebrow": "",
-    "shortFormTitle": "FORMATO BREVE",
-    "shortFormText": "",
+    "pageText": "Reportajes ante la cámara, cine y vídeo detrás de ella, y fotografía. Todo en una página.",
+    "sectionsAria": "Secciones de Trabajo",
+    "reportingNav": "Reportajes",
+    "audiovisualNav": "Audiovisual",
+    "photographyNav": "Fotografía",
+    "archiveNav": "Archivo",
+    "reportingKicker": "Reportajes",
+    "reportingTitle": "Ante la cámara",
+    "reportingText": "Piezas verticales: una entrevista, un paseo a cámara, una guía y una prueba de producto. Se reproducen con sonido.",
+    "audiovisualKicker": "Audiovisual",
+    "audiovisualTitle": "Detrás de la cámara",
+    "audiovisualText": "Dos cortometrajes dirigidos, un videoclip rodado y postproducido y una pieza promocional.",
+    "photographyKicker": "Fotografía",
+    "photographyTitle": "Conciertos, calle y retrato",
+    "photographyText": "Cinco series y un archivo de 74 imágenes.",
+    "seriesCount": "{count, plural, one {# fotografía} other {# fotografías}}",
+    "archiveTeaser": "{count} fotografías, por temas",
     "shortFormShowMore": "Ver {count} piezas más",
     "shortFormShowLess": "Ver menos",
-    "viewReporting": "Ver todos los reportajes",
-    "viewAudiovisual": "Ver audiovisual",
-    "viewPhotography": "Ver fotografía",
-    "photographyPreviewLabel": "Series seleccionadas",
-    "explorePhotoArchive": "Explorar archivo fotográfico",
-    "archiveTeaserEyebrow": "Archivo fotográfico",
-    "archiveTeaserGroups": "Música · Retrato · Estudio · Calle",
+    "viewAudiovisual": "Todo el audiovisual",
+    "viewPhotography": "Toda la fotografía",
     "archiveCountLabel": "fotografías",
-    "backToWork": "Trabajo",
     "backToPhotography": "Fotografía",
-    "reportingEyebrow": "",
-    "reportingTitle": "Reporting",
-    "reportingText": "",
-    "audiovisualEyebrow": "",
-    "audiovisualTitle": "Audiovisual",
-    "audiovisualText": "",
-    "photographyEyebrow": "",
-    "photographyTitle": "Fotografía",
-    "photographyText": "",
-    "aria": "Trabajo seleccionado",
-    "fallbackAria": "Experiencia profesional seleccionada",
-    "viewExperience": "Ver trayectoria completa",
+    "photographyEyebrow": "Fotografía",
     "archiveTitle": "Archivo fotográfico",
     "archiveTotal": "74 imágenes",
     "archiveIndexAll": "Todas",
@@ -201,30 +172,127 @@
       "4-minutos": {
         "title": "4 MINUTOS",
         "description": "Cortometraje en blanco y negro sobre el encuentro entre dos jóvenes.",
-        "format": "Cortometraje · 03:59",
-        "roles": ["Dirección — Sofía Chernikova"],
-        "credits": {"direction": "Sofía Chernikova", "sound": "María Rodríguez", "cast": "Eneko Valle García · Fran Vidales Santos", "equipment": "Nikon D3300 · iPhone 13"}, "creditLabels": {"direction": "Dirección", "sound": "Sonido", "cast": "Reparto", "equipment": "Equipo"},
-        "media": {"4-minutos-poster": {"title": "4 MINUTOS", "alt": "Fotograma en blanco y negro de dos personajes en interacción"}}
+        "format": "Cortometraje",
+        "roles": [
+          "Dirección — Sofía Chernikova"
+        ],
+        "credits": {
+          "direction": "Sofía Chernikova",
+          "sound": "María Rodríguez",
+          "cast": "Eneko Valle García · Fran Vidales Santos",
+          "equipment": "Nikon D3300 · iPhone 13"
+        },
+        "creditLabels": {
+          "direction": "Dirección",
+          "sound": "Sonido",
+          "cast": "Reparto",
+          "equipment": "Equipo"
+        },
+        "media": {
+          "4-minutos-poster": {
+            "title": "4 MINUTOS",
+            "alt": "Fotograma en blanco y negro: dos jóvenes de noche bajo una farola"
+          }
+        }
       },
       "tras-el-sofa": {
         "title": "Tras el sofá",
         "description": "Cortometraje dramático ambientado en un interior doméstico.",
-        "format": "Cortometraje · 05:59",
-        "roles": ["Dirección — Sofía Chernikova", "Montaje — Sofía Chernikova"],
-        "credits": {"direction": "Sofía Chernikova", "editing": "Sofía Chernikova"}, "creditLabels": {"direction": "Dirección", "editing": "Montaje"},
-        "media": {"tras-el-sofa-poster": {"title": "Tras el sofá", "alt": "Primer plano de una protagonista en un interior doméstico"}}
+        "format": "Cortometraje",
+        "roles": [
+          "Dirección — Sofía Chernikova",
+          "Montaje — Sofía Chernikova"
+        ],
+        "credits": {
+          "direction": "Sofía Chernikova",
+          "editing": "Sofía Chernikova"
+        },
+        "creditLabels": {
+          "direction": "Dirección",
+          "editing": "Montaje"
+        },
+        "media": {
+          "tras-el-sofa-poster": {
+            "title": "Tras el sofá",
+            "alt": "Dos personas en un sofá verde azulado junto a un ramo de rosas rojas"
+          }
+        }
       },
       "version-beta": {
         "title": "VERSIÓN BETA",
         "description": "Pieza promocional con testimonios a cámara, acción y grafismos.",
-        "format": "Pieza promocional · 00:58",
-        "media": {"version-beta-poster": {"title": "VERSIÓN BETA", "alt": "Protagonista junto al título VERSIÓN BETA"}}
+        "format": "Pieza promocional",
+        "media": {
+          "version-beta-poster": {
+            "title": "VERSIÓN BETA",
+            "alt": "Una persona habla a cámara delante de una pared con grafitis"
+          }
+        }
       },
-      "short-form-001": {"title": "A cámara · exteriores", "description": "", "media": {"short-form-001-video": {"title": "A cámara · exteriores", "alt": "Sofía en una pieza vertical grabada en exteriores"}}},
-      "short-form-002": {"title": "Micrófono", "description": "", "media": {"short-form-002-video": {"title": "Micrófono", "alt": "Sofía con un micrófono en un espacio con otras personas"}}},
-      "short-form-003": {"title": "MyMUN", "description": "", "media": {"short-form-003-video": {"title": "MyMUN", "alt": "Sofía junto a pantallas y grafismos sobre MyMUN"}}},
-      "short-form-004": {"title": "Smartphone · exteriores", "description": "", "media": {"short-form-004-video": {"title": "Smartphone · exteriores", "alt": "Sofía presenta un smartphone a cámara en exteriores"}}},
-      "silver-praxis-condicion-perfecta": {"title": "Silver Praxis — Condición Perfecta", "description": "Videoclip de «Condición Perfecta», de Silver Praxis.", "format": "Videoclip", "roles": ["Rodaje y postproducción — Sofía Chernikova"], "credits": {"filming": "Sofía Chernikova", "creative": "Briza Sanchez", "production": "Silver Praxis"}, "creditLabels": {"filming": "Rodaje y postproducción", "creative": "Dirección creativa, estilismo y lettering", "production": "Producción, mezcla y master"}, "media": {"silver-praxis-condicion-perfecta-video": {"title": "Silver Praxis — Condición Perfecta", "alt": "Fotograma del videoclip con el artista en un interior iluminado en tonos rojos"}}},
+      "short-form-001": {
+        "title": "Madrid a pie, cámara al cuello",
+        "description": "Paseo hablado a cámara por el centro de Madrid, de Gran Vía en adelante.",
+        "media": {
+          "short-form-001-video": {
+            "title": "Madrid a pie, cámara al cuello",
+            "alt": "Sofía habla a cámara en una plaza soleada, con una cámara réflex colgada al cuello"
+          }
+        }
+      },
+      "short-form-002": {
+        "title": "En el decorado de «9-1-1»",
+        "description": "Entrevista micrófono en mano dentro de un decorado de la serie, en la estación de Chamartín.",
+        "media": {
+          "short-form-002-video": {
+            "title": "En el decorado de «9-1-1»",
+            "alt": "Sofía sonríe con un micrófono, sentada en un sofá naranja dentro de un decorado"
+          }
+        }
+      },
+      "short-form-003": {
+        "title": "MyMUN, paso a paso",
+        "description": "Cómo inscribirse en URJCmun 2026 a través de la plataforma MyMUN, explicado a cámara.",
+        "media": {
+          "short-form-003-video": {
+            "title": "MyMUN, paso a paso",
+            "alt": "Sofía sonríe a cámara delante de una pared de hiedra"
+          }
+        }
+      },
+      "short-form-004": {
+        "title": "Probando el vivo X300 Pro",
+        "description": "Primeras impresiones de un smartphone: cámara, pantalla y accesorios, con planos de detalle.",
+        "media": {
+          "short-form-004-video": {
+            "title": "Probando el vivo X300 Pro",
+            "alt": "Primer plano de Sofía hablando a cámara en una habitación clara"
+          }
+        }
+      },
+      "silver-praxis-condicion-perfecta": {
+        "title": "Silver Praxis — Condición Perfecta",
+        "description": "Videoclip de «Condición Perfecta», de Silver Praxis.",
+        "format": "Videoclip",
+        "roles": [
+          "Rodaje y postproducción — Sofía Chernikova"
+        ],
+        "credits": {
+          "filming": "Sofía Chernikova",
+          "creative": "Briza Sanchez",
+          "production": "Silver Praxis"
+        },
+        "creditLabels": {
+          "filming": "Rodaje y postproducción",
+          "creative": "Dirección creativa, estilismo y lettering",
+          "production": "Producción, mezcla y master"
+        },
+        "media": {
+          "silver-praxis-condicion-perfecta-video": {
+            "title": "Silver Praxis — Condición Perfecta",
+            "alt": "El artista junto a la puerta de un coche, de noche, iluminado en rosa y azul"
+          }
+        }
+      },
       "reporter-reel": {
         "title": "Reporter reel",
         "description": "Selección de coberturas, entrevistas y piezas de reporterismo.",
@@ -345,44 +413,120 @@
         "description": "Una plaza con tiendas de campaña, carteles hechos a mano, grupos reunidos y músicos con percusión.",
         "format": "Fotografía · Ensayo fotográfico",
         "media": {
-          "entre-tiendas-y-tambores-001": { "alt": "Vista diurna de varias tiendas bajo un toldo y una pancarta, con personas reunidas entre ellas." },
-          "entre-tiendas-y-tambores-002": { "alt": "Varias tiendas de campaña ocupan una plaza frente a edificios, con banderas sobre el conjunto." },
-          "entre-tiendas-y-tambores-003": { "alt": "Tiendas de campaña y una pancarta manuscrita bajo el cielo nublado." },
-          "entre-tiendas-y-tambores-004": { "alt": "Vista amplia de tiendas, carteles y personas reunidas bajo estructuras cubiertas." },
-          "entre-tiendas-y-tambores-005": { "alt": "Tiendas de colores frente a edificios de una plaza." },
-          "entre-tiendas-y-tambores-006": { "alt": "Sillas y utensilios dispuestos entre tiendas de campaña y toldos." },
-          "entre-tiendas-y-tambores-007": { "alt": "Cartel manuscrito colgado sobre varias tiendas de campaña." },
-          "entre-tiendas-y-tambores-008": { "alt": "Dos personas junto a una silla de ruedas entre tiendas bajo una pancarta." },
-          "entre-tiendas-y-tambores-009": { "alt": "Tienda roja con un cartel manuscrito delante." },
-          "entre-tiendas-y-tambores-010": { "alt": "Vista de una plaza cubierta por toldos y carteles." },
-          "entre-tiendas-y-tambores-011": { "alt": "Tiendas de campaña bajo un toldo iluminado al anochecer." },
-          "entre-tiendas-y-tambores-012": { "alt": "Grupo reunido en círculo en una calle, fotografiado en blanco y negro." },
-          "entre-tiendas-y-tambores-013": { "alt": "Personas bailan en círculo en una calle iluminada de noche." },
-          "entre-tiendas-y-tambores-014": { "alt": "Cartel escrito a mano sobre una tienda de campaña." },
-          "entre-tiendas-y-tambores-015": { "alt": "Tiendas y una pancarta larga bajo luces nocturnas." },
-          "entre-tiendas-y-tambores-016": { "alt": "Músicos con instrumentos de cuerda y percusión tocan ante un círculo de personas." },
-          "entre-tiendas-y-tambores-017": { "alt": "Persona sentada ante una tienda bajo una gran pancarta." },
-          "entre-tiendas-y-tambores-018": { "alt": "Grupo reunido alrededor de músicos, en blanco y negro." },
-          "entre-tiendas-y-tambores-019": { "alt": "Una persona salta en el centro de un grupo que observa." },
-          "entre-tiendas-y-tambores-020": { "alt": "Personas conversan bajo una gran pancarta, junto a tiendas." },
-          "entre-tiendas-y-tambores-021": { "alt": "Una persona recoge una tienda de campaña bajo lonas azules." },
-          "entre-tiendas-y-tambores-022": { "alt": "Varias personas levantan los brazos bajo luces azules." },
-          "entre-tiendas-y-tambores-023": { "alt": "Público reunido en una plaza iluminada, con las manos alzadas." },
-          "entre-tiendas-y-tambores-024": { "alt": "Grupo de personas levanta los brazos entre edificios de noche." },
-          "entre-tiendas-y-tambores-025": { "alt": "Personas sostienen una pancarta manuscrita entre el público." },
-          "entre-tiendas-y-tambores-026": { "alt": "Persona con la boca abierta y las manos juntas entre la multitud." },
-          "entre-tiendas-y-tambores-027": { "alt": "Varias personas alzan las manos durante una reunión nocturna." },
-          "entre-tiendas-y-tambores-028": { "alt": "Personas reunidas junto a una barrera mientras otras levantan las manos." },
-          "entre-tiendas-y-tambores-029": { "alt": "Grupo reunido frente a una estatua ecuestre en una plaza iluminada." },
-          "entre-tiendas-y-tambores-030": { "alt": "Detalle de instrumentos de metal y músicos tocando entre la multitud." },
-          "entre-tiendas-y-tambores-031": { "alt": "Percusionistas actúan en el centro de un corro de personas." },
-          "entre-tiendas-y-tambores-032": { "alt": "Multitud reunida de noche junto a varias tiendas y un letrero luminoso." },
-          "entre-tiendas-y-tambores-033": { "alt": "Multitud vista entre brazos levantados en una plaza iluminada." },
-          "entre-tiendas-y-tambores-034": { "alt": "Vista vertical de tiendas y multitud bajo un letrero en una azotea." },
-          "entre-tiendas-y-tambores-035": { "alt": "Vista vertical de una multitud reunida bajo toldos por la noche." },
-          "entre-tiendas-y-tambores-036": { "alt": "Percusionistas en círculo entre el público en una calle nocturna." },
-          "entre-tiendas-y-tambores-037": { "alt": "Percusionistas y personas reunidas, vistos desde un lateral." },
-          "entre-tiendas-y-tambores-038": { "alt": "Percusionistas y multitud en un corro, con edificios iluminados al fondo." }
+          "entre-tiendas-y-tambores-001": {
+            "alt": "Vista diurna de varias tiendas bajo un toldo y una pancarta, con personas reunidas entre ellas."
+          },
+          "entre-tiendas-y-tambores-002": {
+            "alt": "Varias tiendas de campaña ocupan una plaza frente a edificios, con banderas sobre el conjunto."
+          },
+          "entre-tiendas-y-tambores-003": {
+            "alt": "Tiendas de campaña y una pancarta manuscrita bajo el cielo nublado."
+          },
+          "entre-tiendas-y-tambores-004": {
+            "alt": "Vista amplia de tiendas, carteles y personas reunidas bajo estructuras cubiertas."
+          },
+          "entre-tiendas-y-tambores-005": {
+            "alt": "Personas con una cámara de vídeo graban entre las tiendas de campaña de la plaza."
+          },
+          "entre-tiendas-y-tambores-006": {
+            "alt": "Sillas y utensilios dispuestos entre tiendas de campaña y toldos."
+          },
+          "entre-tiendas-y-tambores-007": {
+            "alt": "Cartel manuscrito colgado sobre varias tiendas de campaña."
+          },
+          "entre-tiendas-y-tambores-008": {
+            "alt": "Dos personas junto a una silla de ruedas entre tiendas bajo una pancarta."
+          },
+          "entre-tiendas-y-tambores-009": {
+            "alt": "Tienda roja con un cartel manuscrito delante."
+          },
+          "entre-tiendas-y-tambores-010": {
+            "alt": "Vista de una plaza cubierta por toldos y carteles."
+          },
+          "entre-tiendas-y-tambores-011": {
+            "alt": "Tiendas de campaña bajo un toldo iluminado al anochecer."
+          },
+          "entre-tiendas-y-tambores-012": {
+            "alt": "Grupo reunido en círculo en una calle, fotografiado en blanco y negro."
+          },
+          "entre-tiendas-y-tambores-013": {
+            "alt": "Personas bailan en círculo en una calle iluminada de noche."
+          },
+          "entre-tiendas-y-tambores-014": {
+            "alt": "Cartel escrito a mano sobre una tienda de campaña."
+          },
+          "entre-tiendas-y-tambores-015": {
+            "alt": "Tiendas y una pancarta larga bajo luces nocturnas."
+          },
+          "entre-tiendas-y-tambores-016": {
+            "alt": "Músicos con instrumentos de cuerda y percusión tocan ante un círculo de personas."
+          },
+          "entre-tiendas-y-tambores-017": {
+            "alt": "Persona sentada ante una tienda bajo una gran pancarta."
+          },
+          "entre-tiendas-y-tambores-018": {
+            "alt": "Grupo reunido alrededor de músicos, en blanco y negro."
+          },
+          "entre-tiendas-y-tambores-019": {
+            "alt": "Una persona salta en el centro de un grupo que observa."
+          },
+          "entre-tiendas-y-tambores-020": {
+            "alt": "Personas conversan bajo una gran pancarta, junto a tiendas."
+          },
+          "entre-tiendas-y-tambores-021": {
+            "alt": "Una persona recoge una tienda de campaña bajo lonas azules."
+          },
+          "entre-tiendas-y-tambores-022": {
+            "alt": "Varias personas levantan los brazos bajo luces azules."
+          },
+          "entre-tiendas-y-tambores-023": {
+            "alt": "Público reunido en una plaza iluminada, con las manos alzadas."
+          },
+          "entre-tiendas-y-tambores-024": {
+            "alt": "Grupo de personas levanta los brazos entre edificios de noche."
+          },
+          "entre-tiendas-y-tambores-025": {
+            "alt": "Personas sostienen una pancarta manuscrita entre el público."
+          },
+          "entre-tiendas-y-tambores-026": {
+            "alt": "Persona con la boca abierta y las manos juntas entre la multitud."
+          },
+          "entre-tiendas-y-tambores-027": {
+            "alt": "Varias personas alzan las manos durante una reunión nocturna."
+          },
+          "entre-tiendas-y-tambores-028": {
+            "alt": "Personas reunidas junto a una barrera mientras otras levantan las manos."
+          },
+          "entre-tiendas-y-tambores-029": {
+            "alt": "Grupo reunido frente a una estatua ecuestre en una plaza iluminada."
+          },
+          "entre-tiendas-y-tambores-030": {
+            "alt": "Detalle de instrumentos de metal y músicos tocando entre la multitud."
+          },
+          "entre-tiendas-y-tambores-031": {
+            "alt": "Percusionistas actúan en el centro de un corro de personas."
+          },
+          "entre-tiendas-y-tambores-032": {
+            "alt": "Multitud reunida de noche junto a varias tiendas y un letrero luminoso."
+          },
+          "entre-tiendas-y-tambores-033": {
+            "alt": "Multitud vista entre brazos levantados en una plaza iluminada."
+          },
+          "entre-tiendas-y-tambores-034": {
+            "alt": "Vista vertical de tiendas y multitud bajo un letrero en una azotea."
+          },
+          "entre-tiendas-y-tambores-035": {
+            "alt": "Vista vertical de una multitud reunida bajo toldos por la noche."
+          },
+          "entre-tiendas-y-tambores-036": {
+            "alt": "Percusionistas en círculo entre el público en una calle nocturna."
+          },
+          "entre-tiendas-y-tambores-037": {
+            "alt": "Percusionistas tocan de frente, con los brazos en alto, en la plaza de noche."
+          },
+          "entre-tiendas-y-tambores-038": {
+            "alt": "Percusionistas y multitud en un corro, con edificios iluminados al fondo."
+          }
         }
       },
       "calle-documental": {
@@ -462,79 +606,35 @@
     }
   },
   "Profile": {
-    "statement": "Soy periodista y reportera de televisión. También he trabajado en fotografía y vídeo.",
-    "aboutPreview": "Soy periodista y reportera de televisión.",
-    "aboutContinuation": "",
-    "bio": "Trabajo como reportera de televisión en Grupo Cadena Media desde 2024. Cubro eventos y ruedas de prensa, entrevisto y escribo guiones y piezas informativas. También he trabajado en fotografía y comunicación digital.",
-    "aboutTrajectory": "",
-    "interests": "",
+    "bio": "Soy periodista y reportera de televisión. Trabajo en Grupo Cadena Media desde 2024: cubro estrenos, festivales y ruedas de prensa, entrevisto a artistas y figuras públicas y escribo guiones y piezas informativas.",
     "aboutPageEyebrow": "Perfil",
-    "aboutHeroTitle": "Reportera de televisión.",
     "portraitAlt": "Retrato de Sofía Chernikova",
-    "bioEyebrow": "Bio",
-    "bioTitle": "Sobre mí",
     "educationEyebrow": "Formación",
-    "educationTitle": "Educación",
     "languagesEyebrow": "Idiomas",
-    "languagesTitle": "Idiomas",
     "toolsEyebrow": "Herramientas",
-    "toolsTitle": "Herramientas y flujo de trabajo",
-    "experienceEyebrow": "Ahora",
-    "experienceTitle": "Actual y reciente",
-    "viewFullExperience": "Ver experiencia completa"
-  },
-  "CurrentPositions": {
-    "items": {
-      "grupo-cadena-media": {
-        "company": "Grupo Cadena Media",
-        "role": "Reportera TV",
-        "period": "2024 — Actualidad"
-      },
-      "urjcmun": {
-        "company": "URJCmun",
-        "role": "Deputy Director for Social Media",
-        "period": "2026"
-      }
-    }
-  },
-  "Practices": {
-    "items": [
+    "viewFullExperience": "Experiencia completa",
+    "bioMore": "Estudié Periodismo y Comunicación Audiovisual en la Universidad Rey Juan Carlos. Además de reportear, dirijo y monto cortometrajes, ruedo y posproduzco vídeo, y hago fotografía de conciertos, calle y retrato. Hablo español y ruso como lenguas nativas.",
+    "baseLabel": "Base",
+    "baseValue": "Madrid",
+    "practiceEyebrow": "Lo que hago",
+    "practices": [
       {
-        "number": "01",
-        "code": "REPORTING",
-        "title": "Televisión, entrevistas y cobertura",
-        "items": [
-          "Reporterismo",
-          "Entrevistas",
-          "Cobertura",
-          "Guion",
-          "Presentación ante cámara"
-        ],
-        "metadata": "REPORTING · INTERVIEWS · VIDEO"
+        "title": "Ante la cámara",
+        "text": "Reporterismo de eventos, entrevistas y guion para televisión.",
+        "link": "Ver reportajes",
+        "section": "reporting"
       },
       {
-        "number": "02",
-        "code": "VISUAL",
-        "title": "Fotografía y edición",
-        "items": [
-          "Fotografía",
-          "Vídeo",
-          "Edición"
-        ],
-        "metadata": "PHOTO · VIDEO · EDITING"
+        "title": "Detrás de la cámara",
+        "text": "Dirección y montaje de cortometrajes; rodaje y postproducción de un videoclip.",
+        "link": "Ver audiovisual",
+        "section": "audiovisual"
       },
       {
-        "number": "03",
-        "code": "COMMUNICATION",
-        "title": "Contenido y comunicación digital",
-        "items": [
-          "Social Media",
-          "Contenido",
-          "Estrategia",
-          "Copywriting",
-          "Coordinación"
-        ],
-        "metadata": "SOCIAL · CONTENT · STRATEGY"
+        "title": "Con la cámara de fotos",
+        "text": "Conciertos, calle, retrato y estudio.",
+        "link": "Ver fotografía",
+        "section": "photography"
       }
     ]
   },
@@ -658,10 +758,13 @@
     "baseValue": "Madrid",
     "contactPageEyebrow": "Contacto",
     "contactPageTitle": "¿Hablamos?",
-    "contactPageText": ""
+    "contactPageText": "Para propuestas de trabajo, colaboraciones o preguntas sobre cualquiera de estas piezas, escríbeme.",
+    "copy": "Copiar email",
+    "copied": "Copiado",
+    "languages": "Idiomas",
+    "languagesValue": "Español · Ruso · Inglés · Valenciano · Italiano"
   },
   "Footer": {
-    "cue": "¿Hablamos?",
     "location": "Madrid",
     "copyright": "© 2026 Sofía Chernikova"
   },
@@ -673,20 +776,10 @@
   },
   "WorkRail": {
     "label": "Trabajo",
-    "back": "Volver",
-    "index": "Índice",
-    "reporting": "Reporting",
+    "reporting": "Reportajes",
     "audiovisual": "Audiovisual",
     "photography": "Fotografía",
     "prev": "Proyecto anterior",
-    "next": "Proyecto siguiente",
-    "archive": "Archivo 74",
-    "musica-en-directo": "Música",
-    "calle-documental": "Calle",
-    "estudio-editorial": "Estudio",
-    "retrato-editorial": "Retrato"
-    ,"4-minutos": "4 MINUTOS"
-    ,"tras-el-sofa": "Tras el sofá"
-    ,"version-beta": "VERSIÓN BETA"
+    "next": "Proyecto siguiente"
   }
 }

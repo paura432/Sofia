@@ -102,7 +102,6 @@ export default async function ExperiencePage() {
                   ) : null}
                 </div>
                 <div>
-                  <p>{copy.summary}</p>
                   {item.progressionKeys && copy.progression ? (
                     <p
                       aria-label={t("progressionLabel")}

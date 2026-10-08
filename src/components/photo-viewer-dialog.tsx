@@ -37,6 +37,7 @@ export function PhotoViewerDialog({
   const scrollYRef = useRef(0);
   const onCloseRef = useRef(onClose);
   const titleId = useId();
+  const swipeRef = useRef<{ x: number; y: number; id: number } | null>(null);
   const active = activeIndex === null ? null : items[activeIndex];
 
   useEffect(() => {
@@ -127,8 +128,30 @@ export function PhotoViewerDialog({
           <figure
             className="photo-archive-viewer"
             onClick={(event) => event.stopPropagation()}
+            // Deslizar en horizontal cambia de foto; un segundo dedo (pellizco
+            // para ampliar) cancela el gesto y deja el zoom nativo intacto.
+            onPointerCancel={() => {
+              swipeRef.current = null;
+            }}
+            onPointerDown={(event) => {
+              if (event.pointerType === "mouse") return;
+              swipeRef.current = swipeRef.current
+                ? null
+                : { x: event.clientX, y: event.clientY, id: event.pointerId };
+            }}
+            onPointerUp={(event) => {
+              const start = swipeRef.current;
+              swipeRef.current = null;
+              if (!start || start.id !== event.pointerId) return;
+              const dx = event.clientX - start.x;
+              const dy = event.clientY - start.y;
+              if (Math.abs(dx) < 56 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+              if (dx < 0 && activeIndex < items.length - 1) onNavigate(activeIndex + 1);
+              if (dx > 0 && activeIndex > 0) onNavigate(activeIndex - 1);
+            }}
           >
             <Image
+              key={active.id}
               alt={active.label}
               height={active.height}
               sizes="100dvw"

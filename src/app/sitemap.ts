@@ -1,16 +1,13 @@
 import type { MetadataRoute } from "next";
 
 import { pendingVerification } from "@/content/pending-verification";
-import { getPublishedProjects, hasPublishedReporting } from "@/content/projects";
+import { getDetailedProjects } from "@/content/projects";
 import { locales, type PublicAppPathname } from "@/i18n/routing";
 import { localizedUrl, projectUrl } from "@/lib/metadata";
 
 const routes: PublicAppPathname[] = [
   "/",
   "/work",
-  ...(hasPublishedReporting() ? ["/work/reporting" as const] : []),
-  "/work/audiovisual",
-  "/work/photography",
   "/work/photography/archive",
   "/about",
   "/experience",
@@ -43,7 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  const projectEntries = getPublishedProjects().flatMap((project) =>
+  // Sólo proyectos con página propia: los reels viven dentro de Trabajo.
+  const projectEntries = getDetailedProjects().flatMap((project) =>
     locales.map((locale) => ({
       url: projectUrl(project.slug, locale),
       lastModified: new Date(),

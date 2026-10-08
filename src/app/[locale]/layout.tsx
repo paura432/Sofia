@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
-import { Geist, Newsreader } from "next/font/google";
+import { Literata, Onest } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 
@@ -17,14 +17,17 @@ import { pageMetadata, personJsonLd } from "@/lib/metadata";
 import "../globals.css";
 import "../../styles/media.css";
 import "../../styles/motion.css";
+import "../../styles/showcase.css";
 
-const sans = Geist({
+// Ambas familias incluyen cirílico. `subsets` sólo decide qué se precarga:
+// el cirílico se descarga bajo demanda (unicode-range) en la versión rusa.
+const sans = Onest({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const serif = Newsreader({
+const serif = Literata({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
@@ -57,7 +60,7 @@ export async function generateMetadata({
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0d0d0c",
+  themeColor: "#0e0d0c",
   colorScheme: "dark light",
 };
 

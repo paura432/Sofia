@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 
-import { AnimatedLine } from "@/components/motion/animated-line";
 import { siteConfig } from "@/content/profile";
 
 export async function SiteFooter() {
@@ -12,26 +11,17 @@ export async function SiteFooter() {
 
   return (
     <footer className="site-footer">
-      <div className="container">
-        <AnimatedLine tone="strong" />
-      </div>
       <div className="container site-footer-inner">
-        <div className="site-footer-primary">
-          <p className="site-footer-contact">
-            {t("location")}
-            <span aria-hidden="true"> · </span>
-            <a
-              href={siteConfig.linkedin}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              {contact("linkedin")}
-              <span aria-hidden="true"> ↗</span>
-              <span className="sr-only">{navigation("opensInNewTab")}</span>
-            </a>
-          </p>
-        </div>
         <p className="footer-copy">{t("copyright")}</p>
+        <p className="site-footer-contact">
+          <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+          <a href={siteConfig.linkedin} rel="noopener noreferrer" target="_blank">
+            {contact("linkedin")}
+            <span aria-hidden="true"> ↗</span>
+            <span className="sr-only">{navigation("opensInNewTab")}</span>
+          </a>
+          <span>{t("location")}</span>
+        </p>
       </div>
     </footer>
   );

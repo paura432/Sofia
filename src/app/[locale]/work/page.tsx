@@ -1,23 +1,18 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
+import { FilmIndex } from "@/components/film-index";
 import { Reveal } from "@/components/motion/reveal";
+import { SectionHeading } from "@/components/section-heading";
+import { SeriesGrid } from "@/components/series-grid";
+import { ShortFormReporting } from "@/components/short-form-reporting";
 import { PHOTO_ARCHIVE_COUNT } from "@/content/photo-archive-count";
-import {
-  getProjectsInSection,
-  type PortfolioProject,
-  type ProjectMedia,
-} from "@/content/projects";
-import { Link } from "@/i18n/navigation";
+import { getArchiveGroupPhotos } from "@/content/photo-archive-data";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
+import { getFilmEntries, getReelStories, getSeriesEntries } from "@/lib/showcase";
 
 type PageProps = { params: Promise<{ locale: string }> };
-type ProjectCopy = {
-  title: string;
-  media?: Record<string, { alt?: string }>;
-};
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -33,131 +28,114 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
-function representative(projects: PortfolioProject[], preferShortForm = false) {
-  return (preferShortForm
-    ? projects.find((project) => project.reportingFormat === "short-form")
-    : undefined) ?? projects.find((project) => project.featured) ?? projects[0];
-}
-
-function previewMedia(project?: PortfolioProject): ProjectMedia | undefined {
-  return project?.cover ?? project?.media?.[0];
-}
-
-function previewSrc(media?: ProjectMedia) {
-  return media?.type === "image" ? media.src : media?.type === "video" ? media.poster : undefined;
-}
-
+/**
+ * Trabajo = todo el portfolio en una página. Antes era un índice de
+ * disciplinas que obligaba a uno o dos clics más para ver cualquier pieza.
+ */
 export default async function WorkPage() {
-  const [t, projectsText] = await Promise.all([
+  const [t, projectsText, navigationText] = await Promise.all([
     getTranslations("Work"),
     getTranslations("Projects"),
+    getTranslations("Navigation"),
   ]);
-  const reporting = getProjectsInSection("reporting");
-  const audiovisual = getProjectsInSection("audiovisual");
-  const photography = getProjectsInSection("photography");
+  const reels = getReelStories(projectsText);
+  const films = getFilmEntries(projectsText);
+  const series = getSeriesEntries(projectsText, (count) => t("seriesCount", { count }));
+  const archiveCover = getArchiveGroupPhotos("calle")[0];
 
-  const entries = [
-    ...(reporting.length
-      ? [{
-          href: "/work/reporting" as const,
-          title: t("reportingPortfolioTitle"),
-          description: t("reportingPortfolioText"),
-          action: t("viewReporting"),
-          kicker: t("reportingPortfolioEyebrow"),
-          project: representative(reporting, true),
-          count: reporting.length,
-        }]
-      : []),
-    ...(audiovisual.length
-      ? [{
-          href: "/work/audiovisual" as const,
-          title: t("audiovisualTitle"),
-          description: t("audiovisualText"),
-          action: t("viewAudiovisual"),
-          kicker: t("audiovisualEyebrow"),
-          project: representative(audiovisual),
-          count: audiovisual.length,
-        }]
-      : []),
-    ...(photography.length
-      ? [{
-          href: "/work/photography" as const,
-          title: t("photographyTitle"),
-          description: t("photographyText"),
-          action: t("viewPhotography"),
-          kicker: t("photographyEyebrow"),
-          project: representative(photography),
-          count: photography.length,
-        }]
-      : []),
-    {
-      href: "/work/photography/archive" as const,
-      title: t("archiveTitle"),
-      description: t("archiveTeaserGroups"),
-      action: t("explorePhotoArchive"),
-      kicker: t("archiveTeaserEyebrow"),
-      project: representative(photography),
-      count: PHOTO_ARCHIVE_COUNT,
-    },
-  ];
+  const sections = [
+    { id: "reporting", label: t("reportingNav"), count: reels.length },
+    { id: "audiovisual", label: t("audiovisualNav"), count: films.length },
+    { id: "photography", label: t("photographyNav"), count: series.length },
+  ].filter((section) => section.count > 0);
 
   return (
-    <main id="main" className="work-index-page">
-      <section className="page-hero section section-first work-page-hero">
-        <Reveal className="container page-hero-inner work-index-heading">
-          <p className="eyebrow">{t("pageEyebrow")}</p>
+    <main id="main" className="work-page">
+      <section className="page-hero section-first">
+        <Reveal className="container page-hero-inner">
           <h1 className="display-page">{t("pageTitle")}</h1>
-          {t("pageText") ? <p>{t("pageText")}</p> : null}
+          <p className="page-lede">{t("pageText")}</p>
         </Reveal>
+        <nav aria-label={t("sectionsAria")} className="section-nav">
+          <div className="container">
+            <ul>
+              {sections.map((section) => (
+                <li key={section.id}>
+                  <a href={`#${section.id}`}>
+                    {section.label}
+                    <span className="section-nav-count">{section.count}</span>
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a href="#archive">
+                  {t("archiveNav")}
+                  <span className="section-nav-count">{PHOTO_ARCHIVE_COUNT}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </section>
 
-      <section aria-label={t("pageTitle")} className="section work-disciplines">
-        <div className="container">
-          <ol className="discipline-index">
-            {entries.map((entry, index) => {
-              const project = entry.project;
-              const media = previewMedia(project);
-              const src = previewSrc(media);
-              const copy = project
-                ? projectsText.raw(`items.${project.translationKey}`) as ProjectCopy
-                : undefined;
-              return (
-                <li className="discipline-index-row" key={entry.href}>
-                  <Link className="discipline-index-link" href={entry.href}>
-                    <span className="discipline-index-number" aria-hidden="true">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <div className="discipline-index-copy">
-                      {entry.kicker ? <p className="eyebrow">{entry.kicker}</p> : null}
-                      <h2>{entry.title}</h2>
-                      {entry.description ? <p>{entry.description}</p> : null}
-                      <span className="discipline-index-action">
-                        {entry.action} <span aria-hidden="true">↗</span>
-                      </span>
-                    </div>
-                    <p className="discipline-index-count">
-                      {String(entry.count).padStart(2, "0")}
-                    </p>
-                    {src ? (
-                      <div
-                        className="discipline-index-media"
-                        style={{ aspectRatio: media?.aspectRatio?.replace(":", " / ") ?? "16 / 9" }}
-                      >
-                        <Image
-                          alt={copy?.media?.[media?.id ?? ""]?.alt ?? copy?.title ?? entry.title}
-                          fill
-                          sizes="(max-width: 699px) 92vw, 48vw"
-                          src={src}
-                        />
-                      </div>
-                    ) : null}
-                  </Link>
-                </li>
-              );
-            })}
-          </ol>
-        </div>
-      </section>
+      {reels.length ? (
+        <section aria-labelledby="work-reporting" className="section work-section" id="reporting">
+          <div className="container">
+            <SectionHeading
+              eyebrow={t("reportingKicker")}
+              id="work-reporting"
+              text={t("reportingText")}
+              title={t("reportingTitle")}
+            />
+            <ShortFormReporting
+              label={t("reportingTitle")}
+              opensInNewTabLabel={navigationText("opensInNewTab")}
+              projects={reels}
+              showLessLabel={t("shortFormShowLess")}
+              showMoreLabel={t("shortFormShowMore", { count: "{count}" })}
+              viewOriginalLabel={projectsText("viewOriginal")}
+            />
+          </div>
+        </section>
+      ) : null}
+
+      {films.length ? (
+        <section aria-labelledby="work-audiovisual" className="section work-section" id="audiovisual">
+          <div className="container">
+            <SectionHeading
+              eyebrow={t("audiovisualKicker")}
+              id="work-audiovisual"
+              text={t("audiovisualText")}
+              title={t("audiovisualTitle")}
+            />
+            <FilmIndex films={films} viewLabel={projectsText("viewProject")} />
+          </div>
+        </section>
+      ) : null}
+
+      {series.length ? (
+        <section aria-labelledby="work-photography" className="section work-section" id="photography">
+          <div className="container">
+            <SectionHeading
+              eyebrow={t("photographyKicker")}
+              id="work-photography"
+              text={t("photographyText")}
+              title={t("photographyTitle")}
+            />
+            <div id="archive">
+              <SeriesGrid
+                archive={archiveCover ? {
+                  href: "/work/photography/archive",
+                  title: t("archiveTitle"),
+                  countLabel: t("archiveTeaser", { count: PHOTO_ARCHIVE_COUNT }),
+                  src: archiveCover.src,
+                } : undefined}
+                series={series}
+              />
+            </div>
+          </div>
+        </section>
+      ) : null}
     </main>
   );
 }

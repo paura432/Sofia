@@ -21,21 +21,6 @@ export const localizedPathnames: Record<
     en: "/en/work",
     ru: "/ru/rabota",
   },
-  "/work/reporting": {
-    es: "/trabajo/reportajes",
-    en: "/en/work/reporting",
-    ru: "/ru/rabota/reportazhi",
-  },
-  "/work/audiovisual": {
-    es: "/trabajo/audiovisual",
-    en: "/en/work/audiovisual",
-    ru: "/ru/rabota/audiovizualnoe",
-  },
-  "/work/photography": {
-    es: "/trabajo/fotografia",
-    en: "/en/work/photography",
-    ru: "/ru/rabota/fotografiya",
-  },
   "/work/photography/archive": {
     es: "/trabajo/fotografia/archivo",
     en: "/en/work/photography/archive",
