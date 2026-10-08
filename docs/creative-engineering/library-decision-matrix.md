@@ -1,0 +1,30 @@
+# Library decision matrix — Creative Engineering 3.0
+
+Fecha: 2026-10-08 · Stack verificado en `package.json`/lockfile: Next 16.3.3 (Turbopack), React 19.2.8, next-intl 4.13.7, motion 13.1.0, @mux/mux-player-react ^3.13.3, sharp 0.35.3.
+
+Fuentes: registro npm y bundlephobia (consultados 2026-10-08), documentación oficial (motion.dev, gsap.com/standard-license, photoswipe.com, radix-ui.com, mux.com/docs, nextjs.org) y el código de los repositorios de `repository-benchmark.md`. Los tamaños son min+gzip del paquete completo según bundlephobia (no del árbol final). **Resultado: 0 dependencias nuevas.**
+
+| LIBRARY | PROBLEM SOLVED | ALTERNATIVES | VISUAL VALUE | PERFORMANCE COST | ACCESSIBILITY | MAINTENANCE | COMPATIBILITY | LICENSE | DECISION |
+|---|---|---|---|---|---|---|---|---|---|
+| **React `<ViewTransition>`** (React canary incluido en Next) | Continuidad miniatura → detalle (portada que "persiste" al navegar) | Motion `layoutId`, GSAP Flip, nada | Alto: es la transición que pedía el brief (Experiencia B) | 0 KB añadidos; usa la View Transitions API del navegador | Sin soporte → navegación normal; reduced motion → duración 0 en CSS | Parte de React/Next | Next 16.3.3 exporta `ViewTransition` en su React vendorizado (**VERIFICADO** en `next/dist/compiled/react`); no existe flag `experimental.viewTransition` en esta versión (**VERIFICADO**); tipos vía `react/canary` | MIT | **INSTALL (sin instalar: API nativa)** |
+| **motion** 13.1.0 | Menú móvil y barra de progreso (`m` + `LazyMotion domAnimation`) | CSS puro | Medio (menú) | ~4,6 KB inicial + 15 KB `domAnimation` bajo demanda (motion.dev) | `MotionConfig reducedMotion` disponible | Activo (14.0.0 publicado 2026-10-02) | React ^18 ‖ ^19 | MIT | **KEEP EXISTING** — no se amplía: `layoutId` necesitaría `domMax` (+25 KB) y no sobrevive al desmontaje de ruta del App Router. Recomendación futura: ≥13.4.6 por arreglos de `AnimatePresence`. |
+| **@mux/mux-player-react** | Reproducción HLS propia (reels 9:16 y obras 16:9) | `<video>` + hls.js, YouTube/Vimeo | Alto | 314 KB gzip, pero **sólo tras clic** (`next/dynamic` + montaje condicionado) | Controles accesibles nativos del player | 3.14.0 (2026-10-05) | React ^17‖^18‖^19 | MIT | **KEEP EXISTING** + cambio de uso: `autoPlay="any"` (intenta con sonido y sólo cae a silencio si el navegador lo bloquea; doc de Mux). |
+| **GSAP** 3.15 + @gsap/react | Timelines y ScrollTrigger | Motion, CSS, View Transitions | Bajo para este caso: no hay storytelling con scroll que lo necesite | 27,4 KB gzip | Hay que gestionar reduced motion a mano | Activo | Sin peer deps | Licencia propietaria "Standard no-charge" de Webflow (gratuita para uso comercial, revocable, prohíbe usarla en constructores visuales competidores) | **REJECT** — no aporta nada que CSS + View Transitions no cubran; añadir una segunda librería de animación rompería la regla de responsabilidades únicas. |
+| **Lenis** 1.3.26 | Smooth scroll | Scroll nativo + `scroll-behavior` | Bajo; el contenido es foto/vídeo, no una narrativa de scroll | 5,5 KB gzip + rAF permanente | Respeta reduced motion por defecto, pero **bloquea anclas por defecto** (`anchors:true`) y no admite `scroll-snap` nativo | Activo | React opcional | MIT | **REJECT** — Trabajo depende de anclas (`#reporting`, redirecciones 308 a fragmentos) y del scroll nativo; tope de 60 fps en Safari documentado. |
+| **PhotoSwipe** 5.4.4 | Lightbox con zoom/gestos | Visor `<dialog>` propio, yet-another-react-lightbox | Medio | 17 KB gzip (cargable bajo demanda) | Foco atrapado/restaurado, teclado; sin opción de reduced motion | Última versión 2024-05 | Vanilla | MIT | **REJECT** — el visor propio ya pasa teclado, Escape, foco y restauración (**VERIFICADO** en QA de navegador); se le añadió swipe táctil y fundido. Mantener dos lightboxes estaría prohibido por el brief. Alternativa a vigilar: yet-another-react-lightbox (MIT, React 19, etiquetas traducibles) si se pide zoom dentro del visor. |
+| **Embla Carousel** 8.6.0 | Carrusel táctil | Rejilla CSS, scroll-snap nativo | Bajo | 7,3 KB gzip | Sin soporte de teclado documentado en v8 (plugin a11y sólo en v9 RC) | v9 en RC | React ^19 | MIT | **REJECT** — el carrusel horizontal de reels se sustituyó por una rejilla 2×2 en móvil y el "monitor" del hero: no queda ningún carrusel que necesite librería. |
+| **@radix-ui/react-dialog** 1.2.0 | Diálogo accesible | `<dialog>` nativo | — | 13,1 KB gzip | Excelente | Activo | React ^19 | MIT | **REJECT** — `<dialog>` nativo ya cumple; evitar dos implementaciones de diálogo. |
+| **@react-three/fiber** 9.8.1 + three | WebGL | Fotografía y vídeo reales | Decorativo | 57 KB + 185 KB gzip | Requiere alternativa estática | Activo | React ≥19 <19.4 | MIT | **REJECT** — una portada fotográfica es más importante que un objeto 3D; coste móvil injustificable. |
+| **shadcn/ui · Magic UI** | Componentes prefabricados | Componentes propios | Negativo para la identidad | Variable | shadcn: etiquetas en inglés codificadas (benchmark) | Activo | — | MIT | **REJECT** — estética genérica y textos no localizados. |
+
+## Justificación de la única adopción (`<ViewTransition>`)
+
+1. **Problema real**: al abrir una serie o una obra, la portada desaparecía y aparecía otra página sin relación visual.
+2. **Experiencia nueva**: la portada de Trabajo/Home se transforma en el hero del detalle (morph de 440 ms con desenfoque de 3 px en la mitad); el header queda fijo como ancla espacial.
+3. **Por qué no bastaba lo existente**: Motion sólo animaba el menú; `layoutId` no persiste entre rutas del App Router.
+4. **Mejor que alternativas**: 0 KB, declarativo, degradación nativa sin soporte.
+5. **Dónde**: `SeriesGrid` y `FilmIndex` (Home y Trabajo) → hero de `/[locale]/work/[slug]` (componente `MorphFrame`).
+6. **Bundle**: sin cambio.
+7. **Carga**: integrada en la navegación de `<Link>`.
+8. **Reduced motion**: `motion.css` pone duración 0 a todos los pseudo-elementos `::view-transition-*`.
+9. **Revertir**: eliminar `MorphFrame` (2 envoltorios) y el bloque de `motion.css`; nada más depende de ello.
