@@ -79,7 +79,7 @@ export default async function Image({ params }: ImageProps) {
               fontFamily: "Arial, sans-serif",
             }}
           >
-            {hero.role} · {hero.location}
+            {hero.role}
           </div>
         </div>
       </div>

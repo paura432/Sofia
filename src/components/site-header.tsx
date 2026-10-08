@@ -17,7 +17,7 @@ export async function SiteHeader() {
   };
 
   return (
-    <header className="site-header">
+    <header className="site-header" style={{ viewTransitionName: "site-header" }}>
       <a className="skip-link" href="#main">
         {t("skip")}
       </a>

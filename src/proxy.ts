@@ -6,11 +6,24 @@ import { routing } from "./i18n/routing";
 
 const handleI18nRouting = createMiddleware(routing);
 
+// Las antiguas páginas por disciplina viven ahora como secciones de Trabajo.
 const legacyRedirects = new Map([
   ["/work", "/trabajo"],
   ["/about", "/sobre-mi"],
   ["/experience", "/experiencia"],
   ["/contact", "/contacto"],
+  ["/trabajo/reportajes", "/trabajo#reporting"],
+  ["/trabajo/audiovisual", "/trabajo#audiovisual"],
+  ["/trabajo/fotografia", "/trabajo#photography"],
+  ["/es/trabajo/reportajes", "/trabajo#reporting"],
+  ["/es/trabajo/audiovisual", "/trabajo#audiovisual"],
+  ["/es/trabajo/fotografia", "/trabajo#photography"],
+  ["/en/work/reporting", "/en/work#reporting"],
+  ["/en/work/audiovisual", "/en/work#audiovisual"],
+  ["/en/work/photography", "/en/work#photography"],
+  ["/ru/rabota/reportazhi", "/ru/rabota#reporting"],
+  ["/ru/rabota/audiovizualnoe", "/ru/rabota#audiovisual"],
+  ["/ru/rabota/fotografiya", "/ru/rabota#photography"],
 ]);
 
 export default function proxy(request: NextRequest) {
@@ -49,8 +62,10 @@ export default function proxy(request: NextRequest) {
   const redirectTarget = legacyRedirects.get(request.nextUrl.pathname);
 
   if (redirectTarget) {
+    const [pathname, hash] = redirectTarget.split("#");
     const url = request.nextUrl.clone();
-    url.pathname = redirectTarget;
+    url.pathname = pathname;
+    url.hash = hash ? `#${hash}` : "";
     return NextResponse.redirect(url, 308);
   }
 

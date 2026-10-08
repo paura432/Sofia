@@ -1,79 +1,60 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 import { HeroEntrance } from "@/components/hero-entrance";
-import { MotionLink } from "@/components/motion/motion-link";
-import { portrait } from "@/content/profile";
-import { focalPointStyle, type ProjectMedia } from "@/content/projects";
+import { ReelStage } from "@/components/reel-stage";
+import type { ShortFormStory } from "@/components/short-form-reporting";
+import { siteConfig } from "@/content/profile";
+import { Link } from "@/i18n/navigation";
 
 type HeroProps = {
-  videoPreview?: { media: ProjectMedia; title: string; alt: string };
+  reels: ShortFormStory[];
 };
 
-export async function Hero({ videoPreview }: HeroProps = {}) {
-  const [t, profile] = await Promise.all([
-    getTranslations("Hero"),
-    getTranslations("Profile"),
-  ]);
+/**
+ * Primer viewport: quién es (nombre + oficio) y una prueba inmediata de su
+ * trabajo ante cámara. El retrato posado vive en Perfil; aquí manda la pieza.
+ */
+export async function Hero({ reels }: HeroProps) {
+  const t = await getTranslations("Hero");
 
   return (
-    <section className="hero section section-first" aria-labelledby="hero-title">
-      <div className="container hero-grid">
-        <div className="hero-copy">
-          <HeroEntrance
-            as="h1"
-            className="display-hero hero-name"
-            delay={70}
-            id="hero-title"
-          >
-            <span className="hero-name-line">Sofía</span>
-            <span className="hero-name-line">Chernikova</span>
+    <section className="hero" aria-labelledby="hero-title">
+      <div className="container hero-layout">
+        <div className="hero-intro">
+          <HeroEntrance as="p" className="on-air" delay={0}>
+            <span aria-hidden="true" className="rec-dot" />
+            {t("dateline")}
           </HeroEntrance>
-          <HeroEntrance as="p" className="hero-headline" delay={130}>
+          <HeroEntrance as="h1" className="hero-name" delay={60} id="hero-title">
+            <span>Sofía</span> <span>Chernikova</span>
+          </HeroEntrance>
+          <HeroEntrance as="p" className="hero-role" delay={120}>
             {t("role")}
           </HeroEntrance>
-        </div>
-        {videoPreview ? (
-          <HeroEntrance as="figure" className="hero-portrait hero-portrait-reel" delay={130}>
-            <div
-              className="portfolio-video"
-              style={{ aspectRatio: videoPreview.media.aspectRatio?.replace(":", " / ") ?? "9 / 16" }}
-            >
-              <Image
-                alt={videoPreview.alt || videoPreview.title}
-                fill
-                preload
-                sizes="(max-width: 699px) 92vw, 430px"
-                src={videoPreview.media.poster ?? ""}
-              />
-            </div>
-          </HeroEntrance>
-        ) : portrait ? (
-          <HeroEntrance as="figure" className="hero-portrait" delay={130}>
-            <Image
-              alt={profile(portrait.altKey)}
-              height={portrait.height}
-              preload
-              sizes="(max-width: 699px) 92vw, (max-width: 979px) 52vw, 40vw"
-              src={portrait.src}
-              style={{ objectPosition: focalPointStyle(portrait) }}
-              width={portrait.width}
-            />
-          </HeroEntrance>
-        ) : null}
-        <div className="hero-support">
-          <HeroEntrance as="p" className="hero-summary" delay={190}>
+          <HeroEntrance as="p" className="hero-lede" delay={180}>
             {t("summary")}
           </HeroEntrance>
-          <HeroEntrance
-            aria-label={t("actionsAria")}
-            className="hero-actions"
-            delay={250}
-          >
-            <MotionLink href="/work">{t("viewWork")}</MotionLink>
-            <MotionLink href="/contact">{t("contact")}</MotionLink>
+          <HeroEntrance aria-label={t("actionsAria")} className="hero-actions" delay={240}>
+            <Link className="button-link primary" href="/work">
+              {t("viewWork")} <span aria-hidden="true">→</span>
+            </Link>
+            <a className="button-link" href={`mailto:${siteConfig.email}`}>
+              {t("contact")}
+            </a>
           </HeroEntrance>
         </div>
+
+        {reels.length ? (
+          // Sin fundido: el póster es el elemento LCP y debe pintarse en cuanto llega.
+          <div className="hero-stage">
+            <ReelStage
+              listLabel={t("reelListLabel")}
+              nowShowingLabel={t("nowShowing")}
+              soundHint={t("soundHint")}
+              stories={reels}
+            />
+          </div>
+        ) : null}
       </div>
     </section>
   );

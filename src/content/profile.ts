@@ -6,17 +6,6 @@ export const siteConfig = {
   cvPath: "/cv/sofia-chernikova.pdf",
 };
 
-export const currentPositionIds = [
-  "grupo-cadena-media",
-  "urjcmun",
-] as const;
-
-/** About resume solo lo más reciente. La trayectoria completa vive en /experience. */
-export const aboutExperienceIds = [
-  "grupo-cadena-media",
-  "urjcmun",
-] as const;
-
 /** Retrato editorial. Sin `src` no se renderiza nada en About. */
 export type ProfilePortrait = {
   src: string;

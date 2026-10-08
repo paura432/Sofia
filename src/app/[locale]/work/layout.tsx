@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 import { WorkRail } from "@/components/work-rail";
-import { getDetailedProjects, getProjectSection, getProjectsInSection, hasPublishedReporting } from "@/content/projects";
+import { getDetailedProjects, getProjectSection } from "@/content/projects";
 
 export default async function WorkLayout({
   children,
@@ -13,24 +13,18 @@ export default async function WorkLayout({
     slug: project.slug,
     section: getProjectSection(project),
   }));
-  const hasAudiovisual = getProjectsInSection("audiovisual").length > 0;
-  const hasPhotography = getProjectsInSection("photography").length > 0;
-  const hasReporting = hasPublishedReporting();
 
   return (
     <>
       <WorkRail
-        audiovisualLabel={rail("audiovisual")}
-        archiveLabel={rail("archive")}
-        backLabel={rail("back")}
-        indexLabel={rail("index")}
+        archiveSectionLabel={rail("photography")}
         nextLabel={rail("next")}
-        photographyLabel={rail("photography")}
-        reportingLabel={rail("reporting")}
-        hasReporting={hasReporting}
-        hasAudiovisual={hasAudiovisual}
-        hasPhotography={hasPhotography}
         prevLabel={rail("prev")}
+        sectionLabels={{
+          reporting: rail("reporting"),
+          audiovisual: rail("audiovisual"),
+          photography: rail("photography"),
+        }}
         stories={stories}
         workLabel={rail("label")}
       />

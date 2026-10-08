@@ -1,29 +1,17 @@
 {
   "Metadata": {
     "siteTitle": "Sofía Chernikova — журналист и телерепортёр",
-    "siteDescription": "Журналистка и телерепортёр в Мадриде. Репортажи, интервью, фотография и видео.",
+    "siteDescription": "София Черникова — журналист и телерепортёр из Мадрида. Репортажи в кадре, короткометражные фильмы и фотография.",
     "ogAlt": "Профессиональное портфолио Sofía Chernikova",
     "personRole": "Журналист и телерепортёр",
     "pages": {
       "home": {
         "title": "Sofía Chernikova — журналист и телерепортёр",
-        "description": "Журналистка и телерепортёр в Мадриде. Репортажи, интервью, фотография и видео."
+        "description": "София Черникова — журналист и телерепортёр из Мадрида. Репортажи в кадре, короткометражные фильмы и фотография."
       },
       "work": {
         "title": "Работы",
-        "description": "Работы Sofía Chernikova: телерепортаж, интервью, фотография и цифровая коммуникация."
-      },
-      "reporting": {
-        "title": "Репортажи и интервью",
-        "description": "Репортажи, интервью, освещение событий и короткие журналистские материалы Sofía Chernikova."
-      },
-      "audiovisual": {
-        "title": "Аудиовизуальные работы",
-        "description": "Короткометражные фильмы и аудиовизуальные проекты Sofía Chernikova."
-      },
-      "photography": {
-        "title": "Фотография",
-        "description": "Фотосерии и фотоэссе Sofía Chernikova."
+        "description": "Репортажи в кадре, короткометражные фильмы, музыкальный клип и фотосерии Софии Черниковой."
       },
       "photoArchive": {
         "title": "Фотоархив",
@@ -74,65 +62,26 @@
     }
   },
   "Hero": {
-    "dateline": "МАДРИД",
-    "role": "Журналист · телерепортёр",
-    "availability": "",
-    "location": "Мадрид, Испания",
-    "headline": "",
-    "summary": "Телерепортажи, интервью и видео из Мадрида.",
+    "dateline": "Журналист · Мадрид",
+    "role": "Телерепортёр",
+    "summary": "С 2024 года я снимаю премьеры, фестивали и пресс-конференции для Grupo Cadena Media и беру интервью у артистов и публичных людей. По другую сторону камеры — снимаю короткометражные фильмы и фотографирую концерты, портреты и улицу.",
     "actionsAria": "Основные действия",
-    "viewWork": "Смотреть работы",
-    "contact": "Контакты"
+    "viewWork": "Все работы",
+    "contact": "Написать мне",
+    "reelListLabel": "Работы в кадре",
+    "nowShowing": "На экране",
+    "soundHint": "Со звуком · нажмите"
   },
   "Home": {
-    "currentEyebrow": "Путь",
-    "currentTitle": "Сейчас и недавно",
-    "practiceEyebrow": "Практика",
-    "practiceTitle": "Три связанные области",
-    "practiceText": "Репортаж, интервью и освещение событий; фотография и монтаж; тексты и цифровой контент.",
-    "aboutEyebrow": "Профиль",
-    "profileEyebrow": "Профиль",
-    "viewExperience": "Смотреть опыт",
-    "moreAbout": "Читать дальше"
+    "pathEyebrow": "Опыт",
+    "pathTitle": "Где я работала",
+    "viewExperience": "Весь опыт",
+    "moreAbout": "Профиль"
   },
   "Work": {
-    "pageEyebrow": "Портфолио",
-    "pageTitle": "Работы",
-    "pageText": "",
-    "reportingPortfolioEyebrow": "",
-    "reportingPortfolioTitle": "Репортажи",
-    "reportingPortfolioText": "",
-    "reportingCoverageEyebrow": "Репортажи",
-    "reportingCoverageTitle": "Репортажи",
-    "reportingCoverageText": "",
-    "reportingMoreTitle": "Другие репортажи",
-    "shortFormEyebrow": "",
-    "shortFormTitle": "КОРОТКИЙ ФОРМАТ",
-    "shortFormText": "",
-    "shortFormShowMore": "Показать ещё {count}",
-    "shortFormShowLess": "Свернуть",
-    "viewReporting": "Все репортажи",
-    "viewAudiovisual": "Аудиовизуальные работы",
-    "viewPhotography": "Фотография",
-    "photographyPreviewLabel": "Избранные серии",
-    "explorePhotoArchive": "Открыть фотоархив",
     "archiveTeaserEyebrow": "Фотоархив",
     "archiveTeaserGroups": "Музыка · Портрет · Студия · Улица",
     "archiveCountLabel": "фотографий",
-    "backToWork": "Работы",
-    "backToPhotography": "Фотография",
-    "reportingEyebrow": "",
-    "reportingTitle": "Репортажи",
-    "reportingText": "",
-    "audiovisualEyebrow": "",
-    "audiovisualTitle": "Аудиовизуальные работы",
-    "audiovisualText": "",
-    "photographyEyebrow": "",
-    "photographyTitle": "Фотография",
-    "photographyText": "",
-    "aria": "Избранные работы",
-    "fallbackAria": "Избранный профессиональный опыт",
-    "viewExperience": "Смотреть полный опыт",
     "archiveTitle": "Фотоархив",
     "archiveTotal": "74 изображения",
     "archiveIndexAll": "Все",
@@ -147,7 +96,31 @@
     "archiveClose": "Закрыть",
     "archiveImageLabel": "{group}, изображение {index}",
     "archivePrev": "Назад",
-    "archiveNext": "Далее"
+    "archiveNext": "Далее",
+    "pageTitle": "Работы",
+    "pageText": "Сначала — в кадре. Потом — то, что я снимаю на видео и фото.",
+    "sectionsAria": "Разделы работ",
+    "reportingNav": "Репортажи",
+    "audiovisualNav": "Кино и видео",
+    "photographyNav": "Фотография",
+    "archiveNav": "Архив",
+    "reportingKicker": "Репортажи",
+    "reportingTitle": "В кадре",
+    "reportingText": "Интервью, прогулка с камерой, инструкция и тест устройства — в вертикальном формате. Лучше со звуком.",
+    "audiovisualKicker": "Кино и видео",
+    "audiovisualTitle": "За кадром",
+    "audiovisualText": "Короткометражные фильмы, которые я сняла и смонтировала, и клип, который я сняла и обработала.",
+    "photographyKicker": "Фотография",
+    "photographyTitle": "Концерты, улица и портрет",
+    "photographyText": "Полные серии и архив из 74 фотографий, которые стоит смотреть не спеша.",
+    "seriesCount": "{count, plural, one {# фотография} few {# фотографии} many {# фотографий} other {# фотографии}}",
+    "archiveTeaser": "{count} фотографии по темам",
+    "shortFormShowMore": "Ещё {count}",
+    "shortFormShowLess": "Свернуть",
+    "viewAudiovisual": "Всё кино и видео",
+    "viewPhotography": "Вся фотография",
+    "backToPhotography": "Фотография",
+    "photographyEyebrow": "Фотография"
   },
   "Projects": {
     "featuredEyebrow": "Главное",
@@ -193,19 +166,135 @@
       "reporting": "Репортаж",
       "interview": "Интервью",
       "video": "Видео",
-      "audiovisual": "Кино и аудиовизуал",
+      "audiovisual": "Кино и видео",
       "photography": "Фотография",
       "communication": "Коммуникация"
     },
     "items": {
-      "4-minutos": {"title": "4 MINUTOS", "description": "Чёрно-белый короткометражный фильм о встрече двух молодых людей.", "format": "Короткометражный фильм · 03:59", "roles": ["Режиссура — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "sound": "María Rodríguez", "cast": "Eneko Valle García · Fran Vidales Santos", "equipment": "Nikon D3300 · iPhone 13"}, "creditLabels": {"direction": "Режиссура", "sound": "Звук", "cast": "Актёры", "equipment": "Оборудование"}, "media": {"4-minutos-poster": {"title": "4 MINUTOS", "alt": "Чёрно-белый кадр взаимодействия двух персонажей"}}},
-      "tras-el-sofa": {"title": "Tras el sofá", "description": "Драматический короткометражный фильм, действие которого происходит в домашнем интерьере.", "format": "Короткометражный фильм · 05:59", "roles": ["Режиссура — Sofía Chernikova", "Монтаж — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "editing": "Sofía Chernikova"}, "creditLabels": {"direction": "Режиссура", "editing": "Монтаж"}, "media": {"tras-el-sofa-poster": {"title": "Tras el sofá", "alt": "Крупный план героини в домашнем интерьере"}}},
-      "version-beta": {"title": "VERSIÓN BETA", "description": "Проморолик с обращениями в кадре, действием и графикой.", "format": "Проморолик · 00:58", "media": {"version-beta-poster": {"title": "VERSIÓN BETA", "alt": "Главный герой рядом с надписью VERSIÓN BETA"}}},
-      "short-form-001": {"title": "На камеру · улица", "description": "", "media": {"short-form-001-video": {"title": "На камеру · улица", "alt": "София в вертикальном ролике, снятом на улице"}}},
-      "short-form-002": {"title": "Микрофон", "description": "", "media": {"short-form-002-video": {"title": "Микрофон", "alt": "София с микрофоном в пространстве с другими людьми"}}},
-      "short-form-003": {"title": "MyMUN", "description": "", "media": {"short-form-003-video": {"title": "MyMUN", "alt": "София рядом с экранами и графикой MyMUN"}}},
-      "short-form-004": {"title": "Смартфон · улица", "description": "", "media": {"short-form-004-video": {"title": "Смартфон · улица", "alt": "София представляет смартфон на камеру на улице"}}},
-      "silver-praxis-condicion-perfecta": {"title": "Silver Praxis — Condición Perfecta", "description": "Клип на песню «Condición Perfecta» группы Silver Praxis.", "format": "Музыкальный клип", "roles": ["Съёмка и постпродакшн — Sofía Chernikova"], "credits": {"filming": "Sofía Chernikova", "creative": "Briza Sanchez", "production": "Silver Praxis"}, "creditLabels": {"filming": "Съёмка и постпродакшн", "creative": "Креативная режиссура, стайлинг и леттеринг", "production": "Продакшн, сведение и мастеринг"}, "media": {"silver-praxis-condicion-perfecta-video": {"title": "Silver Praxis — Condición Perfecta", "alt": "Кадр из клипа: артист в интерьере с красным освещением"}}},
+      "4-minutos": {
+        "title": "4 MINUTOS",
+        "description": "Чёрно-белый короткометражный фильм о встрече двух молодых людей.",
+        "format": "Короткометражный фильм",
+        "roles": [
+          "Режиссура — Sofía Chernikova"
+        ],
+        "credits": {
+          "direction": "Sofía Chernikova",
+          "sound": "María Rodríguez",
+          "cast": "Eneko Valle García · Fran Vidales Santos",
+          "equipment": "Nikon D3300 · iPhone 13"
+        },
+        "creditLabels": {
+          "direction": "Режиссура",
+          "sound": "Звук",
+          "cast": "Актёры",
+          "equipment": "Оборудование"
+        },
+        "media": {
+          "4-minutos-poster": {
+            "title": "4 MINUTOS",
+            "alt": "Чёрно-белый кадр: двое молодых людей ночью под фонарём"
+          }
+        }
+      },
+      "tras-el-sofa": {
+        "title": "Tras el sofá",
+        "description": "Драматический короткометражный фильм, действие которого происходит в домашнем интерьере.",
+        "format": "Короткометражный фильм",
+        "roles": [
+          "Режиссура — Sofía Chernikova",
+          "Монтаж — Sofía Chernikova"
+        ],
+        "credits": {
+          "direction": "Sofía Chernikova",
+          "editing": "Sofía Chernikova"
+        },
+        "creditLabels": {
+          "direction": "Режиссура",
+          "editing": "Монтаж"
+        },
+        "media": {
+          "tras-el-sofa-poster": {
+            "title": "Tras el sofá",
+            "alt": "Два человека на бирюзовом диване рядом с букетом красных роз"
+          }
+        }
+      },
+      "version-beta": {
+        "title": "VERSIÓN BETA",
+        "description": "Проморолик с обращениями в кадре, действием и графикой.",
+        "format": "Проморолик",
+        "media": {
+          "version-beta-poster": {
+            "title": "VERSIÓN BETA",
+            "alt": "Человек говорит на камеру на фоне стены с граффити"
+          }
+        }
+      },
+      "short-form-001": {
+        "title": "Мадрид пешком, с камерой на шее",
+        "description": "Прогулка с рассказом на камеру по центру Мадрида, начиная с Гран-Виа.",
+        "media": {
+          "short-form-001-video": {
+            "title": "Мадрид пешком, с камерой на шее",
+            "alt": "София говорит на камеру на солнечной площади, на шее у неё зеркальная камера"
+          }
+        }
+      },
+      "short-form-002": {
+        "title": "На съёмочной площадке «9‑1‑1»",
+        "description": "Интервью с микрофоном в руке в декорациях сериала на вокзале Чамартин.",
+        "media": {
+          "short-form-002-video": {
+            "title": "На съёмочной площадке «9‑1‑1»",
+            "alt": "София улыбается с микрофоном, сидя на оранжевом диване в декорациях"
+          }
+        }
+      },
+      "short-form-003": {
+        "title": "MyMUN шаг за шагом",
+        "description": "Как зарегистрироваться на URJCmun 2026 через платформу MyMUN — объяснение на камеру.",
+        "media": {
+          "short-form-003-video": {
+            "title": "MyMUN шаг за шагом",
+            "alt": "София улыбается в камеру на фоне стены, увитой плющом"
+          }
+        }
+      },
+      "short-form-004": {
+        "title": "Тестируем vivo X300 Pro",
+        "description": "Первые впечатления о смартфоне: камера, экран и аксессуары, с крупными планами.",
+        "media": {
+          "short-form-004-video": {
+            "title": "Тестируем vivo X300 Pro",
+            "alt": "Крупный план: София говорит на камеру в светлой комнате"
+          }
+        }
+      },
+      "silver-praxis-condicion-perfecta": {
+        "title": "Silver Praxis — Condición Perfecta",
+        "description": "Клип на песню «Condición Perfecta» группы Silver Praxis.",
+        "format": "Музыкальный клип",
+        "roles": [
+          "Съёмка и постпродакшн — Sofía Chernikova"
+        ],
+        "credits": {
+          "filming": "Sofía Chernikova",
+          "creative": "Briza Sanchez",
+          "production": "Silver Praxis"
+        },
+        "creditLabels": {
+          "filming": "Съёмка и постпродакшн",
+          "creative": "Креативная режиссура, стайлинг и леттеринг",
+          "production": "Продакшн, сведение и мастеринг"
+        },
+        "media": {
+          "silver-praxis-condicion-perfecta-video": {
+            "title": "Silver Praxis — Condición Perfecta",
+            "alt": "Артист у двери машины ночью в розово-голубом свете"
+          }
+        }
+      },
       "reporter-reel": {
         "title": "Репортёрский рил",
         "description": "Подборка сюжетов, интервью и репортажей.",
@@ -326,44 +415,120 @@
         "description": "Площадь с палатками, рукописными плакатами, собравшимися людьми и музыкантами с ударными инструментами.",
         "format": "Фотография · Фотоэссе",
         "media": {
-          "entre-tiendas-y-tambores-001": { "alt": "Дневной вид палаток под навесом и баннером; между ними собрались люди." },
-          "entre-tiendas-y-tambores-002": { "alt": "Палатки занимают площадь перед зданиями, над ними развеваются флаги." },
-          "entre-tiendas-y-tambores-003": { "alt": "Палатки и рукописный баннер под пасмурным небом." },
-          "entre-tiendas-y-tambores-004": { "alt": "Общий вид палаток, плакатов и людей под навесами." },
-          "entre-tiendas-y-tambores-005": { "alt": "Разноцветные палатки перед зданиями на площади." },
-          "entre-tiendas-y-tambores-006": { "alt": "Стулья и вещи среди палаток и навесов." },
-          "entre-tiendas-y-tambores-007": { "alt": "Рукописный плакат висит над несколькими палатками." },
-          "entre-tiendas-y-tambores-008": { "alt": "Два человека рядом с инвалидной коляской среди палаток под баннером." },
-          "entre-tiendas-y-tambores-009": { "alt": "Красная палатка с рукописной табличкой перед ней." },
-          "entre-tiendas-y-tambores-010": { "alt": "Вид площади, покрытой навесами и плакатами." },
-          "entre-tiendas-y-tambores-011": { "alt": "Палатки под навесом, освещённым в сумерках." },
-          "entre-tiendas-y-tambores-012": { "alt": "Группа людей собралась в кругу на улице; чёрно-белый снимок." },
-          "entre-tiendas-y-tambores-013": { "alt": "Люди танцуют в кругу на ночной улице." },
-          "entre-tiendas-y-tambores-014": { "alt": "Рукописная табличка на палатке." },
-          "entre-tiendas-y-tambores-015": { "alt": "Палатки и длинный баннер под ночными огнями." },
-          "entre-tiendas-y-tambores-016": { "alt": "Музыканты играют на струнных и ударных инструментах перед кругом людей." },
-          "entre-tiendas-y-tambores-017": { "alt": "Человек сидит перед палаткой под большим баннером." },
-          "entre-tiendas-y-tambores-018": { "alt": "Люди собрались вокруг музыкантов; чёрно-белый снимок." },
-          "entre-tiendas-y-tambores-019": { "alt": "Человек прыгает в центре круга наблюдающих людей." },
-          "entre-tiendas-y-tambores-020": { "alt": "Люди беседуют под большим баннером рядом с палатками." },
-          "entre-tiendas-y-tambores-021": { "alt": "Человек собирает палатку под синими тентами." },
-          "entre-tiendas-y-tambores-022": { "alt": "Несколько человек поднимают руки под синим светом." },
-          "entre-tiendas-y-tambores-023": { "alt": "Толпа собралась на освещённой площади; люди подняли руки." },
-          "entre-tiendas-y-tambores-024": { "alt": "Группа людей поднимает руки между зданиями ночью." },
-          "entre-tiendas-y-tambores-025": { "alt": "Люди держат рукописный плакат среди толпы." },
-          "entre-tiendas-y-tambores-026": { "alt": "Человек с открытым ртом и сложенными руками среди толпы." },
-          "entre-tiendas-y-tambores-027": { "alt": "Несколько человек поднимают руки во время ночного собрания." },
-          "entre-tiendas-y-tambores-028": { "alt": "Люди собрались у ограждения, другие поднимают руки." },
-          "entre-tiendas-y-tambores-029": { "alt": "Люди собрались перед конной статуей на освещённой площади." },
-          "entre-tiendas-y-tambores-030": { "alt": "Крупный план медных духовых инструментов и музыкантов среди толпы." },
-          "entre-tiendas-y-tambores-031": { "alt": "Ударники выступают в центре круга людей." },
-          "entre-tiendas-y-tambores-032": { "alt": "Ночная толпа собралась рядом с палатками и освещённой вывеской на крыше." },
-          "entre-tiendas-y-tambores-033": { "alt": "Толпа на освещённой площади видна сквозь поднятые руки." },
-          "entre-tiendas-y-tambores-034": { "alt": "Вертикальный вид палаток и толпы под вывеской на крыше." },
-          "entre-tiendas-y-tambores-035": { "alt": "Вертикальный вид толпы под навесами ночью." },
-          "entre-tiendas-y-tambores-036": { "alt": "Ударники в кругу людей на ночной улице." },
-          "entre-tiendas-y-tambores-037": { "alt": "Ударники и собравшиеся люди, вид сбоку." },
-          "entre-tiendas-y-tambores-038": { "alt": "Ударники и толпа в кругу; на заднем плане освещённые здания." }
+          "entre-tiendas-y-tambores-001": {
+            "alt": "Дневной вид палаток под навесом и баннером; между ними собрались люди."
+          },
+          "entre-tiendas-y-tambores-002": {
+            "alt": "Палатки занимают площадь перед зданиями, над ними развеваются флаги."
+          },
+          "entre-tiendas-y-tambores-003": {
+            "alt": "Палатки и рукописный баннер под пасмурным небом."
+          },
+          "entre-tiendas-y-tambores-004": {
+            "alt": "Общий вид палаток, плакатов и людей под навесами."
+          },
+          "entre-tiendas-y-tambores-005": {
+            "alt": "Люди с видеокамерой снимают среди палаток на площади."
+          },
+          "entre-tiendas-y-tambores-006": {
+            "alt": "Стулья и вещи среди палаток и навесов."
+          },
+          "entre-tiendas-y-tambores-007": {
+            "alt": "Рукописный плакат висит над несколькими палатками."
+          },
+          "entre-tiendas-y-tambores-008": {
+            "alt": "Два человека рядом с инвалидной коляской среди палаток под баннером."
+          },
+          "entre-tiendas-y-tambores-009": {
+            "alt": "Красная палатка с рукописной табличкой перед ней."
+          },
+          "entre-tiendas-y-tambores-010": {
+            "alt": "Вид площади, покрытой навесами и плакатами."
+          },
+          "entre-tiendas-y-tambores-011": {
+            "alt": "Палатки под навесом, освещённым в сумерках."
+          },
+          "entre-tiendas-y-tambores-012": {
+            "alt": "Группа людей собралась в кругу на улице; чёрно-белый снимок."
+          },
+          "entre-tiendas-y-tambores-013": {
+            "alt": "Люди танцуют в кругу на ночной улице."
+          },
+          "entre-tiendas-y-tambores-014": {
+            "alt": "Рукописная табличка на палатке."
+          },
+          "entre-tiendas-y-tambores-015": {
+            "alt": "Палатки и длинный баннер под ночными огнями."
+          },
+          "entre-tiendas-y-tambores-016": {
+            "alt": "Музыканты играют на струнных и ударных инструментах перед кругом людей."
+          },
+          "entre-tiendas-y-tambores-017": {
+            "alt": "Человек сидит перед палаткой под большим баннером."
+          },
+          "entre-tiendas-y-tambores-018": {
+            "alt": "Люди собрались вокруг музыкантов; чёрно-белый снимок."
+          },
+          "entre-tiendas-y-tambores-019": {
+            "alt": "Человек прыгает в центре круга наблюдающих людей."
+          },
+          "entre-tiendas-y-tambores-020": {
+            "alt": "Люди беседуют под большим баннером рядом с палатками."
+          },
+          "entre-tiendas-y-tambores-021": {
+            "alt": "Человек собирает палатку под синими тентами."
+          },
+          "entre-tiendas-y-tambores-022": {
+            "alt": "Несколько человек поднимают руки под синим светом."
+          },
+          "entre-tiendas-y-tambores-023": {
+            "alt": "Толпа собралась на освещённой площади; люди подняли руки."
+          },
+          "entre-tiendas-y-tambores-024": {
+            "alt": "Группа людей поднимает руки между зданиями ночью."
+          },
+          "entre-tiendas-y-tambores-025": {
+            "alt": "Люди держат рукописный плакат среди толпы."
+          },
+          "entre-tiendas-y-tambores-026": {
+            "alt": "Человек с открытым ртом и сложенными руками среди толпы."
+          },
+          "entre-tiendas-y-tambores-027": {
+            "alt": "Несколько человек поднимают руки во время ночного собрания."
+          },
+          "entre-tiendas-y-tambores-028": {
+            "alt": "Люди собрались у ограждения, другие поднимают руки."
+          },
+          "entre-tiendas-y-tambores-029": {
+            "alt": "Люди собрались перед конной статуей на освещённой площади."
+          },
+          "entre-tiendas-y-tambores-030": {
+            "alt": "Крупный план медных духовых инструментов и музыкантов среди толпы."
+          },
+          "entre-tiendas-y-tambores-031": {
+            "alt": "Ударники выступают в центре круга людей."
+          },
+          "entre-tiendas-y-tambores-032": {
+            "alt": "Ночная толпа собралась рядом с палатками и освещённой вывеской на крыше."
+          },
+          "entre-tiendas-y-tambores-033": {
+            "alt": "Толпа на освещённой площади видна сквозь поднятые руки."
+          },
+          "entre-tiendas-y-tambores-034": {
+            "alt": "Вертикальный вид палаток и толпы под вывеской на крыше."
+          },
+          "entre-tiendas-y-tambores-035": {
+            "alt": "Вертикальный вид толпы под навесами ночью."
+          },
+          "entre-tiendas-y-tambores-036": {
+            "alt": "Ударники в кругу людей на ночной улице."
+          },
+          "entre-tiendas-y-tambores-037": {
+            "alt": "Барабанщики играют лицом к камере, подняв руки, на ночной площади."
+          },
+          "entre-tiendas-y-tambores-038": {
+            "alt": "Ударники и толпа в кругу; на заднем плане освещённые здания."
+          }
         }
       },
       "calle-documental": {
@@ -443,79 +608,35 @@
     }
   },
   "Profile": {
-    "statement": "Я журналистка и телерепортёр. Также работала в фотографии и видеопроизводстве.",
-    "aboutPreview": "Я журналист и телерепортёр.",
-    "aboutContinuation": "",
-    "bio": "С 2024 года я работаю телерепортёром в Grupo Cadena Media. Освещаю события и пресс-конференции, беру интервью, пишу сценарии и информационные сюжеты. Также работала в фотографии и цифровых коммуникациях.",
-    "aboutTrajectory": "",
-    "interests": "",
+    "bio": "Я журналист и телерепортёр. С 2024 года работаю в Grupo Cadena Media: снимаю премьеры, фестивали и пресс-конференции, беру интервью у артистов и публичных людей, пишу сценарии и новостные материалы.",
     "aboutPageEyebrow": "Профиль",
-    "aboutHeroTitle": "Телерепортёр.",
     "portraitAlt": "Портрет Sofía Chernikova",
-    "bioEyebrow": "Био",
-    "bioTitle": "Обо мне",
     "educationEyebrow": "Образование",
-    "educationTitle": "Образование",
     "languagesEyebrow": "Языки",
-    "languagesTitle": "Языки",
     "toolsEyebrow": "Инструменты",
-    "toolsTitle": "Инструменты",
-    "experienceEyebrow": "Сейчас",
-    "experienceTitle": "Сейчас и недавно",
-    "viewFullExperience": "Смотреть полный опыт"
-  },
-  "CurrentPositions": {
-    "items": {
-      "grupo-cadena-media": {
-        "company": "Grupo Cadena Media",
-        "role": "Телерепортёр",
-        "period": "2024 — настоящее время"
-      },
-      "urjcmun": {
-        "company": "URJCmun",
-        "role": "Deputy Director for Social Media",
-        "period": "2026"
-      }
-    }
-  },
-  "Practices": {
-    "items": [
+    "viewFullExperience": "Весь опыт",
+    "bioMore": "Я окончила факультет журналистики и аудиовизуальных коммуникаций Университета короля Хуана Карлоса. Помимо репортажей, я снимаю и монтирую короткометражные фильмы, снимаю и обрабатываю видео, фотографирую концерты, улицу и портреты. Испанский и русский — мои родные языки.",
+    "baseLabel": "Город",
+    "baseValue": "Мадрид",
+    "practiceEyebrow": "Чем я занимаюсь",
+    "practices": [
       {
-        "number": "01",
-        "code": "REPORTING",
-        "title": "Телевидение, интервью и репортаж",
-        "items": [
-          "Репортаж",
-          "Интервью",
-          "Освещение",
-          "Сценарий",
-          "Работа в кадре"
-        ],
-        "metadata": "REPORTING · INTERVIEWS · VIDEO"
+        "title": "В кадре",
+        "text": "Репортажи с событий, интервью и сценарии для телевидения.",
+        "link": "Смотреть репортажи",
+        "section": "reporting"
       },
       {
-        "number": "02",
-        "code": "VISUAL",
-        "title": "Фотография и монтаж",
-        "items": [
-          "Фотография",
-          "Видео",
-          "Монтаж"
-        ],
-        "metadata": "PHOTO · VIDEO · EDITING"
+        "title": "За кадром",
+        "text": "Режиссура и монтаж короткометражных фильмов; съёмка и постпродакшн музыкального клипа.",
+        "link": "Смотреть кино и видео",
+        "section": "audiovisual"
       },
       {
-        "number": "03",
-        "code": "COMMUNICATION",
-        "title": "Контент и цифровая коммуникация",
-        "items": [
-          "Социальные сети",
-          "Контент",
-          "Стратегия",
-          "Копирайтинг",
-          "Координация"
-        ],
-        "metadata": "SOCIAL · CONTENT · STRATEGY"
+        "title": "С фотокамерой",
+        "text": "Концерты, улица, портрет и студия.",
+        "link": "Смотреть фотографию",
+        "section": "photography"
       }
     ]
   },
@@ -639,10 +760,13 @@
     "baseValue": "Мадрид",
     "contactPageEyebrow": "Контакты",
     "contactPageTitle": "Поговорим?",
-    "contactPageText": ""
+    "contactPageText": "С предложениями о работе, сотрудничестве или вопросами о любой из этих работ — пишите.",
+    "copy": "Скопировать email",
+    "copied": "Скопировано",
+    "languages": "Языки",
+    "languagesValue": "Испанский · Русский · Английский · Валенсийский · Итальянский"
   },
   "Footer": {
-    "cue": "Поговорим?",
     "location": "Мадрид",
     "copyright": "© 2026 Sofía Chernikova"
   },
@@ -654,20 +778,10 @@
   },
   "WorkRail": {
     "label": "Работы",
-    "back": "Назад",
-    "index": "Индекс",
     "reporting": "Репортажи",
-    "audiovisual": "Аудиовизуальное",
+    "audiovisual": "Кино и видео",
     "photography": "Фотография",
     "prev": "Предыдущий проект",
-    "next": "Следующий проект",
-    "archive": "Архив 74",
-    "musica-en-directo": "Музыка",
-    "calle-documental": "Улица",
-    "estudio-editorial": "Студия",
-    "retrato-editorial": "Портрет"
-    ,"4-minutos": "4 MINUTOS"
-    ,"tras-el-sofa": "Tras el sofá"
-    ,"version-beta": "VERSIÓN BETA"
+    "next": "Следующий проект"
   }
 }

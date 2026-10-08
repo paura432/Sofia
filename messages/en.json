@@ -1,29 +1,17 @@
 {
   "Metadata": {
     "siteTitle": "Sofía Chernikova — Journalist & TV Reporter",
-    "siteDescription": "Madrid-based journalist and TV reporter. Television reports, interviews, photography and video.",
+    "siteDescription": "Sofía Chernikova, journalist and TV reporter based in Madrid. On-camera reporting, short films and photography.",
     "ogAlt": "Professional portfolio of Sofía Chernikova",
     "personRole": "Journalist and TV Reporter",
     "pages": {
       "home": {
         "title": "Sofía Chernikova — Journalist & TV Reporter",
-        "description": "Madrid-based journalist and TV reporter. Television reports, interviews, photography and video."
+        "description": "Sofía Chernikova, journalist and TV reporter based in Madrid. On-camera reporting, short films and photography."
       },
       "work": {
         "title": "Work",
-        "description": "Sofía Chernikova's work: television reporting, interviews, photography and digital communications."
-      },
-      "reporting": {
-        "title": "Reporting & Interviews",
-        "description": "Reporting, interviews, coverage and short-form journalism by Sofía Chernikova."
-      },
-      "audiovisual": {
-        "title": "Audiovisual Work",
-        "description": "Short films and audiovisual projects by Sofía Chernikova."
-      },
-      "photography": {
-        "title": "Photography",
-        "description": "Photo essays and series by Sofía Chernikova."
+        "description": "On-camera reporting, short films, a music video and photo series by Sofía Chernikova."
       },
       "photoArchive": {
         "title": "Photography Archive",
@@ -74,65 +62,26 @@
     }
   },
   "Hero": {
-    "dateline": "MADRID",
-    "role": "Journalist · TV reporter",
-    "availability": "",
-    "location": "Madrid, Spain",
-    "headline": "",
-    "summary": "TV reporting, interviews and video from Madrid.",
-    "actionsAria": "Primary actions",
-    "viewWork": "View work",
-    "contact": "Contact"
+    "dateline": "Journalist · Madrid",
+    "role": "TV reporter",
+    "summary": "Since 2024 I have covered premieres, festivals and press conferences for Grupo Cadena Media, interviewing artists and public figures. Behind the camera, I direct short films and photograph concerts, portraits and the street.",
+    "actionsAria": "Main actions",
+    "viewWork": "See all work",
+    "contact": "Write to me",
+    "reelListLabel": "On-camera pieces",
+    "nowShowing": "On screen",
+    "soundHint": "With sound · tap to watch"
   },
   "Home": {
-    "currentEyebrow": "Career",
-    "currentTitle": "Current & recent",
-    "practiceEyebrow": "Practice",
-    "practiceTitle": "Three connected areas",
-    "practiceText": "She reports, interviews and covers events; photographs and edits; writes and produces digital content.",
-    "aboutEyebrow": "Profile",
-    "profileEyebrow": "Profile",
-    "viewExperience": "View experience",
-    "moreAbout": "Read more"
+    "pathEyebrow": "Path",
+    "pathTitle": "Where I have worked",
+    "viewExperience": "Full experience",
+    "moreAbout": "Profile"
   },
   "Work": {
-    "pageEyebrow": "Portfolio",
-    "pageTitle": "Work",
-    "pageText": "",
-    "reportingPortfolioEyebrow": "",
-    "reportingPortfolioTitle": "REPORTING",
-    "reportingPortfolioText": "",
-    "reportingCoverageEyebrow": "REPORTING",
-    "reportingCoverageTitle": "Coverage",
-    "reportingCoverageText": "",
-    "reportingMoreTitle": "More reporting",
-    "shortFormEyebrow": "",
-    "shortFormTitle": "SHORT-FORM REPORTING",
-    "shortFormText": "",
-    "shortFormShowMore": "See {count} more pieces",
-    "shortFormShowLess": "Show less",
-    "viewReporting": "Explore all reporting",
-    "viewAudiovisual": "Explore audiovisual work",
-    "viewPhotography": "Explore photography",
-    "photographyPreviewLabel": "Selected series",
-    "explorePhotoArchive": "Explore the photography archive",
     "archiveTeaserEyebrow": "Photographic archive",
     "archiveTeaserGroups": "Music · Portrait · Studio · Street",
     "archiveCountLabel": "photographs",
-    "backToWork": "Work",
-    "backToPhotography": "Photography",
-    "reportingEyebrow": "",
-    "reportingTitle": "Reporting",
-    "reportingText": "",
-    "audiovisualEyebrow": "",
-    "audiovisualTitle": "Audiovisual",
-    "audiovisualText": "",
-    "photographyEyebrow": "",
-    "photographyTitle": "Photography",
-    "photographyText": "",
-    "aria": "Selected work",
-    "fallbackAria": "Selected professional experience",
-    "viewExperience": "View full experience",
     "archiveTitle": "Photographic archive",
     "archiveTotal": "74 images",
     "archiveIndexAll": "All",
@@ -147,7 +96,31 @@
     "archiveClose": "Close",
     "archivePrev": "Previous",
     "archiveNext": "Next",
-    "archiveImageLabel": "{group}, image {index}"
+    "archiveImageLabel": "{group}, image {index}",
+    "pageTitle": "Work",
+    "pageText": "First, on camera. Then, what I shoot and what I photograph.",
+    "sectionsAria": "Work sections",
+    "reportingNav": "Reporting",
+    "audiovisualNav": "Film & video",
+    "photographyNav": "Photography",
+    "archiveNav": "Archive",
+    "reportingKicker": "Reporting",
+    "reportingTitle": "On camera",
+    "reportingText": "Interview, walk-and-talk, how-to and product test, shot vertically. Best with sound.",
+    "audiovisualKicker": "Film & video",
+    "audiovisualTitle": "Behind the camera",
+    "audiovisualText": "Short films I directed and edited, and a music video I shot and post-produced.",
+    "photographyKicker": "Photography",
+    "photographyTitle": "Concerts, street and portrait",
+    "photographyText": "Complete series and an archive of 74 photographs to look at slowly.",
+    "seriesCount": "{count, plural, one {# photograph} other {# photographs}}",
+    "archiveTeaser": "{count} photographs, by theme",
+    "shortFormShowMore": "Show {count} more",
+    "shortFormShowLess": "Show less",
+    "viewAudiovisual": "All film & video",
+    "viewPhotography": "All photography",
+    "backToPhotography": "Photography",
+    "photographyEyebrow": "Photography"
   },
   "Projects": {
     "featuredEyebrow": "Featured",
@@ -193,22 +166,138 @@
       "reporting": "Reporting",
       "interview": "Interview",
       "video": "Video",
-      "audiovisual": "Film & Audiovisual",
+      "audiovisual": "Film & video",
       "photography": "Photography",
       "communication": "Communications"
     },
     "items": {
-      "4-minutos": {"title": "4 MINUTOS", "description": "A short film in black and white about two young people meeting.", "format": "Short film · 03:59", "roles": ["Direction — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "sound": "María Rodríguez", "cast": "Eneko Valle García · Fran Vidales Santos", "equipment": "Nikon D3300 · iPhone 13"}, "creditLabels": {"direction": "Direction", "sound": "Sound", "cast": "Cast", "equipment": "Equipment"}, "media": {"4-minutos-poster": {"title": "4 MINUTOS", "alt": "Black-and-white frame of two characters interacting"}}},
-      "tras-el-sofa": {"title": "Tras el sofá", "description": "A dramatic short film set in a home interior.", "format": "Short film · 05:59", "roles": ["Direction — Sofía Chernikova", "Editing — Sofía Chernikova"], "credits": {"direction": "Sofía Chernikova", "editing": "Sofía Chernikova"}, "creditLabels": {"direction": "Direction", "editing": "Editing"}, "media": {"tras-el-sofa-poster": {"title": "Tras el sofá", "alt": "Close portrait of a protagonist in a domestic interior"}}},
-      "version-beta": {"title": "VERSIÓN BETA", "description": "A promotional video with on-camera testimonials, action and graphics.", "format": "Promotional piece · 00:58", "media": {"version-beta-poster": {"title": "VERSIÓN BETA", "alt": "Protagonist beside the VERSIÓN BETA title"}}},
-      "short-form-001": {"title": "On camera · outdoors", "description": "", "media": {"short-form-001-video": {"title": "On camera · outdoors", "alt": "Sofía in a vertical piece filmed outdoors"}}},
-      "short-form-002": {"title": "Microphone", "description": "", "media": {"short-form-002-video": {"title": "Microphone", "alt": "Sofía holding a microphone with other people in the setting"}}},
-      "short-form-003": {"title": "MyMUN", "description": "", "media": {"short-form-003-video": {"title": "MyMUN", "alt": "Sofía alongside screens and MyMUN graphics"}}},
-      "short-form-004": {"title": "Smartphone · outdoors", "description": "", "media": {"short-form-004-video": {"title": "Smartphone · outdoors", "alt": "Sofía presenting a smartphone to camera outdoors"}}},
-      "silver-praxis-condicion-perfecta": {"title": "Silver Praxis — Condición Perfecta", "description": "The music video for ‘Condición Perfecta’ by Silver Praxis.", "format": "Music video", "roles": ["Filming and post-production — Sofía Chernikova"], "credits": {"filming": "Sofía Chernikova", "creative": "Briza Sanchez", "production": "Silver Praxis"}, "creditLabels": {"filming": "Filming and post-production", "creative": "Creative direction, styling and lettering", "production": "Production, mix and master"}, "media": {"silver-praxis-condicion-perfecta-video": {"title": "Silver Praxis — Condición Perfecta", "alt": "A frame from the music video showing the artist in a red-lit interior"}}},
+      "4-minutos": {
+        "title": "4 MINUTOS",
+        "description": "A short film in black and white about two young people meeting.",
+        "format": "Short film",
+        "roles": [
+          "Direction — Sofía Chernikova"
+        ],
+        "credits": {
+          "direction": "Sofía Chernikova",
+          "sound": "María Rodríguez",
+          "cast": "Eneko Valle García · Fran Vidales Santos",
+          "equipment": "Nikon D3300 · iPhone 13"
+        },
+        "creditLabels": {
+          "direction": "Direction",
+          "sound": "Sound",
+          "cast": "Cast",
+          "equipment": "Equipment"
+        },
+        "media": {
+          "4-minutos-poster": {
+            "title": "4 MINUTOS",
+            "alt": "Black-and-white still: two young men at night under a streetlamp"
+          }
+        }
+      },
+      "tras-el-sofa": {
+        "title": "Tras el sofá",
+        "description": "A dramatic short film set in a home interior.",
+        "format": "Short film",
+        "roles": [
+          "Direction — Sofía Chernikova",
+          "Editing — Sofía Chernikova"
+        ],
+        "credits": {
+          "direction": "Sofía Chernikova",
+          "editing": "Sofía Chernikova"
+        },
+        "creditLabels": {
+          "direction": "Direction",
+          "editing": "Editing"
+        },
+        "media": {
+          "tras-el-sofa-poster": {
+            "title": "Tras el sofá",
+            "alt": "Two people on a teal sofa next to a bunch of red roses"
+          }
+        }
+      },
+      "version-beta": {
+        "title": "VERSIÓN BETA",
+        "description": "A promotional video with on-camera testimonials, action and graphics.",
+        "format": "Promotional piece",
+        "media": {
+          "version-beta-poster": {
+            "title": "VERSIÓN BETA",
+            "alt": "A person speaks to camera in front of a graffiti wall"
+          }
+        }
+      },
+      "short-form-001": {
+        "title": "Madrid on foot, camera in hand",
+        "description": "A walk-and-talk to camera through central Madrid, starting on Gran Vía.",
+        "media": {
+          "short-form-001-video": {
+            "title": "Madrid on foot, camera in hand",
+            "alt": "Sofía speaks to camera in a sunny square, a DSLR hanging from her neck"
+          }
+        }
+      },
+      "short-form-002": {
+        "title": "On the ‘9‑1‑1’ set",
+        "description": "A handheld-mic interview inside a set built for the series, at Chamartín station.",
+        "media": {
+          "short-form-002-video": {
+            "title": "On the ‘9‑1‑1’ set",
+            "alt": "Sofía smiles holding a microphone, sitting on an orange sofa inside a set"
+          }
+        }
+      },
+      "short-form-003": {
+        "title": "MyMUN, step by step",
+        "description": "How to register for URJCmun 2026 through the MyMUN platform, explained to camera.",
+        "media": {
+          "short-form-003-video": {
+            "title": "MyMUN, step by step",
+            "alt": "Sofía smiles at the camera in front of an ivy wall"
+          }
+        }
+      },
+      "short-form-004": {
+        "title": "Testing the vivo X300 Pro",
+        "description": "First impressions of a smartphone: camera, screen and accessories, with close-ups.",
+        "media": {
+          "short-form-004-video": {
+            "title": "Testing the vivo X300 Pro",
+            "alt": "Close-up of Sofía speaking to camera in a bright room"
+          }
+        }
+      },
+      "silver-praxis-condicion-perfecta": {
+        "title": "Silver Praxis — Condición Perfecta",
+        "description": "The music video for ‘Condición Perfecta’ by Silver Praxis.",
+        "format": "Music video",
+        "roles": [
+          "Filming and post-production — Sofía Chernikova"
+        ],
+        "credits": {
+          "filming": "Sofía Chernikova",
+          "creative": "Briza Sanchez",
+          "production": "Silver Praxis"
+        },
+        "creditLabels": {
+          "filming": "Filming and post-production",
+          "creative": "Creative direction, styling and lettering",
+          "production": "Production, mix and master"
+        },
+        "media": {
+          "silver-praxis-condicion-perfecta-video": {
+            "title": "Silver Praxis — Condición Perfecta",
+            "alt": "The artist by a car door at night, lit in pink and blue"
+          }
+        }
+      },
       "reporter-reel": {
         "title": "Reporter reel",
-    "description": "",
+        "description": "",
         "dek": "Reporting from premieres, festivals and press conferences.",
         "format": "Television · Reel",
         "context": "Event coverage, interviews and field reporting.",
@@ -326,44 +415,120 @@
         "description": "A square with tents, handwritten signs, gathered groups and musicians playing percussion.",
         "format": "Photography · Photo essay",
         "media": {
-          "entre-tiendas-y-tambores-001": { "alt": "Daylight view of tents beneath a canopy and a banner, with people gathered among them." },
-          "entre-tiendas-y-tambores-002": { "alt": "Tents fill a square in front of buildings, with flags above them." },
-          "entre-tiendas-y-tambores-003": { "alt": "Tents and a handwritten banner beneath an overcast sky." },
-          "entre-tiendas-y-tambores-004": { "alt": "Wide view of tents, signs and people gathered beneath canopies." },
-          "entre-tiendas-y-tambores-005": { "alt": "Colourful tents in front of buildings in a square." },
-          "entre-tiendas-y-tambores-006": { "alt": "Chairs and belongings arranged among tents and canopies." },
-          "entre-tiendas-y-tambores-007": { "alt": "Handwritten sign hanging above several tents." },
-          "entre-tiendas-y-tambores-008": { "alt": "Two people beside a wheelchair among tents beneath a banner." },
-          "entre-tiendas-y-tambores-009": { "alt": "Red tent with a handwritten sign placed in front." },
-          "entre-tiendas-y-tambores-010": { "alt": "View across a square covered with canopies and signs." },
-          "entre-tiendas-y-tambores-011": { "alt": "Tents beneath a canopy lit at dusk." },
-          "entre-tiendas-y-tambores-012": { "alt": "Group gathered in a circle on a street, photographed in black and white." },
-          "entre-tiendas-y-tambores-013": { "alt": "People dancing in a circle on a street at night." },
-          "entre-tiendas-y-tambores-014": { "alt": "Handwritten sign attached to a tent." },
-          "entre-tiendas-y-tambores-015": { "alt": "Tents and a long banner beneath night lights." },
-          "entre-tiendas-y-tambores-016": { "alt": "Musicians play string and percussion instruments in front of a circle of people." },
-          "entre-tiendas-y-tambores-017": { "alt": "Person sitting in front of a tent beneath a large banner." },
-          "entre-tiendas-y-tambores-018": { "alt": "Group gathered around musicians, in black and white." },
-          "entre-tiendas-y-tambores-019": { "alt": "Person jumps in the middle of a group watching." },
-          "entre-tiendas-y-tambores-020": { "alt": "People talk beneath a large banner beside tents." },
-          "entre-tiendas-y-tambores-021": { "alt": "Person packs away a tent beneath blue tarps." },
-          "entre-tiendas-y-tambores-022": { "alt": "Several people raise their arms beneath blue lights." },
-          "entre-tiendas-y-tambores-023": { "alt": "Crowd gathered in a lit square with hands raised." },
-          "entre-tiendas-y-tambores-024": { "alt": "Group raises their arms between buildings at night." },
-          "entre-tiendas-y-tambores-025": { "alt": "People hold a handwritten sign among the crowd." },
-          "entre-tiendas-y-tambores-026": { "alt": "Person with mouth open and hands together among the crowd." },
-          "entre-tiendas-y-tambores-027": { "alt": "Several people raise their hands during a nighttime gathering." },
-          "entre-tiendas-y-tambores-028": { "alt": "People gather beside a barrier as others raise their hands." },
-          "entre-tiendas-y-tambores-029": { "alt": "Group gathered in front of an equestrian statue in a lit square." },
-          "entre-tiendas-y-tambores-030": { "alt": "Close view of brass instruments and musicians playing among the crowd." },
-          "entre-tiendas-y-tambores-031": { "alt": "Percussionists perform in the centre of a circle of people." },
-          "entre-tiendas-y-tambores-032": { "alt": "Crowd gathered at night beside tents and a lit rooftop sign." },
-          "entre-tiendas-y-tambores-033": { "alt": "Crowd seen between raised arms in a lit square." },
-          "entre-tiendas-y-tambores-034": { "alt": "Vertical view of tents and a crowd beneath a rooftop sign." },
-          "entre-tiendas-y-tambores-035": { "alt": "Vertical view of a crowd gathered beneath canopies at night." },
-          "entre-tiendas-y-tambores-036": { "alt": "Percussionists in a circle among the crowd on a street at night." },
-          "entre-tiendas-y-tambores-037": { "alt": "Percussionists and gathered people seen from the side." },
-          "entre-tiendas-y-tambores-038": { "alt": "Percussionists and crowd in a circle, with lit buildings behind them." }
+          "entre-tiendas-y-tambores-001": {
+            "alt": "Daylight view of tents beneath a canopy and a banner, with people gathered among them."
+          },
+          "entre-tiendas-y-tambores-002": {
+            "alt": "Tents fill a square in front of buildings, with flags above them."
+          },
+          "entre-tiendas-y-tambores-003": {
+            "alt": "Tents and a handwritten banner beneath an overcast sky."
+          },
+          "entre-tiendas-y-tambores-004": {
+            "alt": "Wide view of tents, signs and people gathered beneath canopies."
+          },
+          "entre-tiendas-y-tambores-005": {
+            "alt": "People with a video camera film among the tents in the square."
+          },
+          "entre-tiendas-y-tambores-006": {
+            "alt": "Chairs and belongings arranged among tents and canopies."
+          },
+          "entre-tiendas-y-tambores-007": {
+            "alt": "Handwritten sign hanging above several tents."
+          },
+          "entre-tiendas-y-tambores-008": {
+            "alt": "Two people beside a wheelchair among tents beneath a banner."
+          },
+          "entre-tiendas-y-tambores-009": {
+            "alt": "Red tent with a handwritten sign placed in front."
+          },
+          "entre-tiendas-y-tambores-010": {
+            "alt": "View across a square covered with canopies and signs."
+          },
+          "entre-tiendas-y-tambores-011": {
+            "alt": "Tents beneath a canopy lit at dusk."
+          },
+          "entre-tiendas-y-tambores-012": {
+            "alt": "Group gathered in a circle on a street, photographed in black and white."
+          },
+          "entre-tiendas-y-tambores-013": {
+            "alt": "People dancing in a circle on a street at night."
+          },
+          "entre-tiendas-y-tambores-014": {
+            "alt": "Handwritten sign attached to a tent."
+          },
+          "entre-tiendas-y-tambores-015": {
+            "alt": "Tents and a long banner beneath night lights."
+          },
+          "entre-tiendas-y-tambores-016": {
+            "alt": "Musicians play string and percussion instruments in front of a circle of people."
+          },
+          "entre-tiendas-y-tambores-017": {
+            "alt": "Person sitting in front of a tent beneath a large banner."
+          },
+          "entre-tiendas-y-tambores-018": {
+            "alt": "Group gathered around musicians, in black and white."
+          },
+          "entre-tiendas-y-tambores-019": {
+            "alt": "Person jumps in the middle of a group watching."
+          },
+          "entre-tiendas-y-tambores-020": {
+            "alt": "People talk beneath a large banner beside tents."
+          },
+          "entre-tiendas-y-tambores-021": {
+            "alt": "Person packs away a tent beneath blue tarps."
+          },
+          "entre-tiendas-y-tambores-022": {
+            "alt": "Several people raise their arms beneath blue lights."
+          },
+          "entre-tiendas-y-tambores-023": {
+            "alt": "Crowd gathered in a lit square with hands raised."
+          },
+          "entre-tiendas-y-tambores-024": {
+            "alt": "Group raises their arms between buildings at night."
+          },
+          "entre-tiendas-y-tambores-025": {
+            "alt": "People hold a handwritten sign among the crowd."
+          },
+          "entre-tiendas-y-tambores-026": {
+            "alt": "Person with mouth open and hands together among the crowd."
+          },
+          "entre-tiendas-y-tambores-027": {
+            "alt": "Several people raise their hands during a nighttime gathering."
+          },
+          "entre-tiendas-y-tambores-028": {
+            "alt": "People gather beside a barrier as others raise their hands."
+          },
+          "entre-tiendas-y-tambores-029": {
+            "alt": "Group gathered in front of an equestrian statue in a lit square."
+          },
+          "entre-tiendas-y-tambores-030": {
+            "alt": "Close view of brass instruments and musicians playing among the crowd."
+          },
+          "entre-tiendas-y-tambores-031": {
+            "alt": "Percussionists perform in the centre of a circle of people."
+          },
+          "entre-tiendas-y-tambores-032": {
+            "alt": "Crowd gathered at night beside tents and a lit rooftop sign."
+          },
+          "entre-tiendas-y-tambores-033": {
+            "alt": "Crowd seen between raised arms in a lit square."
+          },
+          "entre-tiendas-y-tambores-034": {
+            "alt": "Vertical view of tents and a crowd beneath a rooftop sign."
+          },
+          "entre-tiendas-y-tambores-035": {
+            "alt": "Vertical view of a crowd gathered beneath canopies at night."
+          },
+          "entre-tiendas-y-tambores-036": {
+            "alt": "Percussionists in a circle among the crowd on a street at night."
+          },
+          "entre-tiendas-y-tambores-037": {
+            "alt": "Drummers play facing the camera, arms raised, in the square at night."
+          },
+          "entre-tiendas-y-tambores-038": {
+            "alt": "Percussionists and crowd in a circle, with lit buildings behind them."
+          }
         }
       },
       "calle-documental": {
@@ -443,79 +608,35 @@
     }
   },
   "Profile": {
-    "statement": "I’m a journalist and TV reporter. I’ve also worked in photography and video.",
-    "aboutPreview": "I’m a journalist and TV reporter.",
-    "aboutContinuation": "",
-    "bio": "I’ve worked as a TV reporter at Grupo Cadena Media since 2024. I cover events and press conferences, conduct interviews, and write scripts and news pieces. I’ve also worked in photography and digital communications.",
-    "aboutTrajectory": "",
-    "interests": "",
+    "bio": "I am a journalist and TV reporter. I have worked at Grupo Cadena Media since 2024: I cover premieres, festivals and press conferences, interview artists and public figures, and write scripts and news pieces.",
     "aboutPageEyebrow": "Profile",
-    "aboutHeroTitle": "A television reporter.",
     "portraitAlt": "Portrait of Sofía Chernikova",
-    "bioEyebrow": "Bio",
-    "bioTitle": "About",
     "educationEyebrow": "Education",
-    "educationTitle": "Education",
     "languagesEyebrow": "Languages",
-    "languagesTitle": "Languages",
     "toolsEyebrow": "Tools",
-    "toolsTitle": "Tools",
-    "experienceEyebrow": "Now",
-    "experienceTitle": "Current & recent",
-    "viewFullExperience": "View full experience"
-  },
-  "CurrentPositions": {
-    "items": {
-      "grupo-cadena-media": {
-        "company": "Grupo Cadena Media",
-        "role": "TV Reporter",
-        "period": "2024 — Present"
-      },
-      "urjcmun": {
-        "company": "URJCmun",
-        "role": "Deputy Director for Social Media",
-        "period": "2026"
-      }
-    }
-  },
-  "Practices": {
-    "items": [
+    "viewFullExperience": "Full experience",
+    "bioMore": "I studied Journalism and Audiovisual Communication at Universidad Rey Juan Carlos. Besides reporting, I direct and edit short films, shoot and post-produce video, and photograph concerts, the street and portraits. Spanish and Russian are both my native languages.",
+    "baseLabel": "Base",
+    "baseValue": "Madrid",
+    "practiceEyebrow": "What I do",
+    "practices": [
       {
-        "number": "01",
-        "code": "REPORTING",
-        "title": "Television, interviews and reporting",
-        "items": [
-          "Reporting",
-          "Interviews",
-          "Event Coverage",
-          "Scriptwriting",
-          "On-camera Presentation"
-        ],
-        "metadata": "REPORTING · INTERVIEWS · VIDEO"
+        "title": "On camera",
+        "text": "Event reporting, interviews and scripts for television.",
+        "link": "See reporting",
+        "section": "reporting"
       },
       {
-        "number": "02",
-        "code": "VISUAL",
-        "title": "Photography & editing",
-        "items": [
-          "Photography",
-          "Video",
-          "Editing"
-        ],
-        "metadata": "PHOTO · VIDEO · EDITING"
+        "title": "Behind the camera",
+        "text": "Directing and editing short films; shooting and post-producing a music video.",
+        "link": "See film & video",
+        "section": "audiovisual"
       },
       {
-        "number": "03",
-        "code": "COMMUNICATION",
-        "title": "Content & digital communications",
-        "items": [
-          "Social Media",
-          "Content",
-          "Strategy",
-          "Copywriting",
-          "Coordination"
-        ],
-        "metadata": "SOCIAL · CONTENT · STRATEGY"
+        "title": "With a stills camera",
+        "text": "Concerts, street, portrait and studio.",
+        "link": "See photography",
+        "section": "photography"
       }
     ]
   },
@@ -639,10 +760,13 @@
     "baseValue": "Madrid",
     "contactPageEyebrow": "Contact",
     "contactPageTitle": "Shall we talk?",
-    "contactPageText": ""
+    "contactPageText": "For work proposals, collaborations or questions about any of these pieces, write to me.",
+    "copy": "Copy email",
+    "copied": "Copied",
+    "languages": "Languages",
+    "languagesValue": "Spanish · Russian · English · Valencian · Italian"
   },
   "Footer": {
-    "cue": "Shall we talk?",
     "location": "Madrid",
     "copyright": "© 2026 Sofía Chernikova"
   },
@@ -654,20 +778,10 @@
   },
   "WorkRail": {
     "label": "Work",
-    "back": "Back",
-    "index": "Index",
     "reporting": "Reporting",
-    "audiovisual": "Audiovisual",
+    "audiovisual": "Film & video",
     "photography": "Photography",
     "prev": "Previous project",
-    "next": "Next project",
-    "archive": "Archive 74",
-    "musica-en-directo": "Music",
-    "calle-documental": "Street",
-    "estudio-editorial": "Studio",
-    "retrato-editorial": "Portrait"
-    ,"4-minutos": "4 MINUTOS"
-    ,"tras-el-sofa": "Tras el sofá"
-    ,"version-beta": "VERSIÓN BETA"
+    "next": "Next project"
   }
 }

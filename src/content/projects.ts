@@ -188,7 +188,7 @@ export const projects: PortfolioProject[] = [
     discipline: ["reporting", "video"],
     reportingFormat: "short-form",
     featured: true,
-    order: 1,
+    order: 2,
     published: true,
     translationKey: "short-form-001",
     roleKeys: ["on-camera"],
@@ -204,9 +204,9 @@ export const projects: PortfolioProject[] = [
       height: 1280,
       duration: "03:48",
       titleKey: "short-form-001-video",
-      posterTime: 45.8,
+      posterTime: 200,
       poster: getMuxThumbnailUrl("00n58LS1B6SoDQ1BxdYN02MPuCrnG9bqEoGSypkxuBc6M", {
-        time: 45.8,
+        time: 200,
         width: 900,
       }),
     },
@@ -218,7 +218,7 @@ export const projects: PortfolioProject[] = [
     discipline: ["reporting", "video"],
     reportingFormat: "short-form",
     featured: true,
-    order: 2,
+    order: 1,
     published: true,
     translationKey: "short-form-002",
     roleKeys: ["on-camera"],
@@ -234,9 +234,9 @@ export const projects: PortfolioProject[] = [
       height: 1280,
       duration: "00:58",
       titleKey: "short-form-002-video",
-      posterTime: 55.3,
+      posterTime: 51,
       poster: getMuxThumbnailUrl("fUSSUbRme02ksrhoRUkeWYEFi9XFPMRdtfvUXp01Cn5DE", {
-        time: 55.3,
+        time: 51,
         width: 900,
       }),
     },
@@ -264,9 +264,9 @@ export const projects: PortfolioProject[] = [
       height: 1280,
       duration: "01:02",
       titleKey: "short-form-003-video",
-      posterTime: 56.5,
+      posterTime: 58,
       poster: getMuxThumbnailUrl("vd9Vt95Ik3wNCBeCi2jx3d7RPoKKYZJ1EhfjPbATgYQ", {
-        time: 56.5,
+        time: 58,
         width: 900,
       }),
     },
@@ -277,7 +277,7 @@ export const projects: PortfolioProject[] = [
     year: "",
     discipline: ["reporting", "video"],
     reportingFormat: "short-form",
-    featured: false,
+    featured: true,
     order: 4,
     published: true,
     translationKey: "short-form-004",
@@ -294,9 +294,9 @@ export const projects: PortfolioProject[] = [
       height: 1280,
       duration: "02:43",
       titleKey: "short-form-004-video",
-      posterTime: 57.3,
+      posterTime: 44,
       poster: getMuxThumbnailUrl("eZwnpfjC1HvWYJsevo01UHQqD700x9snNLJca5L5Gzcq00", {
-        time: 57.3,
+        time: 44,
         width: 900,
       }),
     },
@@ -322,9 +322,9 @@ export const projects: PortfolioProject[] = [
       height: 1080,
       duration: "03:05",
       titleKey: "silver-praxis-condicion-perfecta-video",
-      posterTime: 65.1,
+      posterTime: 38,
       poster: getMuxThumbnailUrl("gCdd7kgXJopv5mMbdekZJqCghuCd1HND9s4aYcNzmu4", {
-        time: 65.1,
+        time: 38,
         width: 1600,
       }),
     },
@@ -345,9 +345,9 @@ export const projects: PortfolioProject[] = [
       layout: "full",
       aspectRatio: "16:9",
       muxPlaybackId: "m2dxVaMBZKQ8wX7dNCs01ic6QwJB302OISItsFiOHbF200",
-      posterTime: 202,
+      posterTime: 145,
       poster: getMuxThumbnailUrl("m2dxVaMBZKQ8wX7dNCs01ic6QwJB302OISItsFiOHbF200", {
-        time: 202,
+        time: 145,
         width: 1600,
       }),
       provider: "mux",
@@ -369,9 +369,9 @@ export const projects: PortfolioProject[] = [
       layout: "full",
       aspectRatio: "16:9",
       muxPlaybackId: "6EyrkximJOV2KpOdeJLvf2miHudBAOp2EcNOu54sjPg",
-      posterTime: 303,
+      posterTime: 174,
       poster: getMuxThumbnailUrl("6EyrkximJOV2KpOdeJLvf2miHudBAOp2EcNOu54sjPg", {
-        time: 303,
+        time: 174,
         width: 1600,
       }),
       provider: "mux",
@@ -393,9 +393,9 @@ export const projects: PortfolioProject[] = [
       layout: "full",
       aspectRatio: "16:9",
       muxPlaybackId: "pOfGCwjlQAJJN01F5rVSWVQIGL9aGKwhNLAeJWzEr02ag",
-      posterTime: 50,
+      posterTime: 22,
       poster: getMuxThumbnailUrl("pOfGCwjlQAJJN01F5rVSWVQIGL9aGKwhNLAeJWzEr02ag", {
-        time: 50,
+        time: 22,
         width: 1600,
       }),
       provider: "mux",
@@ -408,7 +408,7 @@ export const projects: PortfolioProject[] = [
     slug: "musica-en-directo",
     year: "Pendiente",
     discipline: ["photography"],
-    order: 10,
+    order: 11,
     featured: true,
     published: true,
     translationKey: "musica-en-directo",
@@ -424,7 +424,7 @@ export const projects: PortfolioProject[] = [
     slug: "calle-documental",
     year: "Pendiente",
     discipline: ["photography"],
-    order: 11,
+    order: 12,
     published: true,
     translationKey: "calle-documental",
     rights: {
@@ -439,7 +439,7 @@ export const projects: PortfolioProject[] = [
     slug: "estudio-editorial",
     year: "Pendiente",
     discipline: ["photography"],
-    order: 12,
+    order: 14,
     published: true,
     translationKey: "estudio-editorial",
     rights: {
@@ -469,7 +469,7 @@ export const projects: PortfolioProject[] = [
     slug: "entre-tiendas-y-tambores",
     year: "",
     discipline: ["photography"],
-    order: 14,
+    order: 10,
     published: true,
     translationKey: "entre-tiendas-y-tambores",
     cover: entre_tiendas_y_tambores_cover,
@@ -731,38 +731,6 @@ export function getProjectsInSection(section: ProjectSection) {
   return getPublishedProjects().filter((project) => getProjectSection(project) === section);
 }
 
-export function hasPublishedReporting() {
-  return getProjectsInSection("reporting").length > 0;
-}
-
-export function getHomeReportingSelection(limit = 4) {
-  const reporting = getProjectsInSection("reporting").filter(
-    (project) => !project.reporterReel,
-  );
-  const shortForm = sortShortFormProjects(
-    reporting.filter((project) => project.reportingFormat === "short-form"),
-  );
-  const selected = reporting.filter((project) => project.reportingFeatured);
-
-  return (shortForm.length ? shortForm : selected).slice(0, limit);
-}
-
-export function getHomeAudiovisualSelection(limit = 1) {
-  const audiovisual = getProjectsInSection("audiovisual");
-  return [
-    ...audiovisual.filter((project) => project.featured),
-    ...audiovisual.filter((project) => !project.featured),
-  ].slice(0, limit);
-}
-
-export function getHomePhotographySelection(limit = 2) {
-  const photography = getProjectsInSection("photography");
-  return [
-    ...photography.filter((project) => project.featured),
-    ...photography.filter((project) => !project.featured),
-  ].slice(0, limit);
-}
-
 export function hasProjectDetailPage(project: PortfolioProject) {
   return (
     project.detailPage ??
@@ -777,35 +745,6 @@ export function getDetailedProjects() {
 export function getDetailedProjectsInSection(project: PortfolioProject) {
   const section = getProjectSection(project);
   return getDetailedProjects().filter((item) => getProjectSection(item) === section);
-}
-
-export function getReporterReel() {
-  return getPublishedProjects().find((project) => project.reporterReel);
-}
-
-export function getFeaturedProject() {
-  const reel = getReporterReel();
-  const pool = getPublishedProjects().filter(
-    (project) =>
-      project.id !== reel?.id &&
-      !project.discipline.includes("audiovisual") &&
-      !project.discipline.includes("reporting"),
-  );
-
-  return pool.find((project) => project.featured) ?? pool[0];
-}
-
-export function getSelectedProjects(limit = 3) {
-  const reel = getReporterReel();
-
-  return getPublishedProjects()
-    .filter(
-      (project) =>
-        project.id !== reel?.id &&
-        !project.discipline.includes("audiovisual") &&
-        !project.discipline.includes("reporting"),
-    )
-    .slice(0, limit);
 }
 
 export function getProjectBySlug(slug: string) {

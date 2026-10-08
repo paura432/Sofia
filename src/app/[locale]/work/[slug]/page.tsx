@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 
 import { MoreFromSeries, SeriesModeNav } from "@/components/more-from-series";
+import { MorphFrame } from "@/components/motion/morph-frame";
 import { MotionLink } from "@/components/motion/motion-link";
 import { Reveal } from "@/components/motion/reveal";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
@@ -155,13 +156,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const nextProject = getNextProject(project.slug);
   const prevProject = getPrevProject(project.slug);
   const seriesPhotos = getArchivePhotosForProject(project.slug);
-
-  const detailedProjects = getDetailedProjects();
-  const projectIndex = detailedProjects.findIndex(
-    (item) => item.slug === project.slug,
-  );
-  const projectOrdinal = String(projectIndex + 1).padStart(2, "0");
-  const projectTotal = String(detailedProjects.length).padStart(2, "0");
   const visibleYear = publishableYear(project.year);
   const isFilm = project.discipline.includes("audiovisual");
   const roleLabels = copy.roles?.filter(Boolean) ?? [];
@@ -182,9 +176,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <ScrollProgress />
       <section className="page-hero project-detail-hero section section-first">
         <Reveal className="container page-hero-inner">
-          <p className="eyebrow">
-            {projectOrdinal} / {projectTotal}
-          </p>
           <p className="project-kicker">{disciplineLabel(project, t)}</p>
           <h1 className="display-page project-title">{copy.title}</h1>
           {copy.dek ? <p>{copy.dek}</p> : null}
@@ -208,13 +199,17 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 />
               </header>
             ) : null}
-            <ProjectMediaLayout
-              copy={mediaCopy}
-              media={[heroMedia]}
-              playLabel={t("play")}
-              preloadFirst
-              transcriptLabel={t("transcript")}
-            />
+            <MorphFrame slug={project.slug}>
+              <div>
+                <ProjectMediaLayout
+                  copy={mediaCopy}
+                  media={[heroMedia]}
+                  playLabel={t("play")}
+                  preloadFirst
+                  transcriptLabel={t("transcript")}
+                />
+              </div>
+            </MorphFrame>
           </div>
         </section>
       ) : null}

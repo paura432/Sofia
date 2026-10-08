@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import type { MuxPlayerRefAttributes } from "@mux/mux-player-react";
 
 import { focalPointStyle, getMediaSizes, type ProjectMedia } from "@/content/projects";
 
@@ -17,6 +16,8 @@ type PortfolioVideoProps = {
   sizes?: string;
   posterAlt?: string;
   active?: boolean;
+  /** Poster above the fold (LCP): carga prioritaria. */
+  preloadPoster?: boolean;
   onActivate?: () => void;
   onDeactivate?: () => void;
   /** Etiquetas ya traducidas de las pistas de subtítulos, por `labelKey`. */
@@ -43,6 +44,7 @@ export function PortfolioVideo({
   sizes,
   posterAlt,
   active,
+  preloadPoster = false,
   onActivate,
   onDeactivate,
   trackLabels = {},
@@ -88,25 +90,21 @@ export function PortfolioVideo({
   return (
     <div className={frameClassName} style={{ aspectRatio: ratio }}>
       {isPlaying && media.provider === "mux" && media.muxPlaybackId ? (
+        // El reproductor sólo se monta tras un clic explícito: la voz es parte
+        // del trabajo, así que intenta sonar. "any" cae a silencio únicamente
+        // si el navegador bloquea el audio, y nunca vuelve a silenciar después.
         <MuxPlayer
-          accentColor="#a52522"
-          autoPlay
+          accentColor="#e8432a"
+          autoPlay="any"
           className="portfolio-video-player"
           loop={false}
           metadata={{ video_title: title }}
-          muted
           noMutedPref
-          onPlay={(event) => {
-            const player = event.currentTarget as unknown as MuxPlayerRefAttributes;
-            player.muted = true;
-          }}
           playbackId={media.muxPlaybackId}
           playsInline
           preload="none"
-          ref={(player) => {
-            if (player) player.muted = true;
-          }}
           streamType="on-demand"
+          title={title}
         />
       ) : null}
       {isPlaying && media.provider === "native" && media.src ? (
@@ -169,6 +167,7 @@ export function PortfolioVideo({
               <Image
                 alt={posterAlt ?? ""}
                 fill
+                preload={preloadPoster}
                 sizes={sizes ?? getMediaSizes(media.layout)}
                 src={media.poster}
                 style={{ objectPosition }}
@@ -179,6 +178,7 @@ export function PortfolioVideo({
             <Image
               alt={posterAlt ?? ""}
               fill
+                preload={preloadPoster}
               sizes={sizes ?? getMediaSizes(media.layout)}
               src={media.poster}
               style={{ objectPosition }}
