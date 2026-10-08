@@ -1,5 +1,7 @@
 # UX re-audit — 2026-08-26 (post agent implementation)
 
+> **Histórico (2026-10-08).** La dirección visual, la arquitectura de Trabajo y el sistema tipográfico vigentes están en `docs/CREATIVE_DIRECTION.md` y `docs/creative-engineering/`. Este documento se conserva como contexto del diseño anterior; donde contradiga a aquellos, mandan aquellos. Las reglas de veracidad, derechos y accesibilidad siguen vigentes.
+
 Pipeline: `sofia-ux-review` → subagent a11y + token audit → implementación única.
 
 Comparado con `docs/ux-audit-baseline.md`.

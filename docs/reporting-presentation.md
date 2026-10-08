@@ -1,5 +1,7 @@
 # Presentación editorial de Work y reporting
 
+> **Histórico (2026-10-08).** La dirección visual, la arquitectura de Trabajo y el sistema tipográfico vigentes están en `docs/CREATIVE_DIRECTION.md` y `docs/creative-engineering/`. Este documento se conserva como contexto del diseño anterior; donde contradiga a aquellos, mandan aquellos. Las reglas de veracidad, derechos y accesibilidad siguen vigentes.
+
 `/work` (`/trabajo`) funciona como índice editorial: presenta una selección
 breve por disciplina y deriva a colecciones completas, sin montar el archivo
 fotográfico. Reporting, audiovisual y fotografía tienen índices propios;
