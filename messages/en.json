@@ -15,7 +15,7 @@
       },
       "photoArchive": {
         "title": "Photography Archive",
-        "description": "Explore all 74 photographs in Sofía Chernikova's archive."
+        "description": "All 74 photographs in Sofía Chernikova's archive, grouped by theme."
       },
       "about": {
         "title": "Profile",
@@ -64,24 +64,21 @@
   "Hero": {
     "dateline": "Journalist · Madrid",
     "role": "TV reporter",
-    "summary": "Since 2024 I have covered premieres, festivals and press conferences for Grupo Cadena Media, interviewing artists and public figures. Behind the camera, I direct short films and photograph concerts, portraits and the street.",
+    "summary": "Since 2024 I have covered premieres, events and press conferences for Grupo Cadena Media, interviewing artists and public figures. Behind the camera, I direct short films and shoot concert, street and portrait photography.",
     "actionsAria": "Main actions",
     "viewWork": "See all work",
-    "contact": "Write to me",
+    "contact": "Email me",
     "reelListLabel": "On-camera pieces",
     "nowShowing": "On screen",
     "soundHint": "With sound · tap to watch"
   },
   "Home": {
-    "pathEyebrow": "Path",
+    "pathEyebrow": "Career",
     "pathTitle": "Where I have worked",
     "viewExperience": "Full experience",
     "moreAbout": "Profile"
   },
   "Work": {
-    "archiveTeaserEyebrow": "Photographic archive",
-    "archiveTeaserGroups": "Music · Portrait · Studio · Street",
-    "archiveCountLabel": "photographs",
     "archiveTitle": "Photographic archive",
     "archiveTotal": "74 images",
     "archiveIndexAll": "All",
@@ -98,7 +95,7 @@
     "archiveNext": "Next",
     "archiveImageLabel": "{group}, image {index}",
     "pageTitle": "Work",
-    "pageText": "First, on camera. Then, what I shoot and what I photograph.",
+    "pageText": "First, my on-camera work. Then the films I make and the photographs I take.",
     "sectionsAria": "Work sections",
     "reportingNav": "Reporting",
     "audiovisualNav": "Film & video",
@@ -109,10 +106,10 @@
     "reportingText": "Interview, walk-and-talk, how-to and product test, shot vertically. Best with sound.",
     "audiovisualKicker": "Film & video",
     "audiovisualTitle": "Behind the camera",
-    "audiovisualText": "Short films I directed and edited, and a music video I shot and post-produced.",
+    "audiovisualText": "I directed both short films and edited Tras el sofá. On the Silver Praxis music video, I did the filming and post-production.",
     "photographyKicker": "Photography",
     "photographyTitle": "Concerts, street and portrait",
-    "photographyText": "Complete series and an archive of 74 photographs to look at slowly.",
+    "photographyText": "Complete series, and an archive of 74 photographs to browse at your own pace.",
     "seriesCount": "{count, plural, one {# photograph} other {# photographs}}",
     "archiveTeaser": "{count} photographs, by theme",
     "shortFormShowMore": "Show {count} more",
@@ -134,11 +131,11 @@
     "nextProject": "Next project",
     "prevProject": "Previous project",
     "moreFromSeries": "More from this series",
-    "moreFromSeriesCount": "{count} images",
+    "moreFromSeriesCount": "{count, plural, one {# image} other {# images}}",
     "seriesNavigation": "Photo series navigation",
     "seriesStory": "Story",
     "seriesComplete": "Complete series",
-    "seriesCompleteCount": "{count} images",
+    "seriesCompleteCount": "{count, plural, one {# image} other {# images}}",
     "viewerPrev": "Previous",
     "viewerNext": "Next",
     "viewerClose": "Close",
@@ -232,11 +229,11 @@
         }
       },
       "short-form-001": {
-        "title": "Madrid on foot, camera in hand",
+        "title": "On foot through Madrid, camera round my neck",
         "description": "A walk-and-talk to camera through central Madrid, starting on Gran Vía.",
         "media": {
           "short-form-001-video": {
-            "title": "Madrid on foot, camera in hand",
+            "title": "On foot through Madrid, camera round my neck",
             "alt": "Sofía speaks to camera in a sunny square, a DSLR hanging from her neck"
           }
         }
@@ -608,14 +605,14 @@
     }
   },
   "Profile": {
-    "bio": "I am a journalist and TV reporter. I have worked at Grupo Cadena Media since 2024: I cover premieres, festivals and press conferences, interview artists and public figures, and write scripts and news pieces.",
+    "bio": "I'm a journalist and TV reporter, working at Grupo Cadena Media since 2024.",
     "aboutPageEyebrow": "Profile",
     "portraitAlt": "Portrait of Sofía Chernikova",
     "educationEyebrow": "Education",
     "languagesEyebrow": "Languages",
     "toolsEyebrow": "Tools",
     "viewFullExperience": "Full experience",
-    "bioMore": "I studied Journalism and Audiovisual Communication at Universidad Rey Juan Carlos. Besides reporting, I direct and edit short films, shoot and post-produce video, and photograph concerts, the street and portraits. Spanish and Russian are both my native languages.",
+    "bioMore": "I cover premieres, events and press conferences, interview artists and public figures, and write scripts and news pieces. I studied Journalism and Audiovisual Communication at Universidad Rey Juan Carlos. I also direct and edit short films, shoot and post-produce video, and photograph concerts, street scenes and portraits. Spanish and Russian are both my native languages.",
     "baseLabel": "Base",
     "baseValue": "Madrid",
     "practiceEyebrow": "What I do",
@@ -661,7 +658,7 @@
       },
       "urjcmun": {
         "role": "Deputy Director for Social Media",
-        "discipline": "Communications · Social Media · Leadership",
+        "discipline": "Communications · Social media · Coordination",
         "period": "2022 — 2026",
         "summary": "From Communication Team and Camera Operator to Deputy Director for Social Media (2026).",
         "context": "Model United Nations at Universidad Rey Juan Carlos, including its URJCmun TEEN edition.",
@@ -703,10 +700,9 @@
         "context": "Studio specialising in portrait photography in hotel and tourism settings.",
         "responsibilities": {
           "photoSessions": "Photography sessions with families and children.",
-          "editing": "Professional image editing.",
+          "editing": "Editing the photographs.",
           "sales": "Sales of personalised photographs.",
-          "clientService": "Direct client service and product guidance.",
-          "fastPaced": "Working in fast-paced customer-facing environments."
+          "clientService": "Direct client service and product guidance."
         }
       }
     }
@@ -752,15 +748,15 @@
   },
   "Contact": {
     "eyebrow": "Contact",
-    "title": "Shall we talk?",
+    "title": "Get in touch",
     "body": "",
     "email": "Email",
     "linkedin": "LinkedIn",
     "base": "Base",
     "baseValue": "Madrid",
     "contactPageEyebrow": "Contact",
-    "contactPageTitle": "Shall we talk?",
-    "contactPageText": "For work proposals, collaborations or questions about any of these pieces, write to me.",
+    "contactPageTitle": "Get in touch",
+    "contactPageText": "If you have a job, a collaboration or a question about any of my work, email me.",
     "copy": "Copy email",
     "copied": "Copied",
     "languages": "Languages",

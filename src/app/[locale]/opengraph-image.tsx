@@ -25,6 +25,7 @@ export default async function Image({ params }: ImageProps) {
   };
   const messages = catalog[locale] ?? esMessages;
   const hero = messages.Hero;
+  const work = messages.Work;
 
   return new ImageResponse(
     (
@@ -53,7 +54,7 @@ export default async function Image({ params }: ImageProps) {
           }}
         >
           <span>{hero.dateline}</span>
-          <span>REPORTING / VISUAL / COMMUNICATION</span>
+          <span>{`${work.reportingNav} / ${work.audiovisualNav} / ${work.photographyNav}`}</span>
         </div>
         <div
           style={{

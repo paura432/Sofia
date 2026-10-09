@@ -32,3 +32,13 @@ Para todos: año, medio/canal de publicación y enlace original, si se pueden mo
 - La bio está en primera persona, compuesta sólo con hechos ya publicados. ¿Quieres añadir qué historias te interesa contar o qué faceta quieres desarrollar? (No se ha inventado ninguna frase tuya.)
 - ¿Quién hizo tu retrato? Se acreditaría en Perfil.
 - ¿Tienes un CV final y actualizado para descargar? (`siteConfig.hasCv` sigue en `false`.)
+
+## Auditoría editorial (octubre 2026)
+
+Ver `docs/editorial-audit/README.md` §5. Mientras no haya respuesta, la web usa la versión más prudente.
+
+- **Festivales**: ¿has cubierto festivales para Grupo Cadena Media? ¿Cuáles? (Hoy se dice «estrenos, eventos y ruedas de prensa».)
+- **Annie Bonnie**: ¿organizabas los eventos o apoyabas su organización? (Hoy: «Apoyo en la organización y cobertura de eventos».)
+- **URJC**: ¿has terminado el grado? (Hoy «Estudié»; no se afirma la titulación.)
+- **Nombre en ruso**: ¿«София Черникова» es la grafía que usas? (Aplicada en la prosa rusa; la marca sigue en latín.)
+- **Cortometrajes**: una sinopsis de una línea para *4 MINUTOS* y *Tras el sofá*, si quieres que la ficha diga algo más que el formato.
