@@ -64,7 +64,7 @@
   "Hero": {
     "dateline": "Journalist · Madrid",
     "role": "TV reporter",
-    "summary": "Since 2024 I have covered premieres, events and press conferences for Grupo Cadena Media, interviewing artists and public figures. Behind the camera, I direct short films and shoot concert, street and portrait photography.",
+    "summary": "Since 2024 I have covered premieres, events and press conferences for Grupo Cadena Media, interviewing artists and public figures. I also direct short films and shoot concert, street and portrait photography.",
     "actionsAria": "Main actions",
     "viewWork": "See all work",
     "contact": "Email me",
@@ -95,7 +95,7 @@
     "archiveNext": "Next",
     "archiveImageLabel": "{group}, image {index}",
     "pageTitle": "Work",
-    "pageText": "First, my on-camera work. Then the films I make and the photographs I take.",
+    "pageText": "Reporting first, then film, video and photography.",
     "sectionsAria": "Work sections",
     "reportingNav": "Reporting",
     "audiovisualNav": "Film & video",
@@ -288,25 +288,25 @@
         "media": {
           "silver-praxis-condicion-perfecta-video": {
             "title": "Silver Praxis — Condición Perfecta",
-            "alt": "The artist by a car door at night, lit in pink and blue"
+            "alt": "The artist sits in a car with the door open at night, lit in pink and blue"
           }
         }
       },
       "reporter-reel": {
         "title": "Reporter reel",
         "description": "",
-        "dek": "Reporting from premieres, festivals and press conferences.",
+        "dek": "Reporting from premieres, events and press conferences.",
         "format": "Television · Reel",
         "context": "Event coverage, interviews and field reporting.",
         "roles": [
-          "Reporting from premieres, festivals and press conferences.",
+          "Reporting from premieres, events and press conferences.",
           "Interviews with artists, actors and public figures."
         ]
       },
       "retrato-editorial": {
-        "title": "Portrait & Editorial",
-        "description": "Location portrait photography in urban settings.",
-        "format": "Photography · Portrait · Editorial",
+        "title": "Portrait & editorial",
+        "description": "Portraits in an abandoned warehouse, on a terrace, in a red-neon interior and on graffitied streets.",
+        "format": "Portrait · Editorial",
         "roles": [
           "Photography"
         ],
@@ -315,16 +315,16 @@
             "alt": "Two people in black t-shirts before a graffiti wall under concrete structures"
           },
           "retrato-editorial-02": {
-            "alt": "Urban portrait beside concrete architecture"
+            "alt": "Two men dressed in black, one standing and one crouching, in front of a graffitied wall in an abandoned building"
           },
           "retrato-editorial-03": {
             "alt": "Two people in black t-shirts in front of industrial windows with graffiti"
           },
           "retrato-editorial-04": {
-            "alt": "Portrait in an urban location"
+            "alt": "The two men walk among rubble in an abandoned warehouse"
           },
           "retrato-editorial-05": {
-            "alt": "Editorial portrait in an urban setting"
+            "alt": "The two men walk towards the camera through a warehouse full of rubble and graffiti"
           },
           "retrato-editorial-06": {
             "alt": "Person seated on an urban terrace with plants and string lights"
@@ -339,7 +339,7 @@
             "alt": "Person seated on a bench in front of a colourful graffiti mural"
           },
           "retrato-editorial-10": {
-            "alt": "Portrait in a red-lit interior"
+            "alt": "A man in black sits on a tiled bench under a red neon sign reading ‘Wash me’"
           },
           "retrato-editorial-11": {
             "alt": "Person seated in a red-lit space with a neon sign"
@@ -352,13 +352,58 @@
           },
           "retrato-editorial-14": {
             "alt": "Person standing before a blue and purple graffiti mural at dusk"
+          },
+          "retrato-img-5522": {
+            "alt": "Person in a green shirt seated on a low wall beneath a pergola strung with bulbs"
+          },
+          "retrato-img-5597": {
+            "alt": "The same person stands in the doorway of a green-tiled bathroom"
+          },
+          "retrato-img-5476": {
+            "alt": "Person in sunglasses and a green shirt seated on a wooden terrace with a green bag"
+          },
+          "retrato-img-5487": {
+            "alt": "The same person rests their chin on their hand, the green bag at their feet"
+          },
+          "retrato-img-5795": {
+            "alt": "A man in a red shirt and sunglasses sits on a terrace with his hands on his head"
+          },
+          "retrato-img-5808": {
+            "alt": "The same man sits on a stool inside a bar"
+          },
+          "retrato-img-5851": {
+            "alt": "The same man reclines on a bench with one hand on his head"
+          },
+          "retrato-img-5860": {
+            "alt": "Close-up of the same man, chin raised, against a concrete wall"
+          },
+          "retrato-img-6648": {
+            "alt": "In an abandoned warehouse, one man crouches and another stands by a graffitied column; a burnt-out car behind them"
+          },
+          "retrato-img-5328": {
+            "alt": "A moustached man with folded arms sits on a tiled bench under red light"
+          },
+          "retrato-img-5400": {
+            "alt": "A man in a cropped black T-shirt, hands on his head, in front of a wall covered in graffiti"
+          },
+          "retrato-img-5425": {
+            "alt": "The same man among the wooden beams of a playground"
+          },
+          "retrato-img-5450": {
+            "alt": "The same man leans against a lamppost, arms folded"
+          },
+          "retrato-img-5454": {
+            "alt": "The same man points at an anti-Airbnb sticker on a lamppost"
+          },
+          "retrato-img-2364": {
+            "alt": "A person seen from behind in a tie-dye T-shirt, leaning over a wall with pink graffiti"
           }
         }
       },
       "musica-en-directo": {
-        "title": "Live Music",
-        "description": "Concert photography covering live music performances.",
-        "format": "Photography · Concerts",
+        "title": "Live music",
+        "description": "Indoor and outdoor concerts, shot from the stage and from within the crowd.",
+        "format": "Concerts",
         "roles": [
           "Photography"
         ],
@@ -373,47 +418,71 @@
             "alt": "Singer with a microphone surrounded by raised hands"
           },
           "musica-en-directo-04": {
-            "alt": "Singer outdoors with a microphone against a blue sky"
+            "alt": "A performer in a padded vest and black headscarf sings under a blue sky; behind, the ‘Madrid Salvaje’ sign"
           },
           "musica-en-directo-05": {
-            "alt": "Singer on an outdoor stage against a blue sky with clouds"
+            "alt": "In profile against a blue sky, a performer in a cap and white hoodie raises one hand"
           },
           "musica-en-directo-06": {
-            "alt": "Musician on stage with a guitar under stage lighting"
+            "alt": "In black and white, a performer sings among the crowd as people film him on their phones"
           },
           "musica-en-directo-07": {
-            "alt": "Crowd and stage during a live performance"
+            "alt": "A performer in a cap and white hoodie sings by the barrier, surrounded by the crowd"
           },
           "musica-en-directo-08": {
-            "alt": "Performer and crowd at a concert, in black and white"
+            "alt": "Under blue light, a performer kneels on stage, covering his face with his hand"
           },
           "musica-en-directo-09": {
-            "alt": "Performer facing the crowd at a night concert"
+            "alt": "Two performers on a blue-lit stage: one sings into the microphone; the other wears patchwork trousers"
           },
           "musica-en-directo-10": {
-            "alt": "Portrait of a musician on stage"
+            "alt": "A performer in a white tracksuit smiles, microphone in hand, under blue lights"
           },
           "musica-en-directo-11": {
-            "alt": "Musician on stage with concert lighting"
+            "alt": "A performer sings with his fist raised; behind him, his image on the stage screen"
           },
           "musica-en-directo-12": {
-            "alt": "Wide view of a concert and audience"
+            "alt": "A performer dressed in white sings under blue spotlights, facing the crowd's phones"
           },
           "musica-en-directo-13": {
-            "alt": "Stage and audience during a live set"
+            "alt": "Crossed beams of light over a performer in white singing; the crowd's hands in the foreground"
           },
           "musica-en-directo-14": {
-            "alt": "Singer with a microphone before a crowd with raised hands, in black and white"
+            "alt": "At night, the crowd films on their phones while carrying someone overhead"
+          },
+          "musica-img-6154": {
+            "alt": "Under violet light, a performer crouches on stage with his hands together in front of his face"
+          },
+          "musica-img-6317": {
+            "alt": "At night, a performer seen from behind holds the microphone out to the crowd, who raise their arms"
+          },
+          "musica-img-4929": {
+            "alt": "By day, a performer sings looking skyward on an outdoor stage bearing the ‘Madrid Salvaje’ sign; below, a camera operator films him"
+          },
+          "musica-img-4954": {
+            "alt": "A performer in a white hoodie stretches an arm towards the crowd on a smoky stage"
+          },
+          "musica-img-5004": {
+            "alt": "A performer in a beige tracksuit and sunglasses raises his microphone on an outdoor stage"
+          },
+          "musica-img-5038": {
+            "alt": "The same performer raises both arms beneath the ‘Madrid Salvaje’ sign"
+          },
+          "musica-img-5174": {
+            "alt": "A performer in a dark hoodie points at the crowd amid blue spotlights"
+          },
+          "musica-img-4596": {
+            "alt": "A performer in a tracksuit sings under intense green light"
           }
         }
       },
       "entre-tiendas-y-tambores": {
         "title": "Between Tents and Drums",
         "description": "A square with tents, handwritten signs, gathered groups and musicians playing percussion.",
-        "format": "Photography · Photo essay",
+        "format": "Photo essay",
         "media": {
           "entre-tiendas-y-tambores-001": {
-            "alt": "Daylight view of tents beneath a canopy and a banner, with people gathered among them."
+            "alt": "Tents beneath blue tarps and a banner reading ‘P.P. maltrata la infancia’ (‘The PP mistreats children’), with people sitting among them."
           },
           "entre-tiendas-y-tambores-002": {
             "alt": "Tents fill a square in front of buildings, with flags above them."
@@ -422,7 +491,7 @@
             "alt": "Tents and a handwritten banner beneath an overcast sky."
           },
           "entre-tiendas-y-tambores-004": {
-            "alt": "Wide view of tents, signs and people gathered beneath canopies."
+            "alt": "Tents and banners, one reading ‘PSOE y Sumar, responsables de nuestra miseria’ (‘PSOE and Sumar, responsible for our misery’); a person stands among them."
           },
           "entre-tiendas-y-tambores-005": {
             "alt": "People with a video camera film among the tents in the square."
@@ -431,16 +500,16 @@
             "alt": "Chairs and belongings arranged among tents and canopies."
           },
           "entre-tiendas-y-tambores-007": {
-            "alt": "Handwritten sign hanging above several tents."
+            "alt": "Beneath blue tarps, a handwritten sign above the tents: ‘La sociedad civil está gritando: ¡ya basta!’ (‘Civil society is shouting: enough!’)."
           },
           "entre-tiendas-y-tambores-008": {
-            "alt": "Two people beside a wheelchair among tents beneath a banner."
+            "alt": "Three young people chat among folding chairs and tents, beneath the ‘P.P. maltrata la infancia’ banner."
           },
           "entre-tiendas-y-tambores-009": {
-            "alt": "Red tent with a handwritten sign placed in front."
+            "alt": "A red tent with a handwritten sign: ‘¡Universitarios por la vivienda pública!’ (‘Students for public housing!’)."
           },
           "entre-tiendas-y-tambores-010": {
-            "alt": "View across a square covered with canopies and signs."
+            "alt": "A square covered by awnings, with tents and a banner reading ‘Frente a su especulación, okupación’ (‘Against their speculation, occupation’)."
           },
           "entre-tiendas-y-tambores-011": {
             "alt": "Tents beneath a canopy lit at dusk."
@@ -452,10 +521,10 @@
             "alt": "People dancing in a circle on a street at night."
           },
           "entre-tiendas-y-tambores-014": {
-            "alt": "Handwritten sign attached to a tent."
+            "alt": "On a tent, a handwritten sign: ‘Ser rentista no es un trabajo’ (‘Being a landlord is not a job’)."
           },
           "entre-tiendas-y-tambores-015": {
-            "alt": "Tents and a long banner beneath night lights."
+            "alt": "At night, tents and a long banner: ‘Se acabó. Bajemos los alquileres’ (‘Enough. Let's bring rents down’)."
           },
           "entre-tiendas-y-tambores-016": {
             "alt": "Musicians play string and percussion instruments in front of a circle of people."
@@ -464,13 +533,13 @@
             "alt": "Person sitting in front of a tent beneath a large banner."
           },
           "entre-tiendas-y-tambores-018": {
-            "alt": "Group gathered around musicians, in black and white."
+            "alt": "In black and white, a ring of people watches two people embracing in the middle."
           },
           "entre-tiendas-y-tambores-019": {
             "alt": "Person jumps in the middle of a group watching."
           },
           "entre-tiendas-y-tambores-020": {
-            "alt": "People talk beneath a large banner beside tents."
+            "alt": "At night, several people use ropes to hang the ‘P.P. maltrata la infancia’ banner."
           },
           "entre-tiendas-y-tambores-021": {
             "alt": "Person packs away a tent beneath blue tarps."
@@ -482,10 +551,10 @@
             "alt": "Crowd gathered in a lit square with hands raised."
           },
           "entre-tiendas-y-tambores-024": {
-            "alt": "Group raises their arms between buildings at night."
+            "alt": "At night, a group raises their arms; on the right, police officers stand by a cordon."
           },
           "entre-tiendas-y-tambores-025": {
-            "alt": "People hold a handwritten sign among the crowd."
+            "alt": "In the crowd, young people hold a sign: ‘Fondos buitre fuera de nuestras ciudades’ (‘Vulture funds out of our cities’)."
           },
           "entre-tiendas-y-tambores-026": {
             "alt": "Person with mouth open and hands together among the crowd."
@@ -494,7 +563,7 @@
             "alt": "Several people raise their hands during a nighttime gathering."
           },
           "entre-tiendas-y-tambores-028": {
-            "alt": "People gather beside a barrier as others raise their hands."
+            "alt": "A raised fist in the crowd; on the left, police officers in front of a building's façade."
           },
           "entre-tiendas-y-tambores-029": {
             "alt": "Group gathered in front of an equestrian statue in a lit square."
@@ -512,10 +581,10 @@
             "alt": "Crowd seen between raised arms in a lit square."
           },
           "entre-tiendas-y-tambores-034": {
-            "alt": "Vertical view of tents and a crowd beneath a rooftop sign."
+            "alt": "A crowd and tents beneath an illuminated sign on top of a building."
           },
           "entre-tiendas-y-tambores-035": {
-            "alt": "Vertical view of a crowd gathered beneath canopies at night."
+            "alt": "At night, a crowd fills the square beneath an illuminated sign."
           },
           "entre-tiendas-y-tambores-036": {
             "alt": "Percussionists in a circle among the crowd on a street at night."
@@ -529,76 +598,91 @@
         }
       },
       "calle-documental": {
-        "title": "Street & Documentary",
-        "description": "Documentary and street photography.",
-        "format": "Photography · Documentary",
+        "title": "Street & documentary",
+        "description": "A night-time demonstration in front of a violet-lit building, and street scenes in broad daylight.",
+        "format": "Street · Documentary",
         "roles": [
           "Photography"
         ],
         "media": {
           "calle-documental-01": {
-            "alt": "Historic building lit in lilac at night with a crowd in the street"
+            "alt": "A crowd at night in front of a grand building lit in violet"
           },
           "calle-documental-02": {
-            "alt": "Night street with people gathered in front of a lit building"
+            "alt": "At night, a person seen from behind in a woollen hat raises their arms in the crowd, beside a banner"
           },
           "calle-documental-03": {
             "alt": "Crowd with signs at a night demonstration in front of a violet-lit building"
           },
           "calle-documental-04": {
-            "alt": "Documentary portrait in the street"
+            "alt": "A man in sunglasses and a light shirt walks along a tree-lined avenue; behind him, another man in a red T-shirt"
           },
           "calle-documental-05": {
-            "alt": "Street scene in daylight"
+            "alt": "A taxi and a tuk-tuk full of tourists pass a brick building"
           },
           "calle-documental-06": {
-            "alt": "Glass facade reflecting a classical dome, in black and white"
+            "alt": "In black and white, a glass lift tower with a dome rising behind it"
           },
           "calle-documental-07": {
-            "alt": "Courtyard with potted plants and shadows seen through a grille"
+            "alt": "A sunny park: a person spreads their arms on the lawn while a girl runs; behind, people on a flight of steps"
           },
           "calle-documental-08": {
-            "alt": "Person seen from behind leaning on a wall with pink graffiti under a clear sky"
+            "alt": "Small potted trees lined up against a wall, seen through the bars of a gate"
+          },
+          "calle-img-4744": {
+            "alt": "A tree-lined avenue busy with pedestrians; an out-of-focus litter bin in the foreground"
+          },
+          "calle-img-4748": {
+            "alt": "A street musician plays guitar by a park railing; beside him, a man with a bicycle"
           }
         }
       },
       "estudio-editorial": {
-        "title": "Studio & Editorial",
-        "description": "Studio portrait and editorial photography.",
-        "format": "Photography · Studio · Editorial",
+        "title": "Studio & editorial",
+        "description": "Sessions on a white backdrop with props: old TV sets, an orange mirror, a suitcase and a guitar.",
+        "format": "Studio · Editorial",
         "roles": [
           "Photography"
         ],
         "media": {
           "estudio-editorial-01": {
-            "alt": "Person in a crochet jumper seated beside an orange ring mirror"
+            "alt": "A man in a crochet jumper crouches beside an orange mirror that reflects him, on a white background"
           },
           "estudio-editorial-02": {
-            "alt": "Person looking at their reflection in an orange ring mirror on a white background"
+            "alt": "The same man looks at himself in the orange mirror, on a white background"
           },
           "estudio-editorial-03": {
-            "alt": "Musician playing an electric guitar on a pale studio backdrop"
+            "alt": "A curly-haired man in a checked blazer plays a mint-green electric guitar against a studio backdrop"
           },
           "estudio-editorial-04": {
-            "alt": "Studio portrait on a pale background"
+            "alt": "A shaven-headed man in a pinstripe suit and green glasses sits astride a chair holding a red rose; a small TV at his feet"
           },
           "estudio-editorial-05": {
-            "alt": "Close studio portrait"
+            "alt": "The same man leans back on a chair, one leg raised, looking up"
           },
           "estudio-editorial-06": {
             "alt": "High-angle portrait of a person in a pinstripe suit and green-tinted glasses"
           },
           "estudio-editorial-07": {
-            "alt": "Three-quarter studio portrait"
+            "alt": "Two men on a white background: one, in a crochet jumper, leans on a chair; the other, in a pinstripe suit, looks at his phone"
           },
           "estudio-editorial-08": {
-            "alt": "Full-length studio portrait"
+            "alt": "A man in a crochet jumper rests one foot on a stool and holds an old green suitcase"
           },
           "estudio-editorial-09": {
-            "alt": "Editorial studio portrait"
+            "alt": "A man in a cap and grey cardigan sits on the floor beside an old TV set and cushions"
           },
           "estudio-editorial-10": {
-            "alt": "Editorial studio portrait, second frame"
+            "alt": "The same man reclines with his hands behind his head, between two old TV sets and a cushion"
+          },
+          "estudio-80c82615-228f-40a7-99de-ac4c0d672e38": {
+            "alt": "At dusk, a young man in a bucket hat and tie-dye T-shirt looks at something in his hands"
+          },
+          "estudio-dsc-1255": {
+            "alt": "A man in a pinstripe suit and green glasses crouches, holding a flip phone"
+          },
+          "estudio-dsc-1293": {
+            "alt": "Shot from above with a wide-angle lens, the man in green glasses grins, holding an open flip phone"
           }
         }
       }
@@ -612,14 +696,14 @@
     "languagesEyebrow": "Languages",
     "toolsEyebrow": "Tools",
     "viewFullExperience": "Full experience",
-    "bioMore": "I cover premieres, events and press conferences, interview artists and public figures, and write scripts and news pieces. I studied Journalism and Audiovisual Communication at Universidad Rey Juan Carlos. I also direct and edit short films, shoot and post-produce video, and photograph concerts, street scenes and portraits. Spanish and Russian are both my native languages.",
+    "bioMore": "I cover premieres, events and press conferences, interview artists and public figures, and write scripts and news pieces. I studied Journalism and Audiovisual Communication at Universidad Rey Juan Carlos. Spanish and Russian are both my native languages.",
     "baseLabel": "Base",
     "baseValue": "Madrid",
     "practiceEyebrow": "What I do",
     "practices": [
       {
         "title": "On camera",
-        "text": "Event reporting, interviews and scripts for television.",
+        "text": "Vertical pieces: interviews, walk-and-talks, how-tos and product tests.",
         "link": "See reporting",
         "section": "reporting"
       },
@@ -630,7 +714,7 @@
         "section": "audiovisual"
       },
       {
-        "title": "With a stills camera",
+        "title": "Photography",
         "text": "Concerts, street, portrait and studio.",
         "link": "See photography",
         "section": "photography"
@@ -650,9 +734,8 @@
         "period": "2024 — Present",
         "summary": "Event and press conference coverage, interviews, and writing scripts and news pieces for television.",
         "responsibilities": {
-          "eventCoverage": "Coverage of events and press conferences.",
+          "eventCoverage": "Coverage of premieres, events and press conferences.",
           "interviews": "Interviews with artists, actors and public figures.",
-          "eventReporting": "Reporting from events and premieres.",
           "scripts": "Writing scripts and news pieces."
         }
       },
@@ -756,7 +839,7 @@
     "baseValue": "Madrid",
     "contactPageEyebrow": "Contact",
     "contactPageTitle": "Get in touch",
-    "contactPageText": "If you have a job, a collaboration or a question about any of my work, email me.",
+    "contactPageText": "If you'd like to work together, or have a question about any of my pieces, email me.",
     "copy": "Copy email",
     "copied": "Copied",
     "languages": "Languages",

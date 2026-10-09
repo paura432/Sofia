@@ -104,6 +104,8 @@ export type ArchivePhoto = {
   height: number;
   aspectRatio?: string;
   blurDataURL?: string;
+  /** Clave de `Projects.items.<serie>.media` que guarda el ALT de esta foto. */
+  copyKey?: string;
 };
 
 const plazaSeriesOriginals = [
@@ -142,6 +144,13 @@ export const projectArchiveGroupMap = {
 } as const;
 
 export type ProjectArchiveSlug = keyof typeof projectArchiveGroupMap;
+
+export const archiveGroupProject = {
+  musica: "musica-en-directo",
+  calle: "calle-documental",
+  estudio: "estudio-editorial",
+  retrato: "retrato-editorial",
+} as const satisfies Record<keyof typeof photoArchiveGroups, ProjectArchiveSlug>;
 
 /** Main essay originals per project — mirrors scripts/media/curate-photos.mjs SELECTED. */
 const selectedOriginals: Record<ProjectArchiveSlug, readonly string[]> = {
@@ -216,11 +225,31 @@ export function getAdditionalPhotosForProject(slug: string): ArchivePhoto[] {
   return getAdditionalArchivePhotos(slug as ProjectArchiveSlug);
 }
 
+/**
+ * Las fotos del ensayo comparten texto con su copia en la ficha
+ * (`musica-en-directo-03` = `IMG_4768`, por su posición en `selectedOriginals`);
+ * el resto del archivo usa su propio id.
+ */
+export function archivePhotoCopyKey(
+  slug: ProjectArchiveSlug,
+  photo: ArchivePhoto,
+): string {
+  const position = selectedOriginals[slug].indexOf(photo.original);
+  return position < 0
+    ? photo.id
+    : `${slug}-${String(position + 1).padStart(2, "0")}`;
+}
+
 export function getArchivePhotosForProject(slug: string): ArchivePhoto[] {
-  if (slug === "entre-tiendas-y-tambores") return [...plazaSeriesPhotos];
+  if (slug === "entre-tiendas-y-tambores") {
+    return plazaSeriesPhotos.map((photo) => ({ ...photo, copyKey: photo.id }));
+  }
   if (!(slug in projectArchiveGroupMap)) return [];
-  const groupId = projectArchiveGroupMap[slug as ProjectArchiveSlug];
-  return [...photoArchiveGroups[groupId]];
+  const project = slug as ProjectArchiveSlug;
+  return photoArchiveGroups[projectArchiveGroupMap[project]].map((photo) => ({
+    ...photo,
+    copyKey: archivePhotoCopyKey(project, photo),
+  }));
 }
 
 export function flattenArchiveGroups(

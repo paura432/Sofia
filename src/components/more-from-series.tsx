@@ -75,7 +75,7 @@ function SeriesThumb({
   const landscape = item.width >= item.height;
 
   return (
-    <button aria-label={label} onClick={onOpen} type="button">
+    <button aria-haspopup="dialog" aria-label={label} onClick={onOpen} type="button">
       <Image
         alt={label}
         blurDataURL={item.blurDataURL}
@@ -125,7 +125,8 @@ export function MoreFromSeries({
     () =>
       items.map((item, index) => ({
         id: item.id,
-        label: copy[item.id]?.alt ?? `${seriesLabel} ${index + 1}`,
+        label: `${seriesLabel} ${index + 1}`,
+        alt: copy[item.copyKey ?? item.id]?.alt,
         src: item.src,
         width: item.width,
         height: item.height,
@@ -171,7 +172,7 @@ export function MoreFromSeries({
           <div className="more-from-series-single">
             <SeriesThumb
               item={items[0]}
-              label={viewerItems[0].label}
+              label={viewerItems[0].alt ?? viewerItems[0].label}
               onOpen={() => setActiveIndex(0)}
             />
           </div>
@@ -206,7 +207,7 @@ export function MoreFromSeries({
                     >
                       <SeriesThumb
                         item={photo}
-                        label={viewerItems[index].label}
+                        label={viewerItems[index].alt ?? viewerItems[index].label}
                         onOpen={() => setActiveIndex(index)}
                       />
                     </li>
@@ -224,7 +225,7 @@ export function MoreFromSeries({
               >
                 <SeriesThumb
                   item={item}
-                  label={viewerItems[index].label}
+                  label={viewerItems[index].alt ?? viewerItems[index].label}
                   onOpen={() => setActiveIndex(index)}
                 />
               </li>

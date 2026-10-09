@@ -64,7 +64,7 @@
   "Hero": {
     "dateline": "Periodista · Madrid",
     "role": "Reportera de televisión",
-    "summary": "Desde 2024 cubro estrenos, eventos y ruedas de prensa para Grupo Cadena Media y entrevisto a artistas y figuras públicas. Detrás de la cámara, dirijo cortometrajes y hago fotografía de conciertos, calle y retrato.",
+    "summary": "Desde 2024 cubro estrenos, eventos y ruedas de prensa para Grupo Cadena Media y entrevisto a artistas y figuras públicas. También dirijo cortometrajes y hago fotografía de conciertos, calle y retrato.",
     "actionsAria": "Acciones principales",
     "viewWork": "Ver todo el trabajo",
     "contact": "Escríbeme",
@@ -80,7 +80,7 @@
   },
   "Work": {
     "pageTitle": "Trabajo",
-    "pageText": "Primero, ante la cámara. Después, lo que ruedo y lo que fotografío.",
+    "pageText": "Primero, los reportajes; después, el audiovisual y la fotografía.",
     "sectionsAria": "Secciones de Trabajo",
     "reportingNav": "Reportajes",
     "audiovisualNav": "Audiovisual",
@@ -288,43 +288,43 @@
         "media": {
           "silver-praxis-condicion-perfecta-video": {
             "title": "Silver Praxis — Condición Perfecta",
-            "alt": "El artista junto a la puerta de un coche, de noche, iluminado en rosa y azul"
+            "alt": "El artista, sentado en un coche con la puerta abierta, de noche, iluminado en rosa y azul"
           }
         }
       },
       "reporter-reel": {
         "title": "Reporter reel",
         "description": "Selección de coberturas, entrevistas y piezas de reporterismo.",
-        "dek": "Reporterismo en estrenos, festivales y ruedas de prensa.",
+        "dek": "Reporterismo en estrenos, eventos y ruedas de prensa.",
         "format": "Televisión · Reel",
         "context": "Cobertura de eventos, entrevistas y reporterismo de campo.",
         "roles": [
-          "Reporterismo en estrenos, festivales y ruedas de prensa.",
+          "Reporterismo en estrenos, eventos y ruedas de prensa.",
           "Entrevistas a artistas, actores y figuras públicas."
         ]
       },
       "retrato-editorial": {
         "title": "Retrato y editorial",
-        "description": "Fotografía de retrato en localización urbana.",
-        "format": "Fotografía · Retrato · Editorial",
+        "description": "Retratos en una nave abandonada, una terraza, un local con neón rojo y calles con grafiti.",
+        "format": "Retrato · Editorial",
         "roles": [
           "Fotografía"
         ],
         "media": {
           "retrato-editorial-01": {
-            "alt": "Dos personas con camisetas negras ante un muro con graffiti bajo estructuras de hormigón"
+            "alt": "Dos personas con camisetas negras ante un muro con grafiti bajo estructuras de hormigón"
           },
           "retrato-editorial-02": {
-            "alt": "Retrato urbano junto a una arquitectura de hormigón"
+            "alt": "Dos hombres vestidos de negro, uno de pie y otro agachado, ante un muro con grafitis en un edificio abandonado"
           },
           "retrato-editorial-03": {
-            "alt": "Dos personas con camisetas negras frente a ventanas industriales con graffiti"
+            "alt": "Dos personas con camisetas negras frente a ventanas industriales con grafiti"
           },
           "retrato-editorial-04": {
-            "alt": "Retrato en localización urbana"
+            "alt": "Los dos hombres caminan entre escombros en una nave abandonada"
           },
           "retrato-editorial-05": {
-            "alt": "Retrato editorial en un entorno urbano"
+            "alt": "Los dos hombres avanzan hacia la cámara por una nave llena de escombros y grafitis"
           },
           "retrato-editorial-06": {
             "alt": "Persona sentada en una terraza urbana con vegetación y luces decorativas"
@@ -336,10 +336,10 @@
             "alt": "Retrato de un hombre con camiseta roja y las manos apoyadas en la cabeza"
           },
           "retrato-editorial-09": {
-            "alt": "Persona sentada en un banco ante un mural urbano con graffiti de colores"
+            "alt": "Persona sentada en un banco ante un mural urbano con grafitis de colores"
           },
           "retrato-editorial-10": {
-            "alt": "Retrato en un espacio de luz roja"
+            "alt": "Hombre vestido de negro, sentado en un banco alicatado bajo un neón rojo que dice «Wash me»"
           },
           "retrato-editorial-11": {
             "alt": "Persona sentada en un espacio de luz roja con letrero de neón"
@@ -351,14 +351,59 @@
             "alt": "Retrato cercano de una persona con gafas de sol y camisa verde a cuadros"
           },
           "retrato-editorial-14": {
-            "alt": "Persona de pie ante un mural de graffiti azul y morado al atardecer"
+            "alt": "Persona de pie ante un mural de grafiti azul y morado al atardecer"
+          },
+          "retrato-img-5522": {
+            "alt": "Persona con camisa verde sentada en un murete bajo una pérgola con bombillas"
+          },
+          "retrato-img-5597": {
+            "alt": "La misma persona, de pie en la puerta de un baño alicatado en verde"
+          },
+          "retrato-img-5476": {
+            "alt": "Persona con gafas de sol y camisa verde, sentada en una terraza de madera con un bolso verde"
+          },
+          "retrato-img-5487": {
+            "alt": "La misma persona, con el mentón apoyado en la mano y el bolso verde a sus pies"
+          },
+          "retrato-img-5795": {
+            "alt": "Hombre con camiseta roja y gafas de sol, sentado en una terraza con las manos en la cabeza"
+          },
+          "retrato-img-5808": {
+            "alt": "El mismo hombre, sentado en un taburete dentro de un bar"
+          },
+          "retrato-img-5851": {
+            "alt": "El mismo hombre, recostado en un banco con una mano en la cabeza"
+          },
+          "retrato-img-5860": {
+            "alt": "Primer plano del mismo hombre, con la barbilla alta, contra una pared de hormigón"
+          },
+          "retrato-img-6648": {
+            "alt": "En una nave abandonada, un hombre agachado y otro de pie junto a una columna con grafitis; al fondo, un coche calcinado"
+          },
+          "retrato-img-5328": {
+            "alt": "Hombre con bigote y brazos cruzados, sentado en un banco alicatado bajo luz roja"
+          },
+          "retrato-img-5400": {
+            "alt": "Hombre con camiseta negra corta y las manos sobre la cabeza, ante un muro lleno de grafitis"
+          },
+          "retrato-img-5425": {
+            "alt": "El mismo hombre, entre los troncos de un parque infantil"
+          },
+          "retrato-img-5450": {
+            "alt": "El mismo hombre, apoyado en una farola con los brazos cruzados"
+          },
+          "retrato-img-5454": {
+            "alt": "El mismo hombre señala una pegatina contra Airbnb pegada en una farola"
+          },
+          "retrato-img-2364": {
+            "alt": "Persona de espaldas, con camiseta tie-dye, asomada a un muro con un grafiti rosa"
           }
         }
       },
       "musica-en-directo": {
         "title": "Música en directo",
-        "description": "Cobertura fotográfica de actuaciones musicales en directo.",
-        "format": "Fotografía · Conciertos",
+        "description": "Conciertos en sala y al aire libre, desde el escenario y entre el público.",
+        "format": "Conciertos",
         "roles": [
           "Fotografía"
         ],
@@ -373,47 +418,71 @@
             "alt": "Artista cantando con micrófono rodeado de manos del público levantadas"
           },
           "musica-en-directo-04": {
-            "alt": "Artista cantando al aire libre con micrófono bajo un cielo azul"
+            "alt": "Artista con chaleco acolchado y pañuelo negro canta bajo un cielo azul; detrás, el rótulo «Madrid Salvaje»"
           },
           "musica-en-directo-05": {
-            "alt": "Artista cantando en escenario al aire libre contra un cielo azul con nubes"
+            "alt": "De perfil contra un cielo azul, un artista con gorra y sudadera blanca levanta una mano"
           },
           "musica-en-directo-06": {
-            "alt": "Músico en escenario con guitarra bajo luz de escenario"
+            "alt": "En blanco y negro, un artista canta entre el público, que le graba con el móvil"
           },
           "musica-en-directo-07": {
-            "alt": "Público y escenario durante una actuación en directo"
+            "alt": "Un artista con gorra y sudadera blanca canta junto a la valla, rodeado de público"
           },
           "musica-en-directo-08": {
-            "alt": "Artista y público en un concierto, en blanco y negro"
+            "alt": "Bajo luz azul, un artista arrodillado en el escenario se tapa la cara con la mano"
           },
           "musica-en-directo-09": {
-            "alt": "Gesto del artista frente al público en un concierto nocturno"
+            "alt": "Dos artistas en un escenario con luz azul: uno canta con el micrófono; el otro lleva un pantalón de retales de colores"
           },
           "musica-en-directo-10": {
-            "alt": "Retrato de un músico en escenario"
+            "alt": "Un artista con chándal blanco sonríe con el micrófono bajo luces azules"
           },
           "musica-en-directo-11": {
-            "alt": "Músico en escena con iluminación de concierto"
+            "alt": "Un artista canta con el puño en alto; detrás, su imagen en la pantalla del escenario"
           },
           "musica-en-directo-12": {
-            "alt": "Vista amplia de un concierto con público"
+            "alt": "Un artista vestido de blanco canta bajo focos azules ante los móviles del público"
           },
           "musica-en-directo-13": {
-            "alt": "Escenario y público durante una actuación"
+            "alt": "Haces de luz cruzados sobre un artista de blanco que canta; en primer plano, manos del público"
           },
           "musica-en-directo-14": {
-            "alt": "Artista con micrófono ante el público y las manos levantadas, en blanco y negro"
+            "alt": "De noche, el público graba con los móviles mientras lleva a alguien en volandas"
+          },
+          "musica-img-6154": {
+            "alt": "Bajo luz violeta, un artista agachado en el escenario junta las manos ante la cara"
+          },
+          "musica-img-6317": {
+            "alt": "De noche, un artista de espaldas acerca el micrófono al público, que levanta los brazos"
+          },
+          "musica-img-4929": {
+            "alt": "De día, un artista canta mirando al cielo en un escenario al aire libre con el rótulo «Madrid Salvaje»; abajo, un cámara le graba"
+          },
+          "musica-img-4954": {
+            "alt": "Un artista con sudadera blanca extiende el brazo hacia el público en un escenario con humo"
+          },
+          "musica-img-5004": {
+            "alt": "Un artista con chándal beis y gafas de sol levanta el micrófono en un escenario al aire libre"
+          },
+          "musica-img-5038": {
+            "alt": "El mismo artista levanta los brazos bajo el rótulo «Madrid Salvaje»"
+          },
+          "musica-img-5174": {
+            "alt": "Un artista con sudadera oscura señala al público entre focos azules"
+          },
+          "musica-img-4596": {
+            "alt": "Un artista en chándal canta bajo una luz verde intensa"
           }
         }
       },
       "entre-tiendas-y-tambores": {
         "title": "Entre tiendas y tambores",
         "description": "Una plaza con tiendas de campaña, carteles hechos a mano, grupos reunidos y músicos con percusión.",
-        "format": "Fotografía · Ensayo fotográfico",
+        "format": "Ensayo fotográfico",
         "media": {
           "entre-tiendas-y-tambores-001": {
-            "alt": "Vista diurna de varias tiendas bajo un toldo y una pancarta, con personas reunidas entre ellas."
+            "alt": "Tiendas de campaña bajo lonas azules y la pancarta «P.P. maltrata la infancia», con personas sentadas entre ellas."
           },
           "entre-tiendas-y-tambores-002": {
             "alt": "Varias tiendas de campaña ocupan una plaza frente a edificios, con banderas sobre el conjunto."
@@ -422,7 +491,7 @@
             "alt": "Tiendas de campaña y una pancarta manuscrita bajo el cielo nublado."
           },
           "entre-tiendas-y-tambores-004": {
-            "alt": "Vista amplia de tiendas, carteles y personas reunidas bajo estructuras cubiertas."
+            "alt": "Tiendas de campaña y pancartas, una con el lema «PSOE y Sumar, responsables de nuestra miseria»; una persona de pie entre ellas."
           },
           "entre-tiendas-y-tambores-005": {
             "alt": "Personas con una cámara de vídeo graban entre las tiendas de campaña de la plaza."
@@ -431,16 +500,16 @@
             "alt": "Sillas y utensilios dispuestos entre tiendas de campaña y toldos."
           },
           "entre-tiendas-y-tambores-007": {
-            "alt": "Cartel manuscrito colgado sobre varias tiendas de campaña."
+            "alt": "Bajo lonas azules, un cartel escrito a mano sobre las tiendas: «La sociedad civil está gritando: ¡ya basta!»."
           },
           "entre-tiendas-y-tambores-008": {
-            "alt": "Dos personas junto a una silla de ruedas entre tiendas bajo una pancarta."
+            "alt": "Tres jóvenes charlan entre sillas plegables y tiendas, bajo la pancarta «P.P. maltrata la infancia»."
           },
           "entre-tiendas-y-tambores-009": {
-            "alt": "Tienda roja con un cartel manuscrito delante."
+            "alt": "Tienda roja con un cartel escrito a mano: «¡Universitarios por la vivienda pública!»."
           },
           "entre-tiendas-y-tambores-010": {
-            "alt": "Vista de una plaza cubierta por toldos y carteles."
+            "alt": "Plaza cubierta por toldos, con tiendas y la pancarta «Frente a su especulación, okupación»."
           },
           "entre-tiendas-y-tambores-011": {
             "alt": "Tiendas de campaña bajo un toldo iluminado al anochecer."
@@ -452,10 +521,10 @@
             "alt": "Personas bailan en círculo en una calle iluminada de noche."
           },
           "entre-tiendas-y-tambores-014": {
-            "alt": "Cartel escrito a mano sobre una tienda de campaña."
+            "alt": "Sobre una tienda, un cartel escrito a mano: «Ser rentista no es un trabajo»."
           },
           "entre-tiendas-y-tambores-015": {
-            "alt": "Tiendas y una pancarta larga bajo luces nocturnas."
+            "alt": "De noche, tiendas y una pancarta larga: «Se acabó. Bajemos los alquileres»."
           },
           "entre-tiendas-y-tambores-016": {
             "alt": "Músicos con instrumentos de cuerda y percusión tocan ante un círculo de personas."
@@ -464,13 +533,13 @@
             "alt": "Persona sentada ante una tienda bajo una gran pancarta."
           },
           "entre-tiendas-y-tambores-018": {
-            "alt": "Grupo reunido alrededor de músicos, en blanco y negro."
+            "alt": "En blanco y negro, un corro de gente mira a dos personas que se abrazan en el centro."
           },
           "entre-tiendas-y-tambores-019": {
             "alt": "Una persona salta en el centro de un grupo que observa."
           },
           "entre-tiendas-y-tambores-020": {
-            "alt": "Personas conversan bajo una gran pancarta, junto a tiendas."
+            "alt": "De noche, varias personas cuelgan con cuerdas la pancarta «P.P. maltrata la infancia»."
           },
           "entre-tiendas-y-tambores-021": {
             "alt": "Una persona recoge una tienda de campaña bajo lonas azules."
@@ -482,10 +551,10 @@
             "alt": "Público reunido en una plaza iluminada, con las manos alzadas."
           },
           "entre-tiendas-y-tambores-024": {
-            "alt": "Grupo de personas levanta los brazos entre edificios de noche."
+            "alt": "De noche, un grupo levanta los brazos; a la derecha, agentes de policía junto a un cordón."
           },
           "entre-tiendas-y-tambores-025": {
-            "alt": "Personas sostienen una pancarta manuscrita entre el público."
+            "alt": "Entre la multitud, unos jóvenes sostienen un cartel: «Fondos buitre fuera de nuestras ciudades»."
           },
           "entre-tiendas-y-tambores-026": {
             "alt": "Persona con la boca abierta y las manos juntas entre la multitud."
@@ -494,7 +563,7 @@
             "alt": "Varias personas alzan las manos durante una reunión nocturna."
           },
           "entre-tiendas-y-tambores-028": {
-            "alt": "Personas reunidas junto a una barrera mientras otras levantan las manos."
+            "alt": "Un puño en alto entre la multitud; a la izquierda, policías ante la fachada de un edificio."
           },
           "entre-tiendas-y-tambores-029": {
             "alt": "Grupo reunido frente a una estatua ecuestre en una plaza iluminada."
@@ -512,10 +581,10 @@
             "alt": "Multitud vista entre brazos levantados en una plaza iluminada."
           },
           "entre-tiendas-y-tambores-034": {
-            "alt": "Vista vertical de tiendas y multitud bajo un letrero en una azotea."
+            "alt": "Multitud y tiendas bajo un letrero luminoso en lo alto de un edificio."
           },
           "entre-tiendas-y-tambores-035": {
-            "alt": "Vista vertical de una multitud reunida bajo toldos por la noche."
+            "alt": "De noche, una multitud llena la plaza bajo un letrero luminoso."
           },
           "entre-tiendas-y-tambores-036": {
             "alt": "Percusionistas en círculo entre el público en una calle nocturna."
@@ -530,75 +599,90 @@
       },
       "calle-documental": {
         "title": "Calle y documental",
-        "description": "Fotografía documental y de calle.",
-        "format": "Fotografía · Documental",
+        "description": "Una manifestación nocturna ante un edificio iluminado en violeta y escenas de calle a plena luz.",
+        "format": "Calle · Documental",
         "roles": [
           "Fotografía"
         ],
         "media": {
           "calle-documental-01": {
-            "alt": "Edificio histórico iluminado en lila durante la noche con multitud de personas en la calle"
+            "alt": "Multitud de noche ante un edificio monumental iluminado en violeta"
           },
           "calle-documental-02": {
-            "alt": "Calle nocturna con gente reunida frente a un edificio iluminado"
+            "alt": "De noche, una persona de espaldas con gorro de lana levanta los brazos entre la multitud, junto a una pancarta"
           },
           "calle-documental-03": {
             "alt": "Multitud con carteles en manifestación nocturna ante un edificio iluminado en violeta"
           },
           "calle-documental-04": {
-            "alt": "Retrato documental en la calle"
+            "alt": "Un hombre con gafas de sol y camisa clara camina por un paseo arbolado; detrás, otro con camiseta roja"
           },
           "calle-documental-05": {
-            "alt": "Escena de calle a plena luz"
+            "alt": "Un taxi y un tuk-tuk lleno de turistas pasan ante un edificio de ladrillo"
           },
           "calle-documental-06": {
-            "alt": "Fachada de cristal con reflejo de una cúpula clásica, en blanco y negro"
+            "alt": "En blanco y negro, una torre de ascensores de cristal; detrás asoma una cúpula"
           },
           "calle-documental-07": {
-            "alt": "Patio con macetas alineadas y sus sombras visto a través de una verja"
+            "alt": "Un parque soleado: una persona abre los brazos en el césped mientras una niña corre; al fondo, gente en una escalinata"
           },
           "calle-documental-08": {
-            "alt": "Persona de espaldas apoyada en un muro con grafiti rosa bajo un cielo despejado"
+            "alt": "Macetas con arbolitos alineadas contra un muro, vistas entre los barrotes de una verja"
+          },
+          "calle-img-4744": {
+            "alt": "Paseo arbolado con muchos peatones; en primer plano, una papelera desenfocada"
+          },
+          "calle-img-4748": {
+            "alt": "Un músico callejero toca la guitarra junto a la verja de un parque; a su lado, un hombre con bicicleta"
           }
         }
       },
       "estudio-editorial": {
         "title": "Estudio y editorial",
-        "description": "Retrato de estudio y fotografía editorial.",
-        "format": "Fotografía · Estudio · Editorial",
+        "description": "Sesiones sobre fondo blanco con atrezo: televisores antiguos, un espejo naranja, una maleta y una guitarra.",
+        "format": "Estudio · Editorial",
         "roles": [
           "Fotografía"
         ],
         "media": {
           "estudio-editorial-01": {
-            "alt": "Persona con jersey de crochet sentada junto a un espejo de aro naranja"
+            "alt": "Hombre con jersey de ganchillo, agachado junto a un espejo naranja que le refleja, sobre fondo blanco"
           },
           "estudio-editorial-02": {
-            "alt": "Persona mirando su reflejo en un espejo de aro naranja sobre fondo blanco"
+            "alt": "El mismo hombre se mira en el espejo naranja, sobre fondo blanco"
           },
           "estudio-editorial-03": {
-            "alt": "Músico tocando la guitarra eléctrica en un escenario con fondo claro"
+            "alt": "Hombre de pelo rizado con americana de cuadros toca una guitarra eléctrica verde agua sobre fondo de estudio"
           },
           "estudio-editorial-04": {
-            "alt": "Retrato de estudio sobre fondo claro"
+            "alt": "Hombre rapado con traje de raya diplomática y gafas verdes, a horcajadas en una silla y con una rosa roja; a sus pies, un televisor pequeño"
           },
           "estudio-editorial-05": {
-            "alt": "Retrato de estudio, encuadre cercano"
+            "alt": "El mismo hombre, recostado en una silla, levanta una pierna y mira hacia arriba"
           },
           "estudio-editorial-06": {
             "alt": "Retrato en picado de una persona con traje de rayas y gafas de cristal verde"
           },
           "estudio-editorial-07": {
-            "alt": "Retrato de estudio de tres cuartos"
+            "alt": "Dos hombres sobre fondo blanco: uno, con jersey de ganchillo, se apoya en una silla; el otro, con traje de rayas, mira el móvil"
           },
           "estudio-editorial-08": {
-            "alt": "Retrato de estudio de cuerpo entero"
+            "alt": "Hombre con jersey de ganchillo apoya un pie en un taburete y sostiene una maleta verde antigua"
           },
           "estudio-editorial-09": {
-            "alt": "Retrato editorial de estudio"
+            "alt": "Hombre con gorra y chaqueta gris, sentado en el suelo junto a un televisor antiguo y unos cojines"
           },
           "estudio-editorial-10": {
-            "alt": "Retrato editorial de estudio, segundo encuadre"
+            "alt": "El mismo hombre, recostado con las manos en la nuca, entre dos televisores antiguos y un cojín"
+          },
+          "estudio-80c82615-228f-40a7-99de-ac4c0d672e38": {
+            "alt": "Al atardecer, un joven con gorro de pescador y camiseta tie-dye mira algo que sostiene en las manos"
+          },
+          "estudio-dsc-1255": {
+            "alt": "Hombre con traje de rayas y gafas verdes, agachado, con un móvil de tapa en la mano"
+          },
+          "estudio-dsc-1293": {
+            "alt": "En picado y con gran angular, el hombre de las gafas verdes sonríe con un móvil de tapa abierto"
           }
         }
       }
@@ -612,14 +696,14 @@
     "languagesEyebrow": "Idiomas",
     "toolsEyebrow": "Herramientas",
     "viewFullExperience": "Experiencia completa",
-    "bioMore": "Cubro estrenos, eventos y ruedas de prensa, entrevisto a artistas y figuras públicas y escribo guiones y piezas informativas. Estudié Periodismo y Comunicación Audiovisual en la Universidad Rey Juan Carlos. Además, dirijo y monto cortometrajes, ruedo y posproduzco vídeo y hago fotografía de conciertos, calle y retrato. Hablo español y ruso como lenguas nativas.",
+    "bioMore": "Cubro estrenos, eventos y ruedas de prensa, entrevisto a artistas y figuras públicas y escribo guiones y piezas informativas. Estudié Periodismo y Comunicación Audiovisual en la Universidad Rey Juan Carlos. Hablo español y ruso como lenguas nativas.",
     "baseLabel": "Base",
     "baseValue": "Madrid",
     "practiceEyebrow": "Lo que hago",
     "practices": [
       {
         "title": "Ante la cámara",
-        "text": "Reporterismo de eventos, entrevistas y guion para televisión.",
+        "text": "Reportajes en vertical: entrevistas, paseos a cámara, guías y pruebas de producto.",
         "link": "Ver reportajes",
         "section": "reporting"
       },
@@ -630,7 +714,7 @@
         "section": "audiovisual"
       },
       {
-        "title": "Con la cámara de fotos",
+        "title": "Fotografía",
         "text": "Conciertos, calle, retrato y estudio.",
         "link": "Ver fotografía",
         "section": "photography"
@@ -650,9 +734,8 @@
         "period": "2024 — Actualidad",
         "summary": "Cobertura de eventos y ruedas de prensa, realización de entrevistas y redacción de guiones y piezas informativas para televisión.",
         "responsibilities": {
-          "eventCoverage": "Cobertura de eventos y ruedas de prensa.",
+          "eventCoverage": "Cobertura de estrenos, eventos y ruedas de prensa.",
           "interviews": "Entrevistas a artistas, actores y figuras públicas.",
-          "eventReporting": "Reporterismo en eventos y estrenos.",
           "scripts": "Redacción de guiones y piezas informativas."
         }
       },
