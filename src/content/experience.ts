@@ -23,7 +23,6 @@ export type ResponsibilityKey =
   | "stakeholders"
   | "photoSessions"
   | "clientService"
-  | "fastPaced"
   | "editing"
   | "sales";
 
@@ -101,7 +100,6 @@ export const experience: ExperienceItem[] = [
       "editing",
       "sales",
       "clientService",
-      "fastPaced",
     ],
     source: "cv",
     verification: "verified",

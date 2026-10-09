@@ -1,12 +1,12 @@
 {
   "Metadata": {
-    "siteTitle": "Sofía Chernikova — Periodista y Reportera TV",
+    "siteTitle": "Sofía Chernikova — Periodista y reportera de televisión",
     "siteDescription": "Sofía Chernikova, periodista y reportera de televisión en Madrid. Reportajes ante la cámara, cortometrajes y fotografía.",
     "ogAlt": "Portfolio profesional de Sofía Chernikova",
-    "personRole": "Periodista y Reportera TV",
+    "personRole": "Periodista y reportera de televisión",
     "pages": {
       "home": {
-        "title": "Sofía Chernikova — Periodista y Reportera TV",
+        "title": "Sofía Chernikova — Periodista y reportera de televisión",
         "description": "Sofía Chernikova, periodista y reportera de televisión en Madrid. Reportajes ante la cámara, cortometrajes y fotografía."
       },
       "work": {
@@ -15,7 +15,7 @@
       },
       "photoArchive": {
         "title": "Archivo fotográfico",
-        "description": "Explora las 74 fotografías del archivo de Sofía Chernikova."
+        "description": "Las 74 fotografías del archivo de Sofía Chernikova, ordenadas por temas."
       },
       "about": {
         "title": "Perfil",
@@ -64,7 +64,7 @@
   "Hero": {
     "dateline": "Periodista · Madrid",
     "role": "Reportera de televisión",
-    "summary": "Desde 2024 cubro estrenos, festivales y ruedas de prensa para Grupo Cadena Media, y entrevisto a artistas y figuras públicas. Detrás de la cámara, dirijo cortometrajes y fotografío conciertos, retratos y calle.",
+    "summary": "Desde 2024 cubro estrenos, eventos y ruedas de prensa para Grupo Cadena Media y entrevisto a artistas y figuras públicas. Detrás de la cámara, dirijo cortometrajes y hago fotografía de conciertos, calle y retrato.",
     "actionsAria": "Acciones principales",
     "viewWork": "Ver todo el trabajo",
     "contact": "Escríbeme",
@@ -91,7 +91,7 @@
     "reportingText": "Entrevista, paseo a cámara, guía y prueba de producto, en vertical. Mejor con sonido.",
     "audiovisualKicker": "Audiovisual",
     "audiovisualTitle": "Detrás de la cámara",
-    "audiovisualText": "Cortometrajes que dirijo y monto, y un videoclip que rodé y posproduje.",
+    "audiovisualText": "Dirigí los dos cortometrajes y monté «Tras el sofá». Del videoclip de Silver Praxis hice el rodaje y la posproducción.",
     "photographyKicker": "Fotografía",
     "photographyTitle": "Conciertos, calle y retrato",
     "photographyText": "Series completas y un archivo de 74 fotografías para mirar sin prisa.",
@@ -101,7 +101,6 @@
     "shortFormShowLess": "Ver menos",
     "viewAudiovisual": "Todo el audiovisual",
     "viewPhotography": "Toda la fotografía",
-    "archiveCountLabel": "fotografías",
     "backToPhotography": "Fotografía",
     "photographyEyebrow": "Fotografía",
     "archiveTitle": "Archivo fotográfico",
@@ -112,9 +111,9 @@
     "archiveEstudio": "Estudio",
     "archiveCalle": "Calle",
     "archiveMusicaFull": "Música en directo",
-    "archiveRetratoFull": "Retrato & editorial",
-    "archiveEstudioFull": "Estudio & editorial",
-    "archiveCalleFull": "Calle & documental",
+    "archiveRetratoFull": "Retrato y editorial",
+    "archiveEstudioFull": "Estudio y editorial",
+    "archiveCalleFull": "Calle y documental",
     "archiveClose": "Cerrar",
     "archivePrev": "Anterior",
     "archiveNext": "Siguiente",
@@ -132,11 +131,11 @@
     "nextProject": "Proyecto siguiente",
     "prevProject": "Proyecto anterior",
     "moreFromSeries": "Más de esta serie",
-    "moreFromSeriesCount": "{count} imágenes",
+    "moreFromSeriesCount": "{count, plural, one {# imagen} other {# imágenes}}",
     "seriesNavigation": "Navegación de serie fotográfica",
     "seriesStory": "Historia",
     "seriesComplete": "Serie completa",
-    "seriesCompleteCount": "{count} imágenes",
+    "seriesCompleteCount": "{count, plural, one {# imagen} other {# imágenes}}",
     "viewerPrev": "Anterior",
     "viewerNext": "Siguiente",
     "viewerClose": "Cerrar",
@@ -161,7 +160,7 @@
       "valencia": "Valencia"
     },
     "disciplines": {
-      "reporting": "Reporting",
+      "reporting": "Reportajes",
       "interview": "Entrevista",
       "video": "Vídeo",
       "audiovisual": "Audiovisual",
@@ -274,7 +273,7 @@
         "description": "Videoclip de «Condición Perfecta», de Silver Praxis.",
         "format": "Videoclip",
         "roles": [
-          "Rodaje y postproducción — Sofía Chernikova"
+          "Rodaje y posproducción — Sofía Chernikova"
         ],
         "credits": {
           "filming": "Sofía Chernikova",
@@ -282,7 +281,7 @@
           "production": "Silver Praxis"
         },
         "creditLabels": {
-          "filming": "Rodaje y postproducción",
+          "filming": "Rodaje y posproducción",
           "creative": "Dirección creativa, estilismo y lettering",
           "production": "Producción, mezcla y master"
         },
@@ -305,7 +304,7 @@
         ]
       },
       "retrato-editorial": {
-        "title": "Retrato & Editorial",
+        "title": "Retrato y editorial",
         "description": "Fotografía de retrato en localización urbana.",
         "format": "Fotografía · Retrato · Editorial",
         "roles": [
@@ -530,7 +529,7 @@
         }
       },
       "calle-documental": {
-        "title": "Calle & Documental",
+        "title": "Calle y documental",
         "description": "Fotografía documental y de calle.",
         "format": "Fotografía · Documental",
         "roles": [
@@ -564,7 +563,7 @@
         }
       },
       "estudio-editorial": {
-        "title": "Estudio & Editorial",
+        "title": "Estudio y editorial",
         "description": "Retrato de estudio y fotografía editorial.",
         "format": "Fotografía · Estudio · Editorial",
         "roles": [
@@ -606,14 +605,14 @@
     }
   },
   "Profile": {
-    "bio": "Soy periodista y reportera de televisión. Trabajo en Grupo Cadena Media desde 2024: cubro estrenos, festivales y ruedas de prensa, entrevisto a artistas y figuras públicas y escribo guiones y piezas informativas.",
+    "bio": "Soy periodista y reportera de televisión. Trabajo en Grupo Cadena Media desde 2024.",
     "aboutPageEyebrow": "Perfil",
     "portraitAlt": "Retrato de Sofía Chernikova",
     "educationEyebrow": "Formación",
     "languagesEyebrow": "Idiomas",
     "toolsEyebrow": "Herramientas",
     "viewFullExperience": "Experiencia completa",
-    "bioMore": "Estudié Periodismo y Comunicación Audiovisual en la Universidad Rey Juan Carlos. Además de reportear, dirijo y monto cortometrajes, ruedo y posproduzco vídeo, y hago fotografía de conciertos, calle y retrato. Hablo español y ruso como lenguas nativas.",
+    "bioMore": "Cubro estrenos, eventos y ruedas de prensa, entrevisto a artistas y figuras públicas y escribo guiones y piezas informativas. Estudié Periodismo y Comunicación Audiovisual en la Universidad Rey Juan Carlos. Además, dirijo y monto cortometrajes, ruedo y posproduzco vídeo y hago fotografía de conciertos, calle y retrato. Hablo español y ruso como lenguas nativas.",
     "baseLabel": "Base",
     "baseValue": "Madrid",
     "practiceEyebrow": "Lo que hago",
@@ -626,7 +625,7 @@
       },
       {
         "title": "Detrás de la cámara",
-        "text": "Dirección y montaje de cortometrajes; rodaje y postproducción de un videoclip.",
+        "text": "Dirección y montaje de cortometrajes; rodaje y posproducción de un videoclip.",
         "link": "Ver audiovisual",
         "section": "audiovisual"
       },
@@ -659,7 +658,7 @@
       },
       "urjcmun": {
         "role": "Deputy Director for Social Media",
-        "discipline": "Comunicación · Social Media · Liderazgo",
+        "discipline": "Comunicación · Redes sociales · Coordinación",
         "period": "2022 — 2026",
         "summary": "De Communication Team y Camera Operator a Deputy Director for Social Media (2026).",
         "context": "Modelo de Naciones Unidas de la Universidad Rey Juan Carlos, incluida su edición URJCmun TEEN.",
@@ -679,7 +678,7 @@
         }
       },
       "annie-bonnie": {
-        "role": "Comunicación Corporativa",
+        "role": "Comunicación corporativa",
         "discipline": "Contenido · Audiovisual · Comunicación",
         "period": "2025 — 2026",
         "summary": "Redacción, producción audiovisual, eventos y planificación editorial.",
@@ -688,23 +687,22 @@
           "writing": "Redacción de artículos para blog corporativo y contenidos web.",
           "videoProduction": "Grabación y edición de piezas audiovisuales.",
           "socialContent": "Producción de contenido para redes sociales y comunicación interna.",
-          "events": "Organización y cobertura de eventos.",
+          "events": "Apoyo en la organización y cobertura de eventos.",
           "stakeholders": "Comunicación con público y colaboradores.",
           "calendar": "Apoyo en estrategia de contenidos y calendario editorial."
         }
       },
       "isocero": {
-        "role": "Fotógrafa en Hoteles",
+        "role": "Fotógrafa en hoteles",
         "discipline": "Fotografía · Retrato · Atención al cliente",
         "period": "2023",
         "summary": "Sesiones de retrato, edición y atención a clientes en hoteles.",
         "context": "Estudio especializado en fotografía de retrato en entornos hoteleros y turísticos.",
         "responsibilities": {
           "photoSessions": "Sesiones fotográficas con familias y niños.",
-          "editing": "Edición profesional de imágenes.",
+          "editing": "Edición de las fotografías.",
           "sales": "Venta de fotografías personalizadas.",
-          "clientService": "Atención y asesoramiento al cliente.",
-          "fastPaced": "Trabajo en entornos dinámicos y orientados al cliente."
+          "clientService": "Atención y asesoramiento al cliente."
         }
       }
     }
@@ -758,7 +756,7 @@
     "baseValue": "Madrid",
     "contactPageEyebrow": "Contacto",
     "contactPageTitle": "¿Hablamos?",
-    "contactPageText": "Para propuestas de trabajo, colaboraciones o preguntas sobre cualquiera de estas piezas, escríbeme.",
+    "contactPageText": "Si tienes una propuesta de trabajo, una colaboración o una pregunta sobre alguna de mis piezas, escríbeme.",
     "copy": "Copiar email",
     "copied": "Copiado",
     "languages": "Idiomas",
