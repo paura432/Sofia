@@ -7,7 +7,6 @@ export type ExperienceId =
 export type ResponsibilityKey =
   | "eventCoverage"
   | "interviews"
-  | "eventReporting"
   | "scripts"
   | "socialStrategy"
   | "copyMetrics"
@@ -51,7 +50,6 @@ export const experience: ExperienceItem[] = [
     responsibilityKeys: [
       "eventCoverage",
       "interviews",
-      "eventReporting",
       "scripts",
     ],
     featured: true,

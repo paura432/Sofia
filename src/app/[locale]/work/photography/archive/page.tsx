@@ -3,7 +3,13 @@ import { getTranslations } from "next-intl/server";
 
 import { PhotoArchive } from "@/components/photo-archive";
 import { Reveal } from "@/components/motion/reveal";
-import { PHOTO_ARCHIVE_COUNT } from "@/content/photo-archive-data";
+import {
+  PHOTO_ARCHIVE_COUNT,
+  archiveGroupProject,
+  archivePhotoCopyKey,
+  photoArchiveGroups,
+} from "@/content/photo-archive-data";
+import type { MediaCopy } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
@@ -23,8 +29,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
+/** ALT de cada foto del archivo, tomado del texto de su serie. */
+function archiveAlts(projects: Awaited<ReturnType<typeof getTranslations<"Projects">>>) {
+  const alts: Record<string, string> = {};
+  for (const [group, slug] of Object.entries(archiveGroupProject)) {
+    const media = projects.raw(`items.${slug}.media`) as Record<string, MediaCopy>;
+    for (const photo of photoArchiveGroups[group as keyof typeof photoArchiveGroups]) {
+      const alt = media[archivePhotoCopyKey(slug, photo)]?.alt;
+      if (alt) alts[photo.id] = alt;
+    }
+  }
+  return alts;
+}
+
 export default async function PhotographyArchivePage() {
-  const t = await getTranslations("Work");
+  const [t, projects] = await Promise.all([
+    getTranslations("Work"),
+    getTranslations("Projects"),
+  ]);
   return (
     <main id="main">
       <section className="page-hero section section-first">
@@ -36,6 +58,7 @@ export default async function PhotographyArchivePage() {
         </Reveal>
       </section>
       <PhotoArchive
+        alts={archiveAlts(projects)}
         closeLabel={t("archiveClose")}
         groups={[
           { id: "musica", title: t("archiveMusicaFull") },

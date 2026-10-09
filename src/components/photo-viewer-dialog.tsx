@@ -5,7 +5,10 @@ import { useEffect, useId, useRef } from "react";
 
 export type PhotoViewerItem = {
   id: string;
+  /** Pie visible del visor: corto (serie, posición o caption real). */
   label: string;
+  /** Descripción para lectores de pantalla. Sin ella se usa `label`. */
+  alt?: string;
   src: string;
   width: number;
   height: number;
@@ -152,7 +155,7 @@ export function PhotoViewerDialog({
           >
             <Image
               key={active.id}
-              alt={active.label}
+              alt={active.alt ?? active.label}
               height={active.height}
               sizes="100dvw"
               src={active.src}

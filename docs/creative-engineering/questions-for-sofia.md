@@ -42,3 +42,15 @@ Ver `docs/editorial-audit/README.md` §5. Mientras no haya respuesta, la web usa
 - **URJC**: ¿has terminado el grado? (Hoy «Estudié»; no se afirma la titulación.)
 - **Nombre en ruso**: ¿«София Черникова» es la grafía que usas? (Aplicada en la prosa rusa; la marca sigue en latín.)
 - **Cortometrajes**: una sinopsis de una línea para *4 MINUTOS* y *Tras el sofá*, si quieres que la ficha diga algo más que el formato.
+
+## Segunda auditoría (octubre 2026)
+
+Ver `docs/editorial-audit/second-pass/README.md` §11. Hasta que respondas, los ALT y las descripciones solo dicen lo que se ve en la foto.
+
+- **Entre tiendas y tambores**: ¿es la acampada por la vivienda en la Puerta del Sol? ¿Qué fecha? ¿Por encargo o por tu cuenta? ¿Criterio sobre caras reconocibles?
+- **Calle**: ¿qué fue la manifestación nocturna del edificio en violeta y cuándo? ¿La separamos de las fotos de día?
+- **Música**: ¿qué conciertos son? ¿Estabas acreditada en Madrid Salvaje? ¿Podemos nombrar a los artistas?
+- **Retrato y Estudio**: ¿quiénes son? ¿Encargo o proyecto personal? ¿Créditos de estilismo? ¿Un título propio por sesión?
+- **Silver Praxis**: ¿solista o grupo?
+- **Archivo**: ¿mantenemos la foto de la pegatina contra Airbnb (`retrato-img-5454`) y la de exterior que está en Estudio (`estudio-80c82615…`)?
+- **Voz**: preséntate en una frase, como lo harías ante alguien de una redacción.

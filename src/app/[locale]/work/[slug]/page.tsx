@@ -122,7 +122,8 @@ function essayViewerItems(
       width: media.width,
       height: media.height,
       blurDataURL: media.blurDataURL,
-      label: piece?.alt || piece?.caption || fallback,
+      label: piece?.caption || fallback,
+      alt: piece?.alt,
     });
   }
 

@@ -23,6 +23,8 @@ import {
 type GroupId = keyof typeof photoArchiveGroups;
 
 type PhotoArchiveProps = {
+  /** ALT por id de foto del archivo; si falta, se usa el rótulo «grupo, imagen n». */
+  alts: Record<string, string>;
   closeLabel: string;
   groups: { id: GroupId; title: string }[];
   nextLabel: string;
@@ -40,10 +42,15 @@ const INDEX_KEY: Record<GroupId, "archiveMusica" | "archiveRetrato" | "archiveEs
   calle: "archiveCalle",
 };
 
-function toViewerItem(item: ArchivePhoto, label: string): PhotoViewerItem {
+function toViewerItem(
+  item: ArchivePhoto,
+  label: string,
+  alt?: string,
+): PhotoViewerItem {
   return {
     id: item.id,
     label,
+    alt,
     src: item.src,
     width: item.width,
     height: item.height,
@@ -74,7 +81,7 @@ function ArchiveThumb({
   const landscape = item.width >= item.height;
 
   return (
-    <button aria-label={label} onClick={onOpen} type="button">
+    <button aria-haspopup="dialog" aria-label={label} onClick={onOpen} type="button">
       <Image
         alt={label}
         blurDataURL={item.blurDataURL}
@@ -90,6 +97,7 @@ function ArchiveThumb({
 }
 
 export function PhotoArchive({
+  alts,
   closeLabel,
   groups,
   nextLabel,
@@ -125,10 +133,11 @@ export function PhotoArchive({
           toViewerItem(
             item,
             t("archiveImageLabel", { group: group.title, index: index + 1 }),
+            alts[item.id],
           ),
         ),
       ),
-    [groups, t],
+    [alts, groups, t],
   );
   const indexById = useMemo(
     () =>
@@ -221,7 +230,7 @@ export function PhotoArchive({
                           >
                             <ArchiveThumb
                               item={photo}
-                              label={label}
+                              label={alts[photo.id] ?? label}
                               onOpen={() =>
                                 setActiveIndex(indexById.get(item.id) ?? null)
                               }
@@ -243,10 +252,13 @@ export function PhotoArchive({
                     >
                       <ArchiveThumb
                         item={item}
-                        label={t("archiveImageLabel", {
-                          group: group.title,
-                          index: index + 1,
-                        })}
+                        label={
+                          alts[item.id] ??
+                          t("archiveImageLabel", {
+                            group: group.title,
+                            index: index + 1,
+                          })
+                        }
                         onOpen={() =>
                           setActiveIndex(indexById.get(item.id) ?? null)
                         }
