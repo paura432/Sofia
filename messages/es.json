@@ -134,6 +134,7 @@
     "moreFromSeriesCount": "{count, plural, one {# imagen} other {# imágenes}}",
     "seriesNavigation": "Navegación de serie fotográfica",
     "seriesStory": "Historia",
+    "storyLabel": "Con mis palabras",
     "seriesComplete": "Serie completa",
     "seriesCompleteCount": "{count, plural, one {# imagen} other {# imágenes}}",
     "viewerPrev": "Anterior",
@@ -171,6 +172,33 @@
       "4-minutos": {
         "title": "4 MINUTOS",
         "description": "Cortometraje en blanco y negro sobre el encuentro entre dos jóvenes.",
+        "story": [
+          {
+            "heading": "¿Cómo surgió el proyecto y qué cuenta la pieza?",
+            "paragraphs": [
+              "Cuatro minutos nació como un trabajo para una asignatura de último año de Comunicación Audiovisual. Quería escribir una conversación entre dos chicos de barrio que, a primera vista, están pasando el rato, fumando y diciendo tonterías, pero que poco a poco empiezan a hablar de cosas bastante más grandes.",
+              "Todo gira alrededor de una pregunta: ¿qué puede pasar en cuatro minutos? Puedes robar una moto, correr al supermercado, decirle a alguien que le quieres o tomar una decisión que te cambie la vida. Me interesaba esa mezcla de humor, crudeza y momentos de lucidez que aparecen cuando dos personas hablan sin pretender decir nada importante. La pieza está inspirada en Sueños y pan y en esa forma de encontrar algo poético en personajes y situaciones cotidianas."
+            ]
+          },
+          {
+            "heading": "¿Qué hiciste tú exactamente?",
+            "paragraphs": [
+              "Me encargué de la dirección, el guion, la grabación y el montaje. Escribí el diálogo, planteé la puesta en escena y dirigí la interpretación de los dos actores. También grabé y monté la pieza, construida íntegramente en blanco y negro y en un único plano secuencia."
+            ]
+          },
+          {
+            "heading": "¿Recuerdas alguna decisión de rodaje, guion, montaje o producción que tomaras?",
+            "paragraphs": [
+              "La decisión principal fue contar toda la historia en un solo plano, sin cortes, y en blanco y negro. Quería que la conversación transcurriera sin interrupciones, dejando espacio a los silencios, las miradas y los cambios de tono entre la broma y algo más serio. Al final, cuando los personajes se marchan, la cámara se queda mirando el espacio vacío. Me interesaba terminar así, dejando que la conversación desapareciera sin necesidad de explicar nada más. Tuve muchos problemas durante el rodaje porque el estabilizador se quedó sin batería y tocó improvisar."
+            ]
+          },
+          {
+            "heading": "¿Qué parte del resultado te gusta más?",
+            "paragraphs": [
+              "Me gusta el contraste entre lo que dicen y lo que parece que están diciendo. Pueden pasar de hablar de robar una moto a preguntarse si cuatro minutos bastan para querer a alguien, y ninguna de las dos cosas desentona del todo. Creo que ahí está el corazón de la pieza: en cómo una conversación aparentemente absurda puede terminar diciendo algo bastante humano."
+            ]
+          }
+        ],
         "format": "Cortometraje",
         "roles": [
           "Dirección — Sofía Chernikova"
@@ -197,6 +225,32 @@
       "tras-el-sofa": {
         "title": "Tras el sofá",
         "description": "Cortometraje dramático ambientado en un interior doméstico.",
+        "story": [
+          {
+            "heading": "¿Cómo surgió el proyecto y qué cuenta la pieza?",
+            "paragraphs": [
+              "Tras el sofá fue un proyecto de último año de carrera en el que teníamos que realizar un cortometraje de 6 minutos dentro de un plató, con un tiempo muy limitado de 4 horas y sin posibilidad de desplazarnos a otras localizaciones. A partir de esas condiciones, construimos un drama en torno a un accidente que lo cambia todo: una chica mata a su hermano sin querer y la novia de él descubre lo ocurrido. La historia juega con el secreto, la culpa y la tensión de saber algo que puede cambiar por completo la vida de los personajes."
+            ]
+          },
+          {
+            "heading": "¿Qué hiciste tú exactamente?",
+            "paragraphs": [
+              "Me encargué de la dirección y el montaje. Durante el rodaje, mi trabajo consistió en coordinar la puesta en escena y orientar al equipo para llevar la historia a pantalla dentro del tiempo disponible. Después, en montaje, trabajé con el material grabado para construir el ritmo narrativo y ordenar la información de forma que la tensión dramática funcionara."
+            ]
+          },
+          {
+            "heading": "¿Recuerdas alguna decisión de rodaje, guion, montaje o producción que tomaras?",
+            "paragraphs": [
+              "Una de las principales dificultades era contar una historia de suspense en un espacio cerrado y sin poder recurrir a otras localizaciones. Eso hacía que la dirección de los actores, la colocación de los personajes y la manera de revelar lo que había ocurrido fueran especialmente importantes. Tuve que tomar decisiones como prescindir de ciertos planos e integrar otros por falta de tiempo. En montaje, el reto era dar continuidad a las escenas y conseguir que el descubrimiento tuviera peso dentro de la historia."
+            ]
+          },
+          {
+            "heading": "¿Qué parte del resultado te gusta más?",
+            "paragraphs": [
+              "Destacaría el trabajo colectivo y la capacidad de sacar adelante una historia con recursos y tiempo limitados. Éramos diez personas, con distintas responsabilidades, y la dirección implicaba tener presente el conjunto mientras cada departamento resolvía su parte. También me interesa el reto de trabajar el suspense desde un espacio reducido, haciendo que la tensión dependa de los personajes y de lo que saben, ocultan o descubren."
+            ]
+          }
+        ],
         "format": "Cortometraje",
         "roles": [
           "Dirección — Sofía Chernikova",
@@ -220,6 +274,32 @@
       "version-beta": {
         "title": "VERSIÓN BETA",
         "description": "Pieza promocional con testimonios a cámara, acción y grafismos.",
+        "story": [
+          {
+            "heading": "¿Cómo surgió el proyecto y qué cuenta la pieza?",
+            "paragraphs": [
+              "VERSIÓN BETA fue un proyecto para una asignatura de Producción en el que teníamos que presentar el concepto de una serie documental. La propuesta giraba en torno a jóvenes considerados problemáticos y buscaba acercarse a sus realidades a través de sus historias. Para presentar la idea, creamos un vídeo de aproximadamente un minuto, con Pedro Aguado como presentador y diferentes jóvenes que, a primera vista, podían encajar en esa etiqueta. La intención era transmitir el tono y la energía de la serie en muy poco tiempo."
+            ]
+          },
+          {
+            "heading": "¿Qué hiciste tú exactamente?",
+            "paragraphs": [
+              "Me encargué de contactar con Pedro Aguado, precisamente por su trayectoria al frente de Hermano Mayor, gestionar la localización, grabar a los jóvenes que aparecen en la pieza y montar el vídeo. Mi papel abarcó tanto la parte de producción y coordinación como el trabajo audiovisual, desde conseguir que las cosas sucedieran hasta construir la pieza final."
+            ]
+          },
+          {
+            "heading": "¿Recuerdas alguna decisión de rodaje, guion, montaje o producción que tomaras?",
+            "paragraphs": [
+              "La principal decisión fue concentrar el concepto de una serie documental en un minuto. Para ello, trabajé con distintos planos de los jóvenes y un montaje rápido y estimulante, buscando que el vídeo transmitiera energía y despertara curiosidad por el proyecto. También fue importante encontrar a una persona que pudiera presentar la propuesta y conectar con la temática, de ahí el contacto con Pedro Aguado."
+            ]
+          },
+          {
+            "heading": "¿Qué parte del resultado te gusta más?",
+            "paragraphs": [
+              "Destacaría que el proyecto me permitió trabajar en distintas fases de una producción audiovisual. No solo participé en la grabación y el montaje, sino que también tuve que buscar contactos, gestionar una localización y resolver cuestiones prácticas para que la idea pudiera materializarse. Además, el formato de pitch me obligó a pensar cómo transmitir la esencia de una serie en apenas un minuto y dejar con ganas de conocer más."
+            ]
+          }
+        ],
         "format": "Pieza promocional",
         "media": {
           "version-beta-poster": {
@@ -231,6 +311,44 @@
       "short-form-001": {
         "title": "Madrid a pie, cámara al cuello",
         "description": "Paseo hablado a cámara por el centro de Madrid, de Gran Vía en adelante.",
+        "story": [
+          {
+            "heading": "¿Qué era exactamente?",
+            "paragraphs": [
+              "Es una pieza personal sobre Madrid que hice a partir de una idea bastante sencilla: salir a hacer fotos de los lugares más turísticos del centro, pero buscar justo aquello que normalmente no queremos enseñar.",
+              "No era para ningún medio ni empresa. Lo hice como proyecto propio, mezclando reporterismo, fotografía y vídeo para hablar de la ciudad desde un lugar menos bonito y bastante más cotidiano."
+            ]
+          },
+          {
+            "heading": "¿En qué año fue y dónde?",
+            "paragraphs": [
+              "Lo hice en septiembre de 2026, en el centro de Madrid, recorriendo algunas de las zonas más turísticas y transitadas de la ciudad."
+            ]
+          },
+          {
+            "heading": "¿Cuál fue tu papel?",
+            "paragraphs": [
+              "El proyecto lo hice yo de principio a fin. Pensé la idea y el recorrido, grabé, hice las fotografías, aparezco hablando a cámara y después monté y edité la pieza.",
+              "También decidí qué quería enseñar y desde qué mirada. La gracia estaba precisamente en no buscar la foto bonita, sino detenerme en lo que normalmente queda fuera del encuadre."
+            ]
+          },
+          {
+            "heading": "¿Qué estaba pasando?",
+            "paragraphs": [
+              "Madrid estaba haciendo lo que hace Madrid: gente por todas partes, turistas, ruido, edificios preciosos y, debajo de todo eso, basura, desperfectos, rincones abandonados, cosas rotas y pequeñas escenas que normalmente no miramos.",
+              "Me interesaba ese contraste. Cómo una ciudad puede estar llena de lugares que fotografiamos hasta el agotamiento y, a dos metros, tener algo completamente distinto.",
+              "Salí con la cámara a buscar esas “antifotos”: no la Puerta del Sol perfecta, sino lo que queda cuando dejas de mirar hacia arriba. Una especie de retrato de Madrid hecho con todo lo que normalmente intentaríamos esconder."
+            ]
+          },
+          {
+            "heading": "¿Por qué incluirías este vídeo en tu portfolio?",
+            "paragraphs": [
+              "Porque creo que explica bastante bien cómo miro.",
+              "No me interesa únicamente registrar lo que está pasando. Me interesa encontrar el detalle que hace que vuelvas a mirar una segunda vez. Además, junta varias cosas que quiero seguir haciendo: salir a la calle, contar desde mi propia mirada, trabajar con imagen y hablarle directamente a quien está viendo la pieza.",
+              "También es un proyecto bastante mío porque no había un encargo detrás que me dijera qué tenía que buscar. La idea salió simplemente de caminar por Madrid y pensar que quizá estábamos haciendo las mismas fotos de siempre."
+            ]
+          }
+        ],
         "media": {
           "short-form-001-video": {
             "title": "Madrid a pie, cámara al cuello",
@@ -241,6 +359,32 @@
       "short-form-002": {
         "title": "En el decorado de «9‑1‑1»",
         "description": "Entrevista micrófono en mano dentro de un decorado de la serie, en la estación de Chamartín.",
+        "story": [
+          {
+            "heading": "¿Qué era exactamente?",
+            "paragraphs": [
+              "Era una pieza audiovisual para redes sociales realizada durante mis prácticas en Annie Bonnie para Yoigo. Nos desplazamos al decorado de la serie 911 para grabar contenido relacionado con ella, incluyendo una entrevista al creador de contenido @telocuentosinspoilers."
+            ]
+          },
+          {
+            "heading": "¿En qué año fue?",
+            "paragraphs": [
+              "2025, durante mis prácticas en Annie Bonnie."
+            ]
+          },
+          {
+            "heading": "¿Cuál fue tu papel?",
+            "paragraphs": [
+              "Salgo delante de cámara como reportera, presentando el lugar y entrevistando a @telocuentosinspoilers. Me encargué de conducir la conversación y plantear las preguntas para explicar al público de qué trata la serie y en qué se basa su acción, además de ayudar a editar el vídeo."
+            ]
+          },
+          {
+            "heading": "¿Qué estaba pasando?",
+            "paragraphs": [
+              "Nos habíamos desplazado hasta el decorado de 911 y aproveché la visita para introducir al público en el universo de la serie. En el vídeo aparezco con un micrófono, cuento dónde estamos y entrevisto a @telocuentosinspoilers, que nos explica de qué va la serie y cómo funciona la acción que vemos en ella. La idea era aprovechar el propio espacio para hacer una pieza más cercana y dinámica que una explicación convencional."
+            ]
+          }
+        ],
         "media": {
           "short-form-002-video": {
             "title": "En el decorado de «9‑1‑1»",
@@ -251,6 +395,38 @@
       "short-form-003": {
         "title": "MyMUN, paso a paso",
         "description": "Cómo inscribirse en URJCmun 2026 a través de la plataforma MyMUN, explicado a cámara.",
+        "story": [
+          {
+            "heading": "¿Qué era exactamente?",
+            "paragraphs": [
+              "Era una pieza vertical para las redes sociales de URJCmun en la que explicaba de forma sencilla cómo funcionaba la aplicación MyMUN, la plataforma que utilizaban los participantes para consultar información y seguir diferentes aspectos del congreso. La pieza combinaba grabación de pantalla, grafismos y explicación directa."
+            ]
+          },
+          {
+            "heading": "¿En qué año fue?",
+            "paragraphs": [
+              "2025, para URJCmun."
+            ]
+          },
+          {
+            "heading": "¿Cuál fue tu papel?",
+            "paragraphs": [
+              "Me encargué de plantear y estructurar el contenido, explicar la aplicación y participar en la grabación. También trabajé en la edición de la pieza, combinando las pantallas de la aplicación con grafismos y recursos visuales para que la explicación fuera clara y dinámica."
+            ]
+          },
+          {
+            "heading": "¿Qué estaba pasando?",
+            "paragraphs": [
+              "La idea surgió porque MyMUN era una herramienta importante durante el congreso, pero para alguien que la abría por primera vez podía resultar un poco liosa. Hice el vídeo pensando en esa persona que llega, abre la aplicación y piensa “vale, ¿y ahora qué hago?”. La pieza iba recorriendo sus funciones principales y explicando dónde encontrar cada cosa de una manera rápida y visual."
+            ]
+          },
+          {
+            "heading": "¿Por qué incluirías este vídeo en tu portfolio?",
+            "paragraphs": [
+              "Porque enseña una parte de mi trabajo que no siempre se ve en mis piezas más periodísticas: saber coger información que puede parecer técnica o aburrida y convertirla en un contenido sencillo, visual y fácil de consumir. También refleja que puedo moverme entre presentación, guion, edición y comunicación para redes sin necesidad de que cada cosa vaya por separado."
+            ]
+          }
+        ],
         "media": {
           "short-form-003-video": {
             "title": "MyMUN, paso a paso",
@@ -261,6 +437,40 @@
       "short-form-004": {
         "title": "Probando el vivo X300 Pro",
         "description": "Primeras impresiones de un smartphone: cámara, pantalla y accesorios, con planos de detalle.",
+        "story": [
+          {
+            "heading": "¿Qué era exactamente?",
+            "paragraphs": [
+              "Era una pieza de contenido para la cuenta de TikTok de Yoigo, realizada durante mis prácticas en Annie Bonnie."
+            ]
+          },
+          {
+            "heading": "¿En qué año fue y dónde?",
+            "paragraphs": [
+              "Fue en 2025, durante mis prácticas en Annie Bonnie, en Madrid."
+            ]
+          },
+          {
+            "heading": "¿Cuál fue tu papel?",
+            "paragraphs": [
+              "Participé en la preparación del contenido y fui una de las personas que aparece delante de cámara. Trabajé la forma de explicar el producto para que resultara natural y fácil de entender dentro del formato de TikTok."
+            ]
+          },
+          {
+            "heading": "¿Qué estaba pasando?",
+            "paragraphs": [
+              "Era una pieza bastante directa: probar una función concreta del teléfono y enseñar en cámara qué se podía hacer con ella.",
+              "Lo interesante para mí fue adaptar algo que podría haberse contado de una manera muy técnica a un formato más rápido y cercano. Estaba hablando a cámara, interactuando con otra persona y tratando de que la explicación no pareciera una explicación. También tenía que aprenderme las frases en cuestión de un minuto, porque había poco tiempo."
+            ]
+          },
+          {
+            "heading": "¿Por qué incluirías este vídeo en tu portfolio?",
+            "paragraphs": [
+              "Porque enseña una parte de mí que no se ve tanto en mis trabajos más periodísticos.",
+              "Tengo soltura delante de cámara y puedo cambiar de registro dependiendo de lo que necesite el contenido. Aquí no estoy haciendo una entrevista ni una cobertura, estoy comunicando un producto y entendiendo cómo hacerlo funcionar en un formato de redes."
+            ]
+          }
+        ],
         "media": {
           "short-form-004-video": {
             "title": "Probando el vivo X300 Pro",
@@ -271,6 +481,32 @@
       "silver-praxis-condicion-perfecta": {
         "title": "Silver Praxis — Condición Perfecta",
         "description": "Videoclip de «Condición Perfecta», de Silver Praxis.",
+        "story": [
+          {
+            "heading": "¿Cómo surgió el proyecto y qué cuenta la pieza?",
+            "paragraphs": [
+              "Condición Perfecta es un videoclip de Silver Praxis dentro de la escena del rap underground. El proyecto buscaba acompañar visualmente el tema a través de distintas localizaciones y situaciones, construyendo una pieza con movimiento y una estética ligada al universo del artista."
+            ]
+          },
+          {
+            "heading": "¿Qué hiciste tú exactamente?",
+            "paragraphs": [
+              "Me encargué de la grabación y el montaje del videoclip. Fueron 5 días de rodaje en los que trabajé con diferentes localizaciones y recursos visuales, incluidos planos dentro de un coche y tomas aéreas con dron, que piloté yo misma. Después me ocupé del montaje para dar forma al material y construir la pieza final."
+            ]
+          },
+          {
+            "heading": "¿Recuerdas alguna decisión de rodaje, guion, montaje o producción que tomaras?",
+            "paragraphs": [
+              "Una parte importante del rodaje fue combinar localizaciones y tipos de plano para que el videoclip tuviera variedad visual y movimiento. Grabamos escenas en coche y tomas aéreas con dron, lo que permitió ampliar las posibilidades de encuadre y jugar con distintas perspectivas. En el montaje, el reto fue dar continuidad a todo ese material y construir un ritmo que acompañara al tema musical."
+            ]
+          },
+          {
+            "heading": "¿Qué parte del resultado te gusta más?",
+            "paragraphs": [
+              "Me gusta la variedad de recursos que pude trabajar dentro de un mismo proyecto. Pasar de grabar en distintas localizaciones a trabajar con planos en movimiento y pilotar el dron me permitió implicarme en diferentes aspectos del rodaje. También destacaría haber llevado la pieza desde la grabación hasta el montaje final, trabajando con material de varios días y construyendo una propuesta visual coherente. El montaje fueron varias horas de combinaciones ya que no se me proporcionó un guion técnico clave así que tuve libertad creativa."
+            ]
+          }
+        ],
         "format": "Videoclip",
         "roles": [
           "Rodaje y posproducción — Sofía Chernikova"
@@ -306,6 +542,14 @@
       "retrato-editorial": {
         "title": "Retrato y editorial",
         "description": "Retratos en una nave abandonada, una terraza, un local con neón rojo y calles con grafiti.",
+        "story": [
+          {
+            "heading": "¿Dónde y cuándo hiciste estas fotografías? ¿Por qué estabas allí?",
+            "paragraphs": [
+              "Principalmente para una revista de moda y actualidad donde aparece gente de interés."
+            ]
+          }
+        ],
         "format": "Retrato · Editorial",
         "roles": [
           "Fotografía"
@@ -321,10 +565,10 @@
             "alt": "Dos personas con camisetas negras frente a ventanas industriales con grafiti"
           },
           "retrato-editorial-04": {
-            "alt": "Los dos hombres caminan entre escombros en una nave abandonada"
+            "alt": "Dos hombres vestidos de negro caminan entre escombros en una nave abandonada con grafitis"
           },
           "retrato-editorial-05": {
-            "alt": "Los dos hombres avanzan hacia la cámara por una nave llena de escombros y grafitis"
+            "alt": "Dos hombres vestidos de negro avanzan hacia la cámara por una nave llena de escombros y grafitis"
           },
           "retrato-editorial-06": {
             "alt": "Persona sentada en una terraza urbana con vegetación y luces decorativas"
@@ -357,25 +601,25 @@
             "alt": "Persona con camisa verde sentada en un murete bajo una pérgola con bombillas"
           },
           "retrato-img-5597": {
-            "alt": "La misma persona, de pie en la puerta de un baño alicatado en verde"
+            "alt": "Persona con camisa verde, gafas de sol y bermudas vaqueras, de pie en la puerta de un baño alicatado en verde"
           },
           "retrato-img-5476": {
             "alt": "Persona con gafas de sol y camisa verde, sentada en una terraza de madera con un bolso verde"
           },
           "retrato-img-5487": {
-            "alt": "La misma persona, con el mentón apoyado en la mano y el bolso verde a sus pies"
+            "alt": "Persona con gafas de sol y camisa verde, sentada en una terraza de madera con el mentón apoyado en la mano y un bolso verde a sus pies"
           },
           "retrato-img-5795": {
             "alt": "Hombre con camiseta roja y gafas de sol, sentado en una terraza con las manos en la cabeza"
           },
           "retrato-img-5808": {
-            "alt": "El mismo hombre, sentado en un taburete dentro de un bar"
+            "alt": "Hombre rubio con camiseta roja, sentado en un taburete alto dentro de un bar con ventanal"
           },
           "retrato-img-5851": {
-            "alt": "El mismo hombre, recostado en un banco con una mano en la cabeza"
+            "alt": "Hombre rubio con camiseta roja y gafas de sol, recostado en un banco de madera con una mano en la cabeza"
           },
           "retrato-img-5860": {
-            "alt": "Primer plano del mismo hombre, con la barbilla alta, contra una pared de hormigón"
+            "alt": "Primer plano de un hombre rubio con camiseta roja, con la barbilla alta, contra una pared de hormigón"
           },
           "retrato-img-6648": {
             "alt": "En una nave abandonada, un hombre agachado y otro de pie junto a una columna con grafitis; al fondo, un coche calcinado"
@@ -387,13 +631,13 @@
             "alt": "Hombre con camiseta negra corta y las manos sobre la cabeza, ante un muro lleno de grafitis"
           },
           "retrato-img-5425": {
-            "alt": "El mismo hombre, entre los troncos de un parque infantil"
+            "alt": "Hombre con bigote y camiseta negra, de perfil entre los troncos y redes de cuerda de un parque infantil"
           },
           "retrato-img-5450": {
-            "alt": "El mismo hombre, apoyado en una farola con los brazos cruzados"
+            "alt": "Hombre con bigote y camiseta negra, apoyado en una farola con los brazos cruzados ante un muro con grafitis"
           },
           "retrato-img-5454": {
-            "alt": "El mismo hombre señala una pegatina contra Airbnb pegada en una farola"
+            "alt": "Hombre con bigote y camiseta negra señala una pegatina contra Airbnb pegada en un poste"
           },
           "retrato-img-2364": {
             "alt": "Persona de espaldas, con camiseta tie-dye, asomada a un muro con un grafiti rosa"
@@ -451,7 +695,7 @@
             "alt": "De noche, el público graba con los móviles mientras lleva a alguien en volandas"
           },
           "musica-img-6154": {
-            "alt": "Bajo luz violeta, un artista agachado en el escenario junta las manos ante la cara"
+            "alt": "Bajo luz violeta, un artista agachado en el escenario se tapa la cara con una mano y sujeta el micrófono con la otra"
           },
           "musica-img-6317": {
             "alt": "De noche, un artista de espaldas acerca el micrófono al público, que levanta los brazos"
@@ -466,7 +710,7 @@
             "alt": "Un artista con chándal beis y gafas de sol levanta el micrófono en un escenario al aire libre"
           },
           "musica-img-5038": {
-            "alt": "El mismo artista levanta los brazos bajo el rótulo «Madrid Salvaje»"
+            "alt": "Un artista con chándal beis canta con el micrófono y levanta el otro brazo bajo el rótulo «Madrid Salvaje»"
           },
           "musica-img-5174": {
             "alt": "Un artista con sudadera oscura señala al público entre focos azules"
@@ -479,6 +723,20 @@
       "entre-tiendas-y-tambores": {
         "title": "Entre tiendas y tambores",
         "description": "Una plaza con tiendas de campaña, carteles hechos a mano, grupos reunidos y músicos con percusión.",
+        "story": [
+          {
+            "heading": "¿Dónde y cuándo hiciste estas fotografías? ¿Por qué estabas allí?",
+            "paragraphs": [
+              "Las hice durante el segundo día de la acampada en Sol, en Madrid, en el contexto de las movilizaciones por el derecho a la vivienda. Fui con mi cámara porque me parecía importante documentar lo que estaba ocurriendo. Más allá de la reivindicación, quería recoger cómo se estaba viviendo aquel espacio y a las personas que lo estaban sosteniendo."
+            ]
+          },
+          {
+            "heading": "¿Qué te llamó la atención o qué querías fotografiar?",
+            "paragraphs": [
+              "Me interesaba captar la vida que se estaba construyendo alrededor de la protesta: las tiendas, las pancartas, las conversaciones, la gente organizándose y compartiendo espacio. Quería mirar más allá de la imagen de una concentración y fotografiar los pequeños gestos que hacen que un lugar se convierta, aunque sea temporalmente, en algo colectivo. Para mí, documentar también es prestar atención a lo que sucede entre los momentos que suelen aparecer en las noticias."
+            ]
+          }
+        ],
         "format": "Ensayo fotográfico",
         "media": {
           "entre-tiendas-y-tambores-001": {
@@ -488,7 +746,7 @@
             "alt": "Varias tiendas de campaña ocupan una plaza frente a edificios, con banderas sobre el conjunto."
           },
           "entre-tiendas-y-tambores-003": {
-            "alt": "Tiendas de campaña y una pancarta manuscrita bajo el cielo nublado."
+            "alt": "Tiendas de campaña y varias pancartas manuscritas al pie de un edificio con el letrero «Tío Pepe» en la azotea, bajo un cielo nublado."
           },
           "entre-tiendas-y-tambores-004": {
             "alt": "Tiendas de campaña y pancartas, una con el lema «PSOE y Sumar, responsables de nuestra miseria»; una persona de pie entre ellas."
@@ -500,7 +758,7 @@
             "alt": "Sillas y utensilios dispuestos entre tiendas de campaña y toldos."
           },
           "entre-tiendas-y-tambores-007": {
-            "alt": "Bajo lonas azules, un cartel escrito a mano sobre las tiendas: «La sociedad civil está gritando: ¡ya basta!»."
+            "alt": "Bajo lonas azules, un cartel de cartón escrito a mano sobre las tiendas: «La sociedad civil está gritando ¡¡ya basta!!»."
           },
           "entre-tiendas-y-tambores-008": {
             "alt": "Tres jóvenes charlan entre sillas plegables y tiendas, bajo la pancarta «P.P. maltrata la infancia»."
@@ -509,16 +767,16 @@
             "alt": "Tienda roja con un cartel escrito a mano: «¡Universitarios por la vivienda pública!»."
           },
           "entre-tiendas-y-tambores-010": {
-            "alt": "Plaza cubierta por toldos, con tiendas y la pancarta «Frente a su especulación, okupación»."
+            "alt": "Plaza cubierta por toldos, con tiendas y la pancarta «Frente a su espekulación, okupación»."
           },
           "entre-tiendas-y-tambores-011": {
-            "alt": "Tiendas de campaña bajo un toldo iluminado al anochecer."
+            "alt": "Al anochecer, tiendas de campaña bajo lonas azules y la pancarta «P.P. maltrata la infancia», frente a un edificio con torre de reloj."
           },
           "entre-tiendas-y-tambores-012": {
             "alt": "Grupo reunido en círculo en una calle, fotografiado en blanco y negro."
           },
           "entre-tiendas-y-tambores-013": {
-            "alt": "Personas bailan en círculo en una calle iluminada de noche."
+            "alt": "De noche, tres personas bailan en el centro de un corro de gente en una calle iluminada."
           },
           "entre-tiendas-y-tambores-014": {
             "alt": "Sobre una tienda, un cartel escrito a mano: «Ser rentista no es un trabajo»."
@@ -536,7 +794,7 @@
             "alt": "En blanco y negro, un corro de gente mira a dos personas que se abrazan en el centro."
           },
           "entre-tiendas-y-tambores-019": {
-            "alt": "Una persona salta en el centro de un grupo que observa."
+            "alt": "De noche, una persona salta a la comba en el centro de un corro de gente que observa."
           },
           "entre-tiendas-y-tambores-020": {
             "alt": "De noche, varias personas cuelgan con cuerdas la pancarta «P.P. maltrata la infancia»."
@@ -548,13 +806,13 @@
             "alt": "Varias personas levantan los brazos bajo luces azules."
           },
           "entre-tiendas-y-tambores-023": {
-            "alt": "Público reunido en una plaza iluminada, con las manos alzadas."
+            "alt": "De noche, una multitud alza los puños bajo el letrero luminoso «Tío Pepe» en lo alto de un edificio."
           },
           "entre-tiendas-y-tambores-024": {
             "alt": "De noche, un grupo levanta los brazos; a la derecha, agentes de policía junto a un cordón."
           },
           "entre-tiendas-y-tambores-025": {
-            "alt": "Entre la multitud, unos jóvenes sostienen un cartel: «Fondos buitre fuera de nuestras ciudades»."
+            "alt": "De noche, entre la multitud, un joven sostiene un cartel de cartón: «Fondos buitre fuera de nuestras ciudades»."
           },
           "entre-tiendas-y-tambores-026": {
             "alt": "Persona con la boca abierta y las manos juntas entre la multitud."
@@ -566,7 +824,7 @@
             "alt": "Un puño en alto entre la multitud; a la izquierda, policías ante la fachada de un edificio."
           },
           "entre-tiendas-y-tambores-029": {
-            "alt": "Grupo reunido frente a una estatua ecuestre en una plaza iluminada."
+            "alt": "De noche, una multitud con una bandera roja, amarilla y morada y músicos de viento metal ante una estatua ecuestre iluminada."
           },
           "entre-tiendas-y-tambores-030": {
             "alt": "Detalle de instrumentos de metal y músicos tocando entre la multitud."
@@ -575,7 +833,7 @@
             "alt": "Percusionistas actúan en el centro de un corro de personas."
           },
           "entre-tiendas-y-tambores-032": {
-            "alt": "Multitud reunida de noche junto a varias tiendas y un letrero luminoso."
+            "alt": "Multitud reunida de noche junto a varias tiendas y un letrero luminoso en una azotea."
           },
           "entre-tiendas-y-tambores-033": {
             "alt": "Multitud vista entre brazos levantados en una plaza iluminada."
@@ -587,7 +845,7 @@
             "alt": "De noche, una multitud llena la plaza bajo un letrero luminoso."
           },
           "entre-tiendas-y-tambores-036": {
-            "alt": "Percusionistas en círculo entre el público en una calle nocturna."
+            "alt": "Percusionistas con tambores amarillos tocan entre el público en una calle de noche."
           },
           "entre-tiendas-y-tambores-037": {
             "alt": "Percusionistas tocan de frente, con los brazos en alto, en la plaza de noche."
@@ -640,6 +898,14 @@
       "estudio-editorial": {
         "title": "Estudio y editorial",
         "description": "Sesiones sobre fondo blanco con atrezo: televisores antiguos, un espejo naranja, una maleta y una guitarra.",
+        "story": [
+          {
+            "heading": "¿Dónde y cuándo hiciste estas fotografías? ¿Por qué estabas allí?",
+            "paragraphs": [
+              "Son fotografías de colaboraciones con DJ o cantantes, en un estudio para su proyecto."
+            ]
+          }
+        ],
         "format": "Estudio · Editorial",
         "roles": [
           "Fotografía"
@@ -649,7 +915,7 @@
             "alt": "Hombre con jersey de ganchillo, agachado junto a un espejo naranja que le refleja, sobre fondo blanco"
           },
           "estudio-editorial-02": {
-            "alt": "El mismo hombre se mira en el espejo naranja, sobre fondo blanco"
+            "alt": "Hombre con gorra azul y jersey de ganchillo multicolor, agachado de perfil, se mira en un espejo naranja sobre fondo blanco"
           },
           "estudio-editorial-03": {
             "alt": "Hombre de pelo rizado con americana de cuadros toca una guitarra eléctrica verde agua sobre fondo de estudio"
@@ -658,7 +924,7 @@
             "alt": "Hombre rapado con traje de raya diplomática y gafas verdes, a horcajadas en una silla y con una rosa roja; a sus pies, un televisor pequeño"
           },
           "estudio-editorial-05": {
-            "alt": "El mismo hombre, recostado en una silla, levanta una pierna y mira hacia arriba"
+            "alt": "Hombre rapado con traje de raya diplomática y gafas verdes, recostado en una silla, levanta una pierna y mira hacia arriba"
           },
           "estudio-editorial-06": {
             "alt": "Retrato en picado de una persona con traje de rayas y gafas de cristal verde"
@@ -673,7 +939,7 @@
             "alt": "Hombre con gorra y chaqueta gris, sentado en el suelo junto a un televisor antiguo y unos cojines"
           },
           "estudio-editorial-10": {
-            "alt": "El mismo hombre, recostado con las manos en la nuca, entre dos televisores antiguos y un cojín"
+            "alt": "Hombre con gorra y chaqueta de punto gris, recostado en el suelo con las manos en la nuca, entre dos televisores antiguos y un cojín"
           },
           "estudio-80c82615-228f-40a7-99de-ac4c0d672e38": {
             "alt": "Al atardecer, un joven con gorro de pescador y camiseta tie-dye mira algo que sostiene en las manos"
@@ -682,21 +948,21 @@
             "alt": "Hombre con traje de rayas y gafas verdes, agachado, con un móvil de tapa en la mano"
           },
           "estudio-dsc-1293": {
-            "alt": "En picado y con gran angular, el hombre de las gafas verdes sonríe con un móvil de tapa abierto"
+            "alt": "En picado y con gran angular, un hombre rapado con gafas verdes y traje de rayas sonríe con una videoconsola portátil abierta en las manos"
           }
         }
       }
     }
   },
   "Profile": {
-    "bio": "Soy periodista y reportera de televisión. Trabajo en Grupo Cadena Media desde 2024.",
+    "bio": "Digo que cuento cosas. A veces con una cámara, a veces escribiendo, a veces hablando con alguien y haciendo preguntas. Estudié Periodismo y Comunicación Audiovisual porque siempre me ha costado elegir entre mirar y contar lo que miro. Supongo que sigo un poco ahí.",
     "aboutPageEyebrow": "Perfil",
     "portraitAlt": "Retrato de Sofía Chernikova",
     "educationEyebrow": "Formación",
     "languagesEyebrow": "Idiomas",
     "toolsEyebrow": "Herramientas",
     "viewFullExperience": "Experiencia completa",
-    "bioMore": "Cubro estrenos, eventos y ruedas de prensa, entrevisto a artistas y figuras públicas y escribo guiones y piezas informativas. Estudié Periodismo y Comunicación Audiovisual en la Universidad Rey Juan Carlos. Hablo español y ruso como lenguas nativas.",
+    "bioMore": "Me interesan las historias que están pasando mientras todos estamos mirando hacia otro lado. La gente, la noche, la música, las ciudades, las cosas que cambian y las que permanecen.",
     "baseLabel": "Base",
     "baseValue": "Madrid",
     "practiceEyebrow": "Lo que hago",
@@ -719,6 +985,46 @@
         "link": "Ver fotografía",
         "section": "photography"
       }
+    ],
+    "voiceEyebrow": "Con mis palabras",
+    "voice": [
+      {
+        "heading": "¿Qué parte de tu trabajo disfrutas más?",
+        "paragraphs": [
+          "Me gusta todo. Podría decir que salir a buscar algo sin saber exactamente qué voy a encontrar.",
+          "Y después está editar, que es otra manera de mirar. De repente tienes horas de material y tienes que decidir qué queda, qué sobra y dónde empieza realmente la historia."
+        ]
+      },
+      {
+        "heading": "¿Cómo te sientes trabajando delante de cámara?",
+        "paragraphs": [
+          "Cómoda. Creo que no me gusta demasiado actuar, pero sí estar.",
+          "Me gusta hablarle a alguien aunque haya una cámara entre medias. Improvisar, reaccionar, equivocarme un poco y seguir. Cuando todo está demasiado preparado se pierde algo que para mí es importante que es la sensación de que está pasando de verdad."
+        ]
+      },
+      {
+        "heading": "Cuando haces una entrevista, ¿qué intentas conseguir?",
+        "paragraphs": [
+          "Que la persona se olvide un poco de que está siendo entrevistada.",
+          "No me interesa demasiado coleccionar respuestas perfectas. Prefiero una respuesta que se escape un poco.",
+          "Intento escuchar más que esperar mi turno para hacer la siguiente pregunta. Parece básico, pero a veces se nos olvida."
+        ]
+      },
+      {
+        "heading": "¿Qué trabajos enseñarías primero?",
+        "paragraphs": [
+          "Lo que vibra no muere. Mi proyecto audiovisual sobre la noche y la cultura techno en Madrid. Es probablemente el trabajo que más se parece a mí porque mezcla imagen, sonido, escritura y una forma muy concreta de mirar la ciudad.",
+          "Y por último, mis coberturas de eventos, estrenos y entrevistas. Me gusta trabajar cuando todo está pasando a la vez, tratar con figuras públicas que humanizo mucho, es llegar con una cámara, hablar con alguien, encontrar una historia, grabar recursos y después intentar ordenar todo ese caos."
+        ]
+      },
+      {
+        "heading": "¿Hay alguna forma de describirte que no te represente?",
+        "paragraphs": [
+          "No me gusta demasiado decir que soy “multidisciplinar”. Suena a que sabes hacer veinte cosas y ninguna especialmente bien.",
+          "Tampoco sé si me representa decir que tengo “una gran pasión por contar historias”. Es verdad, pero parece una frase que viene incluida en el pack de cualquier periodista.",
+          "Creo que soy más sencilla que todo eso. Me gusta mirar dos veces. Hacer preguntas. Meterme donde están pasando cosas. Y encontrar historias donde, en principio, no parecía haber ninguna."
+        ]
+      }
     ]
   },
   "Experience": {
@@ -727,6 +1033,7 @@
     "pageText": "",
     "responsibilitiesLabel": "Responsabilidades",
     "progressionLabel": "Roles desempeñados",
+    "storyLabel": "Con mis palabras",
     "items": {
       "grupo-cadena-media": {
         "role": "Reportera TV",
@@ -737,7 +1044,24 @@
           "eventCoverage": "Cobertura de estrenos, eventos y ruedas de prensa.",
           "interviews": "Entrevistas a artistas, actores y figuras públicas.",
           "scripts": "Redacción de guiones y piezas informativas."
-        }
+        },
+        "story": [
+          {
+            "heading": "¿Qué haces tú en una cobertura, desde que te preparas hasta que acaba?",
+            "paragraphs": [
+              "Investigo un poco, pienso qué preguntas pueden tener sentido y qué necesito conseguir para que después haya algo de valor, no solo imágenes de gente entrando por un photocall.",
+              "Cuando llego, toca moverse. Buscar recursos, hablar con la gente, conseguir entrevistas, estar pendiente de quién aparece y, muchas veces, improvisar. Hay coberturas en las que tienes 2 minutos para conseguir todo lo que necesitas y otras en las que acabas hablando con alguien durante 10."
+            ]
+          },
+          {
+            "heading": "¿Qué entrevista o evento recuerdas especialmente?",
+            "paragraphs": [
+              "He tenido la oportunidad de entrevistar a muchísima gente conocida en diferentes coberturas y, curiosamente, no suelo ponerme nerviosa. Supongo que cuando los tienes delante de una cámara dejas de pensar en quiénes son y empiezas a ver a la persona que tienes delante.",
+              "Pero ese día estaba C. Tangana y fue diferente. Llevo escuchándolo desde la adolescencia y, por primera vez, sí sentí esos nervios de “joder, estoy hablando con alguien a quien llevo años escuchando”. Me hizo especial ilusión.",
+              "También recuerdo especialmente el estreno de Grogu, porque pude hablar con Jon Favreau. Más allá de la entrevista, me llamó la atención lo cercano, humilde y agradable que fue. Creo que es algo que me gusta de este trabajo: conocer a personas que desde fuera parecen enormes y descubrir que, cuando las tienes delante, siguen siendo simplemente personas."
+            ]
+          }
+        ]
       },
       "urjcmun": {
         "role": "Deputy Director for Social Media",
@@ -758,7 +1082,31 @@
           "teamCoordination": "Coordinación de reporteros y creadores de contenido.",
           "liveContent": "Cobertura de eventos y producción de contenido en tiempo real.",
           "digitalIdentity": "Desarrollo de identidad digital y posicionamiento."
-        }
+        },
+        "story": [
+          {
+            "heading": "¿Qué cargos tuviste y en qué fechas?",
+            "paragraphs": [
+              "Empecé en el equipo de Comunicación de URJCmun en 2022. Desde entonces he pasado por distintos roles dentro del área de prensa y comunicación."
+            ]
+          },
+          {
+            "heading": "¿Qué hacías realmente y qué coordinabas con otras personas?",
+            "paragraphs": [
+              "Había que decidir qué contar, cuándo contarlo y cómo hacerlo sin que las redes se convirtieran en un tablón de anuncios. Coordinábamos coberturas, entrevistas, fotografías, vídeos y contenido más espontáneo sobre lo que estaba pasando en el momento.",
+              "También revisaba y organizaba el trabajo del equipo, repartía coberturas y estaba pendiente de que todo saliera mientras el congreso seguía ocurriendo alrededor. Básicamente, intentar tener una visión general mientras estás metida hasta las rodillas en el caos.",
+              "Todo esto con un año previo de trabajo de 150 entrevistas a personas, selección de equipos, dos formaciones que impartí. El diseño del feed de instagram con un plan de contenidos mensual, y muchas horas de canva."
+            ]
+          },
+          {
+            "heading": "¿Qué contenido o momento de URJCmun te representa más?",
+            "paragraphs": [
+              "Creo que precisamente los momentos que no estaban en el programa.",
+              "URJCmun reúne a más de mil personas y durante esos días pasan muchísimas cosas a la vez. Me gustaba encontrar esos momentos pequeños: una reacción, una conversación, una broma entre delegados, alguien que llevaba tres días sin dormir o cualquier cosa que explicara cómo se estaba viviendo el congreso desde dentro.",
+              "De todo lo que hice, me representa especialmente esa mezcla entre información y entretenimiento. Contar lo que está pasando, pero sin olvidar que detrás de las acreditaciones, los comités y los discursos hay gente pasándoselo bien, poniéndose nerviosa, haciendo amigos y viviendo algo que probablemente recuerde durante años."
+            ]
+          }
+        ]
       },
       "annie-bonnie": {
         "role": "Comunicación corporativa",
@@ -773,7 +1121,25 @@
           "events": "Apoyo en la organización y cobertura de eventos.",
           "stakeholders": "Comunicación con público y colaboradores.",
           "calendar": "Apoyo en estrategia de contenidos y calendario editorial."
-        }
+        },
+        "story": [
+          {
+            "heading": "¿Qué responsabilidades eran tuyas?",
+            "paragraphs": [
+              "Sí, aunque añadiría que mi trabajo era bastante más transversal. Hacía un poco de todo: redactaba contenidos para blogs y otros canales digitales, preparaba y grababa TikToks, editaba vídeo, hacía entrevistas y cubría eventos, también durante MWC Madrid.",
+              "Además, llevaba parte del seguimiento de redes y contenidos: cada semana preparaba un dashboard analizando el rendimiento de las cuentas, los contenidos que mejor funcionaban y lo que estaba haciendo la competencia, para detectar tendencias y sacar ideas.",
+              "También participaba en la planificación editorial y en otras tareas de comunicación que iban surgiendo. Era un puesto en el que podía empezar la mañana escribiendo un artículo y terminarla grabando o editando un vídeo. Y eso, sinceramente, era parte de lo que más me gustaba."
+            ]
+          },
+          {
+            "heading": "¿Qué proyecto, pieza o actividad concreta recuerdas?",
+            "paragraphs": [
+              "Recuerdo con especial cariño cuando tuve que cubrir un evento de Madring entrevistando a los invitados, incluyendo a Iker Casillas, ya que no era mi rol y depositaron mucha confianza en mí mis jefes, salió muy bien.",
+              "También recuerdo los contenidos para TikTok, porque había bastante libertad para probar formatos y encontrar maneras menos convencionales de comunicar temas de una empresa.",
+              "Y quizá lo que más me enseñó fue el trabajo semanal de análisis de redes y competencia. Me obligaba a dejar de pensar solo como creadora y empezar a mirar los contenidos desde fuera: qué funciona, por qué funciona, qué está haciendo todo el mundo y dónde hay espacio para hacer algo diferente."
+            ]
+          }
+        ]
       },
       "isocero": {
         "role": "Fotógrafa en hoteles",
@@ -786,7 +1152,27 @@
           "editing": "Edición de las fotografías.",
           "sales": "Venta de fotografías personalizadas.",
           "clientService": "Atención y asesoramiento al cliente."
-        }
+        },
+        "story": [
+          {
+            "heading": "¿Cómo era un día normal de trabajo allí?",
+            "paragraphs": [
+              "El día empezaba bastante pronto en el hotel. Durante la mañana hacía fotografía en las zonas de piscina y exteriores: me acercaba a las familias, les explicaba la propuesta y, si aceptaban, hacía sesiones mientras estaban pasando el día.",
+              "Normalmente eran reportajes de unas 50 a 100 fotografías, muchas veces con familias enteras y niños, aunque también hacía algunas sesiones de parejas. Tenía que dirigirlos, buscar momentos y poses que funcionaran y conseguir que las fotos salieran naturales, todo mientras me movía constantemente por la piscina, muchas veces con los pies mojados y bajo el sol.",
+              "Además, había unos objetivos diarios de sesiones y ventas, así que había bastante rechazo y había que aprender a insistir sin resultar invasiva.",
+              "A mediodía aprovechaba la pausa para descargar y editar las fotografías. Por la tarde cambiaba de uniforme, montaba el stand y pasaba de fotógrafa a comercial: enseñaba las fotos a las familias, les explicaba las opciones y trataba de conseguir que compraran el reportaje. Al final del día tocaba cerrar el puesto, hacer caja y comprobar el material."
+            ]
+          },
+          {
+            "heading": "¿Qué hacías tú desde la sesión hasta la entrega de las fotos?",
+            "paragraphs": [
+              "Me encargaba prácticamente de todo el proceso.",
+              "Primero hacía la sesión y seleccionaba las fotografías que tenían potencial. Después descargaba y organizaba el material y editaba las imágenes en Lightroom, corrigiendo luz, color y encuadre para que el resultado fuera coherente.",
+              "Después enseñaba las fotografías a los clientes en el stand y me encargaba de todo el proceso de venta. Una vez realizada la compra, preparaba y entregaba el material según el procedimiento del hotel.",
+              "Era un trabajo en el que la fotografía era solo una parte. Tenía que saber acercarme a desconocidos, dirigir una sesión, editar rápido, vender mi propio trabajo y hacerme responsable del material y de la caja al final del día."
+            ]
+          }
+        ]
       }
     }
   },
@@ -843,7 +1229,28 @@
     "copy": "Copiar email",
     "copied": "Copiado",
     "languages": "Idiomas",
-    "languagesValue": "Español · Ruso · Inglés · Valenciano · Italiano"
+    "languagesValue": "Español · Ruso · Inglés · Valenciano · Italiano",
+    "opportunitiesEyebrow": "Qué me gustaría hacer ahora",
+    "opportunities": [
+      {
+        "heading": "¿Qué tipo de oportunidades te gustaría recibir?",
+        "paragraphs": [
+          "Me interesan oportunidades en las que pueda contar cosas y estar donde están pasando. Desde trabajar como reportera, hacer entrevistas o cubrir eventos hasta participar en proyectos audiovisuales, rodajes, documentales o contenidos para medios y redes. Me gustaría seguir creciendo en periodismo, sin dejar de lado la parte más cinematográfica y visual. También me interesan los proyectos culturales y musicales, especialmente aquellos que me permitan conocer gente, descubrir escenas y contar historias desde dentro."
+        ]
+      },
+      {
+        "heading": "Si mañana te ofrecieran un proyecto ideal, ¿cómo sería?",
+        "paragraphs": [
+          "Un proyecto en el que pudiera salir con una cámara, conocer a gente interesante y contar algo que merezca la pena. Podría ser un reportaje sobre una escena musical, una pieza documental, un programa de televisión o un proyecto audiovisual con libertad para proponer y experimentar. Me gustaría participar en todo el proceso, desde encontrar la historia hasta grabarla, editarla y darle forma. Y, sobre todo, trabajar con un equipo del que aprender y con el que hacer cosas que no haría por mi cuenta."
+        ]
+      },
+      {
+        "heading": "¿Te interesan proyectos fuera de Madrid? ¿Contrato, freelance o colaboraciones?",
+        "paragraphs": [
+          "Sí, me interesan proyectos fuera de Madrid y también oportunidades que impliquen viajar. Estoy abierta tanto a contratos como a proyectos freelance y colaboraciones, especialmente si me permiten aprender, ganar experiencia y desarrollar mi perfil profesional. Ahora mismo me importa encontrar un proyecto en el que pueda aportar, crecer y seguir explorando distintas formas de contar."
+        ]
+      }
+    ]
   },
   "Footer": {
     "location": "Madrid",

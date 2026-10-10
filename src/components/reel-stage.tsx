@@ -5,12 +5,14 @@ import { useCallback, useState } from "react";
 
 import { PortfolioVideo } from "@/components/portfolio-video";
 import type { ShortFormStory } from "@/components/short-form-reporting";
+import { Link } from "@/i18n/navigation";
 
 type ReelStageProps = {
   stories: ShortFormStory[];
   listLabel: string;
   nowShowingLabel: string;
   soundHint: string;
+  viewProjectLabel: string;
 };
 
 /**
@@ -19,7 +21,7 @@ type ReelStageProps = {
  * empieza a reproducirse (con sonido si el navegador lo permite). Sólo existe
  * un reproductor a la vez.
  */
-export function ReelStage({ stories, listLabel, nowShowingLabel, soundHint }: ReelStageProps) {
+export function ReelStage({ stories, listLabel, nowShowingLabel, soundHint, viewProjectLabel }: ReelStageProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [playing, setPlaying] = useState(false);
   const stop = useCallback(() => setPlaying(false), []);
@@ -54,6 +56,14 @@ export function ReelStage({ stories, listLabel, nowShowingLabel, soundHint }: Re
             <span className="reel-stage-description">{selected.description}</span>
           ) : null}
           {playing ? null : <span className="reel-stage-hint">{soundHint}</span>}
+          {selected.detailSlug ? (
+            <Link
+              className="reel-stage-link"
+              href={{ pathname: "/work/[slug]", params: { slug: selected.detailSlug } }}
+            >
+              {viewProjectLabel} <span aria-hidden="true">→</span>
+            </Link>
+          ) : null}
         </figcaption>
       </figure>
 

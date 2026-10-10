@@ -184,10 +184,13 @@ export const projects: PortfolioProject[] = [
   {
     id: "short-form-001",
     slug: "short-form-001",
-    year: "",
+    // Año y lugar: ficha de Sofía (P0127 «septiembre de 2026, en el centro de Madrid»).
+    year: "2026",
+    locationKey: "madrid",
     discipline: ["reporting", "video"],
     reportingFormat: "short-form",
     featured: true,
+    detailPage: true,
     order: 2,
     published: true,
     translationKey: "short-form-001",
@@ -214,10 +217,14 @@ export const projects: PortfolioProject[] = [
   {
     id: "short-form-002",
     slug: "short-form-002",
-    year: "",
+    // Ficha de Sofía: «para Yoigo … durante mis prácticas en Annie Bonnie», 2025 (P0155, P0159).
+    year: "2025",
+    organisation: "Yoigo",
+    experienceId: "annie-bonnie",
     discipline: ["reporting", "video"],
     reportingFormat: "short-form",
     featured: true,
+    detailPage: true,
     order: 1,
     published: true,
     translationKey: "short-form-002",
@@ -244,10 +251,14 @@ export const projects: PortfolioProject[] = [
   {
     id: "short-form-003",
     slug: "short-form-003",
-    year: "",
+    // Ficha de Sofía: «2025, para URJCmun» (P0207, P0210).
+    year: "2025",
+    organisation: "URJCmun",
+    experienceId: "urjcmun",
     discipline: ["reporting", "video"],
     reportingFormat: "short-form",
     featured: true,
+    detailPage: true,
     order: 3,
     published: true,
     translationKey: "short-form-003",
@@ -274,10 +285,15 @@ export const projects: PortfolioProject[] = [
   {
     id: "short-form-004",
     slug: "short-form-004",
-    year: "",
+    // Ficha de Sofía: TikTok de Yoigo, prácticas en Annie Bonnie, 2025, Madrid (P0181, P0186).
+    year: "2025",
+    organisation: "Yoigo",
+    locationKey: "madrid",
+    experienceId: "annie-bonnie",
     discipline: ["reporting", "video"],
     reportingFormat: "short-form",
     featured: true,
+    detailPage: true,
     order: 4,
     published: true,
     translationKey: "short-form-004",
@@ -333,7 +349,8 @@ export const projects: PortfolioProject[] = [
   {
     id: "4-minutos",
     slug: "4-minutos",
-    year: "",
+    // Ficha de Sofía: «Se hizo en 2025» (P0247).
+    year: "2025",
     discipline: ["audiovisual"],
     featured: true,
     order: 4,

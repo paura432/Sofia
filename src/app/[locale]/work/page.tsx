@@ -95,6 +95,7 @@ export default async function WorkPage() {
               showLessLabel={t("shortFormShowLess")}
               showMoreLabel={t("shortFormShowMore", { count: "{count}" })}
               viewOriginalLabel={projectsText("viewOriginal")}
+              viewProjectLabel={projectsText("viewProject")}
             />
           </div>
         </section>

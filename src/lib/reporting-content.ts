@@ -1,6 +1,7 @@
 import type { ShortFormStory } from "@/components/short-form-reporting";
 import {
   hasMediaAsset,
+  hasProjectDetailPage,
   publishableYear,
   type MediaCopy,
   type PortfolioProject,
@@ -45,6 +46,7 @@ export function toShortFormStory(
     role: copy.roles?.join(" · "),
     year: publishableYear(project.year),
     sourceUrl: project.sourceUrl,
+    detailSlug: hasProjectDetailPage(project) ? project.slug : undefined,
     posterSrc,
     posterAlt: copy.media?.[poster.id]?.alt ?? copy.title,
     posterRatio: poster.aspectRatio?.replace(":", " / ") ??

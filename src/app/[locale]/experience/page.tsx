@@ -5,6 +5,7 @@ import { AnimatedLine } from "@/components/motion/animated-line";
 import { Reveal } from "@/components/motion/reveal";
 import { StaggerGroup } from "@/components/motion/stagger";
 import { PeriodDisplay } from "@/components/period-display";
+import { StoryBlocks, type StoryBlock } from "@/components/story-blocks";
 import { experience } from "@/content/experience";
 import { getRelatedProjects, hasProjectDetailPage } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
@@ -23,6 +24,8 @@ type ExperienceCopy = {
   context?: string;
   responsibilities: Record<string, string>;
   progression?: Record<string, string>;
+  /** Respuestas literales de la ficha de Sofía sobre este puesto. */
+  story?: StoryBlock[];
 };
 type ProjectCopy = { title: string };
 
@@ -146,6 +149,12 @@ export default async function ExperiencePage() {
                     </ul>
                   ) : null}
                 </div>
+                {copy.story?.length ? (
+                  <div className="trajectory-story">
+                    <p className="eyebrow">{t("storyLabel")}</p>
+                    <StoryBlocks blocks={copy.story} headingLevel="h3" />
+                  </div>
+                ) : null}
               </StaggerGroup>
             );
           })}

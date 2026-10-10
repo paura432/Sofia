@@ -5,6 +5,7 @@ import { useCallback, useId, useState } from "react";
 
 import { PortfolioVideo } from "@/components/portfolio-video";
 import type { ProjectMedia } from "@/content/projects";
+import { Link } from "@/i18n/navigation";
 
 export type ShortFormStory = {
   id: string;
@@ -14,6 +15,8 @@ export type ShortFormStory = {
   role?: string;
   year?: string;
   sourceUrl?: string;
+  /** Slug de la ficha de detalle, cuando la pieza tiene historia propia. */
+  detailSlug?: string;
   posterSrc: string;
   posterAlt: string;
   posterRatio: string;
@@ -25,6 +28,7 @@ type ShortFormReportingProps = {
   projects: ShortFormStory[];
   label: string;
   viewOriginalLabel: string;
+  viewProjectLabel: string;
   opensInNewTabLabel: string;
   showMoreLabel: string;
   showLessLabel: string;
@@ -34,6 +38,7 @@ export function ShortFormReporting({
   projects,
   label,
   viewOriginalLabel,
+  viewProjectLabel,
   opensInNewTabLabel,
   showMoreLabel,
   showLessLabel,
@@ -111,6 +116,16 @@ export function ShortFormReporting({
               <h3>{project.title}</h3>
               {project.description ? (
                 <p className="short-form-description">{project.description}</p>
+              ) : null}
+              {project.detailSlug ? (
+                <Link
+                  aria-label={`${viewProjectLabel}: ${project.title}`}
+                  className="project-row-cta"
+                  href={{ pathname: "/work/[slug]", params: { slug: project.detailSlug } }}
+                >
+                  {viewProjectLabel}
+                  <span aria-hidden="true">→</span>
+                </Link>
               ) : null}
               {project.sourceUrl ? (
                 <a

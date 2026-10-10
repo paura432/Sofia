@@ -15,7 +15,10 @@ type HeroProps = {
  * trabajo ante cámara. El retrato posado vive en Perfil; aquí manda la pieza.
  */
 export async function Hero({ reels }: HeroProps) {
-  const t = await getTranslations("Hero");
+  const [t, projectsText] = await Promise.all([
+    getTranslations("Hero"),
+    getTranslations("Projects"),
+  ]);
 
   return (
     <section className="hero" aria-labelledby="hero-title">
@@ -52,6 +55,7 @@ export async function Hero({ reels }: HeroProps) {
               nowShowingLabel={t("nowShowing")}
               soundHint={t("soundHint")}
               stories={reels}
+              viewProjectLabel={projectsText("viewProject")}
             />
           </div>
         ) : null}

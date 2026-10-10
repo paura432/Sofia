@@ -9,6 +9,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
 import { ProjectMediaLayout } from "@/components/project-media-layout";
 import { ProjectPhotoViewer } from "@/components/project-photo-viewer";
+import { StoryBlocks, type StoryBlock } from "@/components/story-blocks";
 import type { PhotoViewerItem } from "@/components/photo-viewer-dialog";
 import {
   getArchivePhotosForProject,
@@ -42,6 +43,8 @@ type ProjectCopy = {
   dek?: string;
   format?: string;
   context?: string;
+  /** Respuestas literales de la ficha de Sofía, una por pregunta. */
+  story?: StoryBlock[];
   result?: string;
   roles?: string[];
   credits?: Record<string, string>;
@@ -252,6 +255,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <p className="eyebrow">{t("context")}</p>
               <p>{copy.context}</p>
             </div>
+          </Reveal>
+        </section>
+      ) : null}
+
+      {copy.story?.length ? (
+        <section className="section project-detail-copy story-section" aria-label={t("storyLabel")}>
+          <Reveal className="container editorial-grid">
+            <p className="eyebrow">{t("storyLabel")}</p>
+            <StoryBlocks blocks={copy.story} />
           </Reveal>
         </section>
       ) : null}

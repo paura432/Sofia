@@ -6,6 +6,7 @@ import { ContactBlock } from "@/components/contact-block";
 import { HeroEntrance } from "@/components/hero-entrance";
 import { Reveal } from "@/components/motion/reveal";
 import { StaggerGroup } from "@/components/motion/stagger";
+import { StoryBlocks, type StoryBlock } from "@/components/story-blocks";
 import { portrait, siteConfig, tools } from "@/content/profile";
 import { focalPointStyle, type ProjectSection } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
@@ -43,6 +44,7 @@ export default async function AboutPage() {
   const educationItems = education.raw("items") as Education[];
   const languageItems = languages.raw("items") as Language[];
   const practices = profile.raw("practices") as Practice[];
+  const voice = profile.raw("voice") as StoryBlock[];
 
   return (
     <main id="main" className="about-page">
@@ -79,6 +81,17 @@ export default async function AboutPage() {
           </div>
         </div>
       </section>
+
+      {voice.length ? (
+        <section className="section story-section" aria-labelledby="about-voice">
+          <Reveal className="container editorial-grid">
+            <p className="eyebrow" id="about-voice">
+              {profile("voiceEyebrow")}
+            </p>
+            <StoryBlocks blocks={voice} />
+          </Reveal>
+        </section>
+      ) : null}
 
       <section className="section" aria-labelledby="about-practice">
         <div className="container">

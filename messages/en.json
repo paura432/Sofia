@@ -134,6 +134,7 @@
     "moreFromSeriesCount": "{count, plural, one {# image} other {# images}}",
     "seriesNavigation": "Photo series navigation",
     "seriesStory": "Story",
+    "storyLabel": "In my own words",
     "seriesComplete": "Complete series",
     "seriesCompleteCount": "{count, plural, one {# image} other {# images}}",
     "viewerPrev": "Previous",
@@ -171,6 +172,33 @@
       "4-minutos": {
         "title": "4 MINUTOS",
         "description": "A short film in black and white about two young people meeting.",
+        "story": [
+          {
+            "heading": "How did the project come about, and what is the piece about?",
+            "paragraphs": [
+              "Cuatro minutos started as an assignment for a final-year Audiovisual Communication course. I wanted to write a conversation between two neighbourhood kids who, at first glance, are just hanging around, smoking and talking nonsense, but who little by little start talking about much bigger things.",
+              "Everything revolves around one question: what can happen in four minutes? You can steal a motorbike, run to the supermarket, tell someone you love them or make a decision that changes your life. I was interested in that mix of humour, rawness and moments of lucidity that appear when two people talk without trying to say anything important. The piece is inspired by Sueños y pan and by that way of finding something poetic in everyday characters and situations."
+            ]
+          },
+          {
+            "heading": "What exactly did you do?",
+            "paragraphs": [
+              "I was in charge of directing, the script, the shoot and the edit. I wrote the dialogue, planned the staging and directed the performances of the two actors. I also shot and edited the piece, built entirely in black and white and in a single sequence shot."
+            ]
+          },
+          {
+            "heading": "Do you remember any shooting, script, editing or production decision you made?",
+            "paragraphs": [
+              "The main decision was to tell the whole story in a single shot, without cuts, and in black and white. I wanted the conversation to run uninterrupted, leaving room for the silences, the looks and the shifts in tone between joking and something more serious. At the end, when the characters leave, the camera stays looking at the empty space. I wanted to end like that, letting the conversation disappear without needing to explain anything more. I had a lot of problems during the shoot because the stabiliser ran out of battery and we had to improvise."
+            ]
+          },
+          {
+            "heading": "Which part of the result do you like most?",
+            "paragraphs": [
+              "I like the contrast between what they say and what they seem to be saying. They can go from talking about stealing a motorbike to wondering whether four minutes are enough to love someone, and neither of the two feels entirely out of place. I think that's where the heart of the piece is: in how an apparently absurd conversation can end up saying something quite human."
+            ]
+          }
+        ],
         "format": "Short film",
         "roles": [
           "Direction — Sofía Chernikova"
@@ -197,6 +225,32 @@
       "tras-el-sofa": {
         "title": "Tras el sofá",
         "description": "A dramatic short film set in a home interior.",
+        "story": [
+          {
+            "heading": "How did the project come about, and what is the piece about?",
+            "paragraphs": [
+              "Tras el sofá was a final-year degree project in which we had to make a 6-minute short film inside a studio set, with a very limited time of 4 hours and no possibility of moving to other locations. Starting from those conditions, we built a drama around an accident that changes everything: a girl kills her brother by accident and his girlfriend finds out what happened. The story plays with secrecy, guilt and the tension of knowing something that can completely change the characters' lives."
+            ]
+          },
+          {
+            "heading": "What exactly did you do?",
+            "paragraphs": [
+              "I was in charge of directing and editing. During the shoot, my job was to coordinate the staging and guide the crew to bring the story to the screen within the time available. Afterwards, in the edit, I worked with the footage to build the narrative rhythm and order the information so that the dramatic tension worked."
+            ]
+          },
+          {
+            "heading": "Do you remember any shooting, script, editing or production decision you made?",
+            "paragraphs": [
+              "One of the main difficulties was telling a suspense story in a closed space without being able to use other locations. That made directing the actors, placing the characters and the way of revealing what had happened especially important. I had to make decisions such as dropping certain shots and bringing in others for lack of time. In the edit, the challenge was to give the scenes continuity and make the discovery carry weight within the story."
+            ]
+          },
+          {
+            "heading": "Which part of the result do you like most?",
+            "paragraphs": [
+              "I'd highlight the collective work and the ability to pull off a story with limited resources and time. We were ten people, with different responsibilities, and directing meant keeping the whole in mind while each department solved its part. I'm also interested in the challenge of working suspense from a small space, making the tension depend on the characters and on what they know, hide or discover."
+            ]
+          }
+        ],
         "format": "Short film",
         "roles": [
           "Direction — Sofía Chernikova",
@@ -220,6 +274,32 @@
       "version-beta": {
         "title": "VERSIÓN BETA",
         "description": "A promotional video with on-camera testimonials, action and graphics.",
+        "story": [
+          {
+            "heading": "How did the project come about, and what is the piece about?",
+            "paragraphs": [
+              "VERSIÓN BETA was a project for a Production course in which we had to pitch the concept of a documentary series. The proposal revolved around young people considered problematic and sought to approach their realities through their stories. To present the idea, we created a video of roughly one minute, with Pedro Aguado as presenter and different young people who, at first glance, might fit that label. The intention was to convey the tone and energy of the series in very little time."
+            ]
+          },
+          {
+            "heading": "What exactly did you do?",
+            "paragraphs": [
+              "I was in charge of contacting Pedro Aguado, precisely because of his career fronting Hermano Mayor, managing the location, filming the young people who appear in the piece and editing the video. My role covered both the production and coordination side and the audiovisual work, from making things happen to building the final piece."
+            ]
+          },
+          {
+            "heading": "Do you remember any shooting, script, editing or production decision you made?",
+            "paragraphs": [
+              "The main decision was to concentrate the concept of a documentary series into one minute. To do that, I worked with different shots of the young people and a fast, stimulating edit, aiming for the video to convey energy and spark curiosity about the project. It was also important to find someone who could present the proposal and connect with the subject, hence the contact with Pedro Aguado."
+            ]
+          },
+          {
+            "heading": "Which part of the result do you like most?",
+            "paragraphs": [
+              "I'd highlight that the project let me work on different stages of an audiovisual production. I didn't only take part in the shoot and the edit, I also had to find contacts, manage a location and solve practical issues so the idea could materialise. On top of that, the pitch format forced me to think about how to convey the essence of a series in barely a minute and leave people wanting to know more."
+            ]
+          }
+        ],
         "format": "Promotional piece",
         "media": {
           "version-beta-poster": {
@@ -231,6 +311,44 @@
       "short-form-001": {
         "title": "On foot through Madrid, camera round my neck",
         "description": "A walk-and-talk to camera through central Madrid, starting on Gran Vía.",
+        "story": [
+          {
+            "heading": "What was it exactly?",
+            "paragraphs": [
+              "It's a personal piece about Madrid that I made from a fairly simple idea: going out to take photos of the most touristy places in the centre, but looking for exactly what we usually don't want to show.",
+              "It wasn't for any outlet or company. I did it as my own project, mixing reporting, photography and video to talk about the city from a less pretty and much more everyday place."
+            ]
+          },
+          {
+            "heading": "What year was it, and where?",
+            "paragraphs": [
+              "I made it in September 2026, in the centre of Madrid, walking through some of the most touristy and busiest areas of the city."
+            ]
+          },
+          {
+            "heading": "What was your role?",
+            "paragraphs": [
+              "I made the project myself from start to finish. I came up with the idea and the route, filmed, took the photographs, I appear talking to camera and afterwards I cut and edited the piece.",
+              "I also decided what I wanted to show and from what point of view. The whole point was precisely not to look for the pretty photo, but to stop at what usually stays out of frame."
+            ]
+          },
+          {
+            "heading": "What was going on?",
+            "paragraphs": [
+              "Madrid was doing what Madrid does: people everywhere, tourists, noise, beautiful buildings and, underneath all that, rubbish, damage, abandoned corners, broken things and small scenes we don't usually look at.",
+              "I was interested in that contrast. How a city can be full of places we photograph to exhaustion and, two metres away, have something completely different.",
+              "I went out with the camera to look for those “anti-photos”: not the perfect Puerta del Sol, but what's left when you stop looking up. A kind of portrait of Madrid made with everything we'd normally try to hide."
+            ]
+          },
+          {
+            "heading": "Why would you include this video in your portfolio?",
+            "paragraphs": [
+              "Because I think it explains fairly well how I look at things.",
+              "I'm not only interested in recording what's happening. I'm interested in finding the detail that makes you look a second time. It also brings together several things I want to keep doing: going out into the street, telling things from my own point of view, working with images and talking directly to whoever is watching the piece.",
+              "It's also a project that's very much mine because there was no commission behind it telling me what to look for. The idea simply came from walking around Madrid and thinking that maybe we were all taking the same photos as always."
+            ]
+          }
+        ],
         "media": {
           "short-form-001-video": {
             "title": "On foot through Madrid, camera round my neck",
@@ -241,6 +359,32 @@
       "short-form-002": {
         "title": "On the ‘9‑1‑1’ set",
         "description": "A handheld-mic interview inside a set built for the series, at Chamartín station.",
+        "story": [
+          {
+            "heading": "What was it exactly?",
+            "paragraphs": [
+              "It was an audiovisual piece for social media made during my internship at Annie Bonnie for Yoigo. We travelled to the set of the series 9-1-1 to film content related to it, including an interview with the content creator @telocuentosinspoilers."
+            ]
+          },
+          {
+            "heading": "What year was it?",
+            "paragraphs": [
+              "2025, during my internship at Annie Bonnie."
+            ]
+          },
+          {
+            "heading": "What was your role?",
+            "paragraphs": [
+              "I'm on camera as the reporter, presenting the location and interviewing @telocuentosinspoilers. I was in charge of leading the conversation and asking the questions to explain to the audience what the series is about and what its action is based on, as well as helping to edit the video."
+            ]
+          },
+          {
+            "heading": "What was going on?",
+            "paragraphs": [
+              "We had travelled to the 9-1-1 set and I used the visit to introduce the audience to the world of the series. In the video I appear with a microphone, I say where we are and I interview @telocuentosinspoilers, who explains what the series is about and how the action we see in it works. The idea was to use the space itself to make a piece that was closer and more dynamic than a conventional explanation."
+            ]
+          }
+        ],
         "media": {
           "short-form-002-video": {
             "title": "On the ‘9‑1‑1’ set",
@@ -251,6 +395,38 @@
       "short-form-003": {
         "title": "MyMUN, step by step",
         "description": "How to register for URJCmun 2026 through the MyMUN platform, explained to camera.",
+        "story": [
+          {
+            "heading": "What was it exactly?",
+            "paragraphs": [
+              "It was a vertical piece for URJCmun's social media in which I explained simply how the MyMUN app worked, the platform participants used to look up information and follow different aspects of the conference. The piece combined screen recording, graphics and direct explanation."
+            ]
+          },
+          {
+            "heading": "What year was it?",
+            "paragraphs": [
+              "2025, for URJCmun."
+            ]
+          },
+          {
+            "heading": "What was your role?",
+            "paragraphs": [
+              "I was in charge of planning and structuring the content, explaining the app and taking part in the recording. I also worked on editing the piece, combining the app screens with graphics and visual resources so the explanation was clear and dynamic."
+            ]
+          },
+          {
+            "heading": "What was going on?",
+            "paragraphs": [
+              "The idea came up because MyMUN was an important tool during the conference, but for someone opening it for the first time it could be a bit confusing. I made the video thinking of that person who arrives, opens the app and thinks “okay, now what do I do?”. The piece went through its main functions and explained where to find each thing in a quick, visual way."
+            ]
+          },
+          {
+            "heading": "Why would you include this video in your portfolio?",
+            "paragraphs": [
+              "Because it shows a part of my work that isn't always visible in my more journalistic pieces: knowing how to take information that may seem technical or boring and turn it into simple, visual, easy-to-consume content. It also shows that I can move between presenting, scripting, editing and social media communication without each thing having to be done separately."
+            ]
+          }
+        ],
         "media": {
           "short-form-003-video": {
             "title": "MyMUN, step by step",
@@ -261,6 +437,40 @@
       "short-form-004": {
         "title": "Testing the vivo X300 Pro",
         "description": "First impressions of a smartphone: camera, screen and accessories, with close-ups.",
+        "story": [
+          {
+            "heading": "What was it exactly?",
+            "paragraphs": [
+              "It was a piece of content for Yoigo's TikTok account, made during my internship at Annie Bonnie."
+            ]
+          },
+          {
+            "heading": "What year was it, and where?",
+            "paragraphs": [
+              "It was in 2025, during my internship at Annie Bonnie, in Madrid."
+            ]
+          },
+          {
+            "heading": "What was your role?",
+            "paragraphs": [
+              "I took part in preparing the content and I was one of the people who appears on camera. I worked on the way of explaining the product so that it felt natural and easy to understand within the TikTok format."
+            ]
+          },
+          {
+            "heading": "What was going on?",
+            "paragraphs": [
+              "It was a fairly direct piece: trying out a specific function of the phone and showing on camera what you could do with it.",
+              "What was interesting for me was adapting something that could have been told in a very technical way to a faster, closer format. I was talking to camera, interacting with another person and trying to make the explanation not feel like an explanation. I also had to learn the lines in about a minute, because there was little time."
+            ]
+          },
+          {
+            "heading": "Why would you include this video in your portfolio?",
+            "paragraphs": [
+              "Because it shows a side of me that isn't seen as much in my more journalistic work.",
+              "I'm at ease in front of the camera and I can change register depending on what the content needs. Here I'm not doing an interview or covering an event, I'm communicating a product and working out how to make it work in a social media format."
+            ]
+          }
+        ],
         "media": {
           "short-form-004-video": {
             "title": "Testing the vivo X300 Pro",
@@ -271,6 +481,32 @@
       "silver-praxis-condicion-perfecta": {
         "title": "Silver Praxis — Condición Perfecta",
         "description": "The music video for ‘Condición Perfecta’ by Silver Praxis.",
+        "story": [
+          {
+            "heading": "How did the project come about, and what is the piece about?",
+            "paragraphs": [
+              "Condición Perfecta is a music video for Silver Praxis, from the underground rap scene. The project set out to accompany the track visually through different locations and situations, building a piece with movement and an aesthetic tied to the artist's world."
+            ]
+          },
+          {
+            "heading": "What exactly did you do?",
+            "paragraphs": [
+              "I was in charge of shooting and editing the video. There were 5 days of filming in which I worked with different locations and visual resources, including shots inside a car and aerial drone footage, which I piloted myself. Afterwards I handled the edit to shape the material and build the final piece."
+            ]
+          },
+          {
+            "heading": "Do you remember any shooting, script, editing or production decision you made?",
+            "paragraphs": [
+              "An important part of the shoot was combining locations and shot types so the video had visual variety and movement. We filmed scenes in a car and aerial drone shots, which widened the framing possibilities and let us play with different perspectives. In the edit, the challenge was to give continuity to all that material and build a rhythm that went with the track."
+            ]
+          },
+          {
+            "heading": "Which part of the result do you like most?",
+            "paragraphs": [
+              "I like the variety of resources I got to work with within a single project. Going from filming in different locations to working with moving shots and piloting the drone let me get involved in different aspects of the shoot. I'd also highlight having taken the piece from the shoot to the final edit, working with several days' worth of material and building a coherent visual proposal. The edit took many hours of combinations, since I wasn't given a key shot list, so I had creative freedom."
+            ]
+          }
+        ],
         "format": "Music video",
         "roles": [
           "Filming and post-production — Sofía Chernikova"
@@ -306,6 +542,14 @@
       "retrato-editorial": {
         "title": "Portrait & editorial",
         "description": "Portraits in an abandoned warehouse, on a terrace, in a red-neon interior and on graffitied streets.",
+        "story": [
+          {
+            "heading": "Where and when did you take these photographs? Why were you there?",
+            "paragraphs": [
+              "Mainly for a fashion and current-affairs magazine featuring people of interest."
+            ]
+          }
+        ],
         "format": "Portrait · Editorial",
         "roles": [
           "Photography"
@@ -321,10 +565,10 @@
             "alt": "Two people in black t-shirts in front of industrial windows with graffiti"
           },
           "retrato-editorial-04": {
-            "alt": "The two men walk among rubble in an abandoned warehouse"
+            "alt": "Two men dressed in black walk among rubble in an abandoned warehouse with graffiti"
           },
           "retrato-editorial-05": {
-            "alt": "The two men walk towards the camera through a warehouse full of rubble and graffiti"
+            "alt": "Two men dressed in black walk towards the camera through a warehouse full of rubble and graffiti"
           },
           "retrato-editorial-06": {
             "alt": "Person seated on an urban terrace with plants and string lights"
@@ -357,25 +601,25 @@
             "alt": "Person in a green shirt seated on a low wall beneath a pergola strung with bulbs"
           },
           "retrato-img-5597": {
-            "alt": "The same person stands in the doorway of a green-tiled bathroom"
+            "alt": "Person in a green shirt, sunglasses and denim shorts standing in the doorway of a green-tiled bathroom"
           },
           "retrato-img-5476": {
             "alt": "Person in sunglasses and a green shirt seated on a wooden terrace with a green bag"
           },
           "retrato-img-5487": {
-            "alt": "The same person rests their chin on their hand, the green bag at their feet"
+            "alt": "Person in sunglasses and a green shirt seated on a wooden terrace, chin resting on their hand and a green bag at their feet"
           },
           "retrato-img-5795": {
             "alt": "A man in a red shirt and sunglasses sits on a terrace with his hands on his head"
           },
           "retrato-img-5808": {
-            "alt": "The same man sits on a stool inside a bar"
+            "alt": "Blond man in a red t-shirt sitting on a tall stool inside a bar with a large window"
           },
           "retrato-img-5851": {
-            "alt": "The same man reclines on a bench with one hand on his head"
+            "alt": "Blond man in a red t-shirt and sunglasses reclining on a wooden bench with one hand on his head"
           },
           "retrato-img-5860": {
-            "alt": "Close-up of the same man, chin raised, against a concrete wall"
+            "alt": "Close-up of a blond man in a red t-shirt, chin raised, against a concrete wall"
           },
           "retrato-img-6648": {
             "alt": "In an abandoned warehouse, one man crouches and another stands by a graffitied column; a burnt-out car behind them"
@@ -387,13 +631,13 @@
             "alt": "A man in a cropped black T-shirt, hands on his head, in front of a wall covered in graffiti"
           },
           "retrato-img-5425": {
-            "alt": "The same man among the wooden beams of a playground"
+            "alt": "Moustached man in a black t-shirt, in profile among the wooden beams and rope nets of a playground"
           },
           "retrato-img-5450": {
-            "alt": "The same man leans against a lamppost, arms folded"
+            "alt": "Moustached man in a black t-shirt leaning against a lamppost with arms folded, in front of a graffitied wall"
           },
           "retrato-img-5454": {
-            "alt": "The same man points at an anti-Airbnb sticker on a lamppost"
+            "alt": "Moustached man in a black t-shirt points at an anti-Airbnb sticker stuck on a post"
           },
           "retrato-img-2364": {
             "alt": "A person seen from behind in a tie-dye T-shirt, leaning over a wall with pink graffiti"
@@ -451,7 +695,7 @@
             "alt": "At night, the crowd films on their phones while carrying someone overhead"
           },
           "musica-img-6154": {
-            "alt": "Under violet light, a performer crouches on stage with his hands together in front of his face"
+            "alt": "Under violet light, a performer crouches on stage, covering his face with one hand and holding the microphone in the other"
           },
           "musica-img-6317": {
             "alt": "At night, a performer seen from behind holds the microphone out to the crowd, who raise their arms"
@@ -466,7 +710,7 @@
             "alt": "A performer in a beige tracksuit and sunglasses raises his microphone on an outdoor stage"
           },
           "musica-img-5038": {
-            "alt": "The same performer raises both arms beneath the ‘Madrid Salvaje’ sign"
+            "alt": "A performer in a beige tracksuit sings into the microphone and raises his other arm beneath the ‘Madrid Salvaje’ sign"
           },
           "musica-img-5174": {
             "alt": "A performer in a dark hoodie points at the crowd amid blue spotlights"
@@ -479,6 +723,20 @@
       "entre-tiendas-y-tambores": {
         "title": "Between Tents and Drums",
         "description": "A square with tents, handwritten signs, gathered groups and musicians playing percussion.",
+        "story": [
+          {
+            "heading": "Where and when did you take these photographs? Why were you there?",
+            "paragraphs": [
+              "I took them on the second day of the camp in Sol, in Madrid, in the context of the housing-rights protests. I went with my camera because I thought it was important to document what was happening. Beyond the demand itself, I wanted to capture how that space was being lived and the people who were holding it up."
+            ]
+          },
+          {
+            "heading": "What caught your attention, or what did you want to photograph?",
+            "paragraphs": [
+              "I was interested in capturing the life that was being built around the protest: the tents, the banners, the conversations, people organising and sharing space. I wanted to look beyond the image of a rally and photograph the small gestures that make a place become, even if only temporarily, something collective. For me, documenting is also paying attention to what happens between the moments that usually make the news."
+            ]
+          }
+        ],
         "format": "Photo essay",
         "media": {
           "entre-tiendas-y-tambores-001": {
@@ -488,7 +746,7 @@
             "alt": "Tents fill a square in front of buildings, with flags above them."
           },
           "entre-tiendas-y-tambores-003": {
-            "alt": "Tents and a handwritten banner beneath an overcast sky."
+            "alt": "Tents and several handwritten banners at the foot of a building with the ‘Tío Pepe’ sign on its roof, beneath an overcast sky."
           },
           "entre-tiendas-y-tambores-004": {
             "alt": "Tents and banners, one reading ‘PSOE y Sumar, responsables de nuestra miseria’ (‘PSOE and Sumar, responsible for our misery’); a person stands among them."
@@ -500,7 +758,7 @@
             "alt": "Chairs and belongings arranged among tents and canopies."
           },
           "entre-tiendas-y-tambores-007": {
-            "alt": "Beneath blue tarps, a handwritten sign above the tents: ‘La sociedad civil está gritando: ¡ya basta!’ (‘Civil society is shouting: enough!’)."
+            "alt": "Beneath blue tarps, a handwritten cardboard sign above the tents: ‘La sociedad civil está gritando ¡¡ya basta!!’ (‘Civil society is shouting: enough!’)."
           },
           "entre-tiendas-y-tambores-008": {
             "alt": "Three young people chat among folding chairs and tents, beneath the ‘P.P. maltrata la infancia’ banner."
@@ -509,16 +767,16 @@
             "alt": "A red tent with a handwritten sign: ‘¡Universitarios por la vivienda pública!’ (‘Students for public housing!’)."
           },
           "entre-tiendas-y-tambores-010": {
-            "alt": "A square covered by awnings, with tents and a banner reading ‘Frente a su especulación, okupación’ (‘Against their speculation, occupation’)."
+            "alt": "A square covered by awnings, with tents and a banner reading ‘Frente a su espekulación, okupación’ (‘Against their speculation, occupation’)."
           },
           "entre-tiendas-y-tambores-011": {
-            "alt": "Tents beneath a canopy lit at dusk."
+            "alt": "At dusk, tents beneath blue tarps and the ‘P.P. maltrata la infancia’ banner, in front of a building with a clock tower."
           },
           "entre-tiendas-y-tambores-012": {
             "alt": "Group gathered in a circle on a street, photographed in black and white."
           },
           "entre-tiendas-y-tambores-013": {
-            "alt": "People dancing in a circle on a street at night."
+            "alt": "At night, three people dance in the middle of a ring of people on a lit street."
           },
           "entre-tiendas-y-tambores-014": {
             "alt": "On a tent, a handwritten sign: ‘Ser rentista no es un trabajo’ (‘Being a landlord is not a job’)."
@@ -536,7 +794,7 @@
             "alt": "In black and white, a ring of people watches two people embracing in the middle."
           },
           "entre-tiendas-y-tambores-019": {
-            "alt": "Person jumps in the middle of a group watching."
+            "alt": "At night, a person skips rope in the middle of a ring of onlookers."
           },
           "entre-tiendas-y-tambores-020": {
             "alt": "At night, several people use ropes to hang the ‘P.P. maltrata la infancia’ banner."
@@ -548,13 +806,13 @@
             "alt": "Several people raise their arms beneath blue lights."
           },
           "entre-tiendas-y-tambores-023": {
-            "alt": "Crowd gathered in a lit square with hands raised."
+            "alt": "At night, a crowd raises their fists beneath the illuminated ‘Tío Pepe’ sign on top of a building."
           },
           "entre-tiendas-y-tambores-024": {
             "alt": "At night, a group raises their arms; on the right, police officers stand by a cordon."
           },
           "entre-tiendas-y-tambores-025": {
-            "alt": "In the crowd, young people hold a sign: ‘Fondos buitre fuera de nuestras ciudades’ (‘Vulture funds out of our cities’)."
+            "alt": "At night, in the crowd, a young man holds a cardboard sign: ‘Fondos buitre fuera de nuestras ciudades’ (‘Vulture funds out of our cities’)."
           },
           "entre-tiendas-y-tambores-026": {
             "alt": "Person with mouth open and hands together among the crowd."
@@ -566,7 +824,7 @@
             "alt": "A raised fist in the crowd; on the left, police officers in front of a building's façade."
           },
           "entre-tiendas-y-tambores-029": {
-            "alt": "Group gathered in front of an equestrian statue in a lit square."
+            "alt": "At night, a crowd with a red, yellow and purple flag and brass musicians in front of a lit equestrian statue."
           },
           "entre-tiendas-y-tambores-030": {
             "alt": "Close view of brass instruments and musicians playing among the crowd."
@@ -587,7 +845,7 @@
             "alt": "At night, a crowd fills the square beneath an illuminated sign."
           },
           "entre-tiendas-y-tambores-036": {
-            "alt": "Percussionists in a circle among the crowd on a street at night."
+            "alt": "Drummers with yellow drums play among the crowd on a street at night."
           },
           "entre-tiendas-y-tambores-037": {
             "alt": "Drummers play facing the camera, arms raised, in the square at night."
@@ -640,6 +898,14 @@
       "estudio-editorial": {
         "title": "Studio & editorial",
         "description": "Sessions on a white backdrop with props: old TV sets, an orange mirror, a suitcase and a guitar.",
+        "story": [
+          {
+            "heading": "Where and when did you take these photographs? Why were you there?",
+            "paragraphs": [
+              "They're photographs from collaborations with DJs or singers, in a studio for their project."
+            ]
+          }
+        ],
         "format": "Studio · Editorial",
         "roles": [
           "Photography"
@@ -649,7 +915,7 @@
             "alt": "A man in a crochet jumper crouches beside an orange mirror that reflects him, on a white background"
           },
           "estudio-editorial-02": {
-            "alt": "The same man looks at himself in the orange mirror, on a white background"
+            "alt": "A man in a blue cap and multicoloured crochet jumper, crouching in profile, looks at himself in an orange mirror on a white background"
           },
           "estudio-editorial-03": {
             "alt": "A curly-haired man in a checked blazer plays a mint-green electric guitar against a studio backdrop"
@@ -658,7 +924,7 @@
             "alt": "A shaven-headed man in a pinstripe suit and green glasses sits astride a chair holding a red rose; a small TV at his feet"
           },
           "estudio-editorial-05": {
-            "alt": "The same man leans back on a chair, one leg raised, looking up"
+            "alt": "A shaven-headed man in a pinstripe suit and green glasses leans back on a chair, one leg raised, looking up"
           },
           "estudio-editorial-06": {
             "alt": "High-angle portrait of a person in a pinstripe suit and green-tinted glasses"
@@ -673,7 +939,7 @@
             "alt": "A man in a cap and grey cardigan sits on the floor beside an old TV set and cushions"
           },
           "estudio-editorial-10": {
-            "alt": "The same man reclines with his hands behind his head, between two old TV sets and a cushion"
+            "alt": "A man in a cap and grey knitted cardigan reclines on the floor with his hands behind his head, between two old TV sets and a cushion"
           },
           "estudio-80c82615-228f-40a7-99de-ac4c0d672e38": {
             "alt": "At dusk, a young man in a bucket hat and tie-dye T-shirt looks at something in his hands"
@@ -682,21 +948,21 @@
             "alt": "A man in a pinstripe suit and green glasses crouches, holding a flip phone"
           },
           "estudio-dsc-1293": {
-            "alt": "Shot from above with a wide-angle lens, the man in green glasses grins, holding an open flip phone"
+            "alt": "Shot from above with a wide-angle lens, a shaven-headed man in green glasses and a pinstripe suit grins, holding an open handheld games console"
           }
         }
       }
     }
   },
   "Profile": {
-    "bio": "I'm a journalist and TV reporter, working at Grupo Cadena Media since 2024.",
+    "bio": "I say I tell stories about things. Sometimes with a camera, sometimes in writing, sometimes by talking to someone and asking questions. I studied Journalism and Audiovisual Communication because I've always found it hard to choose between looking and telling what I see. I suppose I'm still a bit stuck there.",
     "aboutPageEyebrow": "Profile",
     "portraitAlt": "Portrait of Sofía Chernikova",
     "educationEyebrow": "Education",
     "languagesEyebrow": "Languages",
     "toolsEyebrow": "Tools",
     "viewFullExperience": "Full experience",
-    "bioMore": "I cover premieres, events and press conferences, interview artists and public figures, and write scripts and news pieces. I studied Journalism and Audiovisual Communication at Universidad Rey Juan Carlos. Spanish and Russian are both my native languages.",
+    "bioMore": "I'm interested in the stories that are happening while everyone is looking the other way. People, the night, music, cities, the things that change and the things that stay.",
     "baseLabel": "Base",
     "baseValue": "Madrid",
     "practiceEyebrow": "What I do",
@@ -719,6 +985,46 @@
         "link": "See photography",
         "section": "photography"
       }
+    ],
+    "voiceEyebrow": "In my own words",
+    "voice": [
+      {
+        "heading": "Which part of your work do you enjoy most?",
+        "paragraphs": [
+          "I like all of it. I could say going out to look for something without knowing exactly what I'm going to find.",
+          "And then there's editing, which is another way of looking. Suddenly you have hours of material and you have to decide what stays, what goes and where the story really begins."
+        ]
+      },
+      {
+        "heading": "How do you feel working in front of the camera?",
+        "paragraphs": [
+          "Comfortable. I think I don't much like acting, but I do like being there.",
+          "I like talking to someone even if there's a camera in between. Improvising, reacting, getting it a bit wrong and carrying on. When everything is too prepared, something is lost that matters to me, which is the feeling that it's really happening."
+        ]
+      },
+      {
+        "heading": "When you do an interview, what are you trying to achieve?",
+        "paragraphs": [
+          "For the person to forget a little that they're being interviewed.",
+          "I'm not that interested in collecting perfect answers. I prefer an answer that slips out a little.",
+          "I try to listen more than I wait for my turn to ask the next question. It sounds basic, but sometimes we forget."
+        ]
+      },
+      {
+        "heading": "Which pieces of work would you show first?",
+        "paragraphs": [
+          "Lo que vibra no muere. My audiovisual project about the night and techno culture in Madrid. It's probably the piece of work that looks most like me, because it mixes image, sound, writing and a very specific way of looking at the city.",
+          "And lastly, my coverage of events, premieres and interviews. I like working when everything is happening at once, dealing with public figures, whom I humanise a lot; it's arriving with a camera, talking to someone, finding a story, shooting B-roll and then trying to put all that chaos in order."
+        ]
+      },
+      {
+        "heading": "Is there a way of describing you that doesn't represent you?",
+        "paragraphs": [
+          "I don't much like saying I'm “multidisciplinary”. It sounds like you know how to do twenty things and none of them especially well.",
+          "I'm also not sure it represents me to say I have “a great passion for storytelling”. It's true, but it sounds like a line that comes bundled with any journalist.",
+          "I think I'm simpler than all that. I like to look twice. Ask questions. Get myself into where things are happening. And find stories where, at first, there didn't seem to be any."
+        ]
+      }
     ]
   },
   "Experience": {
@@ -727,6 +1033,7 @@
     "pageText": "",
     "responsibilitiesLabel": "Responsibilities",
     "progressionLabel": "Roles across URJCmun",
+    "storyLabel": "In my own words",
     "items": {
       "grupo-cadena-media": {
         "role": "TV Reporter",
@@ -737,7 +1044,24 @@
           "eventCoverage": "Coverage of premieres, events and press conferences.",
           "interviews": "Interviews with artists, actors and public figures.",
           "scripts": "Writing scripts and news pieces."
-        }
+        },
+        "story": [
+          {
+            "heading": "What do you do on a shoot, from preparation to wrap?",
+            "paragraphs": [
+              "I do a bit of research, think about which questions might make sense and what I need to get so that afterwards there's something of value, not just footage of people walking down a photocall.",
+              "When I arrive, it's time to move. Look for B-roll, talk to people, get interviews, keep an eye on who's turning up and, very often, improvise. There are shoots where you have 2 minutes to get everything you need and others where you end up talking to someone for 10."
+            ]
+          },
+          {
+            "heading": "Which interview or event do you remember especially?",
+            "paragraphs": [
+              "I've had the chance to interview a great many well-known people at different events and, curiously, I don't usually get nervous. I suppose that when you have them in front of a camera you stop thinking about who they are and start seeing the person in front of you.",
+              "But that day C. Tangana was there, and it was different. I've been listening to him since I was a teenager and, for the first time, I did feel those nerves of “bloody hell, I'm talking to someone I've been listening to for years”. It made me especially happy.",
+              "I also especially remember the premiere of Grogu, because I got to talk to Jon Favreau. Beyond the interview, what struck me was how close, humble and pleasant he was. I think that's something I like about this job: meeting people who seem enormous from the outside and discovering that, when you have them in front of you, they're still simply people."
+            ]
+          }
+        ]
       },
       "urjcmun": {
         "role": "Deputy Director for Social Media",
@@ -758,7 +1082,31 @@
           "teamCoordination": "Coordination of reporters and content creators.",
           "liveContent": "Event coverage and real-time content production.",
           "digitalIdentity": "Development of digital identity and positioning."
-        }
+        },
+        "story": [
+          {
+            "heading": "Which roles did you hold, and when?",
+            "paragraphs": [
+              "I started on the URJCmun Communication team in 2022. Since then I've been through different roles within the press and communication area."
+            ]
+          },
+          {
+            "heading": "What did you actually do, and what did you coordinate with others?",
+            "paragraphs": [
+              "We had to decide what to tell, when to tell it and how to do it without the social channels turning into a noticeboard. We coordinated coverage, interviews, photographs, videos and more spontaneous content about what was happening at the time.",
+              "I also reviewed and organised the team's work, handed out assignments and kept an eye on everything getting done while the conference carried on around us. Basically, trying to keep an overview while you're knee-deep in the chaos.",
+              "All of this with a previous year of work: 150 interviews with people, team selection, two training sessions I gave. The design of the Instagram feed with a monthly content plan, and many hours of Canva."
+            ]
+          },
+          {
+            "heading": "Which URJCmun content or moment represents you most?",
+            "paragraphs": [
+              "I think precisely the moments that weren't in the programme.",
+              "URJCmun brings together more than a thousand people, and over those days a huge amount happens at once. I liked finding those small moments: a reaction, a conversation, a joke between delegates, someone who hadn't slept for three days or anything that explained how the conference was being lived from the inside.",
+              "Of everything I did, what represents me most is that mix of information and entertainment. Telling what's going on, but without forgetting that behind the badges, the committees and the speeches there are people having a good time, getting nervous, making friends and living something they'll probably remember for years."
+            ]
+          }
+        ]
       },
       "annie-bonnie": {
         "role": "Corporate Communications",
@@ -773,7 +1121,25 @@
           "events": "Supporting the organisation and coverage of events.",
           "stakeholders": "Communication with audiences and collaborators.",
           "calendar": "Supporting content strategy and editorial planning."
-        }
+        },
+        "story": [
+          {
+            "heading": "Which responsibilities were yours?",
+            "paragraphs": [
+              "Yes, although I'd add that my work was quite a lot more cross-cutting. I did a bit of everything: I wrote content for blogs and other digital channels, prepared and filmed TikToks, edited video, did interviews and covered events, including during MWC Madrid.",
+              "I also handled part of the social and content monitoring: every week I prepared a dashboard analysing how the accounts were performing, which content worked best and what the competition was doing, to spot trends and get ideas.",
+              "I also took part in editorial planning and in other communication tasks as they came up. It was a job where I could start the morning writing an article and end it filming or editing a video. And that, honestly, was part of what I liked most."
+            ]
+          },
+          {
+            "heading": "Which specific project, piece or activity do you remember?",
+            "paragraphs": [
+              "I remember with special fondness when I had to cover a Madring event interviewing the guests, including Iker Casillas, because it wasn't my role and my bosses placed a lot of trust in me; it went very well.",
+              "I also remember the TikTok content, because there was quite a lot of freedom to try formats and find less conventional ways of communicating a company's topics.",
+              "And perhaps what taught me most was the weekly analysis of social media and competitors. It forced me to stop thinking only as a creator and start looking at content from the outside: what works, why it works, what everyone else is doing and where there's room to do something different."
+            ]
+          }
+        ]
       },
       "isocero": {
         "role": "Hotel Photographer",
@@ -786,7 +1152,27 @@
           "editing": "Editing the photographs.",
           "sales": "Sales of personalised photographs.",
           "clientService": "Direct client service and product guidance."
-        }
+        },
+        "story": [
+          {
+            "heading": "What was a normal working day like there?",
+            "paragraphs": [
+              "The day started fairly early at the hotel. In the morning I did photography around the pool and outdoor areas: I'd approach families, explain the offer and, if they accepted, do sessions while they were enjoying their day.",
+              "They were usually shoots of around 50 to 100 photographs, often with whole families and children, although I also did some couples' sessions. I had to direct them, look for moments and poses that worked and get the photos to come out natural, all while constantly moving around the pool, often with wet feet and under the sun.",
+              "On top of that, there were daily targets for sessions and sales, so there was quite a lot of rejection and you had to learn to insist without being invasive.",
+              "At midday I used the break to download and edit the photographs. In the afternoon I changed uniform, set up the stand and went from photographer to salesperson: I showed the families the photos, explained the options and tried to get them to buy the shoot. At the end of the day it was time to close the stand, cash up and check the equipment."
+            ]
+          },
+          {
+            "heading": "What did you do from the session to delivering the photos?",
+            "paragraphs": [
+              "I handled practically the whole process.",
+              "First I did the session and selected the photographs with potential. Then I downloaded and organised the material and edited the images in Lightroom, correcting light, colour and framing so the result was consistent.",
+              "Then I showed the photographs to the clients at the stand and handled the whole sales process. Once the purchase was made, I prepared and delivered the material according to the hotel's procedure.",
+              "It was a job where photography was only one part. I had to know how to approach strangers, direct a session, edit fast, sell my own work and take responsibility for the equipment and the till at the end of the day."
+            ]
+          }
+        ]
       }
     }
   },
@@ -843,7 +1229,28 @@
     "copy": "Copy email",
     "copied": "Copied",
     "languages": "Languages",
-    "languagesValue": "Spanish · Russian · English · Valencian · Italian"
+    "languagesValue": "Spanish · Russian · English · Valencian · Italian",
+    "opportunitiesEyebrow": "What I'd like to do now",
+    "opportunities": [
+      {
+        "heading": "What kind of opportunities would you like to receive?",
+        "paragraphs": [
+          "I'm interested in opportunities where I can tell stories and be where things are happening. From working as a reporter, doing interviews or covering events to taking part in audiovisual projects, shoots, documentaries or content for media and social platforms. I'd like to keep growing in journalism, without leaving aside the more cinematic and visual side. I'm also interested in cultural and music projects, especially ones that let me meet people, discover scenes and tell stories from the inside."
+        ]
+      },
+      {
+        "heading": "If you were offered an ideal project tomorrow, what would it be like?",
+        "paragraphs": [
+          "A project where I could go out with a camera, meet interesting people and tell something worth telling. It could be a report on a music scene, a documentary piece, a television programme or an audiovisual project with the freedom to propose and experiment. I'd like to be involved in the whole process, from finding the story to filming it, editing it and giving it shape. And, above all, to work with a team I can learn from and do things with that I wouldn't do on my own."
+        ]
+      },
+      {
+        "heading": "Are you interested in projects outside Madrid? Contract, freelance or collaborations?",
+        "paragraphs": [
+          "Yes, I'm interested in projects outside Madrid and also in opportunities that involve travelling. I'm open to contracts as well as freelance projects and collaborations, especially if they let me learn, gain experience and develop my professional profile. Right now what matters to me is finding a project where I can contribute, grow and keep exploring different ways of telling stories."
+        ]
+      }
+    ]
   },
   "Footer": {
     "location": "Madrid",
