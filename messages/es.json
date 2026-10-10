@@ -91,7 +91,7 @@
     "reportingText": "Entrevista, paseo a cámara, guía y prueba de producto, en vertical. Mejor con sonido.",
     "audiovisualKicker": "Audiovisual",
     "audiovisualTitle": "Detrás de la cámara",
-    "audiovisualText": "Dirigí los dos cortometrajes y monté «Tras el sofá». Del videoclip de Silver Praxis hice el rodaje y la posproducción.",
+    "audiovisualText": "Dirigí y monté los dos cortometrajes. Del videoclip de Silver Praxis hice el rodaje y la posproducción.",
     "photographyKicker": "Fotografía",
     "photographyTitle": "Conciertos, calle y retrato",
     "photographyText": "Series completas y un archivo de 74 fotografías para mirar sin prisa.",
@@ -174,20 +174,20 @@
         "description": "Cortometraje en blanco y negro sobre el encuentro entre dos jóvenes.",
         "story": [
           {
-            "heading": "¿Cómo surgió el proyecto y qué cuenta la pieza?",
+            "heading": "¿Cómo surgió?",
             "paragraphs": [
               "Cuatro minutos nació como un trabajo para una asignatura de último año de Comunicación Audiovisual. Quería escribir una conversación entre dos chicos de barrio que, a primera vista, están pasando el rato, fumando y diciendo tonterías, pero que poco a poco empiezan a hablar de cosas bastante más grandes.",
               "Todo gira alrededor de una pregunta: ¿qué puede pasar en cuatro minutos? Puedes robar una moto, correr al supermercado, decirle a alguien que le quieres o tomar una decisión que te cambie la vida. Me interesaba esa mezcla de humor, crudeza y momentos de lucidez que aparecen cuando dos personas hablan sin pretender decir nada importante. La pieza está inspirada en Sueños y pan y en esa forma de encontrar algo poético en personajes y situaciones cotidianas."
             ]
           },
           {
-            "heading": "¿Qué hiciste tú exactamente?",
+            "heading": "¿Qué hiciste tú?",
             "paragraphs": [
               "Me encargué de la dirección, el guion, la grabación y el montaje. Escribí el diálogo, planteé la puesta en escena y dirigí la interpretación de los dos actores. También grabé y monté la pieza, construida íntegramente en blanco y negro y en un único plano secuencia."
             ]
           },
           {
-            "heading": "¿Recuerdas alguna decisión de rodaje, guion, montaje o producción que tomaras?",
+            "heading": "¿Qué decisiones recuerdas?",
             "paragraphs": [
               "La decisión principal fue contar toda la historia en un solo plano, sin cortes, y en blanco y negro. Quería que la conversación transcurriera sin interrupciones, dejando espacio a los silencios, las miradas y los cambios de tono entre la broma y algo más serio. Al final, cuando los personajes se marchan, la cámara se queda mirando el espacio vacío. Me interesaba terminar así, dejando que la conversación desapareciera sin necesidad de explicar nada más. Tuve muchos problemas durante el rodaje porque el estabilizador se quedó sin batería y tocó improvisar."
             ]
@@ -201,7 +201,7 @@
         ],
         "format": "Cortometraje",
         "roles": [
-          "Dirección — Sofía Chernikova"
+          "Dirección, guion, grabación y montaje — Sofía Chernikova"
         ],
         "credits": {
           "direction": "Sofía Chernikova",
@@ -227,19 +227,13 @@
         "description": "Cortometraje dramático ambientado en un interior doméstico.",
         "story": [
           {
-            "heading": "¿Cómo surgió el proyecto y qué cuenta la pieza?",
+            "heading": "¿Cómo surgió?",
             "paragraphs": [
               "Tras el sofá fue un proyecto de último año de carrera en el que teníamos que realizar un cortometraje de 6 minutos dentro de un plató, con un tiempo muy limitado de 4 horas y sin posibilidad de desplazarnos a otras localizaciones. A partir de esas condiciones, construimos un drama en torno a un accidente que lo cambia todo: una chica mata a su hermano sin querer y la novia de él descubre lo ocurrido. La historia juega con el secreto, la culpa y la tensión de saber algo que puede cambiar por completo la vida de los personajes."
             ]
           },
           {
-            "heading": "¿Qué hiciste tú exactamente?",
-            "paragraphs": [
-              "Me encargué de la dirección y el montaje. Durante el rodaje, mi trabajo consistió en coordinar la puesta en escena y orientar al equipo para llevar la historia a pantalla dentro del tiempo disponible. Después, en montaje, trabajé con el material grabado para construir el ritmo narrativo y ordenar la información de forma que la tensión dramática funcionara."
-            ]
-          },
-          {
-            "heading": "¿Recuerdas alguna decisión de rodaje, guion, montaje o producción que tomaras?",
+            "heading": "¿Qué decisiones recuerdas?",
             "paragraphs": [
               "Una de las principales dificultades era contar una historia de suspense en un espacio cerrado y sin poder recurrir a otras localizaciones. Eso hacía que la dirección de los actores, la colocación de los personajes y la manera de revelar lo que había ocurrido fueran especialmente importantes. Tuve que tomar decisiones como prescindir de ciertos planos e integrar otros por falta de tiempo. En montaje, el reto era dar continuidad a las escenas y conseguir que el descubrimiento tuviera peso dentro de la historia."
             ]
@@ -276,27 +270,15 @@
         "description": "Pieza promocional con testimonios a cámara, acción y grafismos.",
         "story": [
           {
-            "heading": "¿Cómo surgió el proyecto y qué cuenta la pieza?",
+            "heading": "¿Cómo surgió?",
             "paragraphs": [
               "VERSIÓN BETA fue un proyecto para una asignatura de Producción en el que teníamos que presentar el concepto de una serie documental. La propuesta giraba en torno a jóvenes considerados problemáticos y buscaba acercarse a sus realidades a través de sus historias. Para presentar la idea, creamos un vídeo de aproximadamente un minuto, con Pedro Aguado como presentador y diferentes jóvenes que, a primera vista, podían encajar en esa etiqueta. La intención era transmitir el tono y la energía de la serie en muy poco tiempo."
             ]
           },
           {
-            "heading": "¿Qué hiciste tú exactamente?",
+            "heading": "¿Qué hiciste tú?",
             "paragraphs": [
               "Me encargué de contactar con Pedro Aguado, precisamente por su trayectoria al frente de Hermano Mayor, gestionar la localización, grabar a los jóvenes que aparecen en la pieza y montar el vídeo. Mi papel abarcó tanto la parte de producción y coordinación como el trabajo audiovisual, desde conseguir que las cosas sucedieran hasta construir la pieza final."
-            ]
-          },
-          {
-            "heading": "¿Recuerdas alguna decisión de rodaje, guion, montaje o producción que tomaras?",
-            "paragraphs": [
-              "La principal decisión fue concentrar el concepto de una serie documental en un minuto. Para ello, trabajé con distintos planos de los jóvenes y un montaje rápido y estimulante, buscando que el vídeo transmitiera energía y despertara curiosidad por el proyecto. También fue importante encontrar a una persona que pudiera presentar la propuesta y conectar con la temática, de ahí el contacto con Pedro Aguado."
-            ]
-          },
-          {
-            "heading": "¿Qué parte del resultado te gusta más?",
-            "paragraphs": [
-              "Destacaría que el proyecto me permitió trabajar en distintas fases de una producción audiovisual. No solo participé en la grabación y el montaje, sino que también tuve que buscar contactos, gestionar una localización y resolver cuestiones prácticas para que la idea pudiera materializarse. Además, el formato de pitch me obligó a pensar cómo transmitir la esencia de una serie en apenas un minuto y dejar con ganas de conocer más."
             ]
           }
         ],
@@ -306,7 +288,10 @@
             "title": "VERSIÓN BETA",
             "alt": "Una persona habla a cámara delante de una pared con grafitis"
           }
-        }
+        },
+        "roles": [
+          "Producción, grabación y montaje — Sofía Chernikova"
+        ]
       },
       "short-form-001": {
         "title": "Madrid a pie, cámara al cuello",
@@ -320,16 +305,9 @@
             ]
           },
           {
-            "heading": "¿En qué año fue y dónde?",
-            "paragraphs": [
-              "Lo hice en septiembre de 2026, en el centro de Madrid, recorriendo algunas de las zonas más turísticas y transitadas de la ciudad."
-            ]
-          },
-          {
             "heading": "¿Cuál fue tu papel?",
             "paragraphs": [
-              "El proyecto lo hice yo de principio a fin. Pensé la idea y el recorrido, grabé, hice las fotografías, aparezco hablando a cámara y después monté y edité la pieza.",
-              "También decidí qué quería enseñar y desde qué mirada. La gracia estaba precisamente en no buscar la foto bonita, sino detenerme en lo que normalmente queda fuera del encuadre."
+              "El proyecto lo hice yo de principio a fin. Pensé la idea y el recorrido, grabé, hice las fotografías, aparezco hablando a cámara y después monté y edité la pieza."
             ]
           },
           {
@@ -341,11 +319,10 @@
             ]
           },
           {
-            "heading": "¿Por qué incluirías este vídeo en tu portfolio?",
+            "heading": "¿Por qué está en tu portfolio?",
             "paragraphs": [
               "Porque creo que explica bastante bien cómo miro.",
-              "No me interesa únicamente registrar lo que está pasando. Me interesa encontrar el detalle que hace que vuelvas a mirar una segunda vez. Además, junta varias cosas que quiero seguir haciendo: salir a la calle, contar desde mi propia mirada, trabajar con imagen y hablarle directamente a quien está viendo la pieza.",
-              "También es un proyecto bastante mío porque no había un encargo detrás que me dijera qué tenía que buscar. La idea salió simplemente de caminar por Madrid y pensar que quizá estábamos haciendo las mismas fotos de siempre."
+              "No me interesa únicamente registrar lo que está pasando. Me interesa encontrar el detalle que hace que vuelvas a mirar una segunda vez. Además, junta varias cosas que quiero seguir haciendo: salir a la calle, contar desde mi propia mirada, trabajar con imagen y hablarle directamente a quien está viendo la pieza."
             ]
           }
         ],
@@ -367,21 +344,9 @@
             ]
           },
           {
-            "heading": "¿En qué año fue?",
-            "paragraphs": [
-              "2025, durante mis prácticas en Annie Bonnie."
-            ]
-          },
-          {
             "heading": "¿Cuál fue tu papel?",
             "paragraphs": [
               "Salgo delante de cámara como reportera, presentando el lugar y entrevistando a @telocuentosinspoilers. Me encargué de conducir la conversación y plantear las preguntas para explicar al público de qué trata la serie y en qué se basa su acción, además de ayudar a editar el vídeo."
-            ]
-          },
-          {
-            "heading": "¿Qué estaba pasando?",
-            "paragraphs": [
-              "Nos habíamos desplazado hasta el decorado de 911 y aproveché la visita para introducir al público en el universo de la serie. En el vídeo aparezco con un micrófono, cuento dónde estamos y entrevisto a @telocuentosinspoilers, que nos explica de qué va la serie y cómo funciona la acción que vemos en ella. La idea era aprovechar el propio espacio para hacer una pieza más cercana y dinámica que una explicación convencional."
             ]
           }
         ],
@@ -403,12 +368,6 @@
             ]
           },
           {
-            "heading": "¿En qué año fue?",
-            "paragraphs": [
-              "2025, para URJCmun."
-            ]
-          },
-          {
             "heading": "¿Cuál fue tu papel?",
             "paragraphs": [
               "Me encargué de plantear y estructurar el contenido, explicar la aplicación y participar en la grabación. También trabajé en la edición de la pieza, combinando las pantallas de la aplicación con grafismos y recursos visuales para que la explicación fuera clara y dinámica."
@@ -418,12 +377,6 @@
             "heading": "¿Qué estaba pasando?",
             "paragraphs": [
               "La idea surgió porque MyMUN era una herramienta importante durante el congreso, pero para alguien que la abría por primera vez podía resultar un poco liosa. Hice el vídeo pensando en esa persona que llega, abre la aplicación y piensa “vale, ¿y ahora qué hago?”. La pieza iba recorriendo sus funciones principales y explicando dónde encontrar cada cosa de una manera rápida y visual."
-            ]
-          },
-          {
-            "heading": "¿Por qué incluirías este vídeo en tu portfolio?",
-            "paragraphs": [
-              "Porque enseña una parte de mi trabajo que no siempre se ve en mis piezas más periodísticas: saber coger información que puede parecer técnica o aburrida y convertirla en un contenido sencillo, visual y fácil de consumir. También refleja que puedo moverme entre presentación, guion, edición y comunicación para redes sin necesidad de que cada cosa vaya por separado."
             ]
           }
         ],
@@ -445,12 +398,6 @@
             ]
           },
           {
-            "heading": "¿En qué año fue y dónde?",
-            "paragraphs": [
-              "Fue en 2025, durante mis prácticas en Annie Bonnie, en Madrid."
-            ]
-          },
-          {
             "heading": "¿Cuál fue tu papel?",
             "paragraphs": [
               "Participé en la preparación del contenido y fui una de las personas que aparece delante de cámara. Trabajé la forma de explicar el producto para que resultara natural y fácil de entender dentro del formato de TikTok."
@@ -461,13 +408,6 @@
             "paragraphs": [
               "Era una pieza bastante directa: probar una función concreta del teléfono y enseñar en cámara qué se podía hacer con ella.",
               "Lo interesante para mí fue adaptar algo que podría haberse contado de una manera muy técnica a un formato más rápido y cercano. Estaba hablando a cámara, interactuando con otra persona y tratando de que la explicación no pareciera una explicación. También tenía que aprenderme las frases en cuestión de un minuto, porque había poco tiempo."
-            ]
-          },
-          {
-            "heading": "¿Por qué incluirías este vídeo en tu portfolio?",
-            "paragraphs": [
-              "Porque enseña una parte de mí que no se ve tanto en mis trabajos más periodísticos.",
-              "Tengo soltura delante de cámara y puedo cambiar de registro dependiendo de lo que necesite el contenido. Aquí no estoy haciendo una entrevista ni una cobertura, estoy comunicando un producto y entendiendo cómo hacerlo funcionar en un formato de redes."
             ]
           }
         ],
@@ -483,27 +423,15 @@
         "description": "Videoclip de «Condición Perfecta», de Silver Praxis.",
         "story": [
           {
-            "heading": "¿Cómo surgió el proyecto y qué cuenta la pieza?",
+            "heading": "¿Cómo surgió?",
             "paragraphs": [
               "Condición Perfecta es un videoclip de Silver Praxis dentro de la escena del rap underground. El proyecto buscaba acompañar visualmente el tema a través de distintas localizaciones y situaciones, construyendo una pieza con movimiento y una estética ligada al universo del artista."
             ]
           },
           {
-            "heading": "¿Qué hiciste tú exactamente?",
+            "heading": "¿Qué hiciste tú?",
             "paragraphs": [
               "Me encargué de la grabación y el montaje del videoclip. Fueron 5 días de rodaje en los que trabajé con diferentes localizaciones y recursos visuales, incluidos planos dentro de un coche y tomas aéreas con dron, que piloté yo misma. Después me ocupé del montaje para dar forma al material y construir la pieza final."
-            ]
-          },
-          {
-            "heading": "¿Recuerdas alguna decisión de rodaje, guion, montaje o producción que tomaras?",
-            "paragraphs": [
-              "Una parte importante del rodaje fue combinar localizaciones y tipos de plano para que el videoclip tuviera variedad visual y movimiento. Grabamos escenas en coche y tomas aéreas con dron, lo que permitió ampliar las posibilidades de encuadre y jugar con distintas perspectivas. En el montaje, el reto fue dar continuidad a todo ese material y construir un ritmo que acompañara al tema musical."
-            ]
-          },
-          {
-            "heading": "¿Qué parte del resultado te gusta más?",
-            "paragraphs": [
-              "Me gusta la variedad de recursos que pude trabajar dentro de un mismo proyecto. Pasar de grabar en distintas localizaciones a trabajar con planos en movimiento y pilotar el dron me permitió implicarme en diferentes aspectos del rodaje. También destacaría haber llevado la pieza desde la grabación hasta el montaje final, trabajando con material de varios días y construyendo una propuesta visual coherente. El montaje fueron varias horas de combinaciones ya que no se me proporcionó un guion técnico clave así que tuve libertad creativa."
             ]
           }
         ],
@@ -544,7 +472,7 @@
         "description": "Retratos en una nave abandonada, una terraza, un local con neón rojo y calles con grafiti.",
         "story": [
           {
-            "heading": "¿Dónde y cuándo hiciste estas fotografías? ¿Por qué estabas allí?",
+            "heading": "¿Por qué estabas allí?",
             "paragraphs": [
               "Principalmente para una revista de moda y actualidad donde aparece gente de interés."
             ]
@@ -725,13 +653,13 @@
         "description": "Una plaza con tiendas de campaña, carteles hechos a mano, grupos reunidos y músicos con percusión.",
         "story": [
           {
-            "heading": "¿Dónde y cuándo hiciste estas fotografías? ¿Por qué estabas allí?",
+            "heading": "¿Por qué estabas allí?",
             "paragraphs": [
               "Las hice durante el segundo día de la acampada en Sol, en Madrid, en el contexto de las movilizaciones por el derecho a la vivienda. Fui con mi cámara porque me parecía importante documentar lo que estaba ocurriendo. Más allá de la reivindicación, quería recoger cómo se estaba viviendo aquel espacio y a las personas que lo estaban sosteniendo."
             ]
           },
           {
-            "heading": "¿Qué te llamó la atención o qué querías fotografiar?",
+            "heading": "¿Qué querías fotografiar?",
             "paragraphs": [
               "Me interesaba captar la vida que se estaba construyendo alrededor de la protesta: las tiendas, las pancartas, las conversaciones, la gente organizándose y compartiendo espacio. Quería mirar más allá de la imagen de una concentración y fotografiar los pequeños gestos que hacen que un lugar se convierta, aunque sea temporalmente, en algo colectivo. Para mí, documentar también es prestar atención a lo que sucede entre los momentos que suelen aparecer en las noticias."
             ]
@@ -900,7 +828,7 @@
         "description": "Sesiones sobre fondo blanco con atrezo: televisores antiguos, un espejo naranja, una maleta y una guitarra.",
         "story": [
           {
-            "heading": "¿Dónde y cuándo hiciste estas fotografías? ¿Por qué estabas allí?",
+            "heading": "¿De qué son estas fotografías?",
             "paragraphs": [
               "Son fotografías de colaboraciones con DJ o cantantes, en un estudio para su proyecto."
             ]
@@ -996,25 +924,18 @@
         ]
       },
       {
-        "heading": "¿Cómo te sientes trabajando delante de cámara?",
+        "heading": "¿Cómo te sientes delante de cámara?",
         "paragraphs": [
           "Cómoda. Creo que no me gusta demasiado actuar, pero sí estar.",
           "Me gusta hablarle a alguien aunque haya una cámara entre medias. Improvisar, reaccionar, equivocarme un poco y seguir. Cuando todo está demasiado preparado se pierde algo que para mí es importante que es la sensación de que está pasando de verdad."
         ]
       },
       {
-        "heading": "Cuando haces una entrevista, ¿qué intentas conseguir?",
+        "heading": "¿Qué intentas conseguir en una entrevista?",
         "paragraphs": [
           "Que la persona se olvide un poco de que está siendo entrevistada.",
           "No me interesa demasiado coleccionar respuestas perfectas. Prefiero una respuesta que se escape un poco.",
           "Intento escuchar más que esperar mi turno para hacer la siguiente pregunta. Parece básico, pero a veces se nos olvida."
-        ]
-      },
-      {
-        "heading": "¿Qué trabajos enseñarías primero?",
-        "paragraphs": [
-          "Lo que vibra no muere. Mi proyecto audiovisual sobre la noche y la cultura techno en Madrid. Es probablemente el trabajo que más se parece a mí porque mezcla imagen, sonido, escritura y una forma muy concreta de mirar la ciudad.",
-          "Y por último, mis coberturas de eventos, estrenos y entrevistas. Me gusta trabajar cuando todo está pasando a la vez, tratar con figuras públicas que humanizo mucho, es llegar con una cámara, hablar con alguien, encontrar una historia, grabar recursos y después intentar ordenar todo ese caos."
         ]
       },
       {
@@ -1047,7 +968,7 @@
         },
         "story": [
           {
-            "heading": "¿Qué haces tú en una cobertura, desde que te preparas hasta que acaba?",
+            "heading": "¿Qué haces en una cobertura?",
             "paragraphs": [
               "Investigo un poco, pienso qué preguntas pueden tener sentido y qué necesito conseguir para que después haya algo de valor, no solo imágenes de gente entrando por un photocall.",
               "Cuando llego, toca moverse. Buscar recursos, hablar con la gente, conseguir entrevistas, estar pendiente de quién aparece y, muchas veces, improvisar. Hay coberturas en las que tienes 2 minutos para conseguir todo lo que necesitas y otras en las que acabas hablando con alguien durante 10."
@@ -1085,13 +1006,7 @@
         },
         "story": [
           {
-            "heading": "¿Qué cargos tuviste y en qué fechas?",
-            "paragraphs": [
-              "Empecé en el equipo de Comunicación de URJCmun en 2022. Desde entonces he pasado por distintos roles dentro del área de prensa y comunicación."
-            ]
-          },
-          {
-            "heading": "¿Qué hacías realmente y qué coordinabas con otras personas?",
+            "heading": "¿Qué hacías y qué coordinabas?",
             "paragraphs": [
               "Había que decidir qué contar, cuándo contarlo y cómo hacerlo sin que las redes se convirtieran en un tablón de anuncios. Coordinábamos coberturas, entrevistas, fotografías, vídeos y contenido más espontáneo sobre lo que estaba pasando en el momento.",
               "También revisaba y organizaba el trabajo del equipo, repartía coberturas y estaba pendiente de que todo saliera mientras el congreso seguía ocurriendo alrededor. Básicamente, intentar tener una visión general mientras estás metida hasta las rodillas en el caos.",
@@ -1099,7 +1014,7 @@
             ]
           },
           {
-            "heading": "¿Qué contenido o momento de URJCmun te representa más?",
+            "heading": "¿Qué momento te representa más?",
             "paragraphs": [
               "Creo que precisamente los momentos que no estaban en el programa.",
               "URJCmun reúne a más de mil personas y durante esos días pasan muchísimas cosas a la vez. Me gustaba encontrar esos momentos pequeños: una reacción, una conversación, una broma entre delegados, alguien que llevaba tres días sin dormir o cualquier cosa que explicara cómo se estaba viviendo el congreso desde dentro.",
@@ -1124,7 +1039,7 @@
         },
         "story": [
           {
-            "heading": "¿Qué responsabilidades eran tuyas?",
+            "heading": "¿Es correcta esta lista de responsabilidades?",
             "paragraphs": [
               "Sí, aunque añadiría que mi trabajo era bastante más transversal. Hacía un poco de todo: redactaba contenidos para blogs y otros canales digitales, preparaba y grababa TikToks, editaba vídeo, hacía entrevistas y cubría eventos, también durante MWC Madrid.",
               "Además, llevaba parte del seguimiento de redes y contenidos: cada semana preparaba un dashboard analizando el rendimiento de las cuentas, los contenidos que mejor funcionaban y lo que estaba haciendo la competencia, para detectar tendencias y sacar ideas.",
@@ -1132,11 +1047,10 @@
             ]
           },
           {
-            "heading": "¿Qué proyecto, pieza o actividad concreta recuerdas?",
+            "heading": "¿Qué recuerdas especialmente?",
             "paragraphs": [
               "Recuerdo con especial cariño cuando tuve que cubrir un evento de Madring entrevistando a los invitados, incluyendo a Iker Casillas, ya que no era mi rol y depositaron mucha confianza en mí mis jefes, salió muy bien.",
-              "También recuerdo los contenidos para TikTok, porque había bastante libertad para probar formatos y encontrar maneras menos convencionales de comunicar temas de una empresa.",
-              "Y quizá lo que más me enseñó fue el trabajo semanal de análisis de redes y competencia. Me obligaba a dejar de pensar solo como creadora y empezar a mirar los contenidos desde fuera: qué funciona, por qué funciona, qué está haciendo todo el mundo y dónde hay espacio para hacer algo diferente."
+              "También recuerdo los contenidos para TikTok, porque había bastante libertad para probar formatos y encontrar maneras menos convencionales de comunicar temas de una empresa."
             ]
           }
         ]
@@ -1155,21 +1069,12 @@
         },
         "story": [
           {
-            "heading": "¿Cómo era un día normal de trabajo allí?",
+            "heading": "¿Cómo era un día normal?",
             "paragraphs": [
               "El día empezaba bastante pronto en el hotel. Durante la mañana hacía fotografía en las zonas de piscina y exteriores: me acercaba a las familias, les explicaba la propuesta y, si aceptaban, hacía sesiones mientras estaban pasando el día.",
               "Normalmente eran reportajes de unas 50 a 100 fotografías, muchas veces con familias enteras y niños, aunque también hacía algunas sesiones de parejas. Tenía que dirigirlos, buscar momentos y poses que funcionaran y conseguir que las fotos salieran naturales, todo mientras me movía constantemente por la piscina, muchas veces con los pies mojados y bajo el sol.",
               "Además, había unos objetivos diarios de sesiones y ventas, así que había bastante rechazo y había que aprender a insistir sin resultar invasiva.",
               "A mediodía aprovechaba la pausa para descargar y editar las fotografías. Por la tarde cambiaba de uniforme, montaba el stand y pasaba de fotógrafa a comercial: enseñaba las fotos a las familias, les explicaba las opciones y trataba de conseguir que compraran el reportaje. Al final del día tocaba cerrar el puesto, hacer caja y comprobar el material."
-            ]
-          },
-          {
-            "heading": "¿Qué hacías tú desde la sesión hasta la entrega de las fotos?",
-            "paragraphs": [
-              "Me encargaba prácticamente de todo el proceso.",
-              "Primero hacía la sesión y seleccionaba las fotografías que tenían potencial. Después descargaba y organizaba el material y editaba las imágenes en Lightroom, corrigiendo luz, color y encuadre para que el resultado fuera coherente.",
-              "Después enseñaba las fotografías a los clientes en el stand y me encargaba de todo el proceso de venta. Una vez realizada la compra, preparaba y entregaba el material según el procedimiento del hotel.",
-              "Era un trabajo en el que la fotografía era solo una parte. Tenía que saber acercarme a desconocidos, dirigir una sesión, editar rápido, vender mi propio trabajo y hacerme responsable del material y de la caja al final del día."
             ]
           }
         ]
@@ -1230,22 +1135,16 @@
     "copied": "Copiado",
     "languages": "Idiomas",
     "languagesValue": "Español · Ruso · Inglés · Valenciano · Italiano",
-    "opportunitiesEyebrow": "Qué me gustaría hacer ahora",
+    "opportunitiesEyebrow": "Con mis palabras",
     "opportunities": [
       {
-        "heading": "¿Qué tipo de oportunidades te gustaría recibir?",
+        "heading": "¿Qué oportunidades te interesan?",
         "paragraphs": [
           "Me interesan oportunidades en las que pueda contar cosas y estar donde están pasando. Desde trabajar como reportera, hacer entrevistas o cubrir eventos hasta participar en proyectos audiovisuales, rodajes, documentales o contenidos para medios y redes. Me gustaría seguir creciendo en periodismo, sin dejar de lado la parte más cinematográfica y visual. También me interesan los proyectos culturales y musicales, especialmente aquellos que me permitan conocer gente, descubrir escenas y contar historias desde dentro."
         ]
       },
       {
-        "heading": "Si mañana te ofrecieran un proyecto ideal, ¿cómo sería?",
-        "paragraphs": [
-          "Un proyecto en el que pudiera salir con una cámara, conocer a gente interesante y contar algo que merezca la pena. Podría ser un reportaje sobre una escena musical, una pieza documental, un programa de televisión o un proyecto audiovisual con libertad para proponer y experimentar. Me gustaría participar en todo el proceso, desde encontrar la historia hasta grabarla, editarla y darle forma. Y, sobre todo, trabajar con un equipo del que aprender y con el que hacer cosas que no haría por mi cuenta."
-        ]
-      },
-      {
-        "heading": "¿Te interesan proyectos fuera de Madrid? ¿Contrato, freelance o colaboraciones?",
+        "heading": "¿Fuera de Madrid? ¿Contrato, freelance, colaboraciones?",
         "paragraphs": [
           "Sí, me interesan proyectos fuera de Madrid y también oportunidades que impliquen viajar. Estoy abierta tanto a contratos como a proyectos freelance y colaboraciones, especialmente si me permiten aprender, ganar experiencia y desarrollar mi perfil profesional. Ahora mismo me importa encontrar un proyecto en el que pueda aportar, crecer y seguir explorando distintas formas de contar."
         ]

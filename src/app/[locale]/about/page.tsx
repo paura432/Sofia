@@ -82,17 +82,6 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {voice.length ? (
-        <section className="section story-section" aria-labelledby="about-voice">
-          <Reveal className="container editorial-grid">
-            <p className="eyebrow" id="about-voice">
-              {profile("voiceEyebrow")}
-            </p>
-            <StoryBlocks blocks={voice} />
-          </Reveal>
-        </section>
-      ) : null}
-
       <section className="section" aria-labelledby="about-practice">
         <div className="container">
           <Reveal as="p" className="eyebrow" id="about-practice">
@@ -112,6 +101,17 @@ export default async function AboutPage() {
           </StaggerGroup>
         </div>
       </section>
+
+      {voice.length ? (
+        <section className="section story-section" aria-labelledby="about-voice">
+          <Reveal className="container editorial-grid">
+            <p className="eyebrow" id="about-voice">
+              {profile("voiceEyebrow")}
+            </p>
+            <StoryBlocks blocks={voice} />
+          </Reveal>
+        </section>
+      ) : null}
 
       <section className="section" aria-label={profile("educationEyebrow")}>
         <dl className="container fact-sheet">
