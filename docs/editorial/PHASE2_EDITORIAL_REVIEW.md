@@ -1,5 +1,7 @@
 # Fase 2 · Revisión editorial adversarial y pulido final
 
+> **Nota (Fase 3, 2026-10-11):** este informe describe un estado intermedio. Los bloques pregunta/respuesta se sustituyeron después por prosa editorial; ver `PHASE3_EDITORIAL_REWRITE.md`.
+
 Fecha: 2026-10-11 · Rama: `content/editorial-review-final` · Base: `main` en `e23d99a` (Fase 1).
 
 Revisión independiente del portfolio tal y como quedó tras integrar la ficha de Sofía. Se ha leído todo el texto publicado de forma consecutiva (ES, con contraste EN/RU), se ha comparado con la versión previa a la Fase 1 (`14f830d`) y se han recorrido las páginas en escritorio y móvil con capturas. Esta es una revisión heurística: no se ha medido la comprensión de usuarios reales.

@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 
 import { ContactBlock } from "@/components/contact-block";
 import { Reveal } from "@/components/motion/reveal";
-import { StoryBlocks, type StoryBlock } from "@/components/story-blocks";
+import { Prose } from "@/components/prose";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -29,18 +29,18 @@ export async function generateMetadata({
 
 export default async function ContactPage() {
   const t = await getTranslations("Contact");
-  const opportunities = t.raw("opportunities") as StoryBlock[];
+  const opportunities = t("opportunities");
 
   return (
     <main id="main" className="contact-page">
       <ContactBlock page />
-      {opportunities.length ? (
-        <section className="section story-section" aria-labelledby="contact-opportunities">
+      {opportunities ? (
+        <section className="section prose-section" aria-labelledby="contact-opportunities">
           <Reveal className="container editorial-grid">
             <p className="eyebrow" id="contact-opportunities">
               {t("opportunitiesEyebrow")}
             </p>
-            <StoryBlocks blocks={opportunities} />
+            <Prose paragraphs={[opportunities]} />
           </Reveal>
         </section>
       ) : null}

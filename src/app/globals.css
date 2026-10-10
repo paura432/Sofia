@@ -1498,68 +1498,46 @@ p {
 }
 
 /* ==========================================================================
-   Con mis palabras — respuestas literales de la ficha de Sofía
+   Prosa editorial (Perfil, Contacto, proyectos) y apuntes de Experiencia
    ========================================================================== */
-.story-blocks {
+.prose {
   display: grid;
-  gap: var(--space-lg);
-  max-width: 64ch;
+  gap: var(--space-sm);
+  max-width: 62ch;
 }
 
-.story-block {
-  display: grid;
-  gap: 12px;
-}
-
-.story-heading {
-  margin: 0;
-  color: var(--muted);
-  letter-spacing: 0;
-  text-transform: none;
-  font-family: var(--font-serif), Georgia, serif;
-  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
-  font-weight: 500;
-  line-height: 1.3;
-  text-wrap: balance;
-}
-
-.story-block p {
+.prose p {
   margin: 0;
   color: var(--foreground-soft);
   font-size: clamp(1rem, 1.15vw, 1.1rem);
   line-height: 1.65;
 }
 
-.story-section .editorial-grid {
+.prose-section .editorial-grid {
   align-items: start;
 }
 
-.project-detail-film .story-heading {
-  color: var(--film-foreground);
-}
-
-.project-detail-film .story-block p {
+.project-detail-film .prose p {
   color: var(--film-muted);
 }
 
-.trajectory-story {
-  display: grid;
-  gap: var(--space-sm);
-  padding-top: var(--space-md);
-}
-
-.trajectory-story .story-blocks {
-  max-width: 62ch;
+.trajectory-note {
+  margin: 0;
+  padding-top: 0;
+  max-width: 58ch;
+  color: var(--foreground-soft);
+  font-size: clamp(0.98rem, 1.1vw, 1.05rem);
+  line-height: 1.6;
 }
 
 @media (min-width: 700px) {
-  .trajectory-row > .trajectory-story {
+  .trajectory-row > .trajectory-note {
     grid-column: 1 / -1;
   }
 }
 
 @media (min-width: 1024px) {
-  .trajectory-row > .trajectory-story {
+  .trajectory-row > .trajectory-note {
     grid-column: 2 / -1;
   }
 }

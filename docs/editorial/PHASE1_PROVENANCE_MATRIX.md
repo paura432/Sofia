@@ -1,5 +1,7 @@
 # FASE 1 · Matriz de procedencia
 
+> **Nota (Fase 3, 2026-10-11):** la web ya no publica párrafos literales de la ficha salvo `Profile.bio` y `bioMore`; el texto público es editorial y su procedencia frase a frase está en `PHASE3_EDITORIAL_REWRITE.md` §5. Este registro no cambia.
+
 > **Nota (Fase 2, 2026-10-11):** 24 párrafos marcados aquí como publicados se retiraron de la web en la revisión editorial; la lista con motivo está en `PHASE2_EDITORIAL_REVIEW.md` §7. El registro literal no cambia.
 
 > Una fila por texto incorporado, modificado, conservado o retenido en la Fase 1 (rama `content/phase-1-word-integration`). `P####` remite a [SOFIA_SOURCE_RESPONSES.md](./SOFIA_SOURCE_RESPONSES.md). Ninguna fila de tipo CLAUDE_PROPOSAL se presenta en la web como cita de Sofía.
