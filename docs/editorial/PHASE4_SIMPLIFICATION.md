@@ -147,3 +147,35 @@ Sin cambios respecto a Fase 1–3: 16 frente a 18 reporteros en URJCmun (la web 
 **Un minuto** (Trabajo): cuatro verticales con póster y título, cuatro obras con fotograma, formato y rol, cinco series fotográficas y el archivo. No hay ningún bloque de texto que leer para decidir qué abrir; el texto más largo de la página es de dos frases.
 
 **Cinco minutos** (fichas y Experiencia): cada obra tiene una descripción de dos o tres frases, el rol, los créditos y, en las cuatro audiovisuales, una nota de cómo se hizo con lo que el vídeo no cuenta; Experiencia da una frase de trabajo real por puesto y enlaza a las piezas. El Word, las anécdotas y el detalle completo siguen en `SOFIA_SOURCE_RESPONSES.md`, `PHASE3_EDITORIAL_REWRITE.md` y `SOFIA_VOICE_PROFILE.md` para quien edite después.
+
+## 12. Perfil, primera pantalla (segunda pasada, 2026-10-11)
+
+El problema que quedaba: la presentación se componía como titular serif de 97 palabras en dos párrafos y la profesión no aparecía en la primera pantalla. Un responsable de selección veía una foto, un nombre y un bloque de texto.
+
+**Nueva jerarquía:** etiqueta «Perfil · Madrid» → nombre (sin cambios) → subtítulo profesional en serif con el filo rojo de la portada → presentación de tres frases en tipografía de lectura (sans, 1–1,1 rem, 50 ch, interlineado 1,6, color suave) → dos enlaces. Se retira el segundo párrafo de Fase 4 («Desde 2024 trabajo como reportera…»): la profesión ya la da el subtítulo y la enumeración de lugares no añadía una idea distinta. Se probó la composición sin párrafo de apoyo y no lo necesita: el bloque queda centrado junto al retrato con aire arriba y abajo. La fotografía, su encuadre, el header y el resto de la página no cambian. Sin animaciones ni elementos nuevos; el subtítulo reutiliza la voz del rol de la portada.
+
+**Textos finales**
+
+| | Etiqueta | Subtítulo | Presentación |
+|---|---|---|---|
+| ES | Perfil · Madrid | Periodista y reportera de televisión | Digo que cuento cosas. A veces con una cámara, otras escribiendo o haciendo preguntas. Estudié Periodismo y Comunicación Audiovisual porque siempre me ha costado elegir entre mirar y contar lo que miro. |
+| EN | Profile · Madrid | Journalist and television reporter | I say I tell stories. Sometimes with a camera, sometimes in writing or by asking questions. I studied Journalism and Audiovisual Communication because I've always found it hard to choose between looking and telling what I see. |
+| RU | Профиль · Мадрид | Журналист и телерепортёр | Я говорю, что рассказываю о разном. Иногда с камерой, иногда письменно или задавая вопросы. Я училась на журналистике и аудиовизуальной коммуникации, потому что мне всегда было трудно выбрать между тем, чтобы смотреть, и тем, чтобы рассказывать о том, что вижу. |
+
+Origen: P0012 de la ficha, con la segunda frase condensada según la propuesta del propietario («otras escribiendo o haciendo preguntas» en lugar de la triple «a veces»). Se omite el cierre literal «Supongo que sigo un poco ahí.» por atenerse a la propuesta; es literal de Sofía y puede añadirse sin tocar nada más si se prefiere ese remate. El subtítulo es el `personRole` ya usado en los metadatos.
+
+**Medidas** (bloque de presentación, sin ficha ni contacto)
+
+| | Antes | Después |
+|---|---|---|
+| Palabras en la primera pantalla (ES / EN / RU) | 97 / 100 / 100 | 49 / 53 / 54 |
+| Alto de la primera sección a 1280 px (ES / EN / RU) | 760 / 740 / 833 px | 740 / 740 / 740 px |
+| Alto de la primera sección a 390 px (ES / EN / RU) | 1 152 / 1 155 / 1 233 px | 902 / 927 / 953 px |
+
+En móvil el orden es retrato → etiqueta → nombre → profesión → texto → enlaces; el nombre conserva su tamaño y la primera sección cabe en poco más de un viewport sin reducir nada a la fuerza.
+
+**Archivos:** `messages/{es,en,ru}.json` (Profile: `aboutPageEyebrow`, nueva `role`, `bio`; `bioMore` eliminada), `src/app/[locale]/about/page.tsx`, `src/styles/showcase.css` (`.about-role`, `.about-lede`; `.about-body` eliminada). Capturas: `docs/editorial/phase4-captures/perfil-v2-{before,after}-*.jpg` (escritorio oscuro y claro, móvil oscuro, ruso).
+
+**QA:** `pnpm lint`, `pnpm typecheck`, `pnpm build` sin errores (64 páginas). Capturas en escritorio y móvil, tema claro y oscuro forzados, ES/EN/RU: sin cortes ni desbordamiento. Sin Safari ni dispositivos reales.
+
+**Lectura como responsable de selección:** 1) la profesión se lee en la segunda línea, antes que el texto; 2) tres frases, con una expresión suya y ninguna explicación; 3) no hay frases redundantes: la etiqueta da el lugar, el subtítulo el oficio, el texto la voz; 4) retrato y nombre dominan la pantalla, el texto es secundario por tamaño, peso y color; 5) los dos enlaces quedan a la vista bajo el texto, sin hacer scroll en escritorio.

@@ -1004,19 +1004,42 @@ h2 {
 .about-intro {
   display: grid;
   align-content: center;
-  gap: 22px;
+  gap: 18px;
 }
 
-.about-lede {
-  max-width: 34ch;
+.about-intro .on-air {
+  margin-bottom: 4px;
+}
+
+/* Profesión: misma voz que el rol de la portada (serif, filo rojo), para que
+   se lea antes que el texto y nunca compita con el nombre. */
+.about-role {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin-top: -4px;
   font-family: var(--font-serif), Georgia, serif;
-  font-size: clamp(1.25rem, 1.9vw, 1.65rem);
-  line-height: 1.35;
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.25;
+  text-wrap: balance;
 }
 
-.about-body {
-  max-width: 58ch;
+.about-role::before {
+  content: "";
+  flex: none;
+  width: 1.6em;
+  height: 1px;
+  background: var(--tally);
+}
+
+/* Presentación: texto de lectura, no titular. */
+.about-lede {
+  max-width: 50ch;
+  margin-top: 6px;
   color: var(--foreground-soft);
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.6;
 }
 
 @media (min-width: 900px) {

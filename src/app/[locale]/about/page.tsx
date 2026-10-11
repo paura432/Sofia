@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 /**
- * Perfil = retrato, dos párrafos de presentación, ficha (formación, idiomas,
- * herramientas, base) y dos enlaces. Lo que hace está en Trabajo; dónde ha
+ * Perfil = retrato, nombre, profesión, tres frases de presentación, ficha
+ * (formación, idiomas, herramientas, base) y dos enlaces. Lo que hace está en Trabajo; dónde ha
  * trabajado, en Experiencia. Aquí no se repite ninguna de las dos cosas.
  */
 export default async function AboutPage() {
@@ -71,11 +71,11 @@ export default async function AboutPage() {
             <HeroEntrance as="h1" className="display-page" delay={80} id="about-title">
               {siteConfig.name}
             </HeroEntrance>
-            <HeroEntrance as="p" className="about-lede" delay={140}>
-              {profile("bio")}
+            <HeroEntrance as="p" className="about-role" delay={120}>
+              {profile("role")}
             </HeroEntrance>
-            <HeroEntrance as="p" className="about-body" delay={200}>
-              {profile("bioMore")}
+            <HeroEntrance as="p" className="about-lede" delay={160}>
+              {profile("bio")}
             </HeroEntrance>
             <p className="about-links">
               <Link className="section-link" href="/work">
