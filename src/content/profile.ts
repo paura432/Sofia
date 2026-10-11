@@ -23,15 +23,12 @@ export const portrait: ProfilePortrait | undefined = {
   focalPoint: { x: 50, y: 28 },
 };
 
-export const tools = [
-  "Premiere Pro",
-  "DaVinci Resolve",
-  "Photoshop",
-  "Lightroom",
-  "Canva",
-  "CapCut",
-  "Khoros",
-  "CMS",
-  "Jira",
-  "SEO",
+export type ToolGroupKey = "video" | "photo" | "social" | "knowledge";
+
+/** Herramientas agrupadas (Fase 6): las etiquetas de grupo viven en messages/*.json (Profile.toolGroups). */
+export const toolGroups: { key: ToolGroupKey; items: string[] }[] = [
+  { key: "video", items: ["Premiere Pro", "DaVinci Resolve", "CapCut"] },
+  { key: "photo", items: ["Lightroom", "Photoshop"] },
+  { key: "social", items: ["Canva", "Khoros", "Jira"] },
+  { key: "knowledge", items: ["SEO", "CMS"] },
 ];

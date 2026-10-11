@@ -29,3 +29,14 @@
 **Resultado.** 59 textos revisados en total; en esta ronda 26 aprobados, 11 pendientes de Sofía, 0 que necesiten revisión. Problemas: 6 corregidos (I-021, I-024, I-025, I-026, I-027 y la parte editorial de I-022), 1 descartado (I-020), 2 nuevos pendientes de Sofía (I-028, I-029). Dudas nuevas Q-06…Q-09. Contador de revisiones sin cambio material: 0.
 
 **Siguiente iteración.** Ronda 3: series fotográficas (T187–T205), archivo (T065–T093 en la parte que describe contenido), créditos y pies.
+
+## Iteración 3 · 2026-10-11 · Cierre por decisión del propietario e implementación
+
+El propietario pidió la versión final y su implementación antes de completar las rondas 3–5. Se implementó en `messages/{es,en,ru}.json`, `src/content/profile.ts` (herramientas por grupos), `src/app/[locale]/about/page.tsx` (bio en dos párrafos, grupos de herramientas), `src/styles/showcase.css` y `src/content/projects.ts` (año de la acampada):
+
+- Ronda 1 y 2 tal como quedaron en las iteraciones 1 y 2 (bio B; cuatro experiencias; cargos y tira en español; textos de Trabajo; reel; 9‑1‑1 «doy paso»; vivo; 4 MINUTOS «planos largos» e intención + lo ocurrido; VERSIÓN BETA «considerados»).
+- Ronda 3 (series) con lo que ya estaba fundamentado en Fase 5/6: «Acampada en Sol» (decisión del propietario) con «a finales de septiembre de 2026» (EXIF), «Calle» con «marcha nocturna en marzo de 2023» (EXIF; sin nombrar edificio ni marcha), Música con «en Madrid» (P0334). Créditos completados desde pantalla: Tras el sofá (guion, producción, cámara, arte, sonido, script, ayudante de dirección), 4 MINUTOS (música: losniñosdelcaminito), VERSIÓN BETA (presentador: Pedro Aguado), Condición Perfecta (seis extras).
+- Ronda 4 (traducciones): las 18 correcciones EN y las 32 RU de la auditoría de Fase 6, más la traducción editorial de todos los textos nuevos. 16 claves sin uso eliminadas en los tres idiomas.
+- Para los textos pendientes de Sofía se publicó la formulación que no afirma nada que el material desmienta; sus dudas (Q-01…Q-09) siguen en `ISSUES.md` para la siguiente conversación con ella.
+
+QA: typecheck, lint y build sin errores; 80 rutas y 136 imágenes en 200; capturas de Perfil (ES/EN/RU, escritorio y móvil), Experiencia, Trabajo, Tras el sofá y Acampada en Sol.

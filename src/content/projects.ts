@@ -507,7 +507,8 @@ export const projects: PortfolioProject[] = [
   {
     id: "entre-tiendas-y-tambores",
     slug: "entre-tiendas-y-tambores",
-    year: "",
+    // EXIF del ZIP de origen: noche del 28 al 29 de septiembre de 2026 (reloj de cámara).
+    year: "2026",
     discipline: ["photography"],
     order: 10,
     published: true,

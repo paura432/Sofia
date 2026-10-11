@@ -1102,6 +1102,12 @@ h2 {
   list-style: none;
 }
 
+/* Herramientas por grupo: una línea por grupo. */
+.inline-list.tool-groups {
+  flex-direction: column;
+  gap: 4px;
+}
+
 @media (min-width: 700px) {
   .fact-sheet {
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 
 import { ContactBlock } from "@/components/contact-block";
 import { HeroEntrance } from "@/components/hero-entrance";
-import { portrait, siteConfig, tools } from "@/content/profile";
+import { portrait, siteConfig, toolGroups } from "@/content/profile";
 import { focalPointStyle } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -74,9 +74,13 @@ export default async function AboutPage() {
             <HeroEntrance as="p" className="about-role" delay={120}>
               {profile("role")}
             </HeroEntrance>
-            <HeroEntrance as="p" className="about-lede" delay={160}>
-              {profile("bio")}
-            </HeroEntrance>
+            {profile("bio")
+              .split("\n\n")
+              .map((paragraph, index) => (
+                <HeroEntrance as="p" className="about-lede" delay={160 + index * 40} key={paragraph}>
+                  {paragraph}
+                </HeroEntrance>
+              ))}
             <p className="about-links">
               <Link className="section-link" href="/work">
                 {profile("viewWork")} <span aria-hidden="true">→</span>
@@ -115,9 +119,12 @@ export default async function AboutPage() {
           <div>
             <dt>{profile("toolsEyebrow")}</dt>
             <dd>
-              <ul className="inline-list">
-                {tools.map((tool) => (
-                  <li key={tool}>{tool}</li>
+              <ul className="inline-list tool-groups">
+                {toolGroups.map((group) => (
+                  <li key={group.key}>
+                    <span className="muted">{profile(`toolGroups.${group.key}`)} · </span>
+                    {group.items.join(" · ")}
+                  </li>
                 ))}
               </ul>
             </dd>

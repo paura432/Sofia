@@ -1,14 +1,14 @@
 {
  "phase": "6.1",
- "iteration": 2,
+ "iteration": 3,
  "date": "2026-10-11",
  "branch": "content/phase6-editorial-voice-audit",
  "rounds": {
   "1": "completed",
   "2": "completed",
-  "3": "pending",
-  "4": "pending",
-  "5": "pending"
+  "3": "closed_by_owner_decision",
+  "4": "closed_by_owner_decision",
+  "5": "closed_by_owner_decision"
  },
  "reviewed_ids": [
   "T037",
@@ -174,7 +174,7 @@
   "Q-09"
  ],
  "consecutive_reviews_without_material_change": 0,
- "global_status": "IN_PROGRESS",
+ "global_status": "FINAL_IMPLEMENTED_BY_OWNER_DECISION",
  "stop_conditions": {
   "all_inventoried": true,
   "all_reviewed": false,
@@ -185,5 +185,10 @@
   "no_major_redundancy": null,
   "two_consecutive_reviews_without_material_change": false,
   "sofia_items_separated": true
+ },
+ "implemented": {
+  "date": "2026-10-11",
+  "branch": "content/phase6-editorial-voice-audit → main",
+  "note": "El propietario pidió la versión final e implementarla; se aplicaron los textos aprobados editorialmente y, para los pendientes de Sofía, la formulación factualmente segura (sin afirmaciones que el material desmienta). Las dudas Q-01…Q-09 siguen abiertas para Sofía."
  }
 }

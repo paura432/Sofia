@@ -1,6 +1,6 @@
 # Fase 6.1 · Propuesta editorial (versión viva)
 
-Última iteración: 2 (2026-10-11). Cada texto lleva su estado (APROBADO EDITORIALMENTE / PENDIENTE DE SOFÍA / NECESITA REVISIÓN), puntuaciones orientativas 1–5 en ocho dimensiones (precisión, información, claridad, naturalidad, voz, concisión, utilidad, consistencia) y la evidencia. Los textos de rondas no revisadas aún no aparecen; `PHASE6_PROPOSED_COPY_ES.md` conserva las alternativas descartadas.
+Última iteración: 3 (2026-10-11) · **Implementado en la web por decisión del propietario** (ver `REVIEW_HISTORY.md`, iteración 3). Cada texto lleva su estado (APROBADO EDITORIALMENTE / PENDIENTE DE SOFÍA / NECESITA REVISIÓN), puntuaciones orientativas 1–5 en ocho dimensiones (precisión, información, claridad, naturalidad, voz, concisión, utilidad, consistencia) y la evidencia. Los textos de rondas no revisadas aún no aparecen; `PHASE6_PROPOSED_COPY_ES.md` conserva las alternativas descartadas.
 
 ## Ronda 1 · Perfil, Experiencia, Formación, Idiomas, Herramientas
 
