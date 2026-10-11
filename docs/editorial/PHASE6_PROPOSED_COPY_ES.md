@@ -151,7 +151,7 @@ Formato: qué es · para quién · qué hizo Sofía. Créditos en la ficha técn
 | VERSIÓN BETA | `credits` | (ninguno) | presentador: Pedro Aguado; locución y guion: pendiente | P0274 [hecho]; locución sin acreditar (Fase 5 P2-11) |
 | ídem | `year` | (vacío) | Pedir | P0290 vacío |
 | Silver Praxis — Condición Perfecta | `credits.creative` | Briza Sanchez | Confirmar grafía (Sofía: «Briza Sánchez», P0312) | Pendiente |
-| ídem | `credits` | + extras (seis nombres de pantalla) | Créditos en pantalla [hecho] |
+| ídem | `credits` | (sin extras) | + extras (seis nombres de pantalla) | Créditos en pantalla [hecho] |
 | ídem | `year` | (vacío) | Pedir | P0312 sin fecha |
 
 ## 6. Series fotográficas
