@@ -4,27 +4,6 @@ export type ExperienceId =
   | "annie-bonnie"
   | "isocero";
 
-export type ResponsibilityKey =
-  | "eventCoverage"
-  | "interviews"
-  | "scripts"
-  | "socialStrategy"
-  | "copyMetrics"
-  | "graphicDesign"
-  | "teamCoordination"
-  | "liveContent"
-  | "digitalIdentity"
-  | "videoProduction"
-  | "socialContent"
-  | "writing"
-  | "events"
-  | "calendar"
-  | "stakeholders"
-  | "photoSessions"
-  | "clientService"
-  | "editing"
-  | "sales";
-
 export type ProgressionKey =
   | "communicationTeam"
   | "cameraOperator"
@@ -35,7 +14,7 @@ export type ExperienceItem = {
   id: ExperienceId;
   company: string;
   companyUrl?: string;
-  responsibilityKeys: ResponsibilityKey[];
+  /** Historial de cargos, solo cuando hubo progresión dentro de la misma organización. */
   progressionKeys?: ProgressionKey[];
   featured?: boolean;
   source: "cv" | "linkedin" | "official-site";
@@ -43,15 +22,11 @@ export type ExperienceItem = {
 };
 
 // Orden: puesto en curso primero; después por fecha de fin y de inicio, descendente.
+// El texto de cada puesto (cargo, periodo, descripción) vive en messages/*.json.
 export const experience: ExperienceItem[] = [
   {
     id: "grupo-cadena-media",
     company: "Grupo Cadena Media",
-    responsibilityKeys: [
-      "eventCoverage",
-      "interviews",
-      "scripts",
-    ],
     featured: true,
     source: "cv",
     verification: "verified",
@@ -59,14 +34,6 @@ export const experience: ExperienceItem[] = [
   {
     id: "annie-bonnie",
     company: "Annie Bonnie",
-    responsibilityKeys: [
-      "writing",
-      "videoProduction",
-      "socialContent",
-      "events",
-      "stakeholders",
-      "calendar",
-    ],
     source: "cv",
     verification: "verified",
   },
@@ -79,26 +46,12 @@ export const experience: ExperienceItem[] = [
       "delegate",
       "deputyDirector",
     ],
-    responsibilityKeys: [
-      "socialStrategy",
-      "copyMetrics",
-      "graphicDesign",
-      "teamCoordination",
-      "liveContent",
-      "digitalIdentity",
-    ],
     source: "cv",
     verification: "verified",
   },
   {
     id: "isocero",
     company: "Isocero",
-    responsibilityKeys: [
-      "photoSessions",
-      "editing",
-      "sales",
-      "clientService",
-    ],
     source: "cv",
     verification: "verified",
   },

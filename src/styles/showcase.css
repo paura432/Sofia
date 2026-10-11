@@ -328,11 +328,6 @@ h2 {
   line-height: 1.15;
 }
 
-.reel-stage-description {
-  color: var(--foreground-soft);
-  font-size: 0.88rem;
-  line-height: 1.45;
-}
 
 .reel-stage-hint {
   color: var(--muted);
@@ -597,12 +592,6 @@ h2 {
   text-transform: none;
 }
 
-.short-form-description {
-  color: var(--muted);
-  font-size: 0.86rem;
-  line-height: 1.45;
-}
-
 /* --- Filmografía ------------------------------------------------------------ */
 
 .film-poster {
@@ -681,12 +670,6 @@ h2 {
 .film-role {
   color: var(--foreground-soft);
   font-size: 0.9rem;
-}
-
-.film-description {
-  max-width: 52ch;
-  color: var(--muted);
-  font-size: 0.92rem;
 }
 
 .film-list {
@@ -1044,36 +1027,11 @@ h2 {
   }
 }
 
-.practice-columns {
-  display: grid;
-  gap: 32px;
-  margin: 24px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.practice-columns li {
-  display: grid;
-  align-content: start;
-  gap: 10px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-}
-
-.practice-title {
-  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
-  line-height: 1.05;
-}
-
-.practice-columns p {
-  color: var(--foreground-soft);
-}
-
-@media (min-width: 900px) {
-  .practice-columns {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(24px, 3vw, 48px);
-  }
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  margin: 6px 0 0;
 }
 
 .fact-sheet {

@@ -4,11 +4,8 @@ import { getTranslations } from "next-intl/server";
 
 import { ContactBlock } from "@/components/contact-block";
 import { HeroEntrance } from "@/components/hero-entrance";
-import { Reveal } from "@/components/motion/reveal";
-import { StaggerGroup } from "@/components/motion/stagger";
-import { Prose } from "@/components/prose";
 import { portrait, siteConfig, tools } from "@/content/profile";
-import { focalPointStyle, type ProjectSection } from "@/content/projects";
+import { focalPointStyle } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
@@ -19,7 +16,6 @@ type PageProps = {
 
 type Education = { institution: string; program: string; period: string };
 type Language = { code: string; name: string; level: string };
-type Practice = { title: string; text: string; link: string; section: ProjectSection };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale: rawLocale } = await params;
@@ -35,6 +31,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
+/**
+ * Perfil = retrato, dos párrafos de presentación, ficha (formación, idiomas,
+ * herramientas, base) y dos enlaces. Lo que hace está en Trabajo; dónde ha
+ * trabajado, en Experiencia. Aquí no se repite ninguna de las dos cosas.
+ */
 export default async function AboutPage() {
   const [profile, education, languages] = await Promise.all([
     getTranslations("Profile"),
@@ -43,8 +44,6 @@ export default async function AboutPage() {
   ]);
   const educationItems = education.raw("items") as Education[];
   const languageItems = languages.raw("items") as Language[];
-  const practices = profile.raw("practices") as Practice[];
-  const approach = profile.raw("approach") as string[];
 
   return (
     <main id="main" className="about-page">
@@ -78,40 +77,17 @@ export default async function AboutPage() {
             <HeroEntrance as="p" className="about-body" delay={200}>
               {profile("bioMore")}
             </HeroEntrance>
+            <p className="about-links">
+              <Link className="section-link" href="/work">
+                {profile("viewWork")} <span aria-hidden="true">→</span>
+              </Link>
+              <Link className="section-link" href="/experience">
+                {profile("viewFullExperience")} <span aria-hidden="true">→</span>
+              </Link>
+            </p>
           </div>
         </div>
       </section>
-
-      <section className="section" aria-labelledby="about-practice">
-        <div className="container">
-          <Reveal as="p" className="eyebrow" id="about-practice">
-            {profile("practiceEyebrow")}
-          </Reveal>
-          <StaggerGroup as="ol" className="practice-columns">
-            {practices.map((practice, index) => (
-              <li key={practice.section}>
-                <span className="timecode">{String(index + 1).padStart(2, "0")}</span>
-                <h2 className="practice-title">{practice.title}</h2>
-                <p>{practice.text}</p>
-                <Link className="section-link" href={{ pathname: "/work", hash: practice.section }}>
-                  {practice.link} <span aria-hidden="true">→</span>
-                </Link>
-              </li>
-            ))}
-          </StaggerGroup>
-        </div>
-      </section>
-
-      {approach.length ? (
-        <section className="section prose-section" aria-labelledby="about-approach">
-          <Reveal className="container editorial-grid">
-            <p className="eyebrow" id="about-approach">
-              {profile("approachEyebrow")}
-            </p>
-            <Prose paragraphs={approach} />
-          </Reveal>
-        </section>
-      ) : null}
 
       <section className="section" aria-label={profile("educationEyebrow")}>
         <dl className="container fact-sheet">
@@ -151,16 +127,13 @@ export default async function AboutPage() {
             <dd>{profile("baseValue")}</dd>
           </div>
         </dl>
-        <div className="container">
-          <Link className="section-link" href="/experience">
-            {profile("viewFullExperience")} <span aria-hidden="true">→</span>
-          </Link>
-          {siteConfig.hasCv ? (
+        {siteConfig.hasCv ? (
+          <div className="container">
             <a className="section-link" href={siteConfig.cvPath}>
               CV <span aria-hidden="true">↓</span>
             </a>
-          ) : null}
-        </div>
+          </div>
+        ) : null}
       </section>
 
       <ContactBlock compact />

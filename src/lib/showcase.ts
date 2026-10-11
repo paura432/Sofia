@@ -53,7 +53,6 @@ export function getFilmEntries(t: ProjectsTranslator): FilmEntry[] {
     return [{
       slug: project.slug,
       title: copy.title,
-      description: copy.description || undefined,
       format: copy.format,
       role: roleLabel(copy.roles),
       duration: cover.duration,

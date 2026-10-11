@@ -1121,59 +1121,6 @@ p {
   text-transform: uppercase;
 }
 
-.trajectory-row ul {
-  display: grid;
-  gap: 8px;
-  margin: var(--space-sm) 0 0;
-  padding: 0;
-}
-
-.trajectory-row li {
-  position: relative;
-  list-style: none;
-  padding-left: 18px;
-  color: var(--foreground-soft);
-}
-
-.trajectory-row li::before {
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  content: "—";
-}
-
-/* Hover editorial de Practice: acento, filo y un desplazamiento mínimo del
-   titular. Nada depende del hover para entenderse en táctil. */
-@media (hover: hover) {
-  .practice-item .practice-number,
-  .practice-item h3,
-  .practice-item .practice-meta {
-    transition:
-      color var(--motion-interface) var(--ease-out-editorial),
-      opacity var(--motion-interface) var(--ease-out-editorial),
-      transform var(--motion-interface) var(--ease-out-editorial);
-  }
-
-  .practice-item .practice-number {
-    color: var(--muted);
-  }
-
-  .practice-item .practice-meta {
-    opacity: 0.72;
-  }
-
-  .practice-item:hover .practice-number {
-    color: var(--accent);
-  }
-
-  .practice-item:hover h3 {
-    transform: translateX(var(--motion-distance-sm));
-  }
-
-  .practice-item:hover .practice-meta {
-    opacity: 1;
-  }
-}
 
 .trajectory-row.featured {
   border-top: 2px solid var(--foreground);
@@ -1187,17 +1134,6 @@ p {
   text-transform: uppercase;
 }
 
-.trajectory-row li {
-  color: var(--foreground-soft);
-}
-
-.trajectory-row .company-context {
-  margin-top: 12px;
-  max-width: 48ch;
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.5;
-}
 
 .progression-strip {
   display: flex;
@@ -1323,16 +1259,14 @@ p {
    columna ancha. Tres columnas solo cuando hay espacio real (900px). */
 @media (min-width: 700px) and (max-width: 979.98px) {
   .case-row,
-  .trajectory-row,
-  .about-summary-item {
+  .trajectory-row {
     grid-template-columns: minmax(5.5rem, 7rem) minmax(0, 1fr);
     column-gap: var(--space-md);
     align-items: start;
   }
 
   .case-row > :not(:first-child),
-  .trajectory-row > :not(:first-child),
-  .about-summary-item > :not(:first-child) {
+  .trajectory-row > :not(:first-child) {
     grid-column: 2;
   }
 }
@@ -1391,11 +1325,6 @@ p {
     grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr);
   }
 
-  .practice-item {
-    grid-template-columns: 76px minmax(0, 1fr) minmax(190px, 0.32fr);
-    gap: var(--space-lg);
-  }
-
   /* Tablet landscape: periodo fijo + contenido apilado en una columna ancha. */
   .case-row,
   .trajectory-row {
@@ -1407,12 +1336,6 @@ p {
   .case-row > :not(:first-child),
   .trajectory-row > :not(:first-child) {
     grid-column: 2;
-  }
-
-  .about-summary-item {
-    grid-template-columns: minmax(5.5rem, 7rem) minmax(200px, 0.3fr) minmax(0, 1fr);
-    gap: var(--space-lg);
-    align-items: start;
   }
 
   .current-item {
@@ -1498,7 +1421,7 @@ p {
 }
 
 /* ==========================================================================
-   Prosa editorial (Perfil, Contacto, proyectos) y apuntes de Experiencia
+   Prosa editorial (proyectos) y descripción de cada puesto en Experiencia
    ========================================================================== */
 .prose {
   display: grid;
@@ -1521,25 +1444,21 @@ p {
   color: var(--film-muted);
 }
 
-.trajectory-note {
+.trajectory-body {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.trajectory-body .progression-strip {
+  margin-top: 0;
+}
+
+.trajectory-description {
   margin: 0;
-  padding-top: 0;
-  max-width: 58ch;
+  max-width: 52ch;
   color: var(--foreground-soft);
   font-size: clamp(0.98rem, 1.1vw, 1.05rem);
   line-height: 1.6;
-}
-
-@media (min-width: 700px) {
-  .trajectory-row > .trajectory-note {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (min-width: 1024px) {
-  .trajectory-row > .trajectory-note {
-    grid-column: 2 / -1;
-  }
 }
 
 .short-form-copy .project-row-cta + .project-row-cta {

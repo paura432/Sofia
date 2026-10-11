@@ -39,13 +39,11 @@ type ProjectPageProps = {
 
 type ProjectCopy = {
   title: string;
+  /** La única descripción pública de la pieza: en el listado, bajo el título y en los metadatos. */
   description: string;
-  dek?: string;
   format?: string;
-  context?: string;
-  /** Papel de Sofía y decisiones de la pieza, en prosa. */
+  /** Solo en las obras audiovisuales, y solo lo que el vídeo y la ficha no cuentan. */
   process?: string[];
-  result?: string;
   roles?: string[];
   credits?: Record<string, string>;
   creditLabels?: Record<string, string>;
@@ -182,7 +180,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <Reveal className="container page-hero-inner">
           <p className="project-kicker">{disciplineLabel(project, t)}</p>
           <h1 className="display-page project-title">{copy.title}</h1>
-          {copy.dek ? <p>{copy.dek}</p> : null}
+          {copy.description ? <p className="page-lede">{copy.description}</p> : null}
         </Reveal>
       </section>
 
@@ -248,21 +246,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
       ) : null}
 
-      {copy.context || copy.process?.length ? (
+      {copy.process?.length ? (
         <section className="section project-detail-copy prose-section">
           <Reveal className="container editorial-grid">
-            {copy.context ? (
-              <>
-                <p className="eyebrow">{t("context")}</p>
-                <Prose paragraphs={[copy.context]} />
-              </>
-            ) : null}
-            {copy.process?.length ? (
-              <>
-                <p className="eyebrow">{t("processLabel")}</p>
-                <Prose paragraphs={copy.process} />
-              </>
-            ) : null}
+            <p className="eyebrow">{t("processLabel")}</p>
+            <Prose paragraphs={copy.process} />
           </Reveal>
         </section>
       ) : null}
@@ -284,17 +272,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               transcriptLabel={t("transcript")}
             />
           </div>
-        </section>
-      ) : null}
-
-      {copy.result ? (
-        <section className="section project-publication">
-          <Reveal className="container editorial-grid">
-            <p className="eyebrow">{t("publication")}</p>
-            <div>
-              {copy.result ? <p>{copy.result}</p> : null}
-            </div>
-          </Reveal>
         </section>
       ) : null}
 

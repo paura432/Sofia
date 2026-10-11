@@ -10,7 +10,6 @@ import { Link } from "@/i18n/navigation";
 export type ShortFormStory = {
   id: string;
   title: string;
-  description?: string;
   organisation?: string;
   role?: string;
   year?: string;
@@ -114,9 +113,6 @@ export function ShortFormReporting({
                 </p>
               ) : null}
               <h3>{project.title}</h3>
-              {project.description ? (
-                <p className="short-form-description">{project.description}</p>
-              ) : null}
               {project.detailSlug ? (
                 <Link
                   aria-label={`${viewProjectLabel}: ${project.title}`}

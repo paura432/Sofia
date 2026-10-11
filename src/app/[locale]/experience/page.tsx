@@ -16,15 +16,11 @@ type PageProps = {
 };
 
 type ExperienceCopy = {
-  discipline: string;
   role: string;
   period: string;
-  summary: string;
-  context?: string;
-  responsibilities: Record<string, string>;
+  /** Una sola descripción pública por puesto: qué hacía, en 25–45 palabras. */
+  description: string;
   progression?: Record<string, string>;
-  /** Apunte breve sobre el puesto, en prosa. */
-  note?: string;
 };
 type ProjectCopy = { title: string };
 
@@ -44,6 +40,7 @@ export async function generateMetadata({
   });
 }
 
+/** Empresa · cargo y periodo · descripción breve. Sin listas de funciones. */
 export default async function ExperiencePage() {
   const [t, projectsText, navigation] = await Promise.all([
     getTranslations("Experience"),
@@ -55,9 +52,7 @@ export default async function ExperiencePage() {
     <main id="main">
       <section className="page-hero section section-first">
         <Reveal className="container page-hero-inner">
-          {t("pageEyebrow") ? <p className="eyebrow">{t("pageEyebrow")}</p> : null}
           <h1 className="display-page">{t("pageTitle")}</h1>
-          {t("pageText") ? <p>{t("pageText")}</p> : null}
         </Reveal>
       </section>
 
@@ -79,7 +74,6 @@ export default async function ExperiencePage() {
               >
                 <PeriodDisplay period={copy.period} />
                 <div>
-                  <p className="case-discipline">{copy.discipline}</p>
                   {item.companyUrl ? (
                     <h2>
                       <a
@@ -99,11 +93,8 @@ export default async function ExperiencePage() {
                     <h2>{item.company}</h2>
                   )}
                   <p className="trajectory-role">{copy.role}</p>
-                  {copy.context ? (
-                    <p className="company-context">{copy.context}</p>
-                  ) : null}
                 </div>
-                <div>
+                <div className="trajectory-body">
                   {item.progressionKeys && copy.progression ? (
                     <p
                       aria-label={t("progressionLabel")}
@@ -116,13 +107,7 @@ export default async function ExperiencePage() {
                       ))}
                     </p>
                   ) : null}
-                  <ul aria-label={t("responsibilitiesLabel")}>
-                    {item.responsibilityKeys.map((key) => (
-                      <li key={`${item.id}-${key}`}>
-                        {copy.responsibilities[key]}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="trajectory-description">{copy.description}</p>
                   {relatedProjects.length ? (
                     <ul className="trajectory-project-links">
                       {relatedProjects.map((project) => {
@@ -148,9 +133,6 @@ export default async function ExperiencePage() {
                     </ul>
                   ) : null}
                 </div>
-                {copy.note ? (
-                  <p className="trajectory-note">{copy.note}</p>
-                ) : null}
               </StaggerGroup>
             );
           })}

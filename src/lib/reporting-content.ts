@@ -16,7 +16,6 @@ function projectMedia(project: PortfolioProject): ProjectMedia[] {
 
 export type ReportingCopy = {
   title: string;
-  description?: string;
   roles?: string[];
   media?: Record<string, MediaCopy>;
 };
@@ -41,7 +40,6 @@ export function toShortFormStory(
   return {
     id: project.id,
     title: copy.title,
-    description: copy.description || undefined,
     organisation: project.organisation,
     role: copy.roles?.join(" · "),
     year: publishableYear(project.year),

@@ -6,7 +6,6 @@ import { Link } from "@/i18n/navigation";
 export type FilmEntry = {
   slug: string;
   title: string;
-  description?: string;
   format?: string;
   role?: string;
   duration?: string;
@@ -65,9 +64,6 @@ export function FilmIndex({ films, viewLabel, variant = "list" }: FilmIndexProps
                   <span className="film-title">{film.title}</span>
                   {film.format ? <span className="film-meta">{film.format}</span> : null}
                   {film.role ? <span className="film-role">{film.role}</span> : null}
-                  {variant === "list" && film.description ? (
-                    <span className="film-description">{film.description}</span>
-                  ) : null}
                 </span>
                 <span aria-hidden="true" className="film-arrow">→</span>
               </Link>

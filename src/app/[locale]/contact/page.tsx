@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import { ContactBlock } from "@/components/contact-block";
-import { Reveal } from "@/components/motion/reveal";
-import { Prose } from "@/components/prose";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -27,23 +25,11 @@ export async function generateMetadata({
   });
 }
 
-export default async function ContactPage() {
-  const t = await getTranslations("Contact");
-  const opportunities = t("opportunities");
-
+/** Título, invitación de dos frases, email, LinkedIn, base e idiomas. Nada más. */
+export default function ContactPage() {
   return (
     <main id="main" className="contact-page">
       <ContactBlock page />
-      {opportunities ? (
-        <section className="section prose-section" aria-labelledby="contact-opportunities">
-          <Reveal className="container editorial-grid">
-            <p className="eyebrow" id="contact-opportunities">
-              {t("opportunitiesEyebrow")}
-            </p>
-            <Prose paragraphs={[opportunities]} />
-          </Reveal>
-        </section>
-      ) : null}
     </main>
   );
 }
