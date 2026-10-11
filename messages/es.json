@@ -772,11 +772,11 @@
       "grupo-cadena-media": {
         "role": "Reportera de televisión",
         "period": "2024 — Actualidad",
-        "description": "Reportera de televisión en estrenos, eventos y ruedas de prensa: entrevisto a artistas, actores y figuras públicas y escribo el guion de cada pieza.",
+        "description": "Reportera de televisión para Grupo Cadena Media: estrenos, eventos y ruedas de prensa, con entrevistas a artistas, actores y figuras públicas.",
         "bullets": [
-          "Antes de cada cobertura, investigar y decidir qué preguntas tienen sentido y qué hay que conseguir.",
-          "En el sitio, buscar recursos, conseguir entrevistas y presentar a cámara, muchas veces improvisando.",
-          "Entrevistas con tiempo variable: dos minutos en un photocall o una conversación de diez."
+          "Preparación de cada cobertura: investigación previa y selección de las preguntas y del material que hay que conseguir.",
+          "Entrevistas y presentación a cámara en el lugar, con tiempos que van de dos minutos en un photocall a una conversación de diez.",
+          "Grabación de recursos y guion de las piezas."
         ]
       },
       "urjcmun": {
@@ -788,33 +788,31 @@
           "delegate": "Delegada",
           "deputyDirector": "Directora adjunta de redes sociales"
         },
-        "description": "Desde 2022 en el equipo de comunicación del Modelo de Naciones Unidas de la Universidad Rey Juan Carlos; en 2026, directora adjunta de redes sociales.",
+        "description": "Desde 2022 en el equipo de comunicación del Modelo de Naciones Unidas de la Universidad Rey Juan Carlos; en 2026, directora adjunta de redes sociales del congreso.",
         "bullets": [
-          "Plan de contenidos mensual y diseño del feed de Instagram durante el año previo al congreso.",
-          "Selección del equipo de reporteros y dos formaciones impartidas.",
-          "Durante la semana del congreso, coordinación de los reporteros, organizados en parejas: reparto y revisión de coberturas, entrevistas, fotografías y vídeos."
+          "Planificación de contenidos: plan mensual y diseño del feed de Instagram durante el año previo al congreso.",
+          "Selección y formación del equipo de reporteros.",
+          "Coordinación del equipo durante la semana del congreso: reparto y revisión de coberturas, entrevistas, fotografías y vídeos."
         ]
       },
       "annie-bonnie": {
         "role": "Comunicación corporativa",
         "period": "2025 — 2026",
-        "description": "Prácticas en una consultora de comunicación, con Yoigo entre los clientes: un puesto transversal entre redacción, vídeo y análisis.",
+        "description": "Prácticas de comunicación en una consultora, con Yoigo entre los clientes: un puesto transversal entre redacción, vídeo y análisis.",
         "bullets": [
           "Redacción de artículos para blogs y canales digitales y participación en la planificación editorial.",
-          "Vídeos para TikTok, de la preparación a la grabación y la edición.",
-          "Entrevistas y cobertura de eventos, entre ellos MWC Madrid.",
-          "Informe semanal del rendimiento de las cuentas, los contenidos que mejor funcionaban y la competencia."
+          "Producción de vídeos para TikTok, de la preparación a la edición, además de entrevistas y cobertura de eventos.",
+          "Análisis semanal del rendimiento de las cuentas, de los contenidos y de la competencia."
         ]
       },
       "isocero": {
         "role": "Fotógrafa en hoteles",
         "period": "2023",
-        "description": "Fotógrafa de reportajes a familias en hoteles, de la sesión a la venta.",
+        "description": "Fotógrafa de reportajes a familias en hoteles, responsable del proceso completo, de la sesión a la entrega.",
         "bullets": [
-          "Proponer la sesión a las familias en la piscina y los exteriores, y dirigirla buscando momentos y poses naturales.",
-          "Selección y edición en Lightroom: luz, color y encuadre.",
-          "Presentación y venta de los reportajes en el stand, y entrega según el procedimiento del hotel.",
-          "Responsable del material y de la caja al cierre del día."
+          "Propuesta de la sesión a los clientes y dirección del reportaje en la piscina y los exteriores.",
+          "Selección y edición de las imágenes en Lightroom.",
+          "Presentación, venta y entrega de los reportajes en el stand del hotel."
         ]
       }
     }

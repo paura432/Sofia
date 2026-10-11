@@ -772,11 +772,11 @@
       "grupo-cadena-media": {
         "role": "TV reporter",
         "period": "2024 — Present",
-        "description": "TV reporter at premieres, events and press conferences: I interview artists, actors and public figures and write the script for each piece.",
+        "description": "TV reporter for Grupo Cadena Media: premieres, events and press conferences, with interviews with artists, actors and public figures.",
         "bullets": [
-          "Before each assignment, researching and deciding which questions make sense and what needs to be captured.",
-          "On site, gathering B-roll, securing interviews and presenting to camera, often improvising.",
-          "Interviews on variable time: two minutes at a photocall or a ten-minute conversation."
+          "Preparing each assignment: prior research and choosing the questions and the material that needs to be captured.",
+          "Interviews and presenting to camera on site, on anything from two minutes at a photocall to a ten-minute conversation.",
+          "Shooting B-roll and writing the scripts for the pieces."
         ]
       },
       "urjcmun": {
@@ -788,33 +788,31 @@
           "delegate": "Delegate",
           "deputyDirector": "Deputy Director for Social Media"
         },
-        "description": "Since 2022 on the communications team of the Model United Nations at Universidad Rey Juan Carlos; in 2026, Deputy Director for Social Media.",
+        "description": "Since 2022 on the communications team of the Model United Nations at Universidad Rey Juan Carlos; in 2026, Deputy Director for Social Media for the conference.",
         "bullets": [
-          "Monthly content plan and Instagram feed design during the year leading up to the conference.",
-          "Selecting the team of reporters and delivering two training sessions.",
-          "During conference week, coordinating the reporters, working in pairs: assigning and reviewing coverage, interviews, photos and videos."
+          "Content planning: monthly plan and Instagram feed design during the year leading up to the conference.",
+          "Selecting and training the team of reporters.",
+          "Coordinating the team during conference week: assigning and reviewing coverage, interviews, photos and videos."
         ]
       },
       "annie-bonnie": {
         "role": "Corporate communications",
         "period": "2025 — 2026",
-        "description": "Internship at a communications consultancy, with Yoigo among the clients: a cross-cutting role between writing, video and analysis.",
+        "description": "Communications internship at a consultancy, with Yoigo among the clients: a cross-cutting role between writing, video and analysis.",
         "bullets": [
           "Writing articles for blogs and digital channels and taking part in editorial planning.",
-          "TikTok videos, from preparation to shooting and editing.",
-          "Interviews and event coverage, including MWC Madrid.",
-          "Weekly report on account performance, the best-performing content and the competition."
+          "Producing TikTok videos, from preparation to editing, plus interviews and event coverage.",
+          "Weekly analysis of account performance, content and the competition."
         ]
       },
       "isocero": {
         "role": "Hotel photographer",
         "period": "2023",
-        "description": "Photographer of family photo sessions at hotels, from the shoot to the sale.",
+        "description": "Photographer of family photo sessions at hotels, responsible for the whole process, from the shoot to delivery.",
         "bullets": [
-          "Offering families a session by the pool and outdoors, and directing it in search of natural moments and poses.",
-          "Selecting and editing in Lightroom: light, colour and framing.",
-          "Presenting and selling the sessions at the stand, and delivering them following the hotel's procedure.",
-          "Responsible for the equipment and the till at the end of the day."
+          "Offering the session to clients and directing the shoot by the pool and outdoors.",
+          "Selecting and editing the images in Lightroom.",
+          "Presenting, selling and delivering the sessions at the hotel stand."
         ]
       }
     }
