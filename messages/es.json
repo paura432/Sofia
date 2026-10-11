@@ -319,8 +319,14 @@
         }
       },
       "reporter-reel": {
-        "title": "Reporter reel",
-        "description": "Selección de coberturas, entrevistas y piezas de reporterismo.",
+        "title": "Coberturas para «Tacones y Asfalto»",
+        "description": "Resumen de coberturas como reportera del programa Tacones y Asfalto: el estreno de La guitarra flamenca de Yerai Cortés en Kinépolis, la 43.ª Semana del Cine Español de Carabanchel en el Palacio de Cibeles, la Casa de la Arquitectura y varias alfombras rojas, con entrevistas a artistas como Lola Índigo.",
+        "media": {
+          "reporter-reel-video": {
+            "title": "Coberturas para «Tacones y Asfalto»",
+            "alt": "Sofía con un micrófono ante el photocall de la 43.ª Semana del Cine Español de Carabanchel"
+          }
+        },
         "format": "Televisión · Reel",
         "roles": [
           "Reporterismo en estrenos, eventos y ruedas de prensa.",

@@ -319,8 +319,14 @@
         }
       },
       "reporter-reel": {
-        "title": "Reporter reel",
-        "description": "A selection of event coverage, interviews and reporting pieces.",
+        "title": "Coverage for ‘Tacones y Asfalto’",
+        "description": "A round-up of my coverage as a reporter for the programme Tacones y Asfalto: the premiere of La guitarra flamenca de Yerai Cortés at Kinépolis, the 43rd Spanish Film Week of Carabanchel at the Palacio de Cibeles, the Casa de la Arquitectura and several red carpets, with interviews with artists such as Lola Índigo.",
+        "media": {
+          "reporter-reel-video": {
+            "title": "Coverage for ‘Tacones y Asfalto’",
+            "alt": "Sofía holding a microphone in front of the photocall of the 43rd Spanish Film Week of Carabanchel"
+          }
+        },
         "format": "Television · Reel",
         "roles": [
           "Reporting from premieres, events and press conferences.",

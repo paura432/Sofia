@@ -15,9 +15,15 @@ type ReelStageProps = {
   viewProjectLabel: string;
 };
 
+/** "16 / 9" → true; "9 / 16" → false. La pantalla cambia de formato con la pieza. */
+function isLandscape(ratio: string) {
+  const [width, height] = ratio.split("/").map((part) => Number(part.trim()));
+  return Boolean(width && height) && width > height;
+}
+
 /**
- * Monitor del hero: una sola pantalla 9:16 y una escaleta con todas las
- * piezas. Elegir una pieza de la escaleta es un gesto explícito, así que
+ * Monitor del hero: una sola pantalla (9:16 o 16:9, según la pieza) y una
+ * escaleta con todas las piezas. Elegir una pieza de la escaleta es un gesto explícito, así que
  * empieza a reproducirse (con sonido si el navegador lo permite). Sólo existe
  * un reproductor a la vez.
  */
@@ -28,10 +34,11 @@ export function ReelStage({ stories, listLabel, nowShowingLabel, soundHint, view
   const selected = stories.find((story) => story.id === selectedId) ?? stories[0];
 
   if (!selected?.video) return null;
+  const orientation = isLandscape(selected.posterRatio) ? "landscape" : "portrait";
 
   return (
     <div className="reel-stage">
-      <figure className="reel-stage-screen">
+      <figure className="reel-stage-screen" data-orientation={orientation}>
         <div className="reel-stage-frame">
           <span aria-hidden="true" className="frame-corners" />
           <PortfolioVideo
@@ -82,7 +89,7 @@ export function ReelStage({ stories, listLabel, nowShowingLabel, soundHint, view
                 }}
                 type="button"
               >
-                <span className="reel-stage-thumb">
+                <span className="reel-stage-thumb" style={{ aspectRatio: story.posterRatio }}>
                   <Image alt="" fill sizes="64px" src={story.posterSrc} />
                 </span>
                 <span className="reel-stage-item-copy">

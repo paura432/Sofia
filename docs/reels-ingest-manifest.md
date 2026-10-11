@@ -86,3 +86,9 @@ The previous Reporting gate required a public HTTP `sourceUrl` for every reporti
 - For account-side audit only, consult Mux to map public Playback IDs to Asset IDs; this is not required for rendering. Never share Mux credentials in chat.
 - Exact client/event/year/source URLs or additional credits have not been supplied and are intentionally not inferred in public copy.
 - HTTP 200 confirms public endpoint responses only; it is not a claim of visual QA or verified real playback.
+
+## Reporter reel — `reporter-reel` (added 2026-10-11)
+
+- Mux asset uploaded by the owner on 2026-10-11 (asset title `video`, 01:52, 1080p tier, 643:360). Public Playback ID `qpZJsVFTCrKzLg9vFaA00rg8dBbCJN2XhExTquo01ErFY`; thumbnail and HLS endpoints returned HTTP 200 (renditions 1286×720 … 480×268, AAC audio present). No local source file in the repository.
+- **Observed** (frames at 2–110 s and an automatic transcript): Sofía on camera with a microphone, branded "Tacones y Asfalto" lower thirds and a "You!" logo; opening line "bienvenidos a Tacones y Asfalto"; segments at Kinépolis (premiere of *La guitarra flamenca de Yerai Cortés*, photocall text), the 43rd Semana del Cine Español de Carabanchel at the Palacio de Cibeles (said on camera; photocall visible), the Casa de la Arquitectura (said on camera), red carpets, and a lower third "Lola Índigo · Cantante". Role visible: reporter on camera. Not verified from the video: channel/organisation behind "You!", dates, per-segment credits.
+- Published on the home monitor as the first story (`order: 0`, `featured`, `reportingFormat: "short-form"`, 16:9 cover, poster at 56 s). Rights: owner approval 2026-10-11, recorded in `rights.note`; per-segment credits still pending.
