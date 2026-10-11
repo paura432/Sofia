@@ -26,6 +26,9 @@ export type ShortFormStory = {
 type ShortFormReportingProps = {
   projects: ShortFormStory[];
   label: string;
+  /** Rótulos de los dos grupos: piezas apaisadas (coberturas) y verticales. */
+  wideLabel: string;
+  tallLabel: string;
   viewOriginalLabel: string;
   viewProjectLabel: string;
   opensInNewTabLabel: string;
@@ -33,9 +36,16 @@ type ShortFormReportingProps = {
   showLessLabel: string;
 };
 
+function isLandscape(ratio: string) {
+  const [width, height] = ratio.split("/").map((part) => Number(part.trim()));
+  return Boolean(width && height) && width > height;
+}
+
 export function ShortFormReporting({
   projects,
   label,
+  wideLabel,
+  tallLabel,
   viewOriginalLabel,
   viewProjectLabel,
   opensInNewTabLabel,
@@ -51,16 +61,18 @@ export function ShortFormReporting({
   const visibleProjects = projects.slice(0, expanded ? projects.length : 8);
   const remainingCount = projects.length - visibleProjects.length;
 
+  const groups = [
+    { key: "wide", label: wideLabel, items: visibleProjects.filter((project) => isLandscape(project.posterRatio)) },
+    { key: "tall", label: tallLabel, items: visibleProjects.filter((project) => !isLandscape(project.posterRatio)) },
+  ].filter((group) => group.items.length);
+
   return (
-    <div className="short-form-group">
-      <div
-        aria-label={label}
-        className="short-form-reporting"
-        data-count={projects.length}
-        id={listId}
-        role="group"
-      >
-        {visibleProjects.map((project) => (
+    <div className="short-form-group" aria-label={label} id={listId} role="group">
+      {groups.map((group) => (
+        <section className={`short-form-block short-form-block-${group.key}`} key={group.key}>
+          <p className="eyebrow short-form-block-label">{group.label}</p>
+          <div className="short-form-reporting" data-count={group.items.length}>
+        {group.items.map((project) => (
           <article className="short-form-card" key={project.id}>
             <div
               className="short-form-poster"
@@ -138,7 +150,9 @@ export function ShortFormReporting({
             </div>
           </article>
         ))}
-      </div>
+          </div>
+        </section>
+      ))}
       {projects.length > 8 ? (
         <button
           aria-controls={listId}

@@ -69,6 +69,8 @@
     "viewWork": "See all work",
     "contact": "Email me",
     "reelListLabel": "On-camera pieces",
+    "reelGroupWide": "Coverage",
+    "reelGroupTall": "Vertical",
     "nowShowing": "On screen",
     "soundHint": "With sound · tap to watch"
   },
@@ -103,7 +105,9 @@
     "archiveNav": "Archive",
     "reportingKicker": "Reporting",
     "reportingTitle": "On camera",
-    "reportingText": "Coverage of premieres and events, a personal piece to camera, a how-to and a product test. Best with sound.",
+    "reportingText": "Two coverage round-ups and, shot vertically, a personal piece to camera, a how-to and a product test. Best with sound.",
+    "reportingWide": "Coverage",
+    "reportingTall": "Vertical",
     "audiovisualKicker": "Film & video",
     "audiovisualTitle": "Behind the camera",
     "audiovisualText": "Two short films I directed and edited, a series pitch I produced, shot and edited, and a music video I shot and post-produced.",
@@ -335,6 +339,20 @@
           "reporter-reel-video": {
             "title": "Coverage for ‘Tacones y Asfalto’",
             "alt": "Sofía holding a microphone in front of the photocall of the 43rd Spanish Film Week of Carabanchel"
+          }
+        },
+        "format": "Coverage reel",
+        "roles": [
+          "Reporter — Sofía Chernikova"
+        ]
+      },
+      "reporter-reel-season": {
+        "title": "A season of coverage",
+        "description": "A round-up of a season of coverage as a reporter, in Madrid and Tenerife: the Anillos de Oro awards, the ALMA screenwriters' guild awards, the House of the Dragon premiere, Scalpers at Fashion Week 2025, the musical Cabaret, Zootopia 2 and Mágicas Navidades in Torrejón de Ardoz, with interviews with the people involved.",
+        "media": {
+          "reporter-reel-season-video": {
+            "title": "A season of coverage",
+            "alt": "Sofía holding a microphone in front of the Cabaret photocall, with the reporter lower third on screen"
           }
         },
         "format": "Coverage reel",

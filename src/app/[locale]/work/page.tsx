@@ -87,6 +87,8 @@ export default async function WorkPage() {
             />
             <ShortFormReporting
               label={t("reportingTitle")}
+              wideLabel={t("reportingWide")}
+              tallLabel={t("reportingTall")}
               opensInNewTabLabel={navigationText("opensInNewTab")}
               projects={reels}
               showLessLabel={t("shortFormShowLess")}

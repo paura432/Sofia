@@ -176,7 +176,7 @@ export const projects: PortfolioProject[] = [
     order: 0,
     published: true,
     sourceUrl:
-      "https://es.linkedin.com/posts/sofia-chernikova_hace-unos-a%C3%B1os-habr%C3%ADa-visto-muchas-de-estas-activity-7486385459078746112--ATZ",
+      "https://www.linkedin.com/posts/sofia-chernikova_empezamos-septiembre-y-pronto-una-nueva-temporada-ugcPost-7368583690249031681-84Nz/",
     translationKey: "reporter-reel",
     roleKeys: ["on-camera"],
     rights: {
@@ -198,6 +198,46 @@ export const projects: PortfolioProject[] = [
       posterTime: 56,
       poster: getMuxThumbnailUrl("qpZJsVFTCrKzLg9vFaA00rg8dBbCJN2XhExTquo01ErFY", {
         time: 56,
+        width: 1280,
+      }),
+    },
+  },
+  {
+    id: "reporter-reel-season",
+    slug: "coberturas-temporada",
+    year: "2024 — Actualidad",
+    locationKey: "madrid",
+    discipline: ["reporting", "interview", "video"],
+    experienceId: "grupo-cadena-media",
+    reporterReel: true,
+    reportingFormat: "short-form",
+    featured: true,
+    detailPage: true,
+    order: 0.5,
+    published: true,
+    sourceUrl:
+      "https://www.linkedin.com/posts/sofia-chernikova_hace-unos-a%C3%B1os-habr%C3%ADa-visto-muchas-de-estas-ugcPost-7486385210373349377-uFcu/",
+    translationKey: "reporter-reel-season",
+    roleKeys: ["on-camera"],
+    rights: {
+      verified: true,
+      note: "Resumen de temporada subido a Mux por el propietario y publicación aprobada el 2026-10-11. Créditos por segmento pendientes.",
+    },
+    cover: {
+      id: "reporter-reel-season-video",
+      type: "video",
+      layout: "wide",
+      // Máster 1138×640 (569:320); la diferencia con 16:9 es inapreciable.
+      aspectRatio: "16:9",
+      provider: "mux",
+      muxPlaybackId: "WwfraCvwwVEgClcBha5EZVYpJvd1dDHk5aDv02Ls8wd00",
+      width: 1138,
+      height: 640,
+      duration: "05:30",
+      titleKey: "reporter-reel-season-video",
+      posterTime: 180,
+      poster: getMuxThumbnailUrl("WwfraCvwwVEgClcBha5EZVYpJvd1dDHk5aDv02Ls8wd00", {
+        time: 180,
         width: 1280,
       }),
     },

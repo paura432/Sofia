@@ -10,6 +10,9 @@ import { Link } from "@/i18n/navigation";
 type ReelStageProps = {
   stories: ShortFormStory[];
   listLabel: string;
+  /** Rótulos de los dos grupos de la escaleta: piezas apaisadas y verticales. */
+  wideLabel: string;
+  tallLabel: string;
   nowShowingLabel: string;
   soundHint: string;
   viewProjectLabel: string;
@@ -27,7 +30,7 @@ function isLandscape(ratio: string) {
  * empieza a reproducirse (con sonido si el navegador lo permite). Sólo existe
  * un reproductor a la vez.
  */
-export function ReelStage({ stories, listLabel, nowShowingLabel, soundHint, viewProjectLabel }: ReelStageProps) {
+export function ReelStage({ stories, listLabel, wideLabel, tallLabel, nowShowingLabel, soundHint, viewProjectLabel }: ReelStageProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [playing, setPlaying] = useState(false);
   const stop = useCallback(() => setPlaying(false), []);
@@ -35,6 +38,12 @@ export function ReelStage({ stories, listLabel, nowShowingLabel, soundHint, view
 
   if (!selected?.video) return null;
   const orientation = isLandscape(selected.posterRatio) ? "landscape" : "portrait";
+  // Dos grupos en la escaleta: apaisadas (coberturas) y verticales; la numeración es global.
+  const indexed = stories.map((story, index) => ({ story, index }));
+  const groups = [
+    { key: "wide", label: wideLabel, items: indexed.filter(({ story }) => isLandscape(story.posterRatio)) },
+    { key: "tall", label: tallLabel, items: indexed.filter(({ story }) => !isLandscape(story.posterRatio)) },
+  ];
 
   return (
     <div className="reel-stage">
@@ -71,39 +80,48 @@ export function ReelStage({ stories, listLabel, nowShowingLabel, soundHint, view
         </figcaption>
       </figure>
 
-      <ol aria-label={listLabel} className="reel-stage-list">
-        {stories.map((story, index) => {
-          const isSelected = story.id === selected.id;
-          return (
-            <li key={story.id}>
-              <button
-                aria-current={isSelected ? "true" : undefined}
-                aria-label={`${story.playLabel}: ${story.title}`}
-                className="reel-stage-item"
-                onClick={() => {
-                  window.dispatchEvent(
-                    new CustomEvent("portfolio-video-activate", { detail: story.video?.id }),
+      <div aria-label={listLabel} className="reel-stage-lists" role="group">
+        {groups.map((group) =>
+          group.items.length ? (
+            <div className="reel-stage-group" key={group.key}>
+              <p className="reel-stage-group-label">{group.label}</p>
+              <ol className="reel-stage-list">
+                {group.items.map(({ story, index }) => {
+                  const isSelected = story.id === selected.id;
+                  return (
+                    <li key={story.id}>
+                      <button
+                        aria-current={isSelected ? "true" : undefined}
+                        aria-label={`${story.playLabel}: ${story.title}`}
+                        className="reel-stage-item"
+                        onClick={() => {
+                          window.dispatchEvent(
+                            new CustomEvent("portfolio-video-activate", { detail: story.video?.id }),
+                          );
+                          setSelectedId(story.id);
+                          setPlaying(true);
+                        }}
+                        type="button"
+                      >
+                        <span className="reel-stage-thumb" style={{ aspectRatio: story.posterRatio }}>
+                          <Image alt="" fill sizes="64px" src={story.posterSrc} />
+                        </span>
+                        <span className="reel-stage-item-copy">
+                          <span className="reel-stage-index">{String(index + 1).padStart(2, "0")}</span>
+                          <span className="reel-stage-item-title">{story.title}</span>
+                          {story.video?.duration ? (
+                            <span className="timecode">{story.video.duration}</span>
+                          ) : null}
+                        </span>
+                      </button>
+                    </li>
                   );
-                  setSelectedId(story.id);
-                  setPlaying(true);
-                }}
-                type="button"
-              >
-                <span className="reel-stage-thumb" style={{ aspectRatio: story.posterRatio }}>
-                  <Image alt="" fill sizes="64px" src={story.posterSrc} />
-                </span>
-                <span className="reel-stage-item-copy">
-                  <span className="reel-stage-index">{String(index + 1).padStart(2, "0")}</span>
-                  <span className="reel-stage-item-title">{story.title}</span>
-                  {story.video?.duration ? (
-                    <span className="timecode">{story.video.duration}</span>
-                  ) : null}
-                </span>
-              </button>
-            </li>
-          );
-        })}
-      </ol>
+                })}
+              </ol>
+            </div>
+          ) : null,
+        )}
+      </div>
     </div>
   );
 }

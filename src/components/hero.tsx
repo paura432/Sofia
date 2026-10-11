@@ -52,6 +52,8 @@ export async function Hero({ reels }: HeroProps) {
           <div className="hero-stage">
             <ReelStage
               listLabel={t("reelListLabel")}
+              wideLabel={t("reelGroupWide")}
+              tallLabel={t("reelGroupTall")}
               nowShowingLabel={t("nowShowing")}
               soundHint={t("soundHint")}
               stories={reels}

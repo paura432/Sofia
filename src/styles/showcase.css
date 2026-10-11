@@ -342,6 +342,22 @@ h2 {
   text-transform: uppercase;
 }
 
+/* Escaleta en dos grupos (apaisadas / verticales). */
+.reel-stage-lists {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+}
+
+.reel-stage-group-label {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .reel-stage-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -568,10 +584,28 @@ h2 {
   gap: 28px 14px;
 }
 
+/* Dos bloques en «Ante la cámara»: apaisadas (dos por fila) y verticales. */
+.short-form-group {
+  display: grid;
+  gap: 36px;
+}
+
+.short-form-block-label {
+  margin: 0 0 14px;
+}
+
+.short-form-block-wide .short-form-reporting {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 @media (min-width: 1000px) {
   .short-form-reporting {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
+  }
+
+  .short-form-block-wide .short-form-reporting {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

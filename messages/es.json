@@ -69,6 +69,8 @@
     "viewWork": "Ver todo el trabajo",
     "contact": "Escríbeme",
     "reelListLabel": "Piezas ante la cámara",
+    "reelGroupWide": "Coberturas",
+    "reelGroupTall": "Verticales",
     "nowShowing": "En pantalla",
     "soundHint": "Con sonido · pulsa para ver"
   },
@@ -88,7 +90,9 @@
     "archiveNav": "Archivo",
     "reportingKicker": "Reportajes",
     "reportingTitle": "Ante la cámara",
-    "reportingText": "Coberturas de estrenos y eventos, una pieza personal a cámara, una guía y una prueba de producto. Mejor con sonido.",
+    "reportingText": "Dos resúmenes de coberturas y, en vertical, una pieza personal a cámara, una guía y una prueba de producto. Mejor con sonido.",
+    "reportingWide": "Coberturas",
+    "reportingTall": "Verticales",
     "audiovisualKicker": "Audiovisual",
     "audiovisualTitle": "Detrás de la cámara",
     "audiovisualText": "Dos cortometrajes que dirigí y monté, un pitch de serie que produje, grabé y monté, y un videoclip del que hice el rodaje y la posproducción.",
@@ -335,6 +339,20 @@
           "reporter-reel-video": {
             "title": "Coberturas para «Tacones y Asfalto»",
             "alt": "Sofía con un micrófono ante el photocall de la 43.ª Semana del Cine Español de Carabanchel"
+          }
+        },
+        "format": "Reel de coberturas",
+        "roles": [
+          "Reportera — Sofía Chernikova"
+        ]
+      },
+      "reporter-reel-season": {
+        "title": "Una temporada de coberturas",
+        "description": "Resumen de una temporada de coberturas como reportera, en Madrid y Tenerife: los Premios Anillos de Oro, los Premios ALMA del sindicato de guionistas, el estreno de La Casa del Dragón, Scalpers en la Fashion Week 2025, el musical Cabaret, Zootrópolis 2 y Mágicas Navidades en Torrejón de Ardoz, con entrevistas a sus protagonistas.",
+        "media": {
+          "reporter-reel-season-video": {
+            "title": "Una temporada de coberturas",
+            "alt": "Sofía con un micrófono ante el photocall de Cabaret, con el rótulo de reportera en pantalla"
           }
         },
         "format": "Reel de coberturas",
