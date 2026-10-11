@@ -64,7 +64,7 @@
   "Hero": {
     "dateline": "Journalist · Madrid",
     "role": "TV reporter",
-    "summary": "Since 2024 I have covered premieres, events and press conferences for Grupo Cadena Media, interviewing artists and public figures. I also direct short films and shoot concert, street and portrait photography.",
+    "summary": "Since 2024 I have covered premieres and events for Grupo Cadena Media. My work combines preparing interviews, on-the-ground reporting and presenting on camera. I also direct short films. In photography, I'm especially drawn to concerts, portraits and the street.",
     "actionsAria": "Main actions",
     "viewWork": "See all work",
     "contact": "Email me",
@@ -97,7 +97,7 @@
     "archiveNext": "Next",
     "archiveImageLabel": "{group}, image {index}",
     "pageTitle": "Work",
-    "pageText": "Reporting first, then film, video and photography.",
+    "pageText": "A selection of reporting, audiovisual projects and photography.",
     "sectionsAria": "Work sections",
     "reportingNav": "Reporting",
     "audiovisualNav": "Film & video",
@@ -105,15 +105,15 @@
     "archiveNav": "Archive",
     "reportingKicker": "Reporting",
     "reportingTitle": "On camera",
-    "reportingText": "Two coverage round-ups and, shot vertically, a personal piece to camera, a how-to and a product test. Best with sound.",
+    "reportingText": "Coverage of premieres and events, alongside short pieces made for social media.",
     "reportingWide": "Coverage",
     "reportingTall": "Vertical",
     "audiovisualKicker": "Film & video",
     "audiovisualTitle": "Behind the camera",
-    "audiovisualText": "Two short films I directed and edited, a series pitch I produced, shot and edited, and a music video I shot and post-produced.",
+    "audiovisualText": "Short films, a documentary pitch and a music video. Projects where I worked on directing, producing, shooting or editing.",
     "photographyKicker": "Photography",
     "photographyTitle": "Concerts, a protest camp, street and portrait",
-    "photographyText": "Five series, and an archive to browse at your own pace.",
+    "photographyText": "Concerts, portraits, street photography and a documentary essay on the housing-rights protest camp at Sol.",
     "seriesCount": "{count, plural, one {# photograph} other {# photographs}}",
     "archiveTeaser": "{count} photographs, by theme",
     "shortFormShowMore": "Show {count} more",
@@ -156,13 +156,13 @@
     "items": {
       "4-minutos": {
         "title": "4 MINUTOS",
-        "description": "Final-year project: two kids from the neighbourhood hang out, smoke and talk nonsense until the conversation drifts somewhere bigger. In black and white, shot in long takes. Inspired by Sueños y pan.",
+        "description": "Two neighbourhood boys kill time until a seemingly trivial conversation starts raising far bigger questions. A black-and-white short film inspired by Sueños y pan.",
         "process": [
-          "The idea was to shoot the conversation in one go, leaving room for the silences and the shifts in tone between joking and something more serious. Halfway through the shoot the stabiliser ran out of battery and we had to improvise."
+          "The shoot was conceived as a single sequence shot. A problem with the stabiliser forced us to improvise during filming. In the edit I worked on the silences and the shifts in tone of the conversation."
         ],
         "format": "Short film",
         "roles": [
-          "Direction, script, camera and editing — Sofía Chernikova"
+          "Script, direction, camera and editing — Sofía Chernikova"
         ],
         "credits": {
           "direction": "Sofía Chernikova",
@@ -187,9 +187,9 @@
       },
       "tras-el-sofa": {
         "title": "Tras el sofá",
-        "description": "Final-year project: six minutes of fiction shot on a studio set, in four hours, without leaving it. A girl kills her brother by accident and his girlfriend finds out.",
+        "description": "An accident sets off a story of guilt and secrets. A six-minute short shot on a single set in just four hours.",
         "process": [
-          "With a crew of ten and a single space, everything depended on where the actors stood and on how the truth came out. There was no time for some shots, and continuity was solved in the edit."
+          "I directed the staging with a crew of ten. In the edit I had to fix continuity problems and order the revelations to keep the tension."
         ],
         "format": "Short film",
         "roles": [
@@ -227,9 +227,9 @@
       },
       "version-beta": {
         "title": "VERSIÓN BETA",
-        "description": "A one-minute pitch for a Production course: a documentary series about young people regarded as troubled, presented by Pedro Aguado, host of Hermano Mayor.",
+        "description": "A one-minute pitch for a documentary series about young people considered troubled, presented by Pedro Aguado, known for Hermano Mayor.",
         "process": [
-          "I contacted Pedro Aguado, arranged the location and filmed the young people. The cut is fast on purpose: the energy of the series in one minute."
+          "I contacted Pedro Aguado, arranged the location, filmed the participants and edited the video. The aim was to present the concept of the series in one minute."
         ],
         "format": "Promotional piece",
         "media": {
@@ -252,7 +252,7 @@
       },
       "short-form-001": {
         "title": "On foot through Madrid, camera round my neck",
-        "description": "A personal piece: a walk-and-talk to camera through central Madrid looking for what we usually don't show of the most touristy places: rubbish, damage, abandoned corners.",
+        "description": "A personal walk through central Madrid in search of what usually stays out of tourist photos: damage, rubbish and corners that normally go unnoticed.",
         "media": {
           "short-form-001-video": {
             "title": "On foot through Madrid, camera round my neck",
@@ -260,12 +260,12 @@
           }
         },
         "roles": [
-          "Idea, camera, presenting and editing — Sofía Chernikova"
+          "Idea, photography, camera, presenting and editing — Sofía Chernikova"
         ]
       },
       "short-form-002": {
         "title": "On the ‘9‑1‑1’ set",
-        "description": "A piece for Yoigo's social media, produced by Annie Bonnie and shot on the 9‑1‑1 set at Chamartín station. I introduce the place and hand over to content creator @telocuentosinspoilers, who explains the series.",
+        "description": "A piece for Yoigo's social media, filmed on the 9‑1‑1 set at Chamartín. I present the space and hand over to @telocuentosinspoilers, who introduces the series.",
         "media": {
           "short-form-002-video": {
             "title": "On the ‘9‑1‑1’ set",
@@ -278,7 +278,7 @@
       },
       "short-form-003": {
         "title": "MyMUN, step by step",
-        "description": "A vertical for URJCmun's social media explaining MyMUN, the conference app, for first-time users: screen recording, graphics and me explaining it to camera.",
+        "description": "A 2025 explainer video for URJCmun, aimed at participants using MyMUN for the first time. It combines an on-camera explanation with screen captures and graphics.",
         "media": {
           "short-form-003-video": {
             "title": "MyMUN, step by step",
@@ -286,13 +286,13 @@
           }
         },
         "roles": [
-          "Content and presenting — Sofía Chernikova",
-          "Camera and editing — as a team"
+          "Content structure and presenting — Sofía Chernikova",
+          "Camera and editing — as a team, with Sofía Chernikova"
         ]
       },
       "short-form-004": {
         "title": "Testing the vivo X300 Pro",
-        "description": "For Yoigo's TikTok, produced by Annie Bonnie: presenting a phone to camera, its photo and video features, in the platform's format and with the lines learned in a minute.",
+        "description": "A TikTok piece made during my internship at Annie Bonnie. I present a smartphone in a short format, adapting the product explanation to the language of social media.",
         "media": {
           "short-form-004-video": {
             "title": "Testing the vivo X300 Pro",
@@ -300,14 +300,14 @@
           }
         },
         "roles": [
-          "Content and presenting — Sofía Chernikova"
+          "Content preparation and on-camera presenting — Sofía Chernikova"
         ]
       },
       "silver-praxis-condicion-perfecta": {
         "title": "Silver Praxis — Condición Perfecta",
-        "description": "Music video for Silver Praxis, from the underground rap scene: several locations and situations that follow the track with movement and a look tied to the artist's world.",
+        "description": "A music video for Silver Praxis shot across several locations, with moving scenes, shots from a car and aerial footage.",
         "process": [
-          "Five days of shooting, shots inside a car and aerial footage from a drone I piloted myself. With no shot list, the edit came out of several hours of trying combinations until the rhythm of the track was there."
+          "It was a five-day shoot. I handled the camera, flew the drone and edited the piece without a shot list, building the rhythm of the images from the available footage."
         ],
         "format": "Music video",
         "roles": [
@@ -334,7 +334,7 @@
       },
       "reporter-reel": {
         "title": "Coverage for ‘Tacones y Asfalto’",
-        "description": "A round-up of my coverage as a reporter for the programme Tacones y Asfalto: the premiere of La guitarra flamenca de Yerai Cortés at Kinépolis, the 43rd Carabanchel Spanish Film Week at the Palacio de Cibeles, the Casa de la Arquitectura and several red carpets, with interviews with artists such as Lola Índigo.",
+        "description": "A selection of interviews and coverage from premieres, cultural events and red carpets. It includes pieces on La guitarra flamenca de Yerai Cortés and the Carabanchel Spanish Film Week.",
         "media": {
           "reporter-reel-video": {
             "title": "Coverage for ‘Tacones y Asfalto’",
@@ -348,7 +348,7 @@
       },
       "reporter-reel-season": {
         "title": "A season of coverage",
-        "description": "A round-up of a season of coverage as a reporter, in Madrid and Tenerife: the Anillos de Oro awards, the ALMA screenwriters' guild awards, the House of the Dragon premiere, Scalpers at Fashion Week 2025, the musical Cabaret, Zootopia 2 and Mágicas Navidades in Torrejón de Ardoz, with interviews with the people involved.",
+        "description": "A compilation of reports made in Madrid and Tenerife. The events include the ALMA awards, the musical Cabaret and several film presentations.",
         "media": {
           "reporter-reel-season-video": {
             "title": "A season of coverage",
@@ -362,7 +362,7 @@
       },
       "retrato-editorial": {
         "title": "Portrait & editorial",
-        "description": "Portraits made mainly for a fashion and current-affairs magazine: an abandoned warehouse, a terrace, a red-neon interior and graffitied streets.",
+        "description": "Portraits made mainly for a fashion and current affairs publication, indoors and in urban spaces.",
         "format": "Portrait · Editorial",
         "roles": [
           "Photography"
@@ -459,7 +459,7 @@
       },
       "musica-en-directo": {
         "title": "Live music",
-        "description": "Concerts and festivals in Madrid, indoors and outdoors, shot from the stage and from within the crowd.",
+        "description": "Photos of concerts and festivals in Madrid, both from the stage and from the crowd.",
         "format": "Concerts",
         "roles": [
           "Photography"
@@ -535,7 +535,7 @@
       },
       "entre-tiendas-y-tambores": {
         "title": "Camp at Puerta del Sol",
-        "description": "Second day of the protest camp at Puerta del Sol, Madrid, in late September 2026, during the housing-rights mobilisations: the tents, the banners, the conversations and people organising and sharing the space.",
+        "description": "Second day of the protest camp at Puerta del Sol, during the housing-rights mobilisations of September 2026. The photos show the tents, the banners and the everyday life that took shape around the protest.",
         "format": "Photo essay",
         "media": {
           "entre-tiendas-y-tambores-001": {
@@ -656,7 +656,7 @@
       },
       "calle-documental": {
         "title": "Street",
-        "description": "Street scenes in Madrid in broad daylight and a night-time march in March 2023.",
+        "description": "Street scenes in Madrid and photos of a night-time demonstration in March 2023.",
         "format": "Street · Documentary",
         "roles": [
           "Photography"
@@ -696,7 +696,7 @@
       },
       "estudio-editorial": {
         "title": "Studio & editorial",
-        "description": "Studio sessions with DJs and singers for their own projects: a white backdrop and props, from old TV sets to a guitar.",
+        "description": "Photo sessions with DJs and singers for their own music projects.",
         "format": "Studio · Editorial",
         "roles": [
           "Photography"
@@ -747,7 +747,7 @@
     "processLabel": "How it was made"
   },
   "Profile": {
-    "bio": "I say I tell stories. Sometimes with a camera, sometimes in writing, sometimes by talking to someone and asking questions. I studied Journalism and Audiovisual Communication because I've always found it hard to choose between looking and telling what I see. I suppose I'm still somewhere in between.\n\nIn front of a camera I don't much like performing, but I do like being there: improvising, reacting, getting it a bit wrong and carrying on. In an interview I try to listen more than wait for my turn to ask the next question. And then there's editing, which is another way of looking.",
+    "bio": "I say I tell stories. Sometimes with a camera, sometimes in writing, sometimes by talking to someone and asking questions. I studied Journalism and Audiovisual Communication because I've always found it hard to choose between looking and telling what I see. I suppose I'm still somewhere in between.\n\nIn front of a camera I like to react to what's happening, without everything feeling rehearsed. When I interview, I try to listen rather than wait for my turn to ask the next question. Then there's editing: deciding what stays, what goes and where the story really begins.",
     "aboutPageEyebrow": "Profile · Madrid",
     "role": "Journalist and TV reporter",
     "portraitAlt": "Portrait of Sofía Chernikova",
@@ -772,11 +772,11 @@
       "grupo-cadena-media": {
         "role": "TV reporter",
         "period": "2024 — Present",
-        "description": "TV reporter for Grupo Cadena Media: premieres, events and press conferences, with interviews with artists, actors and public figures.",
+        "description": "I cover premieres and events for Grupo Cadena Media. My work spans journalistic preparation, on-the-ground interviews and presenting on camera.",
         "bullets": [
-          "Preparing each assignment: prior research and choosing the questions and the material that needs to be captured.",
-          "Interviews and presenting to camera on site, on anything from two minutes at a photocall to a ten-minute conversation.",
-          "Shooting B-roll and writing the scripts for the pieces."
+          "I research the context of each event and prepare questions to get statements that add information to the coverage.",
+          "I find the people at the centre of the event, conduct interviews and adapt the conversation to the circumstances.",
+          "I present on camera and shoot cutaways to give the pieces context."
         ]
       },
       "urjcmun": {
@@ -788,31 +788,32 @@
           "delegate": "Delegate",
           "deputyDirector": "Deputy Director for Social Media"
         },
-        "description": "Since 2022 on the communications team of the Model United Nations at Universidad Rey Juan Carlos; in 2026, Deputy Director for Social Media for the conference.",
+        "description": "I joined the URJCmun Communications team in 2022. In 2026 I became Deputy Director for Social Media, coordinating the conference's social media coverage.",
         "bullets": [
-          "Content planning: monthly plan and Instagram feed design during the year leading up to the conference.",
-          "Selecting and training the team of reporters.",
-          "Coordinating the team during conference week: assigning and reviewing coverage, interviews, photos and videos."
+          "I designed the look of the Instagram profile and organised a monthly content calendar during the year before the conference.",
+          "I took part in selecting the team and ran two training sessions to prepare the coverage.",
+          "I assigned the reporters, reviewed the posts and coordinated the production of interviews, photos and videos during the event."
         ]
       },
       "annie-bonnie": {
         "role": "Corporate communications",
         "period": "2025 — 2026",
-        "description": "Communications internship at a consultancy, with Yoigo among the clients: a cross-cutting role between writing, video and analysis.",
+        "description": "During my internship at Annie Bonnie I worked on digital communication projects, including content for Yoigo. The work combined writing, video production and performance tracking.",
         "bullets": [
-          "Writing articles for blogs and digital channels and taking part in editorial planning.",
-          "Producing TikTok videos, from preparation to editing, plus interviews and event coverage.",
-          "Weekly analysis of account performance, content and the competition."
+          "I wrote blog content and helped plan the editorial calendar across different channels.",
+          "I prepared, shot and edited videos for social media, mostly in vertical format.",
+          "I conducted interviews and took part in event coverage.",
+          "I produced weekly reports on the performance of the accounts, the posts and competitor activity."
         ]
       },
       "isocero": {
-        "role": "Hotel photographer",
+        "role": "Photographer",
         "period": "2023",
-        "description": "Photographer of family photo sessions at hotels, responsible for the whole process, from the shoot to delivery.",
+        "description": "At Isocero I handled photo shoots for hotel guests. I managed the whole process, from first contact to delivering the images.",
         "bullets": [
-          "Offering the session to clients and directing the shoot by the pool and outdoors.",
-          "Selecting and editing the images in Lightroom.",
-          "Presenting, selling and delivering the sessions at the hotel stand."
+          "I offered shoots to guests and directed outdoor portraits of families and couples.",
+          "I selected and edited the material in Lightroom, adjusting light, colour and framing.",
+          "I presented the photos, handled their sale and prepared the shoots for delivery."
         ]
       }
     }
@@ -865,7 +866,7 @@
     "baseValue": "Madrid",
     "contactPageEyebrow": "Contact",
     "contactPageTitle": "Shall we talk?",
-    "contactPageText": "If you have a job offer, a collaboration or a question about any of my pieces, email me. I'm most interested in reporting, interviews and audiovisual projects, in Madrid or elsewhere.",
+    "contactPageText": "If you have a reporting idea, an interview or an audiovisual project, email me. I'm based in Madrid and also open to collaborations outside the city.",
     "copy": "Copy email",
     "copied": "Copied",
     "languages": "Languages",

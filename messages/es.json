@@ -64,7 +64,7 @@
   "Hero": {
     "dateline": "Periodista · Madrid",
     "role": "Reportera de televisión",
-    "summary": "Desde 2024 cubro estrenos, eventos y ruedas de prensa para Grupo Cadena Media y entrevisto a artistas y figuras públicas. También dirijo cortometrajes y hago fotografía de conciertos, calle y retrato.",
+    "summary": "Desde 2024 cubro estrenos y eventos para Grupo Cadena Media. Mi trabajo combina la preparación de entrevistas, el reporterismo sobre el terreno y la presentación ante cámara. También dirijo cortometrajes. En fotografía, me interesan especialmente los conciertos, el retrato y la calle.",
     "actionsAria": "Acciones principales",
     "viewWork": "Ver todo el trabajo",
     "contact": "Escríbeme",
@@ -82,7 +82,7 @@
   },
   "Work": {
     "pageTitle": "Trabajo",
-    "pageText": "Primero, los reportajes; después, el audiovisual y la fotografía.",
+    "pageText": "Una selección de reportajes, proyectos audiovisuales y fotografía.",
     "sectionsAria": "Secciones de Trabajo",
     "reportingNav": "Reportajes",
     "audiovisualNav": "Audiovisual",
@@ -90,15 +90,15 @@
     "archiveNav": "Archivo",
     "reportingKicker": "Reportajes",
     "reportingTitle": "Ante la cámara",
-    "reportingText": "Dos resúmenes de coberturas y, en vertical, una pieza personal a cámara, una guía y una prueba de producto. Mejor con sonido.",
+    "reportingText": "Coberturas de estrenos y eventos, junto con piezas breves creadas para redes sociales.",
     "reportingWide": "Coberturas",
     "reportingTall": "Verticales",
     "audiovisualKicker": "Audiovisual",
     "audiovisualTitle": "Detrás de la cámara",
-    "audiovisualText": "Dos cortometrajes que dirigí y monté, un pitch de serie que produje, grabé y monté, y un videoclip del que hice el rodaje y la posproducción.",
+    "audiovisualText": "Cortometrajes, una propuesta documental y un videoclip. Proyectos en los que he trabajado en dirección, producción, rodaje o montaje.",
     "photographyKicker": "Fotografía",
     "photographyTitle": "Conciertos, acampada, calle y retrato",
-    "photographyText": "Cinco series y un archivo para mirar sin prisa.",
+    "photographyText": "Conciertos, retrato, fotografía de calle y un ensayo documental sobre la acampada por el derecho a la vivienda en Sol.",
     "seriesCount": "{count, plural, one {# fotografía} other {# fotografías}}",
     "archiveTeaser": "{count} fotografías, por temas",
     "shortFormShowMore": "Ver {count} piezas más",
@@ -156,13 +156,13 @@
     "items": {
       "4-minutos": {
         "title": "4 MINUTOS",
-        "description": "Trabajo de último año: dos chicos de barrio pasan el rato, fuman y dicen tonterías hasta que la conversación se va a sitios más grandes. En blanco y negro, rodado en planos largos. Inspirado en Sueños y pan.",
+        "description": "Dos chicos de barrio pasan el rato hasta que una conversación aparentemente trivial empieza a plantear preguntas bastante más importantes. Un cortometraje en blanco y negro inspirado en Sueños y pan.",
         "process": [
-          "La idea era rodar la conversación de un tirón, dejando espacio a los silencios y a los cambios de tono entre la broma y algo más serio. A mitad de rodaje el estabilizador se quedó sin batería y tocó improvisar."
+          "El rodaje estaba concebido como un único plano secuencia. Un problema con el estabilizador obligó a improvisar durante la grabación. En montaje trabajé los silencios y los cambios de tono de la conversación."
         ],
         "format": "Cortometraje",
         "roles": [
-          "Dirección, guion, grabación y montaje — Sofía Chernikova"
+          "Guion, dirección, cámara y montaje — Sofía Chernikova"
         ],
         "credits": {
           "direction": "Sofía Chernikova",
@@ -187,9 +187,9 @@
       },
       "tras-el-sofa": {
         "title": "Tras el sofá",
-        "description": "Proyecto de último año: seis minutos de ficción rodados en un plató, en cuatro horas y sin salir de él. Una chica mata a su hermano sin querer y la novia de él descubre lo ocurrido.",
+        "description": "Un accidente desencadena una historia de culpa y secretos. Cortometraje de seis minutos rodado en un único plató, con apenas cuatro horas de trabajo.",
         "process": [
-          "Con un equipo de diez personas y un solo espacio, todo dependía de dónde estaban los actores y de cómo se revelaba lo ocurrido. Faltó tiempo para algunos planos y la continuidad se resolvió en montaje."
+          "Dirigí la puesta en escena con un equipo de diez personas. En montaje tuve que resolver problemas de continuidad y ordenar las revelaciones para mantener la tensión."
         ],
         "format": "Cortometraje",
         "roles": [
@@ -227,9 +227,9 @@
       },
       "version-beta": {
         "title": "VERSIÓN BETA",
-        "description": "Pitch de un minuto para una asignatura de Producción: una serie documental sobre jóvenes considerados problemáticos, conducida por Pedro Aguado, presentador de Hermano Mayor.",
+        "description": "Propuesta de un minuto para una serie documental sobre jóvenes considerados problemáticos, presentada por Pedro Aguado, conocido por Hermano Mayor.",
         "process": [
-          "Contacté con Pedro Aguado, gestioné la localización y grabé a los jóvenes. El montaje es rápido a propósito: la energía de la serie en un minuto."
+          "Me encargué de contactar con Pedro Aguado, gestionar la localización, grabar a los participantes y montar el vídeo. El objetivo era presentar el concepto de la serie en un minuto."
         ],
         "format": "Pieza promocional",
         "media": {
@@ -252,7 +252,7 @@
       },
       "short-form-001": {
         "title": "Madrid a pie, cámara al cuello",
-        "description": "Pieza personal: un paseo hablado a cámara por el centro de Madrid buscando lo que normalmente no enseñamos de los lugares más turísticos: basura, desperfectos, rincones abandonados.",
+        "description": "Un recorrido personal por el centro de Madrid en busca de aquello que suele quedar fuera de las fotografías turísticas: desperfectos, basura y rincones que normalmente pasan desapercibidos.",
         "media": {
           "short-form-001-video": {
             "title": "Madrid a pie, cámara al cuello",
@@ -260,12 +260,12 @@
           }
         },
         "roles": [
-          "Idea, grabación, presentación y montaje — Sofía Chernikova"
+          "Idea, fotografía, grabación, presentación y montaje — Sofía Chernikova"
         ]
       },
       "short-form-002": {
         "title": "En el decorado de «9‑1‑1»",
-        "description": "Pieza para las redes de Yoigo, producida en Annie Bonnie y grabada en el decorado de 9‑1‑1 en la estación de Chamartín. Presento el lugar y doy paso al creador de contenido @telocuentosinspoilers, que explica la serie.",
+        "description": "Pieza para las redes sociales de Yoigo, grabada en el decorado de 9‑1‑1 en Chamartín. Presento el espacio y doy paso a @telocuentosinspoilers, que introduce la serie.",
         "media": {
           "short-form-002-video": {
             "title": "En el decorado de «9‑1‑1»",
@@ -273,12 +273,12 @@
           }
         },
         "roles": [
-          "Reportera y apoyo en edición — Sofía Chernikova"
+          "Reportera y colaboración en el montaje — Sofía Chernikova"
         ]
       },
       "short-form-003": {
         "title": "MyMUN, paso a paso",
-        "description": "Vertical para las redes de URJCmun que explica MyMUN, la aplicación del congreso, a quien la abre por primera vez: grabación de pantalla, grafismos y explicación a cámara.",
+        "description": "Vídeo explicativo de 2025 para URJCmun, pensado para participantes que utilizaban MyMUN por primera vez. Combina una explicación ante cámara con capturas de pantalla y grafismos.",
         "media": {
           "short-form-003-video": {
             "title": "MyMUN, paso a paso",
@@ -286,13 +286,13 @@
           }
         },
         "roles": [
-          "Contenido y presentación — Sofía Chernikova",
-          "Grabación y edición — en equipo"
+          "Estructuración del contenido y presentación — Sofía Chernikova",
+          "Grabación y montaje — en equipo, con participación de Sofía Chernikova"
         ]
       },
       "short-form-004": {
         "title": "Probando el vivo X300 Pro",
-        "description": "Para el TikTok de Yoigo, producida en Annie Bonnie: presentar un teléfono a cámara, sus funciones de foto y vídeo, en el formato de la plataforma y con el texto aprendido en un minuto.",
+        "description": "Pieza para TikTok realizada durante mis prácticas en Annie Bonnie. Presento un teléfono móvil en un formato breve, adaptando la explicación del producto al lenguaje de las redes sociales.",
         "media": {
           "short-form-004-video": {
             "title": "Probando el vivo X300 Pro",
@@ -300,14 +300,14 @@
           }
         },
         "roles": [
-          "Contenido y presentación — Sofía Chernikova"
+          "Preparación de contenido y presentación ante cámara — Sofía Chernikova"
         ]
       },
       "silver-praxis-condicion-perfecta": {
         "title": "Silver Praxis — Condición Perfecta",
-        "description": "Videoclip para Silver Praxis, de la escena del rap underground: varias localizaciones y situaciones que siguen el tema con movimiento y una estética ligada al universo del artista.",
+        "description": "Videoclip de Silver Praxis realizado en varias localizaciones, con escenas en movimiento, planos desde un coche y tomas aéreas.",
         "process": [
-          "Cinco días de rodaje, planos dentro de un coche y tomas aéreas con un dron que piloté yo misma. Sin guion técnico, el montaje salió de varias horas de probar combinaciones hasta encontrar el ritmo del tema."
+          "Fueron cinco días de rodaje. Me encargué de la grabación, piloté el dron y monté la pieza sin un guion técnico previo, trabajando el ritmo de las imágenes a partir del material disponible."
         ],
         "format": "Videoclip",
         "roles": [
@@ -334,7 +334,7 @@
       },
       "reporter-reel": {
         "title": "Coberturas para «Tacones y Asfalto»",
-        "description": "Resumen de coberturas como reportera del programa Tacones y Asfalto: el estreno de La guitarra flamenca de Yerai Cortés en Kinépolis, la 43.ª Semana del Cine Español de Carabanchel en el Palacio de Cibeles, la Casa de la Arquitectura y varias alfombras rojas, con entrevistas a artistas como Lola Índigo.",
+        "description": "Selección de entrevistas y coberturas de estrenos, encuentros culturales y alfombras rojas. Incluye piezas sobre La guitarra flamenca de Yerai Cortés y la Semana del Cine Español de Carabanchel.",
         "media": {
           "reporter-reel-video": {
             "title": "Coberturas para «Tacones y Asfalto»",
@@ -348,7 +348,7 @@
       },
       "reporter-reel-season": {
         "title": "Una temporada de coberturas",
-        "description": "Resumen de una temporada de coberturas como reportera, en Madrid y Tenerife: los Premios Anillos de Oro, los Premios ALMA del sindicato de guionistas, el estreno de La Casa del Dragón, Scalpers en la Fashion Week 2025, el musical Cabaret, Zootrópolis 2 y Mágicas Navidades en Torrejón de Ardoz, con entrevistas a sus protagonistas.",
+        "description": "Recopilación de reportajes realizados en Madrid y Tenerife. Entre los acontecimientos aparecen los Premios ALMA, el musical Cabaret y distintas presentaciones cinematográficas.",
         "media": {
           "reporter-reel-season-video": {
             "title": "Una temporada de coberturas",
@@ -362,7 +362,7 @@
       },
       "retrato-editorial": {
         "title": "Retrato y editorial",
-        "description": "Retratos hechos principalmente para una revista de moda y actualidad: una nave abandonada, una terraza, un local con neón rojo y calles con grafiti.",
+        "description": "Retratos realizados principalmente para una publicación de moda y actualidad, en interiores y espacios urbanos.",
         "format": "Retrato · Editorial",
         "roles": [
           "Fotografía"
@@ -459,7 +459,7 @@
       },
       "musica-en-directo": {
         "title": "Música en directo",
-        "description": "Conciertos y festivales en Madrid, en sala y al aire libre, desde el escenario y entre el público.",
+        "description": "Fotografías de conciertos y festivales en Madrid, tanto desde el escenario como entre el público.",
         "format": "Conciertos",
         "roles": [
           "Fotografía"
@@ -535,7 +535,7 @@
       },
       "entre-tiendas-y-tambores": {
         "title": "Acampada en Sol",
-        "description": "Segundo día de la acampada en Sol, en Madrid, a finales de septiembre de 2026, durante las movilizaciones por el derecho a la vivienda: las tiendas, las pancartas, las conversaciones y la gente organizándose y compartiendo espacio.",
+        "description": "Segundo día de la acampada en la Puerta del Sol, durante las movilizaciones por el derecho a la vivienda de septiembre de 2026. Las fotografías muestran las tiendas, las pancartas y la vida cotidiana que se organizó alrededor de la protesta.",
         "format": "Ensayo fotográfico",
         "media": {
           "entre-tiendas-y-tambores-001": {
@@ -656,7 +656,7 @@
       },
       "calle-documental": {
         "title": "Calle",
-        "description": "Escenas de calle en Madrid a plena luz y una marcha nocturna en marzo de 2023.",
+        "description": "Escenas de calle en Madrid y fotografías de una manifestación nocturna de marzo de 2023.",
         "format": "Calle · Documental",
         "roles": [
           "Fotografía"
@@ -696,7 +696,7 @@
       },
       "estudio-editorial": {
         "title": "Estudio y editorial",
-        "description": "Sesiones de estudio con DJ y cantantes para sus propios proyectos: fondo blanco y atrezo, de televisores antiguos a una guitarra.",
+        "description": "Sesiones fotográficas con DJ y cantantes para sus propios proyectos musicales.",
         "format": "Estudio · Editorial",
         "roles": [
           "Fotografía"
@@ -747,7 +747,7 @@
     "processLabel": "Cómo se hizo"
   },
   "Profile": {
-    "bio": "Digo que cuento cosas. A veces con una cámara, a veces escribiendo, a veces hablando con alguien y haciendo preguntas. Estudié Periodismo y Comunicación Audiovisual porque siempre me ha costado elegir entre mirar y contar lo que miro. Supongo que sigo un poco ahí.\n\nDelante de una cámara no me gusta demasiado actuar, pero sí estar: improvisar, reaccionar, equivocarme un poco y seguir. En una entrevista intento escuchar más que esperar mi turno para hacer la siguiente pregunta. Y después está editar, que es otra manera de mirar.",
+    "bio": "Digo que cuento cosas. A veces con una cámara, a veces escribiendo, a veces hablando con alguien y haciendo preguntas. Estudié Periodismo y Comunicación Audiovisual porque siempre me ha costado elegir entre mirar y contar lo que miro. Supongo que sigo un poco ahí.\n\nDelante de cámara me gusta reaccionar a lo que ocurre, sin que todo parezca preparado. Cuando entrevisto, intento escuchar antes que esperar mi turno para hacer la siguiente pregunta. Después está el montaje: decidir qué queda, qué sobra y dónde empieza realmente la historia.",
     "aboutPageEyebrow": "Perfil · Madrid",
     "role": "Periodista y reportera de televisión",
     "portraitAlt": "Retrato de Sofía Chernikova",
@@ -772,11 +772,11 @@
       "grupo-cadena-media": {
         "role": "Reportera de televisión",
         "period": "2024 — Actualidad",
-        "description": "Reportera de televisión para Grupo Cadena Media: estrenos, eventos y ruedas de prensa, con entrevistas a artistas, actores y figuras públicas.",
+        "description": "Realizo coberturas de estrenos y eventos para Grupo Cadena Media. Mi trabajo abarca la preparación periodística, las entrevistas sobre el terreno y la presentación ante cámara.",
         "bullets": [
-          "Preparación de cada cobertura: investigación previa y selección de las preguntas y del material que hay que conseguir.",
-          "Entrevistas y presentación a cámara en el lugar, con tiempos que van de dos minutos en un photocall a una conversación de diez.",
-          "Grabación de recursos y guion de las piezas."
+          "Investigo el contexto de cada acontecimiento. Preparo preguntas para obtener declaraciones que aporten información a la cobertura.",
+          "Localizo a los protagonistas, conduzco entrevistas y adapto la conversación a las circunstancias del evento.",
+          "Presento ante cámara y grabo planos de recurso para contextualizar las piezas."
         ]
       },
       "urjcmun": {
@@ -788,31 +788,32 @@
           "delegate": "Delegada",
           "deputyDirector": "Directora adjunta de redes sociales"
         },
-        "description": "Desde 2022 en el equipo de comunicación del Modelo de Naciones Unidas de la Universidad Rey Juan Carlos; en 2026, directora adjunta de redes sociales del congreso.",
+        "description": "Empecé en el equipo de Comunicación de URJCmun en 2022. En 2026 asumí la dirección adjunta de Social Media, coordinando la cobertura del congreso en redes sociales.",
         "bullets": [
-          "Planificación de contenidos: plan mensual y diseño del feed de Instagram durante el año previo al congreso.",
-          "Selección y formación del equipo de reporteros.",
-          "Coordinación del equipo durante la semana del congreso: reparto y revisión de coberturas, entrevistas, fotografías y vídeos."
+          "Diseñé la imagen del perfil de Instagram y organicé un calendario mensual de contenidos durante el año previo al congreso.",
+          "Participé en la selección del equipo e impartí dos formaciones para preparar las coberturas.",
+          "Distribuí las asignaciones entre reporteros, supervisé las publicaciones y coordiné la producción de entrevistas, fotografías y vídeos durante el evento."
         ]
       },
       "annie-bonnie": {
         "role": "Comunicación corporativa",
         "period": "2025 — 2026",
-        "description": "Prácticas de comunicación en una consultora, con Yoigo entre los clientes: un puesto transversal entre redacción, vídeo y análisis.",
+        "description": "Durante mis prácticas en Annie Bonnie participé en proyectos de comunicación digital, entre ellos contenidos para Yoigo. El trabajo combinaba redacción, producción audiovisual y seguimiento de resultados.",
         "bullets": [
-          "Redacción de artículos para blogs y canales digitales y participación en la planificación editorial.",
-          "Producción de vídeos para TikTok, de la preparación a la edición, además de entrevistas y cobertura de eventos.",
-          "Análisis semanal del rendimiento de las cuentas, de los contenidos y de la competencia."
+          "Redacté contenidos para blogs y colaboré en la planificación editorial de diferentes canales.",
+          "Preparé, grabé y edité vídeos destinados a redes sociales, especialmente en formato vertical.",
+          "Realicé entrevistas y participé en coberturas de eventos.",
+          "Elaboré informes semanales sobre el rendimiento de las cuentas, las publicaciones y la actividad de la competencia."
         ]
       },
       "isocero": {
-        "role": "Fotógrafa en hoteles",
+        "role": "Fotógrafa",
         "period": "2023",
-        "description": "Fotógrafa de reportajes a familias en hoteles, responsable del proceso completo, de la sesión a la entrega.",
+        "description": "En Isocero me ocupaba de reportajes fotográficos para clientes de hoteles. Gestionaba el proceso completo, desde el primer contacto hasta la entrega de las imágenes.",
         "bullets": [
-          "Propuesta de la sesión a los clientes y dirección del reportaje en la piscina y los exteriores.",
-          "Selección y edición de las imágenes en Lightroom.",
-          "Presentación, venta y entrega de los reportajes en el stand del hotel."
+          "Proponía sesiones a los huéspedes y dirigía retratos de familias o parejas en exteriores.",
+          "Seleccionaba y editaba el material en Lightroom, ajustando luz, color y encuadre.",
+          "Presentaba las fotografías, gestionaba su comercialización y preparaba la entrega de los reportajes."
         ]
       }
     }
@@ -865,7 +866,7 @@
     "baseValue": "Madrid",
     "contactPageEyebrow": "Contacto",
     "contactPageTitle": "¿Hablamos?",
-    "contactPageText": "Si tienes una propuesta de trabajo, una colaboración o una pregunta sobre alguna de mis piezas, escríbeme. Me interesan sobre todo los reportajes, las entrevistas y los proyectos audiovisuales, en Madrid o fuera.",
+    "contactPageText": "Si tienes una propuesta de reportaje, una entrevista o un proyecto audiovisual, escríbeme. Trabajo desde Madrid y también me interesan las colaboraciones fuera de la ciudad.",
     "copy": "Copiar email",
     "copied": "Copiado",
     "languages": "Idiomas",
