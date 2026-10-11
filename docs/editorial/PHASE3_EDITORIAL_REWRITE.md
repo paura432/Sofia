@@ -60,7 +60,7 @@ Cada frase pública nueva en español, con su origen en la ficha. «Literal» = 
 | Perfil · Cómo trabajo | No me gusta demasiado decir que soy “multidisciplinar”. | Literal | P0039 |
 | Perfil · Cómo trabajo | Creo que soy más sencilla que eso: me gusta mirar dos veces, hacer preguntas, meterme donde están pasando cosas y encontrar historias donde, en principio, no parecía haber ninguna. | Reformulada | P0041 |
 | grupo-cadena-media · note | Hay coberturas con dos minutos para conseguirlo todo y otras en las que acabo hablando diez con alguien. | Reformulada | P0054 |
-| grupo-cadena-media · note | Dos que recuerdo: C. Tangana, al que llevo escuchando desde la adolescencia, y Jon Favreau en el estreno de Grogu. | Nueva (hechos de la ficha) | P0058, P0060 |
+| grupo-cadena-media · note | Dos entrevistas que recuerdo: C. Tangana, al que llevo escuchando desde la adolescencia, y Jon Favreau en el estreno de Grogu. | Nueva (hechos de la ficha) | P0058, P0060 |
 | urjcmun · note | Un año de preparación antes de cada congreso: 150 entrevistas para seleccionar el equipo, dos formaciones, el diseño del feed de Instagram y un plan de contenidos mensual. | Reformulada | P0076 |
 | urjcmun · note | Durante la semana del congreso, repartir coberturas y revisar el trabajo del equipo mientras más de mil personas pasan por los comités. | Nueva (hechos de la ficha) | P0075, P0078 |
 | annie-bonnie · note | Un puesto transversal: artículos para el blog, TikToks, edición de vídeo, entrevistas y coberturas, también en MWC Madrid. | Nueva (hechos de la ficha) | P0088 |
@@ -76,7 +76,7 @@ Cada frase pública nueva en español, con su origen en la ficha. «Literal» = 
 | 4-minutos · process | Escribí el diálogo, planteé la puesta en escena y dirigí a los dos actores; también grabé y monté. | Reformulada | P0236 |
 | 4-minutos · process | Toda la historia va en un solo plano, sin cortes, para dejar espacio a los silencios y a los cambios de tono entre la broma y algo más serio. | Reformulada | P0241 |
 | 4-minutos · process | Cuando los personajes se marchan, la cámara se queda mirando el espacio vacío. | Literal | P0241 |
-| 4-minutos · process | El estabilizador se quedó sin batería a mitad de rodaje y tocó improvisar. | Reformulada | P0241 |
+| 4-minutos · process | A mitad de rodaje el estabilizador se quedó sin batería y tocó improvisar. | Reformulada | P0241 |
 | tras-el-sofa · description | Un accidente en casa, un secreto y una novia que lo descubre. | Nueva (hechos de la ficha) | P0253 |
 | tras-el-sofa · description | Rodado en plató en cuatro horas. | Nueva (hechos de la ficha) | P0253 |
 | tras-el-sofa · context | Proyecto de último año: seis minutos de ficción rodados en un plató, en cuatro horas y sin salir de él. | Nueva (hechos de la ficha) | P0253 |
@@ -135,3 +135,32 @@ Portada: nombre, oficio, un vídeo que se reproduce, los tipos de trabajo, emple
 ## 8. Recomendación
 
 Lista para revisión humana. Lo que debe aprobar Sofía es la tabla de §5; lo que debe decidir el propietario es si «Cómo trabajo» se queda en Perfil o se acorta a dos párrafos. Sin merge ni despliegue.
+
+## 9. Revisión final (2026-10-11, segunda pasada)
+
+Lectura completa de las 51 páginas renderizadas (ES, EN y RU) como visitante que no conoce a Sofía, y comprobación de los textos fuente: `SOFIA_SOURCE_RESPONSES.md` y el Word siguen idénticos a `main`.
+
+Lo que se ha corregido en esta pasada:
+
+| Dónde | Antes | Ahora | Motivo |
+|---|---|---|---|
+| 4 MINUTOS · Cómo se hizo (ES/EN/RU) | Segundo párrafo de una sola línea: «El estabilizador se quedó sin batería a mitad de rodaje y tocó improvisar.» | Cierra el único párrafo: «A mitad de rodaje el estabilizador se quedó sin batería y tocó improvisar.» | Un párrafo huérfano de una línea leía como resto de respuesta suelta. |
+| Experiencia · Grupo Cadena Media (ES/EN/RU) | «Dos que recuerdo: C. Tangana…» | «Dos entrevistas que recuerdo: C. Tangana…» | La frase anterior habla de coberturas; sin el sustantivo había que adivinar a qué se refería «dos». |
+| Perfil · bio (EN) | «I say I tell stories about things.» / «I suppose I'm still a bit stuck there.» | «I say I tell stories.» / «I suppose I'm still somewhere in between.» | Traducción literal de «cuento cosas» y «sigo un poco ahí» que sonaba forzada y añadía un matiz negativo («stuck») que el original no tiene. |
+| Reporter reel · description (EN) | Cadena vacía (anterior a esta rama) | «A selection of event coverage, interviews and reporting pieces.» | Paridad con ES/RU. El proyecto sigue sin publicar. |
+
+Comprobaciones de esta pasada:
+
+| Comprobación | Resultado |
+|---|---|
+| Cadenas que empiezan por «¿», «Sí, aunque», «Porque», «Me encargué» (y equivalentes EN/RU), excluidos ALT | 0 salvo «¿Hablamos?» (título de Contacto) |
+| Signos de interrogación en el cuerpo de texto | Solo dos preguntas retóricas dentro de párrafos de Sofía (4 MINUTOS: «¿qué puede pasar en cuatro minutos?»; MyMUN: «vale, ¿y ahora qué hago?»). No son encabezados. |
+| Encabezados de sección | Perfil, Lo que hago, Cómo trabajo, Formación, Idiomas, Herramientas, Base, Experiencia, Contexto, Cómo se hizo, Créditos, Contacto, Qué busco. Ninguno procede del formulario. |
+| `pnpm lint` / `pnpm typecheck` / `pnpm build` | 0 errores · 64 páginas estáticas |
+| Capturas de página completa (1280 y 390, ES/EN/RU, 48 capturas) | Sin solapes, sin cortes, sin desbordamiento horizontal en ninguna página |
+| ALT de fotografías | Sin cambios |
+
+Limitaciones: Chromium headless de Playwright; el conmutador de tema del sitio no responde a `prefers-color-scheme`, por lo que las capturas «claro» y «oscuro» son iguales (tema oscuro por defecto). Sin Safari, dispositivos reales ni lector de pantalla.
+
+Pendiente de personas: la tabla de §5 sigue siendo lo que Sofía debe aprobar; los datos bloqueados de §3 no cambian. Sin merge ni despliegue.
+
