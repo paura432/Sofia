@@ -1461,6 +1461,22 @@ p {
   line-height: 1.6;
 }
 
+/* Funciones concretas del puesto: lista ligera, sin tarjeta, misma medida que la descripción. */
+.trajectory-bullets {
+  margin: 0;
+  padding-left: 1.1em;
+  max-width: 52ch;
+  display: grid;
+  gap: 4px;
+  color: var(--foreground-soft);
+  font-size: clamp(0.94rem, 1.05vw, 1rem);
+  line-height: 1.55;
+}
+
+.trajectory-bullets li::marker {
+  color: var(--accent, currentColor);
+}
+
 .short-form-copy .project-row-cta + .project-row-cta {
   margin-left: 16px;
 }

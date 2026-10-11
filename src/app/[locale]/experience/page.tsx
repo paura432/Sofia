@@ -18,8 +18,10 @@ type PageProps = {
 type ExperienceCopy = {
   role: string;
   period: string;
-  /** Una sola descripción pública por puesto: qué hacía, en 25–45 palabras. */
+  /** Contexto del puesto en una o dos frases; las funciones concretas van en `bullets`. */
   description: string;
+  /** 2–4 funciones concretas, trazables al Word (Fase 6.2). */
+  bullets?: string[];
   progression?: Record<string, string>;
 };
 type ProjectCopy = { title: string };
@@ -108,6 +110,13 @@ export default async function ExperiencePage() {
                     </p>
                   ) : null}
                   <p className="trajectory-description">{copy.description}</p>
+                  {copy.bullets?.length ? (
+                    <ul className="trajectory-bullets">
+                      {copy.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  ) : null}
                   {relatedProjects.length ? (
                     <ul className="trajectory-project-links">
                       {relatedProjects.map((project) => {
