@@ -1,6 +1,6 @@
 # Fase 6.1 · Propuesta editorial (versión viva)
 
-Última iteración: 1 (2026-10-11). Cada texto lleva su estado (APROBADO EDITORIALMENTE / PENDIENTE DE SOFÍA / NECESITA REVISIÓN), puntuaciones orientativas 1–5 en ocho dimensiones (precisión, información, claridad, naturalidad, voz, concisión, utilidad, consistencia) y la evidencia. Los textos de rondas no revisadas aún no aparecen; `PHASE6_PROPOSED_COPY_ES.md` conserva las alternativas descartadas.
+Última iteración: 2 (2026-10-11). Cada texto lleva su estado (APROBADO EDITORIALMENTE / PENDIENTE DE SOFÍA / NECESITA REVISIÓN), puntuaciones orientativas 1–5 en ocho dimensiones (precisión, información, claridad, naturalidad, voz, concisión, utilidad, consistencia) y la evidencia. Los textos de rondas no revisadas aún no aparecen; `PHASE6_PROPOSED_COPY_ES.md` conserva las alternativas descartadas.
 
 ## Ronda 1 · Perfil, Experiencia, Formación, Idiomas, Herramientas
 
@@ -106,3 +106,100 @@ Sin cambio de datos. Presentación compacta propuesta (una línea): «Español y
 > Conocimientos: SEO · gestión de contenidos web
 
 Nada se elimina del registro; «CMS» se nombra como conocimiento hasta saber el sistema.
+
+## Ronda 2 · Portada, Trabajo, Reporterismo, Audiovisual
+
+### T037, T038, T039 · Portada — APROBADO EDITORIALMENTE (sin cambio)
+
+> Periodista · Madrid / Reportera de televisión / Desde 2024 cubro estrenos, eventos y ruedas de prensa para Grupo Cadena Media y entrevisto a artistas y figuras públicas. También dirijo cortometrajes y hago fotografía de conciertos, calle y retrato.
+
+5·5·5·4·4·5·5·5. Segunda revisión: la alternativa de Fase 6 para el cierre («fotografío conciertos, la calle y a la gente») es menos precisa; un reclutador busca «retrato» y «calle» por nombre. «Ruedas de prensa» y «Grupo Cadena Media» son datos del CV (registro interno, verificado); se recomprueban con Q-02 pero no bloquean. I-020 descartado.
+
+### T051, T059, T062, T064 · Trabajo — APROBADO EDITORIALMENTE
+
+| Clave | Antes | Después |
+|---|---|---|
+| T051 pageText | Primero, los reportajes; después, el audiovisual y la fotografía. | Sin cambio |
+| T059 reportingText | Entrevista, paseo a cámara, guía y prueba de producto, en vertical. Mejor con sonido. | Coberturas de estrenos y eventos, una pieza personal a cámara, una guía y una prueba de producto. Mejor con sonido. |
+| T062 audiovisualText | Dirigí y monté los dos cortometrajes. Del videoclip de Silver Praxis hice el rodaje y la posproducción. | Dos cortometrajes que dirigí y monté, un pitch de serie que produje, grabé y monté, y un videoclip del que hice el rodaje y la posproducción. |
+| T064 photographyTitle | Conciertos, calle y retrato | Conciertos, acampada, calle y retrato |
+
+T059: 5·4·5·4·4·5·5·5; describe las cinco piezas que hay (reel, Madrid a pie, MyMUN, vivo) sin prometer entrevista ni emisión. T062: 5·5·5·4·4·4·5·5; «pitch de serie» es la palabra de Sofía (P0274 «formato de pitch», P0286) y el formato de la ficha; roles según P0257, P0278, P0301. T064: 5·4·5·4·4·5·4·5; nombra la acampada en el orden de la tira. Segunda revisión: la Fase 6 proponía «Coberturas para televisión» (I-024) y «un teaser»; corregidos.
+
+### T182–T186 · Coberturas para «Tacones y Asfalto» — título APROBADO; descripción y formato PENDIENTES DE SOFÍA (Q-09); roles APROBADO
+
+| Clave | Antes | Después |
+|---|---|---|
+| T182 title | Coberturas para «Tacones y Asfalto» | Sin cambio (rótulo y frase de apertura del vídeo) |
+| T183 description | Resumen de coberturas como reportera del programa Tacones y Asfalto: … | Sin cambio hasta Q-09; si Sofía no confirma el programa: «Resumen de coberturas: el estreno de La guitarra flamenca de Yerai Cortés en Kinépolis, la 43.ª Semana del Cine Español de Carabanchel en el Palacio de Cibeles, la Casa de la Arquitectura y varias alfombras rojas, con entrevistas a artistas como Lola Índigo.» |
+| T184 format | Televisión · Reel | Reel de coberturas (si no se confirma la emisión) |
+| T185 roles[0] | Reporterismo en estrenos, eventos y ruedas de prensa. | Reportera — Sofía Chernikova |
+| T186 roles[1] | Entrevistas a artistas, actores y figuras públicas. | (eliminar) |
+
+Evidencia: rótulos «Tacones y Asfalto», «You!», «Lola Índigo · Cantante»; audio («bienvenidos a Tacones y Asfalto», «hoy estamos en el Palacio de Cibeles celebrando la 43ª Semana del Cine Español de Carabanchel», «en la Casa de la Arquitectura»). 4·4·5·4·4·4·5·4.
+
+### T158–T160 · Madrid a pie, cámara al cuello — APROBADO EDITORIALMENTE (sin cambio)
+
+> Pieza personal: un paseo hablado a cámara por el centro de Madrid buscando lo que normalmente no enseñamos de los lugares más turísticos: basura, desperfectos, rincones abandonados. · Idea, grabación, presentación y montaje — Sofía Chernikova
+
+5·5·5·5·5·5·4·5. P0122, P0131 («lo hice yo de principio a fin»), P0136 (basura, desperfectos, rincones abandonados). Año 2026 (P0127).
+
+### T162–T163 · En el decorado de «9‑1‑1» — descripción PENDIENTE DE SOFÍA (Q-07); rol APROBADO
+
+Antes: «…Presento el lugar y entrevisto al creador de contenido @telocuentosinspoilers sobre la serie.»
+
+Después:
+
+> Pieza para las redes de Yoigo, producida en Annie Bonnie y grabada en el decorado de 9‑1‑1 en la estación de Chamartín. Presento el lugar y doy paso al creador de contenido @telocuentosinspoilers, que explica la serie.
+
+4·4·5·4·4·5·5·5. Evidencia: transcripción (sin preguntas de Sofía; presentación 0–25 s, invitado 25–50 s, cierre). Sofía describe una entrevista (P0163): si existe una versión larga, se publica esa y se mantiene la frase actual. Rol «Reportera y apoyo en edición» = P0163 («ayudar a editar el video»).
+
+### T165–T167 · MyMUN, paso a paso — APROBADO EDITORIALMENTE (sin cambio)
+
+> Vertical para las redes de URJCmun que explica MyMUN, la aplicación del congreso, a quien la abre por primera vez: grabación de pantalla, grafismos y explicación a cámara. · Contenido y presentación — Sofía Chernikova · Grabación y edición — en equipo
+
+5·4·5·4·4·5·4·5. P0207, P0213, P0216. Año 2025 (P0210); la pieza anuncia la edición 2026: nota, no cambio.
+
+### T169–T170 · Probando el vivo X300 Pro — descripción PENDIENTE DE SOFÍA (Q-08); rol APROBADO
+
+Antes: «…probar una función del teléfono y enseñar en cámara qué se puede hacer con ella, sin que la explicación parezca una explicación.»
+
+Después:
+
+> Para el TikTok de Yoigo, producida en Annie Bonnie: presentar un teléfono a cámara, sus funciones de foto y vídeo, en el formato de la plataforma y con el texto aprendido en un minuto.
+
+4·4·5·4·4·4·4·5. Evidencia: P0181 (TikTok de Yoigo, prácticas en Annie Bonnie), P0189 («preparación del contenido… delante de cámara»), P0193 («aprenderme las frases en cuestión de un minuto»); transcripción (funciones de foto y vídeo del teléfono). Se retira «sin que la explicación parezca una explicación» (P0193) porque describe una intención que la pieza publicada no muestra (Fase 5 P2-9). Marca: el Word dice OPPO; el vídeo y la web, vivo. Segunda revisión: evitada la repetición «funciones de cámara… a cámara» (I-025).
+
+### T131–T136 · 4 MINUTOS — descripción y proceso PENDIENTES DE SOFÍA (Q-06); roles APROBADO; créditos PENDIENTES (música)
+
+Antes: «…Un solo plano, sin cortes, en blanco y negro. Inspirado en Sueños y pan.» / «Un solo plano para dejar espacio a los silencios… la cámara se queda mirando el espacio vacío. A mitad de rodaje el estabilizador se quedó sin batería y tocó improvisar.»
+
+Después:
+
+> Trabajo de último año: dos chicos de barrio pasan el rato, fuman y dicen tonterías hasta que la conversación se va a sitios más grandes. En blanco y negro, rodado en planos largos. Inspirado en Sueños y pan.
+>
+> Cómo se hizo: La idea era rodar la conversación de un tirón, dejando espacio a los silencios y a los cambios de tono entre la broma y algo más serio. A mitad de rodaje el estabilizador se quedó sin batería y tocó improvisar.
+
+Descripción 4·5·5·5·5·5·5·5; proceso 5·4·5·5·5·5·4·5. Evidencia: P0231–P0232 (sinopsis, con sus palabras), P0236 (dirección, guion, grabación, montaje), P0241 (intención: «contar toda la historia en un solo plano… dejando espacio a los silencios»; «el estabilizador se quedó sin batería y tocó improvisar»); análisis del vídeo (prólogo con cortes y cuatro planos largos). Segunda revisión: la Fase 6 trasladaba la intención del plano único a «planos largos para…»; ahora el proceso cuenta la intención y lo que pasó, y la descripción dice lo que se ve (I-026). Se retira «la cámara se queda mirando el espacio vacío» hasta que Sofía confirme ese final en la versión publicada. Créditos: añadir música «losniñosdelcaminito» cuando se confirmen los derechos.
+
+### T144–T149 · Tras el sofá — descripción y proceso APROBADOS (sin cambio); créditos PENDIENTES DE SOFÍA (grafías)
+
+> Proyecto de último año: seis minutos de ficción rodados en un plató, en cuatro horas y sin salir de él. Una chica mata a su hermano sin querer y la novia de él descubre lo ocurrido. · Con un equipo de diez personas y un solo espacio, todo dependía de dónde estaban los actores y de cómo se revelaba lo ocurrido. Faltó tiempo para algunos planos y la continuidad se resolvió en montaje.
+
+5·5·5·4·4·5·4·5. P0253, P0257, P0260, P0263. Roles «Dirección» y «Montaje» correctos; el guion es de Ángela Barroso y Vera Herráez (pantalla): la ficha debe listarlas (I-029). Año pendiente.
+
+### T154–T157 · VERSIÓN BETA — APROBADO EDITORIALMENTE (un cambio de palabra); créditos PENDIENTES
+
+Antes: «…sobre jóvenes etiquetados como problemáticos…»
+
+Después:
+
+> Pitch de un minuto para una asignatura de Producción: una serie documental sobre jóvenes considerados problemáticos, conducida por Pedro Aguado, presentador de Hermano Mayor.
+
+5·5·5·4·5·5·4·5. P0274 («jóvenes considerados problemáticos», «con Pedro Aguado como presentador»), P0278 (roles). Proceso sin cambio (P0278, P0282). Créditos: acreditar a Pedro Aguado como presentador y la locución cuando se sepa (I-029).
+
+### T172–T178 · Silver Praxis — Condición Perfecta — descripción, proceso y rol APROBADOS (sin cambio); créditos PENDIENTES
+
+> Videoclip para Silver Praxis, de la escena del rap underground: varias localizaciones y situaciones que siguen el tema con movimiento y una estética ligada al universo del artista. · Cinco días de rodaje, planos dentro de un coche y tomas aéreas con un dron que piloté yo misma. Sin guion técnico, el montaje salió de varias horas de probar combinaciones hasta encontrar el ritmo del tema.
+
+5·5·4·4·4·5·4·5. P0297 (descripción literal en registro formal), P0301, P0309. Créditos: «Briza Sanchez» (pantalla) frente a «Briza Sánchez» (P0312): confirmar; seis extras de pantalla sin ficha; año pendiente.

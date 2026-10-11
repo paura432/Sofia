@@ -23,10 +23,17 @@ Prioridad: P1 (afecta a lo que un visitante entiende o a un hecho), P2 (precisi�
 | I-017 | T236 Formación | P2 | Denominación oficial (¿doble grado?) y finalización sin confirmar; Universidad Pontificia de Salamanca sin datos | CV (registro interno) | PENDIENTE DE SOFÍA (Q-05) | 1 |
 | I-018 | X002 Herramientas | P2 | Lista plana que mezcla aplicaciones, plataforma, «CMS» sin nombre y «SEO» | profile.ts | CORREGIDO en propuesta (cuatro grupos); estructura → decisión del propietario | 1 |
 | I-019 | X002 Herramientas | P3 | «CMS» sin sistema concreto | — | PENDIENTE DE SOFÍA (Q-05) | 1 |
-| I-020 | T039 Hero.summary | P2 | El cierre lista categorías de la web y omite la acampada | Fase 6 | ABIERTO (ronda 2) | 1 |
-| I-021 | T059, T062, T064 Trabajo | P1 | Textos de sección desactualizados (reel, VERSIÓN BETA) | Fase 5.1 | ABIERTO (ronda 2) | 1 |
-| I-022 | T131, T132, T162, T169 fichas | P1 | 4 MINUTOS «un solo plano»; 9‑1‑1 «entrevisto»; vivo «sin que parezca una explicación» | Fase 5 | ABIERTO (ronda 2) | 1 |
+| I-020 | T039 Hero.summary | P2 | El cierre lista categorías de la web y omite la acampada | Fase 6 | DESCARTADO en la iteración 2: la alternativa («fotografío conciertos, la calle y a la gente») es más vaga que «conciertos, calle y retrato», que un reclutador busca por género; no se cambia un texto correcto por cambiarlo | 2 |
+| I-021 | T059, T062, T064 Trabajo | P1 | Textos de sección desactualizados (reel, VERSIÓN BETA) | Fase 5.1 | CORREGIDO | 2 |
+| I-022 | T131, T132, T162, T169 fichas | P1 | 4 MINUTOS «un solo plano»; 9‑1‑1 «entrevisto»; vivo «sin que parezca una explicación» | Fase 5 (análisis de planos, transcripciones) | Propuestas formuladas; PENDIENTE DE SOFÍA (Q-06, Q-07, Q-08) | 2 |
 | I-023 | T192, T195–T199 series | P2 | Lugar, fecha y títulos de series | Fase 6 | ABIERTO (ronda 3) | 1 |
+
+| I-024 | T059 Work.reportingText | P2 | La propuesta de Fase 6 decía «Coberturas para televisión»: la emisión en televisión no está confirmada | Fase 5.1 (F51-4) | CORREGIDO («Coberturas de estrenos y eventos») | 2 |
+| I-025 | T169 vivo | P3 | La propuesta de Fase 6 repetía «funciones de cámara del teléfono… a cámara» | Segunda revisión | CORREGIDO | 2 |
+| I-026 | T132 4 MINUTOS · proceso | P2 | La propuesta de Fase 6 («Planos largos para dejar espacio…») atribuía a la decisión final una intención que Sofía formuló para un plano único; se reformula como intención + lo que pasó, sin afirmar la estructura final | P0241; Fase 5 P0-3 | CORREGIDO (pendiente de Sofía por el fondo, Q-06) | 2 |
+| I-027 | T154 VERSIÓN BETA | P3 | «jóvenes etiquetados como problemáticos»: Sofía escribe «considerados problemáticos» (P0274); se recupera su palabra | P0274 | CORREGIDO | 2 |
+| I-028 | T183, T184 reel | P2 | «como reportera del programa Tacones y Asfalto» y formato «Televisión» dependen de rótulos del vídeo; programa, cadena y emisión sin confirmar | Vídeo; registro interno (Canal YOU! pendiente) | PENDIENTE DE SOFÍA (Q-09) | 2 |
+| I-029 | T149, T136, T177, T178 créditos | P2 | Créditos incompletos (Tras el sofá, música de 4 MINUTOS, extras y grafía en Condición Perfecta) | Créditos en pantalla (Fase 5) | PENDIENTE DE SOFÍA (grafías, derechos) | 2 |
 
 ## Dudas para Sofía (separadas de los problemas editoriales)
 
@@ -37,3 +44,7 @@ Prioridad: P1 (afecta a lo que un visitante entiende o a un hecho), P2 (precisi�
 | Q-03 | Annie Bonnie: ¿prácticas o puesto? ¿Cargo exacto del CV? | T229, T231 |
 | Q-04 | URJCmun: ¿años de cámara y delegada? ¿Quiere «Delegada» en la tira? ¿Existe la edición TEEN en su CV? | T224–T228 |
 | Q-05 | Formación y herramientas: ¿doble grado o dos grados? ¿Finalizado? ¿Qué fue la Universidad Pontificia de Salamanca? ¿Qué CMS usaba? | T236, X002 |
+| Q-06 | 4 MINUTOS: ¿cómo describir el rodaje («planos largos», «casi un plano secuencia»)? ¿Hay máster con audio? ¿Derechos de la música (losniñosdelcaminito)? ¿Quiénes son las tres personas del prólogo? | T131, T132, T136 |
+| Q-07 | 9‑1‑1: ¿existe una versión con la entrevista? Si no, ¿acepta «doy paso a»? | T162 |
+| Q-08 | vivo X300 Pro: el Word dice OPPO (P0182); el vídeo, vivo. ¿Cuál es? | T169 |
+| Q-09 | Reel: ¿programa, cadena y fechas? ¿Se emitió en televisión? Grafías de los créditos de Tras el sofá y Condición Perfecta («Sánchez» o «Sanchez»); años de Tras el sofá, VERSIÓN BETA y Condición Perfecta; locución de VERSIÓN BETA | T183, T184, T149, T177, T178 |
