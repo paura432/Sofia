@@ -1,5 +1,8 @@
 # Fase 5 · Plan de implementación (propuesta; nada ejecutado)
 
+> **Fase 5.1 (2026-10-11):** este informe se conserva como evidencia. Cada hallazgo se ha vuelto a contrastar en `PHASE5_FINAL_VERDICT.md` (matriz F5-001…F5-025 y hallazgos F51-x); la selección definitiva está en `PHASE5_CURATED_PORTFOLIO_PROPOSAL.md` y lo implementado en `PHASE5_CHANGES_AND_QA.md`.
+
+
 Se separa lo que puede hacerse en la siguiente fase sin más confirmaciones de lo que depende de Sofía, de los clientes o del criterio legal del propietario. No se borran medios originales en ningún caso. Sin nuevas dependencias ni suites de test; sin rediseño.
 
 ## A. Cambios seguros (orden interno, selección sobre material ya en el sitio, presentación)

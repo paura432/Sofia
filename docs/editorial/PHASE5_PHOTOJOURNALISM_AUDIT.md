@@ -1,5 +1,8 @@
 # Fase 5 · Auditoría fotográfica, periodística y audiovisual
 
+> **Fase 5.1 (2026-10-11):** este informe se conserva como evidencia. Cada hallazgo se ha vuelto a contrastar en `PHASE5_FINAL_VERDICT.md` (matriz F5-001…F5-025 y hallazgos F51-x); la selección definitiva está en `PHASE5_CURATED_PORTFOLIO_PROPOSAL.md` y lo implementado en `PHASE5_CHANGES_AND_QA.md`.
+
+
 Fecha: 2026-10-11 · Rama: `audit/sofia-photojournalism-phase5` (creada sobre `bfad55a`, que es `main` y la cabeza de `content/phase-4-simplification`; `c6d1ab4` es ancestro). Auditoría de solo lectura: no se ha modificado ninguna fotografía, vídeo, crédito, derecho ni estado de publicación. `main` y el Word siguen intactos.
 
 **Segunda pasada (misma fecha, tras el primer commit):** audio de los ocho vídeos, EXIF del ZIP de la acampada, relectura del Word y referencias de fotografía de conciertos; cambios marcados como «segunda pasada» y resumidos en §15.

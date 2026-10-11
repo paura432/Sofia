@@ -69,10 +69,7 @@ export default async function WorkPage() {
                 </li>
               ))}
               <li>
-                <a href="#archive">
-                  {t("archiveNav")}
-                  <span className="section-nav-count">{PHOTO_ARCHIVE_COUNT}</span>
-                </a>
+                <a href="#archive">{t("archiveNav")}</a>
               </li>
             </ul>
           </div>

@@ -109,7 +109,7 @@
     "audiovisualText": "Я сняла как режиссёр и смонтировала обе короткометражки. В клипе Silver Praxis я отвечала за съёмку и постпродакшн.",
     "photographyKicker": "Фотография",
     "photographyTitle": "Концерты, улица и портрет",
-    "photographyText": "Полные серии и архив из 74 фотографий, которые стоит смотреть не спеша.",
+    "photographyText": "Пять серий и архив, который стоит смотреть не спеша.",
     "seriesCount": "{count, plural, one {# фотография} few {# фотографии} many {# фотографий} other {# фотографии}}",
     "archiveTeaser": "{count} фотографии по темам",
     "shortFormShowMore": "Ещё {count}",

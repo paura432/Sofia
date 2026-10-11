@@ -52,7 +52,9 @@ export const photoArchiveGroups = {
     { id: "retrato-img-5454", original: "IMG_5454.jpeg", src: "/media/projects/photo-archive/retrato-img-5454.webp", width: 960, height: 898, blurDataURL: "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAAAwBQCdASoYABYAPzmQu1gvKaWjqAqp4CcJYwDM0ywAxDbdLXwISUmaN6HKsufPCi1YCADMdZWm1Rk8UEbF4v+DUCGQylsRooS9x9n+14w7CLljMMLFyaPyrDN1FOddvby76vY2z0woHL4yD9rHG/yAgaGK6NPaWpQB1CbPf45RPpNRn86MsRhW7lxwBsivMjgUP7SjDyLEehJER1NxfSAKJ9AZXqqv8CMW5mfkSfzmLEAA" },
     { id: "retrato-img-5476", original: "IMG_5476.jpeg", src: "/media/projects/photo-archive/retrato-img-5476.webp", width: 640, height: 960, aspectRatio: "2:3", blurDataURL: "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoQABgAPzmEuVOvKKWisAgB4CcJbACdMoACvw++wGMzfQHokAD+R9Rs2RAz/+qc7pdznR8R46J96OvYq+2AL9l5+yDjm0zHxHpbLNUDvXs6Jl8vJvQvYpvM9WnH45ZnkUVHFT/mVSjt2K56qCBQXGigqjPEbxgYJsVFE70tAuhAAA==" },
     { id: "retrato-img-5487", original: "IMG_5487.jpeg", src: "/media/projects/photo-archive/retrato-img-5487.webp", width: 640, height: 960, aspectRatio: "2:3", blurDataURL: "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADwAwCdASoQABgAPzmEuVOvKKWisAgB4CcJbACdABWY+pmFRH+wDDgAAP5kZm1f46IsOklt1geiTzQSNL27EgwO1PO5Lhv8d2YRWv1Bq8xpj5rTEbW/aa/X3P04sf71Gdldv0QB2tYDTbRJakrdOsKeSiZLGC11gb1zrniSPHpCwdvSHylOO2K0YAA=" },
-    { id: "retrato-img-2364", original: "IMG_2364.jpeg", src: "/media/projects/photo-archive/retrato-img-2364.webp", width: 960, height: 640, aspectRatio: "3:2", blurDataURL: "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBACdASoYABAAPzmGuVOvKSWisAgB4CcJQBOgBDwmvPQMoivDNSixyAD+wwRmsZ7tMqMP4Q7HBdnHZ5xOtlY3IeX9aywifESIGRJMcd0IA2iHcas1O6Cz5HMpE3nSGfSKdy4FtbkHMAG/S0G4cAWQAAA=" }
+    { id: "retrato-img-2364", original: "IMG_2364.jpeg", src: "/media/projects/photo-archive/retrato-img-2364.webp", width: 960, height: 640, aspectRatio: "3:2", blurDataURL: "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBACdASoYABAAPzmGuVOvKSWisAgB4CcJQBOgBDwmvPQMoivDNSixyAD+wwRmsZ7tMqMP4Q7HBdnHZ5xOtlY3IeX9aywifESIGRJMcd0IA2iHcas1O6Cz5HMpE3nSGfSKdy4FtbkHMAG/S0G4cAWQAAA=" },
+    // Exterior al atardecer, no estudio: reclasificada en Fase 5.1 (el ID y el ALT no cambian).
+    { id: "estudio-80c82615-228f-40a7-99de-ac4c0d672e38", original: "80c82615-228f-40a7-99de-ac4c0d672e38.jpeg", src: "/media/projects/photo-archive/estudio-80c82615-228f-40a7-99de-ac4c0d672e38.webp", width: 640, height: 960, aspectRatio: "2:3", blurDataURL: "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABQBACdASoQABgAPzmIuVQvKSWjMAgB4CcJQBdgBCqgFS8hYfRlFsANlLqAAP7ejQSfX1U9VWyLhoae4avt7EJw01IssHGhrrKHPvn6pwh4XnOkqlTIRDUwlg0MSqAcZvlMzlGwQHH9kNu+ywXg+sUbQGzZ1RNl9o+yiIPsOKjHMCTIA+OlRmNwNY4CQAAA" }
   ],
   estudio: [
     { id: "estudio-6cf759e9-54b6-4c69-b082-b80f6e4fad92", original: "6CF759E9-54B6-4C69-B082-B80F6E4FAD92.jpeg", src: "/media/projects/photo-archive/estudio-6cf759e9-54b6-4c69-b082-b80f6e4fad92.webp", width: 960, height: 668, blurDataURL: "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwBACdASoYABEAPy1+uVOuqCYisAwB0CWJZAC+SCIAUevVrp74RI9YGhocoAD+5x//T+7ySlRBySDf13/FV11Xkunu5ahPwl1Lbx8R7IMRkmFUfDnI1ZtEsYJGmLfLHF57oyb/o09YOvThP9Kxnz7OHEjKAAAA" },
@@ -65,7 +67,6 @@ export const photoArchiveGroups = {
     { id: "estudio-dsc-1321", original: "DSC_1321.jpeg", src: "/media/projects/photo-archive/estudio-dsc-1321.webp", width: 640, height: 960, aspectRatio: "2:3", blurDataURL: "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoQABgAPzmGulQvKSWjMAgB4CcJZQAAW+jJKe7SFdHg/D7MAAD+kEQ8jNusSy88wwCcIDsnFcYeSAQYodv8gfAw/sR/zzfQBki0c6MU127fmhXTo1rrNRXgAAA=" },
     { id: "estudio-dsc-1378", original: "DSC_1378.jpeg", src: "/media/projects/photo-archive/estudio-dsc-1378.webp", width: 960, height: 640, aspectRatio: "3:2", blurDataURL: "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACQBACdASoYABAAPzmGuVOvKSWisAgB4CcJQBj8sYYb9mPzPtV0yaTuuuC3sgAA/tNN2AMLW71UkqZZb7AhfXanan/m4IRnfKyjx+f2TuFeKd+ZCfKik6gpeCUzPGbk21hkSN4X4kieks1PsqmNuFSYAAA=" },
     { id: "estudio-dsc-1386", original: "DSC_1386.jpeg", src: "/media/projects/photo-archive/estudio-dsc-1386.webp", width: 960, height: 640, aspectRatio: "3:2", blurDataURL: "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoYABAAPzmKu1SvKaYjMAgB4CcJZQAAUrP1lDSg6Qv2uAD+w/2vhTK/K6hdZvX+p9pRhZafsw26UAMNWVD/DXnTgzLg+qFki63EqC9KF9sdlnbbGHAAAA==" },
-    { id: "estudio-80c82615-228f-40a7-99de-ac4c0d672e38", original: "80c82615-228f-40a7-99de-ac4c0d672e38.jpeg", src: "/media/projects/photo-archive/estudio-80c82615-228f-40a7-99de-ac4c0d672e38.webp", width: 640, height: 960, aspectRatio: "2:3", blurDataURL: "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABQBACdASoQABgAPzmIuVQvKSWjMAgB4CcJQBdgBCqgFS8hYfRlFsANlLqAAP7ejQSfX1U9VWyLhoae4avt7EJw01IssHGhrrKHPvn6pwh4XnOkqlTIRDUwlg0MSqAcZvlMzlGwQHH9kNu+ywXg+sUbQGzZ1RNl9o+yiIPsOKjHMCTIA+OlRmNwNY4CQAAA" },
     { id: "estudio-dsc-1255", original: "DSC_1255.jpeg", src: "/media/projects/photo-archive/estudio-dsc-1255.webp", width: 640, height: 960, aspectRatio: "2:3", blurDataURL: "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAwCdASoQABgAPzmIulQvKSWjMAgB4CcJYwDE2CG+oXizLKivvGAA/sVcIo33G4q+oBOhdLsoceiKYf9ryT0UPU/tt9L26oYtZx/qQCKd1BPxUnjvPB0oAAA=" },
     { id: "estudio-dsc-1293", original: "DSC_1293.jpeg", src: "/media/projects/photo-archive/estudio-dsc-1293.webp", width: 640, height: 960, aspectRatio: "2:3", blurDataURL: "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoQABgAPzmEuVOvKKWisAgB4CcJQBhmgxKd/Rr4SdGXCumAAP7nQKpBt/U5wt4j9Mo8mJ4jORyeAzxkvh3np3OerhhTSBgcL2dxl+q7bOZartuu9/oq1wisbpq+8je2BhLQGCUq+D8PVGFeXSXWbELAAAA=" }
   ],
@@ -113,7 +114,7 @@ const plazaSeriesOriginals = [
   "00014", "00015", "00017", "00018", "00019", "00023", "00031", "00033",
   "00036", "00038", "00039", "00042", "00043", "00048", "00050", "00052",
   "00054", "00056", "00058", "00060", "00064", "00065", "00066", "00067",
-  "00068", "00070", "00072", "00074", "00076", "00077",
+  "00068", "00070", "00072", "00074", "00076", "00077"
 ] as const;
 // Keep legacy sequence IDs stable; image00060 is explicitly REJECTED in the curation table below.
 const plazaSeriesExclusions = new Set(["00060"]);
@@ -168,7 +169,7 @@ const selectedOriginals: Record<ProjectArchiveSlug, readonly string[]> = {
     "IMG_6377.jpeg",
     "IMG_4662.jpeg",
     "IMG_4776.jpeg",
-    "IMG_5179.jpeg",
+    "IMG_5179.jpeg"
   ],
   "estudio-editorial": [
     "6CF759E9-54B6-4C69-B082-B80F6E4FAD92.jpeg",
@@ -180,7 +181,7 @@ const selectedOriginals: Record<ProjectArchiveSlug, readonly string[]> = {
     "DSC_1251.jpeg",
     "DSC_1321.jpeg",
     "DSC_1378.jpeg",
-    "DSC_1386.jpeg",
+    "DSC_1386.jpeg"
   ],
   "retrato-editorial": [
     "IMG_6676.jpeg",
@@ -196,7 +197,7 @@ const selectedOriginals: Record<ProjectArchiveSlug, readonly string[]> = {
     "IMG_5323.jpeg",
     "IMG_5436.jpeg",
     "IMG_5490.jpeg",
-    "IMG_2403.jpeg",
+    "IMG_2403.jpeg"
   ],
   "calle-documental": [
     "IMG_3352.jpeg",
@@ -206,7 +207,7 @@ const selectedOriginals: Record<ProjectArchiveSlug, readonly string[]> = {
     "IMG_4756.jpeg",
     "IMG_4458.jpeg",
     "IMG_4705.jpeg",
-    "IMG_4725.jpeg",
+    "IMG_4725.jpeg"
   ],
 };
 

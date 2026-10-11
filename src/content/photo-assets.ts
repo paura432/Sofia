@@ -431,7 +431,8 @@ export const calle_documental_cover: ProjectMedia =
       layout: "full",
       position: 1,
       altKey: "calle-documental-04",
-      focalPoint: { x: 52, y: 42 },
+      // Retrato 2:3 mostrado en formato ancho: el hombre está a media altura, no en el tercio superior (Fase 5.1).
+      focalPoint: { x: 52, y: 56 },
     };
 
 export const calle_documental_media: ProjectMedia[] = [

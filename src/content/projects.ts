@@ -281,7 +281,7 @@ export const projects: PortfolioProject[] = [
     reportingFormat: "short-form",
     featured: true,
     detailPage: true,
-    order: 3,
+    order: 4,
     published: true,
     translationKey: "short-form-003",
     roleKeys: ["on-camera"],
@@ -316,7 +316,7 @@ export const projects: PortfolioProject[] = [
     reportingFormat: "short-form",
     featured: true,
     detailPage: true,
-    order: 4,
+    order: 3,
     published: true,
     translationKey: "short-form-004",
     roleKeys: ["on-camera"],
@@ -344,7 +344,7 @@ export const projects: PortfolioProject[] = [
     slug: "silver-praxis-condicion-perfecta",
     year: "",
     discipline: ["audiovisual"],
-    order: 4.5,
+    order: 4,
     published: true,
     translationKey: "silver-praxis-condicion-perfecta",
     roleKeys: ["shooting", "post-production"],
@@ -375,7 +375,7 @@ export const projects: PortfolioProject[] = [
     year: "2025",
     discipline: ["audiovisual"],
     featured: true,
-    order: 4,
+    order: 5,
     published: true,
     translationKey: "4-minutos",
     cover: {
@@ -399,7 +399,7 @@ export const projects: PortfolioProject[] = [
     slug: "tras-el-sofa",
     year: "",
     discipline: ["audiovisual"],
-    order: 5,
+    order: 6,
     published: true,
     translationKey: "tras-el-sofa",
     cover: {
@@ -419,11 +419,12 @@ export const projects: PortfolioProject[] = [
     },
   },
   {
+    // Primera de Audiovisual mientras 4 MINUTOS siga sin pista de audio en Mux (Fase 5, P0-6).
     id: "version-beta",
     slug: "version-beta",
     year: "",
     discipline: ["audiovisual"],
-    order: 6,
+    order: 3,
     published: true,
     translationKey: "version-beta",
     cover: {
@@ -463,7 +464,7 @@ export const projects: PortfolioProject[] = [
     slug: "calle-documental",
     year: "Pendiente",
     discipline: ["photography"],
-    order: 12,
+    order: 14,
     published: true,
     translationKey: "calle-documental",
     rights: {
@@ -478,7 +479,7 @@ export const projects: PortfolioProject[] = [
     slug: "estudio-editorial",
     year: "Pendiente",
     discipline: ["photography"],
-    order: 14,
+    order: 13,
     published: true,
     translationKey: "estudio-editorial",
     rights: {
@@ -493,7 +494,7 @@ export const projects: PortfolioProject[] = [
     slug: "retrato-editorial",
     year: "Pendiente",
     discipline: ["photography"],
-    order: 13,
+    order: 12,
     published: true,
     translationKey: "retrato-editorial",
     rights: {

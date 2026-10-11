@@ -1,5 +1,8 @@
 # Fase 5 · Revisión audiovisual y periodística
 
+> **Fase 5.1 (2026-10-11):** este informe se conserva como evidencia. Cada hallazgo se ha vuelto a contrastar en `PHASE5_FINAL_VERDICT.md` (matriz F5-001…F5-025 y hallazgos F51-x); la selección definitiva está en `PHASE5_CURATED_PORTFOLIO_PROPOSAL.md` y lo implementado en `PHASE5_CHANGES_AND_QA.md`.
+
+
 Método: para las 8 piezas en Mux se descargó el storyboard público (mosaico de fotogramas) y 8 muestras equiespaciadas, más fotogramas de intro y créditos de los tres cortos y del videoclip (`phase5-review/index.html`, sección Vídeos). **Sin audio en la primera pasada.** Lo que sigue describe lo visible y lo acreditado en pantalla; el **apéndice** al final recoge la segunda pasada con audio transcrito, que corrige varias conclusiones. El reel de reportera no existe como recurso (`published: false`, sin archivo) y no se revisa.
 
 ## Resumen

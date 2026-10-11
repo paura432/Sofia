@@ -1,5 +1,8 @@
 # Fase 5 · Derechos, ética y créditos
 
+> **Fase 5.1 (2026-10-11):** este informe se conserva como evidencia. Cada hallazgo se ha vuelto a contrastar en `PHASE5_FINAL_VERDICT.md` (matriz F5-001…F5-025 y hallazgos F51-x); la selección definitiva está en `PHASE5_CURATED_PORTFOLIO_PROPOSAL.md` y lo implementado en `PHASE5_CHANGES_AND_QA.md`.
+
+
 Auditoría documental: compara los campos `rights`/`published` de `src/content/projects.ts`, las marcas de permiso del Word (registro `SOFIA_SOURCE_RESPONSES.md`), el manifiesto de Mux (`docs/reels-ingest-manifest.md`) y los créditos visibles en pantalla. **Un campo vacío o una casilla sin marcar no se interpreta como negativa ni como autorización.** No se ha cambiado ningún `published` ni `rights.verified`.
 
 ## 1. Estado por obra

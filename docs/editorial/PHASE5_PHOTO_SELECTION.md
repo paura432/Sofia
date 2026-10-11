@@ -1,5 +1,8 @@
 # Fase 5 · Selección fotográfica y secuenciación
 
+> **Fase 5.1 (2026-10-11):** este informe se conserva como evidencia. Cada hallazgo se ha vuelto a contrastar en `PHASE5_FINAL_VERDICT.md` (matriz F5-001…F5-025 y hallazgos F51-x); la selección definitiva está en `PHASE5_CURATED_PORTFOLIO_PROPOSAL.md` y lo implementado en `PHASE5_CHANGES_AND_QA.md`.
+
+
 Propuesta editorial, no implementada. Basada en la inspección de las 112 imágenes públicas y de 20 originales (`PHASE5_PHOTOJOURNALISM_AUDIT.md`, §5 y §12). Nada se borra: «retirar del escaparate» significa salir del ensayo o de la portada; los originales y el Archivo se conservan. Miniaturas y tiras de orden en `phase5-review/index.html`.
 
 ## 1. Tres niveles
