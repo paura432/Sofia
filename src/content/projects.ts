@@ -169,16 +169,38 @@ export const projects: PortfolioProject[] = [
     discipline: ["reporting", "interview", "video"],
     experienceId: "grupo-cadena-media",
     reporterReel: true,
+    // Abre el monitor de portada: es la única pieza de coberturas y entrevistas.
+    reportingFormat: "short-form",
+    featured: true,
+    detailPage: true,
     order: 0,
-    published: false,
+    published: true,
     sourceUrl:
       "https://es.linkedin.com/posts/sofia-chernikova_hace-unos-a%C3%B1os-habr%C3%ADa-visto-muchas-de-estas-activity-7486385459078746112--ATZ",
     translationKey: "reporter-reel",
+    roleKeys: ["on-camera"],
     rights: {
-      verified: false,
-      note: "Pendiente el archivo definitivo del reel y los créditos de cada pieza.",
+      verified: true,
+      note: "Reel subido a Mux por el propietario y publicación aprobada el 2026-10-11. Créditos por segmento pendientes.",
     },
-    // media: pegar tras ingest de poster/vídeo — ver docs/first-project-publish.md
+    cover: {
+      id: "reporter-reel-video",
+      type: "video",
+      layout: "wide",
+      // Máster 1286×720 (643:360); la diferencia con 16:9 es inapreciable.
+      aspectRatio: "16:9",
+      provider: "mux",
+      muxPlaybackId: "qpZJsVFTCrKzLg9vFaA00rg8dBbCJN2XhExTquo01ErFY",
+      width: 1286,
+      height: 720,
+      duration: "01:52",
+      titleKey: "reporter-reel-video",
+      posterTime: 56,
+      poster: getMuxThumbnailUrl("qpZJsVFTCrKzLg9vFaA00rg8dBbCJN2XhExTquo01ErFY", {
+        time: 56,
+        width: 1280,
+      }),
+    },
   },
   // Short-form Mux videos; owner confirmed publication permission on 2026-10-02.
   {

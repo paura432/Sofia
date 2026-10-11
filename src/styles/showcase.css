@@ -306,6 +306,11 @@ h2 {
   margin: 0;
 }
 
+/* Pieza horizontal (el reel de coberturas): la pantalla se ensancha y la escaleta no cambia. */
+.reel-stage-screen[data-orientation="landscape"] {
+  width: min(92vw, 520px);
+}
+
 .reel-stage-frame {
   position: relative;
 }
@@ -434,6 +439,11 @@ h2 {
   .reel-stage-screen {
     width: min(360px, calc((100svh - 230px) * 9 / 16));
     min-width: 260px;
+  }
+
+  .reel-stage-screen[data-orientation="landscape"] {
+    width: 520px;
+    min-width: 400px;
   }
 
   .reel-stage-list {
