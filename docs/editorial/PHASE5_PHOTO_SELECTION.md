@@ -97,7 +97,7 @@ Conservar: todo. Retirar del ensayo (no del Archivo): las 25 imágenes listadas 
 
 | Dónde | Qué | Fuente |
 |---|---|---|
-| Entre tiendas y tambores | Fecha (día/mes/año) y pies factuales en 005, 009, 015, 024 | Sofía |
+| Entre tiendas y tambores | Confirmar la fecha (EXIF del ZIP de origen: noche del 28 al 29 de septiembre de 2026, reloj de cámara) y pies factuales en 005, 009, 015, 024 | EXIF + Sofía |
 | Música en directo | Nombre correcto del festival; artistas si Sofía los confirma; foto de Kinder Malo | Sofía |
 | Calle (nocturnas) | Evento del 2023-03-08 | Sofía |
 | Retrato | Revista o cliente, si puede nombrarse; fechas de sesión (EXIF: junio de 2024) | Sofía |
@@ -111,7 +111,8 @@ Conservar: todo. Retirar del ensayo (no del Archivo): las 25 imágenes listadas 
 2. *Lo que vibra no muere* (su trabajo número uno): archivo, fecha, créditos, permisos.
 3. Nombre de archivo de la foto de Kinder Malo / Dora Black.
 4. Autorización explícita por serie fotográfica (las cinco) y para los tres cortos.
-5. Fecha de la acampada en Sol; evento de las tres fotos nocturnas de marzo de 2023.
+5. Confirmación de la fecha de la acampada en Sol (los EXIF del ZIP dicen 28–29 de septiembre de 2026); evento de las tres fotos nocturnas de marzo de 2023.
 6. Confirmación o corrección de «un solo plano, sin cortes» en 4 MINUTOS.
 7. Grafías de los créditos de Tras el sofá y lista del reparto.
 8. Confirmación de que los clientes (Yoigo/Annie Bonnie, URJCmun) aceptan la exhibición en portfolio y de la música de Madrid a pie.
+9. Máster de 4 MINUTOS con audio (la copia de Mux es muda); versión larga de 9‑1‑1 si existe la entrevista; locución y guion de VERSIÓN BETA.

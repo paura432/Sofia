@@ -10,7 +10,7 @@ Se separa lo que puede hacerse en la siguiente fase sin más confirmaciones de l
 | A2 | Música: nuevo orden de 12, incluyendo 4 fotos que hoy solo están a 960 px (6317, 4989, 4954, 4929): re-exportar desde `incoming-media/originals` con el pipeline existente (`scripts/media`) y añadirlas a `selectedOriginals` y a `photo-assets.ts` | `src/content/photo-archive-data.ts`, `photo-assets.ts`, `public/media/projects/musica-en-directo/` | 2 h |
 | A3 | Portada de Calle: `calle-documental-04` → la imagen de IMG_4748 (hoy `calle-img-4748` solo en Archivo a 960 px: re-exportar) | `photo-assets.ts` (`calle_documental_cover`) | 30 min |
 | A4 | Orden de series: Entre tiendas, Música, Retrato, Estudio, Calle; Archivo como anexo sin contador en la navegación de Trabajo; quitar «74 fotografías» del texto de Fotografía y «Reportajes» de la navegación (mantener «Ante la cámara») | `projects.ts` (`order`), `work/page.tsx`, `messages/*.json` (`Work.photographyText`, `Work.reportingNav`) | 1 h |
-| A5 | Orden de verticales (9‑1‑1, Madrid a pie, vivo, MyMUN) y de Audiovisual (4 MINUTOS, VERSIÓN BETA, Condición Perfecta, Tras el sofá) | `projects.ts` (`order`) | 15 min |
+| A5 | Orden de verticales (9‑1‑1, Madrid a pie, vivo, MyMUN) y de Audiovisual (**VERSIÓN BETA, Condición Perfecta, 4 MINUTOS, Tras el sofá**; 4 MINUTOS vuelve a primera posición cuando tenga audio, ver B12) | `projects.ts` (`order`) | 15 min |
 | A6 | Póster de 4 MINUTOS: `posterTime` 145 → 186 (comprobar visualmente) | `projects.ts` | 15 min |
 | A7 | Eliminar el huérfano `entre-tiendas-y-tambores-028.webp` de `public/` (el original sigue en el ZIP) | `public/media/projects/entre-tiendas-y-tambores/` | 5 min |
 | A8 | Completar créditos ya visibles en pantalla y de autoría clara: extras de Condición Perfecta; crédito de música de 4 MINUTOS como «Sonido final: losniñosdelcaminito» (texto literal de pantalla) | `messages/*.json` (`credits`, `creditLabels`) | 30 min |
@@ -32,6 +32,9 @@ Se separa lo que puede hacerse en la siguiente fase sin más confirmaciones de l
 | B9 | Publicar el reel de TV o piezas emitidas; incorporar *Lo que vibra no muere* | Sofía + cadena | P1-1 |
 | B10 | Confirmar permisos de clientes (Yoigo/Annie Bonnie, URJCmun, revista, artistas de estudio) y música de Madrid a pie y VERSIÓN BETA | Sofía / clientes | P1-8 |
 | B11 | Cambiar `rights.verified` a `true` en cualquier obra | Propietario, con la confirmación anotada | B1, B10 |
+| B12 | Volver a subir 4 MINUTOS a Mux con pista de audio (la copia actual es muda: P0-6) y después corregir el texto «un solo plano» (B3) | Sofía (máster) + propietario (subida) | P0-6, P0-3 |
+| B13 | Reescribir la descripción de 9‑1‑1 («entrevisto al creador…») a lo que contiene la pieza, o sustituir el vídeo por la versión con entrevista si existe; ajustar «sin que la explicación parezca una explicación» en vivo | Sofía | P1-9, P2-9 |
+| B14 | Póster de Tras el sofá en un fotograma con las dos actrices (≈200 s) en lugar del tramo inicial sin diálogo | Propietario (cambio seguro, pero conviene enseñárselo a Sofía) | P1-10 |
 
 ## B bis. Cambio ya decidido por el propietario (2026-10-11): «Entre tiendas y tambores» → «Acampada en Sol»
 
@@ -59,7 +62,8 @@ El nuevo título es más preciso periodísticamente (lugar y hecho) y elimina la
 - Inventario: 111 archivos distintos, 157 usos, 112 miniaturas revisadas (incluido el huérfano 028); cada una con ID y decisión en la matriz.
 - Series: las cinco auditadas; secuencias propuestas para las cinco.
 - Duplicados: no se ha tratado como obra distinta ninguna copia de ensayo; el huérfano 028 identificado.
-- Conclusiones visuales: todas sobre imágenes inspeccionadas (hojas de contacto para 112; originales para 20; fotogramas para los 8 vídeos).
+- Conclusiones visuales: todas sobre imágenes inspeccionadas (hojas de contacto para 112; originales para 20; fotogramas para los 8 vídeos). Conclusiones de audio (segunda pasada): transcripción automática de 7 piezas; 4 MINUTOS sin audio en Mux; Condición Perfecta sin voz reconocida.
 - Créditos: comparados con los créditos en pantalla de 4 MINUTOS, Tras el sofá y Condición Perfecta.
 - Texto público: no se propone añadir párrafos; solo pies factuales de una línea donde faltan datos.
-- Word y `main` intactos: comprobado (`git status`, `git rev-parse main` = `bfad55a`).
+- Word y `main` intactos: comprobado (`git status`, `git rev-parse main` = `bfad55a`); en la segunda pasada, SHA-256 del DOCX idéntico al registrado.
+- EXIF de la acampada leído del ZIP sin extraer ni modificar archivos; herramientas de audio en un entorno temporal fuera del repositorio.
