@@ -36,6 +36,14 @@ type ShortFormReportingProps = {
   showLessLabel: string;
 };
 
+/*
+ * Anchos reales de las tarjetas: las apaisadas van siempre a dos columnas (~46vw, tope ~880px
+ * en el lienzo de 1920); las verticales a dos columnas en móvil y cuatro en escritorio.
+ * Antes se pedían 300px para tarjetas de ~800px y el póster llegaba reescalado y borroso.
+ */
+const wideSizes = "(max-width: 1919px) 46vw, 880px";
+const tallSizes = "(max-width: 999px) 46vw, (max-width: 1919px) 23vw, 430px";
+
 function isLandscape(ratio: string) {
   const [width, height] = ratio.split("/").map((part) => Number(part.trim()));
   return Boolean(width && height) && width > height;
@@ -72,7 +80,9 @@ export function ShortFormReporting({
         <section className={`short-form-block short-form-block-${group.key}`} key={group.key}>
           <p className="eyebrow short-form-block-label">{group.label}</p>
           <div className="short-form-reporting" data-count={group.items.length}>
-        {group.items.map((project) => (
+        {group.items.map((project) => {
+          const posterSizes = group.key === "wide" ? wideSizes : tallSizes;
+          return (
           <article className="short-form-card" key={project.id}>
             <div
               className="short-form-poster"
@@ -87,7 +97,7 @@ export function ShortFormReporting({
                   onDeactivate={deactivate}
                   playLabel={project.playLabel}
                   posterAlt={project.posterAlt}
-                  sizes="(max-width: 999px) 34vw, 300px"
+                  sizes={posterSizes}
                   title={project.title}
                 />
               ) : (
@@ -102,7 +112,7 @@ export function ShortFormReporting({
                     <Image
                       alt={project.posterAlt}
                       fill
-                      sizes="(max-width: 999px) 34vw, 300px"
+                      sizes={posterSizes}
                       src={project.posterSrc}
                     />
                   </a>
@@ -110,7 +120,7 @@ export function ShortFormReporting({
                   <Image
                     alt={project.posterAlt}
                     fill
-                    sizes="(max-width: 999px) 34vw, 300px"
+                    sizes={posterSizes}
                     src={project.posterSrc}
                   />
                 )
@@ -149,7 +159,8 @@ export function ShortFormReporting({
               ) : null}
             </div>
           </article>
-        ))}
+          );
+        })}
           </div>
         </section>
       ))}

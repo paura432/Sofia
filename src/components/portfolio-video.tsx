@@ -168,6 +168,7 @@ export function PortfolioVideo({
                 alt={posterAlt ?? ""}
                 fill
                 preload={preloadPoster}
+                quality={90}
                 sizes={sizes ?? getMediaSizes(media.layout)}
                 src={media.poster}
                 style={{ objectPosition }}
@@ -178,7 +179,8 @@ export function PortfolioVideo({
             <Image
               alt={posterAlt ?? ""}
               fill
-                preload={preloadPoster}
+              preload={preloadPoster}
+              quality={90}
               sizes={sizes ?? getMediaSizes(media.layout)}
               src={media.poster}
               style={{ objectPosition }}

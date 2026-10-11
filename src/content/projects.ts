@@ -195,10 +195,10 @@ export const projects: PortfolioProject[] = [
       height: 720,
       duration: "01:52",
       titleKey: "reporter-reel-video",
-      posterTime: 56,
+      // 36,5 s: GENZ Awards, Sofía a cámara con rótulo; fotograma nítido y bien iluminado.
+      posterTime: 36.5,
       poster: getMuxThumbnailUrl("qpZJsVFTCrKzLg9vFaA00rg8dBbCJN2XhExTquo01ErFY", {
-        time: 56,
-        width: 1280,
+        time: 36.5,
       }),
     },
   },
@@ -235,10 +235,10 @@ export const projects: PortfolioProject[] = [
       height: 640,
       duration: "05:30",
       titleKey: "reporter-reel-season-video",
-      posterTime: 180,
+      // 149 s: photocall Scalpers, Sofía a cámara con rótulo; fotograma nítido y bien iluminado.
+      posterTime: 149,
       poster: getMuxThumbnailUrl("WwfraCvwwVEgClcBha5EZVYpJvd1dDHk5aDv02Ls8wd00", {
-        time: 180,
-        width: 1280,
+        time: 149,
       }),
     },
   },
