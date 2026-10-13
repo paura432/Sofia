@@ -4,6 +4,7 @@ import { LocaleSwitcher } from "@/components/locale-switcher";
 import { MobileNav } from "@/components/mobile-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { NavLink } from "@/components/nav-link";
+import { SiteNavStrip } from "@/components/site-nav-strip";
 import { siteConfig } from "@/content/profile";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -26,18 +27,23 @@ export async function SiteHeader() {
           {siteConfig.name}
         </Link>
 
-        <nav className="desktop-nav" aria-label={t("sectionsAria")}>
-          <div className="desktop-nav-links">
+        {/* Secciones: tira horizontal bajo la marca en móvil, misma fila en
+            tablet y escritorio. Idioma y tema sólo en escritorio; en móvil
+            viven dentro del panel MENÚ. */}
+        <nav className="site-nav" aria-label={t("sectionsAria")}>
+          <SiteNavStrip>
             <NavLink href="/work" label={t("items.work")} />
             <NavLink href="/about" label={t("items.about")} />
             <NavLink href="/experience" label={t("items.experience")} />
             <NavLink href="/contact" label={t("items.contact")} />
+          </SiteNavStrip>
+          <div className="site-nav-tools">
+            <LocaleSwitcher
+              ariaLabel={t("localeAria")}
+              labels={localeLabels}
+            />
+            <ThemeToggle darkLabel={t("theme.dark")} lightLabel={t("theme.light")} />
           </div>
-          <LocaleSwitcher
-            ariaLabel={t("localeAria")}
-            labels={localeLabels}
-          />
-          <ThemeToggle darkLabel={t("theme.dark")} lightLabel={t("theme.light")} />
         </nav>
 
         <MobileNav

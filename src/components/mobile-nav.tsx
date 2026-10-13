@@ -68,7 +68,7 @@ export function MobileNav({
     const main = document.getElementById("main");
     const footer = document.querySelector("footer");
     const brand = document.querySelector(".site-header .brand");
-    const desktopNav = document.querySelector(".desktop-nav");
+    const desktopNav = document.querySelector(".site-nav");
 
     if (isOpen) {
       main?.setAttribute("inert", "");

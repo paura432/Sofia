@@ -298,7 +298,7 @@ h2 {
    `--reel-stage-chrome` reserva cabecera, pie de pantalla, tira y márgenes;
    el ancho del vertical sale de la altura disponible (9:16). */
 .reel-stage {
-  --reel-stage-chrome: 340px;
+  --reel-stage-chrome: calc(var(--header-height) + 272px);
   display: grid;
   gap: 14px;
   justify-items: center;

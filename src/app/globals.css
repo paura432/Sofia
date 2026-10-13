@@ -40,7 +40,10 @@
   --photo-canvas-max: 1920px;
   --content-max: 980px;
   --page-gutter: clamp(18px, 4vw, 72px);
-  --header-height: 68px;
+  /* Móvil: fila de marca + tira de secciones. Tablet y escritorio: una fila. */
+  --header-row: 52px;
+  --header-strip: 44px;
+  --header-height: calc(var(--header-row) + var(--header-strip) + 1px); /* + hairline de la tira */
   --work-rail-height: 48px;
   --space-xs: clamp(8px, 1vw, 12px);
   --space-sm: clamp(14px, 1.6vw, 20px);
@@ -296,17 +299,20 @@ p {
   color: var(--accent);
 }
 
+/* Dos niveles en móvil: marca + MENÚ arriba, tira de secciones debajo. */
 .nav-shell {
   position: relative;
-  min-height: var(--header-height);
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "brand menu"
+    "nav nav";
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-sm);
+  column-gap: var(--space-sm);
 }
 
 .brand,
-.desktop-nav a,
+.site-nav a,
 .mobile-nav button,
 .mobile-nav-panel a {
   font-size: var(--text-xs);
@@ -317,25 +323,105 @@ p {
 }
 
 .brand {
-  min-height: 44px;
+  grid-area: brand;
+  min-height: var(--header-row);
   display: inline-flex;
   align-items: center;
 }
 
-.desktop-nav {
-  display: none;
-  align-items: center;
-  gap: clamp(18px, 2.4vw, 36px);
+.mobile-nav {
+  grid-area: menu;
 }
 
-.desktop-nav-links,
+.site-nav {
+  grid-area: nav;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 36px);
+  min-width: 0;
+}
+
+/* Tira de secciones: sangra hasta los bordes de pantalla, hairline arriba,
+   desplazable si no caben los cuatro nombres. */
+.site-nav-links {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  width: calc(100% + 2 * var(--page-gutter));
+  margin-inline: calc(-1 * var(--page-gutter));
+  padding-inline: max(var(--page-gutter), env(safe-area-inset-left)) max(var(--page-gutter), env(safe-area-inset-right));
+  border-top: 1px solid var(--line);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+.site-nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+.site-nav-links a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--header-strip);
+  padding-inline: 6px;
+  color: var(--foreground-soft);
+  white-space: nowrap;
+  scroll-snap-align: start;
+  scroll-margin-inline: var(--page-gutter);
+}
+
+.site-nav-links a:first-child {
+  margin-inline-start: -6px;
+}
+
+.site-nav-links a:focus-visible {
+  outline-offset: -2px;
+}
+
+/* Degradados en los bordes cuando hay enlaces fuera de la vista. */
+.site-nav::before,
+.site-nav::after {
+  position: absolute;
+  top: 1px;
+  bottom: 0;
+  z-index: 1;
+  width: 64px;
+  opacity: 0;
+  pointer-events: none;
+  content: "";
+  transition: opacity var(--motion-fast) var(--ease-out-editorial);
+}
+
+.site-nav::before {
+  left: calc(-1 * var(--page-gutter));
+  background: linear-gradient(to right, var(--background) 35%, transparent);
+}
+
+.site-nav::after {
+  right: calc(-1 * var(--page-gutter));
+  background: linear-gradient(to left, var(--background) 35%, transparent);
+}
+
+.site-nav:has([data-overflow-start="true"])::before,
+.site-nav:has([data-overflow-end="true"])::after {
+  opacity: 1;
+}
+
+.site-nav-tools,
 .locale-switcher {
   display: flex;
   align-items: center;
 }
 
-.desktop-nav-links {
-  gap: clamp(16px, 2vw, 30px);
+/* Idioma y tema: sólo en escritorio (en móvil están dentro del panel MENÚ). */
+.site-nav-tools {
+  display: none;
+  gap: clamp(18px, 2.4vw, 36px);
 }
 
 .photo-archive {
@@ -830,12 +916,12 @@ p {
   background: transparent;
 }
 
-.desktop-nav a,
+.site-nav a,
 .text-link {
   position: relative;
 }
 
-.desktop-nav a::after,
+.site-nav a::after,
 .text-link::after {
   position: absolute;
   right: 0;
@@ -849,13 +935,21 @@ p {
   transition: transform var(--motion-fast) var(--ease-out-editorial);
 }
 
-.desktop-nav a:hover::after,
-.desktop-nav a[aria-current="page"]::after,
+/* En la tira, el subrayado se apoya en el borde inferior del header. */
+.site-nav-links a::after {
+  right: 6px;
+  bottom: 0;
+  left: 6px;
+}
+
+.site-nav a:hover::after,
+.site-nav a[aria-current="page"]::after,
 .text-link:hover::after {
   transform: scaleX(1);
 }
 
-.desktop-nav a[aria-current="page"] {
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
   color: var(--accent);
 }
 
@@ -1234,7 +1328,54 @@ p {
 /* ==========================================================================
    responsive — tablet
    ========================================================================== */
+/* Tablet y escritorio: el header vuelve a una sola fila y las secciones se
+   colocan junto a la marca (a la izquierda de MENÚ hasta 980px). */
 @media (min-width: 700px) {
+  :root {
+    --header-height: 68px;
+  }
+
+  .nav-shell {
+    min-height: var(--header-height);
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: "brand nav menu";
+  }
+
+  .brand {
+    min-height: 44px;
+  }
+
+  .site-nav {
+    justify-content: flex-end;
+  }
+
+  .site-nav::before,
+  .site-nav::after {
+    display: none;
+  }
+
+  .site-nav-links {
+    width: auto;
+    max-width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
+    border-top: 0;
+    gap: clamp(16px, 2vw, 30px);
+  }
+
+  /* Tablet táctil: 6px de aire a cada lado para que PERFIL/ОПЫТ superen 44px. */
+  .site-nav-links a {
+    min-height: 44px;
+  }
+
+  .site-nav-links a:first-child {
+    margin-inline-start: 0;
+  }
+
+  .site-nav-links a::after {
+    bottom: -6px;
+  }
+
   .detail-grid-inner {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1279,7 +1420,25 @@ p {
     --header-height: 72px;
   }
 
-  .desktop-nav {
+  .nav-shell {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "brand nav";
+  }
+
+  .site-nav-links {
+    gap: clamp(16px, 2vw, 30px);
+  }
+
+  .site-nav-links a {
+    padding-inline: 0;
+  }
+
+  .site-nav-links a::after {
+    right: 0;
+    left: 0;
+  }
+
+  .site-nav-tools {
     display: flex;
   }
 
