@@ -72,7 +72,9 @@
     "reelGroupWide": "Coberturas",
     "reelGroupTall": "Verticales",
     "nowShowing": "En pantalla",
-    "soundHint": "Con sonido · pulsa para ver"
+    "soundHint": "Con sonido · pulsa para ver",
+    "previousPiece": "Pieza anterior",
+    "nextPiece": "Pieza siguiente"
   },
   "Home": {
     "pathEyebrow": "Trayectoria",

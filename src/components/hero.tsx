@@ -56,6 +56,8 @@ export async function Hero({ reels }: HeroProps) {
               tallLabel={t("reelGroupTall")}
               nowShowingLabel={t("nowShowing")}
               soundHint={t("soundHint")}
+              previousLabel={t("previousPiece")}
+              nextLabel={t("nextPiece")}
               stories={reels}
               viewProjectLabel={projectsText("viewProject")}
             />

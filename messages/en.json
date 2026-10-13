@@ -72,7 +72,9 @@
     "reelGroupWide": "Coverage",
     "reelGroupTall": "Vertical",
     "nowShowing": "On screen",
-    "soundHint": "With sound · tap to watch"
+    "soundHint": "With sound · tap to watch",
+    "previousPiece": "Previous piece",
+    "nextPiece": "Next piece"
   },
   "Home": {
     "pathEyebrow": "Career",

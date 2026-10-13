@@ -294,25 +294,32 @@ h2 {
 
 /* --- Monitor ---------------------------------------------------------------- */
 
+/* Móvil: la pantalla cabe junto a su pie y la tira de piezas en una sola vista.
+   `--reel-stage-chrome` reserva cabecera, pie de pantalla, tira y márgenes;
+   el ancho del vertical sale de la altura disponible (9:16). */
 .reel-stage {
+  --reel-stage-chrome: 340px;
   display: grid;
-  gap: 16px;
+  gap: 14px;
   justify-items: center;
 }
 
 .reel-stage-screen {
   position: relative;
-  width: min(76vw, 360px);
+  width: 100%;
   margin: 0;
 }
 
-/* Pieza horizontal (el reel de coberturas): la pantalla se ensancha y la escaleta no cambia. */
-.reel-stage-screen[data-orientation="landscape"] {
-  width: min(92vw, 520px);
-}
-
+/* El ancho lo fija el marco del vídeo; el pie ocupa todo el ancho disponible. */
 .reel-stage-frame {
   position: relative;
+  width: clamp(156px, calc((100svh - var(--reel-stage-chrome)) * 9 / 16), min(76vw, 360px));
+  margin-inline: auto;
+}
+
+/* Pieza horizontal (el reel de coberturas): la pantalla se ensancha y la escaleta no cambia. */
+.reel-stage-screen[data-orientation="landscape"] .reel-stage-frame {
+  width: min(92vw, 520px);
 }
 
 .reel-stage-video {
@@ -323,8 +330,15 @@ h2 {
 
 .reel-stage-caption {
   display: grid;
-  gap: 4px;
-  margin-top: 16px;
+  gap: 2px;
+  margin-top: 10px;
+}
+
+.reel-stage-caption-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .reel-stage-title {
@@ -333,6 +347,54 @@ h2 {
   line-height: 1.15;
 }
 
+/* Anterior / siguiente: objetivos táctiles de 44px, sin competir con el reproductor. */
+.reel-stage-nav {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 2px;
+}
+
+.reel-stage-counter {
+  margin-right: 6px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+}
+
+.reel-stage-nav-button {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition:
+    background-color var(--motion-interface) var(--ease-out-editorial),
+    border-color var(--motion-interface) var(--ease-out-editorial),
+    opacity var(--motion-interface) var(--ease-out-editorial);
+}
+
+.reel-stage-nav-button:hover:not(:disabled) {
+  background: var(--surface);
+}
+
+.reel-stage-nav-button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.reel-stage-nav-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 
 .reel-stage-hint {
   color: var(--muted);
@@ -342,11 +404,29 @@ h2 {
   text-transform: uppercase;
 }
 
-/* Escaleta en dos grupos (apaisadas / verticales). */
+/* Escaleta en dos grupos (apaisadas / verticales). En móvil, una tira horizontal
+   que se desliza con el dedo; ocupa el ancho del contenedor y respeta las áreas seguras. */
 .reel-stage-lists {
-  display: grid;
-  gap: 14px;
-  width: 100%;
+  display: flex;
+  gap: 18px;
+  width: calc(100% + 2 * var(--page-gutter));
+  margin-inline: calc(-1 * var(--page-gutter));
+  padding-inline: max(var(--page-gutter), env(safe-area-inset-left)) max(var(--page-gutter), env(safe-area-inset-right));
+  padding-block: 4px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--page-gutter);
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.reel-stage-lists::-webkit-scrollbar {
+  display: none;
+}
+
+.reel-stage-group {
+  flex: none;
 }
 
 .reel-stage-group-label {
@@ -359,13 +439,16 @@ h2 {
 }
 
 .reel-stage-list {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-  width: 100%;
+  display: flex;
+  gap: 6px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.reel-stage-list > li {
+  flex: none;
+  scroll-snap-align: start;
 }
 
 .reel-stage-item {
@@ -400,9 +483,11 @@ h2 {
   outline-offset: 2px;
 }
 
+/* La miniatura mantiene su formato: alto fijo, ancho según 9:16 o 16:9. */
 .reel-stage-thumb {
   position: relative;
   display: block;
+  height: 56px;
   overflow: hidden;
   aspect-ratio: 9 / 16;
   border-radius: 3px;
@@ -443,6 +528,7 @@ h2 {
   display: none;
 }
 
+/* Escritorio: pantalla a la izquierda y escaleta en columna, como hasta ahora. */
 @media (min-width: 700px) {
   .reel-stage {
     grid-template-columns: auto minmax(0, 220px);
@@ -452,17 +538,36 @@ h2 {
     gap: 22px;
   }
 
-  .reel-stage-screen {
+  .reel-stage-frame {
     width: min(360px, calc((100svh - 230px) * 9 / 16));
     min-width: 260px;
+    margin-inline: 0;
   }
 
-  .reel-stage-screen[data-orientation="landscape"] {
+  .reel-stage-screen[data-orientation="landscape"] .reel-stage-frame {
     width: 520px;
     min-width: 400px;
   }
 
+  .reel-stage-caption {
+    margin-top: 16px;
+  }
+
+  .reel-stage-nav {
+    display: none;
+  }
+
+  .reel-stage-lists {
+    display: grid;
+    gap: 14px;
+    width: 100%;
+    margin-inline: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
   .reel-stage-list {
+    display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 4px;
   }
@@ -472,6 +577,11 @@ h2 {
     align-items: center;
     gap: 12px;
     padding: 8px;
+  }
+
+  .reel-stage-thumb {
+    width: 100%;
+    height: auto;
   }
 
   .reel-stage-item-copy {

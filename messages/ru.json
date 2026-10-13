@@ -72,7 +72,9 @@
     "reelGroupWide": "Репортажи",
     "reelGroupTall": "Вертикальные",
     "nowShowing": "На экране",
-    "soundHint": "Со звуком · нажмите, чтобы смотреть"
+    "soundHint": "Со звуком · нажмите, чтобы смотреть",
+    "previousPiece": "Предыдущий сюжет",
+    "nextPiece": "Следующий сюжет"
   },
   "Home": {
     "pathEyebrow": "Карьера",
