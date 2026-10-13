@@ -1237,6 +1237,14 @@ h2 {
   font-size: 0.92rem;
 }
 
+/* Enlaces a los PDF del currículum, en Perfil y Contacto. */
+.cv-links a {
+  color: inherit;
+  font-weight: 550;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 .inline-list {
   display: flex;
   flex-wrap: wrap;

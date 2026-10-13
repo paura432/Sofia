@@ -872,7 +872,10 @@
     "copy": "Copiar email",
     "copied": "Copiado",
     "languages": "Idiomas",
-    "languagesValue": "Español · Ruso · Inglés · Valenciano · Italiano"
+    "languagesValue": "Español · Ruso · Inglés · Valenciano · Italiano",
+    "cv": "Currículum",
+    "cvSpanish": "Castellano (PDF)",
+    "cvEnglish": "Inglés (PDF)"
   },
   "Footer": {
     "location": "Madrid",

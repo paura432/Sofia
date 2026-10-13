@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 import { CopyEmail } from "@/components/copy-email";
+import { CvLinks } from "@/components/cv-links";
 import { Reveal } from "@/components/motion/reveal";
 import { siteConfig } from "@/content/profile";
 
@@ -60,6 +61,12 @@ export async function ContactBlock({
             <div>
               <dt>{t("base")}</dt>
               <dd>{t("baseValue")}</dd>
+            </div>
+            <div>
+              <dt>{t("cv")}</dt>
+              <dd>
+                <CvLinks />
+              </dd>
             </div>
             {page ? (
               <div>

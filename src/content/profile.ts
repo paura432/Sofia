@@ -2,8 +2,11 @@ export const siteConfig = {
   name: "Sofía Chernikova",
   email: "chernisv@gmail.com",
   linkedin: "https://www.linkedin.com/in/sofia-chernikova",
-  hasCv: false,
-  cvPath: "/cv/sofia-chernikova.pdf",
+  /** Currículum en PDF por idioma, servido desde `public/cv/`. */
+  cv: {
+    es: "/cv/sofia-chernikova-cv-es.pdf",
+    en: "/cv/sofia-chernikova-cv-en.pdf",
+  },
 };
 
 /** Retrato editorial. Sin `src` no se renderiza nada en About. */

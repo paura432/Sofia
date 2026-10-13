@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 import { ContactBlock } from "@/components/contact-block";
+import { CvLinks } from "@/components/cv-links";
 import { HeroEntrance } from "@/components/hero-entrance";
 import { portrait, siteConfig, toolGroups } from "@/content/profile";
 import { focalPointStyle } from "@/content/projects";
@@ -37,10 +38,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
  * trabajado, en Experiencia. Aquí no se repite ninguna de las dos cosas.
  */
 export default async function AboutPage() {
-  const [profile, education, languages] = await Promise.all([
+  const [profile, education, languages, contact] = await Promise.all([
     getTranslations("Profile"),
     getTranslations("Education"),
     getTranslations("Languages"),
+    getTranslations("Contact"),
   ]);
   const educationItems = education.raw("items") as Education[];
   const languageItems = languages.raw("items") as Language[];
@@ -133,14 +135,13 @@ export default async function AboutPage() {
             <dt>{profile("baseLabel")}</dt>
             <dd>{profile("baseValue")}</dd>
           </div>
-        </dl>
-        {siteConfig.hasCv ? (
-          <div className="container">
-            <a className="section-link" href={siteConfig.cvPath}>
-              CV <span aria-hidden="true">↓</span>
-            </a>
+          <div>
+            <dt>{contact("cv")}</dt>
+            <dd>
+              <CvLinks />
+            </dd>
           </div>
-        ) : null}
+        </dl>
       </section>
 
       <ContactBlock compact />
